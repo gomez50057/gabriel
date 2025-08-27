@@ -1,0 +1,266 @@
+.header {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw - 5rem);
+  margin-top: 0.8rem;
+  z-index: 100;
+  border-radius: 2rem;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.headerHidden {
+  transform: translate(-50%, -120%); /* sube el header fuera de pantalla */
+  opacity: 0;
+}
+
+.scrolled {
+  box-shadow: 0 6px 20px color-mix(in lab, var(--text) 10%, transparent);
+}
+
+.glass {
+  background: color-mix(in lab, var(--bg) 65%, transparent);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  border-bottom: 1px solid color-mix(in lab, var(--text) 12%, transparent);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  min-height: var(--header-h);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.logoLink {
+  display: inline-flex;
+}
+
+.navDesktop {
+  justify-self: center;
+}
+
+.links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.linkInner {
+  padding: 8px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  transition: background .2s ease, color .2s ease, transform .06s ease;
+  position: relative;
+}
+
+.linkInner:hover,
+.linkInner:focus-visible {
+  background: color-mix(in lab, var(--text) 10%, transparent);
+}
+
+.active {
+  color: var(--accent);
+  font-weight: 700;
+  background: color-mix(in lab, var(--accent) 18%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in lab, var(--accent) 35%, transparent);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.redes a {
+  inline-size: 40px;
+  block-size: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background .2s ease, transform .06s ease;
+}
+
+.redes a:hover {
+  background: color-mix(in lab, var(--accent) 20%, transparent);
+}
+
+.redes a:active {
+  transform: translateY(1px);
+}
+
+.switch {
+  border: 1px solid color-mix(in lab, var(--text) 15%, transparent);
+  background: color-mix(in lab, var(--bg) 85%, transparent);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.switch:hover {
+  background: color-mix(in lab, var(--text) 10%, transparent);
+  border-color: color-mix(in lab, var(--text) 25%, transparent);
+}
+
+.burger {
+  display: none;
+  inline-size: 42px;
+  block-size: 38px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in lab, var(--text) 15%, transparent);
+  background: color-mix(in lab, var(--bg) 85%, transparent);
+  cursor: pointer;
+  position: relative;
+}
+
+.burger span {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: var(--text);
+  transition: transform .2s ease, opacity .2s ease, top .2s ease;
+}
+
+.burger span:nth-child(1) {
+  top: 12px;
+}
+
+.burger span:nth-child(2) {
+  top: 18px;
+}
+
+.burger span:nth-child(3) {
+  top: 24px;
+}
+
+.burgerOpen span:nth-child(1) {
+  top: 18px;
+  transform: rotate(45deg);
+}
+
+.burgerOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerOpen span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-45deg);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: color-mix(in lab, var(--bg) 45%, black 30%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: color-mix(in lab, var(--bg) 92%, transparent);
+  border-top: 1px solid color-mix(in lab, var(--text) 12%, transparent);
+  padding: 24px 16px 32px;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform .22s ease, opacity .22s ease;
+}
+
+.overlayOpen .menu {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.menuLink {
+  display: block;
+  padding: 14px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  background: color-mix(in lab, var(--bg) 85%, transparent);
+  border: 1px solid color-mix(in lab, var(--text) 10%, transparent);
+}
+
+.menuLink:hover {
+  background: color-mix(in lab, var(--accent) 20%, transparent);
+  border-color: color-mix(in lab, var(--accent) 35%, transparent);
+}
+
+@media (max-width: 900px) {
+  .navDesktop {
+    display: none;
+  }
+
+  .burger {
+    display: inline-block;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .overlay,
+  .menu,
+  .burger span,
+  .switch,
+  .links a,
+  .linkInner {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,171 @@
+.portfolio {
+  max-width: 1100px;
+  padding: 80px 0;
+  margin: auto;
+}
+
+.titleSection {
+  text-align: center;
+  font-size: 22px;
+  color: var(--text);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project {
+  max-width: 450px;
+  flex: 1 1 300px;
+  border: 1px;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.member {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: .5s;
+  display: block;
+}
+
+.project:hover .cardImage {
+  filter: grayscale(0);
+}
+
+.memberInfo {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  transition: opacity .2s ease, background .2s ease;
+}
+
+/* Título y stack dentro de la tarjeta: en overlay, usa el color de texto inverso (bg) */
+.memberInfoContent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  transition: bottom 0.4s;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--bg);
+}
+
+.memberInfoContent span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: var(--bg);
+}
+
+.social {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -38px;
+  height: 48px;
+  transition: bottom ease-in-out 0.4s;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.social a {
+  transition: color 0.3s;
+  color: var(--bg);
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.social a:hover {
+  color: var(--accent);
+}
+
+/* Overlay con gradiente basado en variables */
+.member:hover .memberInfo {
+  background: linear-gradient(
+    0deg,
+    var(--overlay-strong) 0%,
+    var(--overlay-mid) 20%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 1;
+}
+
+.member:hover .memberInfoContent {
+  bottom: 60px;
+}
+
+.member:hover .social {
+  bottom: 0;
+}
+
+.moreWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.moreLink {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text);
+  border-radius: 30px;
+  border: 1px solid var(--accent);
+  padding: 10px 20px;
+  margin-top: 30px;
+  transition: background-color .2s ease, color .2s ease, transform .1s ease;
+  z-index: 9;
+}
+
+.moreLink:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.moreLink:active {
+  transform: translateY(1px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .row {
+    justify-content: center;
+  }
+
+  .project {
+    margin: 10px 0;
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .cardImage,
+  .memberInfo,
+  .memberInfoContent,
+  .social,
+  .moreLink {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,60 @@
+.wrapper {
+  position: relative;
+  width: 100vw;
+  min-height: clamp(220px, 45vh, 440px);
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  overflow: hidden;
+  background: transparent;
+}
+
+.line {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(16px, 2.8vw, 32px);
+  white-space: nowrap;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  padding-inline: clamp(24px, 6vw, 72px);
+}
+
+.chunk {
+  font-size: clamp(60px, 12vw, 160px);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+  color: var(--text);
+}
+
+.chunk em {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.badge {
+  width: auto;
+  height: 20%;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: 2px solid rgba(0, 0, 0, .85);
+  background: #fff;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, .25),
+    inset 0 0 0 2px rgba(255, 255, 255, .6);
+  transform: translateY(0.06em);
+}
+
+@media (hover: hover) {
+  .wrapper:hover .line {
+    animation-play-state: paused;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .badge {
+    height: 100px;
+  }
+}

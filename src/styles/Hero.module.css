@@ -1,0 +1,251 @@
+.seccion {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg,
+      var(--bg),
+      color-mix(in lab, var(--bg) 85%, #000 15%));
+  border-radius: 0 0 100px 100px;
+  overflow: hidden;
+}
+
+.contenido {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Texto --- */
+.presentacion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 32%;
+  padding: 40px 0;
+  color: var(--text);
+}
+
+.inlineHero {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.name {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+
+.typed {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Forzar que typed + cursor vayan en la línea de abajo */
+.typed::before {
+  content: "\A";
+  white-space: pre;
+  /* respeta el salto de línea */
+}
+
+.typed,
+.cursor {
+  display: inline;
+  /* se quedan en la misma línea entre sí */
+}
+
+/* opcional: pequeño espacio arriba */
+.typed {
+  margin-top: .25rem;
+}
+
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+  color: var(--accent);
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.presentacion h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cadenasTexto h3 {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.descripcion {
+  line-height: 1.6;
+  color: var(--text);
+}
+
+
+.heroImageContainer {
+  width: auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- Fondo con imagen y overlay --- */
+.heroImageContainerOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroImageOverlay {
+  width: calc(100vw - 5rem);
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  max-width: none;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: var(--heroOverlay);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- CTA circular Portafolio --- */
+.ctaCircleWrap {
+  position: absolute;
+  right: clamp(16px, 3vw, 32px);
+  bottom: clamp(16px, 3vw, 32px);
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.ctaCircle {
+  width: clamp(88px, 10vw, 120px);
+  height: clamp(88px, 10vw, 120px);
+  display: grid;
+  place-items: center;
+  position: relative;
+  user-select: none;
+}
+
+.rotatingText {
+  width: 100%;
+  height: 100%;
+  animation: spin 12s linear infinite;
+}
+
+.rotatingText text {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  fill: var(--text);
+}
+
+/* Flecha centrada */
+.arrow {
+  position: absolute;
+  font-size: clamp(30px, 4vw, 45px);
+  color: var(--text);
+  line-height: 1;
+  transform-origin: center;
+  transition: transform .25s ease, opacity .25s ease;
+  opacity: 0.9;
+}
+
+/* Hover: detener giro, activar efecto de flecha */
+.ctaCircleWrap:hover .rotatingText {
+  animation-play-state: paused;
+}
+
+.ctaCircleWrap:hover .arrow {
+  animation: bounce 1s infinite;
+}
+
+/* Hacer el CTA clicable y accesible */
+.ctaCircleButton {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.ctaCircleButton:focus .ctaCircle,
+.ctaCircleButton:hover .ctaCircle {
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .25));
+}
+
+/* Animaciones */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 700px) {
+  .contenido {
+    align-items: flex-end;
+  }
+
+  .presentacion {
+    width: 80%;
+    padding: 80px 0;
+    position: absolute;
+  }
+
+  .descripcion {
+    padding: 0 10px;
+  }
+
+  .ctaCircleWrap {
+    right: 12px;
+    bottom: 12px;
+  }
+}
