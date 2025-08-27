@@ -8,7 +8,7 @@ export default function AboutMe() {
       {/* Imagen de encabezado completa */}
       <div className={styles.headerImage}>
         <img
-          src="/img/about/sobre-mi-header.png" // ⬅️ usa tu archivo final
+          src="/img/about/sobre-mi-header.png"
           alt="Sobre Mi - Hola, Soy Gabriel Gómez"
           className={styles.headerImg}
         />

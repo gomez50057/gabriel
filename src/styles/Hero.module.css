@@ -240,8 +240,17 @@
     position: absolute;
   }
 
+  .presentacion h2 {
+    color: #f9f9f9;
+  }
+
   .descripcion {
     padding: 0 10px;
+    color: #f9f9f9;
+  }
+
+  .typed {
+    color: #f9f9f9;
   }
 
   .ctaCircleWrap {

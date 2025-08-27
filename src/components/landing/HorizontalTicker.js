@@ -8,8 +8,8 @@ import styles from "@/styles/HorizontalTicker.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HorizontalTicker({
-  leftImg = "/img/badges/observa.webp",  // <- cámbialas por las tuyas
-  rightImg = "/img/badges/metrics.webp", // <- cámbialas por las tuyas
+  leftImg = "/img/badges/observa.jpg",
+  rightImg = "/img/badges/metrics.jpg",
   altLeft = "observa",
   altRight = "métricas",
 }) {
@@ -40,7 +40,7 @@ export default function HorizontalTicker({
             scrollTrigger: {
               trigger: section,
               start: "top top",
-              end: `+=${distance}`, // longitud de recorrido
+              end: `+=${distance}`,
               scrub: 1,
               pin: true,
               invalidateOnRefresh: true,
@@ -73,6 +73,7 @@ export default function HorizontalTicker({
         <span className={styles.chunk}><em>se trackea</em></span>
         <img src={rightImg} alt={altRight} className={styles.badge} />
         <span className={styles.chunk}>no escala</span>
+        <span className={styles.trailingSpace} aria-hidden="true" />
       </div>
     </section>
   );
