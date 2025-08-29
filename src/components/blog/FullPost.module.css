@@ -1,0 +1,137 @@
+/* Contenedor general: grid fluido y padding responsivo */
+.postContainer {
+  --gap: clamp(16px, 3vw, 40px);
+  --pad-x: clamp(16px, 5vw, 40px);
+  --pad-top: clamp(72px, 12vw, 100px);
+  --pad-bottom: clamp(16px, 6vw, 40px);
+
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: var(--gap);
+  padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Columna principal */
+.postContent {
+  background: #fff;
+  padding: clamp(16px, 2.5vw, 24px);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+}
+
+/* Imagen principal: responsiva, segura */
+.postImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: clamp(12px, 2vw, 20px);
+}
+
+/* Meta (autor/fecha) */
+.meta {
+  color: #6b7280;
+  font-size: clamp(.875rem, .8rem + .2vw, .95rem);
+  margin-bottom: clamp(12px, 2vw, 18px);
+}
+
+/* Título */
+.title {
+  font-size: clamp(1.6rem, 1.1rem + 2vw, 2.4rem);
+  line-height: 1.2;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 clamp(10px, 2vw, 16px);
+}
+
+/* Cuerpo / descripción */
+.description {
+  font-size: clamp(1rem, .96rem + .4vw, 1.125rem);
+  line-height: 1.7;
+  color: #1f2937;
+  text-align: justify;
+}
+
+.list {
+  list-style: disc;
+  padding-left: 1.25rem;   /* indent correcto en desktop/móvil */
+  margin: 0;
+}
+
+.quote {
+  font-size: clamp(1.05rem, .9rem + .8vw, 1.3rem);
+  font-style: italic;
+  color: #4b5563;
+  text-align: right;
+  margin: clamp(16px, 3vw, 28px) 0 clamp(24px, 4vw, 40px);
+}
+
+/* Sidebar: sticky en desktop */
+.sidebar {
+  padding: 0 4px;
+  position: sticky;
+  top: 88px;                /* bajo el navbar */
+  align-self: start;
+}
+
+/* ----------- Breakpoints ----------- */
+
+/* Tablet (<= 1024px): stack con orden natural */
+@media (max-width: 1024px) {
+  .postContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;       /* quita sticky en tablet */
+    padding: 0;
+    margin-top: 8px;
+  }
+}
+
+/* Móvil (<= 640px): tipografía y espacios compactos */
+@media (max-width: 640px) {
+  .postContainer {
+    --pad-top: clamp(64px, 12vw, 80px);
+    --gap: clamp(12px, 4vw, 20px);
+  }
+
+  .postContent {
+    border-radius: 10px;
+    padding: clamp(12px, 4vw, 18px);
+    box-shadow: 0 4px 16px rgba(0,0,0,.07);
+  }
+
+  .postImage {
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;   /* mantiene proporción cómoda en móvil */
+  }
+
+  .title {
+    font-size: clamp(1.4rem, 1.05rem + 3.2vw, 2rem);
+    margin-bottom: 10px;
+  }
+
+  .description {
+    text-align: left;       /* lectura más natural en móvil */
+  }
+
+  .quote {
+    text-align: left;       /* evita cortes por ancho */
+    margin: 16px 0 24px;
+  }
+
+  .sidebar {
+    margin-top: 4px;
+  }
+}
+
+/* Lista alineada (si la usas aparte) */
+.rightAlignedList {
+  list-style-position: inside;
+  margin-bottom: .5rem;
+  text-align: left;
+  padding-inline-start: 1.25rem; /* antes 40px fijo */
+}

@@ -9,7 +9,7 @@ const LINKS = [
   ['#inicio', 'Inicio'],
   ['#sobremi', 'Sobre Mi'],
   ['#servicios', 'Servicios'],
-  ['/servicios', 'Hacks'],
+  ['/hacks', 'Hacks'],
   ['#portfolio', 'Portafolio'],
   ['#contacto', 'Contacto'],
 ];

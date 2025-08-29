@@ -1,0 +1,197 @@
+/* ===== Layout principal: grid fluido con sidebar ===== */
+.blogNoticias {
+  --maxw: 1200px;
+  --gap: clamp(16px, 3vw, 32px);
+  --padX: clamp(16px, 5vw, 40px);
+  --padY: clamp(24px, 6vw, 48px);
+
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(260px, 1fr);
+  gap: var(--gap);
+  padding: var(--padY) var(--padX);
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Columna principal */
+.newsSection { min-width: 0; }
+
+/* Header con filtro */
+.newsHeader {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(8px, 2vw, 16px);
+  margin-bottom: clamp(14px, 2vw, 20px);
+}
+
+.headerTitle {
+  margin: 0;
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
+  font-weight: 800;
+  color: #111827;
+}
+
+.orderSelect {
+  appearance: none;
+  padding: .55rem .8rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  font-size: .95rem;
+  color: #111827;
+  cursor: pointer;
+  transition: box-shadow .2s ease, border-color .2s ease, transform .08s ease;
+}
+.orderSelect:hover { border-color: #d1d5db; }
+.orderSelect:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.25);
+  border-color: #93c5fd;
+}
+.orderSelect:active { transform: scale(.98); }
+
+/* Grid de tarjetas */
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* mejor en móvil */
+  gap: clamp(14px, 3vw, 20px);
+  transition: opacity .3s ease-in-out;
+}
+
+/* Transiciones del filtro */
+.fadeIn { opacity: 1; }
+.fadeOut { opacity: 0; }
+
+/* Tarjeta */
+.newsItem {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* img / contenido / botón */
+  gap: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  overflow: hidden;
+  min-height: 100%;
+  transition: transform .2s ease, box-shadow .25s ease;
+}
+@media (hover: hover) {
+  .newsItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,.10);
+  }
+}
+
+/* Imagen */
+.newsImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Contenido */
+.newsContent {
+  padding: 10px 12px 2px;
+}
+.newsMeta {
+  font-size: .9rem;
+  color: #6b7280;
+  margin: 0 0 4px;
+}
+.newsTitle {
+  font-size: clamp(1.05rem, .9rem + .8vw, 1.35rem);
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+.newsDescription {
+  font-size: clamp(.95rem, .9rem + .3vw, 1rem);
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* Botón Leer más */
+.readMoreBtn {
+  margin: 8px 12px 12px;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .9rem;
+  border-radius: 10px;
+  background: #111827;
+  color: #fff;
+  text-decoration: none;
+  font-size: .95rem;
+  font-weight: 600;
+  transition: transform .1s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,.12);
+}
+.readMoreBtn:hover { background: #0b1220; }
+.readMoreBtn:active { transform: translateY(1px); }
+.readMoreBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.35);
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 84px; /* debajo del navbar */
+  align-self: start;
+  padding: 0;
+}
+
+/* Texto sin resultados */
+.noResults {
+  color: #6b7280;
+  font-size: .95rem;
+}
+
+/* Accesibilidad */
+.srOnly {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* ===== Breakpoints ===== */
+
+/* Tablet: apila columnas, filtro en 2 filas si falta espacio */
+@media (max-width: 1024px) {
+  .blogNoticias {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+  }
+  .sidebar {
+    position: static;
+    margin-top: 8px;
+  }
+  .newsHeader {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .orderSelect { width: 100%; }
+}
+
+/* Móvil: compactar tipografía/espacios */
+@media (max-width: 640px) {
+  .blogNoticias { --gap: clamp(12px, 4vw, 18px); }
+  .newsItem { border-radius: 10px; }
+  .newsContent { padding: 10px 10px 0; }
+  .readMoreBtn { margin: 10px; }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .newsItem,
+  .readMoreBtn,
+  .orderSelect,
+  .newsGrid {
+    transition: none !important;
+  }
+  .fadeIn, .fadeOut { opacity: 1 !important; }
+}
