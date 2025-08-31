@@ -1,14 +1,12 @@
 import React from 'react';
 import Navbar from '@/components/landing/Header';
-import BlogMain  from '@/components/blog/BlogMain';
-
-
+import HeroParallax from "@/shared/HeroParallax";
 
 const News = () => {
   return (
     <div>
       <Navbar />
-      <BlogMain   />
+      <HeroParallax debug={false} />
     </div>
   );
 };
