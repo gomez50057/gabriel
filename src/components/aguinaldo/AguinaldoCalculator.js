@@ -4,15 +4,15 @@ import { useMemo, useState } from "react";
 import styles from "./AguinaldoCalculator.module.css";
 
 const NIVELES = [
-  { nivel: "007",  nombramiento: "Técnico Especializado",     mensual:  9645.00 },
-  { nivel: "09C",  nombramiento: "Jefe de Departamento C",     mensual: 17299.00 },
-  { nivel: "10A",  nombramiento: "Subdirector Adjunto A",      mensual: 19459.00 },
-  { nivel: "10C",  nombramiento: "Subdirectora de Área C",     mensual: 23718.00 },
-  { nivel: "11B",  nombramiento: "Directora de Área B",        mensual: 32230.00 },
-  { nivel: "12B",  nombramiento: "Director General B",         mensual: 46640.00 },
-  { nivel: "14B",  nombramiento: "Secretario B",               mensual: 58630.00 },
-  { nivel: "89A",  nombramiento: "Jefa de Área A",             mensual: 11485.00 },
-  { nivel: "89B",  nombramiento: "Jefa de Área B",             mensual: 12938.00 },
+  { nivel: "007",  nombramiento: "Técnico/a Especializado/a",  mensual:  9645.00 },
+  { nivel: "09C",  nombramiento: "Jefatura de Departamento C",  mensual: 17299.00 },
+  { nivel: "10A",  nombramiento: "Subdirección Adjunta A",      mensual: 19459.00 },
+  { nivel: "10C",  nombramiento: "Subdirección de Área C",      mensual: 23718.00 },
+  { nivel: "11B",  nombramiento: "Dirección de Área B",         mensual: 32230.00 },
+  { nivel: "12B",  nombramiento: "Dirección General B",         mensual: 46640.00 },
+  { nivel: "14B",  nombramiento: "Secretaría B",                mensual: 58630.00 },
+  { nivel: "89A",  nombramiento: "Jefatura de Área A",          mensual: 11485.00 },
+  { nivel: "89B",  nombramiento: "Jefatura de Área B",          mensual: 12938.00 },
 ];
 
 const MXN = new Intl.NumberFormat("es-MX", {
