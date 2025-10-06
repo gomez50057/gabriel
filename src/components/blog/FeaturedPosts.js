@@ -17,7 +17,7 @@ const FeaturedPosts = ({ featuredPosts }) => {
             />
             <div className={styles.featuredContent}>
               <p className={styles.featuredDate}>{post.date}</p>
-              <Link href={`/blog/${normalizeName(post.name)}`} className={styles.featuredLink} >{post.name}</Link>
+              <Link href={`/hacks/${normalizeName(post.name)}`} className={styles.featuredLink} >{post.name}</Link>
             </div>
           </li>
         ))}

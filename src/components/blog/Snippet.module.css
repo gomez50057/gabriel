@@ -1,0 +1,115 @@
+
+
+.root {
+  background: var(--snippet-bg);
+  color: var(--snippet-fg);
+  border: 1px solid var(--snippet-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: linear-gradient(180deg, #0f162c, #0b1020);
+  border-bottom: 1px solid var(--snippet-border);
+}
+
+.fileAndLang {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file {
+  color: var(--snippet-fg);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.lang {
+  color: var(--snippet-accent);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 1px solid var(--snippet-border);
+  border-radius: 999px;
+  background: #0b1122;
+}
+
+.copyBtn {
+  appearance: none;
+  background: transparent;
+  color: var(--snippet-fg);
+  border: 1px solid var(--snippet-border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 0.06s ease, background 0.2s ease, color 0.2s ease;
+}
+.copyBtn:hover {
+  background: #111936;
+}
+.copyBtn:active {
+  transform: scale(0.98);
+}
+
+.pre {
+  margin: 0;
+  padding: 14px 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+    monospace;
+  font-size: clamp(0.82rem, 0.78rem + 0.2vw, 0.95rem);
+  line-height: 1.6;
+  tab-size: 2;
+  white-space: pre;
+  position: relative;
+}
+
+.scroll {
+  overflow: auto;
+}
+.wrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Números de línea opcionales (CSS-only, simple) */
+.withLines {
+  counter-reset: line;
+  padding-left: 3.25rem;
+}
+.withLines code {
+  display: block;
+}
+.withLines code::before {
+  counter-increment: line;
+  content: counter(line);
+  position: absolute;
+  left: 0;
+  width: 2.5rem;
+  text-align: right;
+  color: var(--snippet-dim);
+  padding-right: 0.75rem;
+}
+
+/* Inline */
+.inline {
+  background: #0f162c;
+  color: var(--snippet-fg);
+  border: 1px solid var(--snippet-border);
+  border-radius: 6px;
+  padding: 0.1em 0.4em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+    monospace;
+  font-size: 0.95em;
+  white-space: pre-wrap;
+}

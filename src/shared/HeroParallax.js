@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroParallax({
   // Imagen de primer plano (la que hace zoom y “z”)
-  foregroundSrc = "https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp",
+  foregroundSrc = "/img/heroParallax/hero-1.png",
   foregroundAlt = "Imagen principal",
   // Muestra marcadores de ScrollTrigger para depurar
   debug = false,

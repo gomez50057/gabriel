@@ -6,12 +6,12 @@ import ThemeSwitch from '@/shared/ThemeSwitch';
 import styles from '@/styles/Header.module.css';
 
 const LINKS = [
-  ['#inicio', 'Inicio'],
-  ['#sobremi', 'Sobre Mi'],
-  ['#servicios', 'Servicios'],
+  ['/', 'Inicio'],
+  ['/#sobremi', 'Sobre Mi'],
+  // ['/#servicios', 'Servicios'],
   ['/hacks', 'Hacks'],
-  ['#portfolio', 'Portafolio'],
-  ['#contacto', 'Contacto'],
+  ['/#portfolio', 'Portafolio'],
+  ['/#contacto', 'Contacto'],
 ];
 
 export default function Header() {

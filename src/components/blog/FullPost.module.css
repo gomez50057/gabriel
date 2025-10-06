@@ -135,3 +135,13 @@
   text-align: left;
   padding-inline-start: 1.25rem; /* antes 40px fijo */
 }
+
+.noBullet {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0;
+}
+
+.paragraph {
+  margin: 0; /* control fino desde el contenedor */
+}

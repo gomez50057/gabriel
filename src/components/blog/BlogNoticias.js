@@ -87,14 +87,12 @@ const BlogNoticias = ({ posts = [], featuredPosts = [] }) => {
                   <h3 className={styles.newsTitle}>{post.name}</h3>
 
                   <div className={styles.newsDescription}>
-                    {post.description?.length > MAX_LENGTH
-                      ? renderDescription(`${post.description.slice(0, MAX_LENGTH)}...`)
-                      : renderDescription(post.description || "")}
+                   
                   </div>
                 </div>
 
                 <Link
-                  href={`/blog/${normalizeName(post.name)}`}
+                  href={`/hacks/${normalizeName(post.name)}`}
                   className={styles.readMoreBtn}
                   aria-label={`Leer más sobre: ${post.name}`}
                 >

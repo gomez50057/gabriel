@@ -3,9 +3,7 @@ import styles from './HeroHacks.module.css';
 
 export default function HeroHacks({
   subtitle = 'SENIOR EN PROCESO',
-  intro = `Un espacio donde cada línea de código suma. Aquí comparto pequeños hacks, tutoriales y experimentos full stack: desde cómo implementar funciones y bibliotecas hasta tips que hacen más fácil el día a día en el desarrollo.
-
-Porque igual que en un proyecto, yo también estoy en constante refactor: Lo que no se trackea, no escala.`,
+  intro = `Un espacio donde cada línea de código suma. Aquí comparto pequeños hacks, tutoriales y experimentos full stack: desde cómo implementar funciones y bibliotecas hasta tips que hacen más fácil el día a día en el desarrollo. Porque igual que en un proyecto, yo también estoy en constante refactor: Lo que no se trackea, no escala.`,
   posts = [
     {
       id: 1,

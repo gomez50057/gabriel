@@ -118,7 +118,7 @@ const BlogHeader = () => {
           {POSTS[activeIndex].date}
         </p>
 
-        <Link href={`/blog/${normalizeName(POSTS[activeIndex].name)}`} passHref>
+        <Link href={`/hacks/${normalizeName(POSTS[activeIndex].name)}`} passHref>
           <button
             key={`${animationKey}-button`}
             className={`${styles.ctaBtn} ${styles.textAnimation} delay-3`}
