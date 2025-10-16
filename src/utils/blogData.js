@@ -9,6 +9,383 @@ import Snippet from "@/components/blog/Snippet";
 
 export const blogPosts = [
   {
+    name: "Cómo arreglar el bloqueo de Facebook, Instagram o WhatsApp (y cualquier página bloqueada en /etc/hosts)",
+    description: [
+      {
+        "type": "p",
+        "text": "¿Facebook, Instagram o WhatsApp dejaron de cargar de repente? 😤 ¿O quizá notas que varias páginas web simplemente no abren, aunque tu conexión esté perfecta? Es muy probable que el problema esté en tu archivo `/etc/hosts`, el cual puede bloquear sitios web a nivel del sistema operativo."
+      },
+      {
+        "type": "p",
+        "text": "Este archivo controla qué dominios puede resolver tu computadora. Si contiene entradas que redirigen sitios a `0.0.0.0` o `127.0.0.1`, estás bloqueando manualmente esas páginas (sin que tu navegador tenga la culpa)."
+      },
+      {
+        "type": "p",
+        "text": "En este tutorial aprenderás cómo **eliminar todas las reglas que bloquean Facebook, Instagram, WhatsApp y cualquier otra página web**, limpiando tu sistema y restaurando la navegación normal."
+      },
+      {
+        "type": "h2",
+        "text": "🧩 ¿Qué es el archivo /etc/hosts?"
+      },
+      {
+        "type": "p",
+        "text": "El archivo `/etc/hosts` es parte fundamental de macOS y Linux. Su función es asociar nombres de dominio con direcciones IP antes de consultar los servidores DNS. Es como una agenda interna del sistema."
+      },
+      {
+        "type": "p",
+        "text": "Por ejemplo, si el archivo contiene esta línea: `0.0.0.0 facebook.com`, el sistema enviará todas las solicitudes a una IP vacía, bloqueando completamente la página. Muchas herramientas de productividad o bloqueadores de publicidad usan esta técnica para restringir el acceso a sitios específicos."
+      },
+      {
+        "type": "quote",
+        "text": "👉 En resumen: si ves líneas que apuntan a 0.0.0.0 o 127.0.0.1, esas páginas están bloqueadas localmente desde tu sistema operativo."
+      },
+      {
+        "type": "h2",
+        "text": "⚙️ Arreglo en 3 pasos (Terminal)"
+      },
+      {
+        "type": "h3",
+        "text": "1️⃣ Respalda el archivo hosts"
+      },
+      {
+        "type": "p",
+        "text": "Antes de modificar nada, haz una copia de seguridad del archivo original. Así podrás restaurarlo si algo sale mal o si quieres volver al estado anterior."
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "sudo cp /etc/hosts /etc/hosts.backup.$(date +%F_%H%M%S)",
+        "fileName": "terminal"
+      },
+      {
+        "type": "h3",
+        "text": "2️⃣ Elimina todas las líneas que bloquean páginas"
+      },
+      {
+        "type": "p",
+        "text": "Con este comando, eliminarás automáticamente las líneas que contengan 'facebook', 'fbcdn', 'instagram', 'whatsapp' o cualquier otro dominio que quieras desbloquear. Puedes editar la lista para incluir más sitios si lo deseas:"
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "sudo sed -i '' -E '/(facebook|fbcdn|instagram|whatsapp)/d' /etc/hosts",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "💡 En macOS usa `-i ''`. En Linux simplemente quítalas comillas (`-i -E`). Si deseas limpiar **todas las páginas bloqueadas** sin escribir cada nombre, puedes borrar **todas las líneas con 0.0.0.0 o 127.0.0.1** así:"
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "sudo sed -i '' -E '/(0\\.0\\.0\\.0|127\\.0\\.0\\.1)/d' /etc/hosts",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "Esto eliminará cualquier redirección local, restaurando el comportamiento normal del sistema para todos los dominios."
+      },
+      {
+        "type": "h3",
+        "text": "3️⃣ Limpia la caché DNS del sistema"
+      },
+      {
+        "type": "p",
+        "text": "Después de editar el archivo `/etc/hosts`, es necesario limpiar la caché DNS. Esto hace que el sistema olvide las redirecciones anteriores y use las nuevas reglas."
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "En macOS, estos comandos reinician el servicio DNS (mDNSResponder). En Linux puedes usar:\n\n`sudo systemd-resolve --flush-caches`\n\nó, si usas `nscd`, ejecuta:\n\n`sudo service nscd restart`."
+      },
+      {
+        "type": "h2",
+        "text": "🔎 Comprueba que el bloqueo desapareció"
+      },
+      {
+        "type": "p",
+        "text": "Haz una pequeña prueba para asegurarte de que las páginas se resuelven correctamente:"
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "dig +short www.facebook.com\ncurl -I https://www.facebook.com -m 10",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "✅ Si `dig` devuelve direcciones IP reales y `curl` responde con código 200 o 301, el acceso está restaurado. ¡Ya puedes volver a navegar sin bloqueos!"
+      },
+      {
+        "type": "h2",
+        "text": "✏️ Opción manual: editar el archivo a mano"
+      },
+      {
+        "type": "p",
+        "text": "Si prefieres hacerlo visualmente, abre el archivo `/etc/hosts` con un editor de texto en modo administrador y elimina las líneas bloqueadoras una por una:"
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "sudo nano /etc/hosts",
+        "fileName": "terminal"
+      },
+      {
+        "type": "snippet",
+        "language": "text",
+        "code": "0.0.0.0 facebook.com\n0.0.0.0 www.instagram.com\n0.0.0.0 whatsapp.com\n0.0.0.0 fbcdn.net\n0.0.0.0 twitter.com\n0.0.0.0 youtube.com",
+        "fileName": "hosts"
+      },
+      {
+        "type": "p",
+        "text": "Guarda con `Ctrl + O`, presiona Enter, y sal con `Ctrl + X`. Luego limpia la caché DNS como en el paso 3."
+      },
+      {
+        "type": "h2",
+        "text": "🔁 Si vuelve a bloquearse solo"
+      },
+      {
+        "type": "p",
+        "text": "Si después de limpiarlo vuelve a llenarse de bloqueos, probablemente alguna app o herramienta está reescribiendo el archivo `/etc/hosts`. Suele pasar con programas como Cold Turkey, Freedom, AdGuard, Focus o listas tipo 'StevenBlack hosts'."
+      },
+      {
+        "type": "p",
+        "text": "Para identificarlo, revisa la fecha y hora de la última modificación del archivo:"
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "stat -x /etc/hosts",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "Si ves que se actualiza solo, desactiva la opción 'bloqueo de sitios a nivel del sistema' en la app que lo modifica."
+      },
+      {
+        "type": "h2",
+        "text": "🧱 Opcional: proteger el archivo /etc/hosts"
+      },
+      {
+        "type": "p",
+        "text": "Si ya lo limpiaste y no quieres que ninguna app vuelva a modificarlo, puedes marcarlo como inmutable (solo lectura para el sistema)."
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "sudo chflags uchg /etc/hosts\n# Para volver a permitir cambios:\n# sudo chflags nouchg /etc/hosts",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "Esto funciona en macOS (sistemas con APFS/HFS+). En Linux, puedes usar `chattr +i /etc/hosts` para el mismo efecto."
+      },
+      {
+        "type": "h2",
+        "text": "✅ Conclusión"
+      },
+      {
+        "type": "p",
+        "text": "El archivo `/etc/hosts` es una herramienta poderosa para redirigir o bloquear sitios, pero también puede volverse una trampa si una app lo modifica sin avisarte. Con esta guía, no solo recuperas el acceso a Facebook, Instagram o WhatsApp, sino que también limpias **todos los bloqueos locales** en tu sistema operativo y aprendes a protegerlo de futuros cambios."
+      }
+    ],
+    date: "16 de octubre, 2025",
+    image: "/img/tutoriales/fix-blocked-sites-hosts.jpg",
+    category: "Hacks",
+    featuredPosts: true
+  },
+  {
+    name: "Cómo descomprimir archivos en Linux sin moverte de carpeta (CyberArk + WinSCP)",
+    description: [
+      {
+        "type": "p",
+        "text": "Cuando trabajamos con CyberArk y WinSCP, puede ocurrir que las carpetas no se suban correctamente. Esto sucede porque CyberArk, al ejecutar sesiones a través del PSM (Privileged Session Manager), no tiene acceso directo al sistema de archivos local."
+      },
+      {
+        "type": "h2",
+        "text": "⚠️ Por qué ocurre este problema"
+      },
+      {
+        "type": "p",
+        "text": "Cuando subes archivos desde el portal o el cliente de CyberArk, todo lo que subes o descargas se redirige a un drive virtual (normalmente Z:) controlado por el PSM Server. Este drive solo acepta archivos individuales y no puede procesar subcarpetas ni estructuras anidadas debido a políticas de aislamiento y auditoría."
+      },
+      {
+        "type": "quote",
+        "text": "👉 Por eso, al intentar subir una carpeta (por ejemplo src/), verás que marca 0 B / 0 B: el PSM bloquea su contenido interno."
+      },
+      {
+        "type": "h2",
+        "text": "💡 Solución práctica: comprimir antes de subir"
+      },
+      {
+        "type": "p",
+        "text": "Una es comprimir la carpeta completa antes de subirla. Luego, una vez dentro del servidor remoto, descomprímela con los pasos siguientes. Existen dos formas principales de hacerlo:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Opción 01: entrar al directorio donde se encuentra el archivo comprimido y descomprimirlo ahí mismo.",
+          "Opción 02: hacerlo desde cualquier punto del sistema, indicando la ruta completa del archivo y el destino."
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "1️⃣ Verifica el tipo de archivo comprimido"
+      },
+      {
+        "type": "p",
+        "text": "Primero, identifica el formato del archivo (.zip o .tar.gz) para saber qué comando usar. El siguiente comando lista los archivos que coinciden con el nombre:"
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "ls nombre-del-archivo*",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "Si termina en .zip, usa unzip. Si termina en .tar.gz, usa tar."
+      },
+      {
+        "type": "h3",
+        "text": "2️⃣ Descomprimir usando rutas completas"
+      },
+      {
+        "type": "p",
+        "text": "👉 **Opción 01:** moverte al directorio donde está el archivo comprimido y descomprimirlo directamente ahí. Esto es útil si ya estás en la misma carpeta."
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "cd /ruta/del/archivo/\nunzip archivo.zip",
+        "fileName": "terminal"
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "cd /ruta/del/archivo/\ntar -xzf archivo.tar.gz",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "👉 **Opción 02:** hacerlo desde cualquier punto del sistema sin moverte, especificando las rutas de origen y destino."
+      },
+      {
+        "type": "h4",
+        "text": "🟦 Ejemplo con .zip"
+      },
+      {
+        "type": "p",
+        "text": "Descomprime el archivo ZIP directamente indicando la carpeta de destino (-d)."
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "unzip /ruta/donde/esta/archivo.zip -d /ruta/donde/quieres/descomprimir/",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "El parámetro -d indica el destino (destination). Si la carpeta de destino no existe, créala con mkdir -p /ruta/donde/quieres/descomprimir/."
+      },
+      {
+        "type": "h4",
+        "text": "🟩 Ejemplo con .tar.gz"
+      },
+      {
+        "type": "p",
+        "text": "Extrae un archivo .tar.gz desde cualquier ubicación, usando -C para definir el destino."
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "tar -xzf /ruta/donde/esta/archivo.tar.gz -C /ruta/donde/quieres/descomprimir/",
+        "fileName": "terminal"
+      },
+      {
+        "type": "p",
+        "text": "El parámetro -xzf significa: x (extraer), z (descomprimir), f (usar archivo). El modificador -C indica la carpeta de destino."
+      },
+      {
+        "type": "h3",
+        "text": "3️⃣ Si prefieres moverte solo un nivel dentro del proyecto"
+      },
+      {
+        "type": "p",
+        "text": "Puedes entrar parcialmente al proyecto y descomprimir en un subdirectorio específico."
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "cd proyecto/\nunzip frontend.zip -d frontend/",
+        "fileName": "terminal"
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "cd proyecto/\ntar -xzf frontend.tar.gz -C frontend/",
+        "fileName": "terminal"
+      },
+      {
+        "type": "h3",
+        "text": "4️⃣ Limpieza final (opcional)"
+      },
+      {
+        "type": "p",
+        "text": "Una vez verificado el contenido, puedes eliminar el archivo comprimido si ya no lo necesitas."
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "rm archivo.zip",
+        "fileName": "terminal"
+      },
+      {
+        "type": "h3",
+        "text": "5️⃣ Si aparece error 'command not found'"
+      },
+      {
+        "type": "p",
+        "text": "Instala el descompresor correspondiente según la distribución que uses (solo si tienes permisos)."
+      },
+      {
+        "type": "snippet",
+        "language": "bash",
+        "code": "sudo yum install unzip   # CentOS / Rocky\n# o\nsudo apt install unzip   # Ubuntu / Debian",
+        "fileName": "terminal"
+      },
+      {
+        "type": "h2",
+        "text": "✅ Resumen general"
+      },
+      {
+        "type": "table",
+        "headers": ["Tipo de archivo", "Comando de extracción", "Ejemplo de uso"],
+        "rows": [
+          [".zip", "unzip archivo.zip -d destino/", "unzip /home/user/proyecto.zip -d /var/www/"],
+          [".tar.gz", "tar -xzf archivo.tar.gz -C destino/", "tar -xzf /home/user/proyecto.tar.gz -C /var/www/"]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "🧩 Conclusión"
+      },
+      {
+        "type": "p",
+        "text": "Si trabajas con CyberArk + WinSCP, siempre comprime tus carpetas antes de subirlas (por ejemplo src.zip o frontend.tar.gz). Luego, una vez dentro del servidor, descomprímelas siguiendo los pasos anteriores. Así evitas los errores de transferencia y respetas las políticas de seguridad del PSM."
+      }
+    ],
+    date: "16 de octubre, 2025",
+    image: "/img/tutoriales/linux-unzip-cyberark.png",
+    category: "Hacks",
+    featuredPosts: true
+  },
+  {
     name: "Guía paso a paso: crea tu proyecto con Next.js 15",
     description: [
       { "type": "p", "text": "Vamos a crear un proyecto de Next.js 15 desde cero, eligiendo opciones óptimas para tu stack: JavaScript (sin TypeScript), App Router, carpeta src/, CSS Modules, y ESLint activado. Te explico cada decisión pensando en rendimiento, seguridad y mantenibilidad." },
@@ -164,7 +541,7 @@ export const blogPosts = [
       { "type": "p", "text": "Con esto tu Django queda conectado a PostgreSQL mediante variables de entorno gestionadas por dotenv. ¿Quieres que lo dejemos listo con `docker-compose` (Django + Postgres + pgAdmin) y volúmenes persistentes?" }
     ],
     date: "20 de septiembre, 2025",
-    image: "/img/tutoriales/django-postgres-dotenv.png",
+    image: "/img/tutoriales/django-postgres-dotenv.jpg",
     category: "Backend",
     featuredPosts: true
   },
@@ -208,7 +585,7 @@ export const blogPosts = [
       { "type": "p", "text": "Con esto puedes iniciar sesión SSH de forma segura y repetible. Si me dices tu escenario (bastion, puertos, nube, distro), te dejo un ~/.ssh/config exacto y un checklist de hardening para tu entorno." }
     ],
     date: "20 de septiembre, 2025",
-    image: "/img/tutoriales/ssh-login.png",
+    image: "/img/tutoriales/ssh-login.jpg",
     category: "DevOps",
     featuredPosts: true
   },
@@ -244,27 +621,10 @@ export const blogPosts = [
       { "type": "p", "text": "• **Comando rápido**: `docker start $(docker ps -a -q)` para encender todo.\n• **Mejor con Compose** si hay dependencias: `docker compose up -d`.\n• **Filtra/evita sorpresas** usando `-f status=exited`, healthchecks y restart policies.\n• **Piensa en orden, puertos y recursos** antes de encender todo a la vez." }
     ],
     date: "20 de septiembre, 2025",
-    image: "/img/tutoriales/docker-start-all.png",
+    image: "/img/tutoriales/docker.svg",
     category: "DevOps",
     featuredPosts: true
   }
-
-];
-
-export const featuredPosts = [
-  {
-    name:
-      "9na reunión previas actualización del Programa de Ordenamiento de la Zona Metropolitana del Valle de México",
-    date: "11 de diciembre, 2024",
-    image:
-      "/img/noticias/ZMVM/9na reunión previas actualización del Programa de Ordenamiento de la Zona Metropolitana del Valle de México.jpg",
-  },
-  {
-    name: "Red Nacional Metropolitana 2024 Sexta Edición Día 2",
-    date: "29 de noviembre, 2024",
-    image:
-      "/img/noticias/ZMVM/Red Nacional Metropolitana 2024 Sexta Edición Día 2.jpg",
-  },
 ];
 
 // Función para normalizar nombres (elimina acentos y caracteres especiales)
