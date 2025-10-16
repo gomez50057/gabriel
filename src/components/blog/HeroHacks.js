@@ -7,32 +7,32 @@ export default function HeroHacks({
   posts = [
     {
       id: 1,
-      tag: 'CREATIVE',
-      title: 'BEHIND THE CURTAIN A DAY IN THE LIFE OF A CREATIVE AGENCY',
+      tag: 'Hacks',
+      title: 'Cómo arreglar el bloqueo de Facebook, Instagram o WhatsApp (y cualquier página bloqueada en /etc/hosts)',
       excerpt:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuscе convallis.',
-      image: '/img/hacks/thumb-1.jpg',
-      href: '#',
+        'Notas que varias páginas web simplemente no abren, aunque tu conexión esté perfectamente bien. Aquí te explico cómo arreglarlo.',
+      image: '/img/tutoriales/fix-blocked-sites-hosts.jpg',
+      href: '/hacks/como-arreglar-el-bloqueo-de-facebook-instagram-o-whatsapp-y-cualquier-pagina-bloqueada-en-etchosts',
     },
     {
       id: 2,
-      tag: 'BRANDING',
+      tag: 'Desarrollo Web',
       title:
-        'DESIGNING SUCCESS THE IMPACT OF CREATIVE AGENCIES ON BRAND EVOLUTION',
+        'Guía paso a paso: crea tu proyecto con Next.js 15',
       excerpt:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuscе convallis.',
-      image: '/img/hacks/thumb-2.jpg',
-      href: '#',
+        'Vamos a crear un proyecto de Next.js 15 desde cero, eligiendo opciones óptimas para tu stack',
+      image: '/img/tutoriales/nextjs-setup.png',
+      href: '/hacks/guia-paso-a-paso-crea-tu-proyecto-con-nextjs-15',
       featured: true, // tarjeta central grande
     },
     {
       id: 3,
-      tag: 'UI/DESIGN',
-      title: 'HOW CREATIVE AGENCIES TURN IDEAS INTO ICONIC BRANDS',
+      tag: 'Hacks',
+      title: 'Cómo descomprimir archivos en Linux sin moverte de carpeta (CyberArk + WinSCP)',
       excerpt:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuscе convallis.',
-      image: '/img/hacks/thumb-3.jpg',
-      href: '#',
+        'Cuando trabajamos con CyberArk y WinSCP, puede ocurrir que las carpetas no se suban correctamente.',
+      image: '/img/tutoriales/linux-unzip-cyberark.png',
+      href: '/hacks/conexion-ssh-que-necesitas-y-como-iniciar-sesion-de-forma-segura',
     },
   ],
 }) {
