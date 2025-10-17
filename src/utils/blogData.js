@@ -1,13 +1,54 @@
-// Negrita: **Este texto estará en negrita**
-// Cursiva: *Este texto estará en cursiva*
-// Viñetas: * Elemento de lista
-// Saltos de línea: \n
-// Negrita y Cursiva: **_Este texto estará en negrita y Cursiva_**
+// **Texto**   → Texto en negrita
+// *Texto*     → Texto en cursiva
+// **_Texto_** → Texto en negrita y cursiva
+// `código`    → renderizado como <Snippet inline>
 
 import styles from "../components/blog/FullPost.module.css";
 import Snippet from "@/components/blog/Snippet";
 
 export const blogPosts = [
+  {
+    name: "ImageMagick en Windows: convertir JPG/JPEG/PNG → WebP sin metadatos",
+    description: [
+      { "type": "p", "text": "Guía práctica para instalar ImageMagick en **Windows** y convertir masivamente imágenes a **WebP** desde la terminal (PowerShell/CMD), con comandos separados para **.jpg**, **.jpeg** y **.png**, sin metadatos (EXIF/ICC/comentarios), y evitando colisiones de nombres." },
+
+      { "type": "p", "text": "1) Instalar ImageMagick en Windows" },
+      { "type": "p", "text": "• Descarga el instalador oficial: https://imagemagick.org/script/download.php (elige la versión **Q16 x64 static**). Durante la instalación:" },
+      { "type": "p", "text": "  - Marca **Add application directory to your system path** (para ejecutar `magick` desde cualquier carpeta)." },
+      { "type": "p", "text": "  - (Opcional) Marca **Install legacy utilities (e.g., convert)** si las necesitas; no es obligatorio para usar `magick`." },
+      { "type": "p", "text": "• Verifica en PowerShell:" },
+      { "type": "snippet", "language": "powershell", "fileName": "PowerShell", "code": "magick -version" },
+      { "type": "p", "text": "Deberías ver la versión y la lista de “Delegates” que incluyen **webp**." },
+
+      { "type": "p", "text": "2) Convertir desde la terminal (en la carpeta con tus imágenes)" },
+      { "type": "p", "text": "Comandos separados por extensión; todos **eliminan metadatos** con `-strip` y usan compresión eficiente." },
+
+      { "type": "p", "text": "— Sólo **JPG** (.jpg):" },
+      { "type": "snippet", "language": "powershell", "fileName": "PowerShell (JPG → WebP)", "code": "magick mogrify -format webp -quality 85 -strip -define webp:method=6 -define webp:near-lossless=0 *.jpg" },
+
+      { "type": "p", "text": "— Sólo **JPEG** (.jpeg):" },
+      { "type": "snippet", "language": "powershell", "fileName": "PowerShell (JPEG → WebP)", "code": "magick mogrify -format webp -quality 85 -strip -define webp:method=6 -define webp:near-lossless=0 *.jpeg" },
+
+      { "type": "p", "text": "— Sólo **PNG** (mantiene transparencia). Aquí conviene **lossless** o subir calidad si prefieres con pérdidas suaves:" },
+      { "type": "snippet", "language": "powershell", "fileName": "PowerShell (PNG → WebP lossless)", "code": "magick mogrify -format webp -strip -define webp:method=6 -define webp:lossless=true *.png" },
+      { "type": "snippet", "language": "powershell", "fileName": "Alternativa (PNG → WebP con pérdidas suaves)", "code": "magick mogrify -format webp -quality 90 -strip -define webp:method=6 -define webp:near-lossless=0 *.png" },
+
+      { "type": "p", "text": "3) Guardar los WebP en **otra carpeta** (no sobrescribir originales)" },
+      { "type": "p", "text": "Crea una carpeta de salida (por ejemplo `webp`) y usa `-path` con `mogrify`:" },
+      { "type": "snippet", "language": "powershell", "fileName": "PowerShell", "code": "mkdir webp -Force\n# JPG → webp/\nmagick mogrify -path webp -format webp -quality 85 -strip -define webp:method=6 -define webp:near-lossless=0 *.jpg\n# JPEG → webp/\nmagick mogrify -path webp -format webp -quality 85 -strip -define webp:method=6 -define webp:near-lossless=0 *.jpeg\n# PNG → webp/ (lossless recomendado)\nmagick mogrify -path webp -format webp -strip -define webp:method=6 -define webp:lossless=true *.png" },
+
+      { "type": "p", "text": "4) Usar **CMD desde PowerShell** (dos bucles) para evitar colisiones si tienes `1.jpg` y `1.jpeg`" },
+      { "type": "p", "text": "Si prefieres usar **.jpg** junto con **.jpeg** y evitar el problema comentado usa `for` de CMD, llama a `cmd /c` y haz dos bucles (uno por extensión). Esto genera nombres únicos: `*_jpg.webp` y `*_jpeg.webp`." },
+      { "type": "snippet", "language": "powershell", "fileName": "PowerShell + CMD (dos bucles)", "code": "mkdir webp -Force\ncmd /c 'for %f in (*.jpg *.JPG) do magick \"%f\" -strip -quality 85 -define webp:method=6 -define webp:near-lossless=0 \"webp\\%~nf_jpg.webp\"'\ncmd /c 'for %f in (*.jpeg *.JPEG) do magick \"%f\" -strip -quality 85 -define webp:method=6 -define webp:near-lossless=0 \"webp\\%~nf_jpeg.webp\"'" },
+
+      { "type": "p", "text": "Notas rápidas" },
+      { "type": "p", "text": "• `-strip` elimina EXIF/ICC/comentarios → privacidad y menor peso.\n• `-quality 85` (con `webp:method=6`) suele dar excelente fidelidad para fotos. Ajusta 80–90 según tu criterio.\n• Para PNG con transparencia, `-define webp:lossless=true` evita halos y es ideal para logos/íconos.\n• Si usas `mogrify -path`, no puedes personalizar el nombre de salida; si necesitas sufijos (p. ej., `_jpg/_jpeg`) usa el enfoque de **dos bucles** con `cmd /c` mostrado arriba." }
+    ],
+    date: "17 de octubre, 2025",
+    image: "/img/tutoriales/imagemagick-windows-webp.png",
+    category: "Optimización Web",
+    featuredPosts: true
+  },
   {
     name: "Cómo arreglar el bloqueo de Facebook, Instagram o WhatsApp (y cualquier página bloqueada en /etc/hosts)",
     description: [
@@ -627,20 +668,17 @@ export const blogPosts = [
   }
 ];
 
-// Función para normalizar nombres (elimina acentos y caracteres especiales)
 export const normalizeName = (str) => {
   return str
-    .normalize("NFD") // Descompone los caracteres acentuados
-    .replace(/[\u0300-\u036f]/g, "") // Elimina los diacríticos
-    .replace(/[^\w\s-]/g, "") // Elimina caracteres especiales
-    .replace(/\s+/g, "-") // Reemplaza espacios con guiones
-    .toLowerCase(); // Convierte a minúsculas
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .toLowerCase();
 };
 
-/* ====== Marcado ligero: **negritas**, *cursivas*, `inline code` ====== */
-
-// Mantiene compatibilidad con tu función original
 export const renderTextWithStyles = (text) => {
+  // Captura **_texto_**, **texto**, *texto*
   const combinedRegex = /(\*\*_(.*?)_\*\*)|(\*\*(.*?)\*\*)|(\*(.*?)\*)/g;
 
   const elements = [];
@@ -648,27 +686,24 @@ export const renderTextWithStyles = (text) => {
 
   String(text).replace(
     combinedRegex,
-    (
-      match,
-      boldItalicContent,
-      boldContent,
-      italicContent,
-      offset
-    ) => {
+    (match, boldItalic, boldItalicText, bold, boldText, italic, italicText, offset) => {
       if (offset > lastIndex) {
         elements.push(String(text).substring(lastIndex, offset));
       }
 
-      if (boldItalicContent) {
+      if (boldItalic) {
+        // **_texto_**
         elements.push(
           <strong key={`bi-${offset}`}>
-            <em>{boldItalicContent}</em>
+            <em>{boldItalicText}</em>
           </strong>
         );
-      } else if (boldContent) {
-        elements.push(<strong key={`b-${offset}`}>{boldContent}</strong>);
-      } else if (italicContent) {
-        elements.push(<em key={`i-${offset}`}>{italicContent}</em>);
+      } else if (bold) {
+        // **texto**
+        elements.push(<strong key={`b-${offset}`}>{boldText}</strong>);
+      } else if (italic) {
+        // *texto*
+        elements.push(<em key={`i-${offset}`}>{italicText}</em>);
       }
 
       lastIndex = offset + match.length;
@@ -678,26 +713,45 @@ export const renderTextWithStyles = (text) => {
   if (lastIndex < String(text).length) {
     elements.push(String(text).substring(lastIndex));
   }
+
   return elements;
 };
 
-// Inserta <Snippet inline> para backticks y aplica negrita/cursiva al resto
+/* ===== Preservar \n como <br/> ===== */
+const withNewlines = (nodes) => {
+  const out = [];
+  let k = 0;
+
+  const pushWithBreaks = (str) => {
+    const parts = String(str).split("\n");
+    parts.forEach((p, i) => {
+      if (p) out.push(p);
+      if (i < parts.length - 1) out.push(<br key={`br-${k++}`} />);
+    });
+  };
+
+  for (const n of [].concat(nodes)) {
+    if (typeof n === "string") pushWithBreaks(n);
+    else out.push(n);
+  }
+  return out;
+};
+
 const renderInlineWithStyles = (text) => {
   const parts = String(text).split(/(`[^`]+`)/g);
+
   return parts.map((seg, i) => {
     if (/^`[^`]+`$/.test(seg)) {
       return (
         <Snippet key={`code-${i}`} inline code={seg.slice(1, -1)} language="txt" />
       );
     }
-    return <span key={`t-${i}`}>{renderTextWithStyles(seg)}</span>;
+    // Preserva \n en el texto normal
+    return <span key={`t-${i}`}>{withNewlines(renderTextWithStyles(seg))}</span>;
   });
 };
 
-/* ====== Fences (bloques de código) en cadenas ====== */
-
 const parseFenceHeader = (rawHeader = "") => {
-  // ejemplo: "js file=app.js lines wrap"
   const tokens = rawHeader.trim().split(/\s+/).filter(Boolean);
   const meta = {
     language: "txt",
@@ -718,10 +772,8 @@ const parseFenceHeader = (rawHeader = "") => {
   return meta;
 };
 
-/* ====== Render principal (string legacy o array de bloques) ====== */
-
 export const renderDescription = (description) => {
-  // 1) Si viene como ARRAY de bloques (nuevo formato)
+  // 1) NUEVO FORMATO: array de bloques
   if (Array.isArray(description)) {
     return description.map((block, idx) => {
       if (!block || typeof block !== "object") return null;
@@ -772,7 +824,7 @@ export const renderDescription = (description) => {
     });
   }
 
-  // 2) Si viene como STRING (compatibilidad con tu formato actual)
+  // 2) FORMATO LEGACY: cadena con saltos de línea
   const lines = String(description).split("\n");
 
   const items = [];
@@ -784,7 +836,7 @@ export const renderDescription = (description) => {
   while (i < lines.length) {
     const line = lines[i];
 
-    // Apertura de fence ```
+    // Apertura de fence ```<header opcional>
     const open = line.match(/^\s*```(.*)$/);
     if (open && !inFence) {
       inFence = true;
@@ -815,23 +867,29 @@ export const renderDescription = (description) => {
       continue;
     }
 
-    // Acumular líneas dentro del fence
+    // Línea dentro del fence → acumula
     if (inFence) {
       codeLines.push(line);
       i++;
       continue;
     }
 
-    // Línea normal
     const trimmed = line.trim();
 
-    // vacío -> saltar (evitamos <br/> dentro de <ul>)
+    // Línea vacía → respeta el salto agregando un <br/> dentro de un párrafo vacío
     if (!trimmed) {
+      items.push(
+        <li key={`blank-${i}`} className={styles.noBullet}>
+          <p className={styles.paragraph}>
+            <br />
+          </p>
+        </li>
+      );
       i++;
       continue;
     }
 
-    // Viñeta "* " o "- "
+    // Viñeta con "* " o "- "
     if (/^\s*[\*\-]\s+/.test(line)) {
       const content = line.replace(/^\s*[\*\-]\s+/, "");
       items.push(
@@ -843,7 +901,7 @@ export const renderDescription = (description) => {
       continue;
     }
 
-    // Párrafo "normal" (sin viñeta)
+    // Párrafo "normal" (preserva \n internos vía renderInlineWithStyles)
     items.push(
       <li key={`p-${i}`} className={styles.noBullet}>
         <p className={styles.paragraph}>{renderInlineWithStyles(line)}</p>
