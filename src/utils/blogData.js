@@ -4,9 +4,94 @@
 // `código`    → renderizado como <Snippet inline>
 
 import styles from "../components/blog/FullPost.module.css";
-import Snippet from "@/components/blog/Snippet";
+import Snippet from "@/components/blsog/Snippet";
 
 export const blogPosts = [
+  {
+    name: "Docker: limpieza rápida y segura (guía práctica con variantes)",
+    description: [
+      { "type": "p", "text": "Guía directa para liberar espacio y eliminar artefactos obsoletos en Docker. Incluye niveles de limpieza (segura, total, con volúmenes), filtros para no borrar recursos críticos y manejo de logs gigantes." },
+
+      { "type": "p", "text": "1) Ver cuánto ocupa (opcional)" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "docker system df -v" },
+
+      { "type": "p", "text": "2) Limpieza segura (quita lo obvio)\nElimina contenedores detenidos, redes huérfanas, imágenes dangling y caché de build no referenciada:" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Contenedores detenidos\ndocker container prune\n\n# Redes no usadas (no conectadas a contenedores)\ndocker network prune\n\n# Imágenes \"dangling\" (sin tag o sin usar)\ndocker image prune\n\n# Caché de build “clásica”\ndocker builder prune" },
+
+      { "type": "p", "text": "3) Limpieza “todo lo no usado” (recomendada)\nBorra TODO lo que NO está en uso por algo en ejecución: contenedores detenidos, imágenes no referenciadas, redes sin usar y caché:" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Resumen en un comando\ndocker system prune -a\n# (te pedirá confirmación; añade -f para no preguntar)" },
+      { "type": "p", "text": "Nota: `-a` borra todas las imágenes que no estén usadas por NINGÚN contenedor (en ejecución o detenido). Si sólo quieres dangling, omite `-a`." },
+
+      { "type": "p", "text": "4) Incluir volúmenes (agresivo: puede borrar datos)\nSi también quieres eliminar volúmenes no usados (¡pierdes datos persistentes!):" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Volúmenes no referenciados por contenedores\ndocker volume prune\n\n# Todo en uno, incluidos volúmenes (super agresivo)\ndocker system prune -a --volumes" },
+
+      { "type": "p", "text": "7) Evitar borrar cosas críticas (filtros útiles)\nPuedes excluir por etiqueta cuando hagas prune masivo:" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# No borres recursos con label keep=true\ndocker system prune -a --filter \"label!=keep\"\n\n# Ejemplo al crear recursos que quieras preservar:\ndocker run -d --label keep=true --name mi_db postgres:16" },
+
+      { "type": "p", "text": "8) Logs gigantes (si te falta espacio)\nLos logs JSON de contenedores pueden crecer mucho. Rotación rápida (no toca volúmenes):" },
+      { "type": "snippet", "language": "bash", "fileName": "Linux", "code": "# Truncar logs actuales (Linux)\nsudo find /var/lib/docker/containers -name \"*-json.log\" -exec sh -c '> \"{}\"' \\;" },
+      { "type": "snippet", "language": "json", "fileName": "/etc/docker/daemon.json", "code": "{\n  \"log-driver\": \"json-file\",\n  \"log-opts\": { \"max-size\": \"10m\", \"max-file\": \"3\" }\n}" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Reinicia Docker tras editar daemon.json\nsudo systemctl restart docker" },
+
+      { "type": "p", "text": "Limpieza estándar (recomendada, segura)" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "docker system df -v\ndocker system prune -a\ndocker builder prune" },
+
+      { "type": "p", "text": "Sugerencias para el día a día" },
+      { "type": "p", "text": "• Pon etiquetas `keep=true` a lo que no quieras que se borre.\n• Define rotación de logs en `daemon.json`.\n• Programa limpiezas con `--filter \"until=...\"` para no tocar lo reciente.\n• Antes de `--volumes`, respalda lo importante (bases de datos, uploads)." }
+    ],
+    date: "27 de octubre, 2025",
+    image: "/img/tutoriales/docker.svg",
+    category: "DevOps",
+    featuredPosts: true
+  },
+  {
+    name: "Limpieza en Docker: por qué, cuándo y cómo (variantes seguras)",
+    description: [
+      { "type": "p", "text": "Mantener Docker limpio es clave para **recuperar espacio**, **evitar conflictos de puertos/huérfanos**, **acelerar builds** y **mejorar la seguridad** (imágenes obsoletas con vulnerabilidades). Aquí tienes un playbook con niveles de limpieza —de suave a quirúrgico— y comandos explicados. Funciona en Linux/macOS/WSL/PowerShell (prefiere `docker` CLI moderno y `docker compose`)." },
+
+      { "type": "p", "text": "Revisa tu consumo antes de borrar (diagnóstico):" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "docker system df -v   # Uso detallado de imágenes, contenedores, volúmenes y cachés\n" },
+
+      { "type": "p", "text": "Nivel 1 — Limpieza ligera (segura, no toca volúmenes):" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Contenedores detenidos\ndocker container prune    # confirma interactivo\n# Imágenes 'dangling' (<none>)\ndocker image prune\n# Redes sin uso (no touches 'bridge', 'host', 'none' si están en uso)\ndocker network prune\n# (Opcional) Caché de build heredado\ndocker builder prune" },
+      { "type": "p", "text": "¿Por qué? Elimina artefactos huérfanos típicos del ciclo dev (contenedores que ya no corren, capas temporales de builds). No borra datos persistentes." },
+
+      { "type": "p", "text": "Nivel 2 — Limpieza media (más agresiva, aún sin volúmenes):" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Todo lo que no esté en uso por al menos un contenedor en ejecución\ndocker system prune -a   # -a elimina imágenes no usadas por NINGÚN contenedor\n# Builder cache (BuildKit) incluyendo stages intermedios\ndocker builder prune -a  # borra caché de compilación\n" },
+      { "type": "p", "text": "¿Cuándo? Tras muchas iteraciones de builds/tags. Mejora mucho el espacio y fuerza builds frescos. **No borra volúmenes** (datos persistentes siguen intactos)." },
+
+      { "type": "p", "text": "Nivel 3 — Limpieza con volúmenes (⚠️ BORRA DATOS):" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Incluye volúmenes no referenciados (datos persistentes)\ndocker system prune -a --volumes\n# O solo volúmenes 'dangling'\ndocker volume prune\n" },
+      { "type": "p", "text": "¿Cuándo? Ambientes desechables (CI, entornos efímeros) o cuando estás seguro de no necesitar los datos (p.ej., caches, DBs de prueba). **Haz backup** antes si hay dudas." },
+
+      { "type": "p", "text": "Limpieza quirúrgica por proyecto (evita dañar otros stacks):" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Etiqueta tus recursos al crear (ejemplo de build/compose):\n# docker build --label project=plan-hidrico -t app:dev .\n# En docker-compose.yml usa 'labels:' en servicios/volúmenes\n\n# Borra solo artefactos con cierta etiqueta\ndocker image prune -a --filter \"label=project=plan-hidrico\"\ndocker container prune   --filter \"label=project=plan-hidrico\"\ndocker volume prune      --filter \"label=project=plan-hidrico\"\ndocker network prune     --filter \"label=project=plan-hidrico\"" },
+      { "type": "p", "text": "¿Por qué? En hosts multi-proyecto compartidos evitarás tocar recursos de otros equipos." },
+
+      { "type": "p", "text": "Con Docker Compose (proyectos específicos):" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Apaga y elimina contenedores/REDES del proyecto actual (en la carpeta del compose)\ndocker compose down\n# + Volúmenes declarados en el compose (⚠️ datos)\ndocker compose down -v\n# + Contenedores huérfanos de corridas previas\ndocker compose down --remove-orphans\n# Remueve servicios detenidos del proyecto (sin derribar todo)\ndocker compose rm -f" },
+      { "type": "p", "text": "Utiliza esto para limpiar por proyecto sin afectar otros stacks que corren en el mismo host." },
+
+      { "type": "p", "text": "🔐 Seguridad y mantenibilidad: ¿por qué es necesario limpiar?" },
+      { "type": "p", "text": "• **Espacio y rendimiento**: capas y cachés antiguos consumen GBs y ralentizan builds.\n• **Reproducibilidad**: eliminar imágenes obsoletas evita que se usen bases vulnerables por accidente.\n• **Menos ruido**: redes/volúmenes/containers huérfanos dificultan el soporte y el monitoreo.\n• **CICD saludable**: runners con disco lleno fallan; limpieza automática evita pipelines rotas." },
+
+      { "type": "p", "text": "🧠 Patrones recomendados (dev/CI/producción):" },
+      { "type": "p", "text": "• **Dev**: `docker system prune` semanal; mensual `-a`; evita `--volumes` salvo que sean datos de prueba.\n• **CI**: al final de cada job: `docker system prune -af`; y `docker builder prune -af` para caches.\n• **Prod**: limpieza quirúrgica por etiqueta/proyecto; nunca borres volúmenes de DB sin backup/verificación." },
+
+      { "type": "p", "text": "🧾 Trucos útiles:" },
+      { "type": "snippet", "language": "bash", "fileName": "terminal", "code": "# Listar solo lo 'dangling' antes de borrar (simula un dry-run)\ndocker images -f dangling=true\ndocker volume ls -f dangling=true\n\n# Borrar contenedores detenidos específicos (por filtro)\ndocker ps -a --filter status=exited\n# Ejemplo: remover todos los 'exited'\ndocker rm $(docker ps -aq -f status=exited)\n\n# Borrar imágenes sin etiquetas (none)\ndocker rmi $(docker images -q -f dangling=true)\n\n# Caché BuildKit por antigüedad\ndocker builder prune --filter until=168h   # > 7 días\n\n# Limitar logs en producción (daemon.json)\n# /etc/docker/daemon.json\n{\n  \"log-driver\": \"json-file\",\n  \"log-opts\": { \"max-size\": \"10m\", \"max-file\": \"3\" }\n}\n# Reinicia el daemon tras editar\ nsudo systemctl restart docker" },
+
+      { "type": "p", "text": "Riesgos y cómo mitigarlos:" },
+      { "type": "p", "text": "• **Pérdida de datos**: `-v/--volumes` borra volúmenes; confirma que son caches/DBs de prueba. Usa backups.\n• **Servicios en producción**: valida que el recurso no está en uso (`docker ps`, `docker volume inspect`).\n• **Dependencias ocultas**: usa **labels** por proyecto y `docker compose down` para aislar el alcance." },
+
+      { "type": "p", "text": "Resumen operativo:" },
+      { "type": "p", "text": "1) Diagnostica: `docker system df -v`.\n2) Limpieza ligera: `docker container/image/network prune`.\n3) Limpieza media: `docker system prune -a` + `docker builder prune -a`.\n4) Con datos: `docker system prune -a --volumes` (solo si es seguro).\n5) Por proyecto: etiquetas + `docker compose down(-v)` y filtros `--filter label=...`." }
+    ],
+    date: "27 de octubre, 2025",
+    image: "/img/tutoriales/docker.svg",
+    category: "DevOps",
+    featuredPosts: true
+  },
   {
     name: "ImageMagick en Windows: convertir JPG/JPEG/PNG → WebP sin metadatos",
     description: [
@@ -66,7 +151,7 @@ export const blogPosts = [
       },
       {
         "type": "h2",
-        "text": "🧩 ¿Qué es el archivo /etc/hosts?"
+        "text": "¿Qué es el archivo /etc/hosts?"
       },
       {
         "type": "p",
@@ -78,11 +163,11 @@ export const blogPosts = [
       },
       {
         "type": "quote",
-        "text": "👉 En resumen: si ves líneas que apuntan a 0.0.0.0 o 127.0.0.1, esas páginas están bloqueadas localmente desde tu sistema operativo."
+        "text": "En resumen: si ves líneas que apuntan a 0.0.0.0 o 127.0.0.1, esas páginas están bloqueadas localmente desde tu sistema operativo."
       },
       {
         "type": "h2",
-        "text": "⚙️ Arreglo en 3 pasos (Terminal)"
+        "text": "Arreglo en 3 pasos (Terminal)"
       },
       {
         "type": "h3",
@@ -114,7 +199,7 @@ export const blogPosts = [
       },
       {
         "type": "p",
-        "text": "💡 En macOS usa `-i ''`. En Linux simplemente quítalas comillas (`-i -E`). Si deseas limpiar **todas las páginas bloqueadas** sin escribir cada nombre, puedes borrar **todas las líneas con 0.0.0.0 o 127.0.0.1** así:"
+        "text": "En macOS usa `-i ''`. En Linux simplemente quítalas comillas (`-i -E`). Si deseas limpiar **todas las páginas bloqueadas** sin escribir cada nombre, puedes borrar **todas las líneas con 0.0.0.0 o 127.0.0.1** así:"
       },
       {
         "type": "snippet",
@@ -146,7 +231,7 @@ export const blogPosts = [
       },
       {
         "type": "h2",
-        "text": "🔎 Comprueba que el bloqueo desapareció"
+        "text": "Comprueba que el bloqueo desapareció"
       },
       {
         "type": "p",
@@ -210,7 +295,7 @@ export const blogPosts = [
       },
       {
         "type": "h2",
-        "text": "🧱 Opcional: proteger el archivo /etc/hosts"
+        "text": "Opcional: proteger el archivo /etc/hosts"
       },
       {
         "type": "p",
@@ -228,7 +313,7 @@ export const blogPosts = [
       },
       {
         "type": "h2",
-        "text": "✅ Conclusión"
+        "text": "Conclusión"
       },
       {
         "type": "p",
@@ -257,11 +342,11 @@ export const blogPosts = [
       },
       {
         "type": "quote",
-        "text": "👉 Por eso, al intentar subir una carpeta (por ejemplo src/), verás que marca 0 B / 0 B: el PSM bloquea su contenido interno."
+        "text": "Por eso, al intentar subir una carpeta (por ejemplo src/), verás que marca 0 B / 0 B: el PSM bloquea su contenido interno."
       },
       {
         "type": "h2",
-        "text": "💡 Solución práctica: comprimir antes de subir"
+        "text": "Solución práctica: comprimir antes de subir"
       },
       {
         "type": "p",
@@ -298,7 +383,7 @@ export const blogPosts = [
       },
       {
         "type": "p",
-        "text": "👉 **Opción 01:** moverte al directorio donde está el archivo comprimido y descomprimirlo directamente ahí. Esto es útil si ya estás en la misma carpeta."
+        "text": "**Opción 01:** moverte al directorio donde está el archivo comprimido y descomprimirlo directamente ahí. Esto es útil si ya estás en la misma carpeta."
       },
       {
         "type": "snippet",
@@ -314,7 +399,7 @@ export const blogPosts = [
       },
       {
         "type": "p",
-        "text": "👉 **Opción 02:** hacerlo desde cualquier punto del sistema sin moverte, especificando las rutas de origen y destino."
+        "text": "**Opción 02:** hacerlo desde cualquier punto del sistema sin moverte, especificando las rutas de origen y destino."
       },
       {
         "type": "h4",
@@ -414,7 +499,7 @@ export const blogPosts = [
       },
       {
         "type": "h2",
-        "text": "🧩 Conclusión"
+        "text": "Conclusión"
       },
       {
         "type": "p",
