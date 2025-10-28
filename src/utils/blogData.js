@@ -4,7 +4,7 @@
 // `código`    → renderizado como <Snippet inline>
 
 import styles from "../components/blog/FullPost.module.css";
-import Snippet from "@/components/blsog/Snippet";
+import Snippet from "@/components/blog/Snippet";
 
 export const blogPosts = [
   {
