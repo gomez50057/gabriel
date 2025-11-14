@@ -8,6 +8,44 @@ import Snippet from "@/components/blog/Snippet";
 
 export const blogPosts = [
   {
+    name: "CSS clamp(): tipografía fluida sin dramas 😎",
+    description: [
+      { "type": "p", "text": "`clamp()` es uno de los recursos modernos más útiles de CSS. Con una sola línea obtienes texto fluido, legible y controlado en todo rango de pantallas." },
+
+      { "type": "p", "text": "Esta línea dice: “nunca seas más chico que **1.9rem**, intenta ser **3vw** (fluido) y nunca pases de **2.4rem**”." },
+      { "type": "snippet", "language": "css", "fileName": "styles.css", "code": "font-size: clamp(1.9rem, 3vw, 2.4rem);" },
+
+      { "type": "h2", "text": "## ¿Qué es `clamp()`?" },
+      { "type": "snippet", "language": "css", "fileName": "Sintaxis", "code": "clamp(MIN, IDEAL, MAX)" },
+      { "type": "snippet", "language": "text", "fileName": "Idea", "code": "clamp(a, b, c) = min( max(b, a), c )" },
+      { "type": "p", "text": "Traducción: se toma el valor **IDEAL**; si es menor que **MIN**, usa **MIN**; si es mayor que **MAX**, usa **MAX**. Solo acota el valor a un rango lógico." },
+
+      { "type": "p", "text": "## Desglose del ejemplo" },
+      { "type": "p", "text": "• **Mínimo:** 1.9rem → garantiza legibilidad.\n• **Fluido:** 3vw → escala con el ancho de pantalla.\n• **Máximo:** 2.4rem → evita tamaños desproporcionados en monitores grandes." },
+
+      { "type": "p", "text": "## ¿Cuándo cambia cada tramo?" },
+      { "type": "p", "text": "Asumiendo 1rem = 16px: 1.9rem ≈ 30.4px y 2.4rem ≈ 38.4px.\n• Por debajo de ~1013px de ancho, 3vw es menor al mínimo → **1.9rem**.\n• Entre ~1013px y ~1280px, el tamaño fluye con **3vw**.\n• Por encima de ~1280px, se fija en **2.4rem**." },
+
+      { "type": "p", "text": "## Ventajas" },
+      { "type": "p", "text": "Reduce media queries, mantiene accesibilidad y ofrece una escala tipográfica predecible entre móvil y desktop." },
+
+      { "type": "p", "text": "## Antes vs. ahora" },
+      { "type": "snippet", "language": "css", "fileName": "antes.css", "code": "h2 { font-size: 1.9rem; }\n@media (min-width: 1000px) { h2 { font-size: 3vw; } }\n@media (min-width: 1280px) { h2 { font-size: 2.4rem; } }" },
+      { "type": "snippet", "language": "css", "fileName": "ahora.css", "code": "h2 { font-size: clamp(1.9rem, 3vw, 2.4rem); }" },
+
+      { "type": "p", "text": "## Buenas prácticas" },
+      { "type": "p", "text": "• Define **MIN y MAX en rem** (accesibilidad).\n• Usa **vw/vh** en el valor central para fluidez.\n• Elige conscientemente: **mínimo legible**, **ideal que escala**, **máximo cómodo**." },
+
+      { "type": "p", "text": "## Recetas listas" },
+      { "type": "snippet", "language": "css", "fileName": "patterns.css", "code": "/* Título hero */\n.heroTitle { font-size: clamp(2rem, 6vw, 4rem); }\n\n/* Subtítulo */\n.subTitle { font-size: clamp(1.25rem, 3.5vw, 2rem); }\n\n/* Párrafo base */\n.bodyText { font-size: clamp(1rem, 2.2vw, 1.125rem); }" },
+
+    ],
+    date: "13 de noviembre, 2025",
+    image: "/img/tutoriales/css-clamp-tipografia.png",
+    category: "Frontend",
+    featuredPosts: true
+  },
+  {
     name: "Docker: limpieza rápida y segura (guía práctica con variantes)",
     description: [
       { "type": "p", "text": "Guía directa para liberar espacio y eliminar artefactos obsoletos en Docker. Incluye niveles de limpieza (segura, total, con volúmenes), filtros para no borrar recursos críticos y manejo de logs gigantes." },
