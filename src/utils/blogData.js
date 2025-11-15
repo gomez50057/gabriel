@@ -8,7 +8,7 @@ import Snippet from "@/components/blog/Snippet";
 
 export const blogPosts = [
   {
-    name: "CSS clamp(): tipografía fluida sin dramas 😎",
+    name: "CSS clamp(): tipografía fluida sin dramas",
     description: [
       { "type": "p", "text": "`clamp()` es uno de los recursos modernos más útiles de CSS. Con una sola línea obtienes texto fluido, legible y controlado en todo rango de pantallas." },
 
@@ -41,7 +41,7 @@ export const blogPosts = [
 
     ],
     date: "13 de noviembre, 2025",
-    image: "/img/tutoriales/css-clamp-tipografia.png",
+    image: "/img/tutoriales/css-clamp-tipografia.jpg",
     category: "Frontend",
     featuredPosts: true
   },
@@ -902,6 +902,33 @@ export const renderDescription = (description) => {
       if (!block || typeof block !== "object") return null;
 
       switch (block.type) {
+        case "h1":
+          return (
+            <li key={`h1-${idx}`} className={styles.noBullet}>
+              <h1 className={styles.h1}>
+                {renderInlineWithStyles(block.text || "")}
+              </h1>
+            </li>
+          );
+
+        case "h2":
+          return (
+            <li key={`h2-${idx}`} className={styles.noBullet}>
+              <h2 className={styles.h2}>
+                {renderInlineWithStyles(block.text || "")}
+              </h2>
+            </li>
+          );
+
+        case "h3":
+          return (
+            <li key={`h3-${idx}`} className={styles.noBullet}>
+              <h3 className={styles.h3}>
+                {renderInlineWithStyles(block.text || "")}
+              </h3>
+            </li>
+          );
+
         case "p":
           return (
             <li key={`p-${idx}`} className={styles.noBullet}>
@@ -978,8 +1005,8 @@ export const renderDescription = (description) => {
             code={code}
             language={fenceMeta.language}
             fileName={fenceMeta.fileName}
-            showLineNumbers={fenceMeta.showLineNumbers}
-            wrap={fenceMeta.wrap}
+            showLineNumbers={!!fenceMeta.showLineNumbers}
+            wrap={!!fenceMeta.wrap}
           />
         </li>
       );
@@ -999,7 +1026,7 @@ export const renderDescription = (description) => {
 
     const trimmed = line.trim();
 
-    // Línea vacía → respeta el salto agregando un <br/> dentro de un párrafo vacío
+    // Línea vacía → respeta el salto
     if (!trimmed) {
       items.push(
         <li key={`blank-${i}`} className={styles.noBullet}>
@@ -1008,6 +1035,35 @@ export const renderDescription = (description) => {
           </p>
         </li>
       );
+      i++;
+      continue;
+    }
+
+    // Encabezados markdown-lite: #, ##, ###
+    const hMatch = line.match(/^\s*(#{1,3})\s+(.+)$/);
+    if (hMatch) {
+      const level = hMatch[1].length; // 1, 2 o 3
+      const text = hMatch[2];
+      const key = `h-${i}-${level}`;
+      if (level === 1) {
+        items.push(
+          <li key={key} className={styles.noBullet}>
+            <h1 className={styles.h1}>{renderInlineWithStyles(text)}</h1>
+          </li>
+        );
+      } else if (level === 2) {
+        items.push(
+          <li key={key} className={styles.noBullet}>
+            <h2 className={styles.h2}>{renderInlineWithStyles(text)}</h2>
+          </li>
+        );
+      } else {
+        items.push(
+          <li key={key} className={styles.noBullet}>
+            <h3 className={styles.h3}>{renderInlineWithStyles(text)}</h3>
+          </li>
+        );
+      }
       i++;
       continue;
     }
