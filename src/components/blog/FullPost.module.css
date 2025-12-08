@@ -1,4 +1,3 @@
-/* Contenedor general: grid fluido y padding responsivo */
 .postContainer {
   --gap: clamp(16px, 3vw, 40px);
   --pad-x: clamp(16px, 5vw, 40px);
@@ -18,7 +17,7 @@
   background: #fff;
   padding: clamp(16px, 2.5vw, 24px);
   border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .08);
 }
 
 /* Imagen principal: responsiva, segura */
@@ -46,7 +45,6 @@
   margin: 0 0 clamp(10px, 2vw, 16px);
 }
 
-/* Cuerpo / descripción */
 .description {
   font-size: clamp(1rem, .96rem + .4vw, 1.125rem);
   line-height: 1.7;
@@ -56,7 +54,7 @@
 
 .list {
   list-style: disc;
-  padding-left: 1.25rem;   /* indent correcto en desktop/móvil */
+  padding-left: 1.25rem;
   margin: 0;
 }
 
@@ -68,52 +66,46 @@
   margin: clamp(16px, 3vw, 28px) 0 clamp(24px, 4vw, 40px);
 }
 
-/* Sidebar: sticky en desktop */
 .sidebar {
   padding: 0 4px;
   position: sticky;
-  top: 88px;                /* bajo el navbar */
+  top: 88px;
   align-self: start;
 }
 
-.h1 { 
+.h1 {
   font-size: clamp(2rem, 4.5vw, 3rem);
   line-height: 1.15;
   margin: 0.3em 0 0.2em;
-  color: var(--vinoOsc, #691B32);
+  color: var(--vinoOsc);
 }
 
-.h2 { 
+.h2 {
   font-size: clamp(1.5rem, 3.5vw, 2.2rem);
   line-height: 1.2;
   margin: 0.5em 0 0.25em;
-  color: var(--grisOsc, #303030);
+  color: var(--grisOsc);
 }
 
-.h3 { 
+.h3 {
   font-size: clamp(1.25rem, 2.5vw, 1.6rem);
   line-height: 1.3;
   margin: 0.6em 0 0.3em;
-  color: var(--grisOsc, #303030);
+  color: var(--grisOsc);
 }
 
-
-/* ----------- Breakpoints ----------- */
-
-/* Tablet (<= 1024px): stack con orden natural */
 @media (max-width: 1024px) {
   .postContainer {
     grid-template-columns: 1fr;
   }
 
   .sidebar {
-    position: static;       /* quita sticky en tablet */
+    position: static;
     padding: 0;
     margin-top: 8px;
   }
 }
 
-/* Móvil (<= 640px): tipografía y espacios compactos */
 @media (max-width: 640px) {
   .postContainer {
     --pad-top: clamp(64px, 12vw, 80px);
@@ -123,12 +115,12 @@
   .postContent {
     border-radius: 10px;
     padding: clamp(12px, 4vw, 18px);
-    box-shadow: 0 4px 16px rgba(0,0,0,.07);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .07);
   }
 
   .postImage {
     border-radius: 10px;
-    aspect-ratio: 16 / 9;   /* mantiene proporción cómoda en móvil */
+    aspect-ratio: 16 / 9;
   }
 
   .title {
@@ -137,11 +129,11 @@
   }
 
   .description {
-    text-align: left;       /* lectura más natural en móvil */
+    text-align: left;
   }
 
   .quote {
-    text-align: left;       /* evita cortes por ancho */
+    text-align: left;
     margin: 16px 0 24px;
   }
 
@@ -150,12 +142,11 @@
   }
 }
 
-/* Lista alineada (si la usas aparte) */
 .rightAlignedList {
   list-style-position: inside;
   margin-bottom: .5rem;
   text-align: left;
-  padding-inline-start: 1.25rem; /* antes 40px fijo */
+  padding-inline-start: 1.25rem;
 }
 
 .noBullet {
@@ -165,5 +156,5 @@
 }
 
 .paragraph {
-  margin: 0; /* control fino desde el contenedor */
+  margin: 0;
 }

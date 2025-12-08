@@ -11,7 +11,8 @@
 }
 
 .headerHidden {
-  transform: translate(-50%, -120%); /* sube el header fuera de pantalla */
+  /* sube el header fuera de pantalla */
+  transform: translate(-50%, -120%);
   opacity: 0;
 }
 
@@ -71,6 +72,7 @@
   align-items: center;
   transition: background .2s ease, color .2s ease, transform .06s ease;
   position: relative;
+  font-size: clamp(0.95rem, 0.9rem + 0.6vw, 1.25rem);
 }
 
 .linkInner:hover,
@@ -263,4 +265,94 @@
   .linkInner {
     transition: none !important;
   }
+}
+
+/* =========================
+   DROPDOWN DESKTOP (FIX HOVER)
+========================= */
+
+.dropdown {
+  position: relative;
+}
+
+/* Trigger del padre (Herramientas) */
+.dropdownTrigger {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Mantén la estética del chip al hover del grupo */
+.dropdown:hover .linkInner,
+.dropdown:focus-within .linkInner {
+  background: color-mix(in lab, var(--text) 10%, transparent);
+}
+
+/* “Puente” invisible para evitar que el hover se pierda
+   cuando el cursor baja hacia el submenú */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 12px;
+  /* ajusta 8–14px según tu header */
+  background: transparent;
+}
+
+/* Submenú sin gap real */
+.dropdownMenuDesktop {
+  position: absolute;
+  top: 100%;
+  /* pegado al padre */
+  left: 50%;
+  transform: translateX(-50%) scale(0.98);
+  transform-origin: top center;
+
+  min-width: 220px;
+  padding: 8px;
+  border-radius: 14px;
+
+  background: color-mix(in lab, var(--bg) 92%, transparent);
+  border: 1px solid color-mix(in lab, var(--text) 12%, transparent);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 120;
+}
+
+/* Hover estable: el submenu permanece visible
+   tanto sobre el padre como sobre el propio menú */
+.dropdown:hover .dropdownMenuDesktop,
+.dropdown:focus-within .dropdownMenuDesktop {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Links del submenú */
+.dropdownLink {
+  display: block;
+  padding: 10px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+
+  background: color-mix(in lab, var(--bg) 85%, transparent);
+  border: 1px solid color-mix(in lab, var(--text) 10%, transparent);
+}
+
+.dropdownLink+.dropdownLink {
+  margin-top: 6px;
+}
+
+.dropdownLink:hover {
+  background: color-mix(in lab, var(--accent) 20%, transparent);
+  border-color: color-mix(in lab, var(--accent) 35%, transparent);
 }
