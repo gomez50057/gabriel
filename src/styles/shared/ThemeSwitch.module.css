@@ -1,42 +1,97 @@
-
 .switch {
+  --w: 64px;
+  --h: 32px;
+  --pad: 3px;
+  --knob: calc(var(--h) - (var(--pad) * 2));
+  --travel: calc(var(--w) - var(--knob) - (var(--pad) * 2));
+
   position: relative;
-  width: 60px;
-  height: 30px;
-  border-radius: 30px;
-  background: #ddd;
-  border: none;
-  cursor: pointer;
-  display: flex;
+  width: var(--w);
+  height: var(--h);
+  padding: 0 8px;
+
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6px;
-  transition: background 0.3s ease;
+
+  border-radius: 999px;
+  border: 1px solid color-mix(in lab, var(--text) 15%, transparent);
+  background: color-mix(in lab, var(--bg) 85%, transparent);
+  color: var(--text);
+
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, transform .06s ease;
 }
 
-.switch.dark {
-  background: #333;
+.switch:hover {
+  background: color-mix(in lab, var(--text) 10%, transparent);
+  border-color: color-mix(in lab, var(--text) 25%, transparent);
 }
 
+.switch:active {
+  transform: translateY(1px);
+}
+
+/* Estado oscuro del botón (solo visual del control) */
+.dark {
+  background: color-mix(in lab, var(--bg) 70%, black 10%);
+}
+
+/* Perilla */
 .circle {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 24px;
-  height: 24px;
-  background: #fff;
+  top: var(--pad);
+  left: var(--pad);
+
+  width: var(--knob);
+  height: var(--knob);
   border-radius: 50%;
-  transition: transform 0.3s ease;
+
+  background: color-mix(in lab, var(--bg) 95%, white 5%);
+  border: 1px solid color-mix(in lab, var(--text) 10%, transparent);
+
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+  z-index: 1;
+}
+
+/* Desplazamiento de la perilla en modo dark */
+.switch.dark .circle {
+  transform: translateX(var(--travel));
+}
+
+/* Slots de iconos */
+.iconSlot {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
 }
 
-.switch.dark .circle {
-  transform: translateX(30px);
-  background: #f9f9f9;
+/* Iconos SVG */
+.icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  transition: opacity .18s ease, transform .18s ease;
 }
 
-.icon {
-  font-size: 14px;
-  z-index: 1;
-  user-select: none;
+.iconActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.iconInactive {
+  opacity: 0.45;
+  transform: scale(0.95);
+}
+
+/* Accesibilidad: reduce animaciones si el usuario lo solicita */
+@media (prefers-reduced-motion: reduce) {
+  .switch,
+  .circle,
+  .icon {
+    transition: none !important;
+  }
 }

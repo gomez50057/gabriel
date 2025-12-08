@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '@/components/landing/Header';
+import Navbar from '@/shared/Navbar';
 import HeroParallax from "@/shared/HeroParallax";
 
 const News = () => {

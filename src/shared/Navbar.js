@@ -3,17 +3,14 @@
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import ThemeSwitch from "@/shared/ThemeSwitch";
-import styles from "@/styles/Header.module.css";
+import styles from "@/styles/shared/Navbar.module.css";
 
 /**
  * LINKS con subnivel
  */
 const LINKS = [
   { href: "/", label: "Inicio" },
-  { href: "/#sobremi", label: "Sobre Mi" },
   { href: "/hacks", label: "Hacks" },
-  { href: "/#portfolio", label: "Portafolio" },
-  { href: "/#contacto", label: "Contacto" },
   {
     label: "Herramientas",
     children: [
@@ -36,7 +33,7 @@ const getHashId = (href) => {
   return id || null;
 };
 
-export default function Header() {
+export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#inicio");
   const [scrolled, setScrolled] = useState(false);

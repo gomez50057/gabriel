@@ -1,5 +1,5 @@
-import FullPost from '../../../components/blog/FullPost';
-import { blogPosts, normalizeName } from '../../../utils/blogData';
+import FullPost from '@/components/blog/FullPost';
+import { blogPosts, normalizeName } from '@/utils/blogData';
 
 const PostPage = ({ params }) => {
   const { name } = params; // Obtén el parámetro dinámico "name" desde los params
