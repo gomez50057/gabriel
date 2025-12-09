@@ -114,6 +114,26 @@
   color: color-mix(in lab, var(--text) 75%, transparent);
 }
 
+.howItWorks {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: color-mix(in lab, var(--accent) 85%, var(--text));
+  opacity: 0.9;
+  transition: opacity .2s ease, transform .06s ease, text-decoration-color .2s ease;
+}
+
+.howItWorks:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.howItWorks:active {
+  transform: translateY(1px);
+}
+
 .errorBox {
   padding: 0.75rem 0.85rem;
   border-radius: 10px;

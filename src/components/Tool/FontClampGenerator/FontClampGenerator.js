@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import styles from "./FontClampGenerator.module.css";
 
 export default function FontClampGenerator() {
@@ -166,6 +167,12 @@ export default function FontClampGenerator() {
               </>
             )}
           </div>
+          <Link
+            href="/hacks/font-size-clamp-explicado-formula-base-pendiente-e-intercepto"
+            className={styles.howItWorks}
+          >
+            Saber como funciona esto...
+          </Link>
         </div>
       </div>
     </section>
