@@ -15,8 +15,12 @@ const LINKS = [
     label: "Herramientas",
     children: [
       {
-        href: "/conversor-mayusculas-minusculas",
+        href: "/herramientas/conversor-mayusculas-minusculas",
         label: "Convertidor de texto",
+      },
+      {
+        href: "/herramientas/generador-clamp",
+        label: "Generador de clamp",
       },
     ],
   },
