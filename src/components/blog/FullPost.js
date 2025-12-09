@@ -2,7 +2,7 @@
 
 import FeaturedPosts from "./FeaturedPosts";
 import styles from "./FullPost.module.css";
-import Navbar from "@/components/landing/Header";
+import Navbar from "@/shared/Navbar";
 import { renderDescription } from "@/utils/blogData";
 
 export default function FullPost({ post, featuredPosts = [] }) {
