@@ -1,41 +1,53 @@
 .postContainer {
-  --gap: clamp(16px, 3vw, 40px);
-  --pad-x: clamp(16px, 5vw, 40px);
-  --pad-top: clamp(72px, 12vw, 100px);
-  --pad-bottom: clamp(16px, 6vw, 40px);
+  --gap: clamp(14px, 2.2vw, 36px);
+  --pad-x: clamp(14px, 4vw, 40px);
+  --pad-top: clamp(72px, 10vw, 110px);
+  --pad-bottom: clamp(16px, 5vw, 44px);
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
   gap: var(--gap);
-  padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
-  margin: 0 auto;
+
+  padding:
+    var(--pad-top) max(var(--pad-x), env(safe-area-inset-left)) var(--pad-bottom) max(var(--pad-x), env(safe-area-inset-right));
+
   align-items: start;
 }
 
-/* Columna principal */
+.postContent,
+.sidebar {
+  min-width: 0;
+}
+
 .postContent {
   background: #fff;
   padding: clamp(16px, 2.5vw, 24px);
   border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, .08);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Imagen principal: responsiva, segura */
 .postImage {
   width: 100%;
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: clamp(12px, 2vw, 20px);
 }
 
-/* Figuras e imágenes dentro del post */
 .figure {
   margin: clamp(14px, 2.2vw, 22px) 0;
 }
 
-.inlineImage {
+.inlineImage,
+.inlineImageSmall {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 12px;
@@ -43,25 +55,19 @@
 }
 
 .inlineImageSmall {
-  width: 100%;
   max-width: 720px;
-  height: auto;
-  display: block;
   margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .figCaption {
   margin-top: 8px;
-  font-size: clamp(.85rem, .8rem + .2vw, .95rem);
+  font-size: clamp(0.85rem, 0.8rem + 0.2vw, 0.95rem);
   color: #6b7280;
   text-align: center;
 }
 
-/* Enlaces dentro del post */
 .link,
-.downloadLink{
+.downloadLink {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -69,20 +75,22 @@
   color: var(--vinoOsc);
   text-decoration: underline;
   text-underline-offset: 3px;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-.link:hover {
+.link:hover,
+.downloadLink:hover {
   opacity: 0.9;
 }
 
-/* Meta (autor/fecha) */
 .meta {
   color: #6b7280;
-  font-size: clamp(.875rem, .8rem + .2vw, .95rem);
+  font-size: clamp(0.875rem, 0.8rem + 0.2vw, 0.95rem);
   margin-bottom: clamp(12px, 2vw, 18px);
 }
 
-/* Título */
 .title {
   font-size: clamp(1.6rem, 1.1rem + 2vw, 2.4rem);
   line-height: 1.2;
@@ -92,7 +100,7 @@
 }
 
 .description {
-  font-size: clamp(1rem, .96rem + .4vw, 1.125rem);
+  font-size: clamp(1rem, 0.96rem + 0.4vw, 1.125rem);
   line-height: 1.7;
   color: #1f2937;
   text-align: justify;
@@ -105,13 +113,14 @@
 }
 
 .quote {
-  font-size: clamp(1.05rem, .9rem + .8vw, 1.3rem);
+  font-size: clamp(1.05rem, 0.9rem + 0.8vw, 1.3rem);
   font-style: italic;
   color: #4b5563;
   text-align: right;
   margin: clamp(16px, 3vw, 28px) 0 clamp(24px, 4vw, 40px);
 }
 
+/* Sidebar */
 .sidebar {
   padding: 0 4px;
   position: sticky;
@@ -140,7 +149,24 @@
   color: var(--grisOsc);
 }
 
-@media (max-width: 1024px) {
+.rightAlignedList {
+  list-style-position: inside;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  padding-inline-start: 1.25rem;
+}
+
+.noBullet {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0;
+}
+
+.paragraph {
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
   .postContainer {
     grid-template-columns: 1fr;
   }
@@ -154,23 +180,22 @@
 
 @media (max-width: 640px) {
   .postContainer {
-    --pad-top: clamp(64px, 12vw, 80px);
-    --gap: clamp(12px, 4vw, 20px);
+    --pad-top: clamp(64px, 12vw, 84px);
+    --gap: clamp(12px, 4vw, 18px);
   }
 
   .postContent {
     border-radius: 10px;
     padding: clamp(12px, 4vw, 18px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, .07);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
   }
 
   .postImage {
     border-radius: 10px;
-    aspect-ratio: 16 / 9;
   }
 
   .title {
-    font-size: clamp(1.4rem, 1.05rem + 3.2vw, 2rem);
+    font-size: clamp(1.35rem, 1.05rem + 3.2vw, 2rem);
     margin-bottom: 10px;
   }
 
@@ -188,19 +213,12 @@
   }
 }
 
-.rightAlignedList {
-  list-style-position: inside;
-  margin-bottom: .5rem;
-  text-align: left;
-  padding-inline-start: 1.25rem;
-}
+@media (max-width: 420px) {
+  .list {
+    padding-left: 1rem;
+  }
 
-.noBullet {
-  list-style: none;
-  padding-left: 0;
-  margin: 12px 0;
-}
-
-.paragraph {
-  margin: 0;
+  .description {
+    line-height: 1.65;
+  }
 }
