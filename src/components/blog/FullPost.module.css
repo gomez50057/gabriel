@@ -29,6 +29,52 @@
   margin-bottom: clamp(12px, 2vw, 20px);
 }
 
+/* Figuras e imágenes dentro del post */
+.figure {
+  margin: clamp(14px, 2.2vw, 22px) 0;
+}
+
+.inlineImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.inlineImageSmall {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.figCaption {
+  margin-top: 8px;
+  font-size: clamp(.85rem, .8rem + .2vw, .95rem);
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Enlaces dentro del post */
+.link,
+.downloadLink{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--vinoOsc);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:hover {
+  opacity: 0.9;
+}
+
 /* Meta (autor/fecha) */
 .meta {
   color: #6b7280;

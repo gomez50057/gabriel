@@ -8,6 +8,277 @@ import Snippet from "@/components/blog/Snippet";
 
 export const blogPosts = [
   {
+    "name": "Instalar Office LTSC 2024 con Office Deployment Tool (ODT)",
+    "description": [
+      {
+        "type": "p",
+        "text": "En este tutorial instalaremos **Office LTSC 2024** usando la herramienta oficial de Microsoft llamada **Office Deployment Tool (ODT)**. El flujo es: descargar ODT, extraer `setup.exe`, crear `configuration.xml` y ejecutar la instalación desde CMD como administrador."
+      },
+
+      { "type": "h2", "text": "1) Descargar Office Deployment Tool (ODT)" },
+      {
+        "type": "p",
+        "text": "Descarga la herramienta desde el **Centro de descarga de Microsoft**. No importa que la página esté en inglés; el botón **Download** funciona igual."
+      },
+      {
+        "type": "link",
+        "text": "Abrir descarga oficial de ODT (Microsoft)",
+        "href": "https://www.microsoft.com/en-us/download/details.aspx?id=49117"
+      },
+      {
+        "type": "snippet",
+        "language": "text",
+        "fileName": "Link oficial (ODT)",
+        "code": "https://www.microsoft.com/en-us/download/details.aspx?id=49117"
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/01-odt-download-page.png",
+        "alt": "Página oficial de descarga de Office Deployment Tool",
+        "caption": "Centro de descarga de Microsoft: botón Download."
+      },
+
+      { "type": "h2", "text": "2) Crear carpeta en el Escritorio y mover el instalador" },
+      {
+        "type": "p",
+        "text": "Guarda el archivo descargado en el **Escritorio**. Ahí mismo crea una carpeta (por ejemplo: **Office**). Mueve el instalador dentro de esa carpeta para mantener todo ordenado y facilitar el proceso."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/02-folder-on-desktop.png",
+        "alt": "Carpeta Office creada en el Escritorio",
+        "caption": "Crea una carpeta en el Escritorio y coloca dentro el instalador descargado."
+      },
+
+      { "type": "h2", "text": "3) Extraer archivos de ODT (setup.exe)" },
+      {
+        "type": "p",
+        "text": "Dentro de la carpeta, da clic derecho al instalador descargado y selecciona **“Ejecutar como administrador”**."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/03-run-as-admin.png",
+        "alt": "Ejecutar como administrador el instalador de ODT",
+        "caption": "Clic derecho → Ejecutar como administrador."
+      },
+      {
+        "type": "p",
+        "text": "Aparecerá el aviso: **“¿Quieres permitir que esta aplicación haga cambios en el dispositivo?”**. Selecciona **Sí**."
+      },
+      {
+        "type": "p",
+        "text": "Se abrirá el asistente: acepta los términos y condiciones y da clic en **Continuar**. Luego te pedirá elegir carpeta de extracción: ve a **Escritorio** → selecciona tu carpeta (**Office**) → **Aceptar**."
+      },
+      {
+        "type": "p",
+        "text": "Al finalizar verás el mensaje **“Files extracted successfully.”**. Da clic en **Aceptar**."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/files-extracted-successfully.png",
+        "alt": "Mensaje Files extracted successfully",
+        "caption": "Extracción completada correctamente."
+      },
+      {
+        "type": "p",
+        "text": "En la carpeta quedará `setup.exe` y también un XML de ejemplo como `configuration-Office365-x64.xml`. **Borra** el XML de ejemplo para evitar confusiones y **no toques** `setup.exe` por el momento."
+      },
+
+      { "type": "h2", "text": "4) Confirmar la arquitectura (64 bits / 32 bits)" },
+      {
+        "type": "p",
+        "text": "Para confirmar la arquitectura, abre el buscador (la lupita) y escribe **“Acerca de tu PC”**. En Configuración busca **Tipo de sistema**. Normalmente será **64 bits**."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/about-your-pc-architecture.png",
+        "alt": "Pantalla Acerca de tu PC mostrando Tipo de sistema",
+        "caption": "Verifica si tu sistema es de 64 bits o 32 bits."
+      },
+
+      { "type": "h2", "text": "5) Crear configuration.xml en config.office.com" },
+      {
+        "type": "p",
+        "text": "Si solo quieres una configuración **predeterminada** para **64 bits** en **Español (México)** (Access, Word, Excel, PowerPoint y OneNote), puedes **omitir este paso**. Descarga el archivo aquí:",
+      },
+      {
+        type: "downloadLink",
+        text: "Descargar configuration.xml (64 bits · Español México)",
+        href: "/material/office-ltsc/configuration.xml",
+        fileName: "configuration.xml"
+      },
+      {
+        "type": "p",
+        "text": "Después, continúa directamente con el **Paso 6) Instalar Office LTSC desde CMD (Administrador)**."
+      },
+      {
+        "type": "p",
+        "text": "Ahora crea el archivo `configuration.xml` desde la herramienta de configuración en línea. Ahí seleccionarás la **arquitectura**, los **productos LTSC**, las **aplicaciones** y el **idioma**."
+      },
+      {
+        "type": "link",
+        "text": "Abrir Office Customization Tool (config.office.com)",
+        "href": "https://config.office.com/deploymentsettings"
+      },
+      {
+        "type": "snippet",
+        "language": "text",
+        "fileName": "Office Customization Tool",
+        "code": "https://config.office.com/deploymentsettings"
+      },
+
+      { "type": "h3", "text": "Arquitectura" },
+      {
+        "type": "p",
+        "text": "En **¿Qué arquitectura quiere implementar?** elige la que corresponda a tu equipo (por lo general **64 bits**)."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/architecture.png",
+        "alt": "Sección Arquitectura en Office Customization Tool",
+        "caption": "Selecciona 64-bit o 32-bit según tu equipo."
+      },
+
+      { "type": "h3", "text": "Productos" },
+      {
+        "type": "p",
+        "text": "En **Conjuntos de aplicaciones de Office**, selecciona: **Office LTSC Professional Plus 2024 - Volume License**. Si ocupas Visio o Project, puedes agregarlos; si no, déjalos sin seleccionar."
+      },
+      {
+        "type": "p",
+        "text": "Opcionales:\n• Visio LTSC Professional 2024 - Volume License\n• Project Professional 2024 - Volume License"
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/products.png",
+        "alt": "Selección de productos Office LTSC 2024 en Office Customization Tool",
+        "caption": "Selecciona Office LTSC 2024 (y opcionalmente Visio/Project)."
+      },
+
+      { "type": "h3", "text": "Aplicaciones" },
+      {
+        "type": "p",
+        "text": "Baja a Aplicaciones y marca únicamente las que necesites (Word, Excel, PowerPoint, etc.). Al terminar da clic en siguiente."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/apps.png",
+        "alt": "Selección de aplicaciones de Office",
+        "caption": "Elige solo las apps necesarias."
+      },
+
+      { "type": "h3", "text": "Idioma" },
+      {
+        "type": "p",
+        "text": "En **Seleccione el idioma principal**, elige **Español (México)**."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/language.png",
+        "alt": "Selección de idioma Español (México) en Office Customization Tool",
+        "caption": "Idioma principal: Español (México)."
+      },
+      {
+        "type": "p",
+        "text": "A partir de este punto, puedes dejar la configuración **tal como está por defecto**. Solo da clic en **Siguiente** en cada pantalla hasta que el asistente cambie a **Finalizar**."
+      },
+
+      { "type": "h3", "text": "Exportar configuration.xml" },
+      {
+        "type": "p",
+        "text": "Da clic en **Exportar**."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/export.png",
+        "alt": "Pantalla de exportación en Office Customization Tool",
+        "caption": "Exportar configuración."
+      },
+
+      {
+        "type": "p",
+        "text": "Se abrirá un recuadro donde debes elegir **Formato Office Open XML** y luego dar clic en **Aceptar**."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/format.png",
+        "alt": "Recuadro de exportación en Office Customization Tool",
+        "caption": "Selecciona Formato Office Open XML y confirma con Aceptar."
+      },
+      {
+        "type": "p",
+        "text": "Acepta los términos del contrato de licencia. En **Nombre de archivo**, escribe **configuration** (para que quede `configuration.xml`), da clic en **Exportar** y guarda el archivo dentro de la carpeta **Office** del Escritorio (junto a `setup.exe`)."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/save-configuration-xml.png",
+        "alt": "Guardar configuration.xml en la carpeta del Escritorio",
+        "caption": "Guarda configuration.xml junto a setup.exe."
+      },
+
+      { "type": "h2", "text": "6) Instalar Office LTSC desde CMD (Administrador)" },
+      {
+        "type": "p",
+        "text": "Abre el buscador, escribe **cmd** y selecciona **Ejecutar como administrador**. Acepta el aviso de permisos (Sí)."
+      },
+      {
+        "type": "image",
+        "src": "/img/tutoriales/office-ltsc/cmd-admin.png",
+        "alt": "CMD ejecutado como administrador",
+        "caption": "CMD en modo administrador."
+      },
+      {
+        "type": "p",
+        "text": "Abre tu carpeta **Office** en el Explorador. Da clic en la barra de ruta para ver la ruta completa, selecciónala y cópiala."
+      },
+      {
+        "type": "p",
+        "text": "En CMD entra a la carpeta pegando la ruta con `cd` (usa comillas)."
+      },
+      {
+        "type": "snippet",
+        "language": "cmd",
+        "fileName": "Entrar a la carpeta",
+        "code": "cd /\"RUTA_COMPLETA_DE_TU_CARPETA\""
+      },
+      {
+        "type": "p",
+        "text": "Ejecuta la instalación usando tu archivo `configuration.xml`:"
+      },
+      {
+        "type": "snippet",
+        "language": "cmd",
+        "fileName": "Instalación",
+        "code": "setup.exe /configure configuration.xml"
+      },
+      {
+        "type": "p",
+        "text": "Al ejecutar el comando, iniciará la instalación. Solo queda esperar a que termine."
+      },
+
+      { "type": "h2", "text": "7) Finalizar y comprobar" },
+      {
+        "type": "p",
+        "text": "Cuando termine, abre Word o Excel para confirmar que Office quedó instalado correctamente."
+      },
+
+      { "type": "h3", "text": "Recursos (opcional)" },
+      {
+        "type": "p",
+        "text": "Si quieres una guía oficial de despliegue para Office LTSC 2024 (referencia técnica), puedes consultar:"
+      },
+      {
+        "type": "link",
+        "text": "Guía oficial: Deploy Office LTSC 2024 (Microsoft Learn)",
+        "href": "https://learn.microsoft.com/en-us/office/ltsc/2024/deploy"
+      }
+    ],
+    "date": "17 de diciembre, 2025",
+    "image": "/img/tutoriales/office-ltsc/cover-office-ltsc.jpg",
+    "category": "Tutoriales",
+    "featuredPosts": true
+  },
+  {
     name: "Font-size clamp() explicado: fórmula base, pendiente e intercepto",
     description: [
       { type: "p", text: "Este artículo explica la fórmula matemática detrás del **FontClampGenerator** y el significado real de los valores que aparecen como **Pendiente** e **Intercepto**. La meta es generar una regla CSS de tipografía fluida usando `clamp(min, preferido, max)` de forma correcta y predecible." },
@@ -18,17 +289,17 @@ export const blogPosts = [
       { type: "p", text: "La fórmula que usa el generador es la estándar para convertir una recta definida en píxeles a un término en `vw`:" },
       {
         type: "snippet", language: "js", fileName: "formula.js", code: `// Datos de entrada en px
-// minVW, maxVW, minFS, maxFS
+          // minVW, maxVW, minFS, maxFS
 
-// 1) Pendiente (coeficiente de vw)
-const slope = ((maxFS - minFS) / (maxVW - minVW)) * 100;
+          // 1) Pendiente (coeficiente de vw)
+          const slope = ((maxFS - minFS) / (maxVW - minVW)) * 100;
 
-// 2) Intercepto (término constante en px)
-const intercept = minFS - (slope * minVW) / 100;
+          // 2) Intercepto (término constante en px)
+          const intercept = minFS - (slope * minVW) / 100;
 
-// 3) Expresión CSS final
-const preferred = \`calc(\${intercept}px + \${slope}vw)\`;
-const clamp = \`clamp(\${minFS}px, \${preferred}, \${maxFS}px)\`;` },
+          // 3) Expresión CSS final
+          const preferred = \`calc(\${intercept}px + \${slope}vw)\`;
+          const clamp = \`clamp(\${minFS}px, \${preferred}, \${maxFS}px)\`;` },
       { type: "p", text: "**¿Por qué multiplicamos por 100?**\nPorque `1vw` representa el **1%** del ancho del viewport. Para que la recta pase exactamente por los dos puntos (minVW/minFS y maxVW/maxFS), convertimos la pendiente de “px por px” a “px por vw”." },
       { type: "p", text: "En otras palabras, esta relación asegura que:\n• Cuando el viewport mide **minVW**, el cálculo devuelve **minFS**.\n• Cuando el viewport mide **maxVW**, el cálculo devuelve **maxFS**." },
       { type: "h2", text: "¿Qué significa **Pendiente**?" },
@@ -37,7 +308,7 @@ const clamp = \`clamp(\${minFS}px, \${preferred}, \${maxFS}px)\`;` },
       { type: "p", text: "Interpretación práctica:\n• Una pendiente más alta significa que el texto crece más rápido conforme aumenta el ancho del viewport.\n• Una pendiente más baja produce un crecimiento más suave." },
       { type: "p", text: "Por eso en el panel de resultados verás algo como:\n**Pendiente: xx.xx**\nEse valor es el coeficiente real que alimenta la parte `+ xx.xxvw`." },
       { type: "h3", text: "¿Qué significa **Intercepto**?" },
-            { type: "p", text: "El **Intercepto** es el valor fijo en píxeles que se suma a la parte responsiva.\nEjemplo conceptual:\n`calc(10px + 1.25vw)` → aquí **10px** es el intercepto." },
+      { type: "p", text: "El **Intercepto** es el valor fijo en píxeles que se suma a la parte responsiva.\nEjemplo conceptual:\n`calc(10px + 1.25vw)` → aquí **10px** es el intercepto." },
 
       { type: "p", text: "Interpretación práctica:\n• Ajusta el punto de partida de la recta.\n• Permite que la fórmula siga siendo exacta en el ancho mínimo definido." },
       { type: "p", text: "En el panel del generador normalmente lo verás así:\n**Intercepto: xxx.xxx px**\nEste valor alimenta el bloque `calc(InterceptoPx + PendienteVw)`." },
@@ -1010,6 +1281,68 @@ export const renderDescription = (description) => {
             </li>
           );
         }
+
+        case "image": {
+          if (!block?.src) return null;
+
+          const imgProps =
+            block.width && block.height ? { width: block.width, height: block.height } : {};
+
+          const variantClass =
+            block.variant === "small" ? styles.inlineImageSmall : styles.inlineImage;
+
+          return (
+            <li key={`img-${idx}`} className={styles.noBullet}>
+              <figure className={styles.figure}>
+                <img
+                  src={block.src}
+                  alt={block.alt || ""}
+                  className={variantClass}
+                  loading="lazy"
+                  decoding="async"
+                  {...imgProps}
+                />
+                {block.caption && (
+                  <figcaption className={styles.figCaption}>{block.caption}</figcaption>
+                )}
+              </figure>
+            </li>
+          );
+        }
+
+        case "link": {
+          if (!block?.href) return null;
+
+          return (
+            <li key={`link-${idx}`} className={styles.noBullet}>
+              <a
+                href={block.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                {block.text || block.href}
+              </a>
+            </li>
+          );
+        }
+
+        case "downloadLink": {
+          if (!block?.href) return null;
+
+          return (
+            <li key={`dl-${idx}`} className={styles.noBullet}>
+              <a
+                href={block.href}
+                download={block.fileName || true}
+                className={styles.downloadLink}
+              >
+                {block.text || block.fileName || "Descargar archivo"}
+              </a>
+            </li>
+          );
+        }
+
 
         default:
           return null;

@@ -37,7 +37,7 @@ export default function FullPost({ post, featuredPosts = [] }) {
           </h1>
 
           <div className={styles.description}>
-            <ul className={styles.list}>{renderDescription(post.description)}</ul>
+            <ul className={styles.list}>{renderDescription(post.description, styles)}</ul>
           </div>
 
           {post.quote && <blockquote className={styles.quote}>“{post.quote}”</blockquote>}
