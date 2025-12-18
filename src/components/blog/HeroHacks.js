@@ -1,4 +1,3 @@
-// Server Component por defecto
 import styles from './HeroHacks.module.css';
 
 export default function HeroHacks({

@@ -26,6 +26,7 @@
   z-index: 2;
   perspective: 500px;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .imageContainer img {
@@ -34,4 +35,6 @@
   object-fit: cover;
   object-position: center center;
   will-change: transform;
+  pointer-events: none;
+  user-select: none;
 }
