@@ -169,7 +169,7 @@ export default function Portfolio() {
       ))}
 
       <div className={styles.moreWrapper}>
-        <a href="Pag/portafolio.html" rel="noopener noreferrer" className={styles.moreLink}>
+        <a href="portafolio" rel="noopener noreferrer" className={styles.moreLink}>
           MÁS PROYECTOS . . .
         </a>
       </div>

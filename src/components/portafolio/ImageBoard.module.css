@@ -1,0 +1,115 @@
+.wrap {
+  width: 100%;
+  padding: 16px;
+  margin-top: 100px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.toolbarLeft {
+  min-width: 240px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.toolbarRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnDanger {
+  padding: 9px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 0, 0, 0.22);
+  background: rgba(255, 0, 0, 0.10);
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.06s ease;
+}
+
+.btnDanger:active {
+  transform: translateY(1px);
+}
+
+.board {
+  width: 100%;
+  min-height: 520px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.tile {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.tileInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+:global(.react-grid-placeholder) {
+  border-radius: 16px;
+}
+
+:global(.react-resizable-handle) {
+  opacity: 0.9;
+}
+
+:global(.react-grid-item > .react-resizable-handle.react-resizable-handle-se) {
+  width: 28px;
+  height: 28px;
+  right: 10px;
+  bottom: 10px;
+  background-image: none !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: se-resize;
+  z-index: 10;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+:global(.react-resizable-handle-se)::before {
+  content: "⤢";
+  position: absolute;
+  right: -2px;
+  bottom: -6px;
+  font-size: 30px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+}
+
