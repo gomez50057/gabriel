@@ -2,9 +2,69 @@
   width: 100%;
   padding: 16px;
   margin-top: 100px;
+
+  /* Base */
+  --fgTitle: #E7BD70;
+  --fgCaption: #f9f9f9;
+
+  --fg: rgba(16, 16, 18, 0.92);
+  --fgSoft: rgba(16, 16, 18, 0.72);
+  --stroke: rgba(0, 0, 0, 0.12);
+  --strokeStrong: rgba(0, 0, 0, 0.18);
+
+  /* Glass surfaces */
+  --glassBg: rgba(255, 255, 255, 0.18);
+  --glassBgStrong: rgba(255, 255, 255, 0.28);
+  --glassOverlay: rgba(255, 255, 255, 0.12);
+
+  /* Blur */
+  --blur: 14px;
+  --blurStrong: 18px;
+
+  /* Shadows */
+  --shadow: 0 14px 45px rgba(0, 0, 0, 0.18);
+  --shadowSoft: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  /* Radius */
+  --rBoard: 18px;
+  --rTile: 16px;
+  --rBtn: 12px;
+  --rRound: 999px;
+
+  /* Accent */
+  --dangerStroke: rgba(255, 0, 0, 0.22);
+  --dangerBg: rgba(255, 0, 0, 0.10);
+
+  /* Hover overlay (glass) */
+  --hoverBg: rgba(255, 255, 255, 0.14);
+  --hoverTint: rgba(0, 0, 0, 0.35);
+
+  color: var(--fg);
 }
 
+/* Dark theme override: si algún padre tiene data-theme="dark" */
+:global([data-theme="dark"]) .wrap {
+  --fg: rgba(255, 255, 255, 0.92);
+  --fgSoft: rgba(255, 255, 255, 0.72);
+
+  --stroke: rgba(255, 255, 255, 0.14);
+  --strokeStrong: rgba(255, 255, 255, 0.18);
+
+  --glassBg: rgba(255, 255, 255, 0.08);
+  --glassBgStrong: rgba(255, 255, 255, 0.12);
+  --glassOverlay: rgba(255, 255, 255, 0.06);
+
+  --shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
+  --shadowSoft: 0 12px 34px rgba(0, 0, 0, 0.35);
+
+  --hoverBg: rgba(255, 255, 255, 0.10);
+  --hoverTint: rgba(0, 0, 0, 0.55);
+}
+
+/*  */
 /* Toolbar */
+/*  */
+
 .toolbar {
   display: flex;
   gap: 16px;
@@ -25,8 +85,9 @@
 
 .subtitle {
   margin: 6px 0 0;
-  opacity: 0.8;
+  opacity: 0.85;
   font-size: 0.95rem;
+  color: var(--fgSoft);
 }
 
 .toolbarRight {
@@ -36,7 +97,10 @@
   gap: 12px;
 }
 
-/* Filtro */
+/*  */
+/* Filter */
+/*  */
+
 .filterLabel {
   display: flex;
   align-items: center;
@@ -45,46 +109,78 @@
 
 .filterText {
   font-size: 0.95rem;
-  opacity: 0.9;
+  opacity: 0.92;
+  color: var(--fgSoft);
 }
 
 .select {
   height: 38px;
   padding: 0 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.06);
-  color: inherit;
+  border-radius: var(--rBtn);
+  border: 1px solid var(--stroke);
+
+  background: var(--glassBg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+
+  color: var(--fg);
   outline: none;
+  box-shadow: var(--shadowSoft);
 }
 
-/* Botón Reset */
+/*  */
+/* Reset button */
+/*  */
+
 .btnDanger {
   padding: 9px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 0, 0, 0.22);
-  background: rgba(255, 0, 0, 0.10);
-  color: inherit;
+  border-radius: var(--rBtn);
+  border: 1px solid var(--dangerStroke);
+
+  background: var(--dangerBg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+
+  color: var(--fg);
   cursor: pointer;
-  transition: transform 0.06s ease;
+
+  box-shadow: var(--shadowSoft);
+  transition: transform 0.06s ease, background 0.18s ease;
+}
+
+.btnDanger:hover {
+  background: rgba(255, 0, 0, 0.14);
 }
 
 .btnDanger:active {
   transform: translateY(1px);
 }
 
-/* Board */
+/*  */
+/* Board (glass) */
+/*  */
+
 .board {
   width: 100%;
   min-height: 520px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
+
+  border-radius: var(--rBoard);
+  border: 1px solid var(--stroke);
+
+  background: var(--glassBg);
+  backdrop-filter: blur(var(--blurStrong));
+  -webkit-backdrop-filter: blur(var(--blurStrong));
+
+  box-shadow: var(--shadow);
   overflow: hidden;
 }
 
+/*  */
+/* Tile */
+/*  */
+
 .tile {
-  border-radius: 16px;
+  border-radius: var(--rTile);
   overflow: hidden;
 }
 
@@ -92,22 +188,31 @@
   width: 100%;
   height: 100%;
   position: relative;
-  border-radius: 16px;
+
+  border-radius: var(--rTile);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(0, 0, 0, 0.22);
+
+  border: 1px solid var(--stroke);
+  background: var(--glassOverlay);
+
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+
+  box-shadow: var(--shadowSoft);
 }
 
 .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
   user-select: none;
   -webkit-user-drag: none;
 }
 
+/* react-grid-layout */
 :global(.react-grid-placeholder) {
-  border-radius: 16px;
+  border-radius: var(--rTile);
 }
 
 :global(.react-resizable-handle) {
@@ -119,35 +224,54 @@
   height: 28px;
   right: 10px;
   bottom: 10px;
+
   background-image: none !important;
   background: transparent !important;
   border: none !important;
+
   cursor: se-resize;
   z-index: 10;
+
   user-select: none;
   -webkit-user-drag: none;
 }
 
+/* Icono visual de expandir */
 :global(.react-resizable-handle-se)::before {
   content: "⤢";
   position: absolute;
   right: -2px;
   bottom: -6px;
+
   font-size: 30px;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
+
   pointer-events: none;
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
 }
+
+/*  */
+/* Hover overlay (glass + centro estable) */
+/*  */
 
 .hoverOverlay {
   position: absolute;
   inset: 0;
-  border-radius: 16px;
+  border-radius: var(--rTile);
   z-index: 6;
+
   opacity: 0;
   transition: opacity 180ms ease;
-  background: rgba(0, 0, 0, 0.55);
+
+  /* Glass overlay */
+  background: linear-gradient(to top,
+      var(--hoverTint),
+      rgba(0, 0, 0, 0.12));
+  backdrop-filter: blur(var(--blurStrong));
+  -webkit-backdrop-filter: blur(var(--blurStrong));
+
+  border: 1px solid var(--stroke);
   pointer-events: none;
 }
 
@@ -160,10 +284,12 @@
   width: 100%;
   height: 100%;
   padding: 18px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   gap: 10px;
   text-align: center;
 }
@@ -174,8 +300,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
   color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
 }
 
 .hoverTitle {
@@ -193,26 +320,38 @@
 .eyeBtn {
   width: 52px;
   height: 52px;
-  border-radius: 999px;
+  border-radius: var(--rRound);
+
   display: grid;
   place-items: center;
+
   border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(0, 0, 0, 0.35);
+
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+
   color: rgba(255, 255, 255, 0.95);
   cursor: pointer;
+
   pointer-events: auto;
+  box-shadow: var(--shadowSoft);
+
   transition: transform 0.08s ease, background 0.18s ease;
 }
 
 .eyeBtn:hover {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .eyeBtn:active {
   transform: translateY(1px);
 }
 
-/* ===== Modal ===== */
+/*  */
+/* Modal (glass) */
+/*  */
+
 .modalBackdrop {
   position: fixed;
   inset: 0;
@@ -231,41 +370,64 @@
   width: min(980px, 94vw);
   max-height: 92vh;
   overflow: hidden;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(15, 15, 15, 0.96);
+
+  border-radius: var(--rBoard);
+  border: 1px solid var(--strokeStrong);
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow: var(--shadow);
   position: relative;
+}
+
+:global([data-theme="dark"]) .modal {
+  background: rgba(10, 10, 12, 0.58);
 }
 
 .modalClose {
   position: absolute;
   top: 10px;
   right: 12px;
+
   width: 38px;
   height: 38px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.06);
-  color: inherit;
+  border-radius: var(--rBtn);
+
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.10);
+
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+
+  color: var(--fgCaption);
   cursor: pointer;
   font-size: 22px;
   line-height: 1;
 }
 
+:global([data-theme="dark"]) .modalClose {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92);
+}
+
 .modalHeader {
   padding: 14px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid var(--stroke);
 }
 
 .modalTitle {
   font-weight: 800;
   font-size: 1.05rem;
+  color: var(--fgTitle);
 }
 
 .modalGroup {
   margin-top: 4px;
-  opacity: 0.85;
+  opacity: 0.9;
   font-size: 0.95rem;
+  color: var(--fgCaption);
 }
 
 .modalImg {
@@ -274,5 +436,5 @@
   max-height: calc(92vh - 74px);
   object-fit: contain;
   display: block;
-  background: #000;
+  background: rgba(0, 0, 0, 0.55);
 }
