@@ -16,6 +16,10 @@
   contain: layout paint;
 }
 
+:global([data-theme="dark"]) .icons img{
+  filter: brightness(0) invert(1);
+}
+
 .link {
   position: relative;
   display: block;
@@ -103,7 +107,7 @@
   opacity: 1;
 }
 
-.layer > .icon {
+.layer>.icon {
   opacity: 1 !important;
   border: 0 !important;
   transform: none !important;
