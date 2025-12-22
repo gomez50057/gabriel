@@ -1,5 +1,4 @@
 .footer {
-  /* ===== Theme tokens (light default) ===== */
   --footerBg: var(--bg, #ffffff);
   --footerBorder: rgba(0, 0, 0, 0.08);
 
