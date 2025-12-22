@@ -1,4 +1,5 @@
 import Navbar from '@/shared/Navbar';
+import Footer from '@/shared/Footer';
 
 export const metadata = {
   title: "Convertidor de texto",
@@ -16,9 +17,12 @@ export const viewport = {
 
 export default function Layout({ children }) {
   return (
-    <main style={{ padding: "5rem 1rem" }}>
-      <Navbar />
-      {children}
-    </main>
+    <>
+      <main style={{ padding: "5rem 1rem" }}>
+        <Navbar />
+        {children}
+      </main>
+      <Footer />
+    </>
   );
 }

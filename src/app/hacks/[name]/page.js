@@ -1,7 +1,7 @@
 import FullPost from '@/components/blog/FullPost';
 import { blogPosts, normalizeName } from '@/utils/blogData';
 import { notFound } from 'next/navigation';
-
+import Footer from '@/shared/Footer';
 
 export function generateStaticParams() {
   return blogPosts.map(post => ({
@@ -23,9 +23,12 @@ const PostPage = async ({ params }) => {
   }
 
   return (
-    <div>
-      <FullPost post={post} featuredPosts={blogPosts} />
-    </div>
+    <>
+      <div>
+        <FullPost post={post} featuredPosts={blogPosts} />
+      </div>
+      <Footer />
+    </>
   );
 };
 

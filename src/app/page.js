@@ -6,6 +6,7 @@ import HorizontalTicker from '@/components/landing/HorizontalTicker';
 import Skills from '@/components/landing/Skills';
 import Portfolio from '@/components/landing/Portfolio';
 import Contact from '@/components/landing/Contact';
+import Footer from '@/shared/Footer';
 
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
         <Portfolio />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
