@@ -3,11 +3,9 @@ import React, { useMemo, useState } from "react";
 import styles from "@/styles/blog/BlogNoticias.module.css";
 import FeaturedPosts from "./FeaturedPosts";
 import Link from "next/link";
-import { normalizeName, renderDescription } from "@/utils/blogData";
+import { normalizeName } from "@/utils/renderText";
 
 const BlogNoticias = ({ posts = [], featuredPosts = [] }) => {
-  const MAX_LENGTH = 50;
-
   const [selectedCategory, setSelectedCategory] = useState("Todas");
   const [fadeEffect, setFadeEffect] = useState(false);
 

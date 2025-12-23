@@ -2,7 +2,8 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import styles from "@/styles/blog/BlogHeader.module.css";
 import Link from "next/link";
-import { normalizeName, blogPosts } from "@/utils/blogData";
+import { normalizeName } from "@/utils/renderText";
+import { blogPosts } from "@/utils/blog/blogData";
 
 // === Tomar únicamente los 4 últimos posts (el más nuevo primero) ===
 const POSTS = blogPosts.slice(0, 4);

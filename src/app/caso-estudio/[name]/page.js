@@ -1,5 +1,6 @@
 import FullPost from '@/components/blog/FullPost';
-import { blogPosts, normalizeName } from '@/utils/blogData';
+import { normalizeName } from '@/utils/renderText';
+import { blogPosts } from '@/utils/portafolio/caseStudy';
 import { notFound } from 'next/navigation';
 import Footer from '@/shared/Footer';
 
@@ -25,6 +26,7 @@ const PostPage = async ({ params }) => {
   return (
     <>
       <div>
+        hola
         <FullPost post={post} featuredPosts={blogPosts} />
       </div>
       <Footer />

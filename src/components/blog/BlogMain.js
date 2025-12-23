@@ -2,8 +2,7 @@
 import HeroHacks from "./HeroHacks";
 import BlogHeader from "./BlogHeader";
 import BlogNoticias from "./BlogNoticias";
-// import UltimasNoticias from "./UltimasNoticias";
-import { blogPosts } from "@/utils/blogData";
+import { blogPosts } from "@/utils/blog/blogData";
 
 const BlogMain = () => {
   // Solo posts con featuredPosts === true

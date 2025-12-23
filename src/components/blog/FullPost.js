@@ -3,7 +3,7 @@
 import FeaturedPosts from "./FeaturedPosts";
 import styles from "@/styles/blog/FullPost.module.css";
 import Navbar from "@/shared/Navbar";
-import { renderDescription } from "@/utils/blogData";
+import { renderDescription } from "@/utils/renderText";
 
 export default function FullPost({ post, featuredPosts = [] }) {
   if (!post) return <p>La publicación no existe.</p>;

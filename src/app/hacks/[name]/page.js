@@ -1,5 +1,6 @@
 import FullPost from '@/components/blog/FullPost';
-import { blogPosts, normalizeName } from '@/utils/blogData';
+import { normalizeName } from '@/utils/renderText';
+import { blogPosts } from '@/utils/blog/blogData';
 import { notFound } from 'next/navigation';
 import Footer from '@/shared/Footer';
 
