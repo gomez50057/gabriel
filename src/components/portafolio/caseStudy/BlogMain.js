@@ -1,9 +1,8 @@
 "use client";
-import HeroHacks from "@/components/blog/HeroHacks";
 import BlogHeader from "@/components/blog/BlogHeader";
 import BlogNoticias from "@/components/blog/BlogNoticias";
-import { blogPosts } from "@/utils/blog/blogData";
-import { categoryFilters } from "@/utils/blog/categoryFiltersBlog";
+import { blogPosts } from "@/utils/portafolio/caseStudy";
+import { categoryFilters } from "@/utils/portafolio/categoryFiltersCaseStudy";
 
 const BlogMain = () => {
   // Solo posts con featuredPosts === true
@@ -11,7 +10,6 @@ const BlogMain = () => {
 
   return (
     <div>
-      <HeroHacks />
       <BlogHeader posts={blogPosts} />
       <BlogNoticias posts={blogPosts} featuredPosts={featuredOnly} categoryFilters={categoryFilters} />
     </div>
@@ -19,3 +17,4 @@ const BlogMain = () => {
 };
 
 export default BlogMain;
+

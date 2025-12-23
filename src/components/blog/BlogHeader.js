@@ -1,33 +1,32 @@
 "use client";
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useRef, useState, useEffect, useCallback, useMemo } from "react";
 import styles from "@/styles/blog/BlogHeader.module.css";
 import Link from "next/link";
 import { normalizeName } from "@/utils/renderText";
-import { blogPosts } from "@/utils/blog/blogData";
 
-// === Tomar únicamente los 4 últimos posts (el más nuevo primero) ===
-const POSTS = blogPosts.slice(0, 4);
+const BlogHeader = ({ posts = [] }) => {
+  // Tomar únicamente los 4 últimos posts (el más nuevo primero)
+  const POSTS = useMemo(() => {
+    const safe = Array.isArray(posts) ? posts : [];
+    return safe.slice(0, 4);
+  }, [posts]);
 
-const BlogHeader = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
   const [manualChange, setManualChange] = useState(false);
 
-  // swipe refs
   const touchStartX = useRef(null);
   const touchStartY = useRef(null);
-  const SWIPE_THRESHOLD = 40; // px
+  const SWIPE_THRESHOLD = 40;
 
   useEffect(() => {
-    // asegurar índice válido si cambiara la fuente de datos
     if (activeIndex >= POSTS.length) setActiveIndex(0);
-  }, [activeIndex]);
+  }, [activeIndex, POSTS.length]);
 
   useEffect(() => {
     setAnimationKey((k) => k + 1);
   }, [activeIndex]);
 
-  // auto-advance (pausa si hubo cambio manual breve)
   useEffect(() => {
     if (!manualChange && POSTS.length > 1) {
       const id = setInterval(() => {
@@ -35,7 +34,7 @@ const BlogHeader = () => {
       }, 6000);
       return () => clearInterval(id);
     }
-  }, [manualChange]);
+  }, [manualChange, POSTS.length]);
 
   const restartAutoAdvance = () => setManualChange(false);
 
@@ -44,14 +43,14 @@ const BlogHeader = () => {
     setManualChange(true);
     setActiveIndex((prev) => (prev + 1) % POSTS.length);
     restartAutoAdvance();
-  }, []);
+  }, [POSTS.length]);
 
   const handlePrev = useCallback(() => {
     if (!POSTS.length) return;
     setManualChange(true);
     setActiveIndex((prev) => (prev - 1 + POSTS.length) % POSTS.length);
     restartAutoAdvance();
-  }, []);
+  }, [POSTS.length]);
 
   const getNextIndex = (index, offset) =>
     POSTS.length ? (index + offset) % POSTS.length : 0;
@@ -78,11 +77,13 @@ const BlogHeader = () => {
     touchStartX.current = t.clientX;
     touchStartY.current = t.clientY;
   };
+
   const onTouchEnd = (e) => {
     if (touchStartX.current == null) return;
     const t = e.changedTouches[0];
     const dx = t.clientX - touchStartX.current;
     const dy = t.clientY - touchStartY.current;
+
     if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > SWIPE_THRESHOLD) {
       dx < 0 ? handleNext() : handlePrev();
     }

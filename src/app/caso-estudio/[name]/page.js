@@ -26,7 +26,6 @@ const PostPage = async ({ params }) => {
   return (
     <>
       <div>
-        hola
         <FullPost post={post} featuredPosts={blogPosts} />
       </div>
       <Footer />

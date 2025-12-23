@@ -1,31 +1,43 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import styles from "@/styles/blog/BlogNoticias.module.css";
 import FeaturedPosts from "./FeaturedPosts";
 import Link from "next/link";
 import { normalizeName } from "@/utils/renderText";
 
-const BlogNoticias = ({ posts = [], featuredPosts = [] }) => {
-  const [selectedCategory, setSelectedCategory] = useState("Todas");
+const BlogNoticias = ({ posts = [], featuredPosts = [], categoryFilters = []}) => {
+  const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [fadeEffect, setFadeEffect] = useState(false);
+  const timerRef = useRef(null);
 
-  // Si deseas categorías dinámicas, descomenta esto y elimina el <options> fijo:
-  // const categories = useMemo(
-  //   () => ["Todas", ...Array.from(new Set(posts.map((p) => p.category))).filter(Boolean)],
-  //   [posts]
-  // );
+  useEffect(() => {
+    return () => timerRef.current && clearTimeout(timerRef.current);
+  }, []);
 
-  const handleCategoryChange = (event) => {
+  const handleCategoryChange = useCallback((event) => {
+    const nextValue = event.target.value;
+
     setFadeEffect(true);
-    setTimeout(() => {
-      setSelectedCategory(event.target.value);
+    if (timerRef.current) clearTimeout(timerRef.current);
+
+    timerRef.current = setTimeout(() => {
+      setSelectedCategory(nextValue);
       setFadeEffect(false);
     }, 300);
-  };
+  }, []);
 
   const filteredPosts = useMemo(() => {
-    if (selectedCategory === "Todas") return posts;
-    return posts.filter((post) => post.category === selectedCategory);
+    const safePosts = Array.isArray(posts) ? posts : [];
+
+    // "ALL" = Todas
+    if (selectedCategory === "ALL") return safePosts;
+
+    const conf = categoryFilters.find((c) => c.value === selectedCategory);
+    const matchValues = (conf?.matchValues?.length ? conf.matchValues : [selectedCategory]).map((v) =>
+      String(v).trim()
+    );
+
+    return safePosts.filter((post) => matchValues.includes(String(post?.category ?? "").trim()));
   }, [posts, selectedCategory]);
 
   return (
@@ -41,26 +53,20 @@ const BlogNoticias = ({ posts = [], featuredPosts = [] }) => {
           <label htmlFor="catSelect" className={styles.srOnly}>
             Filtrar por categoría
           </label>
+
           <select
             id="catSelect"
             className={styles.orderSelect}
             onChange={handleCategoryChange}
-            defaultValue="Todas"
+            value={selectedCategory}
             aria-label="Filtrar por categoría"
           >
-            <option value="Todas">Todas</option>
-            <option value="ZMVM">ZMVM</option>
-            <option value="ZMP">ZMPachuca</option>
-            <option value="ZMTula">ZMTula</option>
-            <option value="ZMTulancingo">ZMTulancingo</option>
-          </select>
-
-          {/* Si usas categorías dinámicas, usa esto: */}
-          {/* <select id="catSelect" className={styles.orderSelect} onChange={handleCategoryChange} defaultValue="Todas">
-            {categories.map((c) => (
-              <option key={c} value={c}>{c}</option>
+            {categoryFilters.map((c) => (
+              <option key={c.value} value={c.value}>
+                {c.label}
+              </option>
             ))}
-          </select> */}
+          </select>
         </header>
 
         <div className={`${styles.newsGrid} ${fadeEffect ? styles.fadeOut : styles.fadeIn}`}>
@@ -84,9 +90,7 @@ const BlogNoticias = ({ posts = [], featuredPosts = [] }) => {
 
                   <h3 className={styles.newsTitle}>{post.name}</h3>
 
-                  <div className={styles.newsDescription}>
-                   
-                  </div>
+                  <div className={styles.newsDescription}></div>
                 </div>
 
                 <Link

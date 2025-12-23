@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '@/shared/Navbar';
-import HeroParallax from "@/shared/HeroParallax";
+import BlogMain from "@/components/portafolio/caseStudy/BlogMain";
 import Footer from '@/shared/Footer';
 
 
@@ -8,7 +8,7 @@ const News = () => {
   return (
     <div>
       <Navbar />
-      <HeroParallax debug={false} />
+      <BlogMain />
       <Footer />
     </div>
   );
