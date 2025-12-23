@@ -1,6 +1,6 @@
 "use client";
-import BlogHeader from "@/components/blog/BlogHeader";
-import BlogNoticias from "@/components/blog/BlogNoticias";
+import BlogHeader from "@/shared/blogStructure/BlogHeader";
+import BlogNoticias from "@/shared/blogStructure/BlogNoticias";
 import { blogPosts } from "@/utils/portafolio/caseStudy";
 import { categoryFilters } from "@/utils/portafolio/categoryFiltersCaseStudy";
 

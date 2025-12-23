@@ -1,4 +1,4 @@
-import FullPost from '@/components/blog/FullPost';
+import FullPost from '@/shared/blogStructure/FullPost';
 import { normalizeName } from '@/utils/renderText';
 import { blogPosts } from '@/utils/portafolio/caseStudy';
 import { notFound } from 'next/navigation';

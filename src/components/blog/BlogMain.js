@@ -1,7 +1,7 @@
 "use client";
-import HeroHacks from "@/components/blog/HeroHacks";
-import BlogHeader from "@/components/blog/BlogHeader";
-import BlogNoticias from "@/components/blog/BlogNoticias";
+import HeroHacks from "@/shared/blogStructure/HeroHacks";
+import BlogHeader from "@/shared/blogStructure/BlogHeader";
+import BlogNoticias from "@/shared/blogStructure/BlogNoticias";
 import { blogPosts } from "@/utils/blog/blogData";
 import { categoryFilters } from "@/utils/blog/categoryFiltersBlog";
 

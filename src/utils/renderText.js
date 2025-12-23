@@ -4,7 +4,7 @@
 // `código`    → renderizado como <Snippet inline>
 
 import styles from "@/styles/blog/FullPost.module.css";
-import Snippet from "@/components/blog/Snippet";
+import Snippet from "@/shared/blogStructure/Snippet";
 
 export const normalizeName = (str) => {
   return str
