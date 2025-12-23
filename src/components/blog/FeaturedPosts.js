@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FeaturedPosts.module.css'; 
+import styles from '@/styles/blog/FeaturedPosts.module.css'; 
 import Link from "next/link";
 import { normalizeName } from "@/utils/blogData";
 

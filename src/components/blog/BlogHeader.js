@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState, useEffect, useCallback } from "react";
-import styles from "./BlogHeader.module.css";
+import styles from "@/styles/blog/BlogHeader.module.css";
 import Link from "next/link";
 import { normalizeName, blogPosts } from "@/utils/blogData";
 

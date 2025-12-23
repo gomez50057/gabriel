@@ -8,7 +8,7 @@ import Snippet from "@/components/blog/Snippet";
 
 export const blogPosts = [
   {
-    "name": "Instalar Office LTSC 2024 con Office Deployment Tool (ODT)",
+    "name": "hola",
     "description": [
       {
         "type": "p",

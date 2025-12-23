@@ -1,4 +1,4 @@
-import styles from './HeroHacks.module.css';
+import styles from '@/styles/blog/HeroHacks.module.css';
 
 export default function HeroHacks({
   subtitle = 'SENIOR EN PROCESO',

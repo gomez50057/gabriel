@@ -126,3 +126,39 @@ export const defaultLayouts = {
     { i: "3", x: 0, y: 9, w: 4, h: 6 },
   ],
 };
+
+export const portfolioRecentProjects = [
+  {
+    id: "p1",
+    title: "El Fuego restaurant",
+    stack: "Página web",
+    image: "/img/proyectos/fuego.webp",
+    links: [{ href: "https://gomez50057.github.io/el-fuego/", label: "Ver demo", icon: "eye" }],
+  },
+  {
+    id: "p2",
+    title: "Carrito de compras inteligente",
+    stack: "Carrito inteligente",
+    image: "/img/proyectos/proyecto8.webp",
+    links: [
+      {
+        href: "https://sketchfab.com/models/2453f8b6f65540bc8115f6906331edc9/embed",
+        label: "Ver demo",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    id: "p3",
+    title: "Casa",
+    stack: "Carrito inteligente",
+    image: "/img/proyectos/proyecto9.webp",
+    links: [
+      {
+        href: "https://sketchfab.com/models/b74bb885a1c94f68822ae241e6b2207e/embed?ui_theme=dark",
+        label: "Ver demo",
+        icon: "external",
+      },
+    ],
+  },
+];

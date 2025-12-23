@@ -1,178 +1,118 @@
-'use client';
+import React from "react";
+import styles from "@/styles/Portfolio.module.css";
+import { EyeIcon, ExternalLinkIcon } from "@/shared/icons/PortfolioIcons";
+import { portfolioRecentProjects } from "@/utils/portafolio/portfolioBoardData";
 
-import { memo, useMemo } from 'react';
-import styles from '@/styles/Portfolio.module.css';
+const ICON = {
+  eye: EyeIcon,
+  external: ExternalLinkIcon,
+};
 
-const projectsData = [
-  // Fila 1
-  [
-    {
-      img: 'img/proyectos/proyecto1.webp',
-      alt: 'repostería web',
-      title: 'Copo de Nieve',
-      tech: 'HTML│JS│CSS│Bootstrap',
-      links: [
-        { href: 'https://gomez50057.github.io/LaunchX-FrontEnd-Reposteria', icon: 'fa-solid fa-eye', label: 'Ver Copo de Nieve' },
-        { href: 'https://github.com/gomez50057/LaunchX-FrontEnd-Reposteria', icon: 'fa-brands fa-github', label: 'Repositorio Copo de Nieve' },
-      ],
-    },
-    {
-      img: 'img/proyectos/fuego.webp',
-      alt: 'covid vacunación',
-      title: 'El Fuego',
-      tech: 'HTML│JS│CSS',
-      links: [
-        { href: 'https://gomez50057.github.io/el-fuego', icon: 'fa-solid fa-eye', label: 'Ver El Fuego' },
-        { href: 'https://gomez50057.github.io/el-fuego', icon: 'fa-brands fa-github', label: 'Repositorio El Fuego' },
-      ],
-    },
-    {
-      img: 'img/proyectos/MG.webp',
-      alt: 'MG Inmobiliaria',
-      title: 'MG Inmobiliaria',
-      tech: 'HTML│JS│CSS│Wordpress',
-      links: [
-        { href: 'https://mginmobiliariamexico.com/', icon: 'fa-solid fa-eye', label: 'Ver MG Inmobiliaria' },
-        { href: 'https://mginmobiliariamexico.com/', icon: 'fa-brands fa-github', label: 'Repositorio MG Inmobiliaria' },
-      ],
-    },
-  ],
-  // Fila 2
-  [
-    {
-      img: 'img/proyectos/proyectos/IQ.webp',
-      alt: 'IQ English',
-      title: 'IQ English',
-      tech: 'HTML│JS│CSS│Wordpress',
-      links: [
-        { href: 'https://iqenglishpachuca.com/', icon: 'fa-solid fa-eye', label: 'Ver IQ English' },
-        { href: 'https://iqenglishpachuca.com/', icon: 'fa-brands fa-github', label: 'Repositorio IQ English' },
-      ],
-    },
-    {
-      img: 'img/proyectos/proyecto5.webp',
-      alt: 'Pronóstico del tiempo',
-      title: 'Pronóstico del tiempo',
-      tech: 'HTML│React JS│CSS',
-      links: [
-        { href: 'https://gomez50057.github.io/temperatura/', icon: 'fa-solid fa-eye', label: 'Ver Pronóstico del tiempo' },
-        { href: 'https://github.com/gomez50057/temperatura/', icon: 'fa-brands fa-github', label: 'Repositorio Pronóstico del tiempo' },
-      ],
-    },
-    {
-      img: 'img/proyectos/proyecto6.webp',
-      alt: 'CNC cortes en caja',
-      title: 'Fresadora',
-      tech: 'SolidWorks│CNC',
-      links: [
-        { href: 'Pag/portafolio.html', icon: 'fa-solid fa-eye', label: 'Ver Fresadora' },
-      ],
-    },
-  ],
-  // Fila 3
-  [
-    {
-      img: 'img/proyectos/proyecto7.webp',
-      alt: 'Ansys',
-      title: 'Perilla - Deformación nodal',
-      tech: 'Ansys',
-      links: [
-        { href: 'https://giphy.com/embed/nNrsWKrKxKHwcMIJx5', icon: 'fa-solid fa-eye', label: 'Ver Perilla - Deformación nodal' },
-      ],
-    },
-    {
-      img: 'img/proyectos/proyecto8.webp',
-      alt: 'carrito de compras inteligente',
-      title: 'Carrito inteligente',
-      tech: 'Solidworks',
-      links: [
-        { href: 'https://sketchfab.com/models/2453f8b6f65540bc8115f6906331edc9/embed', icon: 'fa-solid fa-eye', label: 'Ver Carrito inteligente' },
-      ],
-    },
-    {
-      img: 'img/proyectos/proyecto9.webp',
-      alt: 'Casa render Solidworks',
-      title: 'Casa',
-      tech: 'Solidworks',
-      links: [
-        { href: 'https://sketchfab.com/models/b74bb885a1c94f68822ae241e6b2207e/embed?ui_theme=dark', icon: 'fa-solid fa-eye', label: 'Ver Casa' },
-      ],
-    },
-  ],
-];
+const normalizeIconKey = (icon) => {
+  if (!icon) return "external";
+  if (icon === "eye" || icon === "external") return icon;
 
-const MemberCard = memo(function MemberCard({ project, priority }) {
-  return (
-    <div className={styles.project}>
-      <div className={styles.member}>
-        <div className={styles.imageWrap} aria-hidden="true">
-          <img
-            src={`/${project.img}`}
-            alt={project.alt}
-            loading={priority ? 'eager' : 'lazy'}
-            fetchPriority={priority ? 'high' : 'auto'}   // <-- aquí el fix
-            decoding="async"
-            width={project.width}
-            height={project.height}
-            className={styles.image}
-          />
-        </div>
+  if (typeof icon === "string") {
+    const s = icon.toLowerCase();
+    if (s.includes("fa-eye")) return "eye";
+    if (s.includes("fa-up-right-from-square") || s.includes("fa-external-link")) return "external";
+    if (s.includes("fa-github") || s.includes("github")) return "external"; // compat (sin ícono Git)
+  }
+  return "external";
+};
 
-        <div className={styles.memberInfo}>
-          <div className={styles.memberInfoContent}>
-            <h4>{project.title}</h4>
-            <span>{project.tech}</span>
-          </div>
-          <div className={styles.social}>
-            {project.links?.map((l, idx) => (
-              <a
-                key={idx}
-                href={l.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={l.label}
-                title={l.label}
-              >
-                <i className={l.icon} aria-hidden="true" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+const LinkIcon = React.memo(function LinkIcon({ icon }) {
+  const key = normalizeIconKey(icon);
+  const IconCmp = ICON[key] || ICON.external;
+  return <IconCmp />;
 });
 
-export default function Portfolio() {
-  const rows = useMemo(() => projectsData, []);
+const safeHref = (href) => (typeof href === "string" && href.trim() ? href.trim() : "#");
+
+const isExternalHref = (href) => {
+  if (!href) return false;
+  return href.startsWith("http://") || href.startsWith("https://") || href.startsWith("//");
+};
+
+const getAnchorAttrs = (href) => (isExternalHref(href) ? { target: "_blank", rel: "noopener noreferrer" } : {});
+
+function Portfolio({
+  title = "Portafolio",
+  projects = portfolioRecentProjects,
+  moreHref = "/portfolio",
+  moreText = "Ver más",
+}) {
+  const list = Array.isArray(projects) ? projects : [];
 
   return (
-    <section id="portfolio" className={`${styles.portfolio} seccion`}>
-      <div className={styles.titleSection}>
-        {/* <h2>Últimamente he dado vida a…</h2> */}
-        {/* <p>Ideas que hoy ya son proyectos reales.</p> */}
+    <section className={styles.portfolio} aria-label={title}>
+      <header className={styles.titleSection}>
         <h2>Recientemente he trabajado en…</h2>
         <p>Lo último que he llevado de la idea a la realidad.</p>
+      </header>
+
+      <div className={styles.row}>
+        {list.map((p, i) => {
+          const id = p?.id ?? `${p?.title ?? "project"}-${i}`;
+          const projectTitle = p?.title ?? "Proyecto";
+          const stack = p?.stack ?? "";
+          const img = p?.image ?? "";
+          const links = Array.isArray(p?.links) ? p.links : [];
+
+          return (
+            <article key={id} className={styles.project}>
+              <div className={styles.member}>
+                <div className={styles.imageWrap}>
+                  {img ? (
+                    <img
+                      src={img}
+                      alt={projectTitle}
+                      className={styles.image}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : null}
+                </div>
+
+                <div className={styles.memberInfo}>
+                  <div className={styles.memberInfoContent}>
+                    {projectTitle}
+                    {stack ? <span>{stack}</span> : null}
+                  </div>
+
+                  {links.length ? (
+                    <div className={styles.social}>
+                      {links.map((l, idx) => {
+                        const href = safeHref(l?.href);
+                        const label = l?.label ?? "Ver";
+                        return (
+                          <a
+                            key={`${id}-link-${idx}`}
+                            href={href}
+                            {...getAnchorAttrs(href)}
+                            aria-label={label}
+                            title={label}
+                          >
+                            <LinkIcon icon={l?.icon} />
+                          </a>
+                        );
+                      })}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
 
-      {rows.map((row, rowIdx) => (
-        <div className={styles.row} key={`row-${rowIdx}`}>
-          {row.map((proj, colIdx) => (
-            <MemberCard
-              key={`${proj.title}-${colIdx}`}
-              project={proj}
-              // Prioriza imágenes visibles primero (solo la primera fila)
-              priority={rowIdx === 0}
-            />
-          ))}
-        </div>
-      ))}
-
       <div className={styles.moreWrapper}>
-        <a href="portafolio" rel="noopener noreferrer" className={styles.moreLink}>
-          MÁS PROYECTOS . . .
+        <a href={moreHref} className={styles.moreLink}>
+          {moreText}
         </a>
       </div>
     </section>
   );
 }
+
+export default React.memo(Portfolio);

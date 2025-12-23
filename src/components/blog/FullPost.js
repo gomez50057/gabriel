@@ -1,7 +1,7 @@
 "use client";
 
 import FeaturedPosts from "./FeaturedPosts";
-import styles from "./FullPost.module.css";
+import styles from "@/styles/blog/FullPost.module.css";
 import Navbar from "@/shared/Navbar";
 import { renderDescription } from "@/utils/blogData";
 

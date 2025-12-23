@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import styles from "./Snippet.module.css";
+import styles from "@/styles/blog/Snippet.module.css";
 
 export default function Snippet({
   code = "",

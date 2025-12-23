@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo, useState } from "react";
-import styles from "./BlogNoticias.module.css";
+import styles from "@/styles/blog/BlogNoticias.module.css";
 import FeaturedPosts from "./FeaturedPosts";
 import Link from "next/link";
 import { normalizeName, renderDescription } from "@/utils/blogData";
