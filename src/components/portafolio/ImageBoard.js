@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Responsive, WidthProvider } from "react-grid-layout";
+import { Responsive, WidthProvider } from "react-grid-layout/legacy";
 import styles from "./ImageBoard.module.css";
 import { defaultItems, defaultLayouts } from "@/utils/portafolio/portfolioBoardData";
 import { clearBoardState, loadBoardState, saveBoardState } from "@/utils/portafolio/imageBoardStorage";
