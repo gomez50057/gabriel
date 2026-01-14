@@ -5,7 +5,12 @@ import FeaturedPosts from "@/shared/blogStructure/FeaturedPosts";
 import Link from "next/link";
 import { normalizeName } from "@/utils/renderText";
 
-const BlogNoticias = ({ posts = [], featuredPosts = [], categoryFilters = []}) => {
+const BlogNoticias = ({
+  posts = [],
+  featuredPosts = [],
+  categoryFilters = [],
+  nameLink = "",
+}) => {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [fadeEffect, setFadeEffect] = useState(false);
   const timerRef = useRef(null);
@@ -33,12 +38,18 @@ const BlogNoticias = ({ posts = [], featuredPosts = [], categoryFilters = []}) =
     if (selectedCategory === "ALL") return safePosts;
 
     const conf = categoryFilters.find((c) => c.value === selectedCategory);
-    const matchValues = (conf?.matchValues?.length ? conf.matchValues : [selectedCategory]).map((v) =>
-      String(v).trim()
+    const matchValues = (conf?.matchValues?.length ? conf.matchValues : [selectedCategory]).map(
+      (v) => String(v).trim()
     );
 
     return safePosts.filter((post) => matchValues.includes(String(post?.category ?? "").trim()));
-  }, [posts, selectedCategory]);
+  }, [posts, selectedCategory, categoryFilters]);
+
+  // Base de ruta para el detalle (compatibilidad con /hacks por defecto)
+  const linkBase = useMemo(() => {
+    const clean = String(nameLink || "").trim().replace(/^\/+|\/+$/g, "");
+    return clean || "hacks";
+  }, [nameLink]);
 
   return (
     <section className={styles.blogNoticias}>
@@ -46,8 +57,8 @@ const BlogNoticias = ({ posts = [], featuredPosts = [], categoryFilters = []}) =
       <section className={styles.newsSection}>
         <header className={styles.newsHeader}>
           <h2 className={styles.headerTitle}>
-            <span>Blog </span>
-            <span className="span-doarado">ConCiencia Pública</span>
+            <span>Dev Lab | </span>
+            <span className={styles.spanDoarado}>Bitácora de Construcción</span>
           </h2>
 
           <label htmlFor="catSelect" className={styles.srOnly}>
@@ -71,37 +82,42 @@ const BlogNoticias = ({ posts = [], featuredPosts = [], categoryFilters = []}) =
 
         <div className={`${styles.newsGrid} ${fadeEffect ? styles.fadeOut : styles.fadeIn}`}>
           {filteredPosts.length > 0 ? (
-            filteredPosts.map((post, index) => (
-              <article key={`${post.name}-${index}`} className={styles.newsItem}>
-                {post.image && (
-                  <img
-                    src={post.image}
-                    alt={post.name}
-                    className={styles.newsImage}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                )}
+            filteredPosts.map((post, index) => {
+              const slug = normalizeName(post?.name ?? "");
+              const href = `/${linkBase}/${slug}`;
 
-                <div className={styles.newsContent}>
-                  <p className={styles.newsMeta}>
-                    {post.category} · <time dateTime={post.date}>{post.date}</time>
-                  </p>
+              return (
+                <article key={`${post?.name ?? "post"}-${index}`} className={styles.newsItem}>
+                  {post?.image && (
+                    <img
+                      src={post.image}
+                      alt={post.name}
+                      className={styles.newsImage}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
 
-                  <h3 className={styles.newsTitle}>{post.name}</h3>
+                  <div className={styles.newsContent}>
+                    <p className={styles.newsMeta}>
+                      {post?.category} · <time dateTime={post?.date}>{post?.date}</time>
+                    </p>
 
-                  <div className={styles.newsDescription}></div>
-                </div>
+                    <h3 className={styles.newsTitle}>{post?.name}</h3>
 
-                <Link
-                  href={`/hacks/${normalizeName(post.name)}`}
-                  className={styles.readMoreBtn}
-                  aria-label={`Leer más sobre: ${post.name}`}
-                >
-                  Leer más
-                </Link>
-              </article>
-            ))
+                    <div className={styles.newsDescription}></div>
+                  </div>
+
+                  <Link
+                    href={href}
+                    className={styles.readMoreBtn}
+                    aria-label={`Leer más sobre: ${post?.name ?? "publicación"}`}
+                  >
+                    Leer más
+                  </Link>
+                </article>
+              );
+            })
           ) : (
             <p className={styles.noResults}>No se encontraron publicaciones para esta categoría.</p>
           )}
@@ -110,7 +126,7 @@ const BlogNoticias = ({ posts = [], featuredPosts = [], categoryFilters = []}) =
 
       {/* Sidebar (destacadas) */}
       <aside className={styles.sidebar} aria-label="Publicaciones destacadas">
-        <FeaturedPosts featuredPosts={featuredPosts} />
+        <FeaturedPosts featuredPosts={featuredPosts} nameLink={linkBase} />
       </aside>
     </section>
   );

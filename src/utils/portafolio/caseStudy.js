@@ -1,46 +1,152 @@
 export const blogPosts = [
   {
-    name: "Font-size clamp() explicado: fórmula base, pendiente e intercepto",
+    name: "Biblioteca Digital de Planeación: consulta pública de instrumentos y documentos",
     description: [
-      { type: "p", text: "Este artículo explica la fórmula matemática detrás del **FontClampGenerator** y el significado real de los valores que aparecen como **Pendiente** e **Intercepto**. La meta es generar una regla CSS de tipografía fluida usando `clamp(min, preferido, max)` de forma correcta y predecible." },
-      { type: "p", text: "La idea central es simple: queremos que el tamaño de fuente crezca de forma lineal desde un valor mínimo hasta uno máximo, dentro de un rango de anchuras de viewport." },
-      { type: "p", text: "Definimos dos puntos en una gráfica donde:\n• **Punto 1:** ancho mínimo del viewport = `minVW` y tamaño mínimo de fuente = `minFS`.\n• **Punto 2:** ancho máximo del viewport = `maxVW` y tamaño máximo de fuente = `maxFS`." },
-      { type: "p", text: "Con esos dos puntos construimos una recta. En CSS, esa recta la expresamos como una forma compatible con unidades responsivas:\n`font-size: clamp(minFS, calc(intercepto + pendiente * vw), maxFS)`." },
-      { type: "p", text: "El **valor preferido** es la parte fluida. Es decir, el bloque que cambia en función del ancho de la pantalla:\n`calc(InterceptoPx + PendienteVw)`." },
-      { type: "p", text: "La fórmula que usa el generador es la estándar para convertir una recta definida en píxeles a un término en `vw`:" },
       {
-        type: "snippet", language: "js", fileName: "formula.js", code: `// Datos de entrada en px
-          // minVW, maxVW, minFS, maxFS
+        type: "p",
+        text:
+          "La **Biblioteca Digital de Planeación** es una plataforma pública que permite consultar y descargar, de forma ágil, distintos instrumentos y documentos de planeación: **informes, programas, planes, atlas de riesgo, artículos, guías, lineamientos** y materiales relacionados con procesos de planeación en los diferentes órdenes de gobierno."
+      },
+      {
+        type: "p",
+        text:
+          "El enfoque principal es **acceso rápido, navegación clara y descarga directa**, para que la población encuentre lo que necesita sin fricción. Con esta biblioteca contribuimos a llevar a Hidalgo a su máximo potencial."
+      },
 
-          // 1) Pendiente (coeficiente de vw)
-          const slope = ((maxFS - minFS) / (maxVW - minVW)) * 100;
+      { type: "h2", text: "Contexto y objetivo" },
+      {
+        type: "p",
+        text:
+          "En proyectos de consulta abierta, el reto no es solo “publicar PDFs”, sino habilitar un flujo eficiente: **buscar → filtrar → validar → descargar**; evitando dispersión de fuentes, nomenclaturas inconsistentes y listados poco usables."
+      },
+      {
+        type: "ul",
+        items: [
+          "Centralizar instrumentos y documentos de planeación en un solo punto.",
+          "Mejorar la experiencia de consulta con filtrado por categorías/etiquetas y búsqueda.",
+          "Facilitar descarga con metadatos claros (tipo de instrumento, tema, año, fuente, etc.)."
+        ]
+      },
 
-          // 2) Intercepto (término constante en px)
-          const intercept = minFS - (slope * minVW) / 100;
+      { type: "h2", text: "Alcance funcional (MVP)" },
+      {
+        type: "ul",
+        items: [
+          "Catálogo público con listados, detalle y enlaces de descarga.",
+          "Búsqueda por texto (título, etiquetas, temas) y filtros por categoría.",
+          "Interfaz responsiva, pensada para lectura y consulta desde móvil y escritorio.",
+          "Estructura modular para crecimiento (nuevas categorías, colecciones y criterios)."
+        ]
+      },
 
-          // 3) Expresión CSS final
-          const preferred = \`calc(\${intercept}px + \${slope}vw)\`;
-          const clamp = \`clamp(\${minFS}px, \${preferred}, \${maxFS}px)\`;` },
-      { type: "p", text: "**¿Por qué multiplicamos por 100?**\nPorque `1vw` representa el **1%** del ancho del viewport. Para que la recta pase exactamente por los dos puntos (minVW/minFS y maxVW/maxFS), convertimos la pendiente de “px por px” a “px por vw”." },
-      { type: "p", text: "En otras palabras, esta relación asegura que:\n• Cuando el viewport mide **minVW**, el cálculo devuelve **minFS**.\n• Cuando el viewport mide **maxVW**, el cálculo devuelve **maxFS**." },
-      { type: "h2", text: "¿Qué significa **Pendiente**?" },
-      { type: "p", text: "En el generador, la **Pendiente** es el número que acompaña al `vw` dentro del `calc()`.\nEjemplo conceptual:\n`calc(10px + 1.25vw)` → aquí **1.25** es la pendiente." },
+      { type: "h2", text: "Stack y enfoque de implementación" },
+      {
+        type: "p",
+        text:
+          "El proyecto se desarrolló **solo frontend** con `Next.js` (React). El catálogo se gestiona en un archivo `JS` como constante, porque el contenido es de **consulta pública** y no requiere autenticación ni flujos sensibles en la primera etapa."
+      },
+      {
+        type: "ul",
+        items: [
+          "`Next.js` para estructura de rutas, rendimiento y composición de páginas.",
+          "`CSS Modules` para estilos encapsulados y mantenibles.",
+          "Catálogo de datos en `JS` (metadatos + links) para despliegues simples y control editorial."
+        ]
+      },
 
-      { type: "p", text: "Interpretación práctica:\n• Una pendiente más alta significa que el texto crece más rápido conforme aumenta el ancho del viewport.\n• Una pendiente más baja produce un crecimiento más suave." },
-      { type: "p", text: "Por eso en el panel de resultados verás algo como:\n**Pendiente: xx.xx**\nEse valor es el coeficiente real que alimenta la parte `+ xx.xxvw`." },
-      { type: "h3", text: "¿Qué significa **Intercepto**?" },
-      { type: "p", text: "El **Intercepto** es el valor fijo en píxeles que se suma a la parte responsiva.\nEjemplo conceptual:\n`calc(10px + 1.25vw)` → aquí **10px** es el intercepto." },
+      { type: "h2", text: "Decisión clave: solo frontend (justificación técnica)" },
+      {
+        type: "p",
+        text:
+          "Para un repositorio de **consulta abierta**, arrancar sin backend reduce complejidad e infraestructura: no hay API, base de datos, credenciales ni operación adicional. Esto acelera entrega, simplifica mantenimiento y disminuye puntos de falla."
+      },
+      {
+        type: "ul",
+        items: [
+          "Contenido público: sin autenticación ni datos personales.",
+          "Catálogo estable: altas/bajas puntuales controladas mediante despliegue.",
+          "Menos dependencias: operación más simple y robusta.",
+          "Base preparada para migrar a backend si el crecimiento lo exige."
+        ]
+      },
 
-      { type: "p", text: "Interpretación práctica:\n• Ajusta el punto de partida de la recta.\n• Permite que la fórmula siga siendo exacta en el ancho mínimo definido." },
-      { type: "p", text: "En el panel del generador normalmente lo verás así:\n**Intercepto: xxx.xxx px**\nEste valor alimenta el bloque `calc(InterceptoPx + PendienteVw)`." },
-      { type: "h3", text: "Resumen de la regla final" },
-      { type: "p", text: "El generador produce esta estructura:\n`font-size: clamp(minFSpx, calc(interceptoPx + pendienteVw), maxFSpx);`" },
-      { type: "p", text: "Con esto consigues una tipografía que:\n• Nunca baja de **minFS**.\n• Escala de forma fluida entre anchos mínimos y máximos.\n• Nunca supera **maxFS**." },
+      { type: "h2", text: "Estructura del catálogo (data en constante JS)" },
+      {
+        type: "p",
+        text:
+          "El catálogo se mantiene **normalizado** para que la UI consuma un modelo consistente y, si en el futuro se requiere backend, la transición sea directa (mismo contrato de datos)."
+      },
+      {
+        type: "snippet",
+        language: "js",
+        fileName: "src/utils/biblioteca/bibliotecaData.js",
+        code:
+          `export const bibliotecaDocs = [
+  {
+    id: "ped-2025-2028",
+    titulo: "Plan Estatal de Desarrollo 2025–2028",
+    tipo: "Plan",
+    categoria: "Planeación",
+    etiquetas: ["Desarrollo", "Estrategia", "Gobierno"],
+    anio: 2025,
+    fuente: "Institución",
+    // Puede ser un PDF en /public, un enlace institucional o un repositorio abierto.
+    url: "/docs/planeacion/ped-2025-2028.pdf"
+  }
+];`
+      },
+
+      { type: "h2", text: "Diseño de información (para consulta ágil)" },
+      {
+        type: "ul",
+        items: [
+          "Metadatos mínimos pero útiles: tipo, categoría/tema, etiquetas, año, fuente y URL de descarga.",
+          "Taxonomía consistente para evitar duplicados (por ejemplo, “Plan” vs “Planes”).",
+          "Listados escaneables: título + metadatos + acción de descarga sin pasos innecesarios."
+        ]
+      },
+
+      { type: "h2", text: "Rendimiento y mantenibilidad" },
+      {
+        type: "ul",
+        items: [
+          "Listados y filtros optimizados con memoización para evitar re-renders costosos.",
+          "Carga eficiente de recursos (imágenes y elementos no críticos).",
+          "Componentes desacoplados: catálogo (data) separado de UI (render).",
+          "Preparación para crecimiento: más documentos sin romper estructura."
+        ]
+      },
+
+      { type: "h2", text: "Evolución prevista (si se requiere backend a futuro)" },
+      {
+        type: "p",
+        text:
+          "Si el catálogo crece o se vuelve necesaria una operación editorial (altas/ediciones frecuentes, aprobación, trazabilidad), la evolución natural es incorporar backend sin reescribir la interfaz."
+      },
+      {
+        type: "ul",
+        items: [
+          "API para CRUD de documentos, categorías y etiquetas.",
+          "Persistencia de metadatos (por ejemplo, `PostgreSQL`).",
+          "Panel privado con roles/permisos (captura, revisión, publicación).",
+          "Bitácora de cambios y versionado (si aplica)."
+        ]
+      },
+
+      { type: "h2", text: "Impacto" },
+      {
+        type: "ul",
+        items: [
+          "Centralización real de instrumentos de planeación en un punto público.",
+          "Menos fricción para la población: encontrar y descargar materiales en menos pasos.",
+          "Base sólida y escalable: MVP rápido hoy, con ruta clara para backend mañana."
+        ]
+      }
     ],
-    date: "9 de diciembre, 2025",
-    image: "/img/tutoriales/css-clamp-tipografia.jpg",
-    category: "Frontend",
-    featuredPosts: false
+    date: "2 de enero, 2026",
+    image: "/img/proyectos/biblioteca-digital-planeacion.jpg",
+    category: "Desarrollo Web",
+    featuredPosts: true
   },
   {
     name: "CSS clamp(): tipografía fluida sin dramas",

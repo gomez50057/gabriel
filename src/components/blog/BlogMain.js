@@ -13,7 +13,7 @@ const BlogMain = () => {
     <div>
       <HeroHacks />
       <BlogHeader posts={blogPosts} />
-      <BlogNoticias posts={blogPosts} featuredPosts={featuredOnly} categoryFilters={categoryFilters} />
+      <BlogNoticias posts={blogPosts} featuredPosts={featuredOnly} categoryFilters={categoryFilters} nameLink="hacks"/>
     </div>
   );
 };

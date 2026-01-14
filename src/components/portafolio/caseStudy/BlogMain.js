@@ -11,7 +11,7 @@ const BlogMain = () => {
   return (
     <div>
       <BlogHeader posts={blogPosts} />
-      <BlogNoticias posts={blogPosts} featuredPosts={featuredOnly} categoryFilters={categoryFilters} />
+      <BlogNoticias posts={blogPosts} featuredPosts={featuredOnly} categoryFilters={categoryFilters} nameLink="caso-estudio" />
     </div>
   );
 };
