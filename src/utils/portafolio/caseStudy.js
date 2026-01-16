@@ -144,46 +144,295 @@ export const blogPosts = [
       }
     ],
     date: "2 de enero, 2026",
-    image: "/img/proyectos/biblioteca-digital-planeacion.jpg",
+    image: "/img/caseStudy/biblioteca-digital-planeacion.webp",
     category: "Desarrollo Web",
     featuredPosts: true
   },
   {
-    name: "CSS clamp(): tipografía fluida sin dramas",
+    name: "Metrópoli: plataforma integral para planeación y coordinación metropolitana",
     description: [
-      { "type": "p", "text": "`clamp()` es uno de los recursos modernos más útiles de CSS. Con una sola línea obtienes texto fluido, legible y controlado en todo rango de pantallas." },
+      {
+        type: "p",
+        text:
+          "**Metrópoli** es una herramienta digital integral diseñada para **dar seguimiento, consultar y transparentar** la gestión y los avances en materia de planeación y coordinación metropolitana. Integra información sobre gobernanza e instancias metropolitanas, datos estadísticos y cartográficos, eventos clave y proyectos estratégicos; con enfoque de **visión prospectiva, sostenibilidad y crecimiento responsable**, incorporando participación ciudadana para construir el Hidalgo que se necesita."
+      },
 
-      { "type": "p", "text": "Esta línea dice: “nunca seas más chico que **1.9rem**, intenta ser **3vw** (fluido) y nunca pases de **2.4rem**”." },
-      { "type": "snippet", "language": "css", "fileName": "styles.css", "code": "font-size: clamp(1.9rem, 3vw, 2.4rem);" },
+      { type: "h2", text: "Contexto y objetivo" },
+      {
+        type: "p",
+        text:
+          "Las zonas metropolitanas requieren coordinación intermunicipal e interinstitucional, y normalmente la evidencia de avance (acuerdos, minutas, indicadores, proyectos, eventos) se dispersa en múltiples fuentes. El objetivo del sitio es concentrar esa información en una sola plataforma, con consulta pública y operación interna para mantener el seguimiento actualizado."
+      },
+      {
+        type: "ul",
+        items: [
+          "Transparentar la gobernanza metropolitana: cómo funcionan las instancias y su integración.",
+          "Consolidar información estadística y cartográfica para planeación basada en evidencia.",
+          "Dar visibilidad a eventos clave y proyectos estratégicos metropolitanos.",
+          "Habilitar seguimiento operativo (acuerdos, minutas y avances) con indicadores y tablero de análisis."
+        ]
+      },
 
-      { "type": "h2", "text": "¿Qué es `clamp()`?" },
-      { "type": "snippet", "language": "css", "fileName": "Sintaxis", "code": "clamp(MIN, IDEAL, MAX)" },
-      { "type": "snippet", "language": "text", "fileName": "Idea", "code": "clamp(a, b, c) = min( max(b, a), c )" },
-      { "type": "p", "text": "Traducción: se toma el valor **IDEAL**; si es menor que **MIN**, usa **MIN**; si es mayor que **MAX**, usa **MAX**. Solo acota el valor a un rango lógico." },
+      { type: "h2", text: "Alcance funcional" },
+      {
+        type: "h3",
+        text: "Parte pública (consulta e información)"
+      },
+      {
+        type: "ul",
+        items: [
+          "Múltiples páginas informativas por proyecto/tema metropolitano.",
+          "Secciones que explican instancias de gobernanza, integración y funcionamiento.",
+          "Información estadística y cartográfica para contextualizar problemáticas y decisiones.",
+          "Eventos clave y proyectos estratégicos con narrativa y materiales de consulta.",
+          "Espacios de participación ciudadana (según aplique)."
+        ]
+      },
 
-      { "type": "h3", "text": "Desglose del ejemplo" },
-      { "type": "p", "text": "• **Mínimo:** 1.9rem → garantiza legibilidad.\n• **Fluido:** 3vw → escala con el ancho de pantalla.\n• **Máximo:** 2.4rem → evita tamaños desproporcionados en monitores grandes." },
+      {
+        type: "h3",
+        text: "Parte operativa (con backend)"
+      },
+      {
+        type: "ul",
+        items: [
+          "Registro y actualización de acuerdos de índole metropolitana.",
+          "Consulta de minutas vinculadas a acuerdos y seguimiento por periodos.",
+          "Carga de avances en diferentes formatos (por ejemplo: texto, archivos o evidencias).",
+          "Dashboard para simplificar el análisis de indicadores asociados a los acuerdos."
+        ]
+      },
 
-      { "type": "h3", "text": "¿Cuándo cambia cada tramo?" },
-      { "type": "p", "text": "Asumiendo 1rem = 16px: 1.9rem ≈ 30.4px y 2.4rem ≈ 38.4px.\n• Por debajo de ~1013px de ancho, 3vw es menor al mínimo → **1.9rem**.\n• Entre ~1013px y ~1280px, el tamaño fluye con **3vw**.\n• Por encima de ~1280px, se fija en **2.4rem**." },
+      { type: "h2", text: "Stack y arquitectura" },
+      {
+        type: "p",
+        text:
+          "La solución se implementó como una plataforma **full stack**: frontend con `Next.js` y `CSS Modules`, y backend con `Django` (Python) y base de datos `PostgreSQL`. Esta combinación permite entregar una experiencia pública rápida y bien estructurada, y al mismo tiempo operar un módulo administrativo confiable para mantener la información actualizada."
+      },
+      {
+        type: "ul",
+        items: [
+          "**Frontend:** `Next.js` para enrutamiento, estructura modular, rendimiento y escalabilidad de contenido.",
+          "**Estilos:** `CSS Modules` para encapsular estilos por componente y facilitar mantenimiento en un sitio con muchas secciones.",
+          "**Backend:** `Django` (Python) por su solidez en administración, autenticación/autorización y construcción de APIs.",
+          "**DB:** `PostgreSQL` por integridad relacional, consultas consistentes y crecimiento ordenado de datos (acuerdos, minutas, avances, indicadores)."
+        ]
+      },
 
-      { "type": "h3", "text": "Ventajas" },
-      { "type": "p", "text": "Reduce media queries, mantiene accesibilidad y ofrece una escala tipográfica predecible entre móvil y desktop." },
+      { type: "h2", text: "Decisiones técnicas (justificación)" },
+      {
+        type: "ul",
+        items: [
+          "**Next.js**: adecuado para plataformas institucionales con muchas páginas y contenido; facilita estructura, performance y evolución del sitio.",
+          "**Django**: reduce riesgo en operación interna (panel, roles, validaciones); acelera desarrollo de CRUDs y flujos administrativos.",
+          "**PostgreSQL**: ideal para modelar relaciones (acuerdo ↔ minuta ↔ avance ↔ indicador), garantizando consistencia y trazabilidad.",
+          "**Separación público/privado**: la parte pública se optimiza para consulta; la parte privada prioriza control, seguridad y actualización continua."
+        ]
+      },
 
-      { "type": "h2", "text": "Antes vs. ahora" },
-      { "type": "snippet", "language": "css", "fileName": "antes.css", "code": "h2 { font-size: 1.9rem; }\n@media (min-width: 1000px) { h2 { font-size: 3vw; } }\n@media (min-width: 1280px) { h2 { font-size: 2.4rem; } }" },
-      { "type": "snippet", "language": "css", "fileName": "ahora.css", "code": "h2 { font-size: clamp(1.9rem, 3vw, 2.4rem); }" },
+      { type: "h2", text: "Modelo conceptual de datos (referencia)" },
+      {
+        type: "p",
+        text:
+          "A nivel conceptual, los acuerdos se relacionan con minutas y avances; y se evalúan mediante indicadores. Esto habilita un tablero que resume estado y progreso sin perder trazabilidad documental."
+      },
 
-      { "type": "h3", "text": "Buenas prácticas" },
-      { "type": "p", "text": "• Define **MIN y MAX en rem** (accesibilidad).\n• Usa **vw/vh** en el valor central para fluidez.\n• Elige conscientemente: **mínimo legible**, **ideal que escala**, **máximo cómodo**." },
 
-      { "type": "h3", "text": "Recetas listas" },
-      { "type": "snippet", "language": "css", "fileName": "patterns.css", "code": "/* Título hero */\n.heroTitle { font-size: clamp(2rem, 6vw, 4rem); }\n\n/* Subtítulo */\n.subTitle { font-size: clamp(1.25rem, 3.5vw, 2rem); }\n\n/* Párrafo base */\n.bodyText { font-size: clamp(1rem, 2.2vw, 1.125rem); }" },
+      { type: "h2", text: "Dashboard e interpretación de indicadores" },
+      {
+        type: "p",
+        text:
+          "El dashboard consolida indicadores por acuerdo y por zona metropolitana para facilitar lectura ejecutiva: estado, tendencia, cortes de información y evidencia asociada. Esto permite pasar de un seguimiento documental a un seguimiento con **señales cuantificables**."
+      },
 
+      { type: "h2", text: "Seguridad y control" },
+      {
+        type: "ul",
+        items: [
+          "Acceso restringido para operación interna (roles/permisos).",
+          "Validación de datos del lado servidor para consistencia y trazabilidad.",
+          "Separación clara entre contenido público y procesos administrativos."
+        ]
+      },
+
+      { type: "h2", text: "Impacto" },
+      {
+        type: "ul",
+        items: [
+          "Transparencia y consulta centralizada sobre coordinación metropolitana en Hidalgo.",
+          "Seguimiento operativo de acuerdos con evidencia (minutas/avances) e indicadores.",
+          "Base escalable para incorporar más zonas, proyectos, capas de información y participación ciudadana."
+        ]
+      }
     ],
-    date: "13 de noviembre, 2025",
-    image: "/img/tutoriales/css-clamp-tipografia.jpg",
-    category: "Frontend",
+    date: "14 de enero, 2026",
+    image: "/img/caseStudy/metropoli-plataforma.webp",
+    category: "Desarrollo Web",
     featuredPosts: true
-  }
+  },
+  {
+    name: "Plan Hídrico del Valle del Mezquital: difusión, participación y gestión de aportaciones",
+    description: [
+      {
+        type: "p",
+        text:
+          "La **Plataforma del Plan Hídrico del Valle del Mezquital** difunde información sobre los componentes, desafíos y avances del Plan Hídrico, promoviendo una gestión **sostenible, integrada, participativa y consciente** del recurso hídrico en la región. Es un espacio público de consulta y participación, con un módulo privado para **registro, análisis y dictamen** de aportaciones ciudadanas y reporteo de datos."
+      },
+      {
+        type: "p",
+        text:
+          "Bajo el mensaje **“Transformando el Futuro con Agua”**, el proyecto impulsa una visión hídrica para el Valle del Mezquital alineada a una estrategia integral y centrada en el bienestar, articulada en cuatro ejes: **acceso universal al agua potable, saneamiento responsable, prevención de riesgos por inundaciones y modernización del riego agrícola**."
+      },
+
+      { type: "h2", text: "Contexto y objetivo" },
+      {
+        type: "p",
+        text:
+          "El objetivo de la plataforma es convertir la información del Plan en una experiencia accesible y accionable para la población: explicar el enfoque, mostrar avances y habilitar mecanismos reales de participación mediante aportaciones documentales. Esto combina difusión institucional con una operación interna que permite validar, analizar y sistematizar lo que la ciudadanía comparte."
+      },
+      {
+        type: "ul",
+        items: [
+          "Difundir componentes, retos y avances del Plan Hídrico del Valle del Mezquital.",
+          "Promover participación: recibir y gestionar aportaciones documentales de la población.",
+          "Publicar documentos seleccionados para fortalecer la cultura hídrica y la planeación.",
+          "Habilitar operación interna: análisis/dictamen, reportes e exportación de datos."
+        ]
+      },
+
+      { type: "h2", text: "Ejes del Plan (estructura conceptual)" },
+      {
+        type: "ul",
+        items: [
+          "Acceso universal al agua potable.",
+          "Saneamiento responsable.",
+          "Prevención de riesgos por inundaciones.",
+          "Modernización del riego agrícola."
+        ]
+      },
+
+      { type: "h2", text: "Arquitectura del sitio (secciones principales)" },
+
+      { type: "h3", text: "Ecos del Territorio Hídrico (participación ciudadana)" },
+      {
+        type: "p",
+        text:
+          "Sección creada para que la población comparta conocimiento: **artículos de opinión, ensayos, estudios independientes, relatos comunitarios** y expresiones escritas que enriquezcan el Plan. El usuario llena un formulario y sube un documento; el sistema registra la solicitud y permite su **validación** antes de publicarse o gestionarse internamente."
+      },
+      {
+        type: "ul",
+        items: [
+          "Formulario público para recepción de aportaciones.",
+          "Carga de archivo y metadatos (autoría, tema, descripción).",
+          "Registro en base de datos para seguimiento y control.",
+          "Validación/flujo interno antes de disponibilidad o difusión."
+        ]
+      },
+
+      { type: "h3", text: "Planeación para el Futuro del Agua (consulta documental)" },
+      {
+        type: "p",
+        text:
+          "Espacio donde convergen estrategias, políticas públicas y acciones para una gestión integral y eficiente. Incluye documentos seleccionados para contextualizar el tema y fortalecer el compromiso por un futuro donde el agua sea motor de bienestar, equidad y resiliencia. Se invita a la población a compartir documentos a través de la sección de participación."
+      },
+      {
+        type: "ul",
+        items: [
+          "Repositorio curado de documentos y materiales de referencia.",
+          "Navegación por temas/ejes y consulta simplificada.",
+          "Llamado a la participación para contribuir con documentos propios."
+        ]
+      },
+
+      { type: "h3", text: "Capacitaciones (tutoriales y actividades)" },
+      {
+        type: "p",
+        text:
+          "Apartado de capacitación para publicar **tutoriales y actividades** (por ejemplo, contenidos vinculados a riego u operación comunitaria), buscando fortalecer capacidades y prácticas sostenibles. Se organiza para consulta abierta y crecimiento gradual de contenidos."
+      },
+      {
+        type: "ul",
+        items: [
+          "Publicación de tutoriales y materiales de capacitación.",
+          "Organización por categorías o ejes temáticos.",
+          "Contenido orientado a aplicación práctica (aprendizaje accionable)."
+        ]
+      },
+
+      { type: "h2", text: "Módulo privado (operación interna)" },
+      {
+        type: "p",
+        text:
+          "La plataforma incluye una sección privada con acceso para registrar, revisar y dictaminar solicitudes. Esta capa permite convertir la participación en información gestionable: control de estatus, comentarios internos y generación de salidas para análisis institucional."
+      },
+      {
+        type: "ul",
+        items: [
+          "Registro y seguimiento de solicitudes (estatus, dictamen, observaciones).",
+          "Revisión del documento cargado y metadatos asociados.",
+          "Impresión de reportes y descarga/exportación a `Excel` de la información recabada.",
+          "Vista de análisis para organizar la evidencia y facilitar decisiones."
+        ]
+      },
+
+      { type: "h2", text: "Stack y decisiones técnicas (justificación)" },
+      {
+        type: "p",
+        text:
+          "Se implementó como plataforma **full stack** para equilibrar difusión pública y operación interna. El frontend se desarrolló con `Next.js` y `CSS Modules` para asegurar rendimiento y mantenibilidad en múltiples páginas y secciones. El backend se construyó con `Django` (Python) y `PostgreSQL` para gestionar formularios, carga de archivos, validación y reporteo de datos con consistencia."
+      },
+      {
+        type: "ul",
+        items: [
+          "**Next.js (Frontend):** ideal para un sitio con múltiples páginas informativas, navegación estructurada y experiencia rápida de consulta.",
+          "**CSS Modules:** estilos encapsulados por componente, evitando colisiones y facilitando escalamiento visual del sitio.",
+          "**Django (Backend):** robusto para flujos administrativos (auth/roles), validaciones y APIs para formularios y gestión de solicitudes.",
+          "**PostgreSQL (DB):** integridad relacional para modelar solicitudes, documentos, estatus, dictámenes y auditoría básica."
+        ]
+      },
+
+      { type: "h2", text: "Flujo de participación (alto nivel)" },
+      {
+        type: "ul",
+        items: [
+          "Usuario llena formulario en **Ecos del Territorio Hídrico** y sube documento.",
+          "Backend registra solicitud y archivo; asigna estatus inicial.",
+          "Equipo interno revisa, valida y emite dictamen desde el módulo privado.",
+          "La información se consolida para reportes (impresión y exportación a Excel)."
+        ]
+      },
+
+      { type: "h2", text: "Modelo conceptual de datos (referencia)" },
+      {
+        type: "p",
+        text:
+          "El núcleo se centra en solicitudes ciudadanas con archivo, metadatos y dictamen. Esto permite trazabilidad y explotación posterior (reportes, filtros, estadísticas)."
+      },
+
+      { type: "h2", text: "Seguridad y control" },
+      {
+        type: "ul",
+        items: [
+          "Separación clara entre consulta pública y operación interna (acceso restringido).",
+          "Validación del lado servidor para datos del formulario y control de archivos.",
+          "Trazabilidad por estatus/dictamen para evitar publicaciones no validadas."
+        ]
+      },
+
+      { type: "h2", text: "Impacto" },
+      {
+        type: "ul",
+        items: [
+          "Difusión clara y estructurada del Plan Hídrico y sus ejes estratégicos.",
+          "Participación ciudadana habilitada con flujo real de recepción y validación de documentos.",
+          "Información sistematizada para análisis institucional mediante reportes y exportación.",
+          "Base escalable para incorporar más contenidos, capacitaciones y métricas de participación."
+        ]
+      }
+    ],
+    date: "14 de enero, 2026",
+    image: "/img/caseStudy/plan-hidrico-mezquital.webp",
+    category: "Desarrollo Web",
+    featuredPosts: true
+  },
 ];

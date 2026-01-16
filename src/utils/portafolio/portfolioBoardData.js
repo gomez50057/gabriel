@@ -1,4 +1,5 @@
 export const PROJECTS_BASE = "/img/proyectos/";
+export const PROJECTS_CASE = "/img/caseStudy/";
 
 export const defaultItems = [
   {
@@ -156,6 +157,45 @@ export const portfolioRecentProjects = [
     links: [
       {
         href: "https://sketchfab.com/models/b74bb885a1c94f68822ae241e6b2207e/embed?ui_theme=dark",
+        label: "Ver demo",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    id: "p4",
+    title: "Plan Hídrico del Valle del Mezquital",
+    stack: "Difusión, participación y gestión de aportaciones",
+    image: `${PROJECTS_CASE}plan-hidrico-mezquital.webp`,
+    links: [
+      {
+        href: "/caso-estudio/plan-hidrico-del-valle-del-mezquital-difusion-participacion-y-gestion-de-aportaciones",
+        label: "Ver demo",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    id: "p5",
+    title: "Metrópoli",
+    stack: "Plataforma integral para planeación y coordinación metropolitana",
+    image: `${PROJECTS_CASE}metropoli-plataforma.webp`,
+    links: [
+      {
+        href: "/caso-estudio/metropoli-plataforma-integral-para-planeacion-y-coordinacion-metropolitana",
+        label: "Ver demo",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    id: "p6",
+    title: "Biblioteca Digital de Planeación",
+    stack: "Consulta pública de instrumentos y documentos",
+    image: `${PROJECTS_CASE}biblioteca-digital-planeacion.webp`,
+    links: [
+      {
+        href: "/caso-estudio/biblioteca-digital-de-planeacion-consulta-publica-de-instrumentos-y-documentos",
         label: "Ver demo",
         icon: "external",
       },
