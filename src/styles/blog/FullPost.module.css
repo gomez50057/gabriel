@@ -18,6 +18,14 @@
   align-items: start;
 }
 
+/* Not found */
+.notFound {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
 .postContent,
 .sidebar {
   min-width: 0;

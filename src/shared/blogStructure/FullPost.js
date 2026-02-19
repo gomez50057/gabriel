@@ -3,10 +3,20 @@
 import FeaturedPosts from "./FeaturedPosts";
 import styles from "@/styles/blog/FullPost.module.css";
 import Navbar from "@/shared/Navbar";
+import SafeImage from "@/shared/blogStructure/SafeImage";
 import { renderDescription } from "@/utils/renderText";
 
 export default function FullPost({ post, featuredPosts = [] }) {
-  if (!post) return <p>La publicación no existe.</p>;
+  if (!post) {
+    return (
+      <>
+        <Navbar />
+        <main className={styles.layout}>
+          <p className={styles.notFound}>La publicación no existe.</p>
+        </main>
+      </>
+    );
+  }
 
   return (
     <>
@@ -15,15 +25,18 @@ export default function FullPost({ post, featuredPosts = [] }) {
       <div className={styles.postContainer}>
         {/* Nota principal */}
         <article className={styles.postContent} aria-labelledby="post-title">
-          {post.image && (
-            <img
-              src={post.image}
-              alt={post.name}
-              className={styles.postImage}
-              decoding="async"
-              fetchPriority="high"
-            />
-          )}
+          {post.image ? (
+            <figure className={styles.hero}>
+              <SafeImage
+                src={post.image}
+                alt={post.name || "Imagen de la publicación"}
+                className={styles.postImage}
+                loading="lazy"
+                decoding="async"
+                fallbackSrc="/img/placeholder.webp"
+              />
+            </figure>
+          ) : null}
 
           <div className={styles.meta}>
             <p>
