@@ -1,5 +1,236 @@
 export const blogPosts = [
   {
+    name: "corner-shape: la evolución de border-radius en CSS",
+    description: [
+      {
+        type: "p",
+        text:
+          "Durante años, el redondeo de esquinas en CSS se resolvió con una sola herramienta: **border-radius**. Funciona muy bien, pero tiene un límite: casi todo termina siendo variaciones de una **elipse**. Si querías un chaflán (corte diagonal), una muesca (*notch*), un recorte cóncavo (*scoop*) o una esquina tipo *squircle* (look moderno de UI), tocaba usar hacks: clip-path, SVG, máscaras, pseudo-elementos… y mantenimiento extra."
+      },
+
+      { type: "p", text: "Ahí entra **corner-shape**: una propiedad que separa lo que antes estaba “mezclado” en border-radius y lo vuelve explícito." },
+
+      {
+        type: "ul",
+        items: [
+          "**El tamaño de la esquina** (lo sigues controlando con border-radius).",
+          "**La geometría de la esquina** (la defines con corner-shape)."
+        ]
+      },
+
+      {
+        type: "p",
+        text:
+          "En simple: border-radius define *cuánto* y corner-shape define *cómo*."
+      },
+
+      { type: "h2", text: "El modelo mental correcto: “zona” vs “curva”" },
+
+      { type: "h3", text: "1) Primero defines la “zona de esquina”" },
+      {
+        type: "p",
+        text:
+          "Esto lo hace border-radius. Delimitas el área donde existirá una esquina especial:"
+      },
+      { type: "snippet", language: "css", fileName: "card.css", code: ".card { border-radius: 24px; }" },
+      {
+        type: "p",
+        text:
+          "Si border-radius es 0, no hay zona. Y si no hay zona, corner-shape no tiene nada que modificar."
+      },
+
+      { type: "h3", text: "2) Luego defines la “curva” que llena esa zona" },
+      {
+        type: "p",
+        text:
+          "Aquí entra corner-shape: mismo tamaño de zona, distinta forma matemática."
+      },
+      {
+        type: "snippet",
+        language: "css",
+        fileName: "card.css",
+        code: ".card { border-radius: 24px; corner-shape: squircle; }"
+      },
+
+      { type: "h2", text: "Aclaración importante: round, no rounded" },
+      {
+        type: "p",
+        text:
+          "En ejemplos informales verás corner-shape: rounded, pero el keyword válido es **round** (y es el valor por defecto)."
+      },
+      { type: "snippet", language: "css", fileName: "valid.css", code: ".btn { border-radius: 14px; corner-shape: round; }" },
+
+      { type: "h2", text: "Sintaxis: 1 a 4 valores (igual que border-radius)" },
+      {
+        type: "p",
+        text:
+          "corner-shape admite **1 a 4 valores**, igual que border-radius, para controlar cada esquina:"
+      },
+      {
+        type: "ul",
+        items: [
+          "1 valor: todas las esquinas.",
+          "2 valores: (TL + BR) / (TR + BL).",
+          "4 valores: (TL TR BR BL)."
+        ]
+      },
+      {
+        type: "snippet",
+        language: "css",
+        fileName: "panel.css",
+        code:
+          ".panel {\n  border-radius: 20px;\n  corner-shape: notch round squircle bevel; /* TL TR BR BL */\n}"
+      },
+
+      { type: "h2", text: "Valores comunes: qué significa cada uno y cómo se usa" },
+
+      { type: "h3", text: "round — redondeo “clásico”" },
+      {
+        type: "p",
+        text:
+          "Es la esquina redondeada estándar (convexa). Útil para UI tradicional, neutral y universal."
+      },
+      { type: "snippet", language: "css", fileName: "btn.css", code: ".btn { border-radius: 14px; corner-shape: round; }" },
+
+      { type: "h3", text: "squircle — moderno, entre círculo y cuadrado" },
+      {
+        type: "p",
+        text:
+          "Curva convexa “más cuadrada” que round, típica de interfaces modernas (cards, botones, inputs)."
+      },
+      { type: "snippet", language: "css", fileName: "card.css", code: ".card { border-radius: 24px; corner-shape: squircle; }" },
+
+      { type: "h3", text: "square — esquina cuadrada perfecta" },
+      {
+        type: "p",
+        text:
+          "Es una esquina de 90°. Útil cuando quieres mezclar formas por esquina o animar de “soft” a “sharp”."
+      },
+      {
+        type: "snippet",
+        language: "css",
+        fileName: "box.css",
+        code: ".box { border-radius: 24px; corner-shape: square; }"
+      },
+
+      { type: "h3", text: "bevel — chaflán (corte diagonal)" },
+      {
+        type: "p",
+        text:
+          "Es un recorte recto diagonal. El tamaño del chaflán lo marca border-radius: con 8px es sutil; con 24px es evidente."
+      },
+      { type: "snippet", language: "css", fileName: "tag.css", code: ".tag { border-radius: 16px; corner-shape: bevel; }" },
+
+      { type: "h3", text: "scoop — curva cóncava (hacia adentro)" },
+      {
+        type: "p",
+        text:
+          "Es una esquina “mordida” cóncava. Útil para tickets, cupones o tarjetas decorativas."
+      },
+      { type: "snippet", language: "css", fileName: "ticket.css", code: ".ticket { border-radius: 22px; corner-shape: scoop; }" },
+
+      { type: "h3", text: "notch — muesca cuadrada cóncava" },
+      {
+        type: "p",
+        text:
+          "Es una muesca cóncava tipo recorte cuadrado. Da un look industrial/tech (HUD, fichas, tarjetas)."
+      },
+      { type: "snippet", language: "css", fileName: "hud.css", code: ".hud { border-radius: 18px; corner-shape: notch; }" },
+
+      { type: "h2", text: "superellipse(n): control fino (lo mejor de corner-shape)" },
+      {
+        type: "p",
+        text:
+          "Además de keywords, puedes usar corner-shape: superellipse(n);. La intuición del parámetro n:"
+      },
+      {
+        type: "ul",
+        items: [
+          "0 → bevel (línea recta).",
+          "1 → round (redondeo estándar).",
+          "2 → squircle.",
+          "valores grandes → se acercan a square.",
+          "valores negativos → formas cóncavas (scoop/notch)."
+        ]
+      },
+
+      { type: "h3", text: "Ejemplos útiles" },
+      {
+        type: "snippet",
+        language: "css",
+        fileName: "examples.css",
+        code:
+          "/* Más “cuadrada” que squircle, pero aún suave */\n.icon { border-radius: 28px; corner-shape: superellipse(3); }\n\n/* Casi cuadrada, con transición suave */\n.panel { border-radius: 26px; corner-shape: superellipse(5); }\n\n/* Intermedio entre bevel y round: redondeo más “tenso” */\n.chip { border-radius: 14px; corner-shape: superellipse(0.5); }"
+      },
+
+      { type: "h2", text: "Uso real en proyectos: mejora progresiva" },
+      {
+        type: "p",
+        text:
+          "Como corner-shape puede tener soporte variable, el patrón recomendado es usarlo como **mejora progresiva**: primero defines un UI correcto con border-radius y luego activas corner-shape solo si el navegador lo soporta."
+      },
+      { type: "h3", text: "1) Fallback universal" },
+      { type: "snippet", language: "css", fileName: "fallback.css", code: ".card { border-radius: 24px; }" },
+
+      { type: "h3", text: "2) Mejora condicional con @supports" },
+      {
+        type: "snippet",
+        language: "css",
+        fileName: "progressive.css",
+        code:
+          "@supports (corner-shape: squircle) {\n  .card { corner-shape: squircle; }\n}"
+      },
+      {
+        type: "p",
+        text:
+          "Con esto, en navegadores sin soporte todo se ve normal (solo border-radius), y en compatibles obtienes el extra visual sin romper nada."
+      },
+
+      { type: "h2", text: "Bonus: también afecta borde, sombras y recortes" },
+      {
+        type: "p",
+        text:
+          "Una ventaja práctica es que la forma de esquina impacta el recorte del fondo y se alinea con cómo se perciben bordes, outlines y sombras del elemento."
+      },
+
+      { type: "h2", text: "Conclusión" },
+      {
+        type: "p",
+        text:
+          "corner-shape no reemplaza border-radius; lo complementa. Sigues controlando el tamaño como siempre, pero ahora tienes una paleta geométrica mucho más rica: desde *squircles* modernos, chaflanes y recortes cóncavos, hasta muescas industriales. Resultado: CSS más declarativo y menos hacks."
+      },
+
+      { type: "h2", text: "Anexo: generador CSS para explorar corner-shape" },
+      {
+        type: "p",
+        text:
+          "Si quieres probar rápidamente distintos valores y copiar el CSS listo, aquí tienes un generador/preview que facilita la **exploración inicial** y la **implementación** en tus componentes:"
+      },
+      {
+        type: "link",
+        href: "https://www.squircle.style/",
+        text: "Abrir generador/preview de corner-shape (squircle.style)"
+      },
+
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "Consulta el extenso " },
+          {
+            type: "link",
+            href: "https://frontendmasters.com/blog/understanding-css-corner-shape-and-the-power-of-the-superellipse/",
+            text: "artículo de Amit Sheen en Frontend Masters",
+          },
+          { type: "text", text: " para obtener una excelente descripción general de la función y cómo funciona:" },
+        ],
+      }
+    ],
+    date: "26 de febrero, 2026",
+    image: "/img/tutoriales/corner-shape-evolucion.jpg",
+    category: "Frontend",
+    featuredPosts: true
+  },
+  {
     "name": "Instalar Office LTSC 2024 con Office Deployment Tool (ODT)",
     "description": [
       {

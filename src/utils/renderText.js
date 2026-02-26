@@ -5,6 +5,7 @@
 
 import styles from "@/styles/blog/FullPost.module.css";
 import Snippet from "@/shared/blogStructure/Snippet";
+import { Fragment } from "react";
 
 export const normalizeName = (str) => {
   return str
@@ -144,14 +145,47 @@ export const renderDescription = (description) => {
             </li>
           );
 
-        case "p":
+        case "p": {
+          if (Array.isArray(block?.parts) && block.parts.length) {
+            return (
+              <li key={`p-${idx}`} className={styles.noBullet}>
+                <p className={styles.paragraph}>
+                  {block.parts.map((part, pIdx) => {
+                    if (!part) return null;
+
+                    if (part.type === "text") {
+                      return (
+                        <Fragment key={`pt-${idx}-${pIdx}`}>
+                          {renderInlineWithStyles(part.text || "")}
+                        </Fragment>
+                      );
+                    }
+
+                    if (part.type === "link" && part.href) {
+                      return (
+                        <a
+                          key={`pl-${idx}-${pIdx}`}
+                          href={part.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.link}
+                        >
+                          {renderInlineWithStyles(part.text || part.href)}
+                        </a>
+                      );
+                    }
+                    return null;
+                  })}
+                </p>
+              </li>
+            );
+          }
           return (
             <li key={`p-${idx}`} className={styles.noBullet}>
-              <p className={styles.paragraph}>
-                {renderInlineWithStyles(block.text || "")}
-              </p>
+              <p className={styles.paragraph}>{renderInlineWithStyles(block.text || "")}</p>
             </li>
           );
+        }
 
         case "snippet":
           return (

@@ -5,7 +5,7 @@
   --pad-bottom: clamp(16px, 5vw, 44px);
 
   width: 100%;
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
 
   display: grid;
