@@ -112,7 +112,6 @@ const parseFenceHeader = (rawHeader = "") => {
 };
 
 export const renderDescription = (description) => {
-  // 1) NUEVO FORMATO: array de bloques
   if (Array.isArray(description)) {
     return description.map((block, idx) => {
       if (!block || typeof block !== "object") return null;
