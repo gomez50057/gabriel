@@ -208,8 +208,8 @@ export const blogPosts = [
       },
       {
         type: "link",
-        href: "https://www.squircle.style/",
-        text: "Abrir generador/preview de corner-shape (squircle.style)"
+        href: "/herramientas/corner-shape-generador",
+        text: "Abrir generador/preview de corner-shape"
       },
 
       {
