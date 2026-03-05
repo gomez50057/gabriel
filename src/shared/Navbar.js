@@ -5,9 +5,6 @@ import Link from "next/link";
 import ThemeSwitch from "@/shared/ThemeSwitch";
 import styles from "@/styles/shared/Navbar.module.css";
 
-/**
- * LINKS con subnivel
- */
 const LINKS = [
   { href: "/", label: "Inicio" },
   { href: "/hacks", label: "Hacks" },
@@ -142,11 +139,9 @@ export default function Navbar() {
           <img src="/img/logo.svg" alt="Logo Gabriel Gomez" className={styles.logo} />
         </a>
 
-        {/* Nav desktop */}
         <nav className={styles.navDesktop} aria-label="Principal">
           <ul className={styles.links}>
             {LINKS.map((link) => {
-              // Item con subnivel (Herramientas)
               if (link.children?.length) {
                 return (
                   <li key={link.label} className={styles.dropdown}>
