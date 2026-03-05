@@ -226,7 +226,7 @@ export const blogPosts = [
       }
     ],
     date: "26 de febrero, 2026",
-    image: "/img/tutoriales/corner-shape-evolucion.jpg",
+    image: "/img/tutoriales/corner-shape-evolucion.png",
     category: "Frontend",
     featuredPosts: true
   },

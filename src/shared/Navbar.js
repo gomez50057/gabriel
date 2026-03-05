@@ -22,6 +22,10 @@ const LINKS = [
         href: "/herramientas/generador-clamp",
         label: "Generador de clamp",
       },
+      {
+        href: "/herramientas/corner-shape-generador",
+        label: "Generador de corner-shape",
+      },
     ],
   },
 ];
