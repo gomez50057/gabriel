@@ -1,5 +1,93 @@
 export const blogPosts = [
   {
+    name: "Cómo limitar opciones en un Formulario de Google",
+    description: [
+      {
+        type: "p",
+        text:
+          "A veces, cuando haces un Formulario de Google, no quieres que la gente marque todas las opciones que quiera. Tal vez necesitas que elijan solo una cierta cantidad, que seleccionen mínimo algunas, o que no se pasen de un número específico.",
+      },
+      {
+        type: "p",
+        text:
+          "Por suerte, Google Forms ya tiene una herramienta para eso y activarla es bastante fácil.",
+      },
+
+      { type: "h2", text: "¿Qué tienes que hacer?" },
+
+      { type: "h3", text: "1. Crea una pregunta de tipo **“Casillas de verificación”**" },
+      {
+        type: "p",
+        text:
+          "Primero, agrega una pregunta nueva y asegúrate de que sea de tipo **Casillas de verificación**, porque esta opción permite que la persona seleccione varias respuestas.",
+      },
+
+      { type: "h3", text: "2. Haz clic en los **tres puntos** de la esquina inferior derecha" },
+      {
+        type: "p",
+        text:
+          "Dentro de la misma pregunta, verás el menú de los tres puntos. Ahí están varias opciones extra de configuración.",
+      },
+
+      { type: "h3", text: "3. Selecciona **“Validación de respuestas”**" },
+      {
+        type: "p",
+        text:
+          "Cuando abras ese menú, da clic en **Validación de respuestas**.",
+      },
+
+      { type: "h3", text: "4. Elige la regla que necesitas" },
+      {
+        type: "p",
+        text:
+          "Aquí ya podrás decirle al formulario cuántas opciones puede marcar la persona. Puedes definir si quieres que seleccione:",
+      },
+      { type: "ul", items: ["un mínimo,", "un máximo,", "o una cantidad exacta."] },
+      {
+        type: "p",
+        text:
+          "Por ejemplo, si quieres que el usuario elija solo 3 opciones, aquí es donde lo configuras.",
+      },
+
+      { type: "h3", text: "5. Personaliza el mensaje de error" },
+      {
+        type: "p",
+        text:
+          "También puedes escribir un mensaje para que, si alguien no cumple con la regla, el formulario le diga qué tiene que corregir.",
+      },
+      { type: "p", text: "Por ejemplo:" },
+      {
+        type: "ul",
+        items: [
+          "**Selecciona máximo 3 opciones**",
+          "**Debes elegir al menos 2 respuestas**",
+          "**Selecciona exactamente 1 opción**",
+        ],
+      },
+      {
+        type: "p",
+        text:
+          "Esto ayuda mucho para que el formulario sea más claro y para que la gente no se confunda al responder.",
+      },
+
+      { type: "h2", text: "¿Por qué sirve esto?" },
+      {
+        type: "p",
+        text:
+          "Aunque parece un detalle pequeño, realmente ayuda bastante. Hace que tu formulario sea más ordenado, evita errores en las respuestas y te permite recibir justo la información que necesitas.",
+      },
+      {
+        type: "p",
+        text:
+          "Es una función sencilla, pero muy útil cuando quieres tener más control sobre cómo responden tu formulario.",
+      },
+    ],
+    date: "05 de marzo, 2026",
+    image: "/img/tutoriales/forms-validation.png",
+    category: "Tutoriales",
+    featuredPosts: true
+  },
+  {
     name: "corner-shape: la evolución de border-radius en CSS",
     description: [
       {
