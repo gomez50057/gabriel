@@ -1228,8 +1228,6 @@ export const blogPosts = [
       { "type": "snippet", "language": "bash", "code": "npm run build\nnpm run start\n# Opcional en desarrollo:\n# next dev --turbo", "fileName": "terminal" },
 
       { "type": "p", "text": "15) Buenas prácticas de arquitectura (resumen):\n• Server Components por defecto: menos JS en el cliente, cargas más rápidas.\n• Encapsula estilos con .module.css para evitar colisiones.\n• Fetch en el servidor con caché adecuada (revalidate, cache: 'no-store' donde aplique).\n• Nunca expongas secretos en NEXT_PUBLIC_.\n• Segmenta rutas por dominio (p. ej., (public), (dashboard)).\n• Desacopla UI y datos: componentes puros + funciones de acceso a datos." },
-
-      { "type": "p", "text": "Con esto tendrás una base sólida, rápida y mantenible acorde a tu stack (Next.js 15 + React 19, App Router, CSS Modules). ¿Seguimos con la integración de un backend en Django y un fetch de ejemplo desde un Route Handler?" }
     ],
     date: "20 de septiembre, 2025",
     image: "/img/tutoriales/nextjs-setup.png",
