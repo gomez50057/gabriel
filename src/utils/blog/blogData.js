@@ -84,6 +84,25 @@ export const blogPosts = [
     ],
     date: "05 de marzo, 2026",
     image: "/img/tutoriales/forms-validation.png",
+    // media: [
+    //   {
+    //     type: "image",
+    //     src: "/img/tutoriales/forms-validation.png",
+    //     alt: "Captura principal",
+    //     caption: "Vista inicial"
+    //   },
+    //   {
+    //     type: "image",
+    //     src: "/img/tutoriales/forms-validation.png",
+    //     alt: "Otra captura"
+    //   },
+    //   {
+    //     type: "video",
+    //     src: "/videos/demo.mp4",
+    //     poster: "/img/tutoriales/poster.png",
+    //     caption: "Demo del proceso"
+    //   }
+    // ],
     category: "Tutoriales",
     featuredPosts: true
   },
