@@ -39,13 +39,13 @@ const getAnchorAttrs = (href) => (isExternalHref(href) ? { target: "_blank", rel
 function Portfolio({
   title = "Portafolio",
   projects = portfolioRecentProjects,
-  moreHref = "/portfolio",
+  moreHref = "/portafolio",
   moreText = "Ver más",
 }) {
   const list = Array.isArray(projects) ? projects : [];
 
   return (
-    <section className={styles.portfolio} aria-label={title}>
+    <section className={styles.portfolio} aria-label={title} id="portfolio">
       <header className={styles.titleSection}>
         <h2>Recientemente he trabajado en…</h2>
         <p>Lo último que he llevado de la idea a la realidad.</p>
