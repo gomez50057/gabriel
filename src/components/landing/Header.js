@@ -42,12 +42,13 @@ const getHashId = (href) => {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("#inicio");
+  const [active, setActive] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
 
   const lastY = useRef(0);
   const ticking = useRef(false);
+  const visibleSections = useRef(new Map());
 
   // Activar link según sección visible (para anclas tipo /#sobremi)
   useEffect(() => {
@@ -58,16 +59,33 @@ export default function Header() {
 
     const obs = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]) setActive("#" + visible[0].target.id);
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleSections.current.set(entry.target.id, {
+              id: entry.target.id,
+              ratio: entry.intersectionRatio,
+              top: entry.boundingClientRect.top,
+            });
+          } else {
+            visibleSections.current.delete(entry.target.id);
+          }
+        });
+
+        const visible = Array.from(visibleSections.current.values()).sort((a, b) => {
+          if (b.ratio !== a.ratio) return b.ratio - a.ratio;
+          return Math.abs(a.top) - Math.abs(b.top);
+        });
+
+        setActive(visible[0] ? `#${visible[0].id}` : null);
       },
       { rootMargin: "-20% 0px -60% 0px", threshold: [0.1, 0.25, 0.5, 0.75] }
     );
 
     sections.forEach((s) => obs.observe(s));
-    return () => obs.disconnect();
+    return () => {
+      visibleSections.current.clear();
+      obs.disconnect();
+    };
   }, []);
 
   // Sombra al hacer scroll
