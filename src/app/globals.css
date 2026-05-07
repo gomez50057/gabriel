@@ -4,6 +4,7 @@
 :root {
   --bg: #ffffff;
   --text: #4a4a4a;
+  --text-inverted: #f9f9f9;
   --accent: #E7BD70;
   --box-bg: #E7BD70;
   --tooltip-bg: #000;

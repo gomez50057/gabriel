@@ -88,14 +88,14 @@
   transition: bottom 0.4s;
   font-weight: 700;
   font-size: 18px;
-  color: var(--bg);
+  color: var(--text-inverted);
 }
 
 .memberInfoContent span {
   font-style: italic;
   display: block;
   font-size: 13px;
-  color: var(--bg);
+  color: var(--text-inverted);
 }
 
 .social {
@@ -112,7 +112,7 @@
 
 .social a {
   transition: color 0.3s;
-  color: var(--bg);
+  color: var(--text-inverted);
   display: inline-flex;
   align-items: center;
   justify-content: center;
