@@ -1,5 +1,799 @@
 export const blogPosts = [
   {
+    name: "Tutorial: Cómo conectar un subdominio personalizado a un proyecto desplegado en Vercel",
+    description: [
+      {
+        type: "p",
+        text:
+          "En este tutorial aprenderás a conectar un subdominio personalizado a un proyecto que ya tienes desplegado en **Vercel**, usando un registro DNS tipo **CNAME**."
+      },
+      {
+        type: "p",
+        text: "La idea es que tu proyecto pueda abrirse desde una dirección como esta:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "url",
+        code: "https://subdominio.tudominio.com"
+      },
+      {
+        type: "p",
+        text: "Por ejemplo, si tu dominio fuera:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio",
+        code: "gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "y quisieras crear el subdominio:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "subdominio",
+        code: "dashboard-metricas"
+      },
+      {
+        type: "p",
+        text: "entonces la dirección final sería:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "url-final",
+        code: "dashboard-metricas.gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "En tu caso deberás reemplazar `gabrielgomez.site` por tu propio dominio."
+      },
+
+      { type: "h2", text: "1. Conceptos básicos" },
+      {
+        type: "p",
+        text: "Antes de configurar el dominio, conviene entender qué significa cada parte."
+      },
+
+      { type: "h3", text: "Dominio principal" },
+      {
+        type: "p",
+        text: "Es el dominio base que compraste o administras."
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio",
+        code: "gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "En tu caso sería algo como:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio",
+        code: "tudominio.com"
+      },
+
+      { type: "h3", text: "Subdominio" },
+      {
+        type: "p",
+        text: "Es una palabra o nombre que se coloca antes del dominio principal."
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "subdominio",
+        code: "dashboard-metricas"
+      },
+      {
+        type: "p",
+        text: "Al unirlo con el dominio principal, queda así:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "url-final",
+        code: "dashboard-metricas.gabrielgomez.site"
+      },
+
+      { type: "h3", text: "Registro CNAME" },
+      {
+        type: "p",
+        text:
+          "Un registro **CNAME** sirve para indicar que un subdominio debe apuntar hacia otro dominio o servicio."
+      },
+      {
+        type: "p",
+        text: "En este caso, el subdominio apuntará a **Vercel**."
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "cname",
+        code: "dashboard-metricas.gabrielgomez.site → cname.vercel-dns.com"
+      },
+
+      { type: "h2", text: "2. Agregar el dominio en Vercel" },
+      {
+        type: "p",
+        text: "Primero debes entrar al proyecto que tienes desplegado en Vercel."
+      },
+      {
+        type: "p",
+        text: "Ve a:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "ruta-vercel",
+        code: "Vercel → Tu proyecto → Settings → Domains"
+      },
+      {
+        type: "p",
+        text: "Después da clic en:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "acción",
+        code: "Add Domain"
+      },
+      {
+        type: "p",
+        text: "Ahí escribe el subdominio completo que quieres conectar."
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio-vercel",
+        code: "dashboard-metricas.gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "En tu caso deberás escribir:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio-vercel",
+        code: "subdominio.tudominio.com"
+      },
+      {
+        type: "p",
+        text: "Por ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "ejemplos-subdominio",
+        code: "app.tudominio.com\npanel.tudominio.com\ndashboard.tudominio.com\nsistema.tudominio.com"
+      },
+      {
+        type: "p",
+        text:
+          "Después de agregarlo, Vercel revisará si el DNS ya está configurado. Si todavía no lo está, mostrará un aviso parecido a:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "mensaje-vercel",
+        code: "Invalid Configuration"
+      },
+      {
+        type: "p",
+        text: "o:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "mensaje-vercel",
+        code: "DNS Record Required"
+      },
+      {
+        type: "p",
+        text:
+          "No te preocupes, eso significa que falta agregar el registro DNS en tu proveedor de dominio."
+      },
+
+      { type: "h2", text: "3. Obtener el valor CNAME desde Vercel" },
+      {
+        type: "p",
+        text:
+          "Después de agregar el dominio en Vercel, la plataforma te mostrará una tabla con los datos que debes configurar en tu DNS."
+      },
+      {
+        type: "p",
+        text: "Normalmente se verá parecido a esto:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "tabla-cname",
+        code:
+          "Type  | Name / Host | Value / Target\n----- | ----------- | ---------------------\nCNAME | subdominio  | cname.vercel-dns.com."
+      },
+      {
+        type: "p",
+        text: "El dato más importante es el **Value** o **Target**."
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "cname-value",
+        code: "cname.vercel-dns.com."
+      },
+      {
+        type: "p",
+        text: "En algunos casos, Vercel puede mostrarte un valor más específico, parecido a este:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "cname-value",
+        code: "67a418ff670ce11d.vercel-dns-017.com."
+      },
+      {
+        type: "p",
+        text: "Ese valor debes copiarlo exactamente como aparece."
+      },
+
+      { type: "h2", text: "4. Entrar al panel DNS de tu dominio" },
+      {
+        type: "p",
+        text:
+          "Ahora debes entrar al proveedor donde administras tu dominio. Puede ser:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "proveedores-dns",
+        code:
+          "Namecheap\nGoDaddy\nCloudflare\nHostinger\nGoogle Domains\ncPanel\nOtro proveedor DNS"
+      },
+      {
+        type: "p",
+        text:
+          "En este ejemplo usaremos la lógica general de Namecheap, pero el proceso es muy parecido en otros proveedores."
+      },
+      {
+        type: "p",
+        text: "Busca una sección llamada algo similar a:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "secciones-dns",
+        code:
+          "DNS\nAdvanced DNS\nDNS Records\nZone Editor\nAdministrar DNS\nRegistros DNS"
+      },
+
+      { type: "h2", text: "5. Crear el registro CNAME" },
+      {
+        type: "p",
+        text: "Agrega un nuevo registro DNS con estos datos:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registro-cname",
+        code:
+          "Campo          | Valor\n-------------- | -------------------------------\nType           | CNAME Record\nHost / Name    | el nombre del subdominio\nValue / Target | el valor que te dio Vercel\nTTL            | Automatic o valor por defecto"
+      },
+
+      { type: "h3", text: "Ejemplo práctico" },
+      {
+        type: "p",
+        text: "Supongamos que tu dominio es:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio",
+        code: "gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "Y quieres crear el subdominio:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "subdominio",
+        code: "dashboard-metricas"
+      },
+      {
+        type: "p",
+        text: "Entonces el dominio final será:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "url-final",
+        code: "dashboard-metricas.gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "En tu DNS deberías agregar algo así:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registro-cname",
+        code:
+          "Type: CNAME Record\nHost: dashboard-metricas\nValue: cname.vercel-dns.com.\nTTL: Automatic"
+      },
+      {
+        type: "p",
+        text: "O, si Vercel te dio un valor personalizado:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registro-cname",
+        code:
+          "Type: CNAME Record\nHost: dashboard-metricas\nValue: 67a418ff670ce11d.vercel-dns-017.com.\nTTL: Automatic"
+      },
+
+      { type: "h2", text: "6. Importante: qué poner en “Host”" },
+      {
+        type: "p",
+        text: "Este punto suele causar confusión."
+      },
+      {
+        type: "p",
+        text: "Si el dominio completo será:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio-completo",
+        code: "dashboard-metricas.gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "En el campo **Host** no debes poner todo el dominio completo."
+      },
+      {
+        type: "p",
+        text: "Incorrecto:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "host-incorrecto",
+        code: "dashboard-metricas.gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "Correcto:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "host-correcto",
+        code: "dashboard-metricas"
+      },
+      {
+        type: "p",
+        text:
+          "Esto es porque el panel DNS ya sabe que estás editando el dominio principal:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio-principal",
+        code: "gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "Por eso solo debes escribir la parte del subdominio."
+      },
+
+      { type: "h2", text: "7. Importante: qué poner en “Value”" },
+      {
+        type: "p",
+        text: "El campo **Value** es el destino al que apuntará el subdominio."
+      },
+      {
+        type: "p",
+        text: "Ese valor lo obtienes desde Vercel, en:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "ruta-vercel",
+        code: "Project → Settings → Domains"
+      },
+      {
+        type: "p",
+        text: "Ejemplo común:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "cname-value",
+        code: "cname.vercel-dns.com."
+      },
+      {
+        type: "p",
+        text: "Ejemplo personalizado:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "cname-value",
+        code: "67a418ff670ce11d.vercel-dns-017.com."
+      },
+      {
+        type: "p",
+        text: "Debes copiarlo tal como aparece en Vercel."
+      },
+      {
+        type: "p",
+        text: "Si aparece con punto final, por ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "cname-value",
+        code: "cname.vercel-dns.com."
+      },
+      {
+        type: "p",
+        text: "puedes dejarlo con el punto final."
+      },
+
+      { type: "h2", text: "8. Guardar el registro DNS" },
+      {
+        type: "p",
+        text: "Una vez llenados los campos, guarda el registro."
+      },
+      {
+        type: "p",
+        text: "Tu configuración debería quedar parecida a esta:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registro-final",
+        code: "CNAME Record | dashboard-metricas | cname.vercel-dns.com. | Automatic"
+      },
+      {
+        type: "p",
+        text: "No borres otros registros existentes como:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registros-existentes",
+        code: "www\n@\nmail\nMX\nTXT"
+      },
+      {
+        type: "p",
+        text: "Solo agrega el nuevo registro para tu subdominio."
+      },
+
+      { type: "h2", text: "9. Verificar el dominio en Vercel" },
+      {
+        type: "p",
+        text: "Después de guardar el registro DNS, regresa a Vercel:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "ruta-vercel",
+        code: "Project → Settings → Domains"
+      },
+      {
+        type: "p",
+        text: "Busca el dominio que agregaste."
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio-vercel",
+        code: "dashboard-metricas.gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "Vercel intentará verificar la configuración."
+      },
+      {
+        type: "p",
+        text: "Si todo está correcto, el dominio aparecerá como configurado correctamente."
+      },
+      {
+        type: "p",
+        text:
+          "Puede tardar desde unos minutos hasta varias horas, dependiendo de la propagación DNS."
+      },
+
+      { type: "h2", text: "10. Probar el subdominio" },
+      {
+        type: "p",
+        text:
+          "Cuando Vercel marque el dominio como correcto, abre el subdominio en el navegador."
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "url",
+        code: "https://dashboard-metricas.gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "En tu caso será:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "url",
+        code: "https://subdominio.tudominio.com"
+      },
+      {
+        type: "p",
+        text: "Si todo está bien, deberías ver tu proyecto desplegado en Vercel."
+      },
+
+      { type: "h2", text: "11. Verificar desde terminal" },
+      {
+        type: "p",
+        text: "También puedes verificar el registro DNS desde la terminal."
+      },
+
+      { type: "h3", text: "En Windows" },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "nslookup -type=CNAME subdominio.tudominio.com"
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "nslookup -type=CNAME dashboard-metricas.gabrielgomez.site"
+      },
+
+      { type: "h3", text: "En Linux o Mac" },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "dig CNAME subdominio.tudominio.com +short"
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "dig CNAME dashboard-metricas.gabrielgomez.site +short"
+      },
+      {
+        type: "p",
+        text: "Si responde con algo como:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "respuesta-dns",
+        code: "cname.vercel-dns.com."
+      },
+      {
+        type: "p",
+        text:
+          "o con el valor que te dio Vercel, significa que el DNS ya está apuntando correctamente."
+      },
+
+      { type: "h2", text: "12. Errores comunes" },
+
+      { type: "h3", text: "Error 1: Poner el dominio completo en Host" },
+      {
+        type: "p",
+        text: "Incorrecto:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "host-incorrecto",
+        code: "Host: dashboard-metricas.gabrielgomez.site"
+      },
+      {
+        type: "p",
+        text: "Correcto:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "host-correcto",
+        code: "Host: dashboard-metricas"
+      },
+
+      { type: "h3", text: "Error 2: Confundir CNAME con NS" },
+      {
+        type: "p",
+        text: "Para conectar un subdominio a Vercel normalmente necesitas un:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registro",
+        code: "CNAME Record"
+      },
+      {
+        type: "p",
+        text: "No necesitas un:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registro",
+        code: "NS Record"
+      },
+      {
+        type: "p",
+        text:
+          "El registro **NS** se usa para delegar servidores de nombres, no para apuntar un subdominio normal a Vercel."
+      },
+
+      { type: "h3", text: "Error 3: No agregar primero el dominio en Vercel" },
+      {
+        type: "p",
+        text: "Primero agrega el dominio en:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "ruta-vercel",
+        code: "Vercel → Project → Settings → Domains"
+      },
+      {
+        type: "p",
+        text:
+          "Luego copia el valor que Vercel te indique y agrégalo en tu proveedor DNS."
+      },
+
+      { type: "h3", text: "Error 4: Borrar registros existentes" },
+      {
+        type: "p",
+        text: "No borres registros como:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registros-existentes",
+        code: "www\n@\nMX\nTXT\nmail"
+      },
+      {
+        type: "p",
+        text: "A menos que sepas exactamente qué hacen."
+      },
+      {
+        type: "p",
+        text: "Para este caso solo necesitas agregar un nuevo registro CNAME."
+      },
+
+      { type: "h2", text: "Resumen final" },
+      {
+        type: "p",
+        text: "Para conectar un subdominio a Vercel necesitas hacer esto:"
+      },
+
+      { type: "h3", text: "En Vercel" },
+      {
+        type: "p",
+        text: "Agregar el dominio completo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio-vercel",
+        code: "subdominio.tudominio.com"
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "dominio-vercel",
+        code: "dashboard-metricas.gabrielgomez.site"
+      },
+
+      { type: "h3", text: "En tu DNS" },
+      {
+        type: "p",
+        text: "Agregar un registro:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registro-cname",
+        code:
+          "Type: CNAME Record\nHost: subdominio\nValue: el valor que te dio Vercel\nTTL: Automatic"
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "registro-cname",
+        code:
+          "Type: CNAME Record\nHost: dashboard-metricas\nValue: cname.vercel-dns.com.\nTTL: Automatic"
+      },
+
+      { type: "h2", text: "Resultado final" },
+      {
+        type: "p",
+        text: "Tu proyecto de Vercel quedará disponible desde:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "url-final",
+        code: "https://subdominio.tudominio.com"
+      },
+      {
+        type: "p",
+        text: "Ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "url-final",
+        code: "https://dashboard-metricas.gabrielgomez.site"
+      }
+    ],
+    date: "20 de mayo, 2026",
+    image: "/img/tutoriales/vercel-cname-subdominio.webp",
+    category: "Tutoriales",
+    featuredPosts: true
+  },
+  {
     name: "Cómo limitar opciones en un Formulario de Google",
     description: [
       {
