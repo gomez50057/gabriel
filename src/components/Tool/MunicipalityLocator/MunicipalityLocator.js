@@ -15,12 +15,9 @@ function normalizeText(value = "") {
     .trim();
 }
 
-function getSearchValues(item) {
+function getMunicipalitySearchValues(item) {
   return [
     item.municipio,
-    item.region,
-    item.macrorregion,
-    item.microrregion,
     ...(item.aliases || []),
   ].map(normalizeText);
 }
@@ -104,7 +101,9 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
     if (!normalizedQuery) return [];
 
     return REGIONALIZACION_HIDALGO.filter((item) =>
-      getSearchValues(item).some((value) => value.includes(normalizedQuery))
+      getMunicipalitySearchValues(item).some((value) =>
+        value.includes(normalizedQuery)
+      )
     ).slice(0, 12);
   }, [normalizedQuery]);
 
@@ -202,9 +201,8 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                   <button
                     key={item.municipio}
                     type="button"
-                    className={`${styles.suggestion} ${
-                      isActive ? styles.activeSuggestion : ""
-                    }`}
+                    className={`${styles.suggestion} ${isActive ? styles.activeSuggestion : ""
+                      }`}
                     onClick={() => selectMunicipality(item.municipio)}
                   >
                     <span className={styles.suggestionName}>
