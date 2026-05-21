@@ -294,12 +294,10 @@ export const blogPosts = [
       },
     ],
     date: "20 de mayo, 2026",
-    image: "/img/tutoriales/git-commits-buenas-practicas.jpg",
+    image: "/img/tutoriales/git-commits-buenas-practicas.png",
     category: "Tutoriales",
     featuredPosts: true,
   },
-
-
   {
     name: "Tutorial: Cómo conectar un subdominio personalizado a un proyecto desplegado en Vercel",
     description: [

@@ -1,18 +1,17 @@
 import Navbar from "@/shared/Navbar";
-import Footer from '@/shared/Footer';
+import Footer from "@/shared/Footer";
 
 export const metadata = {
-  title: "Generador de css corner-shape",
+  title: "Localizador de municipios de Hidalgo",
   description:
-    "Genera valores de corner-shape a partir de formas predefinidas y valores de border-radius en porcentaje para cada esquina.",
+    "Consulta a qué región, macrorregión y microrregión pertenece cada municipio del Estado de Hidalgo.",
 };
 
 export const viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#EF959D" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0b0b0b" },
   ],
-
   colorScheme: "light dark",
 };
 

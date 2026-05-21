@@ -18,8 +18,8 @@ export const viewport = {
 export default function Layout({ children }) {
   return (
     <>
+      <Navbar />
       <main style={{ padding: "5rem 1rem" }}>
-        <Navbar />
         {children}
       </main>
       <Footer />
