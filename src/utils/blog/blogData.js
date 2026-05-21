@@ -1,5 +1,306 @@
 export const blogPosts = [
   {
+    name: "Cómo organizo mis commits en Git y por qué uso esta metodología",
+    description: [
+      {
+        type: "p",
+        text:
+          "Cuando trabajo en un proyecto, no solo me interesa que el código funcione. También me interesa que el historial de cambios sea claro, ordenado y fácil de entender. Por eso utilizo una metodología para escribir mis commits basada en una estructura simple:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "tipo(área): descripción del cambio"`,
+      },
+      {
+        type: "p",
+        text: "Por ejemplo:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "content(blog): agrega nueva nota sobre buenas prácticas en Git"`,
+      },
+      {
+        type: "p",
+        text:
+          "Esta forma de escribir commits me ayuda a identificar rápidamente qué tipo de cambio hice, en qué parte del proyecto ocurrió y cuál fue el propósito del ajuste.",
+      },
+
+      {
+        type: "h2",
+        text: "¿Por qué no escribo commits genéricos?",
+      },
+      {
+        type: "p",
+        text: "Antes podría parecer suficiente escribir mensajes como:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "cambios"`,
+      },
+      {
+        type: "p",
+        text: "o:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "actualización"`,
+      },
+      {
+        type: "p",
+        text:
+          "Pero este tipo de mensajes no explica realmente qué se modificó. Cuando el proyecto crece, estos commits se vuelven difíciles de revisar porque no permiten saber si el cambio fue una corrección, una nueva funcionalidad, una mejora visual, documentación o simplemente contenido nuevo.",
+      },
+      {
+        type: "p",
+        text:
+          "Por eso prefiero usar una metodología más clara y descriptiva.",
+      },
+
+      {
+        type: "h2",
+        text: "Tipos de commits que utilizo",
+      },
+      {
+        type: "p",
+        text:
+          "La idea es clasificar cada cambio según su intención. Algunos de los tipos más comunes que uso son:",
+      },
+      {
+        type: "ul",
+        items: [
+          "**feat:** nueva funcionalidad",
+          "**fix:** corrección de errores",
+          "**refactor:** mejora interna del código",
+          "**style:** cambios visuales o de formato",
+          "**docs:** documentación",
+          "**content:** contenido nuevo o modificación de textos",
+          "**chore:** tareas de mantenimiento",
+          "**build:** cambios de compilación o configuración",
+          "**ci:** integración continua o despliegue",
+          "**perf:** mejoras de rendimiento",
+          "**test:** pruebas",
+        ],
+      },
+      {
+        type: "p",
+        text:
+          "Esta clasificación me permite leer el historial del proyecto y entender rápidamente qué pasó en cada etapa.",
+      },
+
+      {
+        type: "h2",
+        text: "Por qué uso `content` para textos o notas de blog",
+      },
+      {
+        type: "p",
+        text:
+          "Cuando agrego una nueva nota en un blog, muchas veces no estoy creando una funcionalidad nueva como tal. Lo que estoy haciendo es agregar contenido visible para el usuario.",
+      },
+      {
+        type: "p",
+        text: "Por eso, en lugar de usar siempre `feat`, prefiero usar:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "content(blog): agrega nueva nota"`,
+      },
+      {
+        type: "p",
+        text:
+          "Este mensaje es más preciso, porque indica que el cambio corresponde a contenido dentro del blog.",
+      },
+      {
+        type: "p",
+        text:
+          "Si la nota trata sobre un tema específico, puedo hacerlo todavía más claro:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "content(blog): agrega nota sobre configuración de subdominios"`,
+      },
+      {
+        type: "p",
+        text:
+          "De esta forma, cuando revise el historial, podré saber exactamente qué contenido se agregó sin tener que abrir el commit completo.",
+      },
+
+      {
+        type: "h2",
+        text: "Cuándo uso `feat`",
+      },
+      {
+        type: "p",
+        text:
+          "Uso `feat` cuando realmente estoy agregando una funcionalidad nueva al sistema. Por ejemplo:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "feat(blog): agrega buscador de notas"`,
+      },
+      {
+        type: "p",
+        text:
+          "En este caso sí se trata de una funcionalidad nueva, porque el usuario podrá buscar publicaciones dentro del blog.",
+      },
+      {
+        type: "p",
+        text:
+          "Pero si solo agrego texto, una nueva entrada o actualizo contenido, prefiero usar `content`.",
+      },
+
+      {
+        type: "h2",
+        text: "Cuándo uso `docs`",
+      },
+      {
+        type: "p",
+        text:
+          "Uso `docs` cuando el cambio corresponde a documentación técnica, como instrucciones de instalación, configuración del proyecto, uso de comandos o explicación para desarrolladores.",
+      },
+      {
+        type: "p",
+        text: "Por ejemplo:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "docs: agrega guía de instalación del proyecto"`,
+      },
+      {
+        type: "p",
+        text:
+          "La diferencia principal es que `docs` se enfoca en documentación del proyecto, mientras que `content` se enfoca en contenido visible o editorial, como textos de páginas, notas, artículos o publicaciones.",
+      },
+
+      {
+        type: "h2",
+        text: "Ventajas de usar esta metodología",
+      },
+      {
+        type: "p",
+        text:
+          "Usar esta forma de escribir commits me ayuda a mantener un historial mucho más profesional y entendible.",
+      },
+      {
+        type: "p",
+        text: "Entre las principales ventajas están:",
+      },
+      {
+        type: "ul",
+        items: [
+          "**Mayor claridad:** cada commit explica qué se hizo.",
+          "**Mejor organización:** puedo identificar cambios por tipo y área.",
+          "**Facilidad para revisar errores:** si algo falla, puedo ubicar más rápido qué commit pudo haberlo causado.",
+          "**Historial más limpio:** evito mensajes genéricos como “cambios” o “actualización”.",
+          "**Mejor trabajo en equipo:** otras personas pueden entender el avance del proyecto sin preguntarme directamente.",
+        ],
+      },
+
+      {
+        type: "h2",
+        text: "Ejemplos prácticos",
+      },
+      {
+        type: "p",
+        text: "Si agrego una nueva nota al blog:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "content(blog): agrega nueva nota"`,
+      },
+      {
+        type: "p",
+        text: "Si corrijo un error en el formulario:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "fix(form): corrige validación de campos obligatorios"`,
+      },
+      {
+        type: "p",
+        text: "Si agrego una nueva sección al sitio:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "feat(home): agrega sección de noticias"`,
+      },
+      {
+        type: "p",
+        text: "Si solo ajusto estilos:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "style(navbar): ajusta espaciado en versión móvil"`,
+      },
+      {
+        type: "p",
+        text:
+          "Si mejoro el código sin cambiar lo que ve el usuario:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "refactor(api): simplifica manejo de respuestas"`,
+      },
+
+      {
+        type: "h2",
+        text: "Conclusión",
+      },
+      {
+        type: "p",
+        text:
+          "Utilizo esta metodología porque me permite trabajar de forma más ordenada y profesional. Un buen commit no solo guarda cambios en Git; también documenta la evolución del proyecto.",
+      },
+      {
+        type: "p",
+        text:
+          "Por eso, cuando agrego contenido a un blog, prefiero usar un mensaje como:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: `git commit -m "content(blog): agrega nueva nota"`,
+      },
+      {
+        type: "p",
+        text:
+          "Es claro, específico y describe correctamente el tipo de cambio realizado. De esta manera, el historial del proyecto se mantiene limpio, entendible y útil para futuras revisiones.",
+      },
+    ],
+    date: "20 de mayo, 2026",
+    image: "/img/tutoriales/git-commits-buenas-practicas.jpg",
+    category: "Tutoriales",
+    featuredPosts: true,
+  },
+
+
+  {
     name: "Tutorial: Cómo conectar un subdominio personalizado a un proyecto desplegado en Vercel",
     description: [
       {
