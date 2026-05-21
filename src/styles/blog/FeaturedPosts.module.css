@@ -1,7 +1,7 @@
 .featuredSection {
-  --cardBrd: rgba(0, 0, 0, 0.08);
-  --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  background: #f9f9f9;
+  --cardBrd: var(--shadow-color, rgba(0, 0, 0, 0.08));
+  --shadow: 0 6px 18px var(--shadow-color, rgba(0, 0, 0, 0.08));
+  background: var(--surface-2);
   padding: clamp(16px, 1.4vw, 20px);
   border-radius: 12px;
   width: 100%;
@@ -17,7 +17,7 @@
   font-size: clamp(1.1rem, 1.1vw, 1.25rem);
   font-weight: 800;
   margin: 0 0 16px;
-  color: #222;
+  color: var(--heading);
 }
 
 .featuredList {
@@ -35,8 +35,8 @@
   align-items: center;
   padding: 10px;
   border-radius: 12px;
-  background: #fff;
-  border: 1px solid #eee;
+  background: var(--surface);
+  border: 1px solid var(--border);
   transition: opacity 220ms ease, transform 220ms ease;
 }
 
@@ -53,14 +53,14 @@
 
 .featuredDate {
   font-size: 0.85rem;
-  color: #888;
+  color: var(--muted);
   line-height: 1.2;
   margin: 0 0 2px;
 }
 
 .featuredLink {
   font-size: 0.98rem;
-  color: #333;
+  color: var(--heading);
   font-weight: 800;
   text-decoration: none;
   display: -webkit-box;
@@ -135,7 +135,7 @@
 .toggleHint {
   margin: 0;
   font-size: 0.82rem;
-  color: #777;
+  color: var(--muted);
   text-align: center;
 }
 
@@ -195,7 +195,7 @@
     top: auto;
 
     padding: 16px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 14px var(--shadow-color-soft, rgba(0, 0, 0, 0.06));
   }
 
   .featuredList {

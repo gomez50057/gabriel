@@ -1,14 +1,14 @@
 .blogContainer {
   width: 100vw;
   padding: 50px;
-  background-color: #f4f4f4;
+  background-color: var(--surface-muted);
 }
 
 .sectionTitle {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #333;
+  color: var(--heading);
 }
 
 .postsContainer {
@@ -18,9 +18,9 @@
 }
 
 .post {
-  background-color: white;
+  background-color: var(--surface);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-xs);
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -44,30 +44,30 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--heading);
 }
 
 .postDate {
   font-size: 0.9rem;
-  color: #777;
+  color: var(--muted);
   margin-bottom: 10px;
 }
 
 .postDescription {
   font-size: 1rem;
-  color: #555;
+  color: var(--muted);
   margin-bottom: 15px;
 }
 
 .readMoreButton {
   padding: 10px 20px;
-  background-color: #0070f3;
-  color: white;
+  background-color: var(--action-bg);
+  color: var(--action-fg);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .readMoreButton:hover {
-  background-color: #005bb5;
+  background-color: var(--action-bg-hover);
 }

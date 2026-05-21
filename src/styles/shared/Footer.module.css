@@ -1,10 +1,10 @@
 .footer {
   --footerBg: var(--bg, #ffffff);
-  --footerBorder: rgba(0, 0, 0, 0.08);
+  --footerBorder: var(--shadow-color, rgba(0, 0, 0, 0.08));
 
-  --socialBorder: rgba(0, 0, 0, 0.08);
+  --socialBorder: var(--shadow-color, rgba(0, 0, 0, 0.08));
   --socialBg: rgba(0, 0, 0, 0.03);
-  --socialBgHover: rgba(0, 0, 0, 0.06);
+  --socialBgHover: var(--shadow-color-soft, rgba(0, 0, 0, 0.06));
   --socialBorderHover: rgba(0, 0, 0, 0.14);
 
   --copyright: rgba(0, 0, 0, 0.55);

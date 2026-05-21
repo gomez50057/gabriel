@@ -5,7 +5,7 @@
 
   /* Base */
   --fgTitle: #E7BD70;
-  --fgCaption: #f9f9f9;
+  --fgCaption: var(--text-inverted);
 
   --fg: rgba(16, 16, 18, 0.92);
   --fgSoft: rgba(16, 16, 18, 0.72);

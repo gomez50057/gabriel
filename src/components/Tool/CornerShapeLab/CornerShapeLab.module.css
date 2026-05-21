@@ -2,15 +2,15 @@
 /* Tokens locales */
 /*  */
 .container {
-  --ink-92: rgba(15, 23, 42, 0.92);
-  --ink-75: rgba(15, 23, 42, 0.75);
-  --ink-65: rgba(15, 23, 42, 0.65);
+  --ink-92: var(--heading);
+  --ink-75: color-mix(in lab, var(--text) 75%, transparent);
+  --ink-65: color-mix(in lab, var(--text) 65%, transparent);
 
-  --bd-10: rgba(15, 23, 42, 0.10);
-  --bd-12: rgba(15, 23, 42, 0.12);
-  --bd-08: rgba(15, 23, 42, 0.08);
+  --bd-10: var(--border-soft);
+  --bd-12: var(--border-mid);
+  --bd-08: var(--border);
 
-  --shadow-card: 0 18px 55px rgba(15, 23, 42, 0.08);
+  --shadow-card: var(--shadow-lg);
 
   --r-card: 22px;
   --r-md: 18px;
@@ -33,7 +33,7 @@
 /* Card base */
 /*  */
 .card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--bd-10);
   border-radius: var(--r-card);
   box-shadow: var(--shadow-card);
@@ -96,7 +96,7 @@
   height: 18px;
   border-radius: 999px;
   background: hsl(var(--hue) 95% 55%);
-  border: 3px solid #fff;
+  border: 3px solid var(--surface);
   box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
   margin-left: -5px;
 }
@@ -121,7 +121,7 @@
   height: 18px;
   border-radius: 999px;
   background: hsl(var(--hue) 95% 55%);
-  border: 3px solid #fff;
+  border: 3px solid var(--surface);
   box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
 }
 
@@ -134,7 +134,7 @@
   padding: 12px;
   border-radius: var(--r-sm);
   border: 1px solid var(--bd-12);
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-92);
   font-weight: 600;
 }
@@ -146,7 +146,7 @@
   border-radius: var(--r-sm);
   border: 1px solid var(--bd-12);
   background: var(--vinoOsc, #111827);
-  color: #fff;
+  color: var(--action-fg);
   font-weight: 800;
   cursor: pointer;
   transition: transform 120ms ease, filter 120ms ease;
@@ -165,8 +165,8 @@
   margin-top: 12px;
   font-size: 0.9rem;
   color: var(--ink-75);
-  background: rgba(15, 23, 42, 0.04);
-  border: 1px dashed rgba(15, 23, 42, 0.18);
+  background: var(--surface-soft);
+  border: 1px dashed var(--border-mid);
   border-radius: var(--r-sm);
   padding: 10px 12px;
 }
@@ -175,7 +175,7 @@
 /* Preview canvas shape */
 /*  */
 .canvas {
-  background: linear-gradient(180deg, #ffffff, #f6f7fb);
+  background: linear-gradient(180deg, var(--surface), var(--surface-soft));
   border: 1px solid var(--bd-08);
   border-radius: var(--r-md);
   padding: 22px;
@@ -189,7 +189,7 @@
   width: 220px;
   height: 220px;
   border: 6px solid var(--ink-92);
-  background: #fff;
+  background: var(--surface);
 
   corner-shape: var(--corner-shape);
   border-radius: var(--border-radius-A) var(--border-radius-B) var(--border-radius-C) var(--border-radius-D) / var(--border-radius-E) var(--border-radius-F) var(--border-radius-G) var(--border-radius-H);
@@ -199,7 +199,7 @@
   content: "";
   position: absolute;
   inset: -4px;
-  border: 2px dashed rgba(15, 23, 42, 0.18);
+  border: 2px dashed var(--border-mid);
   border-radius: inherit;
   pointer-events: none;
 }
@@ -421,7 +421,7 @@
 .generator {
   border: 1px solid var(--bd-10);
   border-radius: 16px;
-  background: rgba(15, 23, 42, 0.02);
+  background: var(--surface-soft);
   padding: 12px;
 }
 
@@ -465,12 +465,12 @@
 }
 
 .copyBtn {
-  background: var(--ink-92);
-  color: #fff;
+  background: var(--action-bg);
+  color: var(--action-fg);
 }
 
 .copyBtnAlt {
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-92);
 }
 
@@ -489,9 +489,9 @@
   margin: 8px 0 10px;
   font-size: 0.85rem;
   font-weight: 800;
-  color: rgba(15, 23, 42, 0.85);
-  background: rgba(34, 197, 94, 0.10);
-  border: 1px solid rgba(34, 197, 94, 0.25);
+  color: var(--heading);
+  background: var(--success-soft);
+  border: 1px solid var(--success-border);
   padding: 8px 10px;
   border-radius: var(--r-xs);
 }
@@ -499,7 +499,7 @@
 .details {
   border: 1px solid var(--bd-08);
   border-radius: 14px;
-  background: #fff;
+  background: var(--surface);
   overflow: hidden;
   margin-top: 10px;
 }
@@ -511,7 +511,7 @@
   padding: 10px 12px;
   font-weight: 900;
   font-size: 0.9rem;
-  color: rgba(15, 23, 42, 0.9);
+  color: var(--heading);
   border-bottom: 1px solid var(--bd-08);
 }
 
@@ -526,7 +526,7 @@
   font-size: 0.82rem;
   line-height: 1.45;
   color: var(--ink-92);
-  background: linear-gradient(180deg, #ffffff, #f7f8fb);
+  background: linear-gradient(180deg, var(--surface), var(--surface-soft));
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }

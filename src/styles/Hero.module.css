@@ -241,16 +241,16 @@
   }
 
   .presentacion h2 {
-    color: #f9f9f9;
+    color: var(--text-inverted);
   }
 
   .descripcion {
     padding: 0 10px;
-    color: #f9f9f9;
+    color: var(--text-inverted);
   }
 
   .typed {
-    color: #f9f9f9;
+    color: var(--text-inverted);
   }
 
   .ctaCircleWrap {

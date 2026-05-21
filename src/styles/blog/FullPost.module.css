@@ -20,10 +20,10 @@
 
 /* Not found */
 .notFound {
-  background: #fff;
+  background: var(--surface);
   border-radius: 12px;
   padding: 18px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 24px var(--shadow-color-soft, rgba(0, 0, 0, 0.06));
 }
 
 .postContent,
@@ -32,10 +32,10 @@
 }
 
 .postContent {
-  background: #fff;
+  background: var(--surface);
   padding: clamp(16px, 2.5vw, 24px);
   border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 24px var(--shadow-color, rgba(0, 0, 0, 0.08));
 }
 
 .postImage {
@@ -80,7 +80,7 @@
   display: block;
   object-fit: cover;
   border-radius: 10px;
-  background: #111827;
+  background: var(--action-bg);
 }
 
 .carouselButton {
@@ -94,7 +94,7 @@
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 999px;
   background: rgba(17, 24, 39, 0.68);
-  color: #fff;
+  color: var(--text-inverted);
   line-height: 1;
   cursor: pointer;
   transition:
@@ -132,7 +132,7 @@
 
 .carouselCounter {
   flex: 0 0 auto;
-  color: #4b5563;
+  color: var(--muted);
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -165,7 +165,7 @@
   height: auto;
   display: block;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px var(--shadow-color, rgba(0, 0, 0, 0.08));
 }
 
 .inlineImageSmall {
@@ -176,7 +176,7 @@
 .figCaption {
   margin-top: 8px;
   font-size: clamp(0.85rem, 0.8rem + 0.2vw, 0.95rem);
-  color: #6b7280;
+  color: var(--muted);
   text-align: center;
 }
 
@@ -200,7 +200,7 @@
 }
 
 .meta {
-  color: #6b7280;
+  color: var(--muted);
   font-size: clamp(0.875rem, 0.8rem + 0.2vw, 0.95rem);
   margin-bottom: clamp(12px, 2vw, 18px);
 }
@@ -209,14 +209,14 @@
   font-size: clamp(1.6rem, 1.1rem + 2vw, 2.4rem);
   line-height: 1.2;
   font-weight: 800;
-  color: #111827;
+  color: var(--heading);
   margin: 0 0 clamp(10px, 2vw, 16px);
 }
 
 .description {
   font-size: clamp(1rem, 0.96rem + 0.4vw, 1.125rem);
   line-height: 1.7;
-  color: #1f2937;
+  color: var(--heading);
   text-align: justify;
 }
 
@@ -229,7 +229,7 @@
 .quote {
   font-size: clamp(1.05rem, 0.9rem + 0.8vw, 1.3rem);
   font-style: italic;
-  color: #4b5563;
+  color: var(--muted);
   text-align: right;
   margin: clamp(16px, 3vw, 28px) 0 clamp(24px, 4vw, 40px);
 }

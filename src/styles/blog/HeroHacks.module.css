@@ -2,7 +2,7 @@
   width: calc(100% - 10rem);
   margin: 80px 5rem 40px;
   padding: clamp(20px, 3vw, 36px);
-  color: #0b0b0b;
+  color: var(--heading);
   /* margin-top: 80px; */
 }
 
@@ -32,7 +32,7 @@
   height: clamp(36px, 6.5vw, 60px);
   padding: 0 clamp(14px, 3vw, 28px);
   background: var(--pill-bg);
-  color: #0b0b0b;
+  color: var(--on-accent);
   font-weight: 700;
   border-radius: 999px;
   text-transform: uppercase;
@@ -43,7 +43,7 @@
 
 .intro {
   margin-top: clamp(8px, 1.2vw, 12px);
-  color: #1b1b1b;
+  color: var(--text);
   line-height: 1.45;
   font-size: clamp(14px, 1.4vw, 16px);
 }
@@ -64,13 +64,13 @@
 }
 
 .card {
-  background: #fff;
+  background: var(--surface);
   border-radius: var(--radius-xl);
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.12),
-    0 2px 6px rgba(0, 0, 0, 0.06);
+    0 2px 6px var(--shadow-color-soft, rgba(0, 0, 0, 0.06));
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid var(--border);
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -111,8 +111,8 @@
 
 .tag {
   display: inline-block;
-  background: #0b0b0b;
-  color: #fff;
+  background: var(--action-bg);
+  color: var(--action-fg);
   font-size: 10px;
   padding: 6px 10px;
   border-radius: 999px;
@@ -126,7 +126,7 @@
   letter-spacing: 0.01em;
   line-height: 1.15;
   font-size: clamp(14px, 1.5vw, 16px);
-  color: #0b0b0b;
+  color: var(--heading);
 }
 
 .excerpt {

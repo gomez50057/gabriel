@@ -87,35 +87,36 @@ const BlogNoticias = ({
               const href = `/${linkBase}/${slug}`;
 
               return (
-                <article key={`${post?.name ?? "post"}-${index}`} className={styles.newsItem}>
-                  {post?.image && (
-                    <img
-                      src={post.image}
-                      alt={post.name}
-                      className={styles.newsImage}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  )}
-
-                  <div className={styles.newsContent}>
-                    <p className={styles.newsMeta}>
-                      {post?.category} · <time dateTime={post?.date}>{post?.date}</time>
-                    </p>
-
-                    <h3 className={styles.newsTitle}>{post?.name}</h3>
-
-                    <div className={styles.newsDescription}></div>
-                  </div>
-
                   <Link
+                    key={`${post?.name ?? "post"}-${index}`}
                     href={href}
-                    className={styles.readMoreBtn}
+                    className={styles.newsCardLink}
                     aria-label={`Leer más sobre: ${post?.name ?? "publicación"}`}
                   >
-                    Leer más
+                    <article className={styles.newsItem}>
+                      {post?.image && (
+                        <img
+                          src={post.image}
+                          alt={post.name}
+                          className={styles.newsImage}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      )}
+
+                      <div className={styles.newsContent}>
+                        <p className={styles.newsMeta}>
+                          {post?.category} · <time dateTime={post?.date}>{post?.date}</time>
+                        </p>
+
+                        <h3 className={styles.newsTitle}>{post?.name}</h3>
+
+                        <div className={styles.newsDescription}></div>
+                      </div>
+
+                      <span className={styles.readMoreBtn}>Leer más</span>
+                    </article>
                   </Link>
-                </article>
               );
             })
           ) : (
