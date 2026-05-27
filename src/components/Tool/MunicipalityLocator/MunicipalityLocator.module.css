@@ -86,6 +86,61 @@
   font-weight: 800;
 }
 
+.counterActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.counterButton,
+.counterButtonAlt {
+  min-height: 34px;
+  padding: 8px 10px;
+  border: 1px solid var(--gold-line);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 950;
+  cursor: pointer;
+  transition:
+    transform 130ms ease,
+    filter 130ms ease;
+}
+
+.counterButton {
+  background: var(--gold);
+  color: var(--on-accent);
+}
+
+.counterButtonAlt {
+  background: var(--tool-surface);
+  color: var(--ink);
+}
+
+.counterButton:hover,
+.counterButtonAlt:hover {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.counterButton:active,
+.counterButtonAlt:active {
+  transform: translateY(0);
+}
+
+.counterStatus {
+  flex-basis: 100%;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.counterStatusError {
+  color: var(--danger);
+}
+
 /*  */
 /* Layout */
 /*  */
@@ -312,6 +367,152 @@
 }
 
 /*  */
+/* Descarga de localidades */
+/*  */
+.downloadPanel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, var(--tool-surface), var(--tool-surface-soft));
+}
+
+.downloadLabel {
+  display: block;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 950;
+}
+
+.downloadText {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.downloadActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 380px;
+}
+
+.checkboxLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 850;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkboxLabel input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--gold);
+}
+
+.otraControls {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.otraInput {
+  width: min(100%, 180px);
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--tool-surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 850;
+  outline: none;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    opacity 140ms ease;
+}
+
+.otraInput:focus {
+  border-color: var(--gold-line);
+  box-shadow: 0 0 0 4px var(--gold-soft);
+}
+
+.otraInput:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.downloadButton,
+.copyButton {
+  min-height: 38px;
+  padding: 9px 13px;
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-sm);
+  background: var(--gold);
+  color: var(--on-accent);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 950;
+  cursor: pointer;
+  transition:
+    transform 130ms ease,
+    filter 130ms ease,
+    opacity 130ms ease;
+}
+
+.copyButton {
+  background: var(--tool-surface);
+  color: var(--ink);
+}
+
+.downloadButton:hover:not(:disabled),
+.copyButton:hover:not(:disabled) {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.downloadButton:active:not(:disabled),
+.copyButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.downloadButton:disabled,
+.copyButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.copyStatus {
+  flex-basis: 100%;
+  width: 100%;
+  margin: 2px 0 0;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 850;
+  text-align: right;
+}
+
+.copyStatusError {
+  color: var(--danger);
+}
+
+/*  */
 /* Desplegables */
 /*  */
 .dropdownBox {
@@ -483,9 +684,43 @@
     text-align: left;
   }
 
+  .counterActions {
+    justify-content: flex-start;
+  }
+
   .resultGrid {
     grid-template-columns: 1fr;
   }
+
+  .downloadPanel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .downloadActions {
+    align-items: stretch;
+    flex-direction: column;
+    max-width: none;
+  }
+
+  .otraControls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .otraInput {
+    width: 100%;
+  }
+
+  .downloadButton,
+  .copyButton {
+    width: 100%;
+  }
+
+  .copyStatus {
+    text-align: left;
+  }
+
 }
 
 @media (max-width: 560px) {
