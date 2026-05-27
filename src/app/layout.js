@@ -35,7 +35,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" data-theme="light">
+    <html lang="es" suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );
