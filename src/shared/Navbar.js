@@ -4,32 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import ThemeSwitch from "@/shared/ThemeSwitch";
 import styles from "@/styles/shared/Navbar.module.css";
-
-const LINKS = [
-  { href: "/", label: "Inicio" },
-  { href: "/hacks", label: "Hacks" },
-  {
-    label: "Herramientas",
-    children: [
-      {
-        href: "/herramientas/conversor-mayusculas-minusculas",
-        label: "Convertidor de texto",
-      },
-      {
-        href: "/herramientas/localizador-municipios-hidalgo",
-        label: "Localizador de municipios de Hidalgo",
-      },
-      {
-        href: "/herramientas/generador-clamp",
-        label: "Generador de clamp",
-      },
-      {
-        href: "/herramientas/corner-shape-generador",
-        label: "Generador de corner-shape",
-      },
-    ],
-  },
-];
+import { NAVBAR_LINKS as LINKS } from "@/config/navigation";
 
 const flattenLinks = (links) =>
   links.flatMap((l) => (l.children ? l.children : [l]));
