@@ -22,6 +22,10 @@ const LINKS = [
         label: "Convertidor de texto",
       },
       {
+        href: "/herramientas/localizador-municipios-hidalgo",
+        label: "Localizador de municipios de Hidalgo",
+      },
+      {
         href: "/herramientas/generador-clamp",
         label: "Generador de clamp",
       },

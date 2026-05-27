@@ -1,5 +1,278 @@
 export const blogPosts = [
   {
+    name: "Guía paso a paso: crea tu proyecto con Next.js 16",
+    description: [
+      {
+        type: "p",
+        text: "Cuando inicio un proyecto nuevo con Next.js 16, no solo pienso en levantar una aplicación rápido. También me interesa que el proyecto quede ordenado desde el principio, que sea fácil de mantener y que pueda crecer sin convertirse en una estructura difícil de entender.",
+      },
+      {
+        type: "p",
+        text: "Por eso sigo una metodología clara: crear el proyecto con una configuración limpia, usar src/, trabajar con App Router, mantener una estructura modular y dejar una base preparada para escalar.",
+      },
+      {
+        type: "p",
+        text: "Esta configuración me permite trabajar con componentes organizados, rutas claras, estilos controlados con CSS Modules y una arquitectura compatible con proyectos institucionales, portafolios, dashboards o aplicaciones conectadas a una API.",
+      },
+
+      {
+        type: "h2",
+        text: "1. Verifico mi versión de Node.js",
+      },
+      {
+        type: "p",
+        text: "Antes de crear el proyecto, reviso que mi entorno tenga una versión compatible de Node.js.",
+      },
+      {
+        type: "code",
+        language: "bash",
+        text: "node -v",
+      },
+      {
+        type: "p",
+        text: "Esto me permite confirmar que puedo trabajar sin problemas con las versiones actuales de Next.js y evitar errores desde la instalación.",
+      },
+
+      {
+        type: "h2",
+        text: "2. Creo el proyecto con create-next-app",
+      },
+      {
+        type: "p",
+        text: "Para crear el proyecto, uso el siguiente comando:",
+      },
+      {
+        type: "code",
+        language: "bash",
+        text: "npx create-next-app@latest nombre-del-proyecto",
+      },
+      {
+        type: "p",
+        text: "Ejemplo:",
+      },
+      {
+        type: "code",
+        language: "bash",
+        text: "npx create-next-app@latest mi-proyecto-next",
+      },
+      {
+        type: "p",
+        text: "Este comando inicia un asistente en terminal que me permite definir la configuración inicial del proyecto.",
+      },
+
+      {
+        type: "h2",
+        text: "3. Selecciono si quiero usar la configuración recomendada",
+      },
+      {
+        type: "p",
+        text: "Al iniciar el asistente, Next.js puede preguntar si quiero usar la configuración recomendada o personalizar el proyecto.",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "What is your project named? mi-proyecto-next\nWould you like to use the recommended Next.js defaults?\n  Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router, AGENTS.md\n  No, reuse previous settings\n  No, customize settings - Choose your own preferences",
+      },
+      {
+        type: "p",
+        text: "En mi caso, normalmente elijo personalizar la configuración, porque prefiero trabajar con JavaScript, CSS Modules y una estructura más controlada desde el inicio.",
+      },
+
+      {
+        type: "h2",
+        text: "4. Personalizo la configuración del proyecto",
+      },
+      {
+        type: "p",
+        text: "Cuando quiero un proyecto con JavaScript, App Router y una estructura limpia, suelo responder de esta forma:",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "Would you like to use TypeScript? No\nWhich linter would you like to use? ESLint\nWould you like to use React Compiler? No\nWould you like to use Tailwind CSS? No\nWould you like your code inside a `src/` directory? Yes\nWould you like to use App Router? Yes\nWould you like to customize the import alias? No",
+      },
+      {
+        type: "p",
+        text: "Uso esta configuración porque me permite trabajar de forma ordenada sin agregar herramientas que no necesito desde el inicio.",
+      },
+
+      {
+        type: "h2",
+        text: "5. Decido si incluyo AGENTS.md",
+      },
+      {
+        type: "p",
+        text: "En versiones recientes del asistente también puede aparecer una pregunta relacionada con AGENTS.md. Este archivo sirve como guía para asistentes de código o agentes de IA dentro del proyecto.",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "Would you like to include AGENTS.md to guide coding agents to write up-to-date Next.js code? Yes / No",
+      },
+      {
+        type: "p",
+        text: "Si el proyecto lo voy a trabajar con apoyo de herramientas de IA o quiero dejar instrucciones internas para mantener consistencia, puedo seleccionar Yes. Si quiero una estructura más mínima, puedo seleccionar No.",
+      },
+      {
+        type: "p",
+        text: "Para proyectos personales, portafolios o pruebas rápidas, puedo omitirlo. Para proyectos más grandes o colaborativos, sí puede ser útil incluirlo.",
+      },
+
+      {
+        type: "h2",
+        text: "6. Configuración que normalmente recomiendo para mi flujo",
+      },
+      {
+        type: "p",
+        text: "Para mi forma de trabajar, una configuración base sólida sería la siguiente:",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "TypeScript: No\nLinter: ESLint\nReact Compiler: No\nTailwind CSS: No\nsrc/ directory: Yes\nApp Router: Yes\nCustomize import alias: No\nImport alias: @/*\nAGENTS.md: Opcional",
+      },
+      {
+        type: "p",
+        text: "Con esto el proyecto queda preparado para trabajar con JavaScript, rutas modernas con App Router, imports limpios usando @/* y estilos separados mediante CSS Modules.",
+      },
+
+      {
+        type: "h2",
+        text: "7. Entro a la carpeta del proyecto",
+      },
+      {
+        type: "p",
+        text: "Después de crear el proyecto, entro a la carpeta generada:",
+      },
+      {
+        type: "code",
+        language: "bash",
+        text: "cd mi-proyecto-next",
+      },
+
+      {
+        type: "h2",
+        text: "8. Levanto el servidor de desarrollo",
+      },
+      {
+        type: "p",
+        text: "Para iniciar el proyecto en modo desarrollo, ejecuto:",
+      },
+      {
+        type: "code",
+        language: "bash",
+        text: "npm run dev",
+      },
+      {
+        type: "p",
+        text: "Después abro el navegador en:",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "http://localhost:3000",
+      },
+
+      {
+        type: "h2",
+        text: "9. Reviso la estructura inicial",
+      },
+      {
+        type: "p",
+        text: "Al usar src/ y App Router, la estructura inicial del proyecto queda más ordenada. Una base común puede verse así:",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "mi-proyecto-next/\n├── public/\n├── src/\n│   └── app/\n│       ├── favicon.ico\n│       ├── globals.css\n│       ├── layout.js\n│       └── page.js\n├── eslint.config.mjs\n├── jsconfig.json\n├── next.config.mjs\n├── package.json\n└── README.md",
+      },
+      {
+        type: "p",
+        text: "A partir de esta base puedo crear carpetas como components, shared, styles, utils o services, dependiendo del tamaño y objetivo del proyecto.",
+      },
+
+      {
+        type: "h2",
+        text: "10. Estructura recomendada para seguir creciendo",
+      },
+      {
+        type: "p",
+        text: "Para un proyecto de portafolio, landing page o aplicación institucional, normalmente puedo organizar el código de esta manera:",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "src/\n├── app/\n│   ├── layout.js\n│   ├── page.js\n│   └── globals.css\n├── components/\n│   └── NombreComponente/\n│       ├── NombreComponente.js\n│       └── NombreComponente.module.css\n├── shared/\n│   ├── Navbar.js\n│   └── Footer.js\n├── data/\n│   └── contenido.js\n└── utils/\n    └── helpers.js",
+      },
+      {
+        type: "p",
+        text: "Esta estructura me ayuda a separar componentes, datos, estilos y utilidades. Así evito que todo quede mezclado dentro de app/ y puedo mantener el proyecto más limpio conforme crece.",
+      },
+
+      {
+        type: "h2",
+        text: "11. Creo mis primeros componentes",
+      },
+      {
+        type: "p",
+        text: "Cuando agrego un componente nuevo, prefiero colocarlo dentro de una carpeta propia junto con su archivo CSS Module.",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "components/\n└── Hero/\n    ├── Hero.js\n    └── Hero.module.css",
+      },
+      {
+        type: "p",
+        text: "Esto me permite mantener cada componente aislado, fácil de mover, reutilizar o modificar sin afectar otras secciones del proyecto.",
+      },
+
+      {
+        type: "h2",
+        text: "12. Uso CSS Modules para mantener estilos controlados",
+      },
+      {
+        type: "p",
+        text: "Como no uso Tailwind en esta configuración, trabajo con CSS Modules para tener estilos encapsulados por componente.",
+      },
+      {
+        type: "code",
+        language: "jsx",
+        text: "import styles from \"./Hero.module.css\";\n\nexport default function Hero() {\n  return (\n    <section className={styles.hero}>\n      <h1>Mi proyecto en Next.js 16</h1>\n    </section>\n  );\n}",
+      },
+      {
+        type: "p",
+        text: "Este enfoque evita conflictos de nombres entre clases y hace que el mantenimiento visual sea más claro.",
+      },
+
+      {
+        type: "h2",
+        text: "Conclusión",
+      },
+      {
+        type: "p",
+        text: "Crear un proyecto con Next.js 16 es sencillo, pero hacerlo con una metodología clara desde el inicio ayuda a mantener el proyecto más ordenado, más fácil de escalar y más cómodo de mantener.",
+      },
+      {
+        type: "p",
+        text: "Mi flujo base es:",
+      },
+      {
+        type: "code",
+        language: "bash",
+        text: "npx create-next-app@latest mi-proyecto-next\ncd mi-proyecto-next\nnpm run dev",
+      },
+      {
+        type: "p",
+        text: "A partir de ahí, puedo comenzar a construir el proyecto con una estructura limpia, componentes bien organizados, estilos controlados con CSS Modules y una base preparada para crecer conforme se agreguen nuevas páginas, secciones, datos y conexiones con APIs.",
+      },
+    ],
+    date: "27 de mayo, 2026",
+    image: "/img/tutoriales/nextjs-setup-16.png",
+    category: "Desarrollo Web",
+    featuredPosts: true,
+  },
+  {
     name: "Cómo organizo mis commits en Git y por qué uso esta metodología",
     description: [
       {
@@ -1946,7 +2219,7 @@ export const blogPosts = [
       },
       {
         "type": "h3",
-        "text": "1️⃣ Respalda el archivo hosts"
+        "text": "1) Respalda el archivo hosts"
       },
       {
         "type": "p",
@@ -1960,7 +2233,7 @@ export const blogPosts = [
       },
       {
         "type": "h3",
-        "text": "2️⃣ Elimina todas las líneas que bloquean páginas"
+        "text": "2) Elimina todas las líneas que bloquean páginas"
       },
       {
         "type": "p",
@@ -1988,7 +2261,7 @@ export const blogPosts = [
       },
       {
         "type": "h3",
-        "text": "3️⃣ Limpia la caché DNS del sistema"
+        "text": "3) Limpia la caché DNS del sistema"
       },
       {
         "type": "p",
@@ -2048,7 +2321,7 @@ export const blogPosts = [
       },
       {
         "type": "h2",
-        "text": "🔁 Si vuelve a bloquearse solo"
+        "text": "Si vuelve a bloquearse solo"
       },
       {
         "type": "p",
@@ -2136,7 +2409,7 @@ export const blogPosts = [
       },
       {
         "type": "h3",
-        "text": "1️⃣ Verifica el tipo de archivo comprimido"
+        "text": "1) Verifica el tipo de archivo comprimido"
       },
       {
         "type": "p",
@@ -2154,7 +2427,7 @@ export const blogPosts = [
       },
       {
         "type": "h3",
-        "text": "2️⃣ Descomprimir usando rutas completas"
+        "text": "2) Descomprimir usando rutas completas"
       },
       {
         "type": "p",
@@ -2214,7 +2487,7 @@ export const blogPosts = [
       },
       {
         "type": "h3",
-        "text": "3️⃣ Si prefieres moverte solo un nivel dentro del proyecto"
+        "text": "3) Si prefieres moverte solo un nivel dentro del proyecto"
       },
       {
         "type": "p",
@@ -2234,7 +2507,7 @@ export const blogPosts = [
       },
       {
         "type": "h3",
-        "text": "4️⃣ Limpieza final (opcional)"
+        "text": "4) Limpieza final (opcional)"
       },
       {
         "type": "p",
@@ -2248,7 +2521,7 @@ export const blogPosts = [
       },
       {
         "type": "h3",
-        "text": "5️⃣ Si aparece error 'command not found'"
+        "text": "5) Si aparece error 'command not found'"
       },
       {
         "type": "p",
@@ -2342,7 +2615,7 @@ export const blogPosts = [
       { "type": "p", "text": "15) Buenas prácticas de arquitectura (resumen):\n• Server Components por defecto: menos JS en el cliente, cargas más rápidas.\n• Encapsula estilos con .module.css para evitar colisiones.\n• Fetch en el servidor con caché adecuada (revalidate, cache: 'no-store' donde aplique).\n• Nunca expongas secretos en NEXT_PUBLIC_.\n• Segmenta rutas por dominio (p. ej., (public), (dashboard)).\n• Desacopla UI y datos: componentes puros + funciones de acceso a datos." },
     ],
     date: "20 de septiembre, 2025",
-    image: "/img/tutoriales/nextjs-setup.png",
+    image: "/img/tutoriales/nextjs-setup-15.png",
     category: "Desarrollo Web",
     featuredPosts: true
   },

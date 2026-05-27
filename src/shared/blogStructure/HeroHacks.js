@@ -17,11 +17,11 @@ export default function HeroHacks({
       id: 2,
       tag: 'Desarrollo Web',
       title:
-        'Guía paso a paso: crea tu proyecto con Next.js 15',
+        'Guía paso a paso: crea tu proyecto con Next.js 16',
       excerpt:
-        'Vamos a crear un proyecto de Next.js 15 desde cero, eligiendo opciones óptimas para tu stack',
-      image: '/img/tutoriales/nextjs-setup.png',
-      href: '/hacks/guia-paso-a-paso-crea-tu-proyecto-con-nextjs-15',
+        'Vamos a crear un proyecto de Next.js 16 desde cero, eligiendo opciones óptimas para tu stack',
+      image: '/img/tutoriales/nextjs-setup-16.png',
+      href: '/hacks/guia-paso-a-paso-crea-tu-proyecto-con-nextjs-16',
       featured: true, // tarjeta central grande
     },
     {
@@ -31,7 +31,7 @@ export default function HeroHacks({
       excerpt:
         'Cuando trabajamos con CyberArk y WinSCP, puede ocurrir que las carpetas no se suban correctamente.',
       image: '/img/tutoriales/linux-unzip-cyberark.png',
-      href: '/hacks/conexion-ssh-que-necesitas-y-como-iniciar-sesion-de-forma-segura',
+      href: '/hacks/como-descomprimir-archivos-en-linux-sin-moverte-de-carpeta-cyberark-winscp',
     },
   ],
 }) {
