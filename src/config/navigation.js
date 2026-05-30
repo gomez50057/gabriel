@@ -15,6 +15,10 @@ export const TOOLS_LINKS = [
     href: "/herramientas/corner-shape-generador",
     label: "Generador de corner-shape",
   },
+  {
+    href: "/herramientas/generador-marcas-agua",
+    label: "Generador de marcas de agua",
+  },
 ];
 
 export const HEADER_LINKS = [

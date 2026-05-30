@@ -1,0 +1,754 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.75fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+
+.hero h1,
+.hero p,
+.panelHeader h3,
+.previewHeader h3,
+.uploadText h3 {
+  margin: 0;
+}
+
+.hero h1 {
+  margin-top: 0.25rem;
+  color: var(--heading);
+  font-size: clamp(1.7rem, 1.35rem + 1.3vw, 2.55rem);
+  line-height: 1.08;
+}
+
+.hero p {
+  max-width: 760px;
+  margin-top: 0.7rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.kicker,
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--vinoOsc);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.privacyNote,
+.uploadPanel,
+.previewPanel,
+.controlsPanel,
+.actionsPanel,
+.signatureNote {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.privacyNote {
+  padding: 1rem;
+  color: var(--heading);
+  line-height: 1.55;
+  background: color-mix(in lab, var(--accent) 10%, var(--surface));
+}
+
+.uploadPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-style: dashed;
+  transition: background 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.uploadPanelActive {
+  border-color: var(--border-strong);
+  background: color-mix(in lab, var(--accent) 12%, var(--surface));
+  box-shadow: 0 0 0 3px var(--ring), var(--shadow-sm);
+}
+
+.uploadText h3,
+.panelHeader h3,
+.previewHeader h3 {
+  margin-top: 0.2rem;
+  color: var(--heading);
+  font-size: 1.05rem;
+}
+
+.uploadText p,
+.uploadWarning,
+.emptyText,
+.fieldHint {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.uploadText p {
+  margin: 0.35rem 0 0;
+}
+
+.uploadWarning {
+  max-width: 760px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgba(188, 149, 91, 0.35);
+  border-radius: 8px;
+  background: rgba(188, 149, 91, 0.12);
+  line-height: 1.45;
+}
+
+.fileButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.65rem 0.95rem;
+  border: 1px solid var(--action-bg);
+  border-radius: 8px;
+  background: var(--action-bg);
+  color: var(--action-fg);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.16s ease, border-color 0.16s ease, transform 0.08s ease;
+}
+
+.fileButton:hover {
+  background: var(--action-bg-hover);
+  border-color: var(--action-bg-hover);
+}
+
+.fileButton:active {
+  transform: translateY(1px);
+}
+
+.fileButton input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fileMeta {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0.25rem 0 0;
+}
+
+.fileMeta div {
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.fileMeta dt {
+  margin-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.fileMeta dd {
+  margin: 0;
+  color: var(--heading);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.emptyText {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.75fr);
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.previewPanel,
+.controlsPanel {
+  min-width: 0;
+  padding: 1rem;
+}
+
+.previewHeader {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.previewMeta {
+  margin: -0.35rem 0 0.8rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.previewHeader h3 {
+  overflow-wrap: anywhere;
+}
+
+.pageStepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: 0 0 auto;
+}
+
+.pageStepper span {
+  min-width: 58px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+.pageStepper button,
+.secondaryButton,
+.dangerButton,
+.primaryButton {
+  min-height: 40px;
+  border-radius: 8px;
+  padding: 0.58rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.16s ease, border-color 0.16s ease, opacity 0.16s ease;
+}
+
+.pageStepper button,
+.secondaryButton {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--heading);
+}
+
+.pageStepper button:hover,
+.secondaryButton:hover {
+  background: var(--surface-soft);
+}
+
+.previewCanvas {
+  display: grid;
+  place-items: start center;
+  min-height: 520px;
+  max-height: 76vh;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background:
+    linear-gradient(45deg, rgba(112, 114, 113, 0.08) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(112, 114, 113, 0.08) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(112, 114, 113, 0.08) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(112, 114, 113, 0.08) 75%);
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  background-size: 20px 20px;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.previewPlaceholder {
+  display: grid;
+  place-items: center;
+  width: min(100%, 520px);
+  min-height: 280px;
+  padding: 1rem;
+  border: 1px dashed var(--border-mid);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.mediaFrame {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--shadow-md);
+}
+
+.mediaFrame img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mediaFrame :global(.react-pdf__Document) {
+  display: block;
+}
+
+.mediaFrame :global(.react-pdf__Page) {
+  display: flex;
+  justify-content: center;
+}
+
+.mediaFrame :global(.react-pdf__Page__canvas) {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+}
+
+.watermarkSingle,
+.watermarkPattern {
+  position: absolute;
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  user-select: none;
+}
+
+.watermarkSingle {
+  max-width: 86%;
+  white-space: nowrap;
+  cursor: grab;
+  pointer-events: auto;
+  touch-action: none;
+  transform: translate(-50%, -50%) rotate(var(--watermark-rotation));
+  transform-origin: center;
+}
+
+.watermarkDragging {
+  cursor: grabbing;
+}
+
+.watermarkCenter {
+  left: 50%;
+  top: 50%;
+}
+
+.watermarkTopLeft {
+  left: 40px;
+  top: 40px;
+  transform: rotate(var(--watermark-rotation));
+  transform-origin: left top;
+}
+
+.watermarkTopRight {
+  right: 40px;
+  top: 40px;
+  transform: rotate(var(--watermark-rotation));
+  transform-origin: right top;
+}
+
+.watermarkBottomLeft {
+  left: 40px;
+  bottom: 40px;
+  transform: rotate(var(--watermark-rotation));
+  transform-origin: left bottom;
+}
+
+.watermarkBottomRight {
+  right: 40px;
+  bottom: 40px;
+  transform: rotate(var(--watermark-rotation));
+  transform-origin: right bottom;
+}
+
+.watermarkPattern {
+  inset: -35%;
+  display: grid;
+  grid-template-columns: repeat(8, max-content);
+  align-content: center;
+  justify-content: center;
+  gap: var(--watermark-gap-y) var(--watermark-gap-x);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.watermarkPattern span {
+  display: inline-block;
+  white-space: nowrap;
+  transform: rotate(var(--watermark-rotation));
+}
+
+.panelHeader {
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 0.95rem;
+}
+
+.formGroup label,
+.toggleRow label {
+  color: var(--heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--control-bg);
+  color: var(--heading);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.formGroup input,
+.formGroup select {
+  min-height: 40px;
+  padding: 0.55rem 0.65rem;
+}
+
+.formGroup textarea {
+  min-height: 92px;
+  resize: vertical;
+  padding: 0.7rem;
+  line-height: 1.45;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.formGroup input[type="range"] {
+  min-height: auto;
+  padding: 0;
+  accent-color: var(--vino);
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.valuePill {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.colorRow {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+.colorRow input[type="color"] {
+  height: 40px;
+  padding: 0.15rem;
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.swatch {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--surface);
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px var(--border-mid);
+  cursor: pointer;
+}
+
+.toggleRow {
+  margin: 0.2rem 0 1rem;
+}
+
+.toggleRow label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  cursor: pointer;
+}
+
+.toggleRow input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--vino);
+}
+
+.pdfControls {
+  margin-top: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.signatureNote {
+  margin: 1rem 0 0;
+  padding: 0.8rem 0.95rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  box-shadow: none;
+}
+
+.actionsPanel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+  padding: 0.85rem;
+}
+
+.primaryButton {
+  border: 1px solid var(--action-bg);
+  background: var(--action-bg);
+  color: var(--action-fg);
+}
+
+.primaryButton:hover {
+  background: var(--action-bg-hover);
+  border-color: var(--action-bg-hover);
+}
+
+.dangerButton {
+  border: 1px solid rgba(160, 33, 66, 0.26);
+  background: rgba(160, 33, 66, 0.08);
+  color: var(--heading);
+}
+
+.dangerButton:hover {
+  background: rgba(160, 33, 66, 0.14);
+}
+
+.pageStepper button:disabled,
+.secondaryButton:disabled,
+.dangerButton:disabled,
+.primaryButton:disabled,
+.fileButton:has(input:disabled),
+.formGroup input:disabled,
+.formGroup textarea:disabled,
+.formGroup select:disabled,
+.swatch:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.messageArea {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+}
+
+.errorMessage,
+.warningMessage,
+.successMessage {
+  margin: 0;
+  padding: 0.8rem 0.9rem;
+  border-radius: 8px;
+  line-height: 1.45;
+}
+
+.errorMessage {
+  border: 1px solid var(--danger-border);
+  background: var(--danger-soft);
+  color: var(--heading);
+}
+
+.errorMessage p {
+  margin: 0;
+}
+
+.contactAlert {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.65rem;
+}
+
+.contactLink,
+.contactIconLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 34px;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contactLink:hover,
+.contactIconLink:hover {
+  background: var(--surface-soft);
+}
+
+.contactIconLink img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.warningMessage {
+  border: 1px solid rgba(188, 149, 91, 0.35);
+  background: rgba(188, 149, 91, 0.12);
+  color: var(--heading);
+}
+
+.successMessage {
+  border: 1px solid var(--success-border);
+  background: var(--success-soft);
+  color: var(--heading);
+}
+
+@media (max-width: 1040px) {
+  .hero,
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .previewCanvas {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 720px) {
+  .wrapper {
+    padding-inline: 0.75rem;
+  }
+
+  .uploadPanel,
+  .previewHeader,
+  .actionsPanel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .uploadPanel,
+  .fileMeta,
+  .twoColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .fileButton,
+  .primaryButton,
+  .secondaryButton,
+  .dangerButton {
+    width: 100%;
+  }
+
+  .previewHeader {
+    display: grid;
+  }
+
+  .pageStepper {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .previewCanvas {
+    min-height: 340px;
+    padding: 0.65rem;
+  }
+
+}
