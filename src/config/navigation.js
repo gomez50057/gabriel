@@ -19,6 +19,10 @@ export const TOOLS_LINKS = [
     href: "/herramientas/generador-marcas-agua",
     label: "Generador de marcas de agua",
   },
+  {
+    href: "/herramientas/generador-codigos-qr",
+    label: "Generador de codigos QR",
+  },
 ];
 
 export const HEADER_LINKS = [
