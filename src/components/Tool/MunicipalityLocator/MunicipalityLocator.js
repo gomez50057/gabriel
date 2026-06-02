@@ -3,7 +3,10 @@
 import { useMemo, useState } from "react";
 import styles from "./MunicipalityLocator.module.css";
 import { REGIONALIZACION_HIDALGO } from "./regionalizacionHidalgo";
-import { LOCALIDADES_HIDALGO } from "./municipalityLocalities";
+import {
+  LOCALIDADES_HIDALGO,
+  MUNICIPALITY_LOCALITIES_SOURCE,
+} from "./municipalityLocalities";
 
 function normalizeText(value = "") {
   return value
@@ -46,20 +49,154 @@ function sortMunicipalities(items) {
 const LOCALIDADES_BY_MUNICIPIO = new Map(
   LOCALIDADES_HIDALGO.map((item) => [
     normalizeText(item.municipio),
-    item.localidades || [],
+    item,
   ])
 );
 
-function isOtraLocality(locality) {
-  return normalizeText(locality) === "otra";
+const TEXT_FORMAT_OPTIONS = [
+  { value: "upper", label: "Mayúsculas" },
+  { value: "title", label: "Capitalizar" },
+  { value: "lower", label: "Minúsculas" },
+];
+
+const LOWERCASE_TITLE_WORDS = new Set([
+  "a",
+  "al",
+  "ante",
+  "bajo",
+  "con",
+  "contra",
+  "de",
+  "del",
+  "desde",
+  "durante",
+  "e",
+  "el",
+  "en",
+  "entre",
+  "hacia",
+  "hasta",
+  "la",
+  "las",
+  "lo",
+  "los",
+  "mediante",
+  "ni",
+  "o",
+  "para",
+  "pero",
+  "por",
+  "según",
+  "sin",
+  "sobre",
+  "tras",
+  "u",
+  "un",
+  "una",
+  "unas",
+  "unos",
+  "versus",
+  "vía",
+  "y",
+]);
+
+function isInactiveLocality(locality) {
+  return normalizeText(locality?.estatus) === "baja";
 }
 
-function getMunicipalityLocalities(municipio, includeOtra = true) {
-  const localities = LOCALIDADES_BY_MUNICIPIO.get(normalizeText(municipio)) || [];
+function getMunicipalityLocalityData(municipio) {
+  return LOCALIDADES_BY_MUNICIPIO.get(normalizeText(municipio)) || null;
+}
 
-  if (includeOtra) return localities;
+function getMunicipalityLocalities(municipio, includeBajas = false) {
+  const localities =
+    getMunicipalityLocalityData(municipio)?.localidades || [];
 
-  return localities.filter((locality) => !isOtraLocality(locality));
+  if (includeBajas) return localities;
+
+  return localities.filter((locality) => !isInactiveLocality(locality));
+}
+
+function getLocalityName(locality) {
+  return locality?.nombre ?? locality;
+}
+
+function formatNumber(value) {
+  const number = Number(value);
+
+  return Number.isFinite(number) ? number.toLocaleString("es-MX") : "N/D";
+}
+
+function getNumericValue(value) {
+  const number = Number(value);
+
+  return Number.isFinite(number) ? number : 0;
+}
+
+function getPopulationTotal(localities) {
+  return localities.reduce(
+    (total, locality) => total + getNumericValue(locality.poblacionTotal),
+    0
+  );
+}
+
+function capitalizeWord(value) {
+  const lower = value.toLocaleLowerCase("es-MX");
+
+  return lower.replace(/(^|[-'’])(\p{L})/gu, (match, separator, letter) =>
+    `${separator}${letter.toLocaleUpperCase("es-MX")}`
+  );
+}
+
+function toSmartTitleCase(value) {
+  return String(value ?? "")
+    .toLocaleLowerCase("es-MX")
+    .split(/(\s+)/)
+    .map((part, index) => {
+      if (!part.trim()) return part;
+
+      const normalized = normalizeText(part);
+
+      if (index > 0 && LOWERCASE_TITLE_WORDS.has(normalized)) {
+        return part;
+      }
+
+      return capitalizeWord(part);
+    })
+    .join("");
+}
+
+function formatOutputText(value, format) {
+  const text = String(value ?? "");
+
+  if (format === "lower") return text.toLocaleLowerCase("es-MX");
+  if (format === "title") return toSmartTitleCase(text);
+
+  return text.toLocaleUpperCase("es-MX");
+}
+
+function formatOutputItems(items, format) {
+  return items.map((item) => formatOutputText(item, format));
+}
+
+function getEditableOtraLocality(value) {
+  return {
+    nombre: value.trim() || "Otra",
+    estatus: "Editable",
+    ambito: "",
+    claveGeoestadistica: "",
+    claveLocalidad: "",
+    latitud: "",
+    longitud: "",
+    latDecimal: "",
+    lonDecimal: "",
+    altitud: "",
+    poblacionTotal: "",
+    poblacionMasculina: "",
+    poblacionFemenina: "",
+    viviendasHabitadas: "",
+    editable: true,
+  };
 }
 
 function getDownloadSlug(value) {
@@ -195,20 +332,49 @@ function createZip(files) {
 }
 
 function getSingleColumnWorkbookBlob(items, sheetName = "Datos") {
-  const safeSheetName = escapeXml(String(sheetName).slice(0, 31) || "Datos");
-  const rows = items
-    .map(
-      (item, index) =>
-        `<row r="${index + 1}"><c r="A${index + 1}" t="inlineStr"><is><t>${escapeXml(item)}</t></is></c></row>`
-    )
-    .join("");
+  return getTableWorkbookBlob([sheetName], items.map((item) => [item]), sheetName);
+}
 
+function getColumnName(index) {
+  let column = "";
+  let value = index + 1;
+
+  while (value > 0) {
+    const remainder = (value - 1) % 26;
+    column = String.fromCharCode(65 + remainder) + column;
+    value = Math.floor((value - remainder) / 26);
+  }
+
+  return column;
+}
+
+function getTableWorkbookBlob(headers, rows, sheetName = "Datos") {
+  const safeSheetName = escapeXml(String(sheetName).slice(0, 31) || "Datos");
+  const allRows = [headers, ...rows];
+  const sheetRows = allRows
+    .map((row, rowIndex) => {
+      const rowNumber = rowIndex + 1;
+      const cells = row
+        .map((cell, columnIndex) => {
+          const cellName = `${getColumnName(columnIndex)}${rowNumber}`;
+          return `<c r="${cellName}" t="inlineStr"><is><t>${escapeXml(cell)}</t></is></c>`;
+        })
+        .join("");
+
+      return `<row r="${rowNumber}">${cells}</row>`;
+    })
+    .join("");
+  const columnCount = Math.max(headers.length, 1);
+  const columns = Array.from({ length: columnCount }, (_, index) => {
+    const width = index === 0 ? 42 : 18;
+    return `<col min="${index + 1}" max="${index + 1}" width="${width}" customWidth="1"/>`;
+  }).join("");
   const worksheet = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
   <sheetViews><sheetView workbookViewId="0"/></sheetViews>
   <sheetFormatPr defaultRowHeight="15"/>
-  <cols><col min="1" max="1" width="42" customWidth="1"/></cols>
-  <sheetData>${rows}</sheetData>
+  <cols>${columns}</cols>
+  <sheetData>${sheetRows}</sheetData>
 </worksheet>`;
 
   return createZip([
@@ -250,10 +416,48 @@ function getSingleColumnWorkbookBlob(items, sheetName = "Datos") {
   ]);
 }
 
-function downloadLocalitiesXlsx(municipio, localities) {
+function getLocalityWorkbookRows(localities, textFormat) {
+  return localities.map((locality) => [
+    formatOutputText(getLocalityName(locality), textFormat),
+    locality.estatus || "",
+    locality.ambito || "",
+    locality.claveGeoestadistica || "",
+    locality.claveLocalidad || "",
+    locality.latitud || "",
+    locality.longitud || "",
+    locality.latDecimal ?? "",
+    locality.lonDecimal ?? "",
+    locality.altitud ?? "",
+    locality.poblacionTotal ?? "",
+    locality.poblacionMasculina ?? "",
+    locality.poblacionFemenina ?? "",
+    locality.viviendasHabitadas ?? "",
+  ]);
+}
+
+function downloadLocalitiesXlsx(municipio, localities, textFormat) {
   if (!municipio || !localities.length) return;
 
-  const blob = getSingleColumnWorkbookBlob(localities, "Localidades");
+  const blob = getTableWorkbookBlob(
+    [
+      "Localidad",
+      "Estatus",
+      "Ámbito",
+      "CVEGEO",
+      "CVE_LOC",
+      "Latitud",
+      "Longitud",
+      "Lat decimal",
+      "Lon decimal",
+      "Altitud",
+      "Población total",
+      "Población masculina",
+      "Población femenina",
+      "Viviendas habitadas",
+    ],
+    getLocalityWorkbookRows(localities, textFormat),
+    "Localidades"
+  );
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
 
@@ -353,7 +557,9 @@ function RelatedDropdown({ title, items, onSelect }) {
 export default function MunicipalityLocator({ initialMunicipio = "" }) {
   const [query, setQuery] = useState(initialMunicipio);
   const [includeOtra, setIncludeOtra] = useState(true);
-  const [otraValue, setOtraValue] = useState("OTRA");
+  const [includeBajas, setIncludeBajas] = useState(false);
+  const [textFormat, setTextFormat] = useState("title");
+  const [otraValue, setOtraValue] = useState("Otra");
   const [copyStatus, setCopyStatus] = useState("");
   const [municipalityCopyStatus, setMunicipalityCopyStatus] = useState("");
 
@@ -393,49 +599,113 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
     [selectedMunicipality]
   );
 
-  const allSelectedLocalities = useMemo(
+  const selectedLocalityData = useMemo(
     () =>
       selectedMunicipality
-        ? getMunicipalityLocalities(selectedMunicipality.municipio, true)
-        : [],
+        ? getMunicipalityLocalityData(selectedMunicipality.municipio)
+        : null,
     [selectedMunicipality]
   );
 
-  const selectedLocalities = useMemo(
+  const allSelectedLocalities = useMemo(
+    () => selectedLocalityData?.localidades || [],
+    [selectedLocalityData]
+  );
+
+  const officialSelectedLocalities = useMemo(
     () => {
       if (!selectedMunicipality) return [];
 
-      const localities = getMunicipalityLocalities(
+      return getMunicipalityLocalities(
         selectedMunicipality.municipio,
-        includeOtra
-      );
-
-      return localities.map((locality) =>
-        isOtraLocality(locality) ? otraValue.trim() || "OTRA" : locality
+        includeBajas
       );
     },
-    [selectedMunicipality, includeOtra, otraValue]
+    [selectedMunicipality, includeBajas]
   );
 
-  const hasOtraLocality = useMemo(
-    () => allSelectedLocalities.some(isOtraLocality),
+  const selectedLocalityRecords = useMemo(
+    () => {
+      if (!selectedMunicipality) return [];
+
+      return includeOtra
+        ? [...officialSelectedLocalities, getEditableOtraLocality(otraValue)]
+        : officialSelectedLocalities;
+    },
+    [selectedMunicipality, officialSelectedLocalities, includeOtra, otraValue]
+  );
+
+  const selectedLocalities = useMemo(
+    () =>
+      formatOutputItems(
+        selectedLocalityRecords.map(getLocalityName),
+        textFormat
+      ),
+    [selectedLocalityRecords, textFormat]
+  );
+
+  const filteredPopulationTotal = useMemo(
+    () => getPopulationTotal(officialSelectedLocalities),
+    [officialSelectedLocalities]
+  );
+
+  const municipalPopulationTotal = useMemo(
+    () =>
+      getPopulationTotal(
+        allSelectedLocalities.filter((locality) => !isInactiveLocality(locality))
+      ),
     [allSelectedLocalities]
   );
 
+  const localitySummary = selectedLocalityData?.resumen || {
+    total: 0,
+    activas: 0,
+    bajas: 0,
+    urbanas: 0,
+    rurales: 0,
+  };
+
+  const sourceTotals = MUNICIPALITY_LOCALITIES_SOURCE.totales;
+
+  const sourceSummary = useMemo(
+    () =>
+      `${sourceTotals.localidades.toLocaleString("es-MX")} localidades de ${sourceTotals.municipios} municipios`,
+    [sourceTotals]
+  );
+
   const municipalityNames = useMemo(
-    () => sortMunicipalities(REGIONALIZACION_HIDALGO).map((item) => item.municipio),
-    []
+    () =>
+      formatOutputItems(
+        sortMunicipalities(REGIONALIZACION_HIDALGO).map((item) => item.municipio),
+        textFormat
+      ),
+    [textFormat]
+  );
+
+  const populationRows = useMemo(
+    () =>
+      officialSelectedLocalities.map((locality) => ({
+        key: locality.claveGeoestadistica || locality.nombre,
+        nombre: formatOutputText(locality.nombre, textFormat),
+        poblacionTotal: formatNumber(locality.poblacionTotal),
+        poblacionMasculina: formatNumber(locality.poblacionMasculina),
+        poblacionFemenina: formatNumber(locality.poblacionFemenina),
+        viviendasHabitadas: formatNumber(locality.viviendasHabitadas),
+        estatus: locality.estatus,
+      })),
+    [officialSelectedLocalities, textFormat]
   );
 
   const clearSearch = () => {
     setQuery("");
-    setOtraValue("OTRA");
+    setOtraValue("Otra");
     setCopyStatus("");
+    setMunicipalityCopyStatus("");
   };
 
   const selectMunicipality = (municipio) => {
     setQuery(municipio);
-    setOtraValue("OTRA");
+    setOtraValue("Otra");
     setCopyStatus("");
   };
 
@@ -453,7 +723,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
 
           <p className={styles.description}>
             Busca un municipio para identificar su región, macrorregión y
-            microrregión.
+            microrregión, y descarga sus localidades oficiales de INEGI.
           </p>
         </div>
 
@@ -462,6 +732,24 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
           <span>municipios cargados</span>
 
           <div className={styles.counterActions}>
+            <label className={styles.formatControl}>
+              <span>Formato</span>
+              <select
+                value={textFormat}
+                onChange={(event) => {
+                  setTextFormat(event.target.value);
+                  setCopyStatus("");
+                  setMunicipalityCopyStatus("");
+                }}
+              >
+                {TEXT_FORMAT_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+
             <button
               type="button"
               className={styles.counterButton}
@@ -598,6 +886,36 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                 </article>
               </div>
 
+              <div className={styles.localityStats}>
+                <article>
+                  <span>Clave municipal</span>
+                  <strong>{selectedLocalityData?.claveMunicipio || "N/D"}</strong>
+                </article>
+
+                <article>
+                  <span>Localidades activas</span>
+                  <strong>{localitySummary.activas.toLocaleString("es-MX")}</strong>
+                </article>
+
+                <article>
+                  <span>Población municipal</span>
+                  <strong>{formatNumber(municipalPopulationTotal)}</strong>
+                </article>
+
+                <article>
+                  <span>Bajas registradas</span>
+                  <strong>{localitySummary.bajas.toLocaleString("es-MX")}</strong>
+                </article>
+
+                <article>
+                  <span>Ámbito</span>
+                  <strong>
+                    {localitySummary.urbanas.toLocaleString("es-MX")} U /{" "}
+                    {localitySummary.rurales.toLocaleString("es-MX")} R
+                  </strong>
+                </article>
+              </div>
+
               <section className={styles.downloadPanel}>
                 <div>
                   <span className={styles.downloadLabel}>
@@ -606,51 +924,62 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
 
                   <p className={styles.downloadText}>
                     {allSelectedLocalities.length > 0
-                      ? `${selectedLocalities.length} registros listos para descargar.`
+                      ? `${selectedLocalityRecords.length.toLocaleString("es-MX")} registros listos. Población en lista: ${formatNumber(filteredPopulationTotal)}. ${includeBajas ? "Incluye bajas de INEGI." : "Solo activas por defecto."}`
                       : "No hay localidades cargadas para este municipio en el archivo fuente."}
                   </p>
                 </div>
 
                 <div className={styles.downloadActions}>
-                  {hasOtraLocality && (
-                    <div className={styles.otraControls}>
-                      <label className={styles.checkboxLabel}>
-                        <input
-                          type="checkbox"
-                          checked={includeOtra}
-                          onChange={(event) => {
-                            setIncludeOtra(event.target.checked);
-                            setCopyStatus("");
-                          }}
-                        />
-                        <span>Incluir campo editable</span>
-                      </label>
-
+                  <div className={styles.optionStack}>
+                    <label className={styles.checkboxLabel}>
                       <input
-                        className={styles.otraInput}
-                        value={otraValue}
+                        type="checkbox"
+                        checked={includeOtra}
                         onChange={(event) => {
-                          setOtraValue(event.target.value);
+                          setIncludeOtra(event.target.checked);
                           setCopyStatus("");
                         }}
-                        disabled={!includeOtra}
-                        aria-label="Texto editable para el campo OTRA"
                       />
-                    </div>
-                  )}
+                      <span>Incluir campo editable</span>
+                    </label>
+
+                    <input
+                      className={styles.otraInput}
+                      value={otraValue}
+                      onChange={(event) => {
+                        setOtraValue(event.target.value);
+                        setCopyStatus("");
+                      }}
+                      disabled={!includeOtra}
+                      aria-label="Texto editable para el campo OTRA"
+                    />
+
+                    <label className={styles.checkboxLabel}>
+                      <input
+                        type="checkbox"
+                        checked={includeBajas}
+                        onChange={(event) => {
+                          setIncludeBajas(event.target.checked);
+                          setCopyStatus("");
+                        }}
+                      />
+                      <span>Incluir bajas de INEGI</span>
+                    </label>
+                  </div>
 
                   <button
                     type="button"
                     className={styles.downloadButton}
-                    disabled={selectedLocalities.length === 0}
+                    disabled={selectedLocalityRecords.length === 0}
                     onClick={() =>
                       downloadLocalitiesXlsx(
                         selectedMunicipality.municipio,
-                        selectedLocalities
+                        selectedLocalityRecords,
+                        textFormat
                       )
                     }
                   >
-                    Descargar XLSX
+                    Descargar XLSX detallado
                   </button>
 
                   <button
@@ -683,6 +1012,52 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                   )}
                 </div>
               </section>
+
+              <details className={styles.populationBox}>
+                <summary className={styles.populationSummary}>
+                  Población por colonia/localidad
+                </summary>
+
+                <div className={styles.populationList}>
+                  {populationRows.length > 0 ? (
+                    populationRows.map((locality) => (
+                      <article key={locality.key} className={styles.populationItem}>
+                        <div>
+                          <strong>{locality.nombre}</strong>
+                          <span>
+                            {locality.estatus === "Baja"
+                              ? "Baja INEGI"
+                              : "Localidad activa"}
+                          </span>
+                        </div>
+
+                        <dl>
+                          <div>
+                            <dt>Total</dt>
+                            <dd>{locality.poblacionTotal}</dd>
+                          </div>
+                          <div>
+                            <dt>Hombres</dt>
+                            <dd>{locality.poblacionMasculina}</dd>
+                          </div>
+                          <div>
+                            <dt>Mujeres</dt>
+                            <dd>{locality.poblacionFemenina}</dd>
+                          </div>
+                          <div>
+                            <dt>Viviendas</dt>
+                            <dd>{locality.viviendasHabitadas}</dd>
+                          </div>
+                        </dl>
+                      </article>
+                    ))
+                  ) : (
+                    <p className={styles.emptyText}>
+                      No hay población cargada para este municipio.
+                    </p>
+                  )}
+                </div>
+              </details>
 
               <div className={styles.dropdownStack}>
                 <RelatedDropdown
@@ -718,6 +1093,19 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
           )}
         </div>
       </div>
+
+      <p className={styles.sourceNote}>
+        Fuente:{" "}
+        <a
+          href={MUNICIPALITY_LOCALITIES_SOURCE.url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {MUNICIPALITY_LOCALITIES_SOURCE.institucion} AGEEML
+        </a>
+        . {sourceSummary}. Fecha de publicación:{" "}
+        {MUNICIPALITY_LOCALITIES_SOURCE.fechaPublicacion}.
+      </p>
     </section>
   );
 }
