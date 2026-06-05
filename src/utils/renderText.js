@@ -186,11 +186,12 @@ export const renderDescription = (description) => {
           );
         }
 
+        case "code":
         case "snippet":
           return (
             <li key={`s-${idx}`} className={styles.noBullet}>
               <Snippet
-                code={block.code || ""}
+                code={block.code ?? block.text ?? ""}
                 language={block.language || "txt"}
                 fileName={block.fileName}
                 showLineNumbers={!!block.showLineNumbers}

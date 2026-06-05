@@ -1,5 +1,148 @@
 export const blogPosts = [
   {
+    name: "Cómo mostrar archivos ocultos en CyberArk usando WinSCP",
+    description: [
+      {
+        type: "p",
+        text: "Cuando trabajo con servidores a través de CyberArk y necesito revisar archivos ocultos, como .env, .gitignore, carpetas .ssh o archivos de configuración internos, una de las formas más prácticas es activar la visualización de archivos ocultos directamente desde WinSCP.",
+      },
+      {
+        type: "p",
+        text: "Esto es útil porque, aunque CyberArk controle el acceso seguro al servidor, la visualización de archivos dentro de la sesión depende de la herramienta que se esté utilizando. Si la conexión se abre con WinSCP, la opción debe activarse desde las preferencias de WinSCP.",
+      },
+
+      {
+        type: "h2",
+        text: "1. Entro a la sesión desde CyberArk",
+      },
+      {
+        type: "p",
+        text: "Primero ingreso a CyberArk y abro la conexión correspondiente al servidor. Dependiendo de la configuración, CyberArk puede iniciar una sesión segura usando WinSCP para conectarse al servidor mediante SFTP.",
+      },
+      {
+        type: "p",
+        text: "Una vez abierta la sesión, WinSCP mostrará el explorador de archivos del servidor, normalmente dividido en dos paneles: archivos locales y archivos remotos.",
+      },
+
+      {
+        type: "h2",
+        text: "2. Identifico si los archivos ocultos no se están mostrando",
+      },
+      {
+        type: "p",
+        text: "En sistemas Linux, los archivos ocultos normalmente comienzan con un punto. Algunos ejemplos comunes son:",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: ".env\n.gitignore\n.htaccess\n.ssh\n.config",
+      },
+      {
+        type: "p",
+        text: "Si sé que el archivo existe en la ruta, pero no aparece dentro del panel de WinSCP, lo más probable es que la opción de mostrar archivos ocultos esté desactivada.",
+      },
+
+      {
+        type: "h2",
+        text: "3. Activo los archivos ocultos desde las preferencias",
+      },
+      {
+        type: "p",
+        text: "Para activar la visualización de archivos ocultos en WinSCP, entro al menú de configuración de la aplicación.",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "Options > Preferences > Panels > Show hidden files",
+      },
+      {
+        type: "p",
+        text: "Dentro de Preferences, busco la sección Panels y activo la opción Show hidden files. Esta opción permite que WinSCP muestre archivos y carpetas ocultas dentro del panel remoto.",
+      },
+
+      {
+        type: "h2",
+        text: "4. Uso el atajo rápido si quiero hacerlo más rápido",
+      },
+      {
+        type: "p",
+        text: "También puedo activar o desactivar la visualización de archivos ocultos usando el atajo de teclado de WinSCP.",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "Ctrl + Alt + H",
+      },
+      {
+        type: "p",
+        text: "Este atajo alterna la visibilidad de archivos ocultos. Si lo presiono una vez, los muestra; si lo vuelvo a presionar, los oculta nuevamente.",
+      },
+
+      {
+        type: "h2",
+        text: "5. Actualizo el panel remoto",
+      },
+      {
+        type: "p",
+        text: "Después de activar la opción, reviso nuevamente la carpeta remota. Si el archivo todavía no aparece, puedo actualizar el panel o cambiar de carpeta y regresar.",
+      },
+      {
+        type: "p",
+        text: "En algunos casos también es necesario cerrar y volver a abrir la sesión, especialmente si CyberArk abrió WinSCP con una configuración temporal o restringida.",
+      },
+
+      {
+        type: "h2",
+        text: "6. Verifico la ruta correcta",
+      },
+      {
+        type: "p",
+        text: "Si estoy buscando un archivo como .env, debo asegurarme de estar en la ruta correcta del proyecto. Por ejemplo, en un despliegue con Django o Next.js, el archivo puede estar en la raíz del backend, del frontend o dentro de una carpeta específica del servidor.",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "/home/desarrollo/proyecto/backend/.env\n/home/desarrollo/proyecto/frontend/.env\n/var/www/proyecto/.env",
+      },
+      {
+        type: "p",
+        text: "Si el archivo no aparece después de activar archivos ocultos, puede que no exista en esa ruta o que el usuario de conexión no tenga permisos para visualizarlo.",
+      },
+
+      {
+        type: "h2",
+        text: "7. Considero permisos y restricciones de CyberArk",
+      },
+      {
+        type: "p",
+        text: "CyberArk puede aplicar políticas de seguridad sobre la sesión. Por eso, aunque WinSCP tenga activada la opción de mostrar archivos ocultos, algunos archivos podrían no verse si el usuario no tiene permisos suficientes en el servidor.",
+      },
+      {
+        type: "p",
+        text: "En ese caso, no es un problema de WinSCP, sino de permisos del usuario, políticas de CyberArk o restricciones configuradas para la cuenta privilegiada.",
+      },
+
+      {
+        type: "h2",
+        text: "Resumen rápido",
+      },
+      {
+        type: "p",
+        text: "Si estoy usando CyberArk con WinSCP y necesito ver archivos ocultos, el flujo recomendado es:",
+      },
+      {
+        type: "code",
+        language: "txt",
+        text: "1. Abrir la sesión desde CyberArk.\n2. Confirmar que WinSCP está mostrando el panel remoto.\n3. Ir a Options > Preferences > Panels.\n4. Activar Show hidden files.\n5. O usar Ctrl + Alt + H.\n6. Actualizar la carpeta remota.\n7. Verificar permisos si el archivo no aparece.",
+      },
+
+    ],
+    date: "05 de junio, 2026",
+    image: "/img/tutoriales/cyberark-winscp-hidden-files.png",
+    category: "Seguridad",
+    featuredPosts: true,
+  },
+  {
     name: "Guía paso a paso: crea tu proyecto con Next.js 16",
     description: [
       {
@@ -269,7 +412,7 @@ export const blogPosts = [
     ],
     date: "27 de mayo, 2026",
     image: "/img/tutoriales/nextjs-setup-16.png",
-    category: "Desarrollo Web",
+    category: "Tutoriales",
     featuredPosts: true,
   },
   {
