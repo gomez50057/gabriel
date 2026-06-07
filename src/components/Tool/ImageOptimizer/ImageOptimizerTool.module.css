@@ -1,0 +1,566 @@
+.wrapper {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+
+.hero h1,
+.hero p,
+.panelHeader h2,
+.panelHeader p,
+.uploadText h2,
+.uploadText p,
+.emptyText,
+.messageArea p,
+.cardBody h3,
+.cardBody p {
+  margin: 0;
+}
+
+.hero h1 {
+  margin-top: 0.25rem;
+  color: var(--heading);
+  font-size: clamp(1.75rem, 1.35rem + 1.35vw, 2.6rem);
+  line-height: 1.08;
+}
+
+.hero p {
+  max-width: 760px;
+  margin-top: 0.7rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.kicker,
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--vinoOsc);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.privacyNote,
+.uploadPanel,
+.summaryPanel,
+.previewPanel,
+.catalogPanel,
+.panel,
+.actionsPanel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.privacyNote {
+  padding: 1rem;
+  color: var(--heading);
+  line-height: 1.55;
+  background: color-mix(in lab, var(--accent) 10%, var(--surface));
+}
+
+.privacyNote p + p {
+  margin-top: 0.65rem;
+  color: var(--muted);
+}
+
+.uploadPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-style: dashed;
+}
+
+.uploadText h2,
+.panelHeader h2 {
+  margin-top: 0.2rem;
+  color: var(--heading);
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.uploadText p,
+.panelHeader p,
+.fieldHint,
+.emptyText {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.fieldHint {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.fileButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.65rem 0.95rem;
+  border: 1px solid var(--action-bg);
+  border-radius: 8px;
+  background: var(--action-bg);
+  color: var(--action-fg);
+  font-size: 0.92rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.16s ease, border-color 0.16s ease, transform 0.08s ease;
+}
+
+.fileButton:hover,
+.primaryButton:hover {
+  background: var(--action-bg-hover);
+  border-color: var(--action-bg-hover);
+}
+
+.fileButton input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.summaryPanel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.85rem;
+}
+
+.summaryItem {
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.summaryItem span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.summaryItem strong {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--heading);
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.75fr);
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.leftColumn,
+.rightColumn {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.previewPanel,
+.catalogPanel,
+.panel {
+  min-width: 0;
+  padding: 1rem;
+}
+
+.panelHeader {
+  margin-bottom: 1rem;
+}
+
+.compareGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.compareGrid figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.compareGrid img,
+.previewPlaceholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background:
+    linear-gradient(45deg, rgba(112, 114, 113, 0.08) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(112, 114, 113, 0.08) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(112, 114, 113, 0.08) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(112, 114, 113, 0.08) 75%);
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  background-size: 20px 20px;
+}
+
+.compareGrid img {
+  display: block;
+  object-fit: contain;
+}
+
+.previewPlaceholder {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.45;
+}
+
+.compareGrid figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.previewDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.previewDetails span,
+.statusBadge,
+.valuePill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.catalogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.85rem;
+}
+
+.imageCard,
+.imageCardActive {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.imageCardActive {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.selectionLabel,
+.toggleLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.selectionLabel input,
+.toggleLabel input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--vino);
+}
+
+.previewButton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.previewButton img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.cardBody {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.cardBody h3 {
+  color: var(--heading);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.metaGrid div {
+  min-width: 0;
+}
+
+.metaGrid dt {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.metaGrid dd {
+  margin: 0.2rem 0 0;
+  color: var(--heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.cardError {
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--danger-border);
+  border-radius: 8px;
+  background: var(--danger-soft);
+  color: var(--heading);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.cardActions,
+.panelActions,
+.actionsPanel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.formGroup {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 0.95rem;
+}
+
+.formGroup label {
+  color: var(--heading);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--control-bg);
+  color: var(--heading);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 0.55rem 0.65rem;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.formGroup input[type="range"] {
+  min-height: auto;
+  padding: 0;
+  accent-color: var(--vino);
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.toggleLabel {
+  margin-bottom: 0.8rem;
+}
+
+.primaryButton,
+.secondaryButton,
+.smallButton,
+.textButton {
+  min-height: 38px;
+  border-radius: 8px;
+  padding: 0.52rem 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.16s ease, border-color 0.16s ease, opacity 0.16s ease, transform 0.08s ease;
+}
+
+.primaryButton {
+  border: 1px solid var(--action-bg);
+  background: var(--action-bg);
+  color: var(--action-fg);
+}
+
+.secondaryButton,
+.smallButton,
+.textButton {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--heading);
+}
+
+.secondaryButton:hover,
+.smallButton:hover,
+.textButton:hover {
+  background: var(--surface-soft);
+}
+
+.fileButton:active,
+.primaryButton:active,
+.secondaryButton:active,
+.smallButton:active,
+.textButton:active {
+  transform: translateY(1px);
+}
+
+.actionsPanel {
+  margin-top: 1rem;
+  padding: 0.85rem;
+}
+
+.messageArea {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+}
+
+.errorMessage,
+.successMessage,
+.infoMessage {
+  padding: 0.8rem 0.9rem;
+  border-radius: 8px;
+  line-height: 1.45;
+}
+
+.errorMessage {
+  border: 1px solid var(--danger-border);
+  background: var(--danger-soft);
+  color: var(--heading);
+}
+
+.successMessage {
+  border: 1px solid var(--success-border);
+  background: var(--success-soft);
+  color: var(--heading);
+}
+
+.infoMessage {
+  border: 1px solid rgba(188, 149, 91, 0.35);
+  background: rgba(188, 149, 91, 0.12);
+  color: var(--heading);
+}
+
+.fileButton:has(input:disabled),
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.smallButton:disabled,
+.textButton:disabled,
+.formGroup input:disabled,
+.formGroup select:disabled,
+.selectionLabel input:disabled,
+.toggleLabel input:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+@media (max-width: 1040px) {
+  .hero,
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryPanel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .wrapper {
+    padding-inline: 0.75rem;
+  }
+
+  .uploadPanel,
+  .compareGrid,
+  .twoColumns,
+  .summaryPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .fileButton,
+  .primaryButton,
+  .secondaryButton,
+  .smallButton,
+  .textButton {
+    width: 100%;
+  }
+
+  .metaGrid {
+    grid-template-columns: 1fr;
+  }
+}

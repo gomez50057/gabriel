@@ -2,9 +2,9 @@ import Navbar from "@/shared/Navbar";
 import Footer from "@/shared/Footer";
 
 export const metadata = {
-  title: "QrStudio",
+  title: "Optimizador de imagenes web",
   description:
-    "Generador de codigos QR estaticos con carga manual, CSV, JSON y Excel.",
+    "Convierte imagenes a WebP, reduce peso y conserva calidad visual desde el navegador.",
 };
 
 export const viewport = {

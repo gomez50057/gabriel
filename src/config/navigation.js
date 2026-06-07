@@ -23,6 +23,10 @@ export const TOOLS_LINKS = [
     href: "/herramientas/generador-codigos-qr",
     label: "Generador de codigos QR",
   },
+  {
+    href: "/herramientas/optimizador-imagenes-web",
+    label: "Optimizador de imagenes web",
+  },
 ];
 
 export const HEADER_LINKS = [
