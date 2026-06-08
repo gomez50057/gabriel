@@ -288,6 +288,156 @@
   margin-top: 14px;
 }
 
+.groupExplorerStack {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.groupSection {
+  margin-top: 24px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: color-mix(in lab, var(--tool-surface) 94%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.groupSectionHeader {
+  margin-bottom: 8px;
+}
+
+.groupSectionTitle {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-weight: 950;
+  letter-spacing: -0.03em;
+}
+
+.groupSectionText {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.groupExplorer {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: linear-gradient(
+    180deg,
+    var(--tool-surface),
+    color-mix(in lab, var(--tool-surface-soft) 88%, transparent)
+  );
+}
+
+.groupExplorerHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.groupExplorerTitle {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 950;
+}
+
+.groupExplorerText {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.groupSelectLabel {
+  display: grid;
+  gap: 6px;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.groupSelectLabel select {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--tool-surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 850;
+  outline: none;
+}
+
+.groupSelectLabel select:focus {
+  border-color: var(--gold-line);
+  box-shadow: 0 0 0 4px var(--gold-soft);
+}
+
+.groupCopyButton {
+  min-height: 38px;
+  padding: 9px 13px;
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-sm);
+  background: var(--tool-surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 950;
+  cursor: pointer;
+  transition:
+    transform 130ms ease,
+    filter 130ms ease,
+    opacity 130ms ease;
+}
+
+.groupCopyButton:hover:not(:disabled) {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.groupCopyButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.groupCopyButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.groupResults {
+  display: grid;
+  gap: 10px;
+}
+
+.groupCount {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--muted);
+}
+
+.groupCount strong {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 950;
+}
+
+.groupCount span {
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
 .suggestion {
   display: grid;
   gap: 6px;
@@ -919,6 +1069,14 @@
 
   .downloadButton,
   .copyButton {
+    width: 100%;
+  }
+
+  .groupExplorerHeader {
+    flex-direction: column;
+  }
+
+  .groupCopyButton {
     width: 100%;
   }
 

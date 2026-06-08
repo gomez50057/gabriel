@@ -516,6 +516,20 @@ function getRelatedMunicipalities(selectedMunicipality, field) {
   );
 }
 
+function getUniqueGroupOptions(field) {
+  return Array.from(
+    new Set(REGIONALIZACION_HIDALGO.map((item) => item[field]).filter(Boolean))
+  ).sort((a, b) => a.localeCompare(b, "es", { sensitivity: "base" }));
+}
+
+function getMunicipalitiesByFieldValue(field, value) {
+  if (!value) return [];
+
+  return sortMunicipalities(
+    REGIONALIZACION_HIDALGO.filter((item) => item[field] === value)
+  );
+}
+
 function RegionPath({ item }) {
   return (
     <small className={styles.regionPath}>
@@ -554,6 +568,100 @@ function RelatedDropdown({ title, items, onSelect }) {
   );
 }
 
+function GroupExplorer({
+  title,
+  label,
+  emptyLabel,
+  value,
+  options,
+  items,
+  onChange,
+  onSelect,
+  onCopy,
+  copyStatus,
+  disabled = false,
+}) {
+  return (
+    <section className={styles.groupExplorer}>
+      <div className={styles.groupExplorerHeader}>
+        <div>
+          <h3 className={styles.groupExplorerTitle}>{title}</h3>
+          <p className={styles.groupExplorerText}>
+            Selecciona un grupo para listar y copiar sus municipios.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          className={styles.groupCopyButton}
+          disabled={disabled}
+          onClick={onCopy}
+        >
+          Copiar municipios
+        </button>
+      </div>
+
+      <label className={styles.groupSelectLabel}>
+        <span>{label}</span>
+        <select value={value} onChange={(event) => onChange(event.target.value)}>
+          <option value="">{emptyLabel}</option>
+          {options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      {copyStatus && (
+        <p
+          className={`${styles.copyStatus} ${
+            copyStatus === "error" ? styles.copyStatusError : ""
+          }`}
+          role="status"
+        >
+          {copyStatus === "error"
+            ? "No se pudo copiar al portapapeles."
+            : "Municipios copiados al portapapeles."}
+        </p>
+      )}
+
+      {value ? (
+        <div className={styles.groupResults}>
+          <div className={styles.groupCount}>
+            <strong>{items.length.toLocaleString("es-MX")}</strong>
+            <span>municipios en este grupo</span>
+          </div>
+
+          {items.length > 0 ? (
+            <div className={styles.relatedList}>
+              {items.map((item) => (
+                <button
+                  key={`${title}-${item.municipio}`}
+                  type="button"
+                  className={styles.relatedItem}
+                  onClick={() => onSelect(item.municipio)}
+                >
+                  <span>{item.municipio}</span>
+                  <RegionPath item={item} />
+                </button>
+              ))}
+            </div>
+          ) : (
+            <p className={styles.emptyText}>
+              No hay municipios registrados para este grupo.
+            </p>
+          )}
+        </div>
+      ) : (
+        <p className={styles.emptyText}>
+          Elige una opción para ver los municipios que pertenecen a ese grupo.
+        </p>
+      )}
+    </section>
+  );
+}
+
 export default function MunicipalityLocator({ initialMunicipio = "" }) {
   const [query, setQuery] = useState(initialMunicipio);
   const [includeOtra, setIncludeOtra] = useState(true);
@@ -562,6 +670,14 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
   const [otraValue, setOtraValue] = useState("Otra");
   const [copyStatus, setCopyStatus] = useState("");
   const [municipalityCopyStatus, setMunicipalityCopyStatus] = useState("");
+  const [selectedRegionGroup, setSelectedRegionGroup] = useState("");
+  const [selectedMacrorregionGroup, setSelectedMacrorregionGroup] = useState("");
+  const [selectedMicrorregionGroup, setSelectedMicrorregionGroup] = useState("");
+  const [groupCopyStatus, setGroupCopyStatus] = useState({
+    region: "",
+    macrorregion: "",
+    microrregion: "",
+  });
 
   const normalizedQuery = useMemo(() => normalizeText(query), [query]);
 
@@ -667,6 +783,21 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
 
   const sourceTotals = MUNICIPALITY_LOCALITIES_SOURCE.totales;
 
+  const regionOptions = useMemo(
+    () => getUniqueGroupOptions("region"),
+    []
+  );
+
+  const macrorregionOptions = useMemo(
+    () => getUniqueGroupOptions("macrorregion"),
+    []
+  );
+
+  const microrregionOptions = useMemo(
+    () => getUniqueGroupOptions("microrregion"),
+    []
+  );
+
   const sourceSummary = useMemo(
     () =>
       `${sourceTotals.localidades.toLocaleString("es-MX")} localidades de ${sourceTotals.municipios} municipios`,
@@ -680,6 +811,48 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
         textFormat
       ),
     [textFormat]
+  );
+
+  const regionMunicipalityItems = useMemo(
+    () => getMunicipalitiesByFieldValue("region", selectedRegionGroup),
+    [selectedRegionGroup]
+  );
+
+  const macrorregionMunicipalityItems = useMemo(
+    () => getMunicipalitiesByFieldValue("macrorregion", selectedMacrorregionGroup),
+    [selectedMacrorregionGroup]
+  );
+
+  const microrregionMunicipalityItems = useMemo(
+    () => getMunicipalitiesByFieldValue("microrregion", selectedMicrorregionGroup),
+    [selectedMicrorregionGroup]
+  );
+
+  const regionMunicipalityNames = useMemo(
+    () =>
+      formatOutputItems(
+        regionMunicipalityItems.map((item) => item.municipio),
+        textFormat
+      ),
+    [regionMunicipalityItems, textFormat]
+  );
+
+  const macrorregionMunicipalityNames = useMemo(
+    () =>
+      formatOutputItems(
+        macrorregionMunicipalityItems.map((item) => item.municipio),
+        textFormat
+      ),
+    [macrorregionMunicipalityItems, textFormat]
+  );
+
+  const microrregionMunicipalityNames = useMemo(
+    () =>
+      formatOutputItems(
+        microrregionMunicipalityItems.map((item) => item.municipio),
+        textFormat
+      ),
+    [microrregionMunicipalityItems, textFormat]
   );
 
   const populationRows = useMemo(
@@ -707,6 +880,15 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
     setQuery(municipio);
     setOtraValue("Otra");
     setCopyStatus("");
+  };
+
+  const handleGroupCopy = async (key, items) => {
+    try {
+      await copyItems(items);
+      setGroupCopyStatus((current) => ({ ...current, [key]: "copied" }));
+    } catch {
+      setGroupCopyStatus((current) => ({ ...current, [key]: "error" }));
+    }
   };
 
   return (
@@ -856,6 +1038,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
               </p>
             )}
           </div>
+
         </aside>
 
         <div className={styles.resultCard}>
@@ -1093,6 +1276,80 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
           )}
         </div>
       </div>
+
+      <section className={styles.groupSection} aria-labelledby="municipios-por-grupos">
+        <div className={styles.groupSectionHeader}>
+          <h3 id="municipios-por-grupos" className={styles.groupSectionTitle}>
+            Municipios por grupos
+          </h3>
+          <p className={styles.groupSectionText}>
+            Explora municipios por región, macrorregión o microrregión y copia la lista completa.
+          </p>
+        </div>
+
+        <div className={styles.groupExplorerStack}>
+          <GroupExplorer
+            title="Municipios por región"
+            label="Región"
+            emptyLabel="Selecciona una región"
+            value={selectedRegionGroup}
+            options={regionOptions}
+            items={regionMunicipalityItems}
+            onChange={(value) => {
+              setSelectedRegionGroup(value);
+              setGroupCopyStatus((current) => ({ ...current, region: "" }));
+            }}
+            onSelect={selectMunicipality}
+            onCopy={() => handleGroupCopy("region", regionMunicipalityNames)}
+            copyStatus={groupCopyStatus.region}
+            disabled={regionMunicipalityNames.length === 0}
+          />
+
+          <GroupExplorer
+            title="Municipios por macrorregión"
+            label="Macrorregión"
+            emptyLabel="Selecciona una macrorregión"
+            value={selectedMacrorregionGroup}
+            options={macrorregionOptions}
+            items={macrorregionMunicipalityItems}
+            onChange={(value) => {
+              setSelectedMacrorregionGroup(value);
+              setGroupCopyStatus((current) => ({
+                ...current,
+                macrorregion: "",
+              }));
+            }}
+            onSelect={selectMunicipality}
+            onCopy={() =>
+              handleGroupCopy("macrorregion", macrorregionMunicipalityNames)
+            }
+            copyStatus={groupCopyStatus.macrorregion}
+            disabled={macrorregionMunicipalityNames.length === 0}
+          />
+
+          <GroupExplorer
+            title="Municipios por microrregión"
+            label="Microrregión"
+            emptyLabel="Selecciona una microrregión"
+            value={selectedMicrorregionGroup}
+            options={microrregionOptions}
+            items={microrregionMunicipalityItems}
+            onChange={(value) => {
+              setSelectedMicrorregionGroup(value);
+              setGroupCopyStatus((current) => ({
+                ...current,
+                microrregion: "",
+              }));
+            }}
+            onSelect={selectMunicipality}
+            onCopy={() =>
+              handleGroupCopy("microrregion", microrregionMunicipalityNames)
+            }
+            copyStatus={groupCopyStatus.microrregion}
+            disabled={microrregionMunicipalityNames.length === 0}
+          />
+        </div>
+      </section>
 
       <p className={styles.sourceNote}>
         Fuente:{" "}
