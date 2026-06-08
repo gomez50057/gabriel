@@ -1,4 +1,5 @@
 import "./globals.css";
+import GoogleAnalytics from "@/shared/GoogleAnalytics/GoogleAnalytics";
 
 export const metadata = {
   title: "Gabriel Gomez Desarrollador Web",
@@ -36,6 +37,9 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body>{children}</body>
     </html>
   );
