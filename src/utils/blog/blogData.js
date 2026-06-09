@@ -1,4 +1,562 @@
 export const blogPosts = [
+
+  {
+    name: "Cómo obtener las localidades y asentamientos humanos de Hidalgo usando datos de INEGI",
+    description: [
+      {
+        type: "p",
+        text:
+          "Cuando empecé a trabajar con información territorial para Hidalgo, me encontré con una duda muy común: **¿una localidad es lo mismo que una colonia?** La respuesta corta es no. Y entender esa diferencia es clave antes de construir cualquier catálogo para formularios, mapas, bases de datos o sistemas de consulta.",
+      },
+      {
+        type: "p",
+        text:
+          "En este ejercicio armé un paquete en Python para obtener información de **municipios, localidades y asentamientos humanos de Hidalgo**, consumiendo datos del servicio de INEGI y generando archivos listos para usarse en proyectos web, bases de datos o análisis territorial.",
+      },
+      {
+        type: "downloadLink",
+        href: "/material/inegi_hidalgo_catalogo/inegi_hidalgo_catalogo.zip",
+        text: "Descargar ZIP del proyecto",
+        fileName: "inegi_hidalgo_catalogo.zip",
+      },
+
+      { type: "h2", text: "Localidades y asentamientos humanos: no son lo mismo" },
+      {
+        type: "p",
+        text:
+          "Una **localidad** es una unidad geoestadística. Sirve para ubicar lugares habitados dentro de un municipio y suele tener información como clave, nombre, ámbito urbano/rural, periodo y, en los datos originales, coordenadas, altitud y población.",
+      },
+      {
+        type: "p",
+        text:
+          "Un **asentamiento humano**, en cambio, es una subdivisión o referencia más específica dentro de una localidad.",
+      },
+      {
+        type: "p",
+        text:
+          "Por ejemplo, en Pachuca de Soto la estructura correcta no sería simplemente “municipio → colonia”, sino algo más parecido a esto:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "jerarquia-pachuca",
+        code:
+          "Hidalgo\n└── Pachuca de Soto\n    └── Localidad: Pachuca de Soto\n        ├── Colonia Adolfo López Mateos\n        ├── Colonia Aeropuerto\n        ├── Fraccionamiento 15 de Septiembre\n        └── Barrio / colonia / unidad habitacional...",
+      },
+      {
+        type: "p",
+        text: "Es decir, la jerarquía que conviene manejar es:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "jerarquia-correcta",
+        code:
+          "Entidad\n└── Municipio\n    └── Localidad\n        └── Asentamiento humano",
+      },
+      {
+        type: "p",
+        text:
+          "En el archivo trabajado, cada municipio contiene localidades, y cada localidad puede contener uno o varios asentamientos humanos. Esa estructura aparece reflejada en el JSON original que se usó como base.",
+      },
+
+      { type: "h2", text: "Qué engloba una localidad" },
+      {
+        type: "p",
+        text:
+          "Una localidad agrupa un lugar habitado reconocido dentro de un municipio. Puede ser urbana o rural.",
+      },
+      {
+        type: "p",
+        text: "En términos prácticos, una localidad puede representar:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Cabecera municipal",
+          "Pueblo",
+          "Ranchería",
+          "Colonia rural reconocida como localidad",
+          "Barrio rural",
+          "Conjunto habitado",
+        ],
+      },
+      {
+        type: "p",
+        text:
+          "Por eso hay localidades que se llaman igual que la cabecera municipal, por ejemplo:",
+      },
+      {
+        type: "ul",
+        items: [
+          "**Municipio:** Pachuca de Soto",
+          "**Localidad:** Pachuca de Soto",
+        ],
+      },
+      {
+        type: "p",
+        text:
+          "Pero también puede haber otras localidades dentro del mismo municipio, como barrios, comunidades o zonas rurales.",
+      },
+      {
+        type: "p",
+        text: "En el JSON limpio que generé, cada localidad conserva estos campos:",
+      },
+      {
+        type: "snippet",
+        language: "json",
+        fileName: "localidad.json",
+        code:
+          "{\n  \"claveGeoestadistica\": \"130480001\",\n  \"claveLocalidad\": \"0001\",\n  \"nombre\": \"Pachuca de Soto\",\n  \"ambito\": \"URBANO\",\n  \"periodo\": \"2015-06-01\",\n  \"tipo\": \"localidad\",\n  \"asentamientosHumanos\": []\n}",
+      },
+      {
+        type: "p",
+        text: "Quité de este nivel los campos:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "campos-removidos",
+        code: "latitud\nlongitud\naltitud\npob_total",
+      },
+      {
+        type: "p",
+        text:
+          "porque para el uso final era mejor concentrar la población a nivel municipal y evitar confundir datos de localidad con datos de asentamiento humano.",
+      },
+
+      { type: "h2", text: "Qué engloba un asentamiento humano" },
+      {
+        type: "p",
+        text:
+          "Un asentamiento humano es el nivel donde normalmente aparecen lo que muchas personas llaman “colonias”.",
+      },
+      {
+        type: "p",
+        text: "Pero no todo asentamiento humano es colonia. También puede ser:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Barrio",
+          "Fraccionamiento",
+          "Unidad habitacional",
+          "Ejido",
+          "Pueblo",
+          "Ranchería",
+          "Residencial",
+          "Ampliación",
+        ],
+      },
+      { type: "h2", text: "Cómo obtener la información" },
+      {
+        type: "p",
+        text: "Para obtener la información usé el servicio de INEGI con tres niveles principales:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "niveles",
+        code: "Municipios\nLocalidades\nAsentamientos humanos",
+      },
+      {
+        type: "p",
+        text: "La lógica del programa es la siguiente:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "flujo",
+        code:
+          "1. Descargar todos los municipios de Hidalgo.\n2. Recorrer municipio por municipio.\n3. Descargar sus localidades.\n4. Descargar sus asentamientos humanos.\n5. Relacionar asentamientos humanos con localidades.\n6. Generar CSV, JSON y GeoJSON.",
+      },
+      {
+        type: "p",
+        text: "La clave de Hidalgo es: ** 13 **",
+      },
+      {
+        type: "p",
+        text: "Entonces, a nivel de lógica, el programa trabaja con estas rutas:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "endpoints-inegi",
+        code:
+          "Municipios de Hidalgo:\nhttps://gaia.inegi.org.mx/wscatgeo/v2/mgem/13\n\nLocalidades por municipio:\nhttps://gaia.inegi.org.mx/wscatgeo/v2/localidades/13/{claveMunicipio}\n\nAsentamientos humanos por municipio:\nhttps://gaia.inegi.org.mx/wscatgeo/v2/asentamientos/13/{claveMunicipio}",
+      },
+      {
+        type: "p",
+        text:
+          "Por ejemplo, para Pachuca de Soto, cuya clave municipal es `048`, se consultan:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "endpoints-pachuca",
+        code:
+          "Localidades:\nhttps://gaia.inegi.org.mx/wscatgeo/v2/localidades/13/048\n\nAsentamientos humanos:\nhttps://gaia.inegi.org.mx/wscatgeo/v2/asentamientos/13/048",
+      },
+
+      { type: "h2", text: "Cómo funciona el programa" },
+      {
+        type: "p",
+        text: "El paquete tiene una estructura sencilla:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "estructura-paquete",
+        code:
+          "inegi_hidalgo_catalogo_actualizado/\n├── data/\n│   ├── raw/\n│   ├── dcah/\n│   └── output/\n├── docs/\n├── scripts/\n│   ├── generar_catalogo_hidalgo.py\n│   ├── generar_geojson_enriquecido.py\n│   ├── run_all.py\n│   └── utils_inegi.py\n├── requirements.txt\n├── requirements-geo.txt\n└── README.md",
+      },
+      {
+        type: "p",
+        text: "El archivo principal para ejecutar todo es:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "python scripts/run_all.py",
+      },
+      {
+        type: "p",
+        text:
+          "Este comando primero genera el catálogo tabular y después genera el GeoJSON preliminar.",
+      },
+
+      { type: "h2", text: "Instalación" },
+      {
+        type: "p",
+        text: "Primero descomprimo el ZIP y entro a la carpeta:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "cd inegi_hidalgo_catalogo_actualizado",
+      },
+      {
+        type: "p",
+        text: "Creo un entorno virtual:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "python -m venv .venv",
+      },
+      {
+        type: "p",
+        text: "Lo activo en Linux o macOS:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "source .venv/bin/activate",
+      },
+      {
+        type: "p",
+        text: "En Windows PowerShell:",
+      },
+      {
+        type: "snippet",
+        language: "powershell",
+        fileName: "PowerShell",
+        code: ".\\.venv\\Scripts\\Activate.ps1",
+      },
+      {
+        type: "p",
+        text: "Instalo las dependencias base:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "pip install -r requirements.txt",
+      },
+      {
+        type: "p",
+        text: "Y ejecuto todo:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "python scripts/run_all.py",
+      },
+
+      { type: "h2", text: "Qué archivos se obtienen" },
+      {
+        type: "p",
+        text: "Al ejecutar el programa se generan los archivos dentro de:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "output",
+        code: "data/output/",
+      },
+      {
+        type: "p",
+        text: "Los archivos principales son:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "archivos-generados",
+        code:
+          "hidalgo_localidades.csv\nhidalgo_asentamientos_humanos.csv\nhidalgo_asentamientos_humanos_localidades.csv\nhidalgo_asentamientos_humanos_localidades.json\nhidalgo_asentamientos_humanos_enriquecido.geojson\nhidalgo_asentamientos_humanos_enriquecido_puntos.geojson",
+      },
+
+      { type: "h3", text: "1. `hidalgo_localidades.csv`" },
+      {
+        type: "p",
+        text:
+          "Este archivo contiene las localidades de Hidalgo por municipio. Sirve si necesito revisar solamente el nivel de localidad.",
+      },
+      {
+        type: "p",
+        text: "Incluye campos como:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "campos-localidades",
+        code:
+          "cve_ent\nnom_ent\ncve_mun\nnom_mun\ncve_loc\nnom_loc\nambito\nlatitud\nlongitud\naltitud\npob_total\nperiodo\ncvegeo_loc",
+      },
+      {
+        type: "p",
+        text:
+          "Este archivo conserva los campos completos de localidad porque es el CSV técnico base.",
+      },
+
+      { type: "h3", text: "2. `hidalgo_asentamientos_humanos.csv`" },
+      {
+        type: "p",
+        text:
+          "Este archivo contiene los asentamientos humanos por municipio y localidad.",
+      },
+      {
+        type: "p",
+        text:
+          "Sirve si necesito trabajar directamente con colonias, barrios, fraccionamientos, rancherías, pueblos, ejidos y demás tipos de asentamiento.",
+      },
+      {
+        type: "p",
+        text: "Incluye campos como:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "campos-asentamientos",
+        code:
+          "cve_ent\nnom_ent\ncve_mun\nnom_mun\ncve_loc\nnom_loc\ncve_asen\nnom_asen\ntipo_asen\nperiodo\ncvegeo_loc\ncvegeo_asen",
+      },
+      {
+        type: "p",
+        text:
+          "También conserva algunos campos heredados de localidad para facilitar cruces técnicos.",
+      },
+
+      { type: "h3", text: "3. `hidalgo_asentamientos_humanos_localidades.csv`" },
+      {
+        type: "p",
+        text:
+          "Este fue el archivo que faltaba y lo agregué al paquete. Es un CSV combinado, pensado para usarlo en Excel, bases de datos o importaciones rápidas.",
+      },
+      {
+        type: "p",
+        text: "Tiene una estructura plana:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "campos-csv-combinado",
+        code:
+          "estado\nclaveEntidad\nmunicipio\nclaveMunicipio\nclaveGeoestadisticaMunicipio\nlocalidad\nclaveLocalidad\nclaveGeoestadisticaLocalidad\nambito\nperiodoLocalidad\nasentamientoHumano\nclaveAsentamiento\ntipoAsentamiento\nperiodoAsentamiento\nclaveGeoestadisticaAsentamiento\ntipoRegistro",
+      },
+      {
+        type: "p",
+        text: "La regla es:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "regla-csv-combinado",
+        code:
+          "Si una localidad tiene asentamientos humanos:\n    genera una fila por cada asentamiento.\n\nSi una localidad no tiene asentamientos humanos:\n    genera una fila con tipoRegistro = localidad_sin_asentamiento.",
+      },
+      {
+        type: "p",
+        text: "Este archivo no incluye:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "campos-excluidos",
+        code: "latitud\nlongitud\naltitud\npob_total",
+      },
+      {
+        type: "p",
+        text:
+          "porque la intención fue dejar la información limpia para consulta administrativa y no mezclar población o coordenadas a nivel incorrecto.",
+      },
+
+      { type: "h3", text: "4. `hidalgo_asentamientos_humanos_localidades.json`" },
+      {
+        type: "p",
+        text:
+          "Este es el archivo más útil para frontend, APIs o selects dependientes.",
+      },
+      {
+        type: "p",
+        text: "Tiene esta estructura:",
+      },
+      {
+        type: "snippet",
+        language: "json",
+        fileName: "hidalgo_asentamientos_humanos_localidades.json",
+        code:
+          "{\n  \"estado\": \"Hidalgo\",\n  \"claveEntidad\": \"13\",\n  \"claveGeoestadistica\": \"13\",\n  \"tipo\": \"catalogo_asentamientos_humanos_localidades\",\n  \"municipios\": [\n    {\n      \"municipio\": \"Pachuca de Soto\",\n      \"claveMunicipio\": \"048\",\n      \"claveGeoestadistica\": \"13048\",\n      \"localidades\": [\n        {\n          \"claveGeoestadistica\": \"130480001\",\n          \"claveLocalidad\": \"0001\",\n          \"nombre\": \"Pachuca de Soto\",\n          \"ambito\": \"URBANO\",\n          \"periodo\": \"2015-06-01\",\n          \"tipo\": \"localidad\",\n          \"asentamientosHumanos\": [\n            {\n              \"claveAsentamiento\": \"0152\",\n              \"nombre\": \"ADOLFO LÓPEZ MATEOS\",\n              \"tipoAsentamiento\": \"COLONIA\",\n              \"periodo\": \"11/2024\",\n              \"claveGeoestadistica\": \"1304800010152\",\n              \"claveLocalidad\": \"0001\",\n              \"claveGeoestadisticaLocalidad\": \"130480001\",\n              \"localidad\": \"Pachuca de Soto\",\n              \"tipo\": \"asentamiento\"\n            }\n          ]\n        }\n      ],\n      \"resumen\": {\n        \"total\": 35,\n        \"localidades\": 35,\n        \"asentamientos\": 430,\n        \"urbanas\": 3,\n        \"rurales\": 32,\n        \"poblacionTotal\": 314313\n      }\n    }\n  ]\n}",
+      },
+      {
+        type: "p",
+        text: "Este JSON permite hacer una interfaz como:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "flujo-selects",
+        code:
+          "Selecciona municipio\n→ Selecciona localidad\n→ Selecciona asentamiento humano",
+      },
+
+      { type: "h3", text: "5. `hidalgo_asentamientos_humanos_enriquecido.geojson`" },
+      {
+        type: "p",
+        text:
+          "Este archivo sirve para mapas. Por defecto, si no se usa una capa DCAH, el programa genera puntos preliminares usando la coordenada de la localidad asociada.",
+      },
+      {
+        type: "p",
+        text:
+          "Eso quiere decir que el punto no representa la geometría exacta de la colonia o asentamiento humano, sino una referencia espacial aproximada.",
+      },
+      {
+        type: "p",
+        text: "Para generar el GeoJSON básico:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code: "python scripts/generar_geojson_enriquecido.py --geometry punto",
+      },
+
+      { type: "h2", text: "Cómo generar polígonos reales de asentamientos humanos" },
+      {
+        type: "p",
+        text:
+          "Para tener geometría real de colonias o asentamientos, se necesita la capa DCAH de INEGI.",
+      },
+      {
+        type: "p",
+        text: "En ese caso, el paquete incluye este comando:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code:
+          "python scripts/generar_geojson_enriquecido.py --dcah /ruta/a/DCAH.shp --geometry poligono",
+      },
+      {
+        type: "p",
+        text: "Esto genera:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "geojson-poligonos",
+        code:
+          "hidalgo_asentamientos_humanos_enriquecido_poligonos.geojson\nhidalgo_asentamientos_humanos_enriquecido.geojson",
+      },
+      {
+        type: "p",
+        text: "Si quiero generar puntos y polígonos al mismo tiempo:",
+      },
+      {
+        type: "snippet",
+        language: "bash",
+        fileName: "terminal",
+        code:
+          "python scripts/generar_geojson_enriquecido.py --dcah /ruta/a/DCAH.shp --geometry both",
+      },
+      {
+        type: "p",
+        text: "Y se obtienen:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "geojson-both",
+        code:
+          "hidalgo_asentamientos_humanos_enriquecido_puntos.geojson\nhidalgo_asentamientos_humanos_enriquecido_poligonos.geojson\nhidalgo_asentamientos_humanos_enriquecido.geojson",
+      },
+
+      { type: "h2", text: "Conclusión" },
+      {
+        type: "p",
+        text:
+          "Este proceso me permitió ordenar correctamente la información territorial de Hidalgo usando datos de INEGI. La parte más importante fue entender que **localidad** y **asentamiento humano** no son lo mismo.",
+      },
+      {
+        type: "p",
+        text:
+          "La localidad sirve como unidad geoestadística base. El asentamiento humano representa un nivel más específico, donde aparecen colonias, barrios, fraccionamientos, rancherías, pueblos, ejidos y otras formas de ocupación territorial.",
+      },
+      {
+        type: "p",
+        text:
+          "Para explicarlo de forma sencilla, utilicé una analogía parecida a una dirección: no se llega directamente a una colonia sin antes ubicar el **estado**, el **municipio** y la **localidad**. De la misma manera, en los datos de INEGI, un asentamiento humano está asociado a una localidad mediante la clave `cve_loc`. Esto permite organizar la información de forma jerárquica y entender que colonias, barrios, fraccionamientos o rancherías forman parte de una localidad específica dentro de un municipio.",
+      },
+      {
+        type: "p",
+        text:
+          "El paquete final permite generar archivos CSV, JSON y GeoJSON, y deja lista la información para integrarse en un sistema web, una base de datos o un mapa interactivo.",
+      },
+
+      {
+        type: "p",
+        text: "La mayor ventaja es que el catálogo respeta la jerarquía correcta:",
+      },
+      {
+        type: "snippet",
+        language: "txt",
+        fileName: "jerarquia-final",
+        code: "Estado → Municipio → Localidad → Asentamiento humano",
+      },
+      {
+        type: "p",
+        text:
+          "Y evita un error común: tratar todas las colonias como si fueran localidades o asignar población de localidad directamente a una colonia.",
+      },
+      {
+        type: "downloadLink",
+        href: "/material/inegi_hidalgo_catalogo/inegi_hidalgo_catalogo.zip",
+        text: "Descargar ZIP del proyecto",
+        fileName: "inegi_hidalgo_catalogo.zip",
+      },
+    ],
+    date: "9 de junio, 2026",
+    image: "/img/tutoriales/inegi-hidalgo-catalogo.png",
+    category: "Tutoriales",
+    featuredPosts: true,
+  },
   {
     name: "Cómo mostrar archivos ocultos en CyberArk usando WinSCP",
     description: [

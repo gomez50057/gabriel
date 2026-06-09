@@ -186,7 +186,7 @@
   align-items: center;
   gap: 8px;
   font-weight: 700;
-  color: var(--vinoOsc);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 
