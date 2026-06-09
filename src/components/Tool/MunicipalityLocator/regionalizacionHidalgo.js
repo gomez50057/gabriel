@@ -198,12 +198,12 @@ export const REGIONALIZACION_HIDALGO = [
     ]
   },
   {
-    "municipio": "Francisco I Madero",
+    "municipio": "Francisco I. Madero",
     "region": "7. Actopan",
     "macrorregion": "II. Tula",
     "microrregion": "M14",
     "aliases": [
-      "Francisco I Madero"
+      "Francisco I. Madero"
     ]
   },
   {
