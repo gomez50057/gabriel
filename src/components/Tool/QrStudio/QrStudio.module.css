@@ -414,6 +414,20 @@
   line-height: 1.45;
 }
 
+.templateActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.templateLabel {
+  color: var(--heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 .fileButton {
   position: relative;
   display: inline-flex;
@@ -763,6 +777,11 @@
   .colorGrid,
   .uploadPanel {
     grid-template-columns: 1fr;
+  }
+
+  .templateActions {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .previewHeader {

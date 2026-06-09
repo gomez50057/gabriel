@@ -11,10 +11,42 @@ import { buildQrPayload } from "./qrPayloadBuilder";
 
 const HEX_COLOR_REGEX = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
 
+const QR_TYPE_ALIASES = {
+  url: "url",
+  link: "url",
+  enlace: "url",
+  texto: "text",
+  text: "text",
+  correo: "email",
+  email: "email",
+  mail: "email",
+  telefono: "phone",
+  teléfono: "phone",
+  phone: "phone",
+  celular: "phone",
+  movil: "phone",
+  móvil: "phone",
+  whatsapp: "whatsapp",
+  wa: "whatsapp",
+  wifi: "wifi",
+  "wi-fi": "wifi",
+  vcard: "vcard",
+  ubicacion: "location",
+  ubicación: "location",
+  location: "location",
+  maps: "location",
+ };
+
+function normalizeQrType(value) {
+  const normalizedValue = String(value ?? "").trim().toLowerCase();
+
+  return QR_TYPE_ALIASES[normalizedValue] || normalizedValue;
+}
+
 export function normalizeRecord(record = {}) {
   return {
     title: String(record.title ?? "").trim(),
-    type: String(record.type ?? "").trim().toLowerCase(),
+    type: normalizeQrType(record.type),
     value: String(record.value ?? "").trim(),
     fileName: String(record.fileName ?? "").trim(),
   };

@@ -20,6 +20,7 @@ export default function QrBulkUploader({
   onFileSelect,
   onClear,
   onDownloadRecord,
+  onDownloadTemplate,
   validRecords,
   styles,
 }) {
@@ -60,6 +61,19 @@ export default function QrBulkUploader({
         <div>
           <h3>{fileName || `Arrastra un archivo ${label}`}</h3>
           <p>Columnas requeridas: title, type y value. fileName es opcional.</p>
+          <div className={styles.templateActions}>
+            <span className={styles.templateLabel}>
+              Descarga ejemplo / plantilla {label}
+            </span>
+            <button
+              type="button"
+              className={styles.textButton}
+              disabled={disabled}
+              onClick={() => onDownloadTemplate?.(mode)}
+            >
+              Descargar ejemplo {label}
+            </button>
+          </div>
         </div>
 
         <label className={styles.fileButton}>

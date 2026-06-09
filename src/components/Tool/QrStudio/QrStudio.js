@@ -6,6 +6,7 @@ import { exportSingleQr } from "@/lib/qr/qrExport";
 import { parseCsvFile } from "@/lib/qr/qrCsvParser";
 import { parseJsonFile } from "@/lib/qr/qrJsonParser";
 import { parseExcelFile } from "@/lib/qr/qrExcelParser";
+import { downloadQrTemplate } from "@/lib/qr/qrBulkTemplates";
 import { validateBulkRecords } from "@/lib/qr/qrBulkValidator";
 import { validateQrConfig, validateQrRecord } from "@/lib/qr/qrValidation";
 import { generateBulkQrZip } from "@/lib/qr/qrZipExport";
@@ -352,6 +353,7 @@ export default function QrStudio() {
               onFileSelect={handleBulkFile}
               onClear={handleClearBulk}
               onDownloadRecord={handleDownloadRecord}
+              onDownloadTemplate={downloadQrTemplate}
               styles={styles}
             />
           )}
