@@ -86,6 +86,15 @@
   font-weight: 800;
 }
 
+.counterMeta {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
 .counterActions {
   display: flex;
   justify-content: flex-end;
@@ -419,23 +428,36 @@
   gap: 10px;
 }
 
-.groupCount {
-  display: flex;
-  align-items: baseline;
+.groupMetrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
-  flex-wrap: wrap;
-  color: var(--muted);
 }
 
-.groupCount strong {
+.groupMetrics article {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: color-mix(in lab, var(--tool-surface-soft) 78%, transparent);
+}
+
+.groupMetrics strong {
+  display: block;
   color: var(--ink);
-  font-size: 1.05rem;
+  font-size: clamp(0.88rem, 1.4vw, 1.02rem);
   font-weight: 950;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
-.groupCount span {
-  font-size: 0.8rem;
+.groupMetrics span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.72rem;
   font-weight: 850;
+  line-height: 1.2;
 }
 
 .suggestion {
@@ -549,12 +571,13 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
   gap: 10px;
   margin-top: 14px;
 }
 
 .localityStats article {
+  min-width: 0;
   min-height: 82px;
   padding: 12px;
   border: 1px solid var(--line);
@@ -566,17 +589,19 @@
   display: block;
   margin-bottom: 8px;
   color: var(--muted);
-  font-size: 0.76rem;
+  font-size: clamp(0.68rem, 1vw, 0.76rem);
   font-weight: 850;
   line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .localityStats strong {
   display: block;
   color: var(--ink);
-  font-size: 1rem;
+  font-size: clamp(0.88rem, 1.4vw, 1rem);
   font-weight: 950;
   line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 /*  */
@@ -1043,6 +1068,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .groupMetrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .downloadPanel {
     align-items: stretch;
     flex-direction: column;
@@ -1105,6 +1134,10 @@
   }
 
   .localityStats {
+    grid-template-columns: 1fr;
+  }
+
+  .groupMetrics {
     grid-template-columns: 1fr;
   }
 
