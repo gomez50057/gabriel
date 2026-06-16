@@ -1357,15 +1357,17 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
         </div>
       </div>
 
-      <section className={styles.groupSection} aria-labelledby="municipios-por-grupos">
-        <div className={styles.groupSectionHeader}>
-          <h3 id="municipios-por-grupos" className={styles.groupSectionTitle}>
-            Municipios por grupos
-          </h3>
-          <p className={styles.groupSectionText}>
-            Explora municipios por región, macrorregión o microrregión y copia la lista completa.
-          </p>
-        </div>
+      <details className={styles.groupSection}>
+        <summary className={styles.groupSectionSummary}>
+          <div className={styles.groupSectionHeader}>
+            <h3 id="municipios-por-grupos" className={styles.groupSectionTitle}>
+              Municipios por grupos
+            </h3>
+            <p className={styles.groupSectionText}>
+              Explora municipios por región, macrorregión o microrregión y copia la lista completa.
+            </p>
+          </div>
+        </summary>
 
         <div className={styles.groupExplorerStack}>
           <GroupExplorer
@@ -1432,13 +1434,13 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
             disabled={microrregionMunicipalityNames.length === 0}
           />
         </div>
-      </section>
+      </details>
 
-      <section
+      <details
         className={styles.groupSection}
         aria-labelledby="municipios-con-comunidades-indigenas"
       >
-        <div className={styles.groupSectionHeaderRow}>
+        <summary className={styles.groupSectionSummary}>
           <div className={styles.groupSectionHeader}>
             <h3
               id="municipios-con-comunidades-indigenas"
@@ -1450,7 +1452,9 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
               Lista rápida para consultar o copiar.
             </p>
           </div>
+        </summary>
 
+        <div className={styles.groupSectionHeaderRow}>
           <button
             type="button"
             className={styles.groupCopyButton}
@@ -1493,7 +1497,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
             </button>
           ))}
         </div>
-      </section>
+      </details>
 
       <p className={styles.sourceNote}>
         Fuente:{" "}

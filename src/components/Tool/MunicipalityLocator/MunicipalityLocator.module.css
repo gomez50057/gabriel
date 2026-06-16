@@ -312,6 +312,37 @@
   box-shadow: var(--shadow);
 }
 
+.groupSectionSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.groupSectionSummary::-webkit-details-marker {
+  display: none;
+}
+
+.groupSectionSummary::after {
+  content: "+";
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 950;
+}
+
+.groupSection[open] .groupSectionSummary::after {
+  content: "−";
+}
+
 .groupSectionHeader {
   margin-bottom: 8px;
 }
