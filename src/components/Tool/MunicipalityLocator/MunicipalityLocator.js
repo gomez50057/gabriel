@@ -100,6 +100,53 @@ const LOWERCASE_TITLE_WORDS = new Set([
   "y",
 ]);
 
+const INDIGENOUS_COMMUNITY_MUNICIPALITIES = [
+  "Acaxochitlán",
+  "Alfajayucan",
+  "Atlapexco",
+  "Atotonilco el Grande",
+  "Calnali",
+  "Cardonal",
+  "Chapulhuacán",
+  "Chilcuautla",
+  "Huasca de Ocampo",
+  "Huautla",
+  "Huazalingo",
+  "Huehuetla",
+  "Huejutla de Reyes",
+  "Huichapan",
+  "Ixmiquilpan",
+  "Jaltocán",
+  "Juárez Hidalgo",
+  "Lolotla",
+  "Metepec",
+  "Metztitlán",
+  "Mixquiahuala",
+  "Molango de Escamilla",
+  "Nicolás Flores",
+  "Pachuca de Soto",
+  "Pacula",
+  "San Bartolo Tutotepec",
+  "San Felipe Orizatlán",
+  "San Salvador",
+  "Santiago de Anaya",
+  "Singuilucan",
+  "Tasquillo",
+  "Tecozautla",
+  "Tenango de Doria",
+  "Tepehuacán de Guerrero",
+  "Tepeji del Río",
+  "Tepetitlán",
+  "Tianguistengo",
+  "Tlanchinol",
+  "Tula de Allende",
+  "Tulancingo de Bravo",
+  "Xochiatipan",
+  "Yahualica",
+  "Zacualtipán de Ángeles",
+  "Zimapán",
+];
+
 function getMunicipalityLocalityData(municipio) {
   return LOCALIDADES_BY_MUNICIPIO.get(normalizeText(municipio)) || null;
 }
@@ -707,6 +754,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
     macrorregion: "",
     microrregion: "",
   });
+  const [indigenousCopyStatus, setIndigenousCopyStatus] = useState("");
 
   const normalizedQuery = useMemo(() => normalizeText(query), [query]);
 
@@ -849,6 +897,29 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
         textFormat
       ),
     [textFormat]
+  );
+
+  const indigenousMunicipalityItems = useMemo(() => {
+    const wanted = new Set(
+      INDIGENOUS_COMMUNITY_MUNICIPALITIES.map(normalizeText)
+    );
+
+    return sortMunicipalities(
+      REGIONALIZACION_HIDALGO.filter((item) =>
+        [item.municipio, ...(item.aliases || [])]
+          .map(normalizeText)
+          .some((value) => wanted.has(value))
+      )
+    );
+  }, []);
+
+  const indigenousMunicipalityNames = useMemo(
+    () =>
+      formatOutputItems(
+        indigenousMunicipalityItems.map((item) => item.municipio),
+        textFormat
+      ),
+    [indigenousMunicipalityItems, textFormat]
   );
 
   const regionMunicipalityItems = useMemo(
@@ -1360,6 +1431,67 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
             summary={microrregionSummary}
             disabled={microrregionMunicipalityNames.length === 0}
           />
+        </div>
+      </section>
+
+      <section
+        className={styles.groupSection}
+        aria-labelledby="municipios-con-comunidades-indigenas"
+      >
+        <div className={styles.groupSectionHeaderRow}>
+          <div className={styles.groupSectionHeader}>
+            <h3
+              id="municipios-con-comunidades-indigenas"
+              className={styles.groupSectionTitle}
+            >
+              Municipios con comunidades indígenas
+            </h3>
+            <p className={styles.groupSectionText}>
+              Lista rápida para consultar o copiar.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            className={styles.groupCopyButton}
+            onClick={async () => {
+              try {
+                await copyItems(indigenousMunicipalityNames);
+                setIndigenousCopyStatus("copied");
+              } catch {
+                setIndigenousCopyStatus("error");
+              }
+            }}
+          >
+            Copiar
+          </button>
+        </div>
+
+        {indigenousCopyStatus && (
+          <p
+            className={`${styles.copyStatus} ${
+              indigenousCopyStatus === "error" ? styles.copyStatusError : ""
+            }`}
+            role="status"
+          >
+            {indigenousCopyStatus === "error"
+              ? "No se pudo copiar al portapapeles."
+              : "Municipios copiados al portapapeles."}
+          </p>
+        )}
+
+        <div className={styles.relatedList}>
+          {indigenousMunicipalityItems.map((item) => (
+            <button
+              key={`indigenous-${item.municipio}`}
+              type="button"
+              className={styles.relatedItem}
+              onClick={() => selectMunicipality(item.municipio)}
+            >
+              <span>{item.municipio}</span>
+              <RegionPath item={item} />
+            </button>
+          ))}
         </div>
       </section>
 
