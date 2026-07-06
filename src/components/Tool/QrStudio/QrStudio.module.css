@@ -666,6 +666,47 @@
   margin-bottom: 0.45rem;
 }
 
+.logoPresets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0.25rem 0 0.65rem;
+}
+
+.logoPreset,
+.logoPresetActive {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--heading);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+.logoPresetActive {
+  border-color: var(--border-strong);
+  background: var(--control-active);
+}
+
+.logoPreset img,
+.logoPresetActive img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+  padding: 4px;
+}
+
 .logoWarning {
   margin: 0.55rem 0 0.9rem;
   padding: 0.7rem 0.8rem;

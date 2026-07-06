@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import CopyButton from "@/shared/CopyButton";
 import styles from "./MunicipalityLocator.module.css";
 import { REGIONALIZACION_HIDALGO } from "./regionalizacionHidalgo";
 import {
@@ -510,26 +511,6 @@ function downloadItemsXlsx(items, filename, sheetName) {
   URL.revokeObjectURL(url);
 }
 
-async function copyItems(items) {
-  const text = items.join("\n");
-
-  if (navigator.clipboard?.writeText) {
-    await navigator.clipboard.writeText(text);
-    return;
-  }
-
-  const textarea = document.createElement("textarea");
-  textarea.value = text;
-  textarea.setAttribute("readonly", "");
-  textarea.style.position = "fixed";
-  textarea.style.inset = "0 auto auto 0";
-  textarea.style.opacity = "0";
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand("copy");
-  textarea.remove();
-}
-
 function getRelatedMunicipalities(selectedMunicipality, field) {
   if (!selectedMunicipality) return [];
 
@@ -637,8 +618,7 @@ function GroupExplorer({
   items,
   onChange,
   onSelect,
-  onCopy,
-  copyStatus,
+  copyText,
   summary,
   disabled = false,
 }) {
@@ -652,14 +632,15 @@ function GroupExplorer({
           </p>
         </div>
 
-        <button
-          type="button"
+        <CopyButton
+          text={copyText}
           className={styles.groupCopyButton}
           disabled={disabled}
-          onClick={onCopy}
+          copiedText="Municipios copiados al portapapeles."
+          errorText="No se pudo copiar al portapapeles."
         >
           Copiar municipios
-        </button>
+        </CopyButton>
       </div>
 
       <label className={styles.groupSelectLabel}>
@@ -673,19 +654,6 @@ function GroupExplorer({
           ))}
         </select>
       </label>
-
-      {copyStatus && (
-        <p
-          className={`${styles.copyStatus} ${
-            copyStatus === "error" ? styles.copyStatusError : ""
-          }`}
-          role="status"
-        >
-          {copyStatus === "error"
-            ? "No se pudo copiar al portapapeles."
-            : "Municipios copiados al portapapeles."}
-        </p>
-      )}
 
       {value ? (
         <div className={styles.groupResults}>
@@ -744,17 +712,9 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
   const [includeAsentamientos, setIncludeAsentamientos] = useState(true);
   const [textFormat, setTextFormat] = useState("title");
   const [otraValue, setOtraValue] = useState("Otra");
-  const [copyStatus, setCopyStatus] = useState("");
-  const [municipalityCopyStatus, setMunicipalityCopyStatus] = useState("");
   const [selectedRegionGroup, setSelectedRegionGroup] = useState("");
   const [selectedMacrorregionGroup, setSelectedMacrorregionGroup] = useState("");
   const [selectedMicrorregionGroup, setSelectedMicrorregionGroup] = useState("");
-  const [groupCopyStatus, setGroupCopyStatus] = useState({
-    region: "",
-    macrorregion: "",
-    microrregion: "",
-  });
-  const [indigenousCopyStatus, setIndigenousCopyStatus] = useState("");
 
   const normalizedQuery = useMemo(() => normalizeText(query), [query]);
 
@@ -982,23 +942,11 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
   const clearSearch = () => {
     setQuery("");
     setOtraValue("Otra");
-    setCopyStatus("");
-    setMunicipalityCopyStatus("");
   };
 
   const selectMunicipality = (municipio) => {
     setQuery(municipio);
     setOtraValue("Otra");
-    setCopyStatus("");
-  };
-
-  const handleGroupCopy = async (key, items) => {
-    try {
-      await copyItems(items);
-      setGroupCopyStatus((current) => ({ ...current, [key]: "copied" }));
-    } catch {
-      setGroupCopyStatus((current) => ({ ...current, [key]: "error" }));
-    }
   };
 
   return (
@@ -1032,11 +980,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
               <span>Formato</span>
               <select
                 value={textFormat}
-                onChange={(event) => {
-                  setTextFormat(event.target.value);
-                  setCopyStatus("");
-                  setMunicipalityCopyStatus("");
-                }}
+                onChange={(event) => setTextFormat(event.target.value)}
               >
                 {TEXT_FORMAT_OPTIONS.map((option) => (
                   <option key={option.value} value={option.value}>
@@ -1060,33 +1004,14 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
               Descargar XLSX
             </button>
 
-            <button
-              type="button"
+            <CopyButton
+              text={municipalityNames.join("\n")}
               className={styles.counterButtonAlt}
-              onClick={async () => {
-                try {
-                  await copyItems(municipalityNames);
-                  setMunicipalityCopyStatus("copied");
-                } catch {
-                  setMunicipalityCopyStatus("error");
-                }
-              }}
+              copiedText="Municipios copiados."
+              errorText="No se pudo copiar."
             >
               Copiar
-            </button>
-
-            {municipalityCopyStatus && (
-              <small
-                className={`${styles.counterStatus} ${
-                  municipalityCopyStatus === "error" ? styles.counterStatusError : ""
-                }`}
-                role="status"
-              >
-                {municipalityCopyStatus === "error"
-                  ? "No se pudo copiar."
-                  : "Municipios copiados."}
-              </small>
-            )}
+            </CopyButton>
           </div>
         </div>
       </div>
@@ -1232,10 +1157,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                       <input
                         type="checkbox"
                         checked={includeOtra}
-                        onChange={(event) => {
-                          setIncludeOtra(event.target.checked);
-                          setCopyStatus("");
-                        }}
+                        onChange={(event) => setIncludeOtra(event.target.checked)}
                       />
                       <span>Incluir campo editable</span>
                     </label>
@@ -1243,10 +1165,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                     <input
                       className={styles.otraInput}
                       value={otraValue}
-                      onChange={(event) => {
-                        setOtraValue(event.target.value);
-                        setCopyStatus("");
-                      }}
+                      onChange={(event) => setOtraValue(event.target.value)}
                       disabled={!includeOtra}
                       aria-label="Texto editable para el campo OTRA"
                     />
@@ -1255,10 +1174,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                       <input
                         type="checkbox"
                         checked={includeLocalidades}
-                        onChange={(event) => {
-                          setIncludeLocalidades(event.target.checked);
-                          setCopyStatus("");
-                        }}
+                        onChange={(event) => setIncludeLocalidades(event.target.checked)}
                       />
                       <span>Incluir localidades</span>
                     </label>
@@ -1267,10 +1183,9 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                       <input
                         type="checkbox"
                         checked={includeAsentamientos}
-                        onChange={(event) => {
-                          setIncludeAsentamientos(event.target.checked);
-                          setCopyStatus("");
-                        }}
+                        onChange={(event) =>
+                          setIncludeAsentamientos(event.target.checked)
+                        }
                       />
                       <span>Incluir asentamientos humanos</span>
                     </label>
@@ -1291,34 +1206,15 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                     Descargar XLSX
                   </button>
 
-                  <button
-                    type="button"
+                  <CopyButton
+                    text={selectedLocalities.join("\n")}
                     className={styles.copyButton}
                     disabled={selectedLocalities.length === 0}
-                    onClick={async () => {
-                      try {
-                        await copyItems(selectedLocalities);
-                        setCopyStatus("copied");
-                      } catch {
-                        setCopyStatus("error");
-                      }
-                    }}
+                    copiedText="Registros copiados al portapapeles."
+                    errorText="No se pudo copiar al portapapeles."
                   >
                     Copiar
-                  </button>
-
-                  {copyStatus && (
-                    <p
-                      className={`${styles.copyStatus} ${
-                        copyStatus === "error" ? styles.copyStatusError : ""
-                      }`}
-                      role="status"
-                    >
-                      {copyStatus === "error"
-                        ? "No se pudo copiar al portapapeles."
-                        : "Registros copiados al portapapeles."}
-                    </p>
-                  )}
+                  </CopyButton>
                 </div>
               </section>
 
@@ -1377,13 +1273,9 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
             value={selectedRegionGroup}
             options={regionOptions}
             items={regionMunicipalityItems}
-            onChange={(value) => {
-              setSelectedRegionGroup(value);
-              setGroupCopyStatus((current) => ({ ...current, region: "" }));
-            }}
+            onChange={setSelectedRegionGroup}
             onSelect={selectMunicipality}
-            onCopy={() => handleGroupCopy("region", regionMunicipalityNames)}
-            copyStatus={groupCopyStatus.region}
+            copyText={regionMunicipalityNames.join("\n")}
             summary={regionSummary}
             disabled={regionMunicipalityNames.length === 0}
           />
@@ -1395,18 +1287,9 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
             value={selectedMacrorregionGroup}
             options={macrorregionOptions}
             items={macrorregionMunicipalityItems}
-            onChange={(value) => {
-              setSelectedMacrorregionGroup(value);
-              setGroupCopyStatus((current) => ({
-                ...current,
-                macrorregion: "",
-              }));
-            }}
+            onChange={setSelectedMacrorregionGroup}
             onSelect={selectMunicipality}
-            onCopy={() =>
-              handleGroupCopy("macrorregion", macrorregionMunicipalityNames)
-            }
-            copyStatus={groupCopyStatus.macrorregion}
+            copyText={macrorregionMunicipalityNames.join("\n")}
             summary={macrorregionSummary}
             disabled={macrorregionMunicipalityNames.length === 0}
           />
@@ -1418,18 +1301,9 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
             value={selectedMicrorregionGroup}
             options={microrregionOptions}
             items={microrregionMunicipalityItems}
-            onChange={(value) => {
-              setSelectedMicrorregionGroup(value);
-              setGroupCopyStatus((current) => ({
-                ...current,
-                microrregion: "",
-              }));
-            }}
+            onChange={setSelectedMicrorregionGroup}
             onSelect={selectMunicipality}
-            onCopy={() =>
-              handleGroupCopy("microrregion", microrregionMunicipalityNames)
-            }
-            copyStatus={groupCopyStatus.microrregion}
+            copyText={microrregionMunicipalityNames.join("\n")}
             summary={microrregionSummary}
             disabled={microrregionMunicipalityNames.length === 0}
           />
@@ -1455,34 +1329,15 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
         </summary>
 
         <div className={styles.groupSectionHeaderRow}>
-          <button
-            type="button"
+          <CopyButton
+            text={indigenousMunicipalityNames.join("\n")}
             className={styles.groupCopyButton}
-            onClick={async () => {
-              try {
-                await copyItems(indigenousMunicipalityNames);
-                setIndigenousCopyStatus("copied");
-              } catch {
-                setIndigenousCopyStatus("error");
-              }
-            }}
+            copiedText="Municipios copiados al portapapeles."
+            errorText="No se pudo copiar al portapapeles."
           >
             Copiar
-          </button>
+          </CopyButton>
         </div>
-
-        {indigenousCopyStatus && (
-          <p
-            className={`${styles.copyStatus} ${
-              indigenousCopyStatus === "error" ? styles.copyStatusError : ""
-            }`}
-            role="status"
-          >
-            {indigenousCopyStatus === "error"
-              ? "No se pudo copiar al portapapeles."
-              : "Municipios copiados al portapapeles."}
-          </p>
-        )}
 
         <div className={styles.relatedList}>
           {indigenousMunicipalityItems.map((item) => (

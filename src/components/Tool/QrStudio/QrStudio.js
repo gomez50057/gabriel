@@ -212,7 +212,20 @@ export default function QrStudio() {
       ...currentConfig,
       logoEnabled: true,
       logoFile: file,
+      logoName: file.name,
       logoUrl,
+    }));
+  };
+
+  const handleDefaultLogoSelect = (logo) => {
+    clearMessages();
+    revokeUrl(config.logoUrl);
+    setConfig((currentConfig) => ({
+      ...currentConfig,
+      logoEnabled: true,
+      logoFile: null,
+      logoName: logo.name,
+      logoUrl: logo.url,
     }));
   };
 
@@ -224,6 +237,7 @@ export default function QrStudio() {
       ...currentConfig,
       logoEnabled: false,
       logoFile: null,
+      logoName: "",
       logoUrl: "",
     }));
   };
@@ -373,6 +387,7 @@ export default function QrStudio() {
           logoPreparing={logoPreparing}
           onConfigChange={handleConfigChange}
           onLogoSelect={handleLogoSelect}
+          onDefaultLogoSelect={handleDefaultLogoSelect}
           onLogoRemove={handleLogoRemove}
           styles={styles}
         />

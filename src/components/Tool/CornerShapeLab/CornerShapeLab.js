@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import CopyButton from "@/shared/CopyButton";
 import styles from "./CornerShapeLab.module.css";
 
 const KEYS = ["A", "B", "C", "D", "E", "F", "G", "H"];
@@ -25,7 +26,6 @@ export default function CornerShapeLab() {
   });
 
   const [supportsCornerShape, setSupportsCornerShape] = useState(true);
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     try {
@@ -97,29 +97,6 @@ export default function CornerShapeLab() {
       return next;
     });
     setCornerShape(SHAPES[Math.floor(Math.random() * SHAPES.length)].value);
-  };
-
-  const copyToClipboard = async (text) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      window.clearTimeout(copyToClipboard._t);
-      copyToClipboard._t = window.setTimeout(() => setCopied(false), 1200);
-    } catch {
-      // fallback
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      ta.setAttribute("readonly", "true");
-      ta.style.position = "fixed";
-      ta.style.left = "-9999px";
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
-      setCopied(true);
-      window.clearTimeout(copyToClipboard._t);
-      copyToClipboard._t = window.setTimeout(() => setCopied(false), 1200);
-    }
   };
 
   return (
@@ -194,27 +171,25 @@ export default function CornerShapeLab() {
             </div>
 
             <div className={styles.copyGroup}>
-              <button
-                type="button"
+              <CopyButton
+                text={generatedCss.direct}
                 className={styles.copyBtn}
-                onClick={() => copyToClipboard(generatedCss.direct)}
                 title="Copiar CSS directo"
+                copiedText="CSS directo copiado."
               >
                 Copiar (Directo)
-              </button>
+              </CopyButton>
 
-              <button
-                type="button"
+              <CopyButton
+                text={generatedCss.withVars}
                 className={styles.copyBtnAlt}
-                onClick={() => copyToClipboard(generatedCss.withVars)}
                 title="Copiar CSS con variables"
+                copiedText="CSS con variables copiado."
               >
                 Copiar (Vars)
-              </button>
+              </CopyButton>
             </div>
           </div>
-
-          {copied && <div className={styles.copied}>✅ Copiado</div>}
 
           <details className={styles.details} open>
             <summary className={styles.summary}>CSS directo</summary>

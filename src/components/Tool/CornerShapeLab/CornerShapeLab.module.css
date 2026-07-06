@@ -485,17 +485,6 @@
   transform: translateY(1px);
 }
 
-.copied {
-  margin: 8px 0 10px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--heading);
-  background: var(--success-soft);
-  border: 1px solid var(--success-border);
-  padding: 8px 10px;
-  border-radius: var(--r-xs);
-}
-
 .details {
   border: 1px solid var(--bd-08);
   border-radius: 14px;

@@ -4,6 +4,7 @@ import {
   CORNER_SQUARE_SHAPES,
   ERROR_CORRECTION_LEVELS,
   EXPORT_FORMATS,
+  DEFAULT_QR_LOGOS,
   MAX_LOGO_SIZE_BYTES,
   QR_COLOR_SWATCHES,
 } from "@/lib/qr/qrDefaults";
@@ -250,6 +251,7 @@ export default function QrDesignControls({
   logoPreparing,
   onConfigChange,
   onLogoSelect,
+  onDefaultLogoSelect,
   onLogoRemove,
   styles,
 }) {
@@ -385,15 +387,30 @@ export default function QrDesignControls({
                 onChange={(event) => onLogoSelect(event.target.files?.[0])}
               />
             </label>
-            {config.logoFile && (
+            {config.logoUrl && (
               <button type="button" className={styles.secondaryButton} disabled={disabled} onClick={onLogoRemove}>
                 Quitar logo
               </button>
             )}
           </div>
 
+          <div className={styles.logoPresets} aria-label="Logos por defecto">
+            {DEFAULT_QR_LOGOS.map((logo) => (
+              <button
+                key={logo.url}
+                type="button"
+                className={config.logoUrl === logo.url ? styles.logoPresetActive : styles.logoPreset}
+                disabled={disabled}
+                onClick={() => onDefaultLogoSelect(logo)}
+              >
+                <img src={logo.url} alt="" aria-hidden="true" />
+                <span>{logo.label}</span>
+              </button>
+            ))}
+          </div>
+
           <p className={styles.fieldHint}>
-            Maximo {(MAX_LOGO_SIZE_BYTES / 1024 / 1024).toFixed(0)} MB. {logoPreparing ? "Preparando logo..." : config.logoFile?.name || ""}
+            Maximo {(MAX_LOGO_SIZE_BYTES / 1024 / 1024).toFixed(0)} MB. {logoPreparing ? "Preparando logo..." : config.logoName || ""}
           </p>
           <p className={styles.logoWarning}>
             Recomendado: logo menor al 25% y lectura en Maxima para mantener el QR facil de escanear.

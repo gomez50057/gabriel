@@ -47,6 +47,19 @@ export const QR_COLOR_SWATCHES = [
 export const MAX_BULK_RECORDS = 100;
 export const MAX_LOGO_SIZE_BYTES = 2 * 1024 * 1024;
 
+export const DEFAULT_QR_LOGOS = [
+  {
+    label: "Logo G",
+    name: "logo-g.svg",
+    url: "/img/generador-codigos-qr/logo-g.svg",
+  },
+  {
+    label: "Estrella Tzuhu",
+    name: "estrella-tzuhu.png",
+    url: "/img/generador-codigos-qr/estrella-tzuhu.png",
+  },
+];
+
 export const defaultQrConfig = {
   mode: "static",
   size: 1024,
@@ -61,8 +74,9 @@ export const defaultQrConfig = {
   backgroundColor: "#FFFFFF",
   logoEnabled: false,
   logoFile: null,
+  logoName: "",
   logoUrl: "",
-  logoSize: 0.22,
+  logoSize: 0.25,
   logoBackgroundColor: "#FFFFFF",
   logoBorderRadius: 16,
   logoPadding: 8,

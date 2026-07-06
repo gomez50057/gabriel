@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState, useRef } from "react";
+import { useMemo, useState } from "react";
 import { toCleanNames } from "@/lib/textCleanNames";
+import CopyButton from "@/shared/CopyButton";
 import styles from "./TextCaseConverter.module.css";
 
 const DEFAULT_STOP_WORDS = [
@@ -131,11 +132,6 @@ export default function TextCaseConverter({
   // Dropdown "Otros"
   const [othersOpen, setOthersOpen] = useState(false);
 
-  // Estado de copiado
-  const [copyStatus, setCopyStatus] = useState("idle");
-  // "idle" | "success" | "error"
-  const copyTimerRef = useRef(null);
-
   const stopWordsSet = useMemo(
     () =>
       new Set(
@@ -173,46 +169,6 @@ export default function TextCaseConverter({
         return text;
     }
   }, [text, mode, locale, stopWordsSet]);
-
-  const handleCopy = async () => {
-    if (copyTimerRef.current) {
-      clearTimeout(copyTimerRef.current);
-    }
-
-    const show = (status) => {
-      setCopyStatus(status);
-      copyTimerRef.current = setTimeout(() => {
-        setCopyStatus("idle");
-      }, 1600);
-    };
-
-    try {
-      // API moderna
-      if (navigator?.clipboard?.writeText) {
-        await navigator.clipboard.writeText(output ?? "");
-        show("success");
-        return;
-      }
-
-      // Fallback clásico
-      const ta = document.createElement("textarea");
-      ta.value = output ?? "";
-      ta.setAttribute("readonly", "");
-      ta.style.position = "absolute";
-      ta.style.left = "-9999px";
-      ta.style.top = "0";
-      document.body.appendChild(ta);
-      ta.select();
-
-      const ok = document.execCommand("copy");
-      document.body.removeChild(ta);
-
-      if (ok) show("success");
-      else show("error");
-    } catch {
-      show("error");
-    }
-  };
 
   const handleSwap = () => {
     setText(output);
@@ -372,30 +328,14 @@ export default function TextCaseConverter({
           />
 
           <div className={styles.row}>
-            <div className={styles.copyArea}>
-              {copyStatus === "success" && (
-                <span
-                  className={`${styles.copyMsg} ${styles.copyMsgSuccess}`}
-                  role="status"
-                  aria-live="polite"
-                >
-                  Texto copiado
-                </span>
-              )}
-
-              {copyStatus === "error" && (
-                <span
-                  className={`${styles.copyMsg} ${styles.copyMsgError}`}
-                  role="alert"
-                >
-                  Ocurrió un error
-                </span>
-              )}
-
-              <button className={styles.primaryBtn} onClick={handleCopy}>
-                Copiar resultado
-              </button>
-            </div>
+            <CopyButton
+              text={output ?? ""}
+              className={styles.primaryBtn}
+              copiedText="Texto copiado."
+              errorText="Ocurrió un error."
+            >
+              Copiar resultado
+            </CopyButton>
 
             <button className={styles.secondaryBtn} onClick={handleSwap}>
               Usar resultado como entrada

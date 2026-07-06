@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
+import CopyButton from "@/shared/CopyButton";
 import styles from "@/styles/blog/Snippet.module.css";
 
 export default function Snippet({
@@ -12,22 +13,10 @@ export default function Snippet({
   wrap = false,
   showLineNumbers = false,
 }) {
-  const [copied, setCopied] = useState(false);
-
   const displayLang = useMemo(
     () => (language ? String(language).toUpperCase() : "TXT"),
     [language]
   );
-
-  const handleCopy = async () => {
-    try {
-      await navigator?.clipboard?.writeText(code);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
-    } catch (e) {
-      console.warn("No se pudo copiar al portapapeles.", e);
-    }
-  };
 
   if (inline) {
     return (
@@ -46,15 +35,16 @@ export default function Snippet({
         </div>
 
         {copy && (
-          <button
-            type="button"
+          <CopyButton
+            text={code}
             className={styles.copyBtn}
-            onClick={handleCopy}
-            aria-live="polite"
-            aria-label="Copiar código al portapapeles"
+            copiedText="Código copiado."
+            errorText="No se pudo copiar el código."
+            ariaLabel="Copiar código al portapapeles"
+            placement="bottom"
           >
-            {copied ? "Copiado" : "Copiar"}
-          </button>
+            Copiar
+          </CopyButton>
         )}
       </header>
 

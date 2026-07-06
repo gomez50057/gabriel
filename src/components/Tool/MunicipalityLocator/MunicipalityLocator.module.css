@@ -168,17 +168,6 @@
   transform: translateY(0);
 }
 
-.counterStatus {
-  flex-basis: 100%;
-  color: var(--ink);
-  font-size: 0.78rem;
-  font-weight: 850;
-}
-
-.counterStatusError {
-  color: var(--danger);
-}
-
 /*  */
 /* Layout */
 /*  */
@@ -780,20 +769,6 @@
   opacity: 0.55;
 }
 
-.copyStatus {
-  flex-basis: 100%;
-  width: 100%;
-  margin: 2px 0 0;
-  color: var(--ink);
-  font-size: 0.82rem;
-  font-weight: 850;
-  text-align: right;
-}
-
-.copyStatusError {
-  color: var(--danger);
-}
-
 .sourceNote {
   width: min(100%, 1080px);
   margin: 18px auto 0;
@@ -1149,10 +1124,6 @@
 
   .groupCopyButton {
     width: 100%;
-  }
-
-  .copyStatus {
-    text-align: left;
   }
 
   .populationItem {
