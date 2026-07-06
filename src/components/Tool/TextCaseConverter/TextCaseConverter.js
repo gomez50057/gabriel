@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, useRef } from "react";
+import { toCleanNames } from "@/lib/textCleanNames";
 import styles from "./TextCaseConverter.module.css";
 
 const DEFAULT_STOP_WORDS = [
@@ -165,6 +166,8 @@ export default function TextCaseConverter({
         return toKebabCase(text, locale);
       case "snake":
         return toSnakeCase(text, locale);
+      case "cleanNames":
+        return toCleanNames(text);
 
       default:
         return text;
@@ -304,6 +307,14 @@ export default function TextCaseConverter({
               type="button"
             >
               Todo minúsculas
+            </button>
+
+            <button
+              className={`${styles.modeBtn} ${mode === "cleanNames" ? styles.active : ""}`}
+              onClick={() => selectMainMode("cleanNames")}
+              type="button"
+            >
+              Nombres limpios con guiones bajos
             </button>
 
             {/* ===== BOTÓN DESPLEGABLE "OTROS" ===== */}
