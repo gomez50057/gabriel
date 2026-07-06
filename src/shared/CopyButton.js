@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import styles from "./CopyButton.module.css";
 
 const CLOSE_MS = 260;
@@ -37,8 +38,10 @@ export default function CopyButton({
   placement = "top",
 }) {
   const [notice, setNotice] = useState(null);
+  const [noticePosition, setNoticePosition] = useState(null);
   const [closing, setClosing] = useState(false);
   const [remainingMs, setRemainingMs] = useState(durationMs);
+  const buttonRef = useRef(null);
   const closeTimerRef = useRef(null);
   const hideTimerRef = useRef(null);
   const tickTimerRef = useRef(null);
@@ -58,11 +61,23 @@ export default function CopyButton({
     }, CLOSE_MS);
   };
 
+  const getNoticePosition = () => {
+    const rect = buttonRef.current?.getBoundingClientRect();
+
+    if (!rect) return null;
+
+    return {
+      left: rect.left + rect.width / 2,
+      top: placement === "bottom" ? rect.bottom + 10 : rect.top - 10,
+    };
+  };
+
   const showNotice = (type) => {
     const startedAt = Date.now();
 
     clearTimers();
     setClosing(false);
+    setNoticePosition(getNoticePosition());
     setNotice({ type, key: startedAt });
     setRemainingMs(durationMs);
 
@@ -82,6 +97,20 @@ export default function CopyButton({
     []
   );
 
+  useEffect(() => {
+    if (!notice) return undefined;
+
+    const updatePosition = () => setNoticePosition(getNoticePosition());
+
+    window.addEventListener("resize", updatePosition);
+    window.addEventListener("scroll", updatePosition, true);
+
+    return () => {
+      window.removeEventListener("resize", updatePosition);
+      window.removeEventListener("scroll", updatePosition, true);
+    };
+  }, [notice, placement]);
+
   const handleCopy = async () => {
     try {
       await writeClipboard(String(getText ? getText() : text));
@@ -94,9 +123,42 @@ export default function CopyButton({
   const message =
     notice?.type === "error" ? errorText : copiedText ?? "Copiado al portapapeles.";
 
+  const noticeElement = notice && noticePosition && (
+    <span
+      key={notice.key}
+      className={`${styles.notice} ${
+        placement === "bottom" ? styles.bottom : ""
+      } ${closing ? styles.closing : ""} ${
+        notice.type === "error" ? styles.error : ""
+      }`}
+      role={notice.type === "error" ? "alert" : "status"}
+      aria-live="polite"
+      style={{
+        "--copy-toast-duration": `${durationMs}ms`,
+        left: `${noticePosition.left}px`,
+        top: `${noticePosition.top}px`,
+      }}
+    >
+      <span className={styles.message}>{message}</span>
+      <span className={styles.timer}>{Math.ceil(remainingMs / 1000)}s</span>
+      <button
+        type="button"
+        className={styles.close}
+        onClick={closeNotice}
+        aria-label="Cerrar mensaje"
+      >
+        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <path d="M4 4l8 8M12 4l-8 8" />
+        </svg>
+      </button>
+      <span className={styles.bar} />
+    </span>
+  );
+
   return (
     <span className={styles.wrap}>
       <button
+        ref={buttonRef}
         type="button"
         className={className}
         onClick={handleCopy}
@@ -107,33 +169,7 @@ export default function CopyButton({
         {children}
       </button>
 
-      {notice && (
-        <span
-          key={notice.key}
-          className={`${styles.notice} ${
-            placement === "bottom" ? styles.bottom : ""
-          } ${closing ? styles.closing : ""} ${
-            notice.type === "error" ? styles.error : ""
-          }`}
-          role={notice.type === "error" ? "alert" : "status"}
-          aria-live="polite"
-          style={{ "--copy-toast-duration": `${durationMs}ms` }}
-        >
-          <span className={styles.message}>{message}</span>
-          <span className={styles.timer}>{Math.ceil(remainingMs / 1000)}s</span>
-          <button
-            type="button"
-            className={styles.close}
-            onClick={closeNotice}
-            aria-label="Cerrar mensaje"
-          >
-            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-              <path d="M4 4l8 8M12 4l-8 8" />
-            </svg>
-          </button>
-          <span className={styles.bar} />
-        </span>
-      )}
+      {noticeElement ? createPortal(noticeElement, document.body) : null}
     </span>
   );
 }

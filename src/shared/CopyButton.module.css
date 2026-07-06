@@ -4,10 +4,8 @@
 }
 
 .notice {
-  position: absolute;
-  bottom: calc(100% + 10px);
-  left: 50%;
-  z-index: 30;
+  position: fixed;
+  z-index: 9999;
   display: grid;
   grid-template-columns: minmax(8rem, 1fr) auto auto;
   align-items: center;
@@ -22,17 +20,20 @@
   color: var(--heading);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -100%);
   transition: opacity 260ms ease, transform 260ms ease;
 }
 
 .bottom {
-  top: calc(100% + 10px);
-  bottom: auto;
+  transform: translate(-50%, 0);
 }
 
 .closing {
   opacity: 0;
+  transform: translate(-50%, calc(-100% + 6px));
+}
+
+.bottom.closing {
   transform: translate(-50%, 6px);
 }
 
