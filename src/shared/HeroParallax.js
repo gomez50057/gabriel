@@ -1,6 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "@/styles/shared/HeroParallax.module.css";
@@ -61,7 +62,15 @@ export default function HeroParallax({
       </div>
 
       <div className={styles.imageContainer} aria-hidden="true">
-        <img ref={imgRef} src={foregroundSrc} alt={foregroundAlt} />
+        <Image
+          ref={imgRef}
+          src={foregroundSrc}
+          alt={foregroundAlt}
+          fill
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+        />
       </div>
     </div>
   );

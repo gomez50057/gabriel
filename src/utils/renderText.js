@@ -6,6 +6,7 @@
 import styles from "@/styles/blog/FullPost.module.css";
 import Snippet from "@/shared/blogStructure/Snippet";
 import { Fragment } from "react";
+import Image from "next/image";
 
 export const normalizeName = (str) => {
   return str
@@ -229,13 +230,14 @@ export const renderDescription = (description) => {
           return (
             <li key={`img-${idx}`} className={styles.noBullet}>
               <figure className={styles.figure}>
-                <img
+                <Image
                   src={block.src}
                   alt={block.alt || ""}
                   className={variantClass}
                   loading="lazy"
-                  decoding="async"
-                  {...imgProps}
+                  width={imgProps.width || 1200}
+                  height={imgProps.height || 675}
+                  sizes={block.variant === "small" ? "720px" : "(max-width: 900px) calc(100vw - 32px), 900px"}
                 />
                 {block.caption && (
                   <figcaption className={styles.figCaption}>{block.caption}</figcaption>

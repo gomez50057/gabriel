@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { applyImageWatermark } from "@/lib/watermark/applyImageWatermark";
 import { applyPdfWatermark } from "@/lib/watermark/applyPdfWatermark";
 import { downloadBlob } from "@/lib/watermark/downloadFile";
@@ -288,7 +289,7 @@ export default function WatermarkStudio() {
                   title="gomez50057@gmail.com"
                   className={styles.contactIconLink}
                 >
-                  <img src="/img/icons/email.png" alt="" loading="lazy" decoding="async" />
+                  <Image src="/img/icons/email.png" alt="" width={18} height={18} sizes="18px" />
                   Correo
                 </a>
               </div>

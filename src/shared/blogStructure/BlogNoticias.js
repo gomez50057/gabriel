@@ -3,6 +3,7 @@ import React, { useMemo, useState, useEffect, useRef, useCallback } from "react"
 import styles from "@/styles/blog/BlogNoticias.module.css";
 import FeaturedPosts from "@/shared/blogStructure/FeaturedPosts";
 import Link from "next/link";
+import Image from "next/image";
 import { normalizeName } from "@/utils/renderText";
 
 const BlogNoticias = ({
@@ -95,13 +96,15 @@ const BlogNoticias = ({
                   >
                     <article className={styles.newsItem}>
                       {post?.image && (
-                        <img
-                          src={post.image}
-                          alt={post.name}
-                          className={styles.newsImage}
-                          loading="lazy"
-                          decoding="async"
-                        />
+                        <div className={styles.newsMedia}>
+                          <Image
+                            src={post.image}
+                            alt={post.name}
+                            fill
+                            sizes="(max-width: 1024px) 50vw, 30vw"
+                            className={styles.newsImage}
+                          />
+                        </div>
                       )}
 
                       <div className={styles.newsContent}>

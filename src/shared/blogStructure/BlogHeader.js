@@ -2,6 +2,7 @@
 import { useRef, useState, useEffect, useCallback, useMemo } from "react";
 import styles from "@/styles/blog/BlogHeader.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { normalizeName } from "@/utils/renderText";
 
 const BlogHeader = ({ posts = [] }) => {
@@ -96,7 +97,6 @@ const BlogHeader = ({ posts = [] }) => {
   return (
     <section
       className={styles.container}
-      style={{ backgroundImage: `url(${POSTS[activeIndex].image})` }}
       role="region"
       aria-roledescription="carrusel"
       aria-label="Encabezado de blog con carrusel"
@@ -104,6 +104,16 @@ const BlogHeader = ({ posts = [] }) => {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
+      <Image
+        key={POSTS[activeIndex].image}
+        src={POSTS[activeIndex].image}
+        alt=""
+        fill
+        sizes="100vw"
+        loading="eager"
+        fetchPriority="high"
+        className={styles.backgroundImage}
+      />
       <div className={styles.overlay} aria-hidden="true" />
       <div className={styles.content}>
         <h2
@@ -131,7 +141,7 @@ const BlogHeader = ({ posts = [] }) => {
         </Link>
       </div>
 
-      <div className={styles.previewContainer} aria-hidden="true">
+      <div className={styles.previewContainer}>
         {Array(2)
           .fill(null)
           .map((_, offset) => {
@@ -140,10 +150,17 @@ const BlogHeader = ({ posts = [] }) => {
               <button
                 key={nextIndex}
                 className={`${styles.previewItem} ${styles.slideAnimation}`}
-                style={{ backgroundImage: `url(${POSTS[nextIndex].image})` }}
                 onClick={() => handlePreviewClick(nextIndex)}
                 aria-label={`Ir a: ${POSTS[nextIndex].name}`}
-              />
+              >
+                <Image
+                  src={POSTS[nextIndex].image}
+                  alt=""
+                  fill
+                  sizes="150px"
+                  className={styles.previewImage}
+                />
+              </button>
             );
           })}
       </div>

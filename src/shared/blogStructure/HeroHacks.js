@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from '@/styles/blog/HeroHacks.module.css';
 
 export default function HeroHacks({
@@ -59,11 +60,11 @@ export default function HeroHacks({
           >
             <a className={styles.cardLink} href={p.href} aria-label={p.title}>
               <div className={styles.media}>
-                <img
+                <Image
                   src={p.image}
                   alt=""
-                  loading="lazy"
-                  decoding="async"
+                  fill
+                  sizes="(max-width: 899px) calc(100vw - 32px), 33vw"
                   className={styles.image}
                 />
               </div>

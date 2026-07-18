@@ -430,11 +430,13 @@
   color: var(--fgCaption);
 }
 
-.modalImg {
+.modalImageWrap {
+  position: relative;
   width: 100%;
-  height: auto;
-  max-height: calc(92vh - 74px);
-  object-fit: contain;
-  display: block;
+  height: min(72vh, 720px);
   background: rgba(0, 0, 0, 0.55);
+}
+
+.modalImg {
+  object-fit: contain;
 }

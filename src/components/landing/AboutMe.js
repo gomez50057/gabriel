@@ -1,5 +1,4 @@
-'use client';
-
+import Image from 'next/image';
 import styles from '@/styles/AboutMe.module.css';
 
 export default function AboutMe() {
@@ -7,9 +6,12 @@ export default function AboutMe() {
     <section id="sobremi" className={styles.section}>
       {/* Imagen de encabezado completa */}
       <div className={styles.headerImage}>
-        <img
+        <Image
           src="/img/about/sobre-mi-header.png"
           alt="Sobre Mi - Hola, Soy Gabriel Gómez"
+          width={5537}
+          height={1239}
+          sizes="(max-width: 768px) calc(100vw - 30px), 1200px"
           className={styles.headerImg}
         />
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import { Responsive, WidthProvider } from "react-grid-layout/legacy";
 import styles from "./ImageBoard.module.css";
 import { defaultItems, defaultLayouts } from "@/utils/portafolio/portfolioBoardData";
@@ -215,12 +216,12 @@ export default function ImageBoard() {
           {visibleItems.map((it) => (
             <div key={it.id} className={styles.tile}>
               <div className={styles.tileInner}>
-                <img
+                <Image
                   src={it.src}
                   alt={it.title || "Imagen"}
+                  fill
+                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
                   className={styles.img}
-                  loading="lazy"
-                  decoding="async"
                   draggable={false}
                 />
 
@@ -270,7 +271,15 @@ export default function ImageBoard() {
               <div className={styles.modalGroup}>{viewer.group}</div>
             </div>
 
-            <img src={viewer.src} alt={viewer.title} className={styles.modalImg} />
+            <div className={styles.modalImageWrap}>
+              <Image
+                src={viewer.src}
+                alt={viewer.title}
+                fill
+                sizes="94vw"
+                className={styles.modalImg}
+              />
+            </div>
           </div>
         </div>
       )}

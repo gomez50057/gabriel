@@ -1,5 +1,4 @@
-"use client";
-
+import Image from "next/image";
 import styles from "@/styles/shared/Footer.module.css";
 
 const imgBasePath = "/img/icons/";
@@ -26,7 +25,7 @@ export default function Footer() {
             title={it.text}
             className={styles.socialLink}
           >
-            <img src={`${imgBasePath}${it.icon}`} alt="" loading="lazy" decoding="async" />
+            <Image src={`${imgBasePath}${it.icon}`} alt="" width={60} height={60} sizes="60px" />
           </a>
         ))}
       </div>
@@ -34,7 +33,7 @@ export default function Footer() {
       <div className={styles.footerContacto}>
         <div className={styles.footerContactoTxt}>
           <div className={styles.footerContactoIco}>
-            <img src={`${imgBasePath}telegram.png`} alt="" loading="lazy" decoding="async" />
+            <Image src={`${imgBasePath}telegram.png`} alt="" width={28} height={28} sizes="28px" />
             <div>
               <p><span>CONTACTO:</span></p>
               <p><span>Gabriel Gómez Gómez</span></p>

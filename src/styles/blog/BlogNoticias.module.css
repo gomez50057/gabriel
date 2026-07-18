@@ -102,11 +102,13 @@
 }
 
 /* Imagen */
-.newsImage {
-  width: 100%;
+.newsMedia {
+  position: relative;
   aspect-ratio: 16 / 9;
+}
+
+.newsImage {
   object-fit: cover;
-  display: block;
 }
 
 /* Contenido */

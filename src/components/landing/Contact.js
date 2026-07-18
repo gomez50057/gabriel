@@ -1,6 +1,4 @@
-'use client';
-
-import { memo } from 'react';
+import Image from 'next/image';
 import styles from '@/styles/Contact.module.css';
 
 const ICON_SIZE = { w: 60, h: 60 };
@@ -36,7 +34,7 @@ const LINKS = [
   },
 ];
 
-const ContactLink = memo(function ContactLink({
+function ContactLink({
   href,
   label,
   text,
@@ -60,20 +58,19 @@ const ContactLink = memo(function ContactLink({
         <span aria-hidden="true" />
         <span aria-hidden="true" />
         <span className={styles.icon} aria-hidden="true">
-          <img
+          <Image
             src={iconSrc}
             alt=""
             width={ICON_SIZE.w}
             height={ICON_SIZE.h}
-            loading="lazy"
-            decoding="async"
+            sizes="60px"
           />
         </span>
       </div>
       <div className={styles.text}>{text}</div>
     </a>
   );
-});
+}
 
 export default function Contact() {
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "@/styles/HorizontalTicker.module.css";
@@ -69,9 +70,23 @@ export default function HorizontalTicker({
     <section ref={sectionRef} className={styles.wrapper} aria-label="Ticker horizontal">
       <div className={styles.line} ref={lineRef}>
         <span className={styles.chunk}>Lo que no</span>
-        <img src={leftImg} alt={altLeft} className={styles.badge} />
+        <Image
+          src={leftImg}
+          alt={altLeft}
+          width={1000}
+          height={667}
+          sizes="(max-width: 700px) 150px, 240px"
+          className={styles.badge}
+        />
         <span className={styles.chunk}><em>se trackea</em></span>
-        <img src={rightImg} alt={altRight} className={styles.badge} />
+        <Image
+          src={rightImg}
+          alt={altRight}
+          width={1000}
+          height={667}
+          sizes="(max-width: 700px) 150px, 240px"
+          className={styles.badge}
+        />
         <span className={styles.chunk}>no escala</span>
         <span className={styles.trailingSpace} aria-hidden="true" />
       </div>

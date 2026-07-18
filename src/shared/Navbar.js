@@ -160,6 +160,7 @@ export default function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
+                          prefetch={false}
                           className={styles.dropdownLink}
                         >
                           {child.label}
@@ -177,7 +178,7 @@ export default function Navbar() {
               return (
                 <li key={href}>
                   {href.startsWith("/") ? (
-                    <Link href={href} className={styles.link}>
+                    <Link href={href} prefetch={false} className={styles.link}>
                       <span
                         className={`${styles.linkInner} ${isActive(href) ? styles.active : ""
                           }`}
@@ -261,6 +262,7 @@ export default function Navbar() {
         }}
         onClick={() => setOpen(false)}
         aria-hidden={!open}
+        inert={!open}
       >
         <nav
           className={styles.menu}
@@ -277,7 +279,7 @@ export default function Navbar() {
                     <ul className={styles.menuSubList}>
                       {link.children.map((child) => (
                         <li key={child.href}>
-                          <Link href={child.href} className={styles.menuLink}>
+                          <Link href={child.href} prefetch={false} className={styles.menuLink}>
                             {child.label}
                           </Link>
                         </li>
@@ -293,7 +295,7 @@ export default function Navbar() {
               return (
                 <li key={href}>
                   {href.startsWith("/") ? (
-                    <Link href={href} className={styles.menuLink}>
+                    <Link href={href} prefetch={false} className={styles.menuLink}>
                       {label}
                     </Link>
                   ) : (

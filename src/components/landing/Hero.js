@@ -1,45 +1,48 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from '@/styles/Hero.module.css';
 
+const HERO_TITLES = [
+  'Full Stack developer',
+  'Ingeniero en Sistemas y Tecnologías Industriales',
+];
+
 export default function Hero() {
-  const strings = [
-    'Full Stack developer',
-    'Ingeniero en Sistemas y Tecnologías Industriales',
-  ];
-  const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
+  const text = HERO_TITLES[index].substring(0, subIndex);
 
   useEffect(() => {
-    if (subIndex === strings[index].length + 1 && !deleting) {
+    if (subIndex === HERO_TITLES[index].length + 1 && !deleting) {
       const t = setTimeout(() => setDeleting(true), 1500);
       return () => clearTimeout(t);
     }
     if (subIndex === 0 && deleting) {
       setDeleting(false);
-      setIndex((prev) => (prev + 1) % strings.length);
+      setIndex((prev) => (prev + 1) % HERO_TITLES.length);
       return;
     }
     const timeout = setTimeout(() => {
       setSubIndex((prev) => prev + (deleting ? -1 : 1));
     }, deleting ? 50 : 120);
     return () => clearTimeout(timeout);
-  }, [subIndex, index, deleting, strings]);
-
-  useEffect(() => {
-    setText(strings[index].substring(0, subIndex));
-  }, [subIndex, index, strings]);
+  }, [subIndex, index, deleting]);
 
   return (
     <section className={styles.seccion} id="inicio">
       {/* Fondo con imagen centrada y overlay */}
       <div className={styles.heroImageContainerOverlay} aria-hidden="true">
-        <img
+        <Image
           src="/img/hero/gabriel-gomez.png"
           alt=""
+          width={5530}
+          height={2079}
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
           className={styles.heroImageOverlay}
         />
         <div className={styles.heroOverlay} />
@@ -56,9 +59,14 @@ export default function Hero() {
           <p className={styles.descripcion}>DESARROLLO DE PLATAFORMAS Y SITIOS WEB · PLANES DE LOGÍSTICA Y CALIDAD</p>
         </div>
         <div className={styles.heroImageContainer}>
-          <img
+          <Image
             src="/img/hero/persona.png"
-            alt="Hero Image"
+            alt="Gabriel Gómez, desarrollador web"
+            width={2642}
+            height={3201}
+            sizes="(max-width: 700px) 100vw, 60vw"
+            loading="eager"
+            fetchPriority="high"
             className={styles.heroImage}
           />
         </div>
@@ -68,7 +76,7 @@ export default function Hero() {
           <a
             href="#portfolio"
             className={styles.ctaCircleButton}
-            aria-label="Ir a Portafolio"
+            aria-label="Portafolio - Portafolio - Ir a Portafolio"
             title="Ver portafolio"
             onClick={(e) => {
               const el = document.getElementById('portfolio');

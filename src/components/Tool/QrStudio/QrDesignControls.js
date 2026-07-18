@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   BODY_SHAPES,
   CORNER_DOT_SHAPES,
@@ -403,7 +404,7 @@ export default function QrDesignControls({
                 disabled={disabled}
                 onClick={() => onDefaultLogoSelect(logo)}
               >
-                <img src={logo.url} alt="" aria-hidden="true" />
+                <Image src={logo.url} alt="" width={34} height={34} sizes="34px" aria-hidden="true" />
                 <span>{logo.label}</span>
               </button>
             ))}

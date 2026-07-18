@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import TextAutocomplete from "@/shared/TextAutocomplete/TextAutocomplete";
 import { REGIONALIZACION_HIDALGO } from "../MunicipalityLocator/regionalizacionHidalgo";
 import styles from "./MunicipalLogoDownloader.module.css";
@@ -67,7 +68,14 @@ export default function MunicipalLogoDownloader() {
         <div className={`${styles.panel} ${styles.preview}`}>
           {selected ? (
             <>
-              <img alt={`Logo de ${selected.municipio}`} src={selected.path} />
+              <div className={styles.logoPreview}>
+                <Image
+                  alt={`Logo de ${selected.municipio}`}
+                  src={selected.path}
+                  fill
+                  sizes="400px"
+                />
+              </div>
               <h2>{selected.municipio}</h2>
               <a download={selected.file} href={selected.path}>
                 Descargar logo

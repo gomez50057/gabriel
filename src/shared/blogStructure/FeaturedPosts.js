@@ -104,6 +104,7 @@ const FeaturedPosts = ({ featuredPosts = [], nameLink = "" }) => {
                   className={styles.featuredImage}
                   loading="lazy"
                   decoding="async"
+                  sizes="56px"
                   fallbackSrc="/img/fallback.webp"
                 />
 

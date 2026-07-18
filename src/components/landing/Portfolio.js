@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "@/styles/Portfolio.module.css";
 import { EyeIcon, ExternalLinkIcon } from "@/shared/icons/PortfolioIcons";
 import { portfolioRecentProjects } from "@/utils/portafolio/portfolioBoardData";
@@ -64,12 +65,12 @@ function Portfolio({
               <div className={styles.member}>
                 <div className={styles.imageWrap}>
                   {img ? (
-                    <img
+                    <Image
                       src={img}
                       alt={projectTitle}
+                      fill
+                      sizes="(max-width: 768px) calc(100vw - 30px), 30vw"
                       className={styles.image}
-                      loading="lazy"
-                      decoding="async"
                     />
                   ) : null}
                 </div>

@@ -5,14 +5,16 @@
   position: relative;
   width: 100vw;
   height: 60vh;
-  background-position: center;
-  background-size: cover;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
   padding: 0 var(--padX);
-  transition: background-image .8s ease-in-out;
+}
+
+.backgroundImage,
+.previewImage {
+  object-fit: cover;
 }
 
 .overlay {
@@ -88,11 +90,11 @@
 }
 
 .previewItem {
+  position: relative;
+  overflow: hidden;
   width: clamp(110px, 12vw, 150px);
   height: clamp(160px, 20vw, 250px);
   cursor: pointer;
-  background-position: center;
-  background-size: cover;
   border-radius: 14px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
   transition: transform .35s ease, opacity .35s ease, box-shadow .25s ease;

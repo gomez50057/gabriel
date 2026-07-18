@@ -106,6 +106,7 @@ const renderMediaItem = (item, index, isCarouselItem = false) => {
         className={styles.postImage}
         loading="lazy"
         decoding="async"
+        sizes="(max-width: 900px) calc(100vw - 32px), 900px"
         fallbackSrc="/img/placeholder.webp"
       />
       {item.caption && <figcaption className={styles.figCaption}>{item.caption}</figcaption>}
