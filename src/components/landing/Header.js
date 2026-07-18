@@ -127,11 +127,12 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={`${styles.header} ${styles.glass} ${scrolled ? styles.scrolled : ""
-        } ${hidden ? styles.headerHidden : ""}`}
-    >
-      <div className={styles.inner}>
+    <>
+      <header
+        className={`${styles.header} ${styles.glass} ${scrolled ? styles.scrolled : ""
+          } ${hidden ? styles.headerHidden : ""}`}
+      >
+        <div className={styles.inner}>
         <a href="#inicio" aria-label="Ir al inicio" className={styles.logoLink}>
           <img src="/img/logo.svg" alt="Logo Gabriel Gomez" className={styles.logo} />
         </a>
@@ -249,12 +250,17 @@ export default function Header() {
             <span />
           </button>
         </div>
-      </div>
+        </div>
+      </header>
 
       {/* Overlay móvil */}
       <div
         id="mobile-nav"
         className={`${styles.overlay} ${open ? styles.overlayOpen : ""}`}
+        style={{
+          backdropFilter: "blur(28px) saturate(115%)",
+          WebkitBackdropFilter: "blur(28px) saturate(115%)",
+        }}
         onClick={() => setOpen(false)}
         aria-hidden={!open}
       >
@@ -303,6 +309,6 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-    </header>
+    </>
   );
 }

@@ -185,9 +185,9 @@
   position: fixed;
   inset: 0;
   z-index: 99;
-  background: color-mix(in lab, var(--bg) 45%, black 30%);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: color-mix(in lab, var(--bg) 92%, transparent);
+  backdrop-filter: blur(28px) saturate(115%);
+  -webkit-backdrop-filter: blur(28px) saturate(115%);
   opacity: 0;
   pointer-events: none;
   transition: opacity .2s ease;
@@ -204,7 +204,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: color-mix(in lab, var(--bg) 92%, transparent);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: transparent;
   border-top: 1px solid color-mix(in lab, var(--text) 12%, transparent);
   padding: 24px 16px 32px;
   transform: translateY(8px);
