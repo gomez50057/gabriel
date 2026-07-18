@@ -1,0 +1,137 @@
+.wrapper {
+  width: min(100%, 1080px);
+  margin: 2.5rem auto;
+}
+
+.header {
+  margin-bottom: 1.25rem;
+}
+
+.header h1,
+.preview h2 {
+  margin: 0;
+  color: var(--heading);
+}
+
+.header h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.header p,
+.preview p,
+.list p {
+  color: var(--muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--surface-2);
+}
+
+.panel label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--heading);
+  font-weight: 650;
+}
+
+.panel input {
+  width: 100%;
+  padding: 0.7rem 2.8rem 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--heading);
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.panel .clearButton {
+  position: absolute;
+  top: 50%;
+  right: 0.45rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.panel .clearButton:hover {
+  background: var(--control-active);
+}
+
+.list {
+  display: grid;
+  gap: 0.35rem;
+  max-height: 440px;
+  margin-top: 0.8rem;
+  overflow: auto;
+}
+
+.option {
+  padding: 0.65rem 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--heading);
+  text-align: left;
+  cursor: pointer;
+}
+
+.option:hover,
+.list .selected {
+  border-color: var(--border-strong);
+  background: var(--control-active);
+}
+
+.preview {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 460px;
+  gap: 1rem;
+  text-align: center;
+}
+
+.preview img {
+  width: min(100%, 400px);
+  max-height: 290px;
+  object-fit: contain;
+}
+
+.preview a {
+  padding: 0.7rem 0.95rem;
+  border-radius: 8px;
+  background: var(--action-bg);
+  color: var(--action-fg);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.preview a:hover {
+  background: var(--action-bg-hover);
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .preview {
+    min-height: 340px;
+  }
+}

@@ -2,23 +2,14 @@
 
 import { useMemo, useState } from "react";
 import CopyButton from "@/shared/CopyButton";
+import TextAutocomplete from "@/shared/TextAutocomplete/TextAutocomplete";
+import { normalizeText } from "@/shared/TextAutocomplete/fuzzyTextSearch.mjs";
 import styles from "./MunicipalityLocator.module.css";
 import { REGIONALIZACION_HIDALGO } from "./regionalizacionHidalgo";
 import {
   LOCALIDADES_HIDALGO,
   MUNICIPALITY_LOCALITIES_SOURCE,
 } from "./municipalityLocalities";
-
-function normalizeText(value = "") {
-  return value
-    .toString()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
 
 function getMunicipalitySearchValues(item) {
   return [
@@ -716,26 +707,13 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
   const [selectedMacrorregionGroup, setSelectedMacrorregionGroup] = useState("");
   const [selectedMicrorregionGroup, setSelectedMicrorregionGroup] = useState("");
 
-  const normalizedQuery = useMemo(() => normalizeText(query), [query]);
-
-  const matches = useMemo(() => {
-    if (!normalizedQuery) return [];
-
-    return REGIONALIZACION_HIDALGO.filter((item) =>
-      getMunicipalitySearchValues(item).some((value) =>
-        value.includes(normalizedQuery)
-      )
-    ).slice(0, 12);
-  }, [normalizedQuery]);
-
   const selectedMunicipality = useMemo(() => {
     const exactMatch = findExactMunicipality(query);
 
     if (exactMatch) return exactMatch;
-    if (matches.length === 1) return matches[0];
 
     return null;
-  }, [query, matches]);
+  }, [query]);
 
   const relatedByRegion = useMemo(
     () => getRelatedMunicipalities(selectedMunicipality, "region"),
@@ -939,13 +917,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
     [microrregionMunicipalityItems, textFormat]
   );
 
-  const clearSearch = () => {
-    setQuery("");
-    setOtraValue("Otra");
-  };
-
-  const selectMunicipality = (municipio) => {
-    setQuery(municipio);
+  const selectMunicipality = () => {
     setOtraValue("Otra");
   };
 
@@ -1018,65 +990,39 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
 
       <div className={styles.layout}>
         <aside className={styles.searchCard}>
-          <label className={styles.label} htmlFor="municipio-search">
-            Municipio
-          </label>
-
-          <div className={styles.searchBox}>
-            <input
-              id="municipio-search"
-              className={styles.input}
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Ej. Pachuca, Tula, Zimapán..."
-              autoComplete="off"
-            />
-
-            {query.length > 0 && (
-              <button
-                type="button"
-                className={styles.clearBtn}
-                onClick={clearSearch}
-                aria-label="Limpiar búsqueda"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
+          <TextAutocomplete
+            id="municipio-search"
+            label="Municipio"
+            value={query}
+            onChange={setQuery}
+            onSelect={selectMunicipality}
+            onClear={() => setOtraValue("Otra")}
+            options={REGIONALIZACION_HIDALGO}
+            getOptionLabel={(item) => item.municipio}
+            getSearchValues={getMunicipalitySearchValues}
+            getOptionKey={(item) => item.municipio}
+            selectedKey={selectedMunicipality?.municipio}
+            renderOption={(item) => (
+              <>
+                <span className={styles.suggestionName}>{item.municipio}</span>
+                <RegionPath item={item} />
+              </>
             )}
-          </div>
-
-          <div className={styles.suggestions} aria-label="Sugerencias">
-            {normalizedQuery && matches.length > 0 ? (
-              matches.map((item) => {
-                const isActive =
-                  selectedMunicipality?.municipio === item.municipio;
-
-                return (
-                  <button
-                    key={item.municipio}
-                    type="button"
-                    className={`${styles.suggestion} ${isActive ? styles.activeSuggestion : ""
-                      }`}
-                    onClick={() => selectMunicipality(item.municipio)}
-                  >
-                    <span className={styles.suggestionName}>
-                      {item.municipio}
-                    </span>
-
-                    <RegionPath item={item} />
-                  </button>
-                );
-              })
-            ) : normalizedQuery ? (
-              <p className={styles.emptyText}>
-                No se encontró coincidencia. Revisa acentos o escribe otro
-                municipio.
-              </p>
-            ) : (
-              <p className={styles.emptyText}>
-                Escribe el nombre de un municipio para iniciar la búsqueda.
-              </p>
-            )}
-          </div>
+            placeholder="Ej. Pachuca, Tula, Zimapán..."
+            promptText="Escribe el nombre de un municipio para iniciar la búsqueda."
+            emptyText="No se encontró coincidencia. Intenta con otro municipio."
+            classNames={{
+              label: styles.label,
+              inputWrapper: styles.searchBox,
+              input: styles.input,
+              clearButton: styles.clearBtn,
+              list: styles.suggestions,
+              option: styles.suggestion,
+              selectedOption: styles.activeSuggestion,
+              activeOption: styles.activeSuggestion,
+              empty: styles.emptyText,
+            }}
+          />
 
         </aside>
 

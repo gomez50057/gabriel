@@ -8,24 +8,28 @@ export const TOOLS_LINKS = [
     label: "Localizador de municipios de Hidalgo",
   },
   {
-    href: "/herramientas/generador-clamp",
-    label: "Generador de clamp",
-  },
-  {
-    href: "/herramientas/corner-shape-generador",
-    label: "Generador de corner-shape",
-  },
-  {
-    href: "/herramientas/generador-marcas-agua",
-    label: "Generador de marcas de agua",
+    href: "/herramientas/descargar-logos-municipios-hidalgo",
+    label: "Descargar logos de municipios de Hidalgo",
   },
   {
     href: "/herramientas/generador-codigos-qr",
     label: "Generador de codigos QR",
   },
   {
+    href: "/herramientas/generador-marcas-agua",
+    label: "Generador de marcas de agua",
+  },
+  {
     href: "/herramientas/optimizador-imagenes-web",
     label: "Optimizador de imagenes web",
+  },
+  {
+    href: "/herramientas/generador-clamp",
+    label: "Generador de clamp",
+  },
+  {
+    href: "/herramientas/corner-shape-generador",
+    label: "Generador de corner-shape",
   },
 ];
 
