@@ -54,20 +54,16 @@
 .typed::before {
   content: "\A";
   white-space: pre;
-  /* respeta el salto de línea */
 }
 
 .typed,
 .cursor {
   display: inline;
-  /* se quedan en la misma línea entre sí */
 }
 
-/* opcional: pequeño espacio arriba */
 .typed {
   margin-top: .25rem;
 }
-
 
 .cursor {
   display: inline-block;
@@ -174,7 +170,7 @@
   font-size: 15px;
   font-weight: 800;
   letter-spacing: 1.5px;
-  fill: var(--text);
+  fill: var(--circular);
 }
 
 /* Flecha centrada */
