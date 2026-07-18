@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Bodoni_Moda, Montserrat } from "next/font/google";
 import GoogleAnalytics from "@/shared/GoogleAnalytics/GoogleAnalytics";
+import { AUTHOR_NAME, SITE_NAME, SITE_URL } from "@/config/site";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -19,20 +20,20 @@ const title = "Gabriel Gómez | Desarrollador web";
 const description =
   "Desarrollo plataformas y sitios web funcionales, accesibles y orientados a resultados, desde el diseño hasta el despliegue.";
 const socialImage = {
-  url: "./img/social/gabriel-gomez-open-graph.png",
+  url: "/img/social/gabriel-gomez-open-graph.png",
   width: 1200,
   height: 630,
   alt: "Gabriel Gómez — Desarrollo web y plataformas digitales",
 };
 
 export const metadata = {
-  metadataBase: new URL("https://gomez50057.github.io/GG/"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: title,
     template: "%s | Gabriel Gómez",
   },
   description,
-  applicationName: "Portafolio de Gabriel Gómez",
+  applicationName: SITE_NAME,
   keywords: [
     "desarrollo web",
     "desarrollador web en Hidalgo",
@@ -43,15 +44,15 @@ export const metadata = {
     "Pachuca",
     "Hidalgo",
   ],
-  authors: [{ name: "Gabriel Gómez Gómez" }],
-  creator: "Gabriel Gómez Gómez",
-  publisher: "Gabriel Gómez Gómez",
+  authors: [{ name: AUTHOR_NAME, url: SITE_URL }],
+  creator: AUTHOR_NAME,
+  publisher: AUTHOR_NAME,
   openGraph: {
     title,
     description,
     type: "website",
     locale: "es_MX",
-    siteName: "Portafolio de Gabriel Gómez",
+    siteName: SITE_NAME,
     images: [socialImage],
   },
   twitter: {

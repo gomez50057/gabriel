@@ -109,7 +109,7 @@ const BlogNoticias = ({
 
                       <div className={styles.newsContent}>
                         <p className={styles.newsMeta}>
-                          {post?.category} · <time dateTime={post?.date}>{post?.date}</time>
+                          {post?.category} · <time dateTime={post?.publishedAt}>{post?.date}</time>
                         </p>
 
                         <h3 className={styles.newsTitle}>{post?.name}</h3>

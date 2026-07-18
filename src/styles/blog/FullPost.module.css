@@ -234,6 +234,24 @@
   margin: clamp(16px, 3vw, 28px) 0 clamp(24px, 4vw, 40px);
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.breadcrumbs a {
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
 /* Sidebar */
 .sidebar {
   padding: 0 4px;

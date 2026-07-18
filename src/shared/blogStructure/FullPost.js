@@ -145,6 +145,10 @@ const CarouselArrow = ({ direction }) => (
 export default function FullPost({ post, featuredPosts = [] }) {
   const [activeMediaIndex, setActiveMediaIndex] = useState(0);
   const postMedia = useMemo(() => (post ? getPostMedia(post) : []), [post]);
+  const highlightedPosts = useMemo(
+    () => featuredPosts.filter((item) => item?.featuredPosts === true),
+    [featuredPosts]
+  );
   const activeMedia = postMedia[activeMediaIndex] || postMedia[0];
   const hasCarouselControls = postMedia.length > 1;
 
@@ -170,6 +174,14 @@ export default function FullPost({ post, featuredPosts = [] }) {
       <div className={styles.postContainer}>
         {/* Nota principal */}
         <article className={styles.postContent} aria-labelledby="post-title">
+          <nav className={styles.breadcrumbs} aria-label="Migas de pan">
+            <a href="/">Inicio</a>
+            <span aria-hidden="true">/</span>
+            <a href="/hacks">Hacks</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Artículo</span>
+          </nav>
+
           {activeMedia && (
             <div
               className={styles.mediaGallery}
@@ -235,8 +247,11 @@ export default function FullPost({ post, featuredPosts = [] }) {
 
           <div className={styles.meta}>
             <p>
-              {post.authorEmail || "Gabriel Gómez Gómez"} ·{" "}
-              <time dateTime={post.date}>{post.date}</time>
+              {post.author} · Publicado el{" "}
+              <time dateTime={post.publishedAt}>{post.date}</time>
+              {post.updatedAt !== post.publishedAt && (
+                <> · Actualizado el <time dateTime={post.updatedAt}>{post.updatedAt}</time></>
+              )}
             </p>
           </div>
 
@@ -251,9 +266,9 @@ export default function FullPost({ post, featuredPosts = [] }) {
           {post.quote && <blockquote className={styles.quote}>“{post.quote}”</blockquote>}
         </article>
 
-        {featuredPosts?.length > 0 && (
+        {highlightedPosts.length > 0 && (
           <aside className={styles.sidebar} aria-label="Publicaciones destacadas">
-            <FeaturedPosts featuredPosts={featuredPosts} />
+            <FeaturedPosts featuredPosts={highlightedPosts} />
           </aside>
         )}
       </div>

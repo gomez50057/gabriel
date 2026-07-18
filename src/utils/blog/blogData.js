@@ -1,4 +1,32 @@
-export const blogPosts = [
+const MONTHS = [
+  "enero", "febrero", "marzo", "abril", "mayo", "junio",
+  "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+];
+
+export function toIsoDate(date) {
+  const match = /^(\d{1,2}) de ([a-z]+), (\d{4})$/.exec(
+    String(date || "").trim().toLowerCase()
+  );
+  if (!match) throw new Error(`Formato de fecha inválido: ${date}`);
+
+  const day = Number(match[1]);
+  const month = MONTHS.indexOf(match[2]) + 1;
+  const year = Number(match[3]);
+  const parsed = new Date(Date.UTC(year, month - 1, day));
+
+  if (
+    !month ||
+    parsed.getUTCFullYear() !== year ||
+    parsed.getUTCMonth() !== month - 1 ||
+    parsed.getUTCDate() !== day
+  ) {
+    throw new Error(`Fecha inválida: ${date}`);
+  }
+
+  return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
+const rawBlogPosts = [
 
   {
     name: "Cómo obtener las localidades y asentamientos humanos de Hidalgo usando datos de INEGI",
@@ -3499,3 +3527,14 @@ export const blogPosts = [
     featuredPosts: true
   }
 ];
+
+export const blogPosts = rawBlogPosts.map((post) => {
+  const publishedAt = post.publishedAt || toIsoDate(post.date);
+
+  return {
+    ...post,
+    author: post.author || "Gabriel Gómez Gómez",
+    publishedAt,
+    updatedAt: post.updatedAt || publishedAt,
+  };
+});

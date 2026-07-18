@@ -58,7 +58,7 @@
 /* Grid de tarjetas */
 .newsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* mejor en móvil */
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   gap: clamp(14px, 3vw, 20px);
   transition: opacity .3s ease-in-out;
 }
@@ -68,6 +68,7 @@
 .fadeOut { opacity: 0; }
 
 .newsCardLink {
+  min-width: 0;
   min-height: 100%;
   color: inherit;
   text-decoration: none;
@@ -82,7 +83,10 @@
 
 /* Tarjeta */
 .newsItem {
+  min-width: 0;
+  width: 100%;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto 1fr auto; /* img / contenido / botón */
   gap: 10px;
   background: var(--surface);
@@ -113,6 +117,7 @@
 
 /* Contenido */
 .newsContent {
+  min-width: 0;
   padding: 10px 12px 2px;
 }
 .newsMeta {
@@ -121,11 +126,14 @@
   margin: 0 0 4px;
 }
 .newsTitle {
+  max-width: 100%;
   font-size: clamp(1.05rem, .9rem + .8vw, 1.35rem);
   font-weight: 800;
   color: var(--heading);
   margin: 0 0 8px;
   line-height: 1.25;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .newsDescription {
   font-size: clamp(.95rem, .9rem + .3vw, 1rem);
