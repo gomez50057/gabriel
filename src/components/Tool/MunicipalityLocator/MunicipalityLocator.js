@@ -517,7 +517,28 @@ function getRelatedMunicipalities(selectedMunicipality, field) {
 function getUniqueGroupOptions(field) {
   return Array.from(
     new Set(REGIONALIZACION_HIDALGO.map((item) => item[field]).filter(Boolean))
-  ).sort((a, b) => a.localeCompare(b, "es", { sensitivity: "base" }));
+  ).sort((a, b) => {
+    if (field === "region") return Number.parseInt(a, 10) - Number.parseInt(b, 10);
+
+    return a.localeCompare(b, "es", { sensitivity: "base" });
+  });
+}
+
+function formatGroupLabel(field, value = "") {
+  if (field === "region") {
+    const [, number, name] = value.match(/^(\d+)\.\s*(.+)$/) || [];
+    const fullName = name === "M. de la Reforma" ? "Mineral de la Reforma" : name;
+    return number ? `Región ${number} ${fullName}` : value;
+  }
+
+  if (field === "macrorregion") return `Macrorregión ${value.replace(".", "")}`;
+  if (field === "microrregion") return `Microrregión ${value}`;
+
+  return value;
+}
+
+function getCopyText(parent, items, textFormat) {
+  return [formatOutputText(parent, textFormat), ...formatOutputItems(items, textFormat)].join("\n");
 }
 
 function getMunicipalitiesByFieldValue(field, value) {
@@ -565,9 +586,9 @@ function getGroupSummary(items) {
 function RegionPath({ item }) {
   return (
     <small className={styles.regionPath}>
-      <span>{item.region}</span>
-      <span>{item.macrorregion}</span>
-      <span>{item.microrregion}</span>
+      <span>{formatGroupLabel("region", item.region)}</span>
+      <span>{formatGroupLabel("macrorregion", item.macrorregion)}</span>
+      <span>{formatGroupLabel("microrregion", item.microrregion)}</span>
     </small>
   );
 }
@@ -610,6 +631,7 @@ function GroupExplorer({
   onChange,
   onSelect,
   copyText,
+  formatOption,
   summary,
   disabled = false,
 }) {
@@ -640,7 +662,7 @@ function GroupExplorer({
           <option value="">{emptyLabel}</option>
           {options.map((option) => (
             <option key={option} value={option}>
-              {option}
+              {formatOption(option)}
             </option>
           ))}
         </select>
@@ -791,6 +813,18 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
     [selectedLocalityRecords, textFormat]
   );
 
+  const selectedLocalitiesCopyText = useMemo(
+    () =>
+      selectedMunicipality
+        ? getCopyText(
+            `Municipio ${selectedMunicipality.municipio}`,
+            selectedLocalityRecords.map(getLocalityName),
+            textFormat
+          )
+        : "",
+    [selectedMunicipality, selectedLocalityRecords, textFormat]
+  );
+
   const municipalPopulationTotal = useMemo(
     () => getNumericValue(selectedLocalityData?.resumen?.poblacionTotal),
     [selectedLocalityData]
@@ -892,29 +926,32 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
 
   const regionMunicipalityNames = useMemo(
     () =>
-      formatOutputItems(
+      getCopyText(
+        formatGroupLabel("region", selectedRegionGroup),
         regionMunicipalityItems.map((item) => item.municipio),
         textFormat
       ),
-    [regionMunicipalityItems, textFormat]
+    [regionMunicipalityItems, selectedRegionGroup, textFormat]
   );
 
   const macrorregionMunicipalityNames = useMemo(
     () =>
-      formatOutputItems(
+      getCopyText(
+        formatGroupLabel("macrorregion", selectedMacrorregionGroup),
         macrorregionMunicipalityItems.map((item) => item.municipio),
         textFormat
       ),
-    [macrorregionMunicipalityItems, textFormat]
+    [macrorregionMunicipalityItems, selectedMacrorregionGroup, textFormat]
   );
 
   const microrregionMunicipalityNames = useMemo(
     () =>
-      formatOutputItems(
+      getCopyText(
+        formatGroupLabel("microrregion", selectedMicrorregionGroup),
         microrregionMunicipalityItems.map((item) => item.municipio),
         textFormat
       ),
-    [microrregionMunicipalityItems, textFormat]
+    [microrregionMunicipalityItems, selectedMicrorregionGroup, textFormat]
   );
 
   const selectMunicipality = () => {
@@ -1040,17 +1077,17 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
               <div className={styles.resultGrid}>
                 <article className={styles.resultItem}>
                   <span>Región</span>
-                  <strong>{selectedMunicipality.region}</strong>
+                  <strong>{formatGroupLabel("region", selectedMunicipality.region)}</strong>
                 </article>
 
                 <article className={styles.resultItem}>
                   <span>Macrorregión</span>
-                  <strong>{selectedMunicipality.macrorregion}</strong>
+                  <strong>{formatGroupLabel("macrorregion", selectedMunicipality.macrorregion)}</strong>
                 </article>
 
                 <article className={styles.resultItem}>
                   <span>Microrregión</span>
-                  <strong>{selectedMunicipality.microrregion}</strong>
+                  <strong>{formatGroupLabel("microrregion", selectedMunicipality.microrregion)}</strong>
                 </article>
               </div>
 
@@ -1153,7 +1190,7 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                   </button>
 
                   <CopyButton
-                    text={selectedLocalities.join("\n")}
+                    text={selectedLocalitiesCopyText}
                     className={styles.copyButton}
                     disabled={selectedLocalities.length === 0}
                     copiedText="Registros copiados al portapapeles."
@@ -1218,12 +1255,13 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
             emptyLabel="Selecciona una región"
             value={selectedRegionGroup}
             options={regionOptions}
+            formatOption={(option) => formatGroupLabel("region", option)}
             items={regionMunicipalityItems}
             onChange={setSelectedRegionGroup}
             onSelect={selectMunicipality}
-            copyText={regionMunicipalityNames.join("\n")}
+            copyText={regionMunicipalityNames}
             summary={regionSummary}
-            disabled={regionMunicipalityNames.length === 0}
+            disabled={!selectedRegionGroup}
           />
 
           <GroupExplorer
@@ -1232,12 +1270,13 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
             emptyLabel="Selecciona una macrorregión"
             value={selectedMacrorregionGroup}
             options={macrorregionOptions}
+            formatOption={(option) => formatGroupLabel("macrorregion", option)}
             items={macrorregionMunicipalityItems}
             onChange={setSelectedMacrorregionGroup}
             onSelect={selectMunicipality}
-            copyText={macrorregionMunicipalityNames.join("\n")}
+            copyText={macrorregionMunicipalityNames}
             summary={macrorregionSummary}
-            disabled={macrorregionMunicipalityNames.length === 0}
+            disabled={!selectedMacrorregionGroup}
           />
 
           <GroupExplorer
@@ -1246,12 +1285,13 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
             emptyLabel="Selecciona una microrregión"
             value={selectedMicrorregionGroup}
             options={microrregionOptions}
+            formatOption={(option) => formatGroupLabel("microrregion", option)}
             items={microrregionMunicipalityItems}
             onChange={setSelectedMicrorregionGroup}
             onSelect={selectMunicipality}
-            copyText={microrregionMunicipalityNames.join("\n")}
+            copyText={microrregionMunicipalityNames}
             summary={microrregionSummary}
-            disabled={microrregionMunicipalityNames.length === 0}
+            disabled={!selectedMicrorregionGroup}
           />
         </div>
       </details>
