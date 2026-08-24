@@ -40,8 +40,8 @@ export const TOOLS_LINKS = [
 export const HEADER_LINKS = [
   { href: "/", label: "Inicio" },
   { href: "/#sobremi", label: "Sobre Mí" },
-  { href: "/hacks", label: "Hacks" },
   { href: "/#portfolio", label: "Portafolio" },
+  { href: "/hacks", label: "Hacks" },
   {
     label: "Herramientas",
     children: TOOLS_LINKS,
