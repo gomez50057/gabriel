@@ -112,6 +112,14 @@ const parseFenceHeader = (rawHeader = "") => {
   return meta;
 };
 
+const calloutVariants = {
+  info: styles.calloutInfo,
+  success: styles.calloutSuccess,
+  warning: styles.calloutWarning,
+  danger: styles.calloutDanger,
+  tip: styles.calloutTip,
+};
+
 export const renderDescription = (description) => {
   if (Array.isArray(description)) {
     return description.map((block, idx) => {
@@ -201,6 +209,7 @@ export const renderDescription = (description) => {
             </li>
           );
 
+        case "list":
         case "ul": {
           const items = Array.isArray(block.items) ? block.items : [];
           return (
@@ -214,6 +223,67 @@ export const renderDescription = (description) => {
                   </li>
                 ))}
               </ul>
+            </li>
+          );
+        }
+
+        case "table": {
+          const headers = Array.isArray(block.headers) ? block.headers : [];
+          const rows = Array.isArray(block.rows) ? block.rows : [];
+
+          if (!headers.length) return null;
+
+          return (
+            <li key={`table-${idx}`} className={styles.noBullet}>
+              <div className={styles.tableWrapper}>
+                <table className={styles.table}>
+                  <thead>
+                    <tr>
+                      {headers.map((header, headerIndex) => (
+                        <th key={`th-${idx}-${headerIndex}`} scope="col">
+                          {renderInlineWithStyles(header || "")}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rows.map((row, rowIndex) => {
+                      const cells = Array.isArray(row) ? row : [];
+
+                      return (
+                        <tr key={`tr-${idx}-${rowIndex}`}>
+                          {headers.map((_, cellIndex) => (
+                            <td key={`td-${idx}-${rowIndex}-${cellIndex}`}>
+                              {renderInlineWithStyles(cells[cellIndex] ?? "")}
+                            </td>
+                          ))}
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </li>
+          );
+        }
+
+        case "callout": {
+          const variant = calloutVariants[block.variant] || calloutVariants.info;
+
+          return (
+            <li key={`callout-${idx}`} className={styles.noBullet}>
+              <aside className={`${styles.callout} ${variant}`} role="note">
+                {block.title && (
+                  <h3 className={styles.calloutTitle}>
+                    {renderInlineWithStyles(block.title)}
+                  </h3>
+                )}
+                {block.text && (
+                  <p className={styles.calloutText}>
+                    {renderInlineWithStyles(block.text)}
+                  </p>
+                )}
+              </aside>
             </li>
           );
         }

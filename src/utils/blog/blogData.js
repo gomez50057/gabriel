@@ -27,7 +27,867 @@ export function toIsoDate(date) {
 }
 
 const rawBlogPosts = [
+  {
+    name: "Vistas, sesiones y usuarios activos en Google Analytics: ¿qué pasa cuando una IA consulta mi sitio?",
+    description: [
+      {
+        type: "p",
+        text: "Cuando revisamos **Google Analytics 4 (GA4)** es fácil interpretar métricas como vistas, sesiones y usuarios activos como si todas representaran lo mismo: personas entrando a nuestro sitio. Sin embargo, cada una mide algo diferente."
+      },
 
+      {
+        type: "p",
+        text: "Con la llegada de herramientas de inteligencia artificial capaces de buscar, consultar y procesar información publicada en Internet aparece además una nueva pregunta: **si una inteligencia artificial consulta información de mi sitio para responder una pregunta, ¿Google Analytics la registra como una vista, una sesión o un usuario?**"
+      },
+
+      {
+        type: "callout",
+        variant: "info",
+        title: "Respuesta corta",
+        text: "No necesariamente. Una consulta realizada por una inteligencia artificial no equivale automáticamente a una vista, una sesión o un usuario activo en Google Analytics."
+      },
+
+      {
+        type: "h2",
+        text: "Primero: ¿qué mide realmente Google Analytics?"
+      },
+
+      {
+        type: "p",
+        text: "Para entender qué ocurre con las consultas realizadas por sistemas de inteligencia artificial, primero debemos diferenciar las principales métricas que aparecen en GA4."
+      },
+
+      {
+        type: "table",
+        headers: [
+          "Métrica",
+          "Qué representa"
+        ],
+        rows: [
+          [
+            "Vista",
+            "Una visualización registrada de una página web o pantalla."
+          ],
+          [
+            "Sesión",
+            "Un periodo durante el cual un usuario interactúa con el sitio o aplicación."
+          ],
+          [
+            "Usuario activo",
+            "Un usuario único que interactuó con el sitio o aplicación durante un periodo determinado según los criterios de GA4."
+          ]
+        ]
+      },
+
+      {
+        type: "h2",
+        text: "¿Qué es una vista en Google Analytics?"
+      },
+
+      {
+        type: "p",
+        text: "En Google Analytics, la métrica **Vistas** representa la cantidad de páginas web o pantallas de aplicaciones que fueron visualizadas. Las visualizaciones repetidas de una misma página también pueden contabilizarse."
+      },
+
+      {
+        type: "p",
+        text: "Por ejemplo, si una misma persona visita Inicio, después un artículo, regresa a Inicio y finalmente abre otro artículo, podríamos tener **un usuario y cuatro vistas**."
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "text",
+            text: "Google explica esta métrica en su documentación oficial sobre el informe "
+          },
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/12926732?hl=es-419",
+            text: "Páginas y pantallas de Google Analytics"
+          },
+          {
+            type: "text",
+            text: "."
+          }
+        ]
+      },
+
+      {
+        type: "h2",
+        text: "¿Cómo sabe Google Analytics que ocurrió una vista?"
+      },
+
+      {
+        type: "p",
+        text: "Esta parte es especialmente importante para entender qué sucede cuando una inteligencia artificial consulta nuestro contenido."
+      },
+
+      {
+        type: "p",
+        text: "Google Analytics **no funciona simplemente contando todas las solicitudes que recibe nuestro servidor**. En una implementación convencional de GA4, cuando una página es cargada se genera un evento denominado `page_view`."
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "text",
+            text: "Google documenta oficialmente el funcionamiento de este evento en "
+          },
+          {
+            type: "link",
+            href: "https://developers.google.com/analytics/devguides/collection/ga4/views?hl=es-419",
+            text: "Medición de vistas de página en Google Analytics 4"
+          },
+          {
+            type: "text",
+            text: "."
+          }
+        ]
+      },
+
+      {
+        type: "code",
+        language: "text",
+        fileName: "flujo-ga4",
+        text: "Usuario\n  ↓\nNavegador carga la página\n  ↓\nSe ejecuta la etiqueta de Google\n  ↓\nSe genera page_view\n  ↓\nGoogle Analytics recibe el evento\n  ↓\nVista registrada"
+      },
+
+      {
+        type: "callout",
+        variant: "warning",
+        title: "Punto clave",
+        text: "Una petición HTTP recibida por nuestro servidor no equivale automáticamente a una vista registrada por Google Analytics."
+      },
+
+      {
+        type: "h2",
+        text: "¿Qué es una sesión?"
+      },
+
+      {
+        type: "p",
+        text: "Una **sesión** representa un periodo durante el cual un usuario interactúa con nuestro sitio web o aplicación."
+      },
+
+      {
+        type: "p",
+        text: "Una sola sesión puede contener muchas vistas. Por ejemplo, una persona puede entrar al inicio, abrir una noticia, consultar un artículo y posteriormente visitar la sección de contacto."
+      },
+
+      {
+        type: "callout",
+        variant: "example",
+        title: "Ejemplo",
+        text: "Una navegación podría producir 1 usuario, 1 sesión y 4 vistas. Esto demuestra que las tres métricas no representan lo mismo."
+      },
+
+      {
+        type: "p",
+        text: "De manera predeterminada, Google Analytics considera que una sesión termina después de **30 minutos de inactividad**, aunque este periodo puede configurarse."
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "text",
+            text: "La definición y funcionamiento de las sesiones puede consultarse directamente en la documentación oficial de "
+          },
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/12798876?hl=es-MX",
+            text: "Sesiones de Google Analytics"
+          },
+          {
+            type: "text",
+            text: "."
+          }
+        ]
+      },
+
+      {
+        type: "h2",
+        text: "¿Qué significa usuarios activos?"
+      },
+
+      {
+        type: "p",
+        text: "La métrica **Usuarios activos** tampoco debe interpretarse simplemente como el número de personas que tienen nuestra página abierta en ese momento."
+      },
+
+      {
+        type: "p",
+        text: "Google Analytics utiliza esta métrica para representar usuarios únicos que interactuaron con nuestro sitio o aplicación durante un periodo determinado."
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "text",
+            text: "Google explica las diferencias entre sus métricas de usuarios en "
+          },
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/12253918?hl=es-419",
+            text: "Métricas de usuarios de Google Analytics"
+          },
+          {
+            type: "text",
+            text: "."
+          }
+        ]
+      },
+
+      {
+        type: "h2",
+        text: "Un mismo usuario puede generar muchas vistas y sesiones"
+      },
+
+      {
+        type: "table",
+        headers: [
+          "Usuario",
+          "Sesiones",
+          "Vistas"
+        ],
+        rows: [
+          [
+            "1 usuario",
+            "1 sesión",
+            "4 vistas"
+          ],
+          [
+            "1 usuario",
+            "3 sesiones",
+            "15 vistas"
+          ],
+          [
+            "10 usuarios",
+            "14 sesiones",
+            "48 vistas"
+          ]
+        ]
+      },
+
+      {
+        type: "p",
+        text: "Estos ejemplos son únicamente ilustrativos, pero permiten entender que **usuarios, sesiones y vistas son métricas independientes**."
+      },
+
+      {
+        type: "h2",
+        text: "¿Qué pasa cuando una inteligencia artificial consulta mi página?"
+      },
+
+      {
+        type: "p",
+        text: "Supongamos ahora que una persona realiza una pregunta en una herramienta de inteligencia artificial y esta necesita consultar información publicada en nuestro sitio para construir su respuesta."
+      },
+
+      {
+        type: "code",
+        language: "text",
+        fileName: "consulta-ia",
+        text: "Persona\n  ↓\nInteligencia artificial\n  ↓\nConsulta información\n  ↓\nNuestro servidor\n  ↓\nContenido\n  ↓\nIA genera una respuesta"
+      },
+
+      {
+        type: "callout",
+        variant: "info",
+        title: "Aquí está la diferencia",
+        text: "El hecho de que nuestro servidor entregue información a una inteligencia artificial no significa automáticamente que Google Analytics haya recibido un evento page_view."
+      },
+
+      {
+        type: "h2",
+        text: "Google Analytics mide eventos, no todas las solicitudes al servidor"
+      },
+
+      {
+        type: "p",
+        text: "Google Analytics recopila información mediante eventos enviados a GA4 desde nuestra implementación. Entre estos eventos se encuentra `page_view`, utilizado para medir visualizaciones de páginas."
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "text",
+            text: "El funcionamiento del modelo basado en eventos está explicado oficialmente por Google en "
+          },
+          {
+            type: "link",
+            href: "https://developers.google.com/analytics/devguides/collection/ga4/events?hl=es",
+            text: "Eventos de Google Analytics 4"
+          },
+          {
+            type: "text",
+            text: "."
+          }
+        ]
+      },
+
+      {
+        type: "h3",
+        text: "Cuando una persona abre nuestra página"
+      },
+
+      {
+        type: "code",
+        language: "text",
+        fileName: "visita-humana",
+        text: "Persona\n  ↓\nNavegador\n  ↓\nCarga página y JavaScript\n  ↓\nSe ejecuta Google Analytics\n  ↓\npage_view\n  ↓\nGA4"
+      },
+
+      {
+        type: "h3",
+        text: "Cuando un crawler solicita solamente el contenido"
+      },
+
+      {
+        type: "code",
+        language: "text",
+        fileName: "crawler-html",
+        text: "Bot o crawler\n  ↓\nGET /articulo\n  ↓\nServidor\n  ↓\n200 OK + HTML"
+      },
+
+      {
+        type: "p",
+        text: "Un crawler puede solicitar una URL, recibir el HTML y procesar el contenido sin comportarse exactamente como el navegador de una persona."
+      },
+
+      {
+        type: "p",
+        text: "Si durante ese proceso **no se ejecuta la medición de Google Analytics ni se envía el evento correspondiente**, la petición existe en nuestro servidor, pero no se convierte automáticamente en una vista de GA4."
+      },
+
+      {
+        type: "callout",
+        variant: "warning",
+        title: "Importante",
+        text: "Que un bot haya descargado una página no significa que Google Analytics tenga que mostrar una nueva vista."
+      },
+
+      {
+        type: "h2",
+        text: "¿Y si la inteligencia artificial ejecuta JavaScript?"
+      },
+
+      {
+        type: "p",
+        text: "No todos los sistemas automatizados funcionan de la misma manera. Algunos pueden utilizar tecnologías capaces de renderizar páginas y ejecutar JavaScript de una forma similar a un navegador."
+      },
+
+      {
+        type: "p",
+        text: "En esos casos existe la posibilidad técnica de que también se ejecute una etiqueta de medición y se intenten enviar eventos a Google Analytics."
+      },
+
+      {
+        type: "p",
+        text: "Sin embargo, esto no significa que debamos considerar automáticamente ese tráfico como tráfico humano."
+      },
+
+      {
+        type: "h2",
+        text: "Google Analytics excluye bots y arañas conocidos"
+      },
+
+      {
+        type: "p",
+        text: "Google Analytics cuenta con mecanismos destinados a evitar que determinado tráfico automatizado contamine nuestras estadísticas."
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "text",
+            text: "Google señala oficialmente que las propiedades de Analytics excluyen automáticamente tráfico procedente de **robots y arañas conocidos**. La explicación puede consultarse en "
+          },
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/9888366?hl=es-419",
+            text: "Exclusión de tráfico de robots conocidos en Google Analytics"
+          },
+          {
+            type: "text",
+            text: "."
+          }
+        ]
+      },
+
+      {
+        type: "callout",
+        variant: "info",
+        title: "La palabra importante es “conocidos”",
+        text: "Google documenta la exclusión de robots y arañas conocidos. Esto no significa que sea técnicamente imposible que un sistema automatizado no identificado termine generando eventos visibles en Analytics."
+      },
+
+      {
+        type: "h2",
+        text: "Entonces, ¿una consulta de IA cuenta como una vista, sesión o usuario?"
+      },
+
+      {
+        type: "table",
+        headers: [
+          "Situación",
+          "¿Llega al servidor?",
+          "¿Vista GA4?",
+          "¿Sesión?",
+          "¿Usuario activo?"
+        ],
+        rows: [
+          [
+            "Una persona abre normalmente la página",
+            "Sí",
+            "Sí",
+            "Sí",
+            "Generalmente sí"
+          ],
+          [
+            "Una IA utiliza información que ya había obtenido o indexado",
+            "No necesariamente",
+            "No",
+            "No",
+            "No"
+          ],
+          [
+            "Un crawler descarga solamente el HTML",
+            "Sí",
+            "Normalmente no",
+            "Normalmente no",
+            "Normalmente no"
+          ],
+          [
+            "Un sistema automatizado ejecuta JavaScript y GA4",
+            "Sí",
+            "Podría",
+            "Podría",
+            "Podría"
+          ],
+          [
+            "Google identifica el tráfico como un bot conocido",
+            "Sí",
+            "Puede ser excluido",
+            "Puede ser excluido",
+            "Puede ser excluido"
+          ],
+          [
+            "Una persona hace clic en un enlace mostrado por una IA",
+            "Sí",
+            "Sí",
+            "Sí",
+            "Generalmente sí"
+          ]
+        ]
+      },
+
+      {
+        type: "callout",
+        variant: "success",
+        title: "La regla más sencilla",
+        text: "Una consulta de IA no debe interpretarse como una visita de Google Analytics. Solo podemos hablar de una vista de GA4 cuando Analytics recibe y procesa la medición correspondiente."
+      },
+
+      {
+        type: "h2",
+        text: "Una pregunta realizada a una IA tampoco equivale a una visita"
+      },
+
+      {
+        type: "p",
+        text: "Supongamos que **1,000 personas realizan una pregunta a diferentes herramientas de inteligencia artificial** y que la respuesta utiliza información relacionada con nuestro sitio."
+      },
+
+      {
+        type: "p",
+        text: "No podemos concluir que eso represente **1,000 vistas en Google Analytics**."
+      },
+
+      {
+        type: "p",
+        text: "Tampoco podemos concluir automáticamente que nuestro servidor recibió 1,000 solicitudes. La IA podría haber obtenido determinada información previamente, utilizar un índice, recurrir a otro proveedor o consultar nuestro contenido únicamente algunas veces."
+      },
+
+      {
+        type: "callout",
+        variant: "warning",
+        title: "No existe una equivalencia 1 a 1",
+        text: "1 pregunta realizada a una inteligencia artificial no equivale a 1 visita, 1 sesión ni 1 usuario en Google Analytics."
+      },
+
+      {
+        type: "h2",
+        text: "Consulta realizada por una IA y tráfico proveniente de una IA son cosas diferentes"
+      },
+
+      {
+        type: "h3",
+        text: "1. La inteligencia artificial consulta mi contenido"
+      },
+
+      {
+        type: "code",
+        language: "text",
+        fileName: "ia-consulta",
+        text: "IA\n  ↓\nNuestro servidor\n  ↓\nObtiene información"
+      },
+
+      {
+        type: "p",
+        text: "Aquí la propia herramienta automatizada está consultando información. **Esto no implica automáticamente una vista en GA4**."
+      },
+
+      {
+        type: "h3",
+        text: "2. La inteligencia artificial envía a una persona a mi página"
+      },
+
+      {
+        type: "code",
+        language: "text",
+        fileName: "ia-referencia",
+        text: "IA muestra un enlace\n  ↓\nPersona hace clic\n  ↓\nNavegador abre nuestro sitio\n  ↓\nGA4 registra la navegación"
+      },
+
+      {
+        type: "p",
+        text: "Aquí sí existe una navegación convencional. La persona abrió nuestro sitio y Google Analytics puede registrar la vista, la sesión, los eventos de interacción y el origen del tráfico cuando esa información esté disponible."
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "text",
+            text: "Google explica cómo analizar la procedencia de los visitantes mediante el informe "
+          },
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/12923437?hl=es-419",
+            text: "Adquisición de tráfico"
+          },
+          {
+            type: "text",
+            text: " y las "
+          },
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/15612152?hl=es-419",
+            text: "dimensiones de fuente de tráfico"
+          },
+          {
+            type: "text",
+            text: "."
+          }
+        ]
+      },
+
+      {
+        type: "h2",
+        text: "Analytics y los logs del servidor miden cosas diferentes"
+      },
+
+      {
+        type: "p",
+        text: "Para entender realmente lo que ocurre con nuestro sitio conviene separar la analítica de comportamiento de los registros técnicos de infraestructura."
+      },
+
+      {
+        type: "table",
+        headers: [
+          "Fuente",
+          "Qué nos permite observar"
+        ],
+        rows: [
+          [
+            "Google Analytics",
+            "Vistas, sesiones, usuarios, eventos, interacción, conversiones y procedencia del tráfico."
+          ],
+          [
+            "Logs del servidor",
+            "Solicitudes HTTP recibidas directamente por nuestra infraestructura."
+          ],
+          [
+            "CDN o firewall",
+            "Tráfico automatizado, crawlers, User-Agent, IP y patrones de acceso."
+          ],
+          [
+            "Herramientas de monitoreo de IA",
+            "Menciones, referencias o presencia del contenido en determinadas respuestas generativas."
+          ]
+        ]
+      },
+
+      {
+        type: "callout",
+        variant: "info",
+        title: "No deberían coincidir necesariamente",
+        text: "El número de peticiones que recibe un servidor y el número de vistas de Google Analytics pueden ser diferentes porque están midiendo fenómenos distintos."
+      },
+
+      {
+        type: "h2",
+        text: "Entonces, ¿cómo puedo medir las consultas realizadas por IA?"
+      },
+
+      {
+        type: "p",
+        text: "Si nuestro objetivo es conocer cuánto tráfico automatizado relacionado con inteligencia artificial está consultando el sitio, **Google Analytics por sí solo no es suficiente**."
+      },
+
+      {
+        type: "p",
+        text: "Lo ideal es combinar varias fuentes."
+      },
+
+      {
+        type: "ul",
+        items: [
+          "**Google Analytics:** para analizar usuarios, sesiones, vistas, eventos y tráfico que realmente llega al sitio.",
+          "**Logs del servidor:** para analizar solicitudes HTTP y agentes automatizados.",
+          "**CDN o firewall:** para identificar determinados bots o crawlers.",
+          "**Herramientas de monitoreo de IA:** para estudiar menciones, referencias o presencia del contenido en sistemas generativos."
+        ]
+      },
+
+      {
+        type: "h2",
+        text: "La métrica que todavía nos falta"
+      },
+
+      {
+        type: "p",
+        text: "Existe además una diferencia todavía más compleja: **saber que una IA consultó nuestra página no significa saber cuántas veces posteriormente utilizó esa información para responder preguntas**."
+      },
+
+      {
+        type: "p",
+        text: "Podría existir una sola consulta automatizada de nuestro contenido y posteriormente muchas respuestas generadas a partir de esa información. También podrían existir múltiples rastreos sin que posteriormente nuestro contenido aparezca en una respuesta."
+      },
+
+      {
+        type: "callout",
+        variant: "warning",
+        title: "Una limitación importante",
+        text: "Desde Google Analytics no podemos convertir directamente las consultas realizadas por sistemas externos de inteligencia artificial en una métrica de consumo de contenido."
+      },
+
+      {
+        type: "h2",
+        text: "Cómo interpreto ahora las métricas"
+      },
+
+      {
+        type: "table",
+        headers: [
+          "Concepto",
+          "Cómo lo interpreto"
+        ],
+        rows: [
+          [
+            "Vistas",
+            "Visualizaciones que Google Analytics registró."
+          ],
+          [
+            "Sesiones",
+            "Periodos de interacción registrados por GA4."
+          ],
+          [
+            "Usuarios activos",
+            "Usuarios únicos que cumplen los criterios de actividad de GA4."
+          ],
+          [
+            "Peticiones automatizadas",
+            "Accesos técnicos de bots o crawlers que conviene revisar en logs o infraestructura."
+          ],
+          [
+            "Consultas de IA",
+            "Un fenómeno más amplio que no puede medirse únicamente mediante las métricas tradicionales de Google Analytics."
+          ]
+        ]
+      },
+
+      {
+        type: "h2",
+        text: "Conclusión"
+      },
+
+      {
+        type: "p",
+        text: "Una inteligencia artificial puede consultar información publicada en nuestro sitio **sin convertirse automáticamente en una vista, una sesión o un usuario activo dentro de Google Analytics**."
+      },
+
+      {
+        type: "p",
+        text: "La razón es que Google Analytics trabaja mediante eventos recopilados por su sistema de medición. Una solicitud realizada directamente a nuestro servidor no equivale automáticamente al evento `page_view` que GA4 utiliza para registrar una visualización."
+      },
+
+      {
+        type: "p",
+        text: "Además, Google Analytics excluye automáticamente tráfico procedente de **bots y arañas conocidos**, por lo que tampoco debemos asumir que todo acceso automatizado aparecerá dentro de nuestros informes."
+      },
+
+      {
+        type: "callout",
+        variant: "success",
+        title: "La idea principal",
+        text: "Estamos pasando de medir solamente cuántas personas entraron a nuestra página a intentar entender también cuántas personas pudieron obtener nuestra información mediante una inteligencia artificial sin visitar directamente nuestro sitio."
+      },
+
+      {
+        type: "p",
+        text: "Antes el recorrido más habitual era **persona busca → persona entra → Analytics registra**. Ahora también puede ocurrir **persona pregunta → IA consulta → IA responde → la persona nunca visita nuestra página**."
+      },
+
+      {
+        type: "p",
+        text: "Por eso considero necesario distinguir entre **tráfico humano, tráfico automatizado y consumo de información mediante inteligencia artificial**."
+      },
+
+      {
+        type: "p",
+        text: "Google Analytics continúa siendo fundamental para conocer lo que ocurre dentro de nuestro sitio, pero sus métricas de vistas, sesiones y usuarios activos **no deben interpretarse como un contador directo de las veces que una inteligencia artificial consulta o utiliza nuestra información**."
+      },
+
+      {
+        type: "h2",
+        text: "Fuentes oficiales de Google"
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/12926732?hl=es-419",
+            text: "Google Analytics — Informe Páginas y pantallas"
+          },
+          {
+            type: "text",
+            text: ": información oficial sobre vistas y páginas."
+          }
+        ]
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "link",
+            href: "https://developers.google.com/analytics/devguides/collection/ga4/views?hl=es-419",
+            text: "Google Developers — Medición de vistas de página en GA4"
+          },
+          {
+            type: "text",
+            text: ": documentación oficial sobre el evento `page_view`."
+          }
+        ]
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/12798876?hl=es-MX",
+            text: "Google Analytics — Sesiones"
+          },
+          {
+            type: "text",
+            text: ": definición y funcionamiento de las sesiones."
+          }
+        ]
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/12253918?hl=es-419",
+            text: "Google Analytics — Métricas de usuarios"
+          },
+          {
+            type: "text",
+            text: ": información oficial sobre usuarios activos y otras métricas."
+          }
+        ]
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "link",
+            href: "https://developers.google.com/analytics/devguides/collection/ga4/events?hl=es",
+            text: "Google Developers — Eventos de Google Analytics 4"
+          },
+          {
+            type: "text",
+            text: ": explicación del modelo de medición basado en eventos."
+          }
+        ]
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/9888366?hl=es-419",
+            text: "Google Analytics — Exclusión de tráfico de robots conocidos"
+          },
+          {
+            type: "text",
+            text: ": documentación oficial sobre el filtrado automático de bots y arañas conocidos."
+          }
+        ]
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/12923437?hl=es-419",
+            text: "Google Analytics — Informe Adquisición de tráfico"
+          },
+          {
+            type: "text",
+            text: ": documentación para analizar cómo llegan los usuarios al sitio."
+          }
+        ]
+      },
+
+      {
+        type: "p",
+        parts: [
+          {
+            type: "link",
+            href: "https://support.google.com/analytics/answer/15612152?hl=es-419",
+            text: "Google Analytics — Dimensiones de fuente de tráfico"
+          },
+          {
+            type: "text",
+            text: ": documentación sobre fuente, medio y procedencia del tráfico."
+          }
+        ]
+      }
+    ],
+    date: "24 de agosto, 2026",
+    image: "/img/tutoriales/google-analytics-ia.png",
+    category: "Analítica web",
+    featuredPosts: true,
+    author: "Gabriel Gómez Gómez",
+    publishedAt: "2026-08-24",
+    quote: "Una consulta realizada por una inteligencia artificial no equivale automáticamente a una vista, una sesión o un usuario activo en Google Analytics.",
+  },
   {
     name: "Cómo obtener las localidades y asentamientos humanos de Hidalgo usando datos de INEGI",
     description: [

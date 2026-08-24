@@ -226,6 +226,85 @@
   margin: 0;
 }
 
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  color: var(--heading);
+  background: var(--surface);
+}
+
+.table th,
+.table td {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background: var(--surface-soft);
+  font-weight: 800;
+}
+
+.table tbody tr:nth-child(even) td {
+  background: color-mix(in lab, var(--surface-soft) 55%, transparent);
+}
+
+.callout {
+  margin: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--border-mid);
+  border-left-width: 4px;
+  border-radius: 10px;
+  color: var(--heading);
+  background: var(--surface-soft);
+}
+
+.calloutInfo {
+  border-color: color-mix(in lab, #2563eb 45%, var(--border));
+  background: color-mix(in lab, #2563eb 9%, var(--surface));
+}
+
+.calloutSuccess {
+  border-color: var(--success-border);
+  background: var(--success-soft);
+}
+
+.calloutWarning {
+  border-color: color-mix(in lab, #d97706 45%, var(--border));
+  background: color-mix(in lab, #d97706 10%, var(--surface));
+}
+
+.calloutDanger {
+  border-color: var(--danger-border);
+  background: var(--danger-soft);
+}
+
+.calloutTip {
+  border-color: color-mix(in lab, var(--accent) 55%, var(--border));
+  background: color-mix(in lab, var(--accent) 12%, var(--surface));
+}
+
+.calloutTitle {
+  margin: 0 0 6px;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.calloutText {
+  margin: 0;
+}
+
 .quote {
   font-size: clamp(1.05rem, 0.9rem + 0.8vw, 1.3rem);
   font-style: italic;
