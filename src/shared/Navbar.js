@@ -21,10 +21,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(null);
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
 
-  const lastY = useRef(0);
-  const ticking = useRef(false);
   const visibleSections = useRef(new Map());
 
   // Activar link según sección visible (para anclas tipo /#sobremi)
@@ -73,38 +70,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Ocultar al bajar / mostrar al subir
-  useEffect(() => {
-    const THRESHOLD = 6;
-
-    const onScrollDir = () => {
-      if (ticking.current) return;
-      ticking.current = true;
-
-      requestAnimationFrame(() => {
-        const y = Math.max(0, window.scrollY || 0);
-        const delta = y - lastY.current;
-        const nearTop = y < 24;
-
-        if (open || nearTop) {
-          setHidden(false);
-        } else {
-          if (delta > THRESHOLD) {
-            setHidden(true);
-          } else if (delta < -THRESHOLD) {
-            setHidden(false);
-          }
-        }
-
-        lastY.current = y;
-        ticking.current = false;
-      });
-    };
-
-    window.addEventListener("scroll", onScrollDir, { passive: true });
-    return () => window.removeEventListener("scroll", onScrollDir);
-  }, [open]);
-
   // Bloquear scroll del body cuando el menú móvil está abierto
   useEffect(() => {
     const prev = document.documentElement.style.overflow;
@@ -130,7 +95,7 @@ export default function Navbar() {
     <>
       <header
         className={`${styles.header} ${styles.glass} ${scrolled ? styles.scrolled : ""
-          } ${hidden ? styles.headerHidden : ""}`}
+          }`}
       >
         <div className={styles.inner}>
         <a href="#inicio" aria-label="Ir al inicio" className={styles.logoLink}>

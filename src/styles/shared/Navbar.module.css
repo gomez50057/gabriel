@@ -10,12 +10,6 @@
   transition: transform .3s ease, opacity .3s ease;
 }
 
-.headerHidden {
-  /* sube el header fuera de pantalla */
-  transform: translate(-50%, -120%);
-  opacity: 0;
-}
-
 .scrolled {
   box-shadow: 0 6px 20px color-mix(in lab, var(--text) 10%, transparent);
 }
@@ -319,7 +313,11 @@
   transform: translateX(-50%) scale(0.98);
   transform-origin: top center;
 
-  min-width: 220px;
+  width: min(320px, calc(100vw - 2rem));
+  max-height: min(28rem, calc(100dvh - var(--header-h) - 2rem));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
   padding: 8px;
   border-radius: 14px;
 
@@ -348,6 +346,8 @@
   border-radius: 10px;
   text-decoration: none;
   color: var(--text);
+  white-space: normal;
+  overflow-wrap: anywhere;
 
   background: color-mix(in lab, var(--bg) 85%, transparent);
   border: 1px solid color-mix(in lab, var(--text) 10%, transparent);
