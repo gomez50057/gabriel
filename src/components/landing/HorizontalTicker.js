@@ -25,10 +25,10 @@ export default function HorizontalTicker({
     const setup = () => {
       const vw = window.innerWidth;
       const contentW = line.scrollWidth;
-      const distance = Math.max(0, contentW - vw);
+      const horizontalDistance = Math.max(0, contentW - vw);
 
       const fromX = 0;
-      const toX = -distance;
+      const toX = -horizontalDistance;
 
       ctx.current?.revert();
       ctx.current = gsap.context(() => {
@@ -40,10 +40,9 @@ export default function HorizontalTicker({
             ease: "none",
             scrollTrigger: {
               trigger: section,
-              start: "top top",
-              end: `+=${distance}`,
-              scrub: 1,
-              pin: true,
+              start: "top 70%",
+              end: "bottom top",
+              scrub: 1.8,
               invalidateOnRefresh: true,
             },
           }
