@@ -28,6 +28,714 @@ export function toIsoDate(date) {
 
 const rawBlogPosts = [
   {
+    name: "Convertir KML y KMZ a SHP en QGIS conservando atributos y colores",
+
+    description: [
+      {
+        type: "p",
+        text: "Al trabajar con archivos **KML o KMZ en QGIS**, me encontré con un problema bastante común: al convertirlos directamente a Shapefile, parte de la información puede perderse o quedar almacenada de una forma poco útil. En algunos casos, todos los atributos aparecen dentro de una sola columna llamada `description`, mientras que los colores y estilos originales dejan de visualizarse."
+      },
+
+      {
+        type: "p",
+        text: "Para resolverlo preparé una herramienta en **Python para QGIS** que automatiza la conversión y trata de conservar tanto las geometrías como los atributos y la información necesaria para reconstruir los colores originales."
+      },
+
+      {
+        type: "callout",
+        variant: "info",
+        title: "Objetivo de la herramienta",
+        text: "La idea es realizar automáticamente el flujo `KML/KMZ → geometrías → atributos separados → colores → GeoPackage → SHP + QML`, evitando crear manualmente cada campo o reasignar colores uno por uno."
+      },
+
+      {
+        type: "h2",
+        text: "Descargar la herramienta"
+      },
+
+      {
+        type: "p",
+        text: "La herramienta está pensada para ejecutarse directamente dentro de **QGIS**, utilizando PyQGIS. No es necesario instalar Python por separado."
+      },
+
+      {
+        type: "downloadLink",
+        href: "/material/KMZ_KML_a_SHP_Universal/KMZ_KML_a_SHP_Universal_QGIS.py",
+        text: "Descargar conversor universal KML/KMZ → SHP para QGIS",
+        fileName: "KMZ_KML_a_SHP_Universal_QGIS.py"
+      },
+
+      {
+        type: "h2",
+        text: "Cómo utilizarla"
+      },
+
+      {
+        type: "h3",
+        text: "1. Abrir QGIS"
+      },
+
+      {
+        type: "p",
+        text: "Abre QGIS normalmente. No es necesario cargar previamente el archivo `.kml` o `.kmz` que quieres convertir."
+      },
+
+      {
+        type: "h3",
+        text: "2. Abrir la consola de Python"
+      },
+
+      {
+        type: "p",
+        text: "Dentro de QGIS entra a **Complementos → Consola de Python** y después selecciona **Mostrar editor**."
+      },
+
+      {
+        type: "h3",
+        text: "3. Abrir el script"
+      },
+
+      {
+        type: "p",
+        text: "Desde el editor abre el archivo `KMZ_KML_a_SHP_Universal_QGIS.py`. También puedes copiar su contenido completo y pegarlo directamente en el editor."
+      },
+
+      {
+        type: "h3",
+        text: "4. Ejecutar"
+      },
+
+      {
+        type: "p",
+        text: "Presiona **Ejecutar script**. La herramienta solicitará primero el archivo KML/KMZ y posteriormente una carpeta donde guardar los resultados."
+      },
+
+      {
+        type: "callout",
+        variant: "info",
+        title: "No necesitas preparar el archivo antes",
+        text: "El proceso parte directamente del KML o KMZ original. No es necesario usar previamente KML Tools, separar columnas manualmente ni realizar uniones de atributos."
+      },
+
+      {
+        type: "h2",
+        text: "Qué problema resuelve"
+      },
+
+      {
+        type: "p",
+        text: "Uno de los problemas que encontré es que algunos KML almacenan sus atributos dentro del campo `description` utilizando una tabla HTML. QGIS puede mostrar toda esa información como un único texto en lugar de convertirla en columnas."
+      },
+
+      {
+        type: "snippet",
+        language: "html",
+        fileName: "description-kml.html",
+        code: "<tr>\n  <td>FID</td>\n  <td>28</td>\n</tr>\n\n<tr>\n  <td>UGA</td>\n  <td>33</td>\n</tr>\n\n<tr>\n  <td>Politica</td>\n  <td>Aprovechamiento-Restauración</td>\n</tr>\n\n<tr>\n  <td>area_ha</td>\n  <td>107.968646</td>\n</tr>",
+        showLineNumbers: true,
+        wrap: false
+      },
+
+      {
+        type: "p",
+        text: "En una importación convencional, lo anterior puede aparecer completo dentro de una sola columna llamada `description`. La herramienta intenta detectar automáticamente la estructura y convertirla en campos reales."
+      },
+
+      {
+        type: "table",
+        headers: [
+          "FID",
+          "UGA",
+          "Politica",
+          "area_ha"
+        ],
+        rows: [
+          [
+            "28",
+            "33",
+            "Aprovechamiento-Restauración",
+            "107.968646"
+          ]
+        ]
+      },
+
+      {
+        type: "p",
+        text: "Los nombres de los campos **no están escritos de forma fija dentro de la herramienta**. Se detectan a partir del contenido del archivo."
+      },
+
+      {
+        type: "p",
+        text: "Por ejemplo, si otro KML contiene `Municipio`, `Localidad`, `Poblacion`, `Categoria` y `Observacion`, la herramienta intentará crear automáticamente esas columnas."
+      },
+
+      {
+        type: "h2",
+        text: "Cómo funciona"
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "flujo.txt",
+        code: "KML / KMZ\n   ↓\nLectura de documentos KML\n   ↓\nDetección de Placemark\n   ↓\nLectura de geometrías\n   ↓\nDetección de MultiGeometry\n   ↓\nExtracción de atributos\n   ↓\ndescription HTML → columnas\n   ↓\nExtendedData → columnas\n   ↓\nLectura de Style / StyleMap\n   ↓\nConversión de colores KML\n   ↓\nValidación de entidades\n   ↓\nGeoPackage\n   ↓\nShapefile + QML",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "h2",
+        text: "Geometrías compatibles"
+      },
+
+      {
+        type: "p",
+        text: "La herramienta está diseñada para reconocer las geometrías vectoriales más comunes utilizadas dentro de KML y KMZ."
+      },
+
+      {
+        type: "ul",
+        items: [
+          "**Point** para puntos.",
+          "**LineString** para líneas.",
+          "**Polygon** para polígonos.",
+          "**MultiGeometry** para objetos formados por varias geometrías."
+        ]
+      },
+
+      {
+        type: "h3",
+        text: "Geometrías multipartes"
+      },
+
+      {
+        type: "p",
+        text: "Un aspecto importante es que un solo `Placemark` puede contener varios polígonos. Eso no significa necesariamente que deban generarse varias filas en la tabla."
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "multigeometry.txt",
+        code: "Placemark\n ├── Polygon\n ├── Polygon\n └── Polygon",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "p",
+        text: "En ese caso puede tratarse de **una sola entidad multipartes**, formada por tres áreas físicamente separadas pero asociadas al mismo registro."
+      },
+
+      {
+        type: "callout",
+        variant: "info",
+        title: "Ejemplo de validación",
+        text: "Un resultado como `105 entidades / 127 partes Polygon` puede ser totalmente correcto. Significa que existen 105 registros, pero algunos contienen más de una parte geométrica."
+      },
+
+      {
+        type: "h2",
+        text: "Conservación de atributos"
+      },
+
+      {
+        type: "p",
+        text: "La herramienta intenta recuperar información almacenada mediante diferentes mecanismos utilizados por KML."
+      },
+
+      {
+        type: "ul",
+        items: [
+          "`description` con tablas HTML.",
+          "`ExtendedData`.",
+          "`Data` y `value`.",
+          "`SchemaData`.",
+          "`SimpleData`."
+        ]
+      },
+
+      {
+        type: "snippet",
+        language: "xml",
+        fileName: "extended-data.xml",
+        code: "<ExtendedData>\n  <Data name=\"Municipio\">\n    <value>Pachuca de Soto</value>\n  </Data>\n</ExtendedData>",
+        showLineNumbers: true,
+        wrap: false
+      },
+
+      {
+        type: "p",
+        text: "Esto permite que la herramienta pueda utilizarse con archivos generados por distintas aplicaciones y no únicamente con un esquema específico de atributos."
+      },
+
+      {
+        type: "h2",
+        text: "Conservación de colores"
+      },
+
+      {
+        type: "p",
+        text: "Otro problema importante durante la conversión es la simbología. Un archivo KMZ puede visualizar correctamente diferentes colores, pero al exportarlo directamente a SHP QGIS puede mostrar todas las entidades con un solo color."
+      },
+
+      {
+        type: "p",
+        text: "KML almacena normalmente los colores utilizando el formato `AABBGGRR`, mientras que QGIS trabaja de otra forma. La herramienta interpreta esos valores y los transforma para poder reconstruir el estilo."
+      },
+
+      {
+        type: "table",
+        headers: [
+          "Componente",
+          "Significado"
+        ],
+        rows: [
+          [
+            "AA",
+            "Transparencia"
+          ],
+          [
+            "BB",
+            "Azul"
+          ],
+          [
+            "GG",
+            "Verde"
+          ],
+          [
+            "RR",
+            "Rojo"
+          ]
+        ]
+      },
+
+      {
+        type: "p",
+        text: "Además de generar el estilo QML, los componentes de color se almacenan dentro de la tabla de atributos."
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "campos-color.txt",
+        code: "FILL_R\nFILL_G\nFILL_B\nFILL_A\n\nLINE_R\nLINE_G\nLINE_B\nLINE_A\n\nLINE_W",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "p",
+        text: "Así, aunque posteriormente se pierda el archivo `.qml`, los valores necesarios para reconstruir la simbología continúan dentro de los datos."
+      },
+
+      {
+        type: "h2",
+        text: "Style y StyleMap"
+      },
+
+      {
+        type: "p",
+        text: "Los colores de un KML no siempre se encuentran directamente dentro de cada `Placemark`. Es común que se utilicen referencias a estilos compartidos."
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "style-map.txt",
+        code: "Placemark\n   ↓\nstyleUrl\n   ↓\nStyleMap\n   ↓\nStyle\n   ↓\nPolyStyle / LineStyle",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "p",
+        text: "La herramienta intenta seguir estas referencias para identificar el estilo correspondiente a cada objeto."
+      },
+
+      {
+        type: "ul",
+        items: [
+          "`Style`.",
+          "`StyleMap`.",
+          "`styleUrl`.",
+          "Estilos definidos directamente dentro del `Placemark`.",
+          "`PolyStyle`.",
+          "`LineStyle`.",
+          "`IconStyle`."
+        ]
+      },
+
+      {
+        type: "h2",
+        text: "Archivos que genera"
+      },
+
+      {
+        type: "p",
+        text: "Si el archivo original se llama `UGA_Pach0726.kmz`, el resultado puede incluir los siguientes archivos:"
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "salida.txt",
+        code: "UGA_Pach0726_FINAL.gpkg\n\nUGA_Pach0726_FINAL.shp\nUGA_Pach0726_FINAL.dbf\nUGA_Pach0726_FINAL.shx\nUGA_Pach0726_FINAL.prj\nUGA_Pach0726_FINAL.cpg\nUGA_Pach0726_FINAL.qml",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "h3",
+        text: "GeoPackage"
+      },
+
+      {
+        type: "p",
+        text: "Recomiendo utilizar el archivo `.gpkg` como **versión maestra**. GeoPackage es más moderno que Shapefile y maneja mejor nombres de campos, textos extensos y diferentes capas."
+      },
+
+      {
+        type: "h3",
+        text: "Shapefile"
+      },
+
+      {
+        type: "p",
+        text: "El SHP se genera principalmente para mantener compatibilidad con sistemas que todavía requieren este formato."
+      },
+
+      {
+        type: "callout",
+        variant: "info",
+        title: "Un SHP no es un solo archivo",
+        text: "Para compartir correctamente un Shapefile deben mantenerse juntos al menos `.shp`, `.dbf`, `.shx` y `.prj`. También recomiendo conservar `.cpg` y `.qml`."
+      },
+
+      {
+        type: "h3",
+        text: "QML"
+      },
+
+      {
+        type: "p",
+        text: "El archivo `.qml` almacena la configuración de simbología de QGIS. Es necesario porque el formato Shapefile **no guarda internamente los colores y estilos de representación** de la misma forma que KML o KMZ."
+      },
+
+      {
+        type: "h2",
+        text: "Archivos con diferentes tipos de geometría"
+      },
+
+      {
+        type: "p",
+        text: "Un mismo KML puede contener puntos, líneas y polígonos. Como Shapefile no permite mezclar diferentes tipos de geometría dentro de una misma capa, la herramienta puede separarlos."
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "geometrias-mixtas.txt",
+        code: "ARCHIVO_FINAL_POINT.shp\nARCHIVO_FINAL_LINE.shp\nARCHIVO_FINAL_POLYGON.shp",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "p",
+        text: "En GeoPackage, en cambio, es posible conservar varias capas dentro del mismo archivo."
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "geopackage.txt",
+        code: "ARCHIVO_FINAL.gpkg\n ├── POINT\n ├── LINE\n └── POLYGON",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "h2",
+        text: "¿Es realmente universal?"
+      },
+
+      {
+        type: "p",
+        text: "La herramienta está diseñada para ser **reutilizable** y no depender de nombres concretos de archivos, campos o capas."
+      },
+
+      {
+        type: "p",
+        text: "No exige que existan campos llamados `FID`, `UGA`, `Politica` o `area_ha`. Los campos y estructuras se intentan detectar automáticamente. Esto permite utilizar el mismo script con otros KML y KMZ provenientes de diferentes proyectos."
+      },
+
+      {
+        type: "callout",
+        variant: "info",
+        title: "Universal no significa compatible con absolutamente todo",
+        text: "KML es un formato muy flexible y permite extensiones específicas de Google Earth y de otras aplicaciones. La herramienta cubre principalmente información vectorial convencional y varias de las estructuras más comunes."
+      },
+
+      {
+        type: "h2",
+        text: "Limitaciones"
+      },
+
+      {
+        type: "h3",
+        text: "GroundOverlay"
+      },
+
+      {
+        type: "p",
+        text: "Los `GroundOverlay` normalmente representan **imágenes georreferenciadas**, como mapas escaneados, ortofotos o imágenes satelitales. No son geometrías vectoriales convencionales y no deben convertirse directamente a SHP."
+      },
+
+      {
+        type: "h3",
+        text: "Modelos 3D"
+      },
+
+      {
+        type: "p",
+        text: "Los elementos `Model`, archivos COLLADA `.dae` y otras estructuras 3D requieren un tratamiento diferente. Shapefile no puede conservar toda la información de un modelo tridimensional."
+      },
+
+      {
+        type: "h3",
+        text: "NetworkLink"
+      },
+
+      {
+        type: "p",
+        text: "Un `NetworkLink` puede apuntar a información almacenada en otro archivo o incluso en un servidor externo. Si los datos no están incluidos físicamente dentro del KMZ, es posible que no puedan procesarse."
+      },
+
+      {
+        type: "h3",
+        text: "SuperOverlay"
+      },
+
+      {
+        type: "p",
+        text: "Los `SuperOverlay` se utilizan principalmente para grandes mosaicos de imágenes y estructuras jerárquicas. No corresponden directamente a capas vectoriales tradicionales."
+      },
+
+      {
+        type: "h3",
+        text: "gx:Track y gx:MultiTrack"
+      },
+
+      {
+        type: "p",
+        text: "Google Earth permite almacenar recorridos asociados a tiempo y elevación mediante `gx:Track` y `gx:MultiTrack`. Algunas variantes requieren un procesamiento especial para conservar correctamente la secuencia temporal."
+      },
+
+      {
+        type: "h3",
+        text: "gx:Tour"
+      },
+
+      {
+        type: "p",
+        text: "Los recorridos animados `gx:Tour` pertenecen a funciones de presentación de Google Earth y no representan una capa vectorial convencional."
+      },
+
+      {
+        type: "h3",
+        text: "Recursos externos"
+      },
+
+      {
+        type: "p",
+        text: "Algunos estilos utilizan iconos, imágenes o recursos alojados fuera del KMZ. Si esos archivos no están disponibles, puede no ser posible reproducir exactamente la apariencia original."
+      },
+
+      {
+        type: "h3",
+        text: "KML dañados"
+      },
+
+      {
+        type: "p",
+        text: "La herramienta intenta tolerar algunos problemas comunes de XML y namespaces, pero un archivo severamente dañado puede requerir reparación manual antes de procesarlo."
+      },
+
+      {
+        type: "h2",
+        text: "Limitaciones propias de Shapefile"
+      },
+
+      {
+        type: "h3",
+        text: "Nombres de campos"
+      },
+
+      {
+        type: "p",
+        text: "Shapefile utiliza un formato DBF antiguo y tradicionalmente limita los nombres de campos aproximadamente a **10 caracteres**."
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "campos-shp.txt",
+        code: "DescripcionGeneral  →  DescripGen\nObservaciones       →  Observacio\nIdentificador       →  Identifica",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "p",
+        text: "La herramienta intenta generar nombres compatibles y evitar duplicados."
+      },
+
+      {
+        type: "h3",
+        text: "Textos largos"
+      },
+
+      {
+        type: "p",
+        text: "Los campos de texto del DBF también tienen limitaciones. Cuando un texto es demasiado extenso puede ser necesario dividirlo en varias columnas para evitar pérdida de información."
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "texto-largo.txt",
+        code: "OBSERV_1\nOBSERV_2\nOBSERV_3",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "p",
+        text: "Por esta razón vuelvo a recomendar conservar siempre el **GeoPackage como archivo maestro**."
+      },
+
+      {
+        type: "h3",
+        text: "Simbología"
+      },
+
+      {
+        type: "p",
+        text: "El archivo `.shp` no almacena directamente la simbología de QGIS. La herramienta genera un `.qml` y además conserva los componentes de color dentro de los atributos para poder reconstruir posteriormente la representación."
+      },
+
+      {
+        type: "h2",
+        text: "Mi recomendación de uso"
+      },
+
+      {
+        type: "table",
+        headers: [
+          "Formato",
+          "Uso recomendado",
+          "Motivo"
+        ],
+        rows: [
+          [
+            "KML/KMZ",
+            "Fuente original",
+            "Conservar siempre el archivo recibido o generado originalmente."
+          ],
+          [
+            "GeoPackage",
+            "Archivo maestro de trabajo",
+            "Tiene menos limitaciones y conserva mejor la información."
+          ],
+          [
+            "Shapefile",
+            "Compatibilidad y entrega",
+            "Útil cuando otro sistema exige específicamente SHP."
+          ],
+          [
+            "QML",
+            "Simbología en QGIS",
+            "Permite reconstruir los colores del Shapefile."
+          ]
+        ]
+      },
+
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "flujo-recomendado.txt",
+        code: "KML / KMZ ORIGINAL\n        ↓\nGEOPACKAGE MAESTRO\n        ↓\nSHAPEFILE PARA COMPATIBILIDAD",
+        showLineNumbers: false,
+        wrap: false
+      },
+
+      {
+        type: "h2",
+        text: "Consideraciones finales"
+      },
+
+      {
+        type: "p",
+        text: "Esta herramienta surgió a partir de un problema práctico: tener un KMZ que visualmente parecía contener toda la información, pero que al convertirlo de manera convencional perdía atributos, estilos o partes de sus geometrías."
+      },
+
+      {
+        type: "p",
+        text: "El objetivo fue automatizar tareas que de otra manera tendría que realizar manualmente: separar `description`, crear campos, interpretar `MultiGeometry`, recuperar estilos y preparar archivos compatibles con QGIS."
+      },
+
+      {
+        type: "ul",
+        items: [
+          "Evitar crear cada campo manualmente.",
+          "Recuperar atributos almacenados dentro de HTML.",
+          "Mantener entidades multipartes.",
+          "Conservar la información de color.",
+          "Generar automáticamente GeoPackage y Shapefile.",
+          "Reducir la necesidad de uniones o reprocesamientos posteriores."
+        ]
+      },
+
+      {
+        type: "p",
+        text: "No pretende sustituir todas las herramientas de conversión existentes en QGIS, sino servir como una alternativa para **KML y KMZ donde una exportación convencional no conserva correctamente toda la información**."
+      },
+
+      {
+        type: "downloadLink",
+        href: "/material/KMZ_KML_a_SHP_Universal/KMZ_KML_a_SHP_Universal_QGIS.py",
+        text: "Descargar herramienta KML/KMZ → SHP Universal",
+        fileName: "KMZ_KML_a_SHP_Universal_QGIS.py"
+      }
+    ],
+
+    date: "24 de agosto, 2026",
+
+    image: "/img/tutoriales/kml-kmz-shp-qgis.png",
+
+    category: "Tutoriales",
+
+    featuredPosts: true,
+
+    author: "Gabriel Gómez Gómez",
+
+    publishedAt: "2026-08-24",
+
+    updatedAt: "2026-08-24",
+
+    quote: "La idea no fue solamente convertir un archivo, sino conservar la mayor cantidad posible de su estructura, atributos y representación para poder seguir trabajando con él dentro de un SIG.",
+
+    media: [
+      {
+        type: "image",
+        src: "/img/tutoriales/kml-kmz-shp-qgis-resultados.png",
+        alt: "Resultado de la conversión de KML o KMZ a Shapefile en QGIS",
+        caption: "Ejemplo de una capa convertida conservando sus atributos y la información necesaria para reproducir los colores."
+      }
+    ]
+  },
+  {
     name: "Vistas, sesiones y usuarios activos en Google Analytics: ¿qué pasa cuando una IA consulta mi sitio?",
     description: [
       {
