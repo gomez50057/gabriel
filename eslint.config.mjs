@@ -1,23 +1,20 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+import nextConfig from "eslint-config-next/core-web-vitals";
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals"),
+  ...nextConfig,
   {
+    rules: {
+      // Several existing client components intentionally synchronize derived UI state in effects.
+      "react-hooks/set-state-in-effect": "off",
+    },
     ignores: [
       "node_modules/**",
       ".next/**",
       "out/**",
       "build/**",
       "next-env.d.ts",
+      ".agents/**",
+      ".playwright-cli/**",
     ],
   },
 ];
