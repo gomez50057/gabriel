@@ -37,12 +37,7 @@ export default function ThemeSwitch({ className = "" }) {
   useEffect(() => {
     const saved = localStorage.getItem("theme");
 
-    const initial =
-      saved ||
-      (window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light");
+    const initial = saved === "dark" || saved === "light" ? saved : "light";
 
     setTheme(initial);
     document.documentElement.setAttribute("data-theme", initial);
