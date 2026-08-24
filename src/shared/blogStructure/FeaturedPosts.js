@@ -24,8 +24,6 @@ const FeaturedPosts = ({ featuredPosts = [], nameLink = "" }) => {
     [featuredPosts]
   );
 
-  if (!items.length) return null;
-
   const canToggle = items.length > DEFAULT_VISIBLE;
 
   const measure = () => {
@@ -49,7 +47,6 @@ const FeaturedPosts = ({ featuredPosts = [], nameLink = "" }) => {
 
   useLayoutEffect(() => {
     measure();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items.length]);
 
   useEffect(() => {
@@ -65,8 +62,9 @@ const FeaturedPosts = ({ featuredPosts = [], nameLink = "" }) => {
       ro.disconnect();
       window.removeEventListener("resize", measure);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  if (!items.length) return null;
 
   const maxH = expanded ? heights.expanded : heights.collapsed;
 

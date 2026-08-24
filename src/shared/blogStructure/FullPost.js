@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import FeaturedPosts from "./FeaturedPosts";
 import styles from "@/styles/blog/FullPost.module.css";
 import Navbar from "@/shared/Navbar";
@@ -175,9 +176,9 @@ export default function FullPost({ post, featuredPosts = [] }) {
         {/* Nota principal */}
         <article className={styles.postContent} aria-labelledby="post-title">
           <nav className={styles.breadcrumbs} aria-label="Migas de pan">
-            <a href="/">Inicio</a>
+            <Link href="/">Inicio</Link>
             <span aria-hidden="true">/</span>
-            <a href="/hacks">Hacks</a>
+            <Link href="/hacks">Hacks</Link>
             <span aria-hidden="true">/</span>
             <span aria-current="page">Artículo</span>
           </nav>
