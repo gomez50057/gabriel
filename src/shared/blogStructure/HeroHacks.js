@@ -8,11 +8,11 @@ export default function HeroHacks({
     {
       id: 1,
       tag: 'Hacks',
-      title: 'Cómo arreglar el bloqueo de Facebook, Instagram o WhatsApp (y cualquier página bloqueada en /etc/hosts)',
+      title: 'Cómo organizo mis commits en Git y por qué uso esta metodología',
       excerpt:
-        'Notas que varias páginas web simplemente no abren, aunque tu conexión esté perfectamente bien. Aquí te explico cómo arreglarlo.',
-      image: '/img/tutoriales/fix-blocked-sites-hosts.jpg',
-      href: '/hacks/como-arreglar-el-bloqueo-de-facebook-instagram-o-whatsapp-y-cualquier-pagina-bloqueada-en-etchosts',
+        'Cuando trabajo en un proyecto, no solo me interesa que el código funcione. También me interesa que el historial de cambios sea claro, ordenado y fácil de entender.',
+      image: '/img/tutoriales/git-commits-buenas-practicas.png',
+      href: '/hacks/como-organizo-mis-commits-en-git-y-por-que-uso-esta-metodologia',
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ export default function HeroHacks({
       title:
         'Guía paso a paso: crea tu proyecto con Next.js 16',
       excerpt:
-        'Vamos a crear un proyecto de Next.js 16 desde cero, eligiendo opciones óptimas para tu stack',
+        'Vamos a crear un proyecto de Next.js 16 desde cero, eligiendo opciones óptimas para tu stack.',
       image: '/img/tutoriales/nextjs-setup-16.png',
       href: '/hacks/guia-paso-a-paso-crea-tu-proyecto-con-nextjs-16',
       featured: true, // tarjeta central grande
