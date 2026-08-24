@@ -20,6 +20,10 @@ export const TOOLS_LINKS = [
     label: "Generador de marcas de agua",
   },
   {
+    href: "/herramientas/unir-organizar-pdf",
+    label: "Unir y organizar PDF",
+  },
+  {
     href: "/herramientas/optimizador-imagenes-web",
     label: "Optimizador de imagenes web",
   },

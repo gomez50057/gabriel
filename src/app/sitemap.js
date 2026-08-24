@@ -3,7 +3,7 @@ import { blogPosts } from "@/utils/blog/blogData";
 import { normalizeName } from "@/utils/renderText";
 
 export default function sitemap() {
-  const pages = ["", "/hacks", "/portafolio"].map((path) => ({
+  const pages = ["", "/hacks", "/portafolio", "/herramientas/unir-organizar-pdf"].map((path) => ({
     url: new URL(path || "/", SITE_URL).toString(),
     changeFrequency: path === "/hacks" ? "weekly" : "monthly",
     priority: path === "" ? 1 : 0.8,
