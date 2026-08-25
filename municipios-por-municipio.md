@@ -1,0 +1,6365 @@
+# Asentamientos humanos y localidades por municipio
+
+Fuente: src/components/Tool/MunicipalityLocator/municipalityLocalities.js
+
+Cada municipio aparece en un solo grupo. Los registros están marcados como Localidad o Asentamiento humano para distinguirlos claramente.
+
+## Municipio: Ajacuba
+
+- Localidad: Ajacuba
+- Localidad: Emiliano Zapata
+- Localidad: Vicente Guerrero
+- Localidad: Ignacio Zaragoza
+- Localidad: Santiago Tezontlale
+- Localidad: San Nicolás Tecomatlán
+- Localidad: Tulancalco
+- Localidad: Santo Niño [Colonia]
+- Localidad: El Gorrión
+- Localidad: Santa Bárbara
+- Localidad: Las Huertas
+- Localidad: Barrio el Rincón Sur
+- Localidad: Los Cruces
+- Localidad: El Cerrito de las Colmenas
+- Localidad: Cuernavaca
+- Localidad: Presa Nueva
+- Localidad: Los Corrales
+- Localidad: Rancho Nuevo
+- Localidad: Los Bondos
+- Asentamiento humano: Arboledas — COLONIA
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: La Cantera — COLONIA
+- Asentamiento humano: La Joya — COLONIA
+- Asentamiento humano: La Palma — COLONIA
+- Asentamiento humano: La Presa — COLONIA
+- Asentamiento humano: Los Arcos — FRACCIONAMIENTO
+- Asentamiento humano: Los Gallineros — COLONIA
+- Asentamiento humano: Santa Jacoba — COLONIA
+- Asentamiento humano: Santa Teresa — COLONIA
+- Asentamiento humano: Satélite — COLONIA
+- Asentamiento humano: Emiliano Zapata — COLONIA
+- Asentamiento humano: Vicente Guerrero — COLONIA
+- Asentamiento humano: Ignacio Zaragoza — COLONIA
+- Asentamiento humano: Cuarta de Lozano — COLONIA
+- Asentamiento humano: Cuauhtémoc — COLONIA
+- Asentamiento humano: Primera de Lozano — COLONIA
+- Asentamiento humano: Primera de Romero — COLONIA
+- Asentamiento humano: Quinta de Lozano — COLONIA
+- Asentamiento humano: Segunda de Lozano — COLONIA
+- Asentamiento humano: Segunda de Romero — COLONIA
+- Asentamiento humano: Sexta de Lozano — COLONIA
+- Asentamiento humano: Tercera de Lozano — COLONIA
+- Asentamiento humano: Tercera de Romero — COLONIA
+- Asentamiento humano: Vicente Aguirre — COLONIA
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: El Bovindo — COLONIA
+- Asentamiento humano: La Palma Primera Sección — COLONIA
+- Asentamiento humano: La Palma Segunda Sección — COLONIA
+- Asentamiento humano: Rincón Norte Primera Sección — COLONIA
+- Asentamiento humano: Rincón Norte Segunda Sección — BARRIO
+- Asentamiento humano: Rincón Sur Primera Sección — COLONIA
+- Asentamiento humano: Rincón Sur Segunda Sección — BARRIO
+- Asentamiento humano: Santa Cruz Norte — COLONIA
+- Asentamiento humano: Santa Cruz Sur Primera Sección — BARRIO
+- Asentamiento humano: Santa Cruz Sur Segunda Sección — BARRIO
+- Asentamiento humano: Vicente Guerrero — COLONIA
+- Asentamiento humano: Tulancalco — COLONIA
+- Asentamiento humano: El Gorrión — COLONIA
+- Asentamiento humano: Barrio el Rincón Sur — COLONIA
+
+## Municipio: Alfajayucan
+
+- Localidad: Alfajayucan
+- Localidad: Arias
+- Localidad: Baxthe
+- Localidad: Boxthó
+- Localidad: Buenavista
+- Localidad: Cebolletas
+- Localidad: Cerro Azul
+- Localidad: La Cruz
+- Localidad: Deca
+- Localidad: Donguiñyo
+- Localidad: Tercera Manzana la Ladera
+- Localidad: El Espíritu
+- Localidad: La Huapilla
+- Localidad: Huixthéy
+- Localidad: Madho Cerro Prieto
+- Localidad: Madho Corrales
+- Localidad: Madho San Pablo
+- Localidad: El Mayorazgo
+- Localidad: Milpa Grande
+- Localidad: Naxthéy
+- Localidad: Nexni
+- Localidad: El Perú
+- Localidad: La Piedad
+- Localidad: La Cañada
+- Localidad: La Salitrera
+- Localidad: San Agustín Tlalixticapa
+- Localidad: San Antonio Corrales
+- Localidad: San Antonio Tezoquipan
+- Localidad: San Francisco Sacachichilco
+- Localidad: San Lucas
+- Localidad: San Pablo Oxtotipan
+- Localidad: San Pedro la Paz
+- Localidad: Santa María la Palma
+- Localidad: Taxhié
+- Localidad: La Vega
+- Localidad: Xamagé
+- Localidad: Santa María Xigui
+- Localidad: Xothé
+- Localidad: Yonthe Chico
+- Localidad: Yonthe Grande
+- Localidad: El Zapote (Fontezuelas)
+- Localidad: Zozea
+- Localidad: La Venta
+- Localidad: El Bermejo
+- Localidad: Cuarta Manzana Bathahuai
+- Localidad: Cuarta Manzana la Loma Dotzihai
+- Localidad: Cuarta Manzana Doxtha
+- Localidad: Dolores
+- Localidad: El Doydhe
+- Localidad: La Noria
+- Localidad: La Palma
+- Localidad: Primera Manzana Dozdha
+- Localidad: Los Puertecitos
+- Localidad: El Puerto
+- Localidad: Segunda Manzana Zundhó
+- Localidad: Tercera Manzana
+- Localidad: Tres Hermanas
+- Localidad: El Decá Tezoquipan
+- Localidad: La Nopalera
+- Localidad: El Peñón
+- Localidad: Pueblo Nuevo
+- Localidad: Puithe San Antonio Tezoquipan
+- Localidad: Los Trejo
+- Localidad: Los Ángeles
+- Localidad: El Dadhó
+- Localidad: Cerro Colorado
+- Localidad: San Pedro Xamagé
+- Localidad: Ejido de Santa María la Palma
+- Localidad: El Potrerito
+- Localidad: Las Fuentes
+- Localidad: Los Hornos
+- Localidad: La Joya
+- Localidad: Las Burras (Ejido Alfajayucan)
+- Asentamiento humano: CENTRO — MANZANA
+- Asentamiento humano: CUARTA TOXTHA — MANZANA
+- Asentamiento humano: SEGUNDA ZUNDHO — MANZANA
+- Asentamiento humano: TERCERA — MANZANA
+- Asentamiento humano: VALLE DORADO — FRACCIONAMIENTO
+- Asentamiento humano: BOXTHÓ — PUEBLO
+- Asentamiento humano: LA HUAPILLA — PUEBLO
+- Asentamiento humano: SAN ANTONIO CORRALES — PUEBLO
+- Asentamiento humano: XAMAGÉ — PUEBLO
+- Asentamiento humano: CUARTA MANZANA DOXTHA — COLONIA
+- Asentamiento humano: EL DOYDHE — PUEBLO
+- Asentamiento humano: PRIMERA MANZANA DOZDHA — PUEBLO
+- Asentamiento humano: SEGUNDA MANZANA ZUNDHÓ — PUEBLO
+- Asentamiento humano: PUEBLO NUEVO — PUEBLO
+- Asentamiento humano: LAS FUENTES — FRACCIONAMIENTO
+
+## Municipio: Almoloya
+
+- Localidad: Almoloya
+- Localidad: Buenavista
+- Localidad: El Capulín
+- Localidad: El Carmen
+- Localidad: Hacienda Cuatlaco
+- Localidad: Hacienda Coliuca
+- Localidad: La Coronilla
+- Localidad: El Cuatezón
+- Localidad: Cuautlatilpan
+- Localidad: El Cuervo
+- Localidad: La Defensa
+- Localidad: Golondrinas
+- Localidad: Huacalillos
+- Localidad: Huimiyucan
+- Localidad: Las Maravillas
+- Localidad: La Mesa del Gallo
+- Localidad: El Mexicano
+- Localidad: Los Morales
+- Localidad: Ocotepec
+- Localidad: Ocotepec de Morelos
+- Localidad: La Ordeña
+- Localidad: La Presa
+- Localidad: El Pozo
+- Localidad: Rancho Nuevo
+- Localidad: Cuatlaco
+- Localidad: San Isidro Tetlapayac
+- Localidad: San José Coliuca
+- Localidad: San Juan Violeta
+- Localidad: San Lorenzo Xicoténcatl
+- Localidad: Los Órganos
+- Localidad: Santiago Tetlapayac
+- Localidad: La Soledad
+- Localidad: Techachales
+- Localidad: Tepepatlaxco (El Llano)
+- Localidad: Hacienda Tepepatlaxco
+- Localidad: Tepetlayuca
+- Localidad: El Tepozán (San Gabriel)
+- Localidad: Hacienda el Tepozán
+- Localidad: Estación Tetlapayac
+- Localidad: Las Vigas
+- Localidad: La Violeta
+- Localidad: Zopiloapan
+- Localidad: La Soledad
+- Localidad: El Chapulín
+- Localidad: La Misa
+- Localidad: El Portezuelo
+- Localidad: La Providencia
+- Localidad: La Venta
+- Localidad: La Loma
+- Localidad: Las Palomas
+- Localidad: Hacienda Rancho Nuevo
+- Localidad: La Fragua
+- Localidad: Alejandro Saldivar
+- Localidad: Laguna del Puerco
+- Localidad: El Lindero
+- Localidad: Santa Brígida
+- Localidad: Santa Elena
+- Localidad: Las Cotorras
+- Localidad: San Antonio Alconedo
+- Localidad: El Durazno
+- Localidad: El Ocote (San Isidro Tlacotoca)
+- Localidad: El Nido
+- Localidad: El Nopal
+- Localidad: Los Ojitos
+- Localidad: El Pájaro
+- Localidad: Los Sosa
+- Localidad: El Pozo
+- Localidad: Los Capulines
+- Localidad: El Cazadero
+- Localidad: Rancho del Cristo
+- Localidad: El Recuerdo
+- Localidad: Tlalpiza
+- Localidad: Álvaro López Avilés
+- Localidad: El Sabinal
+- Localidad: Daniel Muñoz
+- Localidad: El Llorón
+- Localidad: La Providencia
+- Localidad: Santa Inés
+- Localidad: San Francisco [Rancho]
+- Localidad: El Capulín
+- Localidad: El Durazno
+- Localidad: Ex-Hacienda Tepetlayuca
+- Localidad: Lucio Hernández
+- Localidad: El Mirador
+- Localidad: El Mirador
+- Localidad: La Palma
+- Localidad: Los Carrasco
+- Localidad: San Andrés
+- Localidad: El Tejocote
+- Localidad: Tecontitlán
+- Localidad: El Venado (Tomás Castillo Cortés)
+- Localidad: Gustavo Madrid Ajís
+- Localidad: El Calvario
+- Localidad: La Loma Bonita
+- Localidad: La Frontera
+- Localidad: Los Rosales
+- Localidad: Antonio P. Ramírez [Colonia]
+- Localidad: Colonia Martínez
+- Localidad: Nopal del Buen Querer
+- Localidad: Los Ángeles
+- Localidad: Don Mateo Díaz (La Arboleda)
+- Localidad: Texcalaque
+- Localidad: Los Gavilanes
+- Localidad: Agua Limpia
+- Localidad: Agua Bendita
+- Localidad: Los Conchos
+- Localidad: Gelacio Martínez
+- Asentamiento humano: ANTONIO P. RAMÍREZ — COLONIA
+- Asentamiento humano: BARRIO DE LAS FLORES — BARRIO
+- Asentamiento humano: BARRIO DEL CAN — BARRIO
+- Asentamiento humano: BARRIO DEL TECHIN — BARRIO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CALVARIO — COLONIA
+- Asentamiento humano: MARTÍNEZ — COLONIA
+- Asentamiento humano: MARTÍNEZ — AMPLIACIÓN
+- Asentamiento humano: NUEVA — COLONIA
+- Asentamiento humano: CUATLACO — EXHACIENDA
+- Asentamiento humano: LA CORONILLA — RANCHERÍA
+- Asentamiento humano: HUIMIYUCAN — RANCHERÍA
+- Asentamiento humano: OCOTEPEC — COLONIA
+- Asentamiento humano: OCOTEPEC DE MORELOS — COLONIA
+- Asentamiento humano: RANCHO NUEVO — EJIDO
+- Asentamiento humano: CUATLACO — EJIDO
+- Asentamiento humano: SAN ISIDRO TETLAPAYAC — RANCHERÍA
+- Asentamiento humano: SAN JOSÉ COLIUCA — RANCHERÍA
+- Asentamiento humano: SAN LORENZO XICOTÉNCATL — RANCHERÍA
+- Asentamiento humano: SANTIAGO TETLAPAYAC — PUEBLO
+- Asentamiento humano: TEPETLATAXCO — EXHACIENDA
+- Asentamiento humano: TEPETLAYUCA — RANCHERÍA
+- Asentamiento humano: EL TEPOZÁN — RANCHERÍA
+- Asentamiento humano: LAS VIGAS — EJIDO
+- Asentamiento humano: EL POZO — RANCHERÍA
+- Asentamiento humano: EL LLORÓN — COLONIA
+- Asentamiento humano: MARTÍNEZ — COLONIA
+
+## Municipio: Apan
+
+- Localidad: Apan
+- Localidad: Acopinalco
+- Localidad: Alcantarillas
+- Localidad: Cocinillas
+- Localidad: Chimalpa Tlalayote
+- Localidad: Ex-Hacienda Espejel
+- Localidad: San José Jiquilpan
+- Localidad: La Josefina
+- Localidad: La Laguna
+- Localidad: Lázaro Cárdenas
+- Localidad: Malayerba
+- Localidad: San Juan Ixtilmaco
+- Localidad: San Miguel de las Tunas
+- Localidad: Santa Cruz
+- Localidad: El Tezoyo
+- Localidad: San Diego Tlalayote
+- Localidad: Los Voladores
+- Localidad: Zotoluca (Veloz)
+- Localidad: Guadalupe
+- Localidad: El Colorado
+- Localidad: El Tigre
+- Localidad: Las Ventas
+- Localidad: Ex-Hacienda el Marañón
+- Localidad: San Lucas
+- Localidad: La Leona
+- Localidad: San Sebastián
+- Localidad: El Alcanfor
+- Localidad: Los Ranchos (Salsipuedes)
+- Localidad: El Balconcillo (La Palma)
+- Localidad: El Cerrito
+- Localidad: Los Chiteros
+- Localidad: El Coyote (El Chupadero)
+- Localidad: Los Encinos
+- Localidad: La Ermita
+- Localidad: Hacienda San Miguel de las Tunas
+- Localidad: Jagüeyes Cuates
+- Localidad: La Lagunilla
+- Localidad: Loma Larga (San Antonio)
+- Localidad: La Loma
+- Localidad: El Mirador
+- Localidad: Los Ojitos
+- Localidad: Ojo de Agua
+- Localidad: Lomas del Pedregal
+- Localidad: San Diego Tlazala Avilés (Los Quintos)
+- Localidad: Los Reyes
+- Localidad: San Antonio Atochac
+- Localidad: Ex-Hacienda San Juan Ixtilmaco
+- Localidad: Ex-Hacienda Santa Cruz
+- Localidad: Los Sosa
+- Localidad: El Tecorral
+- Localidad: El Tejón
+- Localidad: Zacatepec
+- Localidad: Ex-Hacienda Zotoluca
+- Localidad: Ex-Hacienda Ocotepec
+- Localidad: Los Barrera
+- Localidad: Los Laureles
+- Localidad: El Rocío
+- Localidad: La Curva
+- Localidad: Santa Rosa
+- Localidad: La Virgencita [Colonia]
+- Localidad: Lindero de Ocotepec
+- Localidad: Marcelino Guzmán González
+- Localidad: La Joya
+- Localidad: La Providencia
+- Localidad: Loma Linda
+- Localidad: El Llano
+- Localidad: Buena Vista
+- Localidad: San Rafael
+- Localidad: San Antonio
+- Localidad: San Francisco Marañón (La Virgencita)
+- Localidad: San Joaquín
+- Localidad: La Era de Ocotepec
+- Localidad: San José el Mirador
+- Localidad: Los Montalvo
+- Localidad: Celedonio Márquez Sánchez
+- Localidad: Cándido García Beristáin
+- Localidad: Bosques de Chulco
+- Localidad: La Hidalguense
+- Localidad: Joaquín Macías Romano
+- Localidad: La Montaña de las Tres Cruces (Tecorral)
+- Localidad: Las Palomas
+- Localidad: Las Peñitas
+- Localidad: Los Mauricios
+- Localidad: Rancho Teteyo
+- Localidad: El Tejocote
+- Localidad: Las Cabañitas
+- Localidad: Las Haciendas
+- Localidad: El Capulín (La Mesa)
+- Localidad: Cerro del Conejo
+- Localidad: Los Cotorros
+- Localidad: Los Gutiérrez
+- Localidad: Canuto Monroy
+- Localidad: El Jazmín
+- Localidad: Leonel Ramírez González
+- Localidad: Los Morales (El Jagüey)
+- Localidad: La Providencia
+- Localidad: San Isidro (Rosendo Luna Orozco)
+- Localidad: La Soledad
+- Localidad: Ampliación Loma Bonita
+- Localidad: Las Lagunetas (La Presa)
+- Localidad: Lomas del Tepeyac
+- Localidad: Salinas
+- Localidad: UNTA [Colonia]
+- Localidad: El Jazmín
+- Asentamiento humano: APAN RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: AZTECA — COLONIA
+- Asentamiento humano: BELLAVISTA — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CARMEN — FRACCIONAMIENTO
+- Asentamiento humano: EL CARMEN — COLONIA
+- Asentamiento humano: EL CIERVO — COLONIA
+- Asentamiento humano: GUADALUPE SALITRERÍA — COLONIA
+- Asentamiento humano: INDEPENDENCIA — COLONIA
+- Asentamiento humano: INFONAVIT — COLONIA
+- Asentamiento humano: JOSEFA ORTÍZ DE DOMÍNGUEZ — COLONIA
+- Asentamiento humano: LA CONCHITA — COLONIA
+- Asentamiento humano: LEALTAD — FRACCIONAMIENTO
+- Asentamiento humano: LOMA BONITA — AMPLIACIÓN
+- Asentamiento humano: LOS CAPULINES — COLONIA
+- Asentamiento humano: LUIS DONALDO COLOSIO — COLONIA
+- Asentamiento humano: NIÑOS HÉROES — COLONIA
+- Asentamiento humano: QUINTA FLORES — FRACCIONAMIENTO
+- Asentamiento humano: SAN ANDRÉS — COLONIA
+- Asentamiento humano: SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: SAN JAVIER — FRACCIONAMIENTO
+- Asentamiento humano: SAN MIGUEL DEL ARCO — COLONIA
+- Asentamiento humano: SAN PABLO — COLONIA
+- Asentamiento humano: SAN PEDRO — COLONIA
+- Asentamiento humano: SAN RAFAEL — COLONIA
+- Asentamiento humano: VICENTE GUERRERO — COLONIA
+- Asentamiento humano: VILLAS TAURINAS — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS TAURINAS III — FRACCIONAMIENTO
+- Asentamiento humano: ACOPINALCO — COLONIA
+- Asentamiento humano: ALCANTARILLAS — EJIDO
+- Asentamiento humano: COCINILLAS — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: LAS CANOAS — COLONIA
+- Asentamiento humano: LAS ORQUÍDEAS — COLONIA
+- Asentamiento humano: SAN JOSÉ JIQUILPAN — RANCHERÍA
+- Asentamiento humano: LA LAGUNA — COLONIA
+- Asentamiento humano: LÁZARO CÁRDENAS — COLONIA
+- Asentamiento humano: MALAYERBA — RANCHERÍA
+- Asentamiento humano: SAN JUAN IXTILMACO — RANCHERÍA
+- Asentamiento humano: SAN MIGUEL DE LAS TUNAS — COLONIA
+- Asentamiento humano: SANTA CRUZ — COLONIA
+- Asentamiento humano: SAN DIEGO TLALAYOTE — COLONIA
+- Asentamiento humano: LOS VOLADORES — COLONIA
+- Asentamiento humano: ZOTOLUCA VELÓZ — PUEBLO
+- Asentamiento humano: SAN LUCAS — RANCHERÍA
+- Asentamiento humano: LOMAS DEL PEDREGAL — COLONIA
+- Asentamiento humano: BUENA VISTA — RANCHERÍA
+- Asentamiento humano: LA ERA DE OCOTEPEC — RANCHERÍA
+- Asentamiento humano: SAN JOSÉ EL MIRADOR — COLONIA
+- Asentamiento humano: BOSQUES DE CHOLUCO — COLONIA
+- Asentamiento humano: LA HIDALGUENSE — COLONIA
+- Asentamiento humano: LAS HACIENDAS — FRACCIONAMIENTO
+- Asentamiento humano: AMPLIACIÓN LOMA BONITA — COLONIA
+- Asentamiento humano: LOMAS DEL TEPEYAC — COLONIA
+- Asentamiento humano: UNTA — COLONIA
+- Asentamiento humano: EL JAZMIN — RANCHERÍA
+
+## Municipio: Atitalaquia
+
+- Localidad: Atitalaquia
+- Localidad: Cardonal
+- Localidad: Tezoquipa
+- Localidad: Tlalminulpa
+- Localidad: Tlamaco (San Gerónimo Tlamaco)
+- Localidad: San José Bojay el Grande
+- Localidad: San Isidro Bojayito (Ex-Hacienda Bojayito)
+- Localidad: Rancho Chihuahua
+- Localidad: Unidad Habitacional Antonio Osorio de León (Bojay)
+- Localidad: La Cantera
+- Localidad: Colonia Refinería (Colonia de los Ingenieros)
+- Localidad: La Loma de Ixtazacuala (La Loma)
+- Localidad: Rancho Chelita
+- Localidad: El Olimpo [Rancho]
+- Localidad: El Tecolote
+- Localidad: Ejido San Luis
+- Localidad: Ejido de San Luis
+- Localidad: La Vega
+- Localidad: Los Cedros
+- Localidad: Magueyal Viejo
+- Localidad: Atitalaquia [Parque Industrial]
+- Localidad: Tula [Parque Industrial]
+- Localidad: Ejido San Isidro Bojayito (El Monte)
+- Localidad: Ejido de Tlalminulpa (El Salitre)
+- Asentamiento humano: 15 de Enero Primera Sección — BARRIO
+- Asentamiento humano: 15 de Enero Segunda Sección — BARRIO
+- Asentamiento humano: Alfonso Reyes Galindo — FRACCIONAMIENTO
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: El Tablón — BARRIO
+- Asentamiento humano: Los Atlantes — FRACCIONAMIENTO
+- Asentamiento humano: San José Bojay — BARRIO
+- Asentamiento humano: Villas de Atitalaquia — FRACCIONAMIENTO
+- Asentamiento humano: 18 de Marzo — FRACCIONAMIENTO
+- Asentamiento humano: Cardonal — FRACCIONAMIENTO
+- Asentamiento humano: Colonia Dendho — BARRIO
+- Asentamiento humano: El Cardonal — BARRIO
+- Asentamiento humano: El Dendho — BARRIO
+- Asentamiento humano: Miguel Hidalgo — FRACCIONAMIENTO
+- Asentamiento humano: Residencial Dendho — FRACCIONAMIENTO
+- Asentamiento humano: Tezoquipa — BARRIO
+- Asentamiento humano: Tlalminulpa — COLONIA
+- Asentamiento humano: 5 de Mayo — COLONIA
+- Asentamiento humano: Barrio Alto — COLONIA
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: El Xindhó — COLONIA
+- Asentamiento humano: Insurgentes — COLONIA
+- Asentamiento humano: Nacional — COLONIA
+- Asentamiento humano: Presidentes — COLONIA
+- Asentamiento humano: Santa Cruz — COLONIA
+- Asentamiento humano: Antonio Osorio de León — UNIDAD HABITACIONAL
+- Asentamiento humano: Refinería (De los Ingenieros) — COLONIA
+- Asentamiento humano: Atitalaquia (Parque Industrial) — PARQUE INDUSTRIAL
+- Asentamiento humano: Tula (Parque Industrial) — PARQUE INDUSTRIAL
+## Municipio: Atotonilco de Tula
+
+- Localidad: Atotonilco de Tula
+- Localidad: San José Acoculco
+- Localidad: La Cañada
+- Localidad: Conejos
+- Localidad: Coayuca
+- Localidad: Ocampo
+- Localidad: El Pedregal
+- Localidad: Progreso
+- Localidad: El Refugio (Salitrera)
+- Localidad: Texas
+- Localidad: Vito
+- Localidad: Zacamulpa
+- Localidad: San Antonio
+- Localidad: Praderas del Potrero
+- Localidad: Batha
+- Localidad: Potrero Blanco
+- Localidad: El Puertecito
+- Localidad: Vito (Fabricio Álvarez Estrada)
+- Localidad: La Sierrita (La Presa del Tejocote)
+- Localidad: El Portal
+- Localidad: Santa Cruz del Tezontle
+- Localidad: El Venado
+- Localidad: Paseos de la Pradera
+- Localidad: Las Terrazas
+- Localidad: La Lagunilla
+- Localidad: Senderos del Pedregal
+- Localidad: Real Castilla
+- Localidad: QUMA [Parque Industrial]
+- Localidad: La Estancia
+- Asentamiento humano: BARRIO DE BÓVEDAS — BARRIO
+- Asentamiento humano: BARRIO DE BOXFI — BARRIO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: FERROCARRIL NORTE — COLONIA
+- Asentamiento humano: FERROCARRIL SUR — COLONIA
+- Asentamiento humano: LA CAÑADA — BARRIO
+- Asentamiento humano: LOMA BONITA PRIMERA SECCIÓN — COLONIA
+- Asentamiento humano: LOMA BONITA SEGUNDA SECCIÓN — COLONIA
+- Asentamiento humano: LOS COMPADRES — COLONIA
+- Asentamiento humano: TOLTECA — COLONIA
+- Asentamiento humano: BATHÁ TERCERA SECCIÓN — SECCIÓN
+- Asentamiento humano: PRIMERA SECCIÓN — SECCIÓN
+- Asentamiento humano: SEGUNDA SECCIÓN — SECCIÓN
+- Asentamiento humano: EL ÁGUILA — COLONIA
+- Asentamiento humano: PRIMERA SECCIÓN — SECCIÓN
+- Asentamiento humano: SEGUNDA SECCIÓN — SECCIÓN
+- Asentamiento humano: BUGAMBILIAS — COLONIA
+- Asentamiento humano: CEMEX — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL MIRADOR — COLONIA
+- Asentamiento humano: LA CRUZ — COLONIA
+- Asentamiento humano: LA JOYA — COLONIA
+- Asentamiento humano: LINDAVISTA — COLONIA
+- Asentamiento humano: LOS ÁLAMOS — COLONIA
+- Asentamiento humano: LOS BAÑOS — COLONIA
+- Asentamiento humano: POTRERO BLANCO — EJIDO
+- Asentamiento humano: PRIMERA SECCIÓN — SECCIÓN
+- Asentamiento humano: RANCHO SAN ANTONIO — COLONIA
+- Asentamiento humano: SEGUNDA SECCIÓN — SECCIÓN
+- Asentamiento humano: LA TOSCANA — FRACCIONAMIENTO
+- Asentamiento humano: PASEOS DE LA PRADERA — FRACCIONAMIENTO
+- Asentamiento humano: REAL CASTILLA — FRACCIONAMIENTO
+
+## Municipio: Atotonilco el Grande
+
+- Localidad: Atotonilco el Grande
+- Localidad: Apipilhuasco
+- Localidad: Cerro Colorado
+- Localidad: Cieneguillas
+- Localidad: El Contadero
+- Localidad: La Cruz (Barrio de la Cruz)
+- Localidad: La Cumbre de San Lucas
+- Localidad: Doñana
+- Localidad: La Estancia
+- Localidad: Montecillos
+- Localidad: La Nogalera
+- Localidad: El Novillero
+- Localidad: Paraje de los Sauces
+- Localidad: Paso de Amajac
+- Localidad: El Pedregal de San Juan
+- Localidad: Potrero de los Reyes
+- Localidad: La Puebla
+- Localidad: Pueblo Nuevo
+- Localidad: Los Reyes
+- Localidad: El Sabino
+- Localidad: Los Sabinos
+- Localidad: Sanctórum
+- Localidad: San Felipe y Anexas
+- Localidad: San José Zoquital
+- Localidad: San Lucas Allende
+- Localidad: San Martín
+- Localidad: San Miguel
+- Localidad: San Nicolás Xathé
+- Localidad: San Pedro Vaquerías
+- Localidad: Santa Ana
+- Localidad: Santa Catarina
+- Localidad: Santa María Amajac
+- Localidad: Santiaguito
+- Localidad: Sauz Sabino
+- Localidad: Sauz Xathé
+- Localidad: Tezahuapa
+- Localidad: Agua Limpia
+- Localidad: Tiltepec
+- Localidad: Uña de Gato
+- Localidad: El Xithe (Santa Rita el Xithe)
+- Localidad: El Zoquital
+- Localidad: Cerro Blanco
+- Localidad: El Ocote (Ocote Potrero de Reyes)
+- Localidad: Rincón de Xathé
+- Localidad: Santa Cruz de Montecillos
+- Localidad: Barrio el Atorón
+- Localidad: Barrio Coyula
+- Localidad: Barrio de Metlapa
+- Localidad: Barrio de Cabrera
+- Localidad: Mesa de San Lucas
+- Localidad: Santa Ana Norte
+- Localidad: El Troje
+- Localidad: El Aguacate
+- Localidad: Pedregal de San Nicolás
+- Localidad: Ramal de San Nicolás
+- Localidad: El Tecolote
+- Localidad: Los Tepetates
+- Localidad: Paredones
+- Localidad: Cumbre de Santa Catarina
+- Localidad: El Sabino [Colonia]
+- Localidad: Los Baños de Santa María Amajac
+- Localidad: El Naranjo
+- Localidad: Rancho del Salto
+- Localidad: Padre Nuestro San Bartolo
+- Localidad: La Estancia (Aguacatitlán)
+- Localidad: La Loma del Zapote
+- Localidad: Cumbre de Potrero de los Reyes
+- Localidad: La Nopalera (Jagüey Prieto)
+- Localidad: El Comalillo
+- Asentamiento humano: ALAMBIQUE — COLONIA
+- Asentamiento humano: BICENTENARIO — COLONIA
+- Asentamiento humano: CAPULINES — COLONIA
+- Asentamiento humano: CENTRAL CAMPESINA INDEPENDIENTE — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: CHICHIPICO — BARRIO
+- Asentamiento humano: EL CALVARIO — BARRIO
+- Asentamiento humano: EL TINACAL — BARRIO
+- Asentamiento humano: LA GALERA — BARRIO
+- Asentamiento humano: LA PUEBLA — BARRIO
+- Asentamiento humano: LA VIRGEN — BARRIO
+- Asentamiento humano: LAS BARRANQUITAS — BARRIO
+- Asentamiento humano: LAS FLORES — COLONIA
+- Asentamiento humano: LAS HORTALIZAS — BARRIO
+- Asentamiento humano: LAS MANZANAS — BARRIO
+- Asentamiento humano: LOS NOGALES — BARRIO
+- Asentamiento humano: SAN RAFAEL — COLONIA
+- Asentamiento humano: APIPILHUASCO — PUEBLO
+- Asentamiento humano: CIENEGUILLAS — PUEBLO
+- Asentamiento humano: BARRIO DE LA CRUZ — BARRIO
+- Asentamiento humano: LA ESTANCIA — RANCHERÍA
+- Asentamiento humano: MONTECILLOS — RANCHERÍA
+- Asentamiento humano: LA PUEBLA — BARRIO
+- Asentamiento humano: LOS SABINOS — RANCHERÍA
+- Asentamiento humano: SAN JOSÉ ZOQUITAL — PUEBLO
+- Asentamiento humano: SAN MIGUEL — BARRIO
+- Asentamiento humano: TEZAHUAPA — EJIDO
+- Asentamiento humano: AGUA LIMPIA — RANCHERÍA
+- Asentamiento humano: TILTEPEC — RANCHERÍA
+- Asentamiento humano: CUMBRE DE SANTA CATARINA — RANCHERÍA
+
+## Municipio: Calnali
+
+- Localidad: Calnali
+- Localidad: Acatlán
+- Localidad: Ahuacatlán
+- Localidad: Atempa
+- Localidad: Camotla
+- Localidad: Coamitla
+- Localidad: Coyula
+- Localidad: Chiatipán
+- Localidad: San Andrés (San Andrés Chichayotla)
+- Localidad: Papatlatla
+- Localidad: Pezmatlán
+- Localidad: Rancho Nuevo
+- Localidad: Santa Lucía (Mesa de Santa Lucía)
+- Localidad: Tecpaco
+- Localidad: Tecueyaca
+- Localidad: Techichico
+- Localidad: Tochintlán
+- Localidad: Tostlamantla
+- Localidad: Tula
+- Localidad: Pezmapa
+- Localidad: Buenavista
+- Localidad: Xontla
+- Localidad: Acatempa
+- Localidad: Cuaxacal
+- Localidad: Piedras Blancas
+- Localidad: Arroyo del Muerto (Piedras Blancas)
+- Localidad: Texcaco (Sagrado Corazón de Jesús)
+- Localidad: Tetzintla
+- Localidad: San Antonio (Huehuenco)
+- Localidad: Ixcatlán
+- Localidad: Atezco
+- Localidad: Chicuapa
+- Localidad: Tlalica
+- Localidad: Tecomatla (Chintipan)
+- Localidad: Cuanectla
+- Localidad: Tiocintepec
+- Localidad: Cohuamila
+- Localidad: Xaltipa
+- Localidad: Ahuamolos
+- Localidad: Amatépetl
+- Localidad: La Ciénega
+- Localidad: Michinteopan
+- Localidad: Pochula
+- Localidad: Temextla
+- Localidad: Cruz Verde (Tempalahuaco)
+- Localidad: Tecuapa
+- Localidad: Tlalica
+- Localidad: Tonalaco
+- Localidad: La Cumbre
+- Localidad: Xacalco
+- Localidad: Ayacapa
+- Localidad: Chalahuico
+- Localidad: Cholingo
+- Localidad: Hualul
+- Localidad: Huichapa
+- Localidad: Metlatépetl
+- Localidad: Nuevo Cuaptonapa
+- Localidad: Pezmatépetl
+- Localidad: Tepeyacapa
+- Localidad: Tlatexco
+- Localidad: Ayateca (Tlanepango)
+- Localidad: Agiladero
+- Localidad: Coamila
+- Localidad: Cerro de la Aguja (Huitzmalotépetl)
+- Localidad: Coahuizas
+- Localidad: La Ciénega (Agua Zarca)
+- Localidad: Cuazala
+- Localidad: Cuitlachamaco
+- Localidad: Molhuasco
+- Localidad: Octatitla
+- Localidad: Palzoquitempa
+- Localidad: Tepetlaixpa
+- Localidad: Xochimilco
+- Localidad: San Lucas
+- Localidad: Hueytepec
+- Localidad: San Isidro
+- Localidad: Temanaxteco
+- Localidad: Tepeco
+- Localidad: Tetioco
+- Localidad: Barrio Guadalupano (Santa Cruz Guadalupana)
+- Localidad: Tepetzintla (Papatlatla)
+- Localidad: Agua Bendita
+- Localidad: El Plan
+- Asentamiento humano: AGUAZARCA — BARRIO
+- Asentamiento humano: AHUIMOL — BARRIO
+- Asentamiento humano: CENTRO — BARRIO
+- Asentamiento humano: CONTLA — BARRIO
+- Asentamiento humano: EL ENCINAL DE AGUA ZARCA — BARRIO
+- Asentamiento humano: LA ESPERANZA — BARRIO
+- Asentamiento humano: LINDAVISTA — COLONIA
+- Asentamiento humano: NUEVO — BARRIO
+- Asentamiento humano: SAN ISIDRO — BARRIO
+## Municipio: Mineral de la Reforma
+
+- Localidad: Pachuquilla
+- Localidad: Amaque
+- Localidad: Azoyatla de Ocampo
+- Localidad: Carboneras
+- Localidad: Santa María la Calera
+- Localidad: San Miguel la Higa
+- Localidad: La Noria
+- Localidad: San José Palma Gorda
+- Localidad: Dos Carlos Pueblo Nuevo
+- Localidad: San Guillermo la Reforma
+- Localidad: El Saucillo
+- Localidad: El Velillo
+- Localidad: El Venado
+- Localidad: Ex-Hacienda San Lunes
+- Localidad: Francisco Villa
+- Localidad: Álamo Rustico
+- Localidad: La Pila
+- Localidad: Colonia Militar
+- Localidad: El Portezuelo
+- Localidad: La Providencia Siglo XXI
+- Localidad: Santiago Jaltepec
+- Localidad: San Isidro
+- Localidad: Nuevo Centro de Población Agrícola el Chacón
+- Localidad: Ex-Hacienda de Chavarría
+- Localidad: Ex-Hacienda San Cayetano
+- Localidad: Unidad Habitacional Dina-Sidena Chacón
+- Localidad: PRI Chacón
+- Localidad: La Reforma
+- Localidad: Las Ladrilleras (Parcela Número 8)
+- Localidad: El Huizachal
+- Localidad: Abundio Martínez
+- Localidad: Los Alcatraces [Rancho]
+- Localidad: Ex-Hacienda Santa Gertrudis
+- Localidad: Colinas de Plata
+- Localidad: Las Torres
+- Localidad: Jesús Ángeles Contreras
+- Localidad: Los Gemelos
+- Localidad: El Llano
+- Localidad: El Murciélago (El Pavo)
+- Localidad: Loma Bonita (Palma Mocha)
+- Localidad: San Francisco
+- Localidad: Segunda Sección del Portezuelo
+- Localidad: El Popolito
+- Localidad: Ex-Hacienda de Cadena
+- Localidad: Los Tuzos
+- Localidad: El Capulín (Gonzalo Gamero Sánchez)
+- Localidad: El Paraíso
+- Localidad: Rinconada de los Ángeles
+- Localidad: San Fernando
+- Localidad: Agua Bendita
+- Localidad: Ejido Ampliación el Saucillo
+- Localidad: San Antonio (Florentino Baños) [Rancho]
+- Localidad: Privada Don Pablo
+- Localidad: Las Águilas
+- Localidad: El Álamo
+- Localidad: Bosques del Mineral
+- Localidad: Campestre Villas del Álamo
+- Localidad: CEUNI
+- Localidad: Cipreses
+- Localidad: La Colonia
+- Localidad: Unión Chacón
+- Localidad: Las Flores
+- Localidad: Forjadores de Pachuca
+- Localidad: Carboneras Fraccionamiento
+- Localidad: Guadalupe Minerva
+- Localidad: Industrial la Paz
+- Localidad: Jorge Rojo Lugo (CBTIS 8)
+- Localidad: Lomas del Chacón
+- Localidad: Lomas Portezuelo
+- Localidad: Magisterio Digno
+- Localidad: Manuel Ávila Camacho
+- Localidad: Paseo de las Reynas
+- Localidad: Paseo de las Reynas I
+- Localidad: Los Pinos
+- Localidad: Privadas Bosques del Venado
+- Localidad: Privada de los Olivos
+- Localidad: Privada del Álamo
+- Localidad: Privada del Bosque
+- Localidad: Privadas del Sur
+- Localidad: Privada Don Francisco
+- Localidad: Privada Don Jaime
+- Localidad: Privadas la Hacienda
+- Localidad: Privadas de San Javier
+- Localidad: Campestre Villas del Álamo (FOVISSSTE)
+- Localidad: Privada del Álamo II
+- Localidad: Privadas del Parque
+- Localidad: Privada Quinta Bonita
+- Localidad: Real de Oriente
+- Localidad: Real de San Francisco
+- Localidad: Rinconadas del Venado I
+- Localidad: Rinconadas del Venado II
+- Localidad: Rinconada del Álamo
+- Localidad: Rinconada los Álamos
+- Localidad: Rinconadas de San Francisco
+- Localidad: Rinconadas de San Francisco el Venado
+- Localidad: Rincones del Paraíso
+- Localidad: Río de la Soledad
+- Localidad: El Roble
+- Localidad: SAHOP Chacón
+- Localidad: San Cristóbal Chacón
+- Localidad: San Fernando (Chacón)
+- Localidad: San José
+- Localidad: El Saucillo Fraccionamiento
+- Localidad: Taxistas
+- Localidad: Tulipanes
+- Localidad: Paseo de los Tulipanes
+- Localidad: Unidad Habitacional CTM
+- Localidad: Unidad Habitacional FSTSE
+- Localidad: Valle Dorado
+- Localidad: Villas del Álamo
+- Localidad: Unidad Minera 11 de Julio
+- Localidad: Paseos de Chavarría
+- Localidad: Pradera Dorada
+- Localidad: San Luis II
+- Localidad: Hacienda Margarita
+- Localidad: Praderas de Virreyes
+- Localidad: Alvento Habitat
+- Localidad: Lomas de Nopalapa [Fraccionamiento]
+- Localidad: Las Palomas [Privada]
+- Localidad: San Juan [Rancho]
+- Localidad: La Reforma (CANACINTRA) [Parque Industrial]
+- Localidad: La Reforma [Zona Industrial]
+- Localidad: Metropolitano [Parque Industrial]
+- Localidad: San José Palacios  [Colonia]
+- Localidad: Santa Rita
+- Asentamiento humano: APEPELCO — BARRIO
+- Asentamiento humano: APEPELCO — PRIVADA
+- Asentamiento humano: EL CAMPANARIO — FRACCIONAMIENTO
+- Asentamiento humano: EL CERRITO — BARRIO
+- Asentamiento humano: EL MINERAL I — FRACCIONAMIENTO
+- Asentamiento humano: EL MINERAL II — FRACCIONAMIENTO
+- Asentamiento humano: JACARANDAS — PRIVADA
+- Asentamiento humano: JARDINES — COLONIA
+- Asentamiento humano: LA ASUNCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: LA MOLIENDA — PRIVADA
+- Asentamiento humano: LA PARROQUIA — FRACCIONAMIENTO
+- Asentamiento humano: LAS AVES — FRACCIONAMIENTO
+- Asentamiento humano: LINDAVISTA — FRACCIONAMIENTO
+- Asentamiento humano: LOS CEDROS — FRACCIONAMIENTO
+- Asentamiento humano: LOS MORALES — FRACCIONAMIENTO
+- Asentamiento humano: MARÍA ISABEL — FRACCIONAMIENTO
+- Asentamiento humano: MARÍA ISABEL II — FRACCIONAMIENTO
+- Asentamiento humano: MILPAS VIEJAS DEL CALVARIO — FRACCIONAMIENTO
+- Asentamiento humano: PACHUQUILLA CENTRO — COLONIA
+- Asentamiento humano: QUINTA VIOLETAS — PRIVADA
+- Asentamiento humano: RANCHO VIEJO — FRACCIONAMIENTO
+- Asentamiento humano: SAN ÁNGEL — FRACCIONAMIENTO
+- Asentamiento humano: SAN CAMILO — FRACCIONAMIENTO
+- Asentamiento humano: SANTA RITA — COLONIA
+- Asentamiento humano: VALLE DE LAS FLORES — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS DE PACHUQUILLA — PRIVADA
+- Asentamiento humano: AMAQUE — COLONIA
+- Asentamiento humano: AZOYATLA — COLONIA
+- Asentamiento humano: EL ÁLAMO — RESIDENCIAL
+- Asentamiento humano: MARGARITAS — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA DEL SOL — FRACCIONAMIENTO
+- Asentamiento humano: SANTA ELENA — PRIVADA
+- Asentamiento humano: VALLE DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: LAS PERAS — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DEL PORTEZUELO — COLONIA
+- Asentamiento humano: LOMAS DEL PORTEZUELO — COLONIA
+- Asentamiento humano: PASEO DE LAS REYNAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA CAMINO REAL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DEL COBRE — FRACCIONAMIENTO
+- Asentamiento humano: SANTA MARÍA LA CALERA — PUEBLO
+- Asentamiento humano: VALLE SAN ÁNGEL — FRACCIONAMIENTO
+- Asentamiento humano: VILLA ELENA — FRACCIONAMIENTO
+- Asentamiento humano: SAN MIGUEL LA HIGA — PUEBLO
+- Asentamiento humano: LA NORIA — COLONIA
+- Asentamiento humano: PARQUE LOS ENCINOS — FRACCIONAMIENTO
+- Asentamiento humano: SAN JOSÉ PALMA GORDA — PUEBLO
+- Asentamiento humano: CUMBRES DEL SOL — FRACCIONAMIENTO
+- Asentamiento humano: DOS CARLOS — COLONIA
+- Asentamiento humano: LA PRESA — COLONIA
+- Asentamiento humano: LOMA RAMÍREZ — COLONIA
+- Asentamiento humano: LOS OLMOS — FRACCIONAMIENTO
+- Asentamiento humano: MILITAR — COLONIA
+- Asentamiento humano: PUEBLO NUEVO — COLONIA
+- Asentamiento humano: SANTIAGO JALTEPEC — COLONIA
+- Asentamiento humano: DOS CARLOS — COLONIA
+- Asentamiento humano: DOS CARLOS — COLONIA
+- Asentamiento humano: SAN GUILLERMO LA REFORMA — COLONIA
+- Asentamiento humano: AMPLIACIÓN EL SAUCILLO — EJIDO
+- Asentamiento humano: EL CHACÓN — COLONIA
+- Asentamiento humano: EL SAUCILLO — COLONIA
+- Asentamiento humano: JORGE ROJO LUGO — FRACCIONAMIENTO
+- Asentamiento humano: LAS ÁGUILAS — COLONIA
+- Asentamiento humano: LOMAS DEL CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: PRI CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: SAHOP CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: EL VENADO — COLONIA
+- Asentamiento humano: ÁLAMO RÚSTICO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA ÁLAMO DORADO — FRACCIONAMIENTO
+- Asentamiento humano: LA PILA — COLONIA
+- Asentamiento humano: MILITAR — COLONIA
+- Asentamiento humano: EL PORTEZUELO — COLONIA
+- Asentamiento humano: MONTREAL — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DEL PORTEZUELO — FRACCIONAMIENTO
+- Asentamiento humano: SAN JUAN — PRIVADA
+- Asentamiento humano: SAN RAFAEL — PRIVADA
+- Asentamiento humano: SANTA BLANCA — PRIVADA
+- Asentamiento humano: SENDERO DE ISLAS — PRIVADA
+- Asentamiento humano: CAMINO REAL — FRACCIONAMIENTO
+- Asentamiento humano: LA PROVIDENCIA SIGLO XXI — FRACCIONAMIENTO
+- Asentamiento humano: LOS ÁNGELES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VILLA DE SAN CRISTÓBAL — FRACCIONAMIENTO
+- Asentamiento humano: RANCHO PERALTA — BARRIO
+- Asentamiento humano: RINCONADA LA PROVIDENCIA — FRACCIONAMIENTO
+- Asentamiento humano: SAN ANTONIO PROVIDENCIA — FRACCIONAMIENTO
+- Asentamiento humano: SAN CRISTÓBAL — FRACCIONAMIENTO
+- Asentamiento humano: SAN LUÍS — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DE ESTRELLAS — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS AVE REAL — FRACCIONAMIENTO
+- Asentamiento humano: LAS PRESAS — COLONIA
+- Asentamiento humano: PRIVADA JACARANDAS — FRACCIONAMIENTO
+- Asentamiento humano: RÍO DE LA SOLEDAD — FRACCIONAMIENTO
+- Asentamiento humano: SANTIAGO JALTEPEC — COLONIA
+- Asentamiento humano: EL PARAISO — PRIVADA
+- Asentamiento humano: MISIÓN CANTERA — FRACCIONAMIENTO
+- Asentamiento humano: MISIÓN JARDIN — FRACCIONAMIENTO
+- Asentamiento humano: NUEVO CENTRO DE POBLACIÓN AGRICOLA EL CHACÓN — COLONIA
+- Asentamiento humano: SANTA MÓNICA — FRACCIONAMIENTO
+- Asentamiento humano: SANTA ROSA — FRACCIONAMIENTO
+- Asentamiento humano: EX-HACIENDA DE CHAVARRIA — COLONIA
+- Asentamiento humano: DINA-SIDENA CHACÓN — UNIDAD HABITACIONAL
+- Asentamiento humano: DINA-SIDENA CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: DINA-SIDENA CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: PRI CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: LA REFORMA — FRACCIONAMIENTO
+- Asentamiento humano: LIC. JOSÉ MARÍA SÁNCHEZ RAMÍREZ — FRACCIONAMIENTO
+- Asentamiento humano: SAN LUNES — COLONIA
+- Asentamiento humano: ABUNDIO MARTÍNEZ — COLONIA
+- Asentamiento humano: EL PORTEZUELO — COLONIA
+- Asentamiento humano: RESERVA ECOLÓGICA — NINGUNO
+- Asentamiento humano: VILLA AIROSA RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: COLINAS DE PLATA — FRACCIONAMIENTO
+- Asentamiento humano: LAS PALOMAS — COLONIA
+- Asentamiento humano: JESÚS ÁNGELES CONTRERAS — FRACCIONAMIENTO
+- Asentamiento humano: LOS GEMELOS — COLONIA
+- Asentamiento humano: LOMA ESCONDIDA — FRACCIONAMIENTO
+- Asentamiento humano: LOS TUZOS — FRACCIONAMIENTO
+- Asentamiento humano: EL PARAISO — FRACCIONAMIENTO
+- Asentamiento humano: JAZMIN — FRACCIONAMIENTO
+- Asentamiento humano: LOS LAURELES — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA DE SANTA FÉ — FRACCIONAMIENTO
+- Asentamiento humano: VILLA ROMA — FRACCIONAMIENTO
+- Asentamiento humano: EL PEDREGAL DE LOS ÁNGELES — FRACCIONAMIENTO
+- Asentamiento humano: LA LOMA — COLONIA
+- Asentamiento humano: RINCONADA DE LOS ÁNGELES — FRACCIONAMIENTO
+- Asentamiento humano: SAN FERNANDO — FRACCIONAMIENTO
+- Asentamiento humano: AMPLIACIÓN SAUCILLO — EJIDO
+- Asentamiento humano: DON PABLO — PRIVADA
+- Asentamiento humano: LAS ÁGUILAS — COLONIA
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: EL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: UNIVERSIDAD AUTÓNOMA DEL ESTADO DE HIDALGO — NINGUNO
+- Asentamiento humano: VILLAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: BOSQUES DEL MINERAL — FRACCIONAMIENTO
+- Asentamiento humano: CEUMH — NINGUNO
+- Asentamiento humano: MAGISTERIO DIGNO — FRACCIONAMIENTO
+- Asentamiento humano: PLAZA GRAN SUR — NINGUNO
+- Asentamiento humano: PRIVADA SANTA PATRICIA — FRACCIONAMIENTO
+- Asentamiento humano: RINCONES DEL PARAÍSO — FRACCIONAMIENTO
+- Asentamiento humano: CAMPESTRE VILLAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DE LA HACIENDA — FRACCIONAMIENTO
+- Asentamiento humano: CEUNI — COLONIA
+- Asentamiento humano: SANTIAGO JALTEPEC — COLONIA
+- Asentamiento humano: FORJADORES DE PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: FORJADORES DE PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: LOS CIPRESES — FRACCIONAMIENTO
+- Asentamiento humano: LOS PINOS — FRACCIONAMIENTO
+- Asentamiento humano: MAGISTERIO DIGNO — FRACCIONAMIENTO
+- Asentamiento humano: LA COLONIA — FRACCIONAMIENTO
+- Asentamiento humano: RESERVA ECOLÓGICA — NINGUNO
+- Asentamiento humano: SAN FERNANDO II — FRACCIONAMIENTO
+- Asentamiento humano: UNIÓN CHACÓN — COLONIA
+- Asentamiento humano: UNIÓN CHACÓN — COLONIA
+- Asentamiento humano: LAS FLORES — FRACCIONAMIENTO
+- Asentamiento humano: EL VENADO — COLONIA
+- Asentamiento humano: FORJADORES DE PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: LOS CIPRESES — FRACCIONAMIENTO
+- Asentamiento humano: LOS SAUCES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DEL PARQUE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DEL PARQUE — FRACCIONAMIENTO
+- Asentamiento humano: REAL DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: CARBONERAS — FRACCIONAMIENTO
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: LOMAS DEL ÁNGEL — FRACCIONAMIENTO
+- Asentamiento humano: MINERVA — COLONIA
+- Asentamiento humano: INDUSTRIAL LA PAZ — COLONIA
+- Asentamiento humano: RÍO — FRACCIONAMIENTO
+- Asentamiento humano: EL SAUCILLO — COLONIA
+- Asentamiento humano: JORGE ROJO LUGO — FRACCIONAMIENTO
+- Asentamiento humano: PRI CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DEL CHACÓN — COLONIA
+- Asentamiento humano: SAHOP CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: ALTA VISTA — FRACCIONAMIENTO
+- Asentamiento humano: DIAMANTE — PRIVADA
+- Asentamiento humano: LA PALMA — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS PORTEZUELO — COLONIA
+- Asentamiento humano: FORJADORES DE PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: LA COLONIA — FRACCIONAMIENTO
+- Asentamiento humano: LOS CIPRESES — FRACCIONAMIENTO
+- Asentamiento humano: MAGISTERIO DIGNO — FRACCIONAMIENTO
+- Asentamiento humano: REAL DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: LOMA RAMÍREZ — COLONIA
+- Asentamiento humano: MANUEL ÁVILA CAMACHO — COLONIA
+- Asentamiento humano: RESERVA ECOLÓGICA — NINGUNO
+- Asentamiento humano: RÍO DE LA SOLEDAD — COLONIA
+- Asentamiento humano: RÍO DE LA SOLEDAD — COLONIA
+- Asentamiento humano: CAMINO REAL — FRACCIONAMIENTO
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: PASEO DE LAS REYNAS — FRACCIONAMIENTO
+- Asentamiento humano: PASEO DE LAS REYNAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LAS REYNAS — FRACCIONAMIENTO
+- Asentamiento humano: PASEO DE LAS REYNAS — FRACCIONAMIENTO
+- Asentamiento humano: LOS PINOS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DON ENRIQUE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS BOSQUES DEL VENADO 1 — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS BOSQUES DEL VENADO 2 — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS BOSQUES DEL VENADO 3 — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL GUADALUPE — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA DEL VENADO I — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DEL VENADO II — FRACCIONAMIENTO
+- Asentamiento humano: VILLA MEGAN — FRACCIONAMIENTO
+- Asentamiento humano: BOJAY — PRIVADA
+- Asentamiento humano: PRIVADA DE LOS OLIVOS I — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DE LOS OLIVOS II — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DE LOS OLIVOS III — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DE LOS OLIVOS IV — FRACCIONAMIENTO
+- Asentamiento humano: SANTIAGO JALTEPEC — COLONIA
+- Asentamiento humano: CAMPESTRE VILLAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DEL BOSQUE — FRACCIONAMIENTO
+- Asentamiento humano: SAN FERNANDO I — FRACCIONAMIENTO
+- Asentamiento humano: UNIÓN CHACÓN — COLONIA
+- Asentamiento humano: UNIÓN CHACÓN — COLONIA
+- Asentamiento humano: PRIVADAS DEL SUR — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA DEL VENADO I — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DON FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: SAN JOSÉ — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DE DON JAIME — FRACCIONAMIENTO
+- Asentamiento humano: SAN JOSÉ — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DE LA HACIENDA — FRACCIONAMIENTO
+- Asentamiento humano: ABUNDIO MARTÍNEZ — COLONIA
+- Asentamiento humano: PRIVADAS DE SAN JAVIER — FRACCIONAMIENTO
+- Asentamiento humano: RESERVA ECOLÓGICA — NINGUNO
+- Asentamiento humano: RINCONADA 11 DE JULIO — FRACCIONAMIENTO
+- Asentamiento humano: FOVISSSTE CAMPESTRE VILLAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DEL ÁLAMO II — FRACCIONAMIENTO
+- Asentamiento humano: FORJADORES DE PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DEL PARQUE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA GUADALUPE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA QUINTA BONITA — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DORADO — FRACCIONAMIENTO
+- Asentamiento humano: FELIPE ÁNGELES — COLONIA
+- Asentamiento humano: REAL DE ORIENTE — FRACCIONAMIENTO
+- Asentamiento humano: UNIDAD MINERA 11 DE JULIO — UNIDAD HABITACIONAL
+- Asentamiento humano: REAL DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA DEL VENADO I — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA DEL VENADO II — FRACCIONAMIENTO
+- Asentamiento humano: LICEO REAL DEL SUR — NINGUNO
+- Asentamiento humano: PRIVADA LOS ÁRBOLES — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DEL VENADO II — FRACCIONAMIENTO
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: FOVISSSTE CAMPESTRE VILLAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: AZOYATLA — COLONIA
+- Asentamiento humano: PRIVADA DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA LOS ÁLAMOS — FRACCIONAMIENTO
+- Asentamiento humano: LOS CEDROS — NINGUNO
+- Asentamiento humano: LOS CEDROS — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: LOS CEREZOS — FRACCIONAMIENTO
+- Asentamiento humano: PASEO DE LOS TULIPANES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DE SAN FRANCISCO EL VENADO — FRACCIONAMIENTO
+- Asentamiento humano: QUINTA BONITA — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: RINCONES DEL PARAÍSO — FRACCIONAMIENTO
+- Asentamiento humano: RÍO DE LA SOLEDAD — COLONIA
+- Asentamiento humano: EL ROBLE — FRACCIONAMIENTO
+- Asentamiento humano: SAN JOSÉ — FRACCIONAMIENTO
+- Asentamiento humano: SAHOP CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: PRI CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: SAN CRISTÓBAL CHACÓN — FRACCIONAMIENTO
+- Asentamiento humano: SAN FERNANDO — FRACCIONAMIENTO
+- Asentamiento humano: SAN FERNANDO II — FRACCIONAMIENTO
+- Asentamiento humano: UNIÓN CHACÓN — COLONIA
+- Asentamiento humano: PRIVADA DON JAIME — FRACCIONAMIENTO
+- Asentamiento humano: SAN JOSÉ — FRACCIONAMIENTO
+- Asentamiento humano: EL SAUCILLO — FRACCIONAMIENTO
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: TAXISTAS — COLONIA
+- Asentamiento humano: LOS TULIPANES — FRACCIONAMIENTO
+- Asentamiento humano: PASEO DE LOS TULIPANES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LAS GLORIAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LAS ORQUIDEAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DEL SUR — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DEL VENADO I — FRACCIONAMIENTO
+- Asentamiento humano: PASEO DE LOS TULIPANES — FRACCIONAMIENTO
+- Asentamiento humano: QUINTA BONITA — FRACCIONAMIENTO
+- Asentamiento humano: REAL DEL SUR — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DORADO — FRACCIONAMIENTO
+- Asentamiento humano: CTM — UNIDAD HABITACIONAL
+- Asentamiento humano: PRIVADAS DE SAN JAVIER — FRACCIONAMIENTO
+- Asentamiento humano: UNIDAD MINERA 11 DE JULIO — UNIDAD HABITACIONAL
+- Asentamiento humano: CARBONERAS — COLONIA
+- Asentamiento humano: FOVISSSTE CAMPESTRE VILLAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: FSTSE — UNIDAD HABITACIONAL
+- Asentamiento humano: PRIVADA DEL ÁLAMO II — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DORADO — FRACCIONAMIENTO
+- Asentamiento humano: FOVISSSTE CAMPESTRE VILLAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DE LA HACIENDA — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: FELIPE ÁNGELES — COLONIA
+- Asentamiento humano: PRIVADA SANTA ROSALÍA — FRACCIONAMIENTO
+- Asentamiento humano: RESERVA ECOLÓGICA — NINGUNO
+- Asentamiento humano: UNIDAD MINERA 11 DE JULIO — UNIDAD HABITACIONAL
+- Asentamiento humano: CUARTA — SECCIÓN
+- Asentamiento humano: CUARTA BIS — SECCIÓN
+- Asentamiento humano: OCTAVA — SECCIÓN
+- Asentamiento humano: PRIMERA — SECCIÓN
+- Asentamiento humano: QUINTA — SECCIÓN
+- Asentamiento humano: SEGUNDA — SECCIÓN
+- Asentamiento humano: SEXTA — SECCIÓN
+- Asentamiento humano: TERCERA — SECCIÓN
+- Asentamiento humano: SAN LUIS II — FRACCIONAMIENTO
+- Asentamiento humano: HACIENDA MARGARITA — FRACCIONAMIENTO
+- Asentamiento humano: PRADERAS DE VIRREYES — FRACCIONAMIENTO
+- Asentamiento humano: ALVENTO HABITAT — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DE NOPALA — PRIVADA
+- Asentamiento humano: LAS PALOMAS — PRIVADA
+- Asentamiento humano: LA REFORMA (CANACINTRA) — PARQUE INDUSTRIAL
+- Asentamiento humano: LA REFORMA — ZONA INDUSTRIAL
+- Asentamiento humano: METROPOLITANO — PARQUE INDUSTRIAL
+
+## Municipio: Mineral del Chico
+
+- Localidad: Mineral del Chico
+- Localidad: Cerro Alto
+- Localidad: Capula
+- Localidad: Carboneras
+- Localidad: Cebadas
+- Localidad: Cimbrones
+- Localidad: La Estanzuela
+- Localidad: El Jaspe
+- Localidad: Loma del Maguey
+- Localidad: Llano de los Ajos
+- Localidad: Las Manzanas
+- Localidad: Pie de la Viga
+- Localidad: La Presa
+- Localidad: El Puente
+- Localidad: San Antonio el Llano
+- Localidad: San Francisco
+- Localidad: San José Capulines
+- Localidad: San Sebastián Capulines
+- Localidad: San Simón lo de Rojas
+- Localidad: Santa Inés
+- Localidad: Tierras Coloradas
+- Localidad: Los Naranjos
+- Localidad: Benito Juárez
+- Localidad: Carboneras la Palma
+- Localidad: Carboneras Cueva Blanca
+- Localidad: Plan Grande (Ejido el Puente)
+- Localidad: La Laguna [Barrio]
+- Localidad: Carboneras los Lirios
+- Localidad: Las Ventanas
+- Localidad: Bandola
+- Localidad: Carboneras la Laguna
+- Localidad: Los Ocotes [Barrio]
+- Localidad: La Compaña
+- Localidad: Las Piletas
+- Localidad: Barrio de Guadalupe
+- Asentamiento humano: BARRIO DE LA SIERRA — BARRIO
+- Asentamiento humano: BARRIO DE LONGINOS — BARRIO
+- Asentamiento humano: BARRIO DEL CALVARIO — BARRIO
+- Asentamiento humano: LO DE SÁNCHEZ — BARRIO
+
+## Municipio: Mineral del Monte
+
+- Localidad: Mineral del Monte
+- Localidad: Cabrera
+- Localidad: Ciénega Larga
+- Localidad: Barrio de Escobar
+- Localidad: Pueblo Nuevo
+- Localidad: San Pedro Huixotitla
+- Localidad: Santa Rosalía
+- Localidad: Tezoantla
+- Localidad: San Felipe
+- Localidad: El Jilguero
+- Localidad: San Agustín
+- Localidad: Palo Hueco
+- Localidad: Rufina
+- Localidad: Calicanto
+- Localidad: Barrio del Agua Escondida
+- Localidad: Bosques de San Cayetano [Fraccionamiento]
+- Localidad: Los Cajones
+- Localidad: Rancho Valencia
+- Localidad: Las Flores
+- Localidad: Llano Grande
+- Localidad: San Felipe (La Providencia)
+- Localidad: Agua Bendita
+- Localidad: El Zopilote (La Cumbre)
+- Localidad: La Venta
+- Localidad: La Montaña
+- Asentamiento humano: AHUATOCHE — BARRIO
+- Asentamiento humano: BARRIO DE VARGAS — BARRIO
+- Asentamiento humano: BARRIO DEL VIENTO — BARRIO
+- Asentamiento humano: CASAS QUEMADAS — BARRIO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: DIFICULTAD — BARRIO
+- Asentamiento humano: DOLORES — BARRIO
+- Asentamiento humano: EL ARTILLERO — BARRIO
+- Asentamiento humano: EL HILOCHE — BARRIO
+- Asentamiento humano: EL HOSPITAL — BARRIO
+- Asentamiento humano: EL PORTEZUELO — BARRIO
+- Asentamiento humano: EL ZOPILOTE — BARRIO
+- Asentamiento humano: ESCOBAR — BARRIO
+- Asentamiento humano: GAVILÁN — BARRIO
+- Asentamiento humano: GUADALUPE — BARRIO
+- Asentamiento humano: JERUSALEM — BARRIO
+- Asentamiento humano: LA GARITA — BARRIO
+- Asentamiento humano: LA GOTERA — BARRIO
+- Asentamiento humano: LA LADRILLERA — BARRIO
+- Asentamiento humano: LA QUEBRADILLA — BARRIO
+- Asentamiento humano: LA RETAMA — BARRIO
+- Asentamiento humano: LA TLAXCALERA — BARRIO
+- Asentamiento humano: LA TRINIDAD — BARRIO
+- Asentamiento humano: LO LICENCIADO — BARRIO
+- Asentamiento humano: LOS OCALOS — BARRIO
+- Asentamiento humano: MORATO — BARRIO
+- Asentamiento humano: PANTEÓN INGLÉS — BARRIO
+- Asentamiento humano: POZO HONDO — BARRIO
+- Asentamiento humano: POZOS BLANCOS — BARRIO
+- Asentamiento humano: POZOS COLORADOS — BARRIO
+- Asentamiento humano: POZOS DEL NEGRO — BARRIO
+- Asentamiento humano: PURERO — BARRIO
+- Asentamiento humano: PURÍSIMA — BARRIO
+- Asentamiento humano: RUFINA — RANCHO
+- Asentamiento humano: SACRAMENTO — BARRIO
+- Asentamiento humano: SAN AGUSTÍN — BARRIO
+- Asentamiento humano: SAN FRANCISCO — BARRIO
+- Asentamiento humano: SAN IGNACIO — BARRIO
+- Asentamiento humano: SAN JOSÉ ACOSTA — BARRIO
+- Asentamiento humano: SAN JUAN DE LO ALTO — BARRIO
+- Asentamiento humano: SAN LUIS — BARRIO
+- Asentamiento humano: SAN MANUEL — RANCHO
+- Asentamiento humano: SAN RAMÓN — BARRIO
+- Asentamiento humano: SAN SABAS — BARRIO
+- Asentamiento humano: SAN VICENTE — BARRIO
+- Asentamiento humano: SANTA ÁGUEDA — BARRIO
+- Asentamiento humano: SANTA ANITA — BARRIO
+- Asentamiento humano: SANTA MARÍA — BARRIO
+- Asentamiento humano: SANTA TERESA — BARRIO
+- Asentamiento humano: VIZCAÍNAS — BARRIO
+- Asentamiento humano: CIENEGA LARGA — BARRIO
+- Asentamiento humano: PUEBLO NUEVO — BARRIO
+- Asentamiento humano: SAN PEDRO HUIXOTITLA — RANCHERÍA
+- Asentamiento humano: SANTA ROSALIA — BARRIO
+- Asentamiento humano: TEZOANTLA — BARRIO
+## Municipio: Mixquiahuala de Juárez
+
+- Localidad: Mixquiahuala de Juárez
+- Localidad: Árbol Grande
+- Localidad: Benito Juárez
+- Localidad: Cañada
+- Localidad: Felipe Carrillo Puerto
+- Localidad: Jagüey Blanco
+- Localidad: Morelos (El Nueve) [Colonia]
+- Localidad: Motobatha
+- Localidad: Palmillas [Colonia]
+- Localidad: Colonia Teñhe
+- Localidad: Tepeitic
+- Localidad: Veracruz [Colonia]
+- Localidad: La Arboleda
+- Localidad: Dos Cerros
+- Localidad: Hacienda Vieja
+- Localidad: El Volador
+- Localidad: Rancho Viborillas
+- Localidad: El Rodeo
+- Localidad: El Rodeo Grande
+- Localidad: El Llano
+- Localidad: El Cerrito
+- Localidad: Los Colorines
+- Localidad: Las Azucenas
+- Localidad: Cinta Larga Sección 22
+- Localidad: 3 de Mayo [Colonia]
+- Localidad: Deshuesadero Márquez
+- Localidad: Emigdio Mera Salas
+- Localidad: Los Higos
+- Localidad: Palo Seco
+- Localidad: La Discordia (Los Bigotones)
+- Localidad: La Vega
+- Localidad: Monte Grande
+- Localidad: El Durazno
+- Localidad: Los Ángeles
+- Localidad: El Palomar
+- Localidad: El Colorado
+- Localidad: El Pico del Ángel
+- Localidad: El Tumba
+- Localidad: San Pedro [Colonia]
+- Asentamiento humano: Cuarta Demarcación — COLONIA
+- Asentamiento humano: Novena Demarcación — COLONIA
+- Asentamiento humano: Octava Demarcación — COLONIA
+- Asentamiento humano: Primera Demarcación Oriente — COLONIA
+- Asentamiento humano: Primera Demarcación Poniente — COLONIA
+- Asentamiento humano: Quinta Demarcación — COLONIA
+- Asentamiento humano: Segunda Demarcación — COLONIA
+- Asentamiento humano: Séptima Demarcación — COLONIA
+- Asentamiento humano: Sexta Demarcación — COLONIA
+- Asentamiento humano: Tercera Demarcación — COLONIA
+- Asentamiento humano: Árbol Grande — COLONIA
+- Asentamiento humano: Benito Juárez — COLONIA
+- Asentamiento humano: Cañada — COLONIA
+- Asentamiento humano: Felipe Carrillo Puerto — COLONIA
+- Asentamiento humano: Jagüey Blanco — COLONIA
+- Asentamiento humano: Morelos (El Nueve) — COLONIA
+- Asentamiento humano: Motobatha — COLONIA
+- Asentamiento humano: Palmillas — COLONIA
+- Asentamiento humano: Colonia Teñhe — COLONIA
+- Asentamiento humano: Tepeitic — COLONIA
+- Asentamiento humano: Veracruz — COLONIA
+- Asentamiento humano: Dos Cerros — COLONIA
+- Asentamiento humano: Hacienda Vieja — COLONIA
+- Asentamiento humano: 3 de Mayo — COLONIA
+- Asentamiento humano: Monte Grande — COLONIA
+- Asentamiento humano: El Durazno — COLONIA
+- Asentamiento humano: Los Ángeles — COLONIA
+- Asentamiento humano: Teñhe — COLONIA
+
+## Municipio: Nopala de Villagrán
+
+- Localidad: Nopala de Villagrán
+- Localidad: Batha y Barrios
+- Localidad: El Borbollón
+- Localidad: El Capulín de Aragón
+- Localidad: El Fresno (Casas Viejas)
+- Localidad: El Cedazo
+- Localidad: Los Cerritos
+- Localidad: Cuaxithi
+- Localidad: La Cuchilla
+- Localidad: Dañu
+- Localidad: Denthó
+- Localidad: Humini
+- Localidad: El Jagüey
+- Localidad: La Laja
+- Localidad: Loma Colorada
+- Localidad: Loma del Progreso
+- Localidad: Loma del Toro
+- Localidad: El Mangui
+- Localidad: Maravillas
+- Localidad: Las Manzanas
+- Localidad: La Palma
+- Localidad: El Pedregoso
+- Localidad: La Presa
+- Localidad: La Salita
+- Localidad: San Lorenzo el Chico
+- Localidad: San Sebastián Tenochtitlán
+- Localidad: La Siempreviva
+- Localidad: Taxtejhe
+- Localidad: San Sebastián de Juárez
+- Localidad: Las Cruces
+- Localidad: El Zendhó
+- Localidad: Las Campanas
+- Localidad: La Matanza
+- Localidad: El Llano
+- Localidad: La Cañada
+- Localidad: El Desierto
+- Localidad: El Fresnillo
+- Localidad: La Lechuga
+- Localidad: Venta Hermosa
+- Localidad: Aragón
+- Localidad: Buenavista
+- Localidad: Los Tepetates
+- Localidad: Santa Rosa el Marqués
+- Localidad: Santa Rosa
+- Localidad: El Campamento
+- Localidad: El Águila
+- Localidad: Jesús María
+- Localidad: Los Corrales
+- Localidad: Deca Buena Vista
+- Localidad: El Deca
+- Localidad: Dingüichi
+- Localidad: Escandón
+- Localidad: La Esperanza
+- Localidad: La Estación
+- Localidad: El Gato
+- Localidad: La Huerta
+- Localidad: La Fuente (Jagüey Blanco)
+- Localidad: El Jazmín (El Potrero)
+- Localidad: La Luz
+- Localidad: Ojo de Agua
+- Localidad: Palo Verde
+- Localidad: El Paye
+- Localidad: Peñafiel
+- Localidad: Puerto Dañu
+- Localidad: Rancho Nuevo
+- Localidad: San Francisco
+- Localidad: San Ignacio
+- Localidad: San Juan
+- Localidad: San Lorenzo Amarillo
+- Localidad: Santa Catalina
+- Localidad: Santa Cruz
+- Localidad: Santa Fe
+- Localidad: El Sauz
+- Localidad: El Tejocote
+- Localidad: Temascales Chico
+- Localidad: El Tepeyac
+- Localidad: Las Vegas
+- Localidad: La Gloria
+- Localidad: Los Nidos
+- Localidad: El Manantial
+- Localidad: El Destello
+- Localidad: La Martinica
+- Localidad: Tierra Blanca
+- Localidad: La Presa Dañu
+- Localidad: Tequexhido
+- Localidad: Buenavista
+- Localidad: San Juanita (Casas Viejas)
+- Localidad: El Capulín Dañu
+- Localidad: Debego
+- Localidad: Pachuquilla
+- Localidad: Pedregales Borbollón
+- Localidad: La Reserva
+- Localidad: Pedregales Dañu
+- Localidad: El Fresno (Casas Viejas)
+- Localidad: La Leña
+- Localidad: Las Azucenas
+- Localidad: La Pila del León
+- Localidad: Inmobiliaria Avícola Pilgrims Pride
+- Localidad: El Mirador
+- Localidad: La Primavera
+- Localidad: Puerta Blanca
+- Localidad: La Cañada
+- Localidad: Ojuelos
+- Localidad: Los Caballos
+- Localidad: Los Pozos (La Presa Vieja)
+- Localidad: El Mogote
+- Localidad: El Charcón [Rancho]
+- Localidad: La Herradura (Colonia Campesina) [Rancho]
+- Localidad: San Isidro
+- Localidad: Canutillo
+- Localidad: La Posta
+- Localidad: Santa Lucia
+- Localidad: Los Alcanfores
+- Asentamiento humano: Alcanfores — COLONIA
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: Batha y Barrios — PUEBLO
+- Asentamiento humano: El Borbollón — PUEBLO
+- Asentamiento humano: El Capulín de Aragón — RANCHERÍA
+- Asentamiento humano: El Fresno (Casas Viejas) — PUEBLO
+- Asentamiento humano: Los Cerritos — PUEBLO
+- Asentamiento humano: Cuaxithi — PUEBLO
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: La Primavera — COLONIA
+- Asentamiento humano: Denthó — PUEBLO
+- Asentamiento humano: Humini — PUEBLO
+- Asentamiento humano: El Jagüey — PUEBLO
+- Asentamiento humano: Loma Colorada — PUEBLO
+- Asentamiento humano: Loma del Progreso — PUEBLO
+- Asentamiento humano: El Manguí — PUEBLO
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: Ciento Veinticinco — COLONIA
+- Asentamiento humano: El Chinampo — COLONIA
+- Asentamiento humano: El Lindero — COLONIA
+- Asentamiento humano: La Laja — COLONIA
+- Asentamiento humano: La Nopalera — COLONIA
+- Asentamiento humano: Lienzo Charro — COLONIA
+- Asentamiento humano: Loma de Las Azucenas — COLONIA
+- Asentamiento humano: Ortiz — COLONIA
+- Asentamiento humano: La Palma — PUEBLO
+- Asentamiento humano: La Presa — PUEBLO
+- Asentamiento humano: La Salita — PUEBLO
+- Asentamiento humano: San Lorenzo el Chico — PUEBLO
+- Asentamiento humano: Buena Vista — COLONIA
+- Asentamiento humano: El Calvario — COLONIA
+- Asentamiento humano: La Campesina — COLONIA
+- Asentamiento humano: Ojo de Agua — COLONIA
+- Asentamiento humano: Poethé — COLONIA
+- Asentamiento humano: Santo Niño — COLONIA
+- Asentamiento humano: La Siempreviva — PUEBLO
+- Asentamiento humano: San Sebastián de Juárez — PUEBLO
+- Asentamiento humano: Las Cruces — RANCHERÍA
+- Asentamiento humano: La Matanza — PUEBLO
+- Asentamiento humano: La Cañada — RANCHERÍA
+- Asentamiento humano: Puerto Dañú — RANCHERÍA
+- Asentamiento humano: Las Vegas — RANCHERÍA
+- Asentamiento humano: La Presa Dañu — PUEBLO
+- Asentamiento humano: San Juanita (Casas Viejas) — PUEBLO
+- Asentamiento humano: El Capulín Dañú — RANCHERÍA
+- Asentamiento humano: La Reserva — RANCHERÍA
+- Asentamiento humano: La Leña — PUEBLO
+- Asentamiento humano: Ojuelos — RANCHERÍA
+- Asentamiento humano: El Mogote — PUEBLO
+## Municipio: Pachuca de Soto
+
+- Localidad: Pachuca de Soto
+- Localidad: El Bordo (Barrio del Bordo)
+- Localidad: Camelia (Barrio la Camelia)
+- Localidad: San Miguel Cerezo (El Cerezo)
+- Localidad: El Huixmí
+- Localidad: Pitayas
+- Localidad: Santiago Tlapacoya
+- Localidad: Santa Gertrudis
+- Localidad: San Pedro (El Cigarro)
+- Localidad: La Rabia
+- Localidad: Barrio Tiquixu
+- Localidad: Las Campanitas
+- Localidad: Barrio del Judío
+- Localidad: Cerro de San Cristóbal
+- Localidad: Coronas
+- Localidad: El Puerto
+- Localidad: Cerro de Guadalupe
+- Localidad: Dos Potrillos
+- Localidad: Ejido San Bartolo
+- Localidad: La Magueyera (Lucino Pérez Pérez)
+- Localidad: Las Palmitas
+- Localidad: Santa Matilde [Colonia]
+- Localidad: Los Chávez
+- Localidad: El Tablón
+- Localidad: Colonia del Valle
+- Localidad: Aquiles Serdán
+- Localidad: Torres de Rectoría UAEH
+- Localidad: Los Encinos
+- Localidad: El Paraíso
+- Localidad: Comisariados [Colonia]
+- Localidad: El Roble
+- Localidad: Margarita Morán Véliz [Colonia]
+- Localidad: Lomas de la Plata
+- Localidad: Los Pinos
+- Localidad: Los Pirules
+- Asentamiento humano: 15 DE SEPTIEMBRE — FRACCIONAMIENTO
+- Asentamiento humano: 18 DE MARZO — FRACCIONAMIENTO
+- Asentamiento humano: 20 DE NOVIEMBRE — UNIDAD HABITACIONAL
+- Asentamiento humano: 20 DE NOVIEMBRE — NINGUNO
+- Asentamiento humano: ADOLFO LÓPEZ MATEOS — COLONIA
+- Asentamiento humano: AEROPUERTO — COLONIA
+- Asentamiento humano: AG RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: ALBORADA — FRACCIONAMIENTO
+- Asentamiento humano: ALTARA — FRACCIONAMIENTO
+- Asentamiento humano: AMAZONAS — COLONIA
+- Asentamiento humano: AMPLIACIÓN EL TEZONTLE — NINGUNO
+- Asentamiento humano: AMPLIACIÓN LUZ DEL CARMEN OCON — NINGUNO
+- Asentamiento humano: AMPLIACIÓN MARTIRES DEL 18 DE AGOSTO — NINGUNO
+- Asentamiento humano: AMPLIACIÓN SANTA JULIA — COLONIA
+- Asentamiento humano: ANAHUAC — COLONIA
+- Asentamiento humano: ANTAL CONDOMINIOS — FRACCIONAMIENTO
+- Asentamiento humano: ANTONIO DEL CASTILLO — COLONIA
+- Asentamiento humano: AQUILES SERDÁN — FRACCIONAMIENTO
+- Asentamiento humano: ARBOLEDAS DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: ARBOLEDAS DE SAN JAVIER — FRACCIONAMIENTO
+- Asentamiento humano: ARBOLEDAS DE SANTA ELENA — FRACCIONAMIENTO
+- Asentamiento humano: ARTÍCULO 123 — FRACCIONAMIENTO
+- Asentamiento humano: ASTA BANDERA — BARRIO
+- Asentamiento humano: AVES DEL PARAÍSO — NINGUNO
+- Asentamiento humano: BOSQUE REAL — FRACCIONAMIENTO
+- Asentamiento humano: BOSQUES — FRACCIONAMIENTO
+- Asentamiento humano: BOSQUES DEL PEÑAR — FRACCIONAMIENTO
+- Asentamiento humano: BOULEVARES DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: BUENOS AIRES — COLONIA
+- Asentamiento humano: BUGAMBILIAS — COLONIA
+- Asentamiento humano: CABAÑITAS — COLONIA
+- Asentamiento humano: CAMPO DE TIRO — FRACCIONAMIENTO
+- Asentamiento humano: CAMPO DE TIRO — PRIVADA
+- Asentamiento humano: CAMPO DE TIRO II — FRACCIONAMIENTO
+- Asentamiento humano: CANUTILLO — COLONIA
+- Asentamiento humano: CARLOS ROVIROSA — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: CERRO DE CUBITOS — COLONIA
+- Asentamiento humano: CERRO DE LAS ÁNIMAS — COLONIA
+- Asentamiento humano: CÉSPEDES REFORMA — COLONIA
+- Asentamiento humano: CFE — FRACCIONAMIENTO
+- Asentamiento humano: CIHUATL — FRACCIONAMIENTO
+- Asentamiento humano: CIHUATL II — FRACCIONAMIENTO
+- Asentamiento humano: CIUDAD DE LOS NIÑOS — COLONIA
+- Asentamiento humano: CLUB DE GOLF — FRACCIONAMIENTO
+- Asentamiento humano: COLONIAL — FRACCIONAMIENTO
+- Asentamiento humano: COLONIAL SANTA FE — FRACCIONAMIENTO
+- Asentamiento humano: COLONIAS — COLONIA
+- Asentamiento humano: COLONOS DE AMPLIACIÓN SAN BARTOLO — FRACCIONAMIENTO
+- Asentamiento humano: COLOSIO I — FRACCIONAMIENTO
+- Asentamiento humano: COLOSIO II — FRACCIONAMIENTO
+- Asentamiento humano: CONJUNTO ARBOLEDAS I — FRACCIONAMIENTO
+- Asentamiento humano: CONJUNTO ARBOLEDAS II — FRACCIONAMIENTO
+- Asentamiento humano: CONJUNTO HABITACIONAL ACUEDUCTO — FRACCIONAMIENTO
+- Asentamiento humano: CONJUNTO HABITACIONAL EXHACIENDA CUESCO — FRACCIONAMIENTO
+- Asentamiento humano: CONJUNTO HABITACIONAL RESIDENCIAL PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: CONJUNTO NUEVO HIDALGO — FRACCIONAMIENTO
+- Asentamiento humano: CONSTITUCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: CONSTRU PLAZA — NINGUNO
+- Asentamiento humano: COSCOTITLÁN — COLONIA
+- Asentamiento humano: CRISOL — NINGUNO
+- Asentamiento humano: CRISTINA ROSAS ILLESCAS — NINGUNO
+- Asentamiento humano: CRUZ DE LOS CIEGOS — BARRIO
+- Asentamiento humano: CRUZ DEL CERRITO — BARRIO
+- Asentamiento humano: CUAUHTÉMOC — COLONIA
+- Asentamiento humano: CUBITOS — COLONIA
+- Asentamiento humano: DIAMANTE — COLONIA
+- Asentamiento humano: DOCTORES — COLONIA
+- Asentamiento humano: EL ARBOLITO — BARRIO
+- Asentamiento humano: EL ATORÓN — BARRIO
+- Asentamiento humano: EL CARMEN — FRACCIONAMIENTO
+- Asentamiento humano: EL DORADO — FRACCIONAMIENTO
+- Asentamiento humano: EL HIDALGUENSE — FRACCIONAMIENTO
+- Asentamiento humano: EL LOBO — BARRIO
+- Asentamiento humano: EL LUCERO — BARRIO
+- Asentamiento humano: EL MOSCO — BARRIO
+- Asentamiento humano: EL PALMAR — FRACCIONAMIENTO
+- Asentamiento humano: EL PALMAR — AMPLIACIÓN
+- Asentamiento humano: EL PALMAR II — FRACCIONAMIENTO
+- Asentamiento humano: EL PALMAR II — FRACCIONAMIENTO
+- Asentamiento humano: EL PORVENIR — BARRIO
+- Asentamiento humano: EL REENCUENTRO — FRACCIONAMIENTO
+- Asentamiento humano: EL ROSARIO — FRACCIONAMIENTO
+- Asentamiento humano: EL TEZONTLE — COLONIA
+- Asentamiento humano: EUROPA — NINGUNO
+- Asentamiento humano: EXHACIENDA DE COSCOTITLÁN — COLONIA
+- Asentamiento humano: EXHACIENDA DE GUADALUPE — COLONIA
+- Asentamiento humano: EXHACIENDA DE LA LUZ — FRACCIONAMIENTO
+- Asentamiento humano: EXHACIENDA LAS TORRES — FRACCIONAMIENTO
+- Asentamiento humano: EXHACIENDA PITAHAYAS — COLONIA
+- Asentamiento humano: EXHACIENDA PITAHAYAS SECTOR PRIMARIO — COLONIA
+- Asentamiento humano: EXHACIENDA SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: EXPLANADA SUR — FRACCIONAMIENTO
+- Asentamiento humano: FARAONA — NINGUNO
+- Asentamiento humano: FELIPE ÁNGELES — COLONIA
+- Asentamiento humano: FLORES MAGÓN — FRACCIONAMIENTO
+- Asentamiento humano: FRANCISCO I. MADERO — COLONIA
+- Asentamiento humano: GEMA — FRACCIONAMIENTO
+- Asentamiento humano: GEOVILLAS DE NUEVO HIDALGO — FRACCIONAMIENTO
+- Asentamiento humano: GRAND DIAMANTE RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: GUADALUPE — FRACCIONAMIENTO
+- Asentamiento humano: HABITAT ARAUCO — FRACCIONAMIENTO
+- Asentamiento humano: HÁBITAT SUR — FRACCIONAMIENTO
+- Asentamiento humano: HACIENDA — FRACCIONAMIENTO
+- Asentamiento humano: HACIENDA DE LA HERRADURA — FRACCIONAMIENTO
+- Asentamiento humano: HACIENDAS DE HIDALGO — FRACCIONAMIENTO
+- Asentamiento humano: HACIENDAS DE HIDALGO II — FRACCIONAMIENTO
+- Asentamiento humano: HILATURAS PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: INDEPENDENCIA — NINGUNO
+- Asentamiento humano: INDUSTRIAL LA PAZ — COLONIA
+- Asentamiento humano: INFONAVIT VENTA PRIETA — FRACCIONAMIENTO
+- Asentamiento humano: ISSSTE — COLONIA
+- Asentamiento humano: JACARANDAS — NINGUNO
+- Asentamiento humano: JADE RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: JALES SUR — NINGUNO
+- Asentamiento humano: JARDÍN COLÓN — COLONIA
+- Asentamiento humano: JARDINES DE COLOSIO — NINGUNO
+- Asentamiento humano: JAVIER ROJO GÓMEZ — COLONIA
+- Asentamiento humano: JORGE OBIZPO — COLONIA
+- Asentamiento humano: JORGE OBIZPO — AMPLIACIÓN
+- Asentamiento humano: JORGE ROJO LUGO — COLONIA
+- Asentamiento humano: JOSÉ LÓPEZ PORTILLO — FRACCIONAMIENTO
+- Asentamiento humano: JUAN C. DORIA — FRACCIONAMIENTO
+- Asentamiento humano: JULIAN CARRILLO — BARRIO
+- Asentamiento humano: LA ALCANTARILLA — BARRIO
+- Asentamiento humano: LA ANTIGUA — FRACCIONAMIENTO
+- Asentamiento humano: LA CABAÑA — FRACCIONAMIENTO
+- Asentamiento humano: LA CANOA — FRACCIONAMIENTO
+- Asentamiento humano: LA CANTERA — FRACCIONAMIENTO
+- Asentamiento humano: LA CARTUJA — FRACCIONAMIENTO
+- Asentamiento humano: LA CONDESA — NINGUNO
+- Asentamiento humano: LA CRUZ — BARRIO
+- Asentamiento humano: LA CRUZ — FRACCIONAMIENTO
+- Asentamiento humano: LA ESCONDIDA — PRIVADA
+- Asentamiento humano: LA ESCONDIDA — RESIDENCIAL
+- Asentamiento humano: LA ESPAÑITA — BARRIO
+- Asentamiento humano: LA ESPERANZA — FRACCIONAMIENTO
+- Asentamiento humano: LA EXCELENCIA RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: LA GRANADA — BARRIO
+- Asentamiento humano: LA HACIENDA — COLONIA
+- Asentamiento humano: LA ISLA — FRACCIONAMIENTO
+- Asentamiento humano: LA LOMA — NINGUNO
+- Asentamiento humano: LA MARQUESA — NINGUNO
+- Asentamiento humano: LA MORALEJA — FRACCIONAMIENTO
+- Asentamiento humano: LA NORIA — FRACCIONAMIENTO
+- Asentamiento humano: LA PALMA — BARRIO
+- Asentamiento humano: LA PALMA — COLONIA
+- Asentamiento humano: LA PAZ — COLONIA
+- Asentamiento humano: LA RAZA — COLONIA
+- Asentamiento humano: LA SURTIDORA — BARRIO
+- Asentamiento humano: LA TOSCANA — FRACCIONAMIENTO
+- Asentamiento humano: LA UNIÓN — NINGUNO
+- Asentamiento humano: LAGOS RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: LAS FUENTES — FRACCIONAMIENTO
+- Asentamiento humano: LAS LAJAS — BARRIO
+- Asentamiento humano: LAS LANCHITAS — COLONIA
+- Asentamiento humano: LAS PALMAS — FRACCIONAMIENTO
+- Asentamiento humano: LAS PALMAS — FRACCIONAMIENTO
+- Asentamiento humano: LAS PALMITAS — COLONIA
+- Asentamiento humano: LAS PERLAS — PRIVADA
+- Asentamiento humano: LAS TERESITAS III — FRACCIONAMIENTO
+- Asentamiento humano: LAS TORRES — FRACCIONAMIENTO
+- Asentamiento humano: LAS TORRES — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DE BUENOS AIRES — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DE NUEVA AIROSA — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DE SANTA MATÍLDE — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DE VISTA HERMOSA — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS RESIDENCIAL PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: LOS ABETOS — NINGUNO
+- Asentamiento humano: LOS ÁNGELES — FRACCIONAMIENTO
+- Asentamiento humano: LOS ARCOS — FRACCIONAMIENTO
+- Asentamiento humano: LOS ARCOS CENTRO MINERO — UNIDAD HABITACIONAL
+- Asentamiento humano: LOS ARRAYANES — FRACCIONAMIENTO
+- Asentamiento humano: LOS CEDROS — FRACCIONAMIENTO
+- Asentamiento humano: LOS GIRASOLES — FRACCIONAMIENTO
+- Asentamiento humano: LOS GIRASOLES II — FRACCIONAMIENTO
+- Asentamiento humano: LOS MAESTROS — FRACCIONAMIENTO
+- Asentamiento humano: LOS PIRULES — FRACCIONAMIENTO
+- Asentamiento humano: LOS PIRULES CUESCO — FRACCIONAMIENTO
+- Asentamiento humano: LOS PRISMAS — FRACCIONAMIENTO
+- Asentamiento humano: LOS ROSALES — FRACCIONAMIENTO
+- Asentamiento humano: LUZ DEL CARMEN OCON — NINGUNO
+- Asentamiento humano: MADELEINE — FRACCIONAMIENTO
+- Asentamiento humano: MAESTRANZA — COLONIA
+- Asentamiento humano: MARÍA GUADALUPE — FRACCIONAMIENTO
+- Asentamiento humano: MARIANO OTERO — FRACCIONAMIENTO
+- Asentamiento humano: MARIBEL — FRACCIONAMIENTO
+- Asentamiento humano: MARTIRES DEL 18 DE AGOSTO — NINGUNO
+- Asentamiento humano: MEDIA LUNA — FRACCIONAMIENTO
+- Asentamiento humano: MEDIA LUNA — NINGUNO
+- Asentamiento humano: MIGUEL HIDALGO Y COSTILLA — COLONIA
+- Asentamiento humano: MIGUEL RAMOS ARIZPE — COLONIA
+- Asentamiento humano: MINERAL DEL ORO SEGUNDA SECCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: MIRALTA — FRACCIONAMIENTO
+- Asentamiento humano: MISIÓN DE LA LUZ — NINGUNO
+- Asentamiento humano: MISIÓN DE SANTIAGO — FRACCIONAMIENTO
+- Asentamiento humano: MISIONES DE CUESCO — FRACCIONAMIENTO
+- Asentamiento humano: MONTE CARMELO — FRACCIONAMIENTO
+- Asentamiento humano: MORELOS — COLONIA
+- Asentamiento humano: MUNICIPIO LIBRE — COLONIA
+- Asentamiento humano: NOVOVENTO — FRACCIONAMIENTO
+- Asentamiento humano: NUEVA ESTRELLA — COLONIA
+- Asentamiento humano: NUEVA FRANCISCO I. MADERO — COLONIA
+- Asentamiento humano: NUEVO HIDALGO — FRACCIONAMIENTO
+- Asentamiento humano: NUEVO PLUTARCO — FRACCIONAMIENTO
+- Asentamiento humano: NUEVO SAN BARTOLO — FRACCIONAMIENTO
+- Asentamiento humano: OLIVENZA — FRACCIONAMIENTO
+- Asentamiento humano: OYAMEL — FRACCIONAMIENTO
+- Asentamiento humano: PACHOACAN II — CONJUNTO HABITACIONAL
+- Asentamiento humano: PALESTINA — FRACCIONAMIENTO
+- Asentamiento humano: PARQUE DE POBLAMIENTO — FRACCIONAMIENTO
+- Asentamiento humano: PARQUE HIDALGO — COLONIA
+- Asentamiento humano: PARQUE URBANO SAN ANTONIO — FRACCIONAMIENTO
+- Asentamiento humano: PASEO DE CAMELINAS — FRACCIONAMIENTO
+- Asentamiento humano: PASEO DE LAS MONTAÑAS — FRACCIONAMIENTO
+- Asentamiento humano: PASEOS DE LA HERRADURA — FRACCIONAMIENTO
+- Asentamiento humano: PASEOS DE LA PLATA — FRACCIONAMIENTO
+- Asentamiento humano: PASEOS DE LA PLATA II — FRACCIONAMIENTO
+- Asentamiento humano: PATONI — BARRIO
+- Asentamiento humano: PEDREGAL DE LAS HACIENDAS — FRACCIONAMIENTO
+- Asentamiento humano: PERIODISTAS — COLONIA
+- Asentamiento humano: PIRACANTOS — FRACCIONAMIENTO
+- Asentamiento humano: PIRULES — COLONIA
+- Asentamiento humano: PITAHAYAS — FRACCIONAMIENTO
+- Asentamiento humano: PLAZA BELLA — NINGUNO
+- Asentamiento humano: PLAZA LAS TORRES — FRACCIONAMIENTO
+- Asentamiento humano: PLUTARCO ELÍAS CALLES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA ARCONADA RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA CANTÁBRICO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA COLONIAL SAN JOSÉ — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DE CUESCO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DE LOS ÁNGELES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DEL BOSQUE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DIAMANTE I — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DIAMANTE II — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DIAMANTE III — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DON JAVIER II — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA EL CASTILLO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA EL PEDREGAL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA ESMERALDA I — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA ESMERALDA II — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA ESMERALDA III — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA JARDÍN DEL SUR — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LAS ANGELITAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LAS AVES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LAS LOMAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LAS PALOMAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LOS ÁNGELES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LOS JORGES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LOS OLIVOS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA MAESTRANZA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA MARÍA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA MINA REAL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA OASIS DE DORIA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA PUNTA DIAMANTE 2 — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA QUINTA LOS REYES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA REAL DE MEDINAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA REAL DE SAN ANTONIO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA REAL DE SANTA JULIA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA REAL DEL SUR — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA REGIUMM QUEENS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RESIDENCIAL BUGAMBILIAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RESIDENCIAL DIAMANTE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RESIDENCIAL PUNTA LAS TORRES — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RESIDENCIAL SAN CARLOS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RESIDENCIAL VILLA CALIFORNIA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RESIDENCIAL VILLANOVA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RINCONADA DE SANTIAGO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RINCONADAS DE SAN ANTONIO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RUBÍ — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA SAN ANTONIO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA SAN CARLOS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA SAN JOSÉ — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA SAN LUIS POTOSÍ — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA SAN MIGUEL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA SAN SEBASTIAN — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA SANTA MÓNICA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA SANTA TERESA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VALLE DE CRISTAL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VALLE DEL ROBLE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VALLE DEL SOCORRO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VALLE DIAMANTE PLUS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VALLE REAL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VICTORIA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VILLA MAGNA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VILLAS REGINA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS CORAL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DE LA HACIENDA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DE LA HERRADURA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DE SANTA PRISCA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS LAS TERESITAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS LAS TERESITAS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS LOS CANTOS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS PUNTA DIAMANTE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS PUNTA ESMERALDA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS RINCONADA DE SAN ANTONIO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS RINCONADAS DEL SUR — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS VALLE TURQUESA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS VILLAS DEL PARAÍSO — FRACCIONAMIENTO
+- Asentamiento humano: PROGRESO — FRACCIONAMIENTO
+- Asentamiento humano: PROVENZA RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: PUERTA DE HIERRO — FRACCIONAMIENTO
+- Asentamiento humano: PUNTA AZUL — FRACCIONAMIENTO
+- Asentamiento humano: PUNTA KRISTAL — FRACCIONAMIENTO
+- Asentamiento humano: PUNTA PONIENTE — FRACCIONAMIENTO
+- Asentamiento humano: QUALIA — CONDOMINIO
+- Asentamiento humano: QUINTA REAL — FRACCIONAMIENTO
+- Asentamiento humano: QUINTA ZAFIRO — FRACCIONAMIENTO
+- Asentamiento humano: RANCHO LA COLONIA — FRACCIONAMIENTO
+- Asentamiento humano: REAL DE LA LOMA — FRACCIONAMIENTO
+- Asentamiento humano: REAL DE LA PLATA — FRACCIONAMIENTO
+- Asentamiento humano: REAL DE MEDINAS — FRACCIONAMIENTO
+- Asentamiento humano: REAL DE MINAS — COLONIA
+- Asentamiento humano: REAL DE PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: REAL DE SAN CAYETANO — FRACCIONAMIENTO
+- Asentamiento humano: REAL DE SAN MIGUEL II — FRACCIONAMIENTO
+- Asentamiento humano: REAL DEL VALLE — FRACCIONAMIENTO
+- Asentamiento humano: REAL MADEIRA — FRACCIONAMIENTO
+- Asentamiento humano: REAL SAN MIGUEL — FRACCIONAMIENTO
+- Asentamiento humano: REAL TOLEDO — FRACCIONAMIENTO
+- Asentamiento humano: RENACIMIENTO — FRACCIONAMIENTO
+- Asentamiento humano: REPÚBLICA DEL PERÚ — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL DEL BOSQUE — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL DIAMANTE — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL FUENTES DEL VALLE — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL HACIENDA DOLORES — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL LOS ÁNGELES — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL PARQUE ESMERALDA — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL PLATINA — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL PLATINO — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL PLATINUM — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL SAN ÁNGEL — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL SAN ANTONIO — FRACCIONAMIENTO
+- Asentamiento humano: REVOLUCIÓN — COLONIA
+- Asentamiento humano: RINCÓN DE LA PLATA — FRACCIONAMIENTO
+- Asentamiento humano: RINCÓN DE LAS LOMAS — FRACCIONAMIENTO
+- Asentamiento humano: RINCÓN DE LAS LOMAS II — FRACCIONAMIENTO
+- Asentamiento humano: RINCÓN DEL REAL — FRACCIONAMIENTO
+- Asentamiento humano: RINCÓN ESMERALDA — FRACCIONAMIENTO
+- Asentamiento humano: RINCÓN MAYA — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA DEL SUR — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA LA CONCEPCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA REAL DE PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DE SAN JOSÉ — FRACCIONAMIENTO
+- Asentamiento humano: RÍO DE LA SOLEDAD — FRACCIONAMIENTO
+- Asentamiento humano: RIVALLE — FRACCIONAMIENTO
+- Asentamiento humano: SAN ANTONIO BUENOS AIRES — COLONIA
+- Asentamiento humano: SAN ANTONIO EL DESMONTE — COLONIA
+- Asentamiento humano: SAN BARTOLO — COLONIA
+- Asentamiento humano: SAN CARLOS — FRACCIONAMIENTO
+- Asentamiento humano: SAN CAYETANO EL BORDO — COLONIA
+- Asentamiento humano: SAN CLEMENTE — BARRIO
+- Asentamiento humano: SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: SAN JUAN PACHUCA — BARRIO
+- Asentamiento humano: SAN MARINO — FRACCIONAMIENTO
+- Asentamiento humano: SAN MARTÍN — FRACCIONAMIENTO
+- Asentamiento humano: SAN MIGUEL ARCÁNGEL — FRACCIONAMIENTO
+- Asentamiento humano: SAN NICOLÁS — BARRIO
+- Asentamiento humano: SAN PEDRO NOPANCALCO — COLONIA
+- Asentamiento humano: SANTA JULIA — COLONIA
+- Asentamiento humano: SANTA MATÍLDE — COLONIA
+- Asentamiento humano: SANTIAGO JALTEPEC — COLONIA
+- Asentamiento humano: SANTIAGO Y ARIZPE — BARRIO
+- Asentamiento humano: SANTO DOMINGO — NINGUNO
+- Asentamiento humano: SEGUNDA RINCONADA DE SANTIAGO — FRACCIONAMIENTO
+- Asentamiento humano: SENDERO DE LOS PINOS — FRACCIONAMIENTO
+- Asentamiento humano: SIERRA BONITA — NINGUNO
+- Asentamiento humano: SME — FRACCIONAMIENTO
+- Asentamiento humano: SPAUAH — FRACCIONAMIENTO
+- Asentamiento humano: TERRANOVA RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: TERRAZAS — FRACCIONAMIENTO
+- Asentamiento humano: TIRO TULA — FRACCIONAMIENTO
+- Asentamiento humano: UNIDAD ADMINISTRATIVA — FRACCIONAMIENTO
+- Asentamiento humano: UNIDAD HABITACIONAL SAN ANTONIO — FRACCIONAMIENTO
+- Asentamiento humano: UNIÓN POPULAR — COLONIA
+- Asentamiento humano: VALLE BLANCO — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DE ALBAR — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DE LAS FLORES — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DE SAN JAVIER — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DEL MAYAB — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DEL PALMAR — NINGUNO
+- Asentamiento humano: VALLE DEL SOL — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DEL SOL SEGUNDA SECCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DORADO — FRACCIONAMIENTO
+- Asentamiento humano: VALLE LAS PERLAS — PRIVADA
+- Asentamiento humano: VALLE MANANTIAL — FRACCIONAMIENTO
+- Asentamiento humano: VALLES DE PACHUCA — NINGUNO
+- Asentamiento humano: VENECIA — NINGUNO
+- Asentamiento humano: VENTA PRIETA — COLONIA
+- Asentamiento humano: VENUSTIANO CARRANZA — COLONIA
+- Asentamiento humano: VILLA DE LEÓN — PRIVADA
+- Asentamiento humano: VILLA ELISA — FRACCIONAMIENTO
+- Asentamiento humano: VILLA GUADALUPE — FRACCIONAMIENTO
+- Asentamiento humano: VILLA SAN ÁNGEL — FRACCIONAMIENTO
+- Asentamiento humano: VILLARREAL — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS DE PACHUCA — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS DE SAN ANTONIO — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS MIGUEL ÁNGEL — FRACCIONAMIENTO
+- Asentamiento humano: VISTA REAL — PRIVADA
+- Asentamiento humano: VITTA — FRACCIONAMIENTO
+- Asentamiento humano: ZIRCONIAS — FRACCIONAMIENTO
+- Asentamiento humano: ZONA PLATEADA — FRACCIONAMIENTO
+- Asentamiento humano: EL BORDO — BARRIO
+- Asentamiento humano: LA CAMELIA — BARRIO
+- Asentamiento humano: SAN MIGUEL CEREZO — PUEBLO
+- Asentamiento humano: EL HUIXMÍ — COLONIA
+- Asentamiento humano: EL HUIXMÍ-PITAHAYAS — COLONIA
+- Asentamiento humano: ARCOS DE SANTIAGO TLAPACOYA — NINGUNO
+- Asentamiento humano: EUCALIPTO — BARRIO
+- Asentamiento humano: GUADALUPE — BARRIO
+- Asentamiento humano: JARDINES DE SANTA MARTHA — FRACCIONAMIENTO
+- Asentamiento humano: LA PALMA — BARRIO
+- Asentamiento humano: PUEBLO NUEVO — BARRIO
+- Asentamiento humano: SANTA GERTRUDIS — COLONIA
+- Asentamiento humano: LAS CAMPANITAS — COLONIA
+- Asentamiento humano: DEL JUDÍO — BARRIO
+- Asentamiento humano: MONTE OLIMPO — FRACCIONAMIENTO
+- Asentamiento humano: CORONAS — COLONIA
+- Asentamiento humano: EL PUERTO — RANCHERÍA
+- Asentamiento humano: CERRO DE GUADALUPE — COLONIA
+- Asentamiento humano: SANTA MATILDE — COLONIA
+- Asentamiento humano: EL TABLÓN — COLONIA
+- Asentamiento humano: DEL VALLE — COLONIA
+- Asentamiento humano: LOS ENCINOS — COLONIA
+- Asentamiento humano: EL PARAÍSO — COLONIA
+- Asentamiento humano: COMISARIADOS — COLONIA
+- Asentamiento humano: MARGARITA MORÁN VÉLIZ — COLONIA
+- Asentamiento humano: LOMAS DE LA PLATA — FRACCIONAMIENTO
+- Asentamiento humano: LOS PINOS — COLONIA
+## Municipio: Progreso de Obregón
+
+- Localidad: Progreso de Obregón
+- Localidad: El Xamú
+- Localidad: Xochitlán
+- Localidad: Los Manantiales [Colonia]
+- Localidad: Las Calvas
+- Localidad: El Dho
+- Localidad: Los Pinos
+- Localidad: El Jardín [Colonia]
+- Localidad: La Mora
+- Localidad: El Moreno
+- Localidad: Los Olivos
+- Localidad: La Ranchería
+- Localidad: La Era
+- Localidad: Periócolo
+- Localidad: Donijha
+- Localidad: Palma Gorda
+- Localidad: La Cruz
+- Localidad: Rancho de la Peña
+- Localidad: Dotzibi (Lomas de Xochitlán)
+- Localidad: Progreso [Fraccionamiento]
+- Localidad: El Garambullo 1
+- Localidad: El Garambullo 2
+- Localidad: 6 de Enero
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: CERRITO COLORADO — COLONIA
+- Asentamiento humano: EL BONDHO — COLONIA
+- Asentamiento humano: INDEPENDENCIA — COLONIA
+- Asentamiento humano: LA JOYA — COLONIA
+- Asentamiento humano: LÁZARO CÁRDENAS — COLONIA
+- Asentamiento humano: MANANTIALES — COLONIA
+- Asentamiento humano: POTREROS — COLONIA
+- Asentamiento humano: XAMU — COLONIA
+- Asentamiento humano: ZENTHÉ — COLONIA
+- Asentamiento humano: XOCHITLÁN — COLONIA
+
+## Municipio: San Agustín Tlaxiaca
+
+- Localidad: San Agustín Tlaxiaca
+- Localidad: Benito Juárez
+- Localidad: El Cedó (San José el Cedó)
+- Localidad: La Concepción
+- Localidad: Chapultepec de Pozos
+- Localidad: El Durazno
+- Localidad: Guadalupe Tezontle
+- Localidad: Guadalupe Victoria [Colonia]
+- Localidad: Ixcuinquitlapilco
+- Localidad: San Isidro Llano Largo
+- Localidad: José María Pino Suárez
+- Localidad: Puerto México
+- Localidad: San Juan Solís
+- Localidad: Santa Catarina
+- Localidad: San Francisco Tecajique
+- Localidad: Tecamatl
+- Localidad: San Juan Tilcuautla
+- Localidad: San Miguel Tornacuxtla
+- Localidad: Oriental de Zapata
+- Localidad: Guadalupe los Manantiales [Colonia]
+- Localidad: San José de los Altos
+- Localidad: El Campanario
+- Localidad: El Botho
+- Localidad: Las Cajas
+- Localidad: Chalmita
+- Localidad: Dajie [Barrio]
+- Localidad: El Huizache
+- Localidad: La Nopalera
+- Localidad: Palos Blancos
+- Localidad: El Potrero
+- Localidad: La Providencia
+- Localidad: Santa Bárbara
+- Localidad: Santa María
+- Localidad: Santa Ana [Reserva Cinegética]
+- Localidad: El Tepozán
+- Localidad: San Francisco
+- Localidad: Capula
+- Localidad: El Capulín
+- Localidad: El Chamizal
+- Localidad: Barrio de Españita
+- Localidad: Nueva Tlaxiaca
+- Localidad: Monte de Guadalupe
+- Localidad: El Canal (Parada Santa María)
+- Localidad: Santo Tomás
+- Localidad: La Máquina Vieja
+- Localidad: Modeda
+- Localidad: El Viborón
+- Localidad: Vindhó [Barrio]
+- Localidad: El Lindero
+- Localidad: Casa Grande [Barrio]
+- Localidad: Cerro Gordo
+- Localidad: Casas Coloradas
+- Localidad: Cima de San Pedro
+- Localidad: La Loma
+- Localidad: El Pilón
+- Localidad: Tequía
+- Localidad: Alfonsa Márquez Monzalvo
+- Localidad: Daniel Contreras Ángeles
+- Localidad: El Pajoso
+- Localidad: Banús
+- Localidad: Paseo de los Solares
+- Localidad: Real de Arcos
+- Localidad: Cerro Viejo
+- Localidad: La Cruz de los Gallos
+- Localidad: Las Obscuras
+- Localidad: Los Garambullos
+- Localidad: La Puerta del Cielo
+- Asentamiento humano: CASA GRANDE — BARRIO
+- Asentamiento humano: EL FRESNO — BARRIO
+- Asentamiento humano: EL HUIZACHE — BARRIO
+- Asentamiento humano: MEXIQUITO — BARRIO
+- Asentamiento humano: BENITO JUÁREZ — PUEBLO
+- Asentamiento humano: LA CONCEPCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: CHAPULTEPEC DE POZOS — PUEBLO
+- Asentamiento humano: EL DURAZNO — PUEBLO
+- Asentamiento humano: GUADALUPE VICTORIA — COLONIA
+- Asentamiento humano: IXCUINQUITLAPILCO — PUEBLO
+- Asentamiento humano: SAN ISIDRO LLANO LARGO — PUEBLO
+- Asentamiento humano: JOSÉ MARÍA PINO SUÁREZ — COLONIA
+- Asentamiento humano: PUERTO MEXICO — PUEBLO
+- Asentamiento humano: SAN JUAN SOLIS — PUEBLO
+- Asentamiento humano: SANTA CATARINA — PUEBLO
+- Asentamiento humano: SAN FRANCISCO TECAJIQUE — PUEBLO
+- Asentamiento humano: TECAMATL — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CHARCO — BARRIO
+- Asentamiento humano: EL MOLINO — BARRIO
+- Asentamiento humano: GUADALUPE — BARRIO
+- Asentamiento humano: LA MORA 1 — BARRIO
+- Asentamiento humano: LA MORA 2 — BARRIO
+- Asentamiento humano: LAS VENTAS — BARRIO
+- Asentamiento humano: SAN FRANCISCO — BARRIO
+- Asentamiento humano: FONDÓN — BARRIO
+- Asentamiento humano: HUIZACHE — BARRIO
+- Asentamiento humano: LA ESPAÑITA — BARRIO
+- Asentamiento humano: SAN MIGUEL TORNACUXTLA — PUEBLO
+- Asentamiento humano: ORIENTAL DE ZAPATA — COLONIA
+- Asentamiento humano: GUADALUPE LOS MANANTIALES — COLONIA
+- Asentamiento humano: EL CAMPANARIO — PUEBLO
+- Asentamiento humano: EL BOTHO — COLONIA
+- Asentamiento humano: CHALMITA — PUEBLO
+- Asentamiento humano: DAJIE — BARRIO
+- Asentamiento humano: EL HUIZACHE — COLONIA
+- Asentamiento humano: LA NOPALERA — COLONIA
+- Asentamiento humano: FONDÓN — BARRIO
+- Asentamiento humano: PALOS BLANCOS — COLONIA
+- Asentamiento humano: LA PROVIDENCIA — COLONIA
+- Asentamiento humano: SANTA MARIA — COLONIA
+- Asentamiento humano: EL TEPOZÁN — PUEBLO
+- Asentamiento humano: CAPULA — RANCHERÍA
+- Asentamiento humano: EL CHAMIZAL — COLONIA
+- Asentamiento humano: BARRIO DE ESPAÑITA — BARRIO
+- Asentamiento humano: NUEVA TLAXIACA — COLONIA
+- Asentamiento humano: SANTO TOMÁS — PUEBLO
+- Asentamiento humano: VINDHÓ — BARRIO
+- Asentamiento humano: LA LOMA 2 — COLONIA
+- Asentamiento humano: BANÚS — FRACCIONAMIENTO
+- Asentamiento humano: PASEO DE LOS SOLARES — FRACCIONAMIENTO
+
+## Municipio: San Salvador
+
+- Localidad: San Salvador
+- Localidad: Bocaja
+- Localidad: Bominthza
+- Localidad: El Bondho
+- Localidad: Boxaxni
+- Localidad: Bóxtha Chico
+- Localidad: Cañada Grande
+- Localidad: Casa Grande
+- Localidad: Demacu
+- Localidad: Déxtho de Victoria
+- Localidad: Francisco Villa
+- Localidad: Lagunilla
+- Localidad: El Olvera
+- Localidad: Pacheco de Allende
+- Localidad: Poxindeje de Morelos
+- Localidad: Quemtha
+- Localidad: San Antonio Zaragoza
+- Localidad: San Miguel Acambay
+- Localidad: Santa María Amajac
+- Localidad: El Tablón
+- Localidad: Teofani
+- Localidad: Tothie de Rojo Gómez
+- Localidad: El Colorado
+- Localidad: Leandro Valle
+- Localidad: El Fresno
+- Localidad: Dengandhó de Juárez
+- Localidad: Vixtha de Madero
+- Localidad: El Rodrigo
+- Localidad: Caxuxi
+- Localidad: San Antonio Abad
+- Localidad: Cerro Blanco
+- Localidad: Chichimecas
+- Localidad: La Flor
+- Localidad: El Mezquital
+- Localidad: El Mothé
+- Localidad: Xuchitlán
+- Localidad: El Durazno
+- Localidad: El Rosario
+- Localidad: La Palma
+- Localidad: Herminia Olguín Díaz
+- Localidad: San José Doxey
+- Localidad: El Puerto Lázaro Cárdenas
+- Localidad: Rincón Santa María
+- Localidad: Ejido Santa Teresa (El Tablón)
+- Localidad: Casa Blanca
+- Localidad: El Gómez
+- Localidad: Media Luna [Fraccionamiento]
+- Localidad: Pacheco Leandro Valle
+- Localidad: El Cerrito
+- Asentamiento humano: CENTRO — MANZANA
+- Asentamiento humano: CERRITOS — MANZANA
+- Asentamiento humano: NITZHI — MANZANA
+- Asentamiento humano: PANTEÓN — MANZANA
+- Asentamiento humano: 5 — MANZANA
+- Asentamiento humano: CANUTO — MANZANA
+- Asentamiento humano: CENTRO — MANZANA
+- Asentamiento humano: EL TOLUCA — MANZANA
+- Asentamiento humano: VILLA DE GUADALUPE — MANZANA
+- Asentamiento humano: BOMINTHZA EL CARMEN — PUEBLO
+- Asentamiento humano: BOMINTHZA EL CHARCO — PUEBLO
+- Asentamiento humano: BOMINTHZA THENI — PUEBLO
+- Asentamiento humano: EL BONDHO — PUEBLO
+- Asentamiento humano: CAÑADA GRANDE — BARRIO
+- Asentamiento humano: CASA GRANDE — PUEBLO
+- Asentamiento humano: BITHI — MANZANA
+- Asentamiento humano: BODEKA — MANZANA
+- Asentamiento humano: CENTRO — MANZANA
+- Asentamiento humano: SANTA CRUZ — MANZANA
+- Asentamiento humano: FRANCISCO VILLA — COLONIA
+- Asentamiento humano: CANTERA — SECCIÓN
+- Asentamiento humano: CAXNAJAY — SECCIÓN
+- Asentamiento humano: CENTRO — SECCIÓN
+- Asentamiento humano: DAÑHU — SECCIÓN
+- Asentamiento humano: PARAJE — SECCIÓN
+- Asentamiento humano: ALBITER — BARRIO
+- Asentamiento humano: CENTRO — BARRIO
+- Asentamiento humano: HERNÁNDEZ — BARRIO
+- Asentamiento humano: LA SIERRTITA — BARRIO
+- Asentamiento humano: NATIVITAS — BARRIO
+- Asentamiento humano: PEÑA — BARRIO
+- Asentamiento humano: PACHECO DE ALLENDE — BARRIO
+- Asentamiento humano: 1 — MANZANA
+- Asentamiento humano: 2 — MANZANA
+- Asentamiento humano: 3 — MANZANA
+- Asentamiento humano: 4 — MANZANA
+- Asentamiento humano: 1 — MANZANA
+- Asentamiento humano: 2 — MANZANA
+- Asentamiento humano: 3 — MANZANA
+- Asentamiento humano: 4 — MANZANA
+- Asentamiento humano: BOTEY (SAN PEDRO) — MANZANA
+- Asentamiento humano: CENTRO — MANZANA
+- Asentamiento humano: LA CRUZ — MANZANA
+- Asentamiento humano: SAN RAMÓN — MANZANA
+- Asentamiento humano: ASUNCIÓN DE MARÍA — MANZANA
+- Asentamiento humano: CRISTO REY — MANZANA
+- Asentamiento humano: JESÚS DE NAZARETH — MANZANA
+- Asentamiento humano: LA GUADALUPANA — MANZANA
+- Asentamiento humano: LA PURISIMA CONCEPCIÓN — MANZANA
+- Asentamiento humano: SAGRADA FAMILIA — MANZANA
+- Asentamiento humano: SAGRADO CORAZÓN — MANZANA
+- Asentamiento humano: VIRGEN DE LOS REMEDIOS — MANZANA
+- Asentamiento humano: VIRGEN DEL CARMEN — MANZANA
+- Asentamiento humano: EL TABLÓN — COLONIA
+- Asentamiento humano: CENTRO — MANZANA
+- Asentamiento humano: LA CANTERA — MANZANA
+- Asentamiento humano: LUIS DONALDO COLOSIO — MANZANA
+- Asentamiento humano: VICENTE FOX — MANZANA
+- Asentamiento humano: CUARTA — MANZANA
+- Asentamiento humano: OCTAVA — MANZANA
+- Asentamiento humano: PRIMERA — MANZANA
+- Asentamiento humano: QUINTA — MANZANA
+- Asentamiento humano: SEGUNDA — MANZANA
+- Asentamiento humano: SEPTIMA — MANZANA
+- Asentamiento humano: SEXTA — MANZANA
+- Asentamiento humano: TERCERA — MANZANA
+- Asentamiento humano: LEANDRO VALLE — COLONIA
+- Asentamiento humano: CENTRO — MANZANA
+- Asentamiento humano: CRISTO REY — MANZANA
+- Asentamiento humano: FRANCISCO DE ASÍS — MANZANA
+- Asentamiento humano: MARÍA DE GUADALUPE — MANZANA
+- Asentamiento humano: MARÍA DE GUADALUPE — MANZANA
+- Asentamiento humano: MARÍA DE LOS ÁNGELES — MANZANA
+- Asentamiento humano: SAGRADO CORAZÓN — MANZANA
+- Asentamiento humano: SAN JUAN DE LOS LAGOS — MANZANA
+- Asentamiento humano: SAN JUAN DIEGO — MANZANA
+- Asentamiento humano: SANTISIMA TRINIDAD — MANZANA
+- Asentamiento humano: SEÑOR DE LAS MARAVILLAS — MANZANA
+- Asentamiento humano: SEÑOR DE LOS MILAGROS — MANZANA
+- Asentamiento humano: CARNAJAI — BARRIO
+- Asentamiento humano: DENGADHÓ DE JUÁREZ — PUEBLO
+- Asentamiento humano: EL ZOPILOTE — BARRIO
+- Asentamiento humano: LOS PÉREZ — BARRIO
+- Asentamiento humano: LOS SALAZARES — BARRIO
+- Asentamiento humano: LOS VÁZQUEZ — BARRIO
+- Asentamiento humano: VIXTHA DE MADERO — PUEBLO
+- Asentamiento humano: 1 — MANZANA
+- Asentamiento humano: 10 — MANZANA
+- Asentamiento humano: 11 — MANZANA
+- Asentamiento humano: 12 — MANZANA
+- Asentamiento humano: 2 — MANZANA
+- Asentamiento humano: 3 — MANZANA
+- Asentamiento humano: 4 — MANZANA
+- Asentamiento humano: 5 — MANZANA
+- Asentamiento humano: 6 — MANZANA
+- Asentamiento humano: 7 — MANZANA
+- Asentamiento humano: 8 — MANZANA
+- Asentamiento humano: 9 — MANZANA
+- Asentamiento humano: CHALMA — COLONIA
+- Asentamiento humano: LAS LAJAS — COLONIA
+- Asentamiento humano: SAN FRANCISCO — COLONIA
+- Asentamiento humano: SANTA CRUZ — COLONIA
+- Asentamiento humano: SANTA MARÍA — COLONIA
+- Asentamiento humano: SAN ANTONIO ABAD — PUEBLO
+- Asentamiento humano: BARCENAS — SECCIÓN
+- Asentamiento humano: CENTRO — SECCIÓN
+- Asentamiento humano: RENACIMIENTO — SECCIÓN
+- Asentamiento humano: SAN ÁNGEL — SECCIÓN
+- Asentamiento humano: BONDHÓ — SECCIÓN
+- Asentamiento humano: GUADHO — SECCIÓN
+- Asentamiento humano: KÄNDONI — SECCIÓN
+- Asentamiento humano: NBATÚ — SECCIÓN
+- Asentamiento humano: O'YO — SECCIÓN
+- Asentamiento humano: EL MEZQUITAL — PUEBLO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL MIRADOR — COLONIA
+- Asentamiento humano: PEDREGAL — COLONIA
+- Asentamiento humano: RINCONADA — COLONIA
+- Asentamiento humano: CENTRO — SECCIÓN
+- Asentamiento humano: CUATRO — SECCIÓN
+- Asentamiento humano: DOS — SECCIÓN
+- Asentamiento humano: TRES — SECCIÓN
+- Asentamiento humano: UNO — SECCIÓN
+- Asentamiento humano: EL DURAZNO — PUEBLO
+- Asentamiento humano: LA PALMA — PUEBLO
+- Asentamiento humano: EL PUERTO LÁZARO CÁRDENAS — PUEBLO
+- Asentamiento humano: RINCÓN SANTA MARÍA — COLONIA
+- Asentamiento humano: CASA BLANCA — COLONIA
+- Asentamiento humano: EL GÓMEZ — COLONIA
+- Asentamiento humano: MEDIA LUNA — FRACCIONAMIENTO
+- Asentamiento humano: PACHECO LEANDRO VALLE — COLONIA
+
+## Municipio: Santiago de Anaya
+
+- Localidad: Santiago de Anaya
+- Localidad: El Águila
+- Localidad: La Blanca (Taxtho la Blanca)
+- Localidad: Cerritos
+- Localidad: El Encino
+- Localidad: González González
+- Localidad: González Ortega
+- Localidad: Guerrero
+- Localidad: Hermosillo Monte Noble
+- Localidad: Lomas de Guillén
+- Localidad: El Mezquital
+- Localidad: El Palmar
+- Localidad: Patria Nueva
+- Localidad: Santa Mónica
+- Localidad: El Sitio
+- Localidad: Xitzo
+- Localidad: Yolotepec
+- Localidad: Zaragoza
+- Localidad: El Porvenir
+- Localidad: El Nopalillo
+- Localidad: Ejido del Mezquital
+- Localidad: Puerto Tavera
+- Localidad: El Aguacate
+- Localidad: La Loma del Conejo
+- Localidad: El Puerto
+- Localidad: Xhotadi
+- Localidad: El Contza
+- Localidad: Jagüey
+- Localidad: Cerro Gordo
+- Localidad: La Corraleja
+- Localidad: Leonardo Ramírez [Colonia]
+- Localidad: Yolotepec [Ejido]
+- Asentamiento humano: NORTE MANZANA 1 — SECCIÓN
+- Asentamiento humano: NORTE MANZANA 2 — SECCIÓN
+- Asentamiento humano: NORTE MANZANA 3 — SECCIÓN
+- Asentamiento humano: NORTE MANZANA 4 — SECCIÓN
+- Asentamiento humano: SUR MANZANA 1 — SECCIÓN
+- Asentamiento humano: SUR MANZANA 2 — SECCIÓN
+- Asentamiento humano: SUR MANZANA 3 — SECCIÓN
+- Asentamiento humano: SUR MANZANA 4 — SECCIÓN
+- Asentamiento humano: LA BLANCA — BARRIO
+- Asentamiento humano: CERRITOS — BARRIO
+- Asentamiento humano: GONZÁLEZ GONZÁLEZ — PUEBLO
+- Asentamiento humano: GONZÁLEZ ORTEGA — COLONIA
+- Asentamiento humano: GUERRERO — PUEBLO
+- Asentamiento humano: HERMOSILLO MONTE NOBLE — PUEBLO
+- Asentamiento humano: EL MEZQUITAL — EJIDO
+- Asentamiento humano: PATRIA NUEVA — PUEBLO
+- Asentamiento humano: SANTA MÓNICA — PUEBLO
+- Asentamiento humano: EL SITIO — PUEBLO
+- Asentamiento humano: XITZO — COLONIA
+- Asentamiento humano: DECA I — MANZANA
+- Asentamiento humano: DECA II — MANZANA
+- Asentamiento humano: LA CAÑADA — MANZANA
+- Asentamiento humano: PUEBLO NUEVO — MANZANA
+- Asentamiento humano: VIXTHA — MANZANA
+- Asentamiento humano: ZARAGOZA — BARRIO
+- Asentamiento humano: JAGÜEY — PUEBLO
+
+## Municipio: Santiago Tulantepec de Lugo Guerrero
+
+- Localidad: Santiago Tulantepec
+- Localidad: Las Lajas
+- Localidad: Los Romeros
+- Localidad: El Pedregal de San José
+- Localidad: San Miguel Huatengo
+- Localidad: Tilhuacán
+- Localidad: Ventoquipa
+- Localidad: Palpa
+- Localidad: Altepemila
+- Localidad: Paxtepec
+- Localidad: Sayola
+- Localidad: Sangre de Cristo
+- Localidad: La Joya
+- Localidad: Rancho Colorado
+- Localidad: El Mirador [Rancho]
+- Localidad: Agrícola Oriental
+- Localidad: Felipe Ángeles [Colonia]
+- Localidad: La Joya 2da. Sección
+- Localidad: Emiliano Zapata
+- Localidad: Unidades Habitacionales
+- Localidad: San Luis Buena Vista
+- Localidad: San Pedro Huatengo
+- Localidad: Santa Ana del Monte
+- Localidad: El Charco
+- Localidad: La Era
+- Localidad: Rinconada las Aves
+- Localidad: Unidad Magisterial San José [Colonia]
+- Localidad: El Salado
+- Localidad: Las Camelinas
+- Asentamiento humano: 2 de Enero — COLONIA
+- Asentamiento humano: 5 de Mayo — COLONIA
+- Asentamiento humano: Agrícola Oriental — COLONIA
+- Asentamiento humano: Ahila — COLONIA
+- Asentamiento humano: Alta Luz — COLONIA
+- Asentamiento humano: Álvaro Obregón — COLONIA
+- Asentamiento humano: Ampliación Francisco Villa — COLONIA
+- Asentamiento humano: Ampliación Raúl Lozano — COLONIA
+- Asentamiento humano: Ampliación San Isidro — COLONIA
+- Asentamiento humano: Campamento — COLONIA
+- Asentamiento humano: Carlos Aguilar Álvarez (El Planetario) — COLONIA
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: Exquitlan — COLONIA
+- Asentamiento humano: Francisco Villa — COLONIA
+- Asentamiento humano: La Explanada del Pedregal — COLONIA
+- Asentamiento humano: La Florida — COLONIA
+- Asentamiento humano: Las Palmas — COLONIA
+- Asentamiento humano: Lázaro Cárdenas — COLONIA
+- Asentamiento humano: Los Pinos — FRACCIONAMIENTO
+- Asentamiento humano: María Fernanda — FRACCIONAMIENTO
+- Asentamiento humano: Nuevo Santiago — FRACCIONAMIENTO
+- Asentamiento humano: Rancho la Palma — COLONIA
+- Asentamiento humano: Raúl Lozano — COLONIA
+- Asentamiento humano: San Carlos I y II — FRACCIONAMIENTO
+- Asentamiento humano: San Isidro — COLONIA
+- Asentamiento humano: San Javier — FRACCIONAMIENTO
+- Asentamiento humano: Sayola — COLONIA
+- Asentamiento humano: Vicente Guerrero — COLONIA
+- Asentamiento humano: Xacalco — COLONIA
+- Asentamiento humano: Las Lajas — COLONIA
+- Asentamiento humano: Los Romeros — COLONIA
+- Asentamiento humano: El Pedregal de San José — COLONIA
+- Asentamiento humano: Francisco Villa — COLONIA
+- Asentamiento humano: La Villita — COLONIA
+- Asentamiento humano: Rancho Grande — COLONIA
+- Asentamiento humano: San Carlos el Encinal — COLONIA
+- Asentamiento humano: San José — AMPLIACIÓN
+- Asentamiento humano: Villas San Carlos — FRACCIONAMIENTO
+- Asentamiento humano: San Miguel Huatengo — COLONIA
+- Asentamiento humano: Tilhuacán — COLONIA
+- Asentamiento humano: Ventoquipa — COLONIA
+- Asentamiento humano: Altepemila — COLONIA
+- Asentamiento humano: Paxtepec — COLONIA
+- Asentamiento humano: Sayola — COLONIA
+- Asentamiento humano: El Biznaguero — COLONIA
+- Asentamiento humano: La Joya — COLONIA
+- Asentamiento humano: Villas de la Joya — COLONIA
+- Asentamiento humano: Agrícola Oriental — COLONIA
+- Asentamiento humano: Felipe Ángeles — COLONIA
+- Asentamiento humano: Satélites — COLONIA
+- Asentamiento humano: Tulipanes — COLONIA
+- Asentamiento humano: Joya del Sur — FRACCIONAMIENTO
+- Asentamiento humano: Joyas Prehispánicas — FRACCIONAMIENTO
+- Asentamiento humano: La Joya 2Da Sección — RANCHERÍA
+- Asentamiento humano: Emiliano Zapata — COLONIA
+- Asentamiento humano: Arboledas de Santiago — FRACCIONAMIENTO
+- Asentamiento humano: Bosques de San Francisco — FRACCIONAMIENTO
+- Asentamiento humano: Bosques de Santiago Primera Sección — FRACCIONAMIENTO
+- Asentamiento humano: Bosques de Santiago Segunda Sección — FRACCIONAMIENTO
+- Asentamiento humano: Desarrollo Habitacional San José — FRACCIONAMIENTO
+- Asentamiento humano: Dina Habitacional — FRACCIONAMIENTO
+- Asentamiento humano: Habitacional del Bosque — FRACCIONAMIENTO
+- Asentamiento humano: San Pedro Huatengo — COLONIA
+- Asentamiento humano: Rinconada de Las Aves — FRACCIONAMIENTO
+- Asentamiento humano: Magistral San José — FRACCIONAMIENTO
+- Asentamiento humano: Las Camelinas — COLONIA
+## Municipio: Singuilucan
+
+- Localidad: Singuilucan
+- Localidad: Alfajayucan
+- Localidad: Amolucan
+- Localidad: Buenavista
+- Localidad: Caraballo
+- Localidad: La Comunidad
+- Localidad: Cuatro Palos
+- Localidad: La Estancia
+- Localidad: Francisco I. Madero
+- Localidad: La Gloria
+- Localidad: Jalapilla
+- Localidad: El Listón
+- Localidad: Matías Rodríguez
+- Localidad: Mirasoles
+- Localidad: La Paila
+- Localidad: Plutarco Elías Calles
+- Localidad: Poza Rica
+- Localidad: San Cayetano
+- Localidad: Santa Ana Chichicuautla
+- Localidad: Segundas Lajas
+- Localidad: Somorriel
+- Localidad: El Susto
+- Localidad: San Nicolás Tecoaco
+- Localidad: El Cebadal
+- Localidad: Tlalayote
+- Localidad: San Joaquín
+- Localidad: Francisco I. Madero (Colonia Agrícola) [Colonia]
+- Localidad: La Estancia (La Mora)
+- Localidad: Tlazala
+- Localidad: Texcaltitla
+- Localidad: Aguayutla
+- Localidad: La Cuchilla
+- Localidad: La Joya
+- Localidad: Tecanecapa
+- Localidad: Chapultepec
+- Localidad: Sabanetas
+- Localidad: La Conchita (La Cantera)
+- Localidad: Los Ángeles (La Paila)
+- Localidad: Las Canoas
+- Localidad: San Luis Xuchitepec (Rancho Colorado)
+- Localidad: San Martín el Coyote
+- Localidad: San Rafael
+- Localidad: Las Galeras
+- Localidad: La Herradura
+- Localidad: Jagüey Alto
+- Localidad: Minillas
+- Localidad: El Sueño (Los Morales)
+- Localidad: Las Palomas
+- Localidad: Pedernales
+- Localidad: Las Pintas
+- Localidad: La Raya
+- Localidad: La Gloria
+- Localidad: San Cristóbal el Chico
+- Localidad: La Reforma (San Isidro)
+- Localidad: San José
+- Localidad: San Rafael
+- Localidad: San Rafael Amolucan
+- Localidad: El Varal
+- Localidad: La Venta Colorada
+- Localidad: La Virgen
+- Localidad: Monte Quieto
+- Localidad: Las Cruces
+- Localidad: La Colmena
+- Localidad: Techoapa
+- Localidad: La Gaspareña
+- Localidad: El Campamento
+- Localidad: La Lagunita
+- Localidad: Ampliación el Varal
+- Localidad: Las Marianas
+- Localidad: Ex-Hacienda de Mirasoles
+- Localidad: El Paraíso
+- Localidad: San Pedro
+- Localidad: La Conchita
+- Localidad: La Esmeralda
+- Localidad: Los Gorriones
+- Localidad: Los Olvera
+- Localidad: El Venado
+- Localidad: Rincón del Agua
+- Localidad: Rincón del Puerto
+- Localidad: El Sustito
+- Localidad: La Herradura
+- Localidad: La Cueva (El Tezontle)
+- Localidad: Xuchipango
+- Localidad: El Encinal
+- Localidad: El Nopalillo
+- Localidad: El Jazmín
+- Localidad: Las Fuentes [Fraccionamiento]
+- Localidad: La Mora
+- Localidad: Los Negritos
+- Localidad: La Palma
+- Localidad: La Providencia
+- Localidad: Los Rosales
+- Localidad: Cerro Colorado
+- Localidad: Colonia del Bosque
+- Localidad: Los Arbolitos
+- Localidad: Cuatro Vientos
+- Localidad: Ampliación el Sustito
+- Localidad: La Era Grande
+- Localidad: Hacienda Alfajayucan
+- Localidad: La Ladrillera
+- Localidad: Loma del Toro
+- Localidad: Las Minas
+- Localidad: Las Palmas
+- Localidad: La Peña
+- Localidad: Los Pinos
+- Localidad: San Ignacio
+- Localidad: Santa Rosa
+- Localidad: Las Trojes
+- Localidad: Altamira
+- Localidad: El Chichimeco
+- Localidad: Estación San Vicente
+- Localidad: Los Pinos
+- Localidad: Jagüey Viejo
+- Localidad: El Mirador
+- Localidad: Ampliación Alfajayucan
+- Localidad: San Carlos
+- Localidad: La Pradera
+- Localidad: El Toronjil
+- Localidad: Los Patos [Colonia]
+- Localidad: Mirasoles Parte Alta
+- Localidad: Arboledas
+- Localidad: Bosques del Ángel
+- Localidad: El Gallito [Rancho]
+- Localidad: San Francisco Londres
+- Localidad: Villas del Sol
+- Localidad: La Rosa
+- Localidad: El Tesoro
+- Localidad: El Carmen [Rancho]
+- Localidad: Ampliación las Palomas
+- Localidad: Las Palomas Segunda Sección
+- Asentamiento humano: BENITO JUÁREZ — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CHABACANO — COLONIA
+- Asentamiento humano: EL MAYAHUETL — FRACCIONAMIENTO
+- Asentamiento humano: INGENIERO MIGUEL ESPEJEL — COLONIA
+- Asentamiento humano: JOSEFA ORTÍZ DE DOMÍNGUEZ — COLONIA
+- Asentamiento humano: LA PAZ — COLONIA
+- Asentamiento humano: LAS HACIENDAS — COLONIA
+- Asentamiento humano: LOS ALTOS PRIMERA SECCIÓN — COLONIA
+- Asentamiento humano: LOS ALTOS SEGUNDA SECCIÓN — COLONIA
+- Asentamiento humano: LOS PINOS — COLONIA
+- Asentamiento humano: LOS SAUCOS — COLONIA
+- Asentamiento humano: SANCARRON — BARRIO
+- Asentamiento humano: UNIDAD DEPORTIVA — COLONIA
+- Asentamiento humano: VILLAS DE SINGUILUCAN — FRACCIONAMIENTO
+- Asentamiento humano: ALFAJAYUCAN — PUEBLO
+- Asentamiento humano: CARABALLO — RANCHERÍA
+- Asentamiento humano: LA COMUNIDAD — RANCHERÍA
+- Asentamiento humano: CUATRO PALOS — RANCHERÍA
+- Asentamiento humano: FRANCISCO I. MADERO — RANCHERÍA
+- Asentamiento humano: LA GLORIA — RANCHERÍA
+- Asentamiento humano: JALAPILLA — RANCHERÍA
+- Asentamiento humano: MATÍAS RODRÍGUEZ — PUEBLO
+- Asentamiento humano: PLUTARCO ELIAS CALLES — RANCHERÍA
+- Asentamiento humano: POZA RICA — RANCHERÍA
+- Asentamiento humano: SANTA ANA CHICHICUAUTLA — RANCHERÍA
+- Asentamiento humano: SEGUNDAS LAJAS — RANCHERÍA
+- Asentamiento humano: SOMORRIEL — RANCHERÍA
+- Asentamiento humano: EL SUSTO — PUEBLO
+- Asentamiento humano: EL CEBADAL — RANCHERÍA
+- Asentamiento humano: TEXCALTITLA — RANCHERÍA
+- Asentamiento humano: LA CONCHITA — RANCHERÍA
+- Asentamiento humano: LAS PALOMAS — COLONIA
+- Asentamiento humano: LA GLORIA — RANCHERÍA
+- Asentamiento humano: SAN RAFAEL AMOLUCAN — RANCHERÍA
+- Asentamiento humano: EL VARAL — RANCHERÍA
+- Asentamiento humano: RINCÓN DEL PUERTO — RANCHERÍA
+- Asentamiento humano: EL SUSTITO — PUEBLO
+- Asentamiento humano: LAS FUENTES — FRACCIONAMIENTO
+- Asentamiento humano: LA PEÑA — RANCHERÍA
+- Asentamiento humano: LOS PINOS — RANCHERÍA
+- Asentamiento humano: EL MIRADOR — RANCHERÍA
+- Asentamiento humano: AMPLIACIÓN ALFAJAYUCAN — RANCHERÍA
+- Asentamiento humano: ARBOLEDAS — COLONIA
+- Asentamiento humano: LA ROSA — PUEBLO
+- Asentamiento humano: EL TESORO — COLONIA
+- Asentamiento humano: LAS PALOMAS — RANCHERÍA
+
+## Municipio: Tecozautla
+
+- Localidad: Tecozautla
+- Localidad: El Ahorcado
+- Localidad: Aljibes
+- Localidad: Atengo
+- Localidad: Bajhí
+- Localidad: Banzhá
+- Localidad: Bomanxotha
+- Localidad: Boñhé
+- Localidad: Bothé
+- Localidad: Boxhi
+- Localidad: Cuamxhi
+- Localidad: El Dedhó
+- Localidad: La Esquina
+- Localidad: Gandho
+- Localidad: Guadalupe
+- Localidad: La Joya
+- Localidad: Maguey Verde
+- Localidad: Manguaní
+- Localidad: La Mesilla
+- Localidad: Ninthí
+- Localidad: La Paila
+- Localidad: El Palmar
+- Localidad: Pañhé
+- Localidad: El Paso
+- Localidad: Ranzhá
+- Localidad: El Riito
+- Localidad: La Salitrera
+- Localidad: El Salto
+- Localidad: San Antonio
+- Localidad: San Francisco
+- Localidad: San Joaquín
+- Localidad: San José el Desierto
+- Localidad: San Miguel Caltepantla
+- Localidad: Taxbathá
+- Localidad: Tenzabhí
+- Localidad: Uxdejhé
+- Localidad: Yethay
+- Localidad: La Sabina
+- Localidad: El Mercader
+- Localidad: Rayón
+- Localidad: Las Galindas
+- Localidad: El Doranhi
+- Localidad: Rancho Viejo
+- Localidad: El Géiser
+- Localidad: Yextho Chico
+- Localidad: La Cochera [Barrio]
+- Localidad: Pathecito [Rancho]
+- Localidad: Tzidejhé
+- Localidad: San Pedro
+- Localidad: Joñhé
+- Localidad: Candhó
+- Localidad: La Cruz de Piedra
+- Localidad: La Codorniz
+- Localidad: Hacienda Guadalupe
+- Localidad: Pared Blanca
+- Localidad: La Presa
+- Localidad: La Polvadera
+- Localidad: Gumbhó
+- Localidad: El Crucero
+- Localidad: La Cruz
+- Localidad: La Cueva
+- Localidad: El Huizachal (El Sombrerete)
+- Localidad: La Lomita
+- Localidad: Nuevo Aljibes
+- Localidad: La Palma
+- Localidad: Rancho Cerro Frío
+- Localidad: Rancho la Parada
+- Localidad: Santa Bárbara [Rancho]
+- Localidad: El Caracol
+- Localidad: Las Granjas del Ejido de Tecozautla
+- Localidad: La Otra Banda
+- Localidad: La Cruz de Piedra
+- Localidad: El Charcón
+- Localidad: El Granjenal (Las Adjuntas)
+- Localidad: El Halcón
+- Localidad: El Zundhó
+- Localidad: Los Carrizos
+- Asentamiento humano: Bondinzha — BARRIO
+- Asentamiento humano: Cruz Blanca — BARRIO
+- Asentamiento humano: El Calvario — BARRIO
+- Asentamiento humano: El Caracol — BARRIO
+- Asentamiento humano: El Centro — BARRIO
+- Asentamiento humano: La Divina Providencia — BARRIO
+- Asentamiento humano: La Metralla — BARRIO
+- Asentamiento humano: Las Bóvedas — BARRIO
+- Asentamiento humano: Los Arcos — BARRIO
+- Asentamiento humano: Los Carrizos — BARRIO
+- Asentamiento humano: Los Cruces — BARRIO
+- Asentamiento humano: Los Granizos — BARRIO
+- Asentamiento humano: Los Moros — BARRIO
+- Asentamiento humano: Santiaguito — BARRIO
+- Asentamiento humano: Zundhó — BARRIO
+- Asentamiento humano: Aljibes — PUEBLO
+- Asentamiento humano: Atengo — PUEBLO
+- Asentamiento humano: Bajhí — PUEBLO
+- Asentamiento humano: Banzhá — PUEBLO
+- Asentamiento humano: Bomanxotha — PUEBLO
+- Asentamiento humano: Bothé — PUEBLO
+- Asentamiento humano: Boxhí — RANCHERÍA
+- Asentamiento humano: Cuamxhí — PUEBLO
+- Asentamiento humano: La Esquina — PUEBLO
+- Asentamiento humano: Gandho — PUEBLO
+- Asentamiento humano: Guadalupe — PUEBLO
+- Asentamiento humano: La Joya — COLONIA
+- Asentamiento humano: Maguey Verde — PUEBLO
+- Asentamiento humano: Manguani — PUEBLO
+- Asentamiento humano: La Mesilla — PUEBLO
+- Asentamiento humano: Ninthí — PUEBLO
+- Asentamiento humano: La Paila — COLONIA
+- Asentamiento humano: El Palmar — PUEBLO
+- Asentamiento humano: Pañhe — PUEBLO
+- Asentamiento humano: El Paso — PUEBLO
+- Asentamiento humano: El Riito — PUEBLO
+- Asentamiento humano: El Salitrera — RANCHERÍA
+- Asentamiento humano: El Salto — PUEBLO
+- Asentamiento humano: San Antonio — PUEBLO
+- Asentamiento humano: San Francisco — PUEBLO
+- Asentamiento humano: San Joaquín — PUEBLO
+- Asentamiento humano: San Miguel Caltepantla — PUEBLO
+- Asentamiento humano: Tenzabhí — PUEBLO
+- Asentamiento humano: Uxdejhe — PUEBLO
+- Asentamiento humano: Yethay — PUEBLO
+- Asentamiento humano: La Sabina — PUEBLO
+- Asentamiento humano: Rancho Viejo — PUEBLO
+- Asentamiento humano: Hacienda Yexthó — FRACCIONAMIENTO
+- Asentamiento humano: Tzidejhé — PUEBLO
+- Asentamiento humano: San Pedro — PUEBLO
+- Asentamiento humano: Joñhe — PUEBLO
+- Asentamiento humano: La Cruz Piedra — PUEBLO
+- Asentamiento humano: Pared Blanca — PUEBLO
+- Asentamiento humano: La Presa — PUEBLO
+- Asentamiento humano: El Crucero — PUEBLO
+- Asentamiento humano: La Lomita — PUEBLO
+- Asentamiento humano: Nuevo Aljibes — PUEBLO
+- Asentamiento humano: La Otra Banda — COLONIA
+- Asentamiento humano: La Cruz de Piedra — PUEBLO
+- Asentamiento humano: El Zundhó — PUEBLO
+
+## Municipio: Tepeapulco
+
+- Localidad: Tepeapulco
+- Localidad: Fray Bernardino de Sahagún (Ciudad Sahagún)
+- Localidad: Los Cides
+- Localidad: Los Coyotes
+- Localidad: Francisco Sarabia (Corralillos)
+- Localidad: Irolo
+- Localidad: Jagüey Prieto
+- Localidad: Palo Hueco
+- Localidad: San Jerónimo
+- Localidad: San Miguel Allende
+- Localidad: San Salvador (El Calvario)
+- Localidad: Tepalpa
+- Localidad: San Bartolomé Tepetates
+- Localidad: Texcatzongo
+- Localidad: Tultengo
+- Localidad: Vista Hermosa
+- Localidad: San Jeronimito
+- Localidad: La Estación Ocho
+- Localidad: Cruz Blanca (Santa Cruz)
+- Localidad: 20 de Noviembre [Colonia]
+- Localidad: San Ignacio de Loyola
+- Localidad: Las Cabrerías (La Rinconada)
+- Localidad: Las Delicias
+- Localidad: El Mirto
+- Localidad: La Rinconada
+- Localidad: San José Tultengo
+- Localidad: Granja de Aguilera
+- Localidad: La Cañada
+- Localidad: La Loma
+- Localidad: Palmillas
+- Localidad: Paso del Cristo
+- Localidad: Pueblilla
+- Localidad: Rancho los Ángeles
+- Localidad: Las Águilas [Rancho]
+- Localidad: Los García
+- Localidad: Rancho Gutiérrez
+- Localidad: La Loma de San Juan
+- Localidad: Juan Montaño Hernández
+- Localidad: Morales  [Rancho]
+- Localidad: Los Ortíz
+- Localidad: Hidalgo [Zona Industrial]
+- Localidad: Rancho Sánchez
+- Localidad: La Plateada
+- Localidad: Rancho Zarate
+- Localidad: Las Bedollas
+- Localidad: San José de Jesús
+- Localidad: Los Duraznos
+- Localidad: Quince Hermanos [Rancho]
+- Localidad: Los Reyes
+- Localidad: El Xihuingo [Rancho]
+- Localidad: La Tula
+- Localidad: El Capulín
+- Localidad: La Caseta de Aforos
+- Localidad: La Isleta
+- Localidad: Oxtocapa
+- Localidad: El Potrero
+- Localidad: Heriberto Castillo Muñoz
+- Localidad: El Llano de la Presa
+- Localidad: Los 10 Hermanos (Las Huertas) [Rancho]
+- Localidad: Los López
+- Localidad: Pedro Meneses
+- Localidad: Los Quintos
+- Localidad: Temomusgo
+- Localidad: Tlacatepa
+- Localidad: El Magueyal (Las Palomas) [Colonia]
+- Localidad: La Ermita
+- Localidad: La Pelusa
+- Localidad: San José (Los Montaño)
+- Localidad: Abel Sánchez López (Don Abel) [Rancho]
+- Localidad: Las Cabañas [Colonia]
+- Localidad: Matías Rodríguez [Colonia]
+- Asentamiento humano: 14 DE FEBRERO — COLONIA
+- Asentamiento humano: 18 DE MARZO — COLONIA
+- Asentamiento humano: AMPLIACIÓN DEL TRABAJO — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: COLONIA DEL TRABAJO — COLONIA
+- Asentamiento humano: CONSTITUCIÓN DE 1917 — COLONIA
+- Asentamiento humano: EL CALVARIO — COLONIA
+- Asentamiento humano: FRANCISCO I. MADERO — COLONIA
+- Asentamiento humano: LA CANDELARIA — COLONIA
+- Asentamiento humano: LOS FRAILES I — COLONIA
+- Asentamiento humano: LOS FRAILES II — COLONIA
+- Asentamiento humano: LOS REYES — COLONIA
+- Asentamiento humano: PIEDRAS NEGRAS — COLONIA
+- Asentamiento humano: PINO SUÁREZ — COLONIA
+- Asentamiento humano: PINO SUÁREZ — AMPLIACIÓN
+- Asentamiento humano: PLAZA VIEJA — COLONIA
+- Asentamiento humano: PLAZA VIEJA — AMPLIACIÓN
+- Asentamiento humano: SALES Y MINERALES — COLONIA
+- Asentamiento humano: SANTA BÁRBARA — COLONIA
+- Asentamiento humano: 21 DE JULIO — FRACCIONAMIENTO
+- Asentamiento humano: ABECEDARIO — COLONIA
+- Asentamiento humano: BENITO JUÁREZ — FRACCIONAMIENTO
+- Asentamiento humano: CARROS — FRACCIONAMIENTO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: COLONIA DEL BOSQUE — COLONIA
+- Asentamiento humano: DIKONA — FRACCIONAMIENTO
+- Asentamiento humano: DINA — FRACCIONAMIENTO
+- Asentamiento humano: EL CHAMIZAL — COLONIA
+- Asentamiento humano: EL PEDREGAL — COLONIA
+- Asentamiento humano: EXHACIENDA GUADALUPE — FRACCIONAMIENTO
+- Asentamiento humano: GRANJAS — FRACCIONAMIENTO
+- Asentamiento humano: GRANJAS DE GUADALUPE — COLONIA
+- Asentamiento humano: GUADALUPE — FRACCIONAMIENTO
+- Asentamiento humano: IMSS — FRACCIONAMIENTO
+- Asentamiento humano: INDEPENDENCIA — FRACCIONAMIENTO
+- Asentamiento humano: JARDINES DEL PEDREGAL — COLONIA
+- Asentamiento humano: JOSÉ MARÍA MORELOS — COLONIA
+- Asentamiento humano: LAS HACIENDAS — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DEL PEDREGAL — COLONIA
+- Asentamiento humano: MIGUEL HIDALGO — COLONIA
+- Asentamiento humano: MINEROS — FRACCIONAMIENTO
+- Asentamiento humano: PALMILLAS — COLONIA
+- Asentamiento humano: PLAN DE AYALA — COLONIA
+- Asentamiento humano: PLAN DE GUADALUPE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DE SINDICATO MINERO — FRACCIONAMIENTO
+- Asentamiento humano: REAL DEL BOSQUE — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL DINA — FRACCIONAMIENTO
+- Asentamiento humano: ROJO GÓMEZ — COLONIA
+- Asentamiento humano: SAHAGÚN — PARQUE INDUSTRIAL
+- Asentamiento humano: SALVADOR ALLENDE — FRACCIONAMIENTO
+- Asentamiento humano: SIDENA — FRACCIONAMIENTO
+- Asentamiento humano: TADEO DE NIZA — FRACCIONAMIENTO
+- Asentamiento humano: TEPEAPULCO — FRACCIONAMIENTO
+- Asentamiento humano: TESATLA — COLONIA
+- Asentamiento humano: UNIDAD CAMPESINA — COLONIA
+- Asentamiento humano: UNIDAD MINERA NAPOLEÓN — FRACCIONAMIENTO
+- Asentamiento humano: UNTA BICENTENARIO — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DE GUADALUPE — COLONIA
+- Asentamiento humano: VICENTE GUERRERO — COLONIA
+- Asentamiento humano: VILLAS DE SAHAGÚN — FRACCIONAMIENTO
+- Asentamiento humano: LOS CIDES — PUEBLO
+- Asentamiento humano: LOS COYOTES — RANCHERÍA
+- Asentamiento humano: FRANCISCO SARABIA — RANCHERÍA
+- Asentamiento humano: IROLO — COLONIA
+- Asentamiento humano: JAGÜEY PRIETO — RANCHERÍA
+- Asentamiento humano: PALO HUECO — RANCHERÍA
+- Asentamiento humano: SAN JERÓNIMO — RANCHERÍA
+- Asentamiento humano: SAN MIGUEL ALLENDE — RANCHERÍA
+- Asentamiento humano: SAN SALVADOR (EL CALVARIO) — RANCHERÍA
+- Asentamiento humano: SAN BARTOLOMÉ TEPETATES — PUEBLO
+- Asentamiento humano: TEXCATZONGO — RANCHERÍA
+- Asentamiento humano: TULTENGO — RANCHERÍA
+- Asentamiento humano: VISTA HERMOSA — RANCHERÍA
+- Asentamiento humano: 20 DE NOVIEMBRE — COLONIA
+- Asentamiento humano: LA RINCONADA — RANCHERÍA
+- Asentamiento humano: HIDALGO — ZONA INDUSTRIAL
+- Asentamiento humano: SAN JOSÉ DE JESÚS — COLONIA
+- Asentamiento humano: LOS REYES — COLONIA
+- Asentamiento humano: LAS CABAÑAS — COLONIA
+
+## Municipio: Tepeji del Río de Ocampo
+
+- Localidad: Tepeji del Río de Ocampo
+- Localidad: El Banco (El Banco Vega de Madero)
+- Localidad: Cantera de Villagrán
+- Localidad: Cañada de Madero
+- Localidad: La Loma
+- Localidad: Melchor Ocampo (El Salto)
+- Localidad: Montecillo
+- Localidad: Ojo de Agua
+- Localidad: San Buenaventura
+- Localidad: San Ignacio Nopala
+- Localidad: San Ildefonso
+- Localidad: San José Piedra Gorda
+- Localidad: San Mateo Buenavista
+- Localidad: Santa Ana Atzcapotzaltongo
+- Localidad: Santa María Magdalena
+- Localidad: Santa María Quelites
+- Localidad: Santiago Tlapanaloya
+- Localidad: Santiago Tlautla
+- Localidad: Taxhido
+- Localidad: Tianguistengo (La Romera)
+- Localidad: Tinajas
+- Localidad: Vega de Madero
+- Localidad: Dos Peñas
+- Localidad: Benito Juárez
+- Localidad: Santiago Tlaltepoxco
+- Localidad: Canoas
+- Localidad: Miraflores
+- Localidad: El Zapote
+- Localidad: El Encino
+- Localidad: El Capulín
+- Localidad: El Carrizal
+- Localidad: Presa Escondida 2da. Sección Hacienda la Nopalera
+- Localidad: La Estancia 1ra. Sección Santa María Magdalena
+- Localidad: Golondrinas
+- Localidad: Presa Escondida
+- Localidad: Unidad Obrera Habitacional CTM
+- Localidad: Xaisnal
+- Localidad: Tinajas Segunda Sección
+- Localidad: Pie de Casas
+- Localidad: Lumbrera 19 (Barranca del Muerto)
+- Localidad: Lumbrera 18
+- Localidad: La Placa
+- Localidad: Lumbrera 20
+- Localidad: Loma de la Lechuguilla
+- Localidad: La Lagunilla
+- Localidad: Las Colonias
+- Localidad: La Planada
+- Localidad: El Caracol
+- Localidad: San Isidro
+- Localidad: La Flor
+- Localidad: Montería Real del Río [Rancho]
+- Localidad: Lomas Campestre de la Cantera
+- Localidad: Camino a la Presa (Los Rincones)
+- Localidad: Ejido de Xalpa
+- Localidad: Hacienda Xajay
+- Localidad: Puertecito (Cerrito de la Cruz)
+- Localidad: Palo Grande
+- Localidad: Las Isabeles [Rancho]
+- Localidad: La Loma 2da. Sección
+- Localidad: Los Manolos [Rancho]
+- Localidad: Raramuri [Rancho]
+- Localidad: San Vicente [Rancho]
+- Localidad: Los Cedros
+- Localidad: Cerro Colorado
+- Localidad: La Cruz
+- Localidad: El Lienzo
+- Localidad: San Mateo Segunda Sección
+- Localidad: La Palma
+- Localidad: Los Túneles
+- Localidad: Tinajas [Barrio]
+- Localidad: La Xaisnera
+- Localidad: Ejido Melchor Ocampo (Barrio Alto)
+- Localidad: Tepeji del Río [Ejido]
+- Localidad: Amanali
+- Localidad: Los Borregos
+- Localidad: Tepeji [Parque Industrial]
+- Localidad: La Nueva Estancia
+- Asentamiento humano: ATENGO — COLONIA
+- Asentamiento humano: EL CARMEN — COLONIA
+- Asentamiento humano: EL CERRITO — COLONIA
+- Asentamiento humano: EL EDÉN — COLONIA
+- Asentamiento humano: NOXTONGO PRIMERA — COLONIA
+- Asentamiento humano: NOXTONGO SEGUNDA — COLONIA
+- Asentamiento humano: PRADERAS DE TEPEJI — FRACCIONAMIENTO
+- Asentamiento humano: SAN FRANCISCO PRIMERA — COLONIA
+- Asentamiento humano: SAN FRANCISCO SEGUNDA — COLONIA
+- Asentamiento humano: SAN JUAN OTLAXPA — COLONIA
+- Asentamiento humano: SAN MATEO PRIMERA — COLONIA
+- Asentamiento humano: SAN MATEO SEGUNDA — COLONIA
+- Asentamiento humano: TAXHIDO — COLONIA
+- Asentamiento humano: TLAXINACALPAN — COLONIA
+- Asentamiento humano: LA LOMA — BARRIO
+- Asentamiento humano: BARRIO ALTO — COLONIA
+- Asentamiento humano: BUENOS AIRES — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL BORDO — COLONIA
+- Asentamiento humano: EL CERRITO — COLONIA
+- Asentamiento humano: EL SABINO — COLONIA
+- Asentamiento humano: LA HACIENDA — COLONIA
+- Asentamiento humano: LOS HORNOS — COLONIA
+- Asentamiento humano: MONTECILLO — BARRIO
+- Asentamiento humano: SAN BUENAVENTURA — NINGUNO
+- Asentamiento humano: SAN IGNACIO NOPALA — PUEBLO
+- Asentamiento humano: CERRITO — COLONIA
+- Asentamiento humano: EL CENTRO — COLONIA
+- Asentamiento humano: LA FLOR — COLONIA
+- Asentamiento humano: LA LOMA — COLONIA
+- Asentamiento humano: LOMA ALTA — COLONIA
+- Asentamiento humano: SAN JOSÉ PIEDRA GORDA — PUEBLO
+- Asentamiento humano: SAN MATEO BUENAVISTA — PUEBLO
+- Asentamiento humano: SANTA MARÍA QUELITES — PUEBLO
+- Asentamiento humano: SANTIAGO TLAPANALOYA — PUEBLO
+- Asentamiento humano: TAXHIDO — COLONIA
+- Asentamiento humano: LOMAS DE LA CANTERA — NINGUNO
+- Asentamiento humano: TIANGUISTENGO — COLONIA
+- Asentamiento humano: EL PARAÍSO — FRACCIONAMIENTO
+- Asentamiento humano: LOMA BONITA — NINGUNO
+- Asentamiento humano: LOMA DE TINAJAS — FRACCIONAMIENTO
+- Asentamiento humano: PASEOS DE TEPEXIC — FRACCIONAMIENTO
+- Asentamiento humano: TINAJAS — COLONIA
+- Asentamiento humano: TINAJAS — COLONIA
+- Asentamiento humano: BENITO JUÁREZ — COLONIA
+- Asentamiento humano: UNIDAD OBRERA HABITACIONAL C.T.M. — UNIDAD HABITACIONAL
+- Asentamiento humano: CARACOL — COLONIA
+
+## Municipio: Tezontepec de Aldama
+
+- Localidad: Tezontepec de Aldama
+- Localidad: Santiago Acayutlán
+- Localidad: Atengo
+- Localidad: Santa María Batha
+- Localidad: Huitel
+- Localidad: Mangas
+- Localidad: La Palma
+- Localidad: Panuaya
+- Localidad: Presas
+- Localidad: San Gabriel
+- Localidad: San Juan Achichilco
+- Localidad: Tenango
+- Localidad: El Tinaco
+- Localidad: Manantiales de Cerro Colorado
+- Localidad: Monte Alegre (Carranza)
+- Localidad: San Juan [Colonia]
+- Localidad: San Isidro Presas
+- Localidad: 5 de Febrero
+- Localidad: La Loma
+- Localidad: La Cruz
+- Localidad: San Isidro Carrasco
+- Localidad: Colonia de Presas
+- Localidad: Cerro del Xicuco (La Cantera)
+- Localidad: El Solís
+- Localidad: El Gavillero de Barrera
+- Localidad: Los Manantiales
+- Localidad: El Mogote
+- Localidad: La Chiripa [Rancho]
+- Localidad: Zanja Colorada
+- Localidad: La Arcina (Los Tepetates)
+- Localidad: La Luz [Rancho]
+- Localidad: Juana Baltazar Bautista
+- Localidad: Vicente Zuñiga Bernal
+- Localidad: El Sitio [Rancho]
+- Localidad: El Chamizal
+- Localidad: San Isidro el Tanque
+- Localidad: Binola
+- Localidad: Nuevo Panuaya
+- Localidad: Las Cruces
+- Localidad: Colonia Lázaro Cárdenas
+- Localidad: San Sebastián
+- Localidad: Los Pirules
+- Localidad: Cerro del Tezontle
+- Localidad: La Manga
+- Localidad: San Gregorio
+- Localidad: El Capricho [Rancho]
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: La Barranca — BARRIO
+- Asentamiento humano: San Juan — COLONIA
+- Asentamiento humano: Santiago Acayutlán — COLONIA
+- Asentamiento humano: 1 — MANZANA
+- Asentamiento humano: 2 — MANZANA
+- Asentamiento humano: 4 — MANZANA
+- Asentamiento humano: 5 — MANZANA
+- Asentamiento humano: 6 a — MANZANA
+- Asentamiento humano: 6 B — MANZANA
+- Asentamiento humano: 7 — MANZANA
+- Asentamiento humano: Santa María Batha — COLONIA
+- Asentamiento humano: El Arquito — NINGUNO
+- Asentamiento humano: Huitel — NINGUNO
+- Asentamiento humano: San Isidro el Tanque — COLONIA
+- Asentamiento humano: Santa Nieves — COLONIA
+- Asentamiento humano: El Rincón de Mangas — COLONIA
+- Asentamiento humano: Los Pinos — BARRIO
+- Asentamiento humano: Mangas — COLONIA
+- Asentamiento humano: La Palma — COLONIA
+- Asentamiento humano: Panuaya — COLONIA
+- Asentamiento humano: 6 — MANZANA
+- Asentamiento humano: Mangas — COLONIA
+- Asentamiento humano: Presas — COLONIA
+- Asentamiento humano: Zanja Colorada — BARRIO
+- Asentamiento humano: San Gabriel — COLONIA
+- Asentamiento humano: San Juan Achichilco — COLONIA
+- Asentamiento humano: Tenango — COLONIA
+- Asentamiento humano: El Tinaco — COLONIA
+- Asentamiento humano: Manantiales de Cerro Colorado — COLONIA
+- Asentamiento humano: San Juan — COLONIA
+- Asentamiento humano: San Isidro Presas — COLONIA
+- Asentamiento humano: 5 de Febrero — COLONIA
+- Asentamiento humano: La Loma — COLONIA
+- Asentamiento humano: Santa Nieves — BARRIO
+- Asentamiento humano: La Cruz — COLONIA
+- Asentamiento humano: Colonia de Presas — COLONIA
+- Asentamiento humano: El Chamizal — COLONIA
+- Asentamiento humano: San Isidro el Tanque — COLONIA
+- Asentamiento humano: Binola — COLONIA
+- Asentamiento humano: Nuevo Panuaya — COLONIA
+- Asentamiento humano: Las Cruces — COLONIA
+- Asentamiento humano: Lázaro Cárdenas — COLONIA
+- Asentamiento humano: Los Pirúles — COLONIA
+## Municipio: Tizayuca
+
+- Localidad: Tizayuca
+- Localidad: El Carmen
+- Localidad: El Chopo
+- Localidad: Emiliano Zapata
+- Localidad: Huitzila
+- Localidad: Ignacio Zaragoza (Mogotes)
+- Localidad: El Cid
+- Localidad: Olmos
+- Localidad: San Pedro
+- Localidad: Tepojaco
+- Localidad: San Juan
+- Localidad: El Manantial [Rancho]
+- Localidad: María Candelaria [Rancho]
+- Localidad: El Manantial
+- Localidad: La Providencia
+- Localidad: Las Plazas
+- Localidad: San Rafael (Kilómetro 57) [Rancho]
+- Localidad: La Posta
+- Localidad: Flamingos [Balneario]
+- Localidad: La Pista de Tizayuca
+- Localidad: San Isidro [Rancho]
+- Localidad: Eduardo Hernández
+- Localidad: La Ilusión (La Casa del Manantial) [Rancho]
+- Localidad: San Antonio
+- Localidad: El Chopo
+- Localidad: Don Antonio
+- Localidad: Haciendas de Tizayuca
+- Localidad: El Manantial
+- Localidad: Colonia Peregrinos
+- Localidad: Bicentenario
+- Localidad: Fuentes de Tizayuca
+- Localidad: Nueva Unión
+- Localidad: Valle de Tizayuca
+- Localidad: Ciudad Natura
+- Localidad: Los Héroes Tizayuca
+- Localidad: El Pedregal
+- Localidad: Los Fuertes
+- Localidad: Hacienda de Guadalupe
+- Localidad: Ampliación Nueva Italia [Fraccionamiento]
+- Localidad: Crucero del Carmen
+- Localidad: Lomas Verdes [Colonia]
+- Localidad: Nueva Italia [Fraccionamiento]
+- Localidad: Reino Unido [Fraccionamiento]
+- Localidad: San José II
+- Localidad: Huitzila-Tepojaco [Corredor Industrial]
+- Localidad: José Humberto Gutiérrez Corona
+- Localidad: San José I
+- Localidad: Andalucía Residencial [Fraccionamiento]
+- Asentamiento humano: Acordia San Ángel — FRACCIONAMIENTO
+- Asentamiento humano: Ampliación Residencial San Ángel — FRACCIONAMIENTO
+- Asentamiento humano: Arboledas — PRIVADA
+- Asentamiento humano: Atempa — BARRIO
+- Asentamiento humano: Atempa — RESIDENCIAL
+- Asentamiento humano: Atempa la Cañada — FRACCIONAMIENTO
+- Asentamiento humano: Campestre — FRACCIONAMIENTO
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: City — PRIVADA
+- Asentamiento humano: Ciudad de los Niños Telesforo Escalante — COLONIA
+- Asentamiento humano: CTM — UNIDAD HABITACIONAL
+- Asentamiento humano: Cuenca Lechera — ZONA INDUSTRIAL
+- Asentamiento humano: Cuxtitla — BARRIO
+- Asentamiento humano: Deportiva I — COLONIA
+- Asentamiento humano: Deportiva Rutilo Reyes — COLONIA
+- Asentamiento humano: Diamante — PRIVADA
+- Asentamiento humano: El Arenal — COLONIA
+- Asentamiento humano: El Pedregal — COLONIA
+- Asentamiento humano: El Sitio — FRACCIONAMIENTO
+- Asentamiento humano: El Tepeyac — COLONIA
+- Asentamiento humano: Florencia — FRACCIONAMIENTO
+- Asentamiento humano: Geovillas — FRACCIONAMIENTO
+- Asentamiento humano: Hacienda Las Torres I — FRACCIONAMIENTO
+- Asentamiento humano: Hacienda Las Torres II — FRACCIONAMIENTO
+- Asentamiento humano: Hacienda Las Torres II Sección B — FRACCIONAMIENTO
+- Asentamiento humano: Heberto Castillo — COLONIA
+- Asentamiento humano: Huicalco — BARRIO
+- Asentamiento humano: Jardines de Tizayuca — FRACCIONAMIENTO
+- Asentamiento humano: Juárez — FRACCIONAMIENTO
+- Asentamiento humano: La Cañada San Antonio — FRACCIONAMIENTO
+- Asentamiento humano: La Concordia — FRACCIONAMIENTO
+- Asentamiento humano: La Laguna — FRACCIONAMIENTO
+- Asentamiento humano: La Legua — FRACCIONAMIENTO
+- Asentamiento humano: Las Campanas — FRACCIONAMIENTO
+- Asentamiento humano: Las Joyas — COLONIA
+- Asentamiento humano: Lázaro Cárdenas — COLONIA
+- Asentamiento humano: Lázaro Cárdenas — FRACCIONAMIENTO
+- Asentamiento humano: Lisboa — FRACCIONAMIENTO
+- Asentamiento humano: Lomas de Tizayuca — FRACCIONAMIENTO
+- Asentamiento humano: Los Almendros — FRACCIONAMIENTO
+- Asentamiento humano: Los Conos — COLONIA
+- Asentamiento humano: Los Corales — FRACCIONAMIENTO
+- Asentamiento humano: Los Pinos — FRACCIONAMIENTO
+- Asentamiento humano: María Magdalena — FRACCIONAMIENTO
+- Asentamiento humano: Nacozari — BARRIO
+- Asentamiento humano: Nuevo Pedregal — FRACCIONAMIENTO
+- Asentamiento humano: Nuevo Tizayuca — UNIDAD HABITACIONAL
+- Asentamiento humano: Parque de Poblamiento IV — COLONIA
+- Asentamiento humano: Parque de Poblamiento IV — AMPLIACIÓN
+- Asentamiento humano: Pedregal — FRACCIONAMIENTO
+- Asentamiento humano: Pedregal San Ángel — COLONIA
+- Asentamiento humano: Praderas de Tizayuca — FRACCIONAMIENTO
+- Asentamiento humano: Quinta Esperanza — FRACCIONAMIENTO
+- Asentamiento humano: Quintas de Tizayuca — FRACCIONAMIENTO
+- Asentamiento humano: Rancho la Purisima — FRACCIONAMIENTO
+- Asentamiento humano: Real de San Jeronimo — FRACCIONAMIENTO
+- Asentamiento humano: Residencial Fuentes del Valle — FRACCIONAMIENTO
+- Asentamiento humano: Residencial San Ángel — FRACCIONAMIENTO
+- Asentamiento humano: Residencial San José — FRACCIONAMIENTO
+- Asentamiento humano: Rojo Gómez — UNIDAD HABITACIONAL
+- Asentamiento humano: San Antonio — COLONIA
+- Asentamiento humano: San José la Joya — FRACCIONAMIENTO
+- Asentamiento humano: Tizayuca — UNIDAD HABITACIONAL
+- Asentamiento humano: Tizayuca — ZONA INDUSTRIAL
+- Asentamiento humano: Torres del Pedregal — COLONIA
+- Asentamiento humano: Villa Las Manzanas — FRACCIONAMIENTO
+- Asentamiento humano: Villa Magna — FRACCIONAMIENTO
+- Asentamiento humano: Viveros del Pedregal — COLONIA
+- Asentamiento humano: Alcatraces II — COLONIA
+- Asentamiento humano: Ampliación Bicentenario — COLONIA
+- Asentamiento humano: Ampliación el Rosario — COLONIA
+- Asentamiento humano: Arboledas del Carmen — COLONIA
+- Asentamiento humano: Arboledas el Carmen — COLONIA
+- Asentamiento humano: Bicentenario — FRACCIONAMIENTO
+- Asentamiento humano: Bosques del Carmen — COLONIA
+- Asentamiento humano: Campestre el Carmen — COLONIA
+- Asentamiento humano: Carlos Álvarez I — COLONIA
+- Asentamiento humano: Carlos Álvarez II — COLONIA
+- Asentamiento humano: Carlos Castillo Pedraza — COLONIA
+- Asentamiento humano: Carlos Medina Plascencia — COLONIA
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: Cipreses el Carmen — COLONIA
+- Asentamiento humano: Constituyentes — COLONIA
+- Asentamiento humano: Costa de Oro — COLONIA
+- Asentamiento humano: Cumbres del Valle — COLONIA
+- Asentamiento humano: El Carmen — AMPLIACIÓN
+- Asentamiento humano: El Carmen I — FRACCIONAMIENTO
+- Asentamiento humano: El Carmen II — FRACCIONAMIENTO
+- Asentamiento humano: El Mezquital — FRACCIONAMIENTO
+- Asentamiento humano: El Mineral — COLONIA
+- Asentamiento humano: El Olivar — COLONIA
+- Asentamiento humano: El Paraíso — COLONIA
+- Asentamiento humano: El Peñal — COLONIA
+- Asentamiento humano: El Porvenir — COLONIA
+- Asentamiento humano: El Rosal — COLONIA
+- Asentamiento humano: El Rosario — COLONIA
+- Asentamiento humano: Felipe Reyes — COLONIA
+- Asentamiento humano: Felipe Reyes — AMPLIACIÓN
+- Asentamiento humano: Fernando Montes de Oca — COLONIA
+- Asentamiento humano: Gómez Morín — COLONIA
+- Asentamiento humano: Ingeniero Rafael Mireles Muñoz — COLONIA
+- Asentamiento humano: Jacintos — COLONIA
+- Asentamiento humano: Jardines de San Vicente — COLONIA
+- Asentamiento humano: La Escondida — COLONIA
+- Asentamiento humano: La Mina — COLONIA
+- Asentamiento humano: La Moraleja — COLONIA
+- Asentamiento humano: La Perla — COLONIA
+- Asentamiento humano: La Victoria — FRACCIONAMIENTO
+- Asentamiento humano: La Virgen — COLONIA
+- Asentamiento humano: Lagos — FRACCIONAMIENTO
+- Asentamiento humano: Las Flores — COLONIA
+- Asentamiento humano: Las Margaritas — COLONIA
+- Asentamiento humano: Las Margaritas — FRACCIONAMIENTO
+- Asentamiento humano: Loma del Borrego — COLONIA
+- Asentamiento humano: Lomas del Real I — COLONIA
+- Asentamiento humano: Los Alcatraces — COLONIA
+- Asentamiento humano: Los Cedros — COLONIA
+- Asentamiento humano: Los Laureles — COLONIA
+- Asentamiento humano: Los Pinos de el Carmen — COLONIA
+- Asentamiento humano: Los Pirules — COLONIA
+- Asentamiento humano: Los Remedios — COLONIA
+- Asentamiento humano: Los Tulipanes — COLONIA
+- Asentamiento humano: Luis Donaldo Colosio — COLONIA
+- Asentamiento humano: Luis Donaldo Colosio II — COLONIA
+- Asentamiento humano: Marcelino Rojas — COLONIA
+- Asentamiento humano: Niños Héroes I — COLONIA
+- Asentamiento humano: Niños Héroes II — FRACCIONAMIENTO
+- Asentamiento humano: Nuevo México Ill — COLONIA
+- Asentamiento humano: Pinos el Carmen — COLONIA
+- Asentamiento humano: Praderas — COLONIA
+- Asentamiento humano: Quezada — COLONIA
+- Asentamiento humano: Quintas el Carmen — FRACCIONAMIENTO
+- Asentamiento humano: Real Campestre — COLONIA
+- Asentamiento humano: Reforma — COLONIA
+- Asentamiento humano: Reforma II — COLONIA
+- Asentamiento humano: Rincón de Tizayuca — FRACCIONAMIENTO
+- Asentamiento humano: San Ángel — COLONIA
+- Asentamiento humano: San Ernesto — FRACCIONAMIENTO
+- Asentamiento humano: San Fernando — UNIDAD HABITACIONAL
+- Asentamiento humano: San José — COLONIA
+- Asentamiento humano: San Miguel — COLONIA
+- Asentamiento humano: San Simón — FRACCIONAMIENTO
+- Asentamiento humano: Santa Mónica — COLONIA
+- Asentamiento humano: Santa Teresa — COLONIA
+- Asentamiento humano: Santos Rivero — COLONIA
+- Asentamiento humano: Valle del Carmen — COLONIA
+- Asentamiento humano: Valle Real — FRACCIONAMIENTO
+- Asentamiento humano: Vicente Guerrero II — COLONIA
+- Asentamiento humano: Villas del Carmen — COLONIA
+- Asentamiento humano: El Chopo — PUEBLO
+- Asentamiento humano: Ampliación Colonizadores — COLONIA
+- Asentamiento humano: Antorcha Campesina — COLONIA
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: Colonizadores — COLONIA
+- Asentamiento humano: Colorines — FRACCIONAMIENTO
+- Asentamiento humano: Diamante — FRACCIONAMIENTO
+- Asentamiento humano: El Recinto — FRACCIONAMIENTO
+- Asentamiento humano: Emiliano Zapata — AMPLIACIÓN
+- Asentamiento humano: Esmeralda — FRACCIONAMIENTO
+- Asentamiento humano: Expresidentes — COLONIA
+- Asentamiento humano: Jacarandas — FRACCIONAMIENTO
+- Asentamiento humano: La Cruz — FRACCIONAMIENTO
+- Asentamiento humano: La Gloria — FRACCIONAMIENTO
+- Asentamiento humano: La Gloria — AMPLIACIÓN
+- Asentamiento humano: La Herradura — COLONIA
+- Asentamiento humano: La Nopalera — COLONIA
+- Asentamiento humano: La Unión — COLONIA
+- Asentamiento humano: Las Maravillas del Ángel — FRACCIONAMIENTO
+- Asentamiento humano: Loma Bonita — FRACCIONAMIENTO
+- Asentamiento humano: Manuel de Jesus Clouthier — FRACCIONAMIENTO
+- Asentamiento humano: Pintores — COLONIA
+- Asentamiento humano: Quimera — COLONIA
+- Asentamiento humano: Renacimiento — COLONIA
+- Asentamiento humano: San Andrés — FRACCIONAMIENTO
+- Asentamiento humano: San Carlos — FRACCIONAMIENTO
+- Asentamiento humano: San Felipe — COLONIA
+- Asentamiento humano: San Fernando — FRACCIONAMIENTO
+- Asentamiento humano: San Gabriel — COLONIA
+- Asentamiento humano: San José — COLONIA
+- Asentamiento humano: Santa María — COLONIA
+- Asentamiento humano: Tercera Ampliación Emiliano Zapata — COLONIA
+- Asentamiento humano: Unidad Deportiva II — COLONIA
+- Asentamiento humano: Valle Diamante — FRACCIONAMIENTO
+- Asentamiento humano: Valle Dorado — COLONIA
+- Asentamiento humano: Villa los Milagros — FRACCIONAMIENTO
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: Colonial Huitzila — FRACCIONAMIENTO
+- Asentamiento humano: La Joya — COLONIA
+- Asentamiento humano: La Palma — COLONIA
+- Asentamiento humano: La Palma — COLONIA
+- Asentamiento humano: Las Granjas — COLONIA
+- Asentamiento humano: Los Armandos — COLONIA
+- Asentamiento humano: San Antonio — COLONIA
+- Asentamiento humano: San Gabriel — COLONIA
+- Asentamiento humano: San Mauricio — COLONIA
+- Asentamiento humano: Mogotes — COLONIA
+- Asentamiento humano: El Cid — COLONIA
+- Asentamiento humano: Ampliación Lomas del Pedregal — COLONIA
+- Asentamiento humano: Ampliación los Olmos — FRACCIONAMIENTO
+- Asentamiento humano: Cuauhtémoc — COLONIA
+- Asentamiento humano: Cumbre del Campestre — COLONIA
+- Asentamiento humano: El Potrero I — COLONIA
+- Asentamiento humano: El Potrero II — COLONIA
+- Asentamiento humano: La Cañada — COLONIA
+- Asentamiento humano: Lomas del Pedregal — COLONIA
+- Asentamiento humano: Los Olmos — FRACCIONAMIENTO
+- Asentamiento humano: Magiasterio Olmos — COLONIA
+- Asentamiento humano: Magisterio Olmos — COLONIA
+- Asentamiento humano: Monarca — COLONIA
+- Asentamiento humano: Olmos — COLONIA
+- Asentamiento humano: Precursores Ejidales — COLONIA
+- Asentamiento humano: Pueblo Nuevo — COLONIA
+- Asentamiento humano: San Luis — COLONIA
+- Asentamiento humano: San Marino — COLONIA
+- Asentamiento humano: Santa Martha — COLONIA
+- Asentamiento humano: Ampliación Residencial San Ángel — FRACCIONAMIENTO
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: Jardines II — FRACCIONAMIENTO
+- Asentamiento humano: La Tropicana — PRIVADA
+- Asentamiento humano: Los Castro — BARRIO
+- Asentamiento humano: Marbella — FRACCIONAMIENTO
+- Asentamiento humano: Refugio — COLONIA
+- Asentamiento humano: Vista Hermosa — FRACCIONAMIENTO
+- Asentamiento humano: San Juan — COLONIA
+- Asentamiento humano: Plazas I — FRACCIONAMIENTO
+- Asentamiento humano: Plazas Sección Ll — FRACCIONAMIENTO
+- Asentamiento humano: Valle Soleado — RESIDENCIAL
+- Asentamiento humano: El Vergel — COLONIA
+- Asentamiento humano: La Posta — COLONIA
+- Asentamiento humano: Rancho Don Antonio — FRACCIONAMIENTO
+- Asentamiento humano: Haciendas de Tizayuca — FRACCIONAMIENTO
+- Asentamiento humano: Paseos del Pedregal — FRACCIONAMIENTO
+- Asentamiento humano: El Manantial — FRACCIONAMIENTO
+- Asentamiento humano: Bicentenario II — COLONIA
+- Asentamiento humano: La Escondida 2 — COLONIA
+- Asentamiento humano: Lucerna — COLONIA
+- Asentamiento humano: Nuevo México — COLONIA
+- Asentamiento humano: Nuevo México II — COLONIA
+- Asentamiento humano: San Marino III — COLONIA
+- Asentamiento humano: San Pedro — COLONIA
+- Asentamiento humano: Villas de Tizayuca — COLONIA
+- Asentamiento humano: Fuentes de Tizayuca — FRACCIONAMIENTO
+- Asentamiento humano: La Peña — COLONIA
+- Asentamiento humano: Monarca — FRACCIONAMIENTO
+- Asentamiento humano: Ampliación Nueva Unión — COLONIA
+- Asentamiento humano: Nueva Unión — COLONIA
+- Asentamiento humano: Villas la Union — COLONIA
+- Asentamiento humano: Valle de Tizayuca — COLONIA
+- Asentamiento humano: Ciudad Natura — FRACCIONAMIENTO
+- Asentamiento humano: Ciudad Natura — FRACCIONAMIENTO
+- Asentamiento humano: Los Héroes de Tizayuca — FRACCIONAMIENTO
+- Asentamiento humano: El Pedregal — BARRIO
+- Asentamiento humano: Hacienda de Guadalupe — FRACCIONAMIENTO
+- Asentamiento humano: Nueva Italia II — FRACCIONAMIENTO
+- Asentamiento humano: Miguel Hidalgo — COLONIA
+- Asentamiento humano: Nueva Italia — FRACCIONAMIENTO
+- Asentamiento humano: Reino Unido — COLONIA
+- Asentamiento humano: Colinas de Plata — FRACCIONAMIENTO
+- Asentamiento humano: San José ll — FRACCIONAMIENTO
+- Asentamiento humano: Huitzila-Tepojaco — CORREDOR INDUSTRIAL
+- Asentamiento humano: Pamit — CORREDOR INDUSTRIAL
+- Asentamiento humano: José Humberto González — COLONIA
+- Asentamiento humano: San José — COLONIA
+- Asentamiento humano: Adalucia — FRACCIONAMIENTO
+
+## Municipio: Tlahuelilpan
+
+- Localidad: Tlahuelilpan
+- Localidad: Munitepec de Madero
+- Localidad: Colonia Cuauhtémoc
+- Localidad: Miravalle
+- Localidad: Cerro de la Cruz [Colonia]
+- Localidad: La Media Luna
+- Localidad: La Mercadela
+- Localidad: La Providencia
+- Localidad: El Salitre
+- Localidad: Bugambilias [Rancho]
+- Localidad: Dexhe
+- Localidad: San Gregorio
+- Localidad: Cerro de Gómez [Colonia]
+- Localidad: Guadalupe (Cerro del Tezontle) [Colonia]
+- Localidad: El Gavillero
+- Localidad: El Monte
+- Localidad: El Sauz
+- Localidad: Cerro el Gavilán
+- Asentamiento humano: Centro — COLONIA
+- Asentamiento humano: El Depósito — COLONIA
+- Asentamiento humano: El Sifón — COLONIA
+- Asentamiento humano: Miravalle — COLONIA
+- Asentamiento humano: Nueva Reforma — COLONIA
+- Asentamiento humano: Rancho Viejo — COLONIA
+- Asentamiento humano: San Francisco — COLONIA
+- Asentamiento humano: San Primitivo — COLONIA
+- Asentamiento humano: Zaragoza — COLONIA
+- Asentamiento humano: Munitepec de Madero — COLONIA
+- Asentamiento humano: Cuauhtémoc — COLONIA
+- Asentamiento humano: Cerro de la Cruz — COLONIA
+- Asentamiento humano: La Media Luna — COLONIA
+- Asentamiento humano: El Salitre — COLONIA
+- Asentamiento humano: Dexhe — COLONIA
+- Asentamiento humano: Cerro de Gómez — COLONIA
+- Asentamiento humano: Guadalupe (Cerro del Tezontle) — COLONIA
+- Asentamiento humano: Cerro el Gavilán — COLONIA
+
+## Municipio: Tlanalapa
+
+- Localidad: Tlanalapa
+- Localidad: Bellavista
+- Localidad: Benito Juárez
+- Localidad: Chiconcuac
+- Localidad: San Isidro [Rancho]
+- Localidad: San Miguel Amiltepec
+- Localidad: Tepechichilco
+- Localidad: San Vicente
+- Localidad: Ex-Hacienda San Pedro Tochatlaco
+- Localidad: San Juan Ahuayalulco
+- Localidad: Kilómetro 27 [Colonia]
+- Localidad: Kilómetro 28 [Colonia]
+- Localidad: San Isidro [Fraccionamiento]
+- Localidad: Los Arcos (Santa Inés) [Rancho]
+- Localidad: Miguel Hidalgo [Colonia]
+- Localidad: Estación Sahagún
+- Localidad: El Nopalito [Rancho]
+- Localidad: Rancho de los Capulines
+- Localidad: San Judas Tadeo
+- Localidad: Rancho de la Comex
+- Localidad: Teodoro Castillo Roldan
+- Localidad: Emilio Martínez
+- Localidad: Silverio Hernández Pérez
+- Localidad: Capula
+- Localidad: Colonia de la Rosa
+- Localidad: La Trinidad
+- Localidad: Rancho de los Flores
+- Localidad: Mi Ranchito
+- Localidad: Carlota
+- Asentamiento humano: ALFREDO V. BONFIL — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: LOS PIRULES — COLONIA
+- Asentamiento humano: MINEROS — COLONIA
+- Asentamiento humano: SAN FRANCISCO — PRIVADA
+- Asentamiento humano: BELLAVISTA — COLONIA
+- Asentamiento humano: BENITO JUÁREZ — COLONIA
+- Asentamiento humano: CHICONCUAC — PUEBLO
+- Asentamiento humano: San Vicente — RANCHERÍA
+- Asentamiento humano: KM 27 — COLONIA
+- Asentamiento humano: SAN ISIDRO — FRACCIONAMIENTO
+
+## Municipio: Tlaxcoapan
+
+- Localidad: Tlaxcoapan
+- Localidad: Doxey
+- Localidad: Teltipán de Juárez
+- Localidad: Teocalco
+- Localidad: Camino al Tecolote
+- Localidad: Ejido Grande
+- Localidad: San Miguel
+- Localidad: Camino a Puente Negro
+- Localidad: La Tierra Negra
+- Localidad: El Alambrado
+- Localidad: Las Compras
+- Asentamiento humano: ANÁHUAC — COLONIA
+- Asentamiento humano: APEPECHOCA — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: COLONIA DE LA CRUZ — COLONIA
+- Asentamiento humano: EDUCACIÓN — BARRIO
+- Asentamiento humano: EL CALVARIO — BARRIO
+- Asentamiento humano: EL PANTEÓN — COLONIA
+- Asentamiento humano: EL RAYO — FRACCIONAMIENTO
+- Asentamiento humano: GRANJAS COLOSIO — COLONIA
+- Asentamiento humano: INDEPENDENCIA — COLONIA
+- Asentamiento humano: INDUSTRIAL — COLONIA
+- Asentamiento humano: LA CIUDADELA — COLONIA
+- Asentamiento humano: LA CUCHILLA — FRACCIONAMIENTO
+- Asentamiento humano: LA ERA — FRACCIONAMIENTO
+- Asentamiento humano: LA PATRICIA — COLONIA
+- Asentamiento humano: LA VEGA — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DE TLAXCOAPAN — FRACCIONAMIENTO
+- Asentamiento humano: LOS CARRIZOS — FRACCIONAMIENTO
+- Asentamiento humano: LOS TEPETATES — COLONIA
+- Asentamiento humano: MAGISTERIAL — COLONIA
+- Asentamiento humano: MORELOS — COLONIA
+- Asentamiento humano: MORELOS — COLONIA
+- Asentamiento humano: NINGUNO — NINGUNO
+- Asentamiento humano: NINGUNO — NINGUNO
+- Asentamiento humano: NINGUNO — NINGUNO
+- Asentamiento humano: PRIMERO DE MAYO — COLONIA
+- Asentamiento humano: TLAXCOAPAN — COLONIA
+- Asentamiento humano: TLAXCOAPAN — BARRIO
+- Asentamiento humano: TLAXCOAPAN — EJIDO
+- Asentamiento humano: VALLE SAN PEDRO — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS JARDÍN — FRACCIONAMIENTO
+- Asentamiento humano: CAMPESTRE — COLONIA
+- Asentamiento humano: DOXEY — COLONIA
+- Asentamiento humano: LA CRUZ — COLONIA
+- Asentamiento humano: TELTIPÁN — NINGUNO
+
+## Municipio: Tolcayuca
+
+- Localidad: Tolcayuca
+- Localidad: General Felipe Ángeles (Los Ángeles)
+- Localidad: La Biznaga
+- Localidad: Matías Rodríguez el Mambrú
+- Localidad: Miravalle
+- Localidad: Las Palomas
+- Localidad: Las Pintas
+- Localidad: San Miguel Eyacalco
+- Localidad: Santiago Tlajomulco
+- Localidad: Tlaloc
+- Localidad: Vicente Guerrero (San Javier)
+- Localidad: Rancho de Don Pablo
+- Localidad: Cannan [Rancho]
+- Localidad: Lomas de San Miguel
+- Localidad: El Rincón
+- Localidad: La Casa Enterrada
+- Localidad: Los Pinos [Granja]
+- Localidad: El Tejocote
+- Localidad: Esteban Meneses Corona
+- Localidad: Gumaro Ramírez
+- Localidad: La Gloria Escondida (Rancho de la Cruz)
+- Localidad: Bloquera
+- Localidad: María Guadalupe Figueroa Gutiérrez
+- Localidad: Rancho Rojas
+- Localidad: Roberto Cerón
+- Localidad: Lomas del Álamo
+- Localidad: Bosques de Ibiza
+- Localidad: Braulio Gutiérrez Rivero
+- Localidad: El Pavo Real
+- Localidad: El Magueyal y Almacigo
+- Localidad: Santa Rosa
+- Localidad: Santa Rosa
+- Localidad: El Aparato (Pabellón Zapotlán)
+- Localidad: El Crucero de San Javier
+- Localidad: El Mezquite [Rancho]
+- Localidad: Santa Cecilia [Rancho]
+- Localidad: Sotula [Rancho]
+- Localidad: San Francisco [Unidad Deportiva]
+- Asentamiento humano: 2 DE ABRIL — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CERRITO — COLONIA
+- Asentamiento humano: EL TEJOCOTE — COLONIA
+- Asentamiento humano: EL TILDIO — COLONIA
+- Asentamiento humano: EPITACIO MENDOZA — COLONIA
+- Asentamiento humano: INDEPENDENCIA — COLONIA
+- Asentamiento humano: LA COLMENA — COLONIA
+- Asentamiento humano: LA PALMA — COLONIA
+- Asentamiento humano: LOS AMORES DE DON JUAN — FRACCIONAMIENTO
+- Asentamiento humano: SANTO TOMÁS — BARRIO
+- Asentamiento humano: SATÉLITE — COLONIA
+- Asentamiento humano: EL JAGÜEY — AMPLIACIÓN
+- Asentamiento humano: GENERAL FELIPE ÁNGELES — COLONIA
+- Asentamiento humano: GENERAL FELIPE ÁNGELES — AMPLIACIÓN
+- Asentamiento humano: LOMAS DE LOS ÁNGELES — COLONIA
+- Asentamiento humano: LOS COYOTES — AMPLIACIÓN
+- Asentamiento humano: LAS PINTAS — COLONIA
+- Asentamiento humano: SAN MIGUEL EYACALCO — RANCHERÍA
+- Asentamiento humano: SANTIAGO TLAJOMULCO — PUEBLO
+- Asentamiento humano: VICENTE GUERRERO (SAN JAVIER) — PUEBLO
+- Asentamiento humano: LOMAS DEL ÁLAMO — FRACCIONAMIENTO
+- Asentamiento humano: BOSQUES DE IBIZA — FRACCIONAMIENTO
+## Municipio: Tula de Allende
+
+- Localidad: Tula de Allende
+- Localidad: Acoculco
+- Localidad: Xiteje de Zapata
+- Localidad: Héroes Carranza
+- Localidad: Ignacio Zaragoza
+- Localidad: Julián Villagrán [Colonia]
+- Localidad: El Llano
+- Localidad: Santa María Michimaltongo
+- Localidad: Michimaloya (San Juan Michimaloya)
+- Localidad: Bomintzha
+- Localidad: Monte Alegre
+- Localidad: Nantzha
+- Localidad: Xiteje de la Reforma
+- Localidad: San Andrés (San Andrés Tultepec)
+- Localidad: San Antonio Tula
+- Localidad: San Francisco Bojay Pueblo
+- Localidad: San Francisco Bojay Colonia
+- Localidad: San Lucas Teacalco
+- Localidad: San Marcos
+- Localidad: San Miguel de las Piedras Primera Sección
+- Localidad: San Miguel Vindho
+- Localidad: San Pedrito Alpuyeca
+- Localidad: Santa Ana Ahuehuepan
+- Localidad: Santa María Ilucan
+- Localidad: Santa María Macua
+- Localidad: Teocalco
+- Localidad: Xijay de Cuauhtémoc
+- Localidad: Xochitlán de las Flores
+- Localidad: El Sesenta y Uno [Colonia]
+- Localidad: Benito Juárez [Colonia]
+- Localidad: Tenjay [Colonia]
+- Localidad: Praderas del Llano
+- Localidad: Santa María Michimaltongo [Colonia]
+- Localidad: Sesenta y Dos [Colonia]
+- Localidad: Nueva Santa María [Colonia]
+- Localidad: El Recinto (Ejido Pueblo Nuevo) [Colonia]
+- Localidad: El Godo
+- Localidad: El Paso
+- Localidad: El Saabi [Colonia]
+- Localidad: La Amistad
+- Localidad: Rancho Bojay
+- Localidad: Xonthe
+- Localidad: El Cerrito
+- Localidad: El Cerrito
+- Localidad: La Cuarta Manzana
+- Localidad: Jardines de San Miguel
+- Localidad: La Milpa de García
+- Localidad: Los Truenitos [Rancho]
+- Localidad: La Mora
+- Localidad: El Cielito [Rancho]
+- Localidad: El Puendhó
+- Localidad: 16 de Enero 2da. Ampliación (El Tesoro) [Colonia]
+- Localidad: San Miguel de las Piedras Segunda Sección
+- Localidad: Ejido Tula [Arriba del Parque Ecológico]
+- Localidad: Cerrito del Tepeyac
+- Localidad: San Lucas Teacalco [Ejido]
+- Localidad: Las Manzanitas
+- Localidad: La Mezquitera
+- Localidad: Montecillos
+- Localidad: Tercera Manzana
+- Localidad: Antonio Guerrero Briseño
+- Localidad: La Vuelta del Río
+- Localidad: Ejido de Acoculco (Dos Peñas)
+- Localidad: El Carmen (La Mesita)
+- Localidad: La Ciénega
+- Localidad: El Ocote
+- Localidad: Pueblo Nuevo (La Subida)
+- Localidad: Las Cortinas
+- Localidad: El Crestón
+- Localidad: Ex-Hacienda la Magdalena
+- Localidad: La Hacienda
+- Localidad: La Mezquitera
+- Localidad: Residencial Arboledas
+- Localidad: Ejido San Pedro Alpuyeca
+- Localidad: Kilómetro 5 [Gasera]
+- Localidad: El Pirul
+- Localidad: Ninguno [Antonio Gutiérrez]
+- Localidad: El Gavillero
+- Asentamiento humano: 16 DE ENERO — COLONIA
+- Asentamiento humano: 16 DE SEPTIEMBRE — COLONIA
+- Asentamiento humano: ALTO PRIMERA SECCIÓN — BARRIO
+- Asentamiento humano: ALTO SEGUNDA SECCIÓN — BARRIO
+- Asentamiento humano: ALVARADO — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CIELITO — COLONIA
+- Asentamiento humano: EL SALITRE — COLONIA
+- Asentamiento humano: FOVISSSTE — CONJUNTO HABITACIONAL
+- Asentamiento humano: HUERTO NANTZHA — COLONIA
+- Asentamiento humano: JALPA — COLONIA
+- Asentamiento humano: LA MALINCHE — COLONIA
+- Asentamiento humano: LA REDONDA — COLONIA
+- Asentamiento humano: LOMA BLANCA — FRACCIONAMIENTO
+- Asentamiento humano: LOS FRESNOS — COLONIA
+- Asentamiento humano: LOS SABINOS — FRACCIONAMIENTO
+- Asentamiento humano: PEMEX — UNIDAD HABITACIONAL
+- Asentamiento humano: RANCHO CHAPULTEPEC — FRACCIONAMIENTO
+- Asentamiento humano: SAN JOSÉ — COLONIA
+- Asentamiento humano: SAN LORENZO — COLONIA
+- Asentamiento humano: SAN PEDRO ALPUYECA — COLONIA
+- Asentamiento humano: TESORO — COLONIA
+- Asentamiento humano: VILLAS DEL SALITRE — COLONIA
+- Asentamiento humano: IGNACIO ZARAGOZA — COLONIA
+- Asentamiento humano: LA PALMA — FRACCIONAMIENTO
+- Asentamiento humano: JULIAN VILLAGRAN — COLONIA
+- Asentamiento humano: BUGAMBILIAS — FRACCIONAMIENTO
+- Asentamiento humano: EL LLANO PRIMERA SECCIÓN — COLONIA
+- Asentamiento humano: EL LLANO SEGUNDA SECCIÓN — COLONIA
+- Asentamiento humano: HACIENDAS DE SANTA FE — FRACCIONAMIENTO
+- Asentamiento humano: ITURBE — COLONIA
+- Asentamiento humano: LA CANTERA — NINGUNO
+- Asentamiento humano: LA FERROCARRILERA — FRACCIONAMIENTO
+- Asentamiento humano: LAS ROSAS — FRACCIONAMIENTO
+- Asentamiento humano: LAS TULIAS — FRACCIONAMIENTO
+- Asentamiento humano: LOMAS DE ITURBIDE — FRACCIONAMIENTO
+- Asentamiento humano: LOS CEDROS — FRACCIONAMIENTO
+- Asentamiento humano: LOS CIPRESES — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA TULTENGO — FRACCIONAMIENTO
+- Asentamiento humano: SAN CARLOS — FRACCIONAMIENTO
+- Asentamiento humano: SAN PEDRO — FRACCIONAMIENTO
+- Asentamiento humano: SAN PEDRO ALPUYECA — COLONIA
+- Asentamiento humano: SAUCES — FRACCIONAMIENTO
+- Asentamiento humano: TULTENGO — COLONIA
+- Asentamiento humano: BOMINTZHA — COLONIA
+- Asentamiento humano: MONTE ALEGRE — COLONIA
+- Asentamiento humano: NANTZHA — BARRIO
+- Asentamiento humano: TOLLAN — UNIDAD HABITACIONAL
+- Asentamiento humano: SAN ANDRÉS (SAN ANDRÉS TULTEPEC) — PUEBLO
+- Asentamiento humano: SAN FRANCISCO BOJAY — COLONIA
+- Asentamiento humano: BUGAMBILIAS — FRACCIONAMIENTO
+- Asentamiento humano: CFE TULA — CONJUNTO HABITACIONAL
+- Asentamiento humano: DAMÚ — COLONIA
+- Asentamiento humano: EL CARMEN — COLONIA
+- Asentamiento humano: GALAXIAS — FRACCIONAMIENTO
+- Asentamiento humano: INFONAVIT — CONJUNTO HABITACIONAL
+- Asentamiento humano: LA JOYA — FRACCIONAMIENTO
+- Asentamiento humano: LA JOYA — COLONIA
+- Asentamiento humano: LAS MUELLES — COLONIA
+- Asentamiento humano: LAS PALMAS — FRACCIONAMIENTO
+- Asentamiento humano: LOMA BONITA — FRACCIONAMIENTO
+- Asentamiento humano: MONTECILLO — COLONIA
+- Asentamiento humano: NETZAHUALCOYOTL — COLONIA
+- Asentamiento humano: REAL MONTECILLO — FRACCIONAMIENTO
+- Asentamiento humano: SAN MARCOS — COLONIA
+- Asentamiento humano: VIOLETAS — FRACCIONAMIENTO
+- Asentamiento humano: CHAMIZAL — FRACCIONAMIENTO
+- Asentamiento humano: CIUDAD COOPERATIVA CRUZ AZUL — NINGUNO
+- Asentamiento humano: DENGUI — COLONIA
+- Asentamiento humano: INDEPENDENCIA — FRACCIONAMIENTO
+- Asentamiento humano: LA ARBOLADA — FRACCIONAMIENTO
+- Asentamiento humano: LA ROMERA — COLONIA
+- Asentamiento humano: LOS ARCOS — FRACCIONAMIENTO
+- Asentamiento humano: LOS NARANJOS — FRACCIONAMIENTO
+- Asentamiento humano: PACHUCA — PRIVADA
+- Asentamiento humano: PUEBLO NUEVO — NINGUNO
+- Asentamiento humano: SAN MIGUEL — FRACCIONAMIENTO
+- Asentamiento humano: SAN MIGUEL VINDHÓ — NINGUNO
+- Asentamiento humano: SAN PEDRITO ALPUYECA — PUEBLO
+- Asentamiento humano: SANTA ANA AHUEHUEPAN — COLONIA
+- Asentamiento humano: BALCONES DE SANTA MARÍA — PRIVADA
+- Asentamiento humano: LA GUITARRA — FRACCIONAMIENTO
+- Asentamiento humano: SANTA MARÍA — FRACCIONAMIENTO
+- Asentamiento humano: SANTA MARÍA ILÚCAN — COLONIA
+- Asentamiento humano: EL SESENTA Y UNO — COLONIA
+- Asentamiento humano: BENITO JUÁREZ — COLONIA
+- Asentamiento humano: LOS LAGOS — FRACCIONAMIENTO
+- Asentamiento humano: SESENTA Y DOS — COLONIA
+- Asentamiento humano: VIVA 2000 — FRACCIONAMIENTO
+- Asentamiento humano: EL SAUZ — COLONIA
+- Asentamiento humano: NUEVA SANTA MARÍA — COLONIA
+- Asentamiento humano: EL SAABI — COLONIA
+- Asentamiento humano: LA AMISTAD — COLONIA
+- Asentamiento humano: XONTHE — COLONIA
+- Asentamiento humano: JARDINES DE SAN MIGUEL — COLONIA
+- Asentamiento humano: CERRITO DEL TEPEYAC — COLONIA
+- Asentamiento humano: LA MEZQUITERA — COLONIA
+- Asentamiento humano: TERCERA MANZANA — COLONIA
+- Asentamiento humano: LA HACIENDA — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL ARBOLEDAS — FRACCIONAMIENTO
+
+## Municipio: Tulancingo de Bravo
+
+- Localidad: Tulancingo
+- Localidad: Acocul la Palma
+- Localidad: Ahuehuetitla
+- Localidad: Axatempa
+- Localidad: San Nicolás Cebolletas
+- Localidad: Huajomulco
+- Localidad: Jaltepec
+- Localidad: Laguna del Cerrito
+- Localidad: La Lagunilla
+- Localidad: Ojo de Agua
+- Localidad: San Francisco Huatengo
+- Localidad: San Nicolás el Grande
+- Localidad: Santa Ana Hueytlalpan
+- Localidad: Santa María Asunción
+- Localidad: Santa María el Chico
+- Localidad: Tepalzingo
+- Localidad: El Abra
+- Localidad: San Antonio Farías
+- Localidad: San Vidal
+- Localidad: Zototlán
+- Localidad: Acocul Guadalupe
+- Localidad: Javier Rojo Gómez
+- Localidad: La Mesa
+- Localidad: Napateco
+- Localidad: Sultepec
+- Localidad: Otontepec
+- Localidad: Las Piletas
+- Localidad: Santiago Caltengo (Buenos Aires)
+- Localidad: Ejido Mimila
+- Localidad: San Rafael Loma Bonita (Ejido Santa Ana Hueytlalpan)
+- Localidad: Santa Isabel [Rancho]
+- Localidad: Parque Urbano Napateco
+- Localidad: San Pablo
+- Localidad: Fraccionamiento del Magisterio Tulancinguense
+- Localidad: Pedregal de San Francisco
+- Localidad: Buenos Aires (Ejido Ahuehuetitla) [Colonia]
+- Localidad: Francisco Villa Napateco
+- Localidad: Las Colmenas
+- Localidad: Carlos Salinas de Gortari [Fraccionamiento]
+- Localidad: Huitititla
+- Localidad: Buenos Aires [Rancho]
+- Localidad: La Raya
+- Localidad: San Vicente
+- Localidad: Viveros de la Loma
+- Localidad: Ejido Huapalcalco
+- Localidad: Maroja
+- Localidad: Pozas Encantadas
+- Localidad: La Presa de Santa Ana
+- Localidad: Chimilpa
+- Localidad: San Nicolás el Chico [Rancho]
+- Localidad: Atlalpan
+- Localidad: San Felipe [Colonia]
+- Localidad: Los Álamos
+- Localidad: Guadalupe [Colonia]
+- Localidad: Ejido Huapalcalco
+- Localidad: San Rafael los Teteles
+- Localidad: Ejido Santiago Caltengo
+- Localidad: Lomas de Tulancingo
+- Localidad: Ejido el Paraíso
+- Localidad: San Francisco
+- Localidad: Rancho Universitario
+- Localidad: San Cayetano
+- Localidad: Lomas del Pedregal [Colonia]
+- Localidad: San Isidro [Rancho]
+- Localidad: Emiliano Zapata [Colonia]
+- Localidad: 2 de Agosto [Colonia]
+- Localidad: La Presa (Minas de Metilatla)
+- Localidad: Rincones de la Hacienda
+- Localidad: San Rafael el Jagüey (Ejido Santa María Asunción)
+- Localidad: Ejido Zapotlán de Allende
+- Localidad: San Rafael el Jagüey (Ejido Santa Ana Hueytlalpan)
+- Localidad: San Rafael Loma Bonita (Ejido Tulancingo)
+- Localidad: Tollancingo
+- Localidad: Ejido Jaltepec
+- Localidad: Ejido Santa Ana Hueytlalpan
+- Localidad: Agua Escondida
+- Localidad: Ejido Huapalcalco (Las Ánimas)
+- Localidad: Los Laureles
+- Localidad: Santa Fe [Colonia]
+- Localidad: Ejido Jaltepec
+- Localidad: Ejido San Dionisio
+- Localidad: Ejido Tulancingo
+- Localidad: Parte Alta de Cuauhtémoc
+- Asentamiento humano: 15 DE SEPTIEMBRE — COLONIA
+- Asentamiento humano: 20 DE NOVIEMBRE — FRACCIONAMIENTO
+- Asentamiento humano: ADOLFO LÓPEZ MATEOS — COLONIA
+- Asentamiento humano: ADOLFO RUÍZ CORTINEZ — COLONIA
+- Asentamiento humano: AHUEHUETES — FRACCIONAMIENTO
+- Asentamiento humano: AHUEHUETITLA — EXHACIENDA
+- Asentamiento humano: ALAMOXTITLA — COLONIA
+- Asentamiento humano: ALAMOXTITLA — RANCHO
+- Asentamiento humano: ALAMOXTITLA — FRACCIONAMIENTO
+- Asentamiento humano: AMILCAR — RESIDENCIAL
+- Asentamiento humano: ARCO IRIS — FRACCIONAMIENTO
+- Asentamiento humano: AURORA — COLONIA
+- Asentamiento humano: AVEMAR — FRACCIONAMIENTO
+- Asentamiento humano: BELLA VISTA — COLONIA
+- Asentamiento humano: BENITO JUÁREZ — COLONIA
+- Asentamiento humano: BICENTENARIO PLATINO — FRACCIONAMIENTO
+- Asentamiento humano: BOULEVARES DE TULANCINGO — FRACCIONAMIENTO
+- Asentamiento humano: BUGAMBILIAS — FRACCIONAMIENTO
+- Asentamiento humano: CALTENGO EX HACIENDA — EJIDO
+- Asentamiento humano: CALTENGO UNO EX HACIENDA — EJIDO
+- Asentamiento humano: CENTRO PRIMER CUADRO — COLONIA
+- Asentamiento humano: CENTRO SEGUNDO CUADRO — COLONIA
+- Asentamiento humano: CHAPULTEPEC — FRACCIONAMIENTO
+- Asentamiento humano: CIMA DORADA — FRACCIONAMIENTO
+- Asentamiento humano: COLINAS DEL PARAÍSO — COLONIA
+- Asentamiento humano: CONDESA — PRIVADA
+- Asentamiento humano: CORREDOR BICENTENARIO — FRACCIONAMIENTO
+- Asentamiento humano: CTM FIDEL VELÁZQUEZ — UNIDAD HABITACIONAL
+- Asentamiento humano: DEL VALLE — FRACCIONAMIENTO
+- Asentamiento humano: DEL VILLAR — FRACCIONAMIENTO
+- Asentamiento humano: DESARROLLO VALLE ESMERALDA — FRACCIONAMIENTO
+- Asentamiento humano: EL CEREZO — FRACCIONAMIENTO
+- Asentamiento humano: EL MIRADOR — FRACCIONAMIENTO
+- Asentamiento humano: EL PARAISO — COLONIA
+- Asentamiento humano: EL PARAÍSO — EJIDO
+- Asentamiento humano: EL PARAISO UNO DE CUATRO — EJIDO
+- Asentamiento humano: EL REFUGIO — COLONIA
+- Asentamiento humano: EL TREBOL — PRIVADA
+- Asentamiento humano: EL VOLCÁN — RANCHO
+- Asentamiento humano: EL VOLCÁN — FRACCIONAMIENTO
+- Asentamiento humano: EMILIANO DELGADILLO — PRIVADA
+- Asentamiento humano: ESMERALDA — PRIVADA
+- Asentamiento humano: ESTRELLA — COLONIA
+- Asentamiento humano: EXHACIENDA AHUEHUETITLA 1 — COLONIA
+- Asentamiento humano: EXQUITITLÁN — COLONIA
+- Asentamiento humano: FELIPE ÁNGELES — COLONIA
+- Asentamiento humano: FERROCARRILERA — COLONIA
+- Asentamiento humano: FRANCISCO I. MADERO — COLONIA
+- Asentamiento humano: GUADALUPE CUARTA SECCIÓN — COLONIA
+- Asentamiento humano: GUADALUPE PRIMERA SECCIÓN — COLONIA
+- Asentamiento humano: GUADALUPE SEGUNDA SECCIÓN — COLONIA
+- Asentamiento humano: GUADALUPE TERCERA SECCIÓN — COLONIA
+- Asentamiento humano: HIDALGO UNIDO — COLONIA
+- Asentamiento humano: HUAPALCALCO — COLONIA
+- Asentamiento humano: HUMBERTO CASTILLO MARTÍNEZ — COLONIA
+- Asentamiento humano: INFONAVIT LOS ÁLAMOS — FRACCIONAMIENTO
+- Asentamiento humano: INSURGENTES — COLONIA
+- Asentamiento humano: JARDINES DEL PARAÍSO — COLONIA
+- Asentamiento humano: JARDINES DEL PARAISO PRIMERA SECCIÓN — COLONIA
+- Asentamiento humano: JARDINES DEL SUR — FRACCIONAMIENTO
+- Asentamiento humano: JARDINES DEL SUR SEGUNDA SECCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: JORGE BERGANZA — COLONIA
+- Asentamiento humano: KARLA — PRIVADA
+- Asentamiento humano: LA ARGENTINA — FRACCIONAMIENTO
+- Asentamiento humano: LA CAÑADA — COLONIA
+- Asentamiento humano: LA CENTRAL — FRACCIONAMIENTO
+- Asentamiento humano: LA CRUZ — COLONIA
+- Asentamiento humano: LA CRUZ — AMPLIACIÓN
+- Asentamiento humano: LA CRUZ — AMPLIACIÓN
+- Asentamiento humano: LA CURVA — FRACCIONAMIENTO
+- Asentamiento humano: LA ESCONDIDA — FRACCIONAMIENTO
+- Asentamiento humano: LA HERRADURA — FRACCIONAMIENTO
+- Asentamiento humano: LA MESA CALTENGO — RANCHO
+- Asentamiento humano: LA MESA CALTENGO — FRACCIONAMIENTO
+- Asentamiento humano: LA MISIÓN — RESIDENCIAL
+- Asentamiento humano: LA MORENA — PRIVADA
+- Asentamiento humano: LA MORENA KRISOL — PRIVADA
+- Asentamiento humano: LA MORENA SECCIÓN NORTE A — FRACCIONAMIENTO
+- Asentamiento humano: LA MORENA SECCIÓN NORTE B — FRACCIONAMIENTO
+- Asentamiento humano: LA MORENA SUR — FRACCIONAMIENTO
+- Asentamiento humano: LA MORENA TERCERA SECCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: LA RAYUELA — COLONIA
+- Asentamiento humano: LA TOSCANA COUNTRY CLUB — FRACCIONAMIENTO
+- Asentamiento humano: LAS AMÉRICAS — CONJUNTO HABITACIONAL
+- Asentamiento humano: LAS ARBOLEDAS — FRACCIONAMIENTO
+- Asentamiento humano: LAS FLORES — COLONIA
+- Asentamiento humano: LINDAVISTA — COLONIA
+- Asentamiento humano: LOMA BONITA — COLONIA
+- Asentamiento humano: LOMAS DEL PARAÍSO — COLONIA
+- Asentamiento humano: LOMAS DEL PROGRESO — COLONIA
+- Asentamiento humano: LOS ÁLAMOS — COLONIA
+- Asentamiento humano: LOS CEDROS — FRACCIONAMIENTO
+- Asentamiento humano: LOS MESONES — PRIVADA
+- Asentamiento humano: LOS MESONES SEGUNDA SECCIÓN — PRIVADA
+- Asentamiento humano: LOS PINOS — FRACCIONAMIENTO
+- Asentamiento humano: LOS PINOS SEGUNDA SECCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: LOS SABINOS — FRACCIONAMIENTO
+- Asentamiento humano: MANUEL ÁVILA CAMACHO — PRIVADA
+- Asentamiento humano: MANUEL M PONCE — FRACCIONAMIENTO
+- Asentamiento humano: MARÍA ISABEL — FRACCIONAMIENTO
+- Asentamiento humano: MEDIAS TIERRAS — COLONIA
+- Asentamiento humano: METILATLA — COLONIA
+- Asentamiento humano: MIMILA TRES DE CUATRO — EJIDO
+- Asentamiento humano: MINERA SECCIÓN 200 — UNIDAD HABITACIONAL
+- Asentamiento humano: MOISÉS RIVERA — FRACCIONAMIENTO
+- Asentamiento humano: NARCISO MENDOZA — PRIVADA
+- Asentamiento humano: NICOLÁS BRAVO — UNIDAD
+- Asentamiento humano: NUEVA MORELOS — COLONIA
+- Asentamiento humano: NUEVO TULANCINGO — CONJUNTO HABITACIONAL
+- Asentamiento humano: NUEVO TULANCINGO FRACCIÓN B — CONJUNTO HABITACIONAL
+- Asentamiento humano: PARAÍSO CENTRO — FRACCIONAMIENTO
+- Asentamiento humano: PARAISO NORTE — COLONIA
+- Asentamiento humano: PARAÍSO NORTE — AMPLIACIÓN
+- Asentamiento humano: PARAÍSO NORTE — FRACCIONAMIENTO
+- Asentamiento humano: PARAÍSO SUR — COLONIA
+- Asentamiento humano: PARQUE DE POBLAMIENTO INDUSTRIAL — COLONIA
+- Asentamiento humano: PASEOS DE TULANCINGO — FRACCIONAMIENTO
+- Asentamiento humano: PERIFERIA CENTRO — COLONIA
+- Asentamiento humano: PIFSAL — FRACCIONAMIENTO
+- Asentamiento humano: PLAN DE AYALA — COLONIA
+- Asentamiento humano: PLAN DE AYALA — AMPLIACIÓN
+- Asentamiento humano: PLUTARCO ELÍAS CALLES — COLONIA
+- Asentamiento humano: POLANCO — FRACCIONAMIENTO
+- Asentamiento humano: PROGRESISTAS 2000 — COLONIA
+- Asentamiento humano: QUINTA REAL — PRIVADA
+- Asentamiento humano: RANCHO GUADALUPE — COLONIA
+- Asentamiento humano: RANCHO NUEVO — FRACCIONAMIENTO
+- Asentamiento humano: RANCHO SAN FRANCISCO — COLONIA
+- Asentamiento humano: RANCHO SANTA CLARA — COLONIA
+- Asentamiento humano: REFORMA — COLONIA
+- Asentamiento humano: REFORMA LA PRESA — FRACCIONAMIENTO
+- Asentamiento humano: REFRESQUERA — COLONIA
+- Asentamiento humano: RESIDENCIAL LA QUINTA — FRACCIONAMIENTO
+- Asentamiento humano: RESIDENCIAL VILLAS DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: REVOLUCIÓN — FRACCIONAMIENTO
+- Asentamiento humano: RINCÓN COLONIAL — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA LA MORENA — FRACCIONAMIENTO
+- Asentamiento humano: RIVA PALACIOS — PRIVADA
+- Asentamiento humano: ROMA — COLONIA
+- Asentamiento humano: SAN ANTONIO FARIAS — COLONIA
+- Asentamiento humano: SAN DANIEL — PRIVADA
+- Asentamiento humano: SAN DANIEL — FRACCIONAMIENTO
+- Asentamiento humano: SAN FRANCISCO HUATENGO — RANCHO
+- Asentamiento humano: SAN FRANCISCO HUATENGO UNO — FRACCIONAMIENTO
+- Asentamiento humano: SAN ISIDRO CALTENGO — COLONIA
+- Asentamiento humano: SAN JOSÉ CALTENGO — COLONIA
+- Asentamiento humano: SAN JUAN — COLONIA
+- Asentamiento humano: SAN LUIS — COLONIA
+- Asentamiento humano: SAN MANUEL — COLONIA
+- Asentamiento humano: SAN MARINO — FRACCIONAMIENTO
+- Asentamiento humano: SAN PEDRO — RESIDENCIAL
+- Asentamiento humano: SAN RAFAEL — COLONIA
+- Asentamiento humano: SANTA ANA — FRACCIONAMIENTO
+- Asentamiento humano: SANTA ANA CALTENGO — PRIVADA
+- Asentamiento humano: SANTA ANA RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: SANTA CLEMENCIA — FRACCIONAMIENTO
+- Asentamiento humano: SANTA TERESA — COLONIA
+- Asentamiento humano: SANTA TERESA — AMPLIACIÓN
+- Asentamiento humano: TEPEYAC — COLONIA
+- Asentamiento humano: TERRANOVA — RESIDENCIAL
+- Asentamiento humano: TOLLANZINGO — FRACCIONAMIENTO
+- Asentamiento humano: TULANCINGO SEIS DE NUEVE — EJIDO
+- Asentamiento humano: VALLE VERDE — FRACCIONAMIENTO
+- Asentamiento humano: VICENTE GUERRERO — COLONIA
+- Asentamiento humano: VICENTE GUERRERO — AMPLIACIÓN
+- Asentamiento humano: VILLAS DE LA CAÑADA — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS DE TULANCINGO — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS DEL RECUERDO — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS EL TREBOL — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS SOL — FRACCIONAMIENTO
+- Asentamiento humano: VIVIR MEJOR ES PROGRESO — FRACCIONAMIENTO
+- Asentamiento humano: ZAPOTLAN DE ALLENDE — BARRIO
+- Asentamiento humano: ZAPOTLÁN DE ALLENDE — COLONIA
+- Asentamiento humano: ZAPOTLÁN DE ALLENDE UNO DE SIETE — EJIDO
+- Asentamiento humano: ACOCUL LA PALMA — EJIDO
+- Asentamiento humano: AHUEHUETITLA — NINGUNO
+- Asentamiento humano: AXATEMPA — RANCHERÍA
+- Asentamiento humano: SAN NICOLAS CEBOLLETAS — PUEBLO
+- Asentamiento humano: HUAJOMULCO — COLONIA
+- Asentamiento humano: CAMPO ALEGRE — FRACCIONAMIENTO
+- Asentamiento humano: CARRILLO PUERTO — COLONIA
+- Asentamiento humano: EL CERRIL JALTEPEC — COLONIA
+- Asentamiento humano: EMILIANO ZAPATA JALTEPEC — COLONIA
+- Asentamiento humano: JALTEPEC — COLONIA
+- Asentamiento humano: JALTEPEC TRES DE TRES — EJIDO
+- Asentamiento humano: LAS GLORIAS — FRACCIONAMIENTO
+- Asentamiento humano: LAS GLORIAS I — FRACCIONAMIENTO
+- Asentamiento humano: LAS GLORIAS II — FRACCIONAMIENTO
+- Asentamiento humano: LAS GLORIAS III — FRACCIONAMIENTO
+- Asentamiento humano: LOS ALMENDROS — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA DE CAMPO ALEGRE — PRIVADA
+- Asentamiento humano: PRIVADA DE CAMPO REAL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA SAN ANDRÉS — AMPLIACIÓN
+- Asentamiento humano: SAN ANDRÉS — PRIVADA
+- Asentamiento humano: SANTA ALICIA — FRACCIONAMIENTO
+- Asentamiento humano: VISTA REAL — FRACCIONAMIENTO
+- Asentamiento humano: LA LAGUNILLA — PUEBLO
+- Asentamiento humano: SAN NICOLÁS EL GRANDE — PUEBLO
+- Asentamiento humano: ATLALPAN — BARRIO
+- Asentamiento humano: LA CIÉNEGA — BARRIO
+- Asentamiento humano: LA LUZ — BARRIO
+- Asentamiento humano: LA PALMA — BARRIO
+- Asentamiento humano: LAGUNA DEL CERRITO — PUEBLO
+- Asentamiento humano: TECOCUILCO — BARRIO
+- Asentamiento humano: CENTRO — BARRIO
+- Asentamiento humano: CUAUHTÉMOC — BARRIO
+- Asentamiento humano: SAN ÁNGEL — BARRIO
+- Asentamiento humano: TEJANECAPA — BARRIO
+- Asentamiento humano: TEPALTZINGO — PUEBLO
+- Asentamiento humano: SANTA MARÍA EL CHICO — EJIDO
+- Asentamiento humano: TEPALZINGO — BARRIO
+- Asentamiento humano: EL ABRA — RANCHERÍA
+- Asentamiento humano: SAN ANTONIO FARÍAS — NINGUNO
+- Asentamiento humano: SAN VIDAL — COLONIA
+- Asentamiento humano: ZOTOTLÁN — COLONIA
+- Asentamiento humano: ACOCUL GUADALUPE — EJIDO
+- Asentamiento humano: AHUEHUETITLA — COLONIA
+- Asentamiento humano: AMPLIACIÓN JAVIER ROJO GÓMEZ — COLONIA
+- Asentamiento humano: EL PEDREGAL — FRACCIONAMIENTO
+- Asentamiento humano: FRANCISCO VILLA PRIMERA SECCIÓN — COLONIA
+- Asentamiento humano: FRANCISCO VILLA TERCERA SECCIÓN — COLONIA
+- Asentamiento humano: JAVIER ROJO GÓMEZ PRIMERA SECCIÓN — COLONIA
+- Asentamiento humano: JAVIER ROJO GÓMEZ SEGUNDA SECCIÓN — COLONIA
+- Asentamiento humano: SANTA ELENA — FRACCIONAMIENTO
+- Asentamiento humano: TOLEDO — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS SANTA MARÍA — FRACCIONAMIENTO
+- Asentamiento humano: NAPATECO — COLONIA
+- Asentamiento humano: SULTEPEC — COLONIA
+- Asentamiento humano: MIMILA — EJIDO
+- Asentamiento humano: NINGUNO — FRACCIONAMIENTO
+- Asentamiento humano: SAN RAFAEL LOMA BONITA — COLONIA
+- Asentamiento humano: JARDINES DE NAPATECO — FRACCIONAMIENTO
+- Asentamiento humano: LA LOMA NAPATECO — FRACCIONAMIENTO
+- Asentamiento humano: PLEASENTON — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DE NAPATECO — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADA DEL BOSQUE — FRACCIONAMIENTO
+- Asentamiento humano: SAN FRANCISCO JARDINES DE NAPATECO — PRIVADA
+- Asentamiento humano: UNIDAD HABITACIONAL NAPATECO — FRACCIONAMIENTO
+- Asentamiento humano: MAGISTERIO TULANCINGUENCE — FRACCIONAMIENTO
+- Asentamiento humano: PEDREGAL DE SAN FRANCISCO — FRACCIONAMIENTO
+- Asentamiento humano: FRANCISCO VILLA NAPATECO — COLONIA
+- Asentamiento humano: CARLOS SALINAS DE GORTARIA — FRACCIONAMIENTO
+- Asentamiento humano: SAN VICENTE — RANCHERÍA
+- Asentamiento humano: VIVEROS DE LA LOMA — COLONIA
+- Asentamiento humano: SAN NICOLAS EL CHICO — RANCHO
+- Asentamiento humano: SAN FELIPE — BARRIO
+- Asentamiento humano: EL PARAISO — EJIDO
+- Asentamiento humano: SAN FRANCISCO — NINGUNO
+- Asentamiento humano: LOMAS DEL PEDREGAL — COLONIA
+- Asentamiento humano: 2 DE AGOSTO — COLONIA
+- Asentamiento humano: LOS TULES — FRACCIONAMIENTO
+- Asentamiento humano: RINCONES DE LA HACIENDA I — FRACCIONAMIENTO
+- Asentamiento humano: RINCONES DE LA HACIENDA II — FRACCIONAMIENTO
+- Asentamiento humano: RINCONES DE LA HACIENDA III — FRACCIONAMIENTO
+- Asentamiento humano: UNIVERSIDAD PEDAGÓGICA DE TULANCINGO — NINGUNO
+- Asentamiento humano: SAN RAFAEL LOMA BONITA — COLONIA
+- Asentamiento humano: TOLLANCINGO — COLONIA
+- Asentamiento humano: SANTA FÉ — COLONIA
+
+## Municipio: Villa de Tezontepec
+
+- Localidad: Tezontepec
+- Localidad: Acozac
+- Localidad: La Cantera
+- Localidad: El Capulín
+- Localidad: Chamberluco
+- Localidad: Guadalupe
+- Localidad: Jagüey de Arriba
+- Localidad: Benito Juárez
+- Localidad: San Valentín [Rancho]
+- Localidad: El Tejocote
+- Localidad: Tlexpa
+- Localidad: Guadalupe [Colonia]
+- Localidad: Jagüeycillo
+- Localidad: Progreso
+- Localidad: La Laguna
+- Localidad: Xoconoxtle
+- Localidad: La Loma
+- Localidad: San Agustín
+- Localidad: San Isidro
+- Localidad: Ampliación San Juanita
+- Localidad: Altamira
+- Localidad: El Miravalle
+- Localidad: Rancho Blanco
+- Localidad: Morelos [Colonia]
+- Localidad: PLATAH [Parque Industrial]
+- Asentamiento humano: BARRIO DE LA VIRGEN — BARRIO
+- Asentamiento humano: BARRIO DEL CALVARIO — BARRIO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CORTIJO — FRACCIONAMIENTO
+- Asentamiento humano: EL FRESNO — COLONIA
+- Asentamiento humano: FORJADORES DE VILLA DE TEZONTEPEC — FRACCIONAMIENTO
+- Asentamiento humano: LOS AMORES DE DON JUAN — FRACCIONAMIENTO
+- Asentamiento humano: NUEVA — COLONIA
+- Asentamiento humano: RANCHO NEVADO — COLONIA
+- Asentamiento humano: SAN JERÓNIMO — BARRIO
+- Asentamiento humano: SAN JUAN — BARRIO
+- Asentamiento humano: VILLAS DE SAN JUANITA — FRACCIONAMIENTO
+- Asentamiento humano: ACOZAC — RANCHERÍA
+- Asentamiento humano: LA CANTERA — PUEBLO
+- Asentamiento humano: EL CAPULIN — PUEBLO
+- Asentamiento humano: CHAMBERLUCO — COLONIA
+- Asentamiento humano: BENITO JUÁREZ — COLONIA
+- Asentamiento humano: EL TEJOCOTE — PUEBLO
+- Asentamiento humano: TLEXPA — RANCHERÍA
+- Asentamiento humano: GUADALUPE — COLONIA
+- Asentamiento humano: MORELOS — COLONIA
+- Asentamiento humano: PLATAH — ZONA INDUSTRIAL
+
+## Municipio: Zapotlán de Juárez
+
+- Localidad: Zapotlán de Juárez
+- Localidad: Acayuca
+- Localidad: San Pedro Huaquilpan
+- Localidad: San Javier
+- Localidad: Chiltepec
+- Localidad: San Pedro Huitepec
+- Localidad: Los Chávez
+- Localidad: El Fortino
+- Localidad: San Francisco
+- Localidad: La Mesa
+- Localidad: El Rincón
+- Localidad: El Vergel
+- Localidad: Rancho Viejo
+- Localidad: Rancho Alegre
+- Localidad: Rafael Pérez O.
+- Localidad: La Cañada
+- Localidad: Antonio Torres
+- Localidad: San Isidro
+- Localidad: Urizan
+- Localidad: Plan de Guadalupe
+- Localidad: El Herradero
+- Localidad: Zapotlán [Gasolinera]
+- Localidad: Lorenzo Vázquez
+- Localidad: La Fortaleza
+- Localidad: Acayuca [Gasolinera]
+- Localidad: Rafael Mejía
+- Localidad: San Felipe
+- Localidad: San José Arena [Rancho]
+- Localidad: El Regalo [Rancho]
+- Localidad: Real Bilbao [Fraccionamiento]
+- Asentamiento humano: CENTRO ZAPOTLÁN — COLONIA
+- Asentamiento humano: EMILIANO ZAPATA — COLONIA
+- Asentamiento humano: JUÁREZ — COLONIA
+- Asentamiento humano: LA PALMA — FRACCIONAMIENTO
+- Asentamiento humano: LA PRESA — NINGUNO
+- Asentamiento humano: PUEBLO NUEVO — COLONIA
+- Asentamiento humano: RESIDENCIAL ARBOLADA — FRACCIONAMIENTO
+- Asentamiento humano: SANTA MARÍA — COLONIA
+- Asentamiento humano: SANTUARIO — FRACCIONAMIENTO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CERRITO — COLONIA
+- Asentamiento humano: EL HERRADERO — COLONIA
+- Asentamiento humano: HUATONGO — COLONIA
+- Asentamiento humano: LA CAÑADA — COLONIA
+- Asentamiento humano: LÁZARO CÁRDENAS — COLONIA
+- Asentamiento humano: LOMAS DEL PEDREGAL — COLONIA
+- Asentamiento humano: LOS JORGES — COLONIA
+- Asentamiento humano: NUEVA SANTA MARÍA — COLONIA
+- Asentamiento humano: OBRERA — COLONIA
+- Asentamiento humano: PUEBLO NUEVO — COLONIA
+- Asentamiento humano: RESIDENCIAL ACAYUCA — FRACCIONAMIENTO
+- Asentamiento humano: BUENOS AIRES — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CERRITO — COLONIA
+- Asentamiento humano: NIÑOS HÉROES — COLONIA
+- Asentamiento humano: REVOLUCIÓN MEXICANA — COLONIA
+- Asentamiento humano: SAN ISIDRO — COLONIA
+- Asentamiento humano: LA FORTALEZA — FRACCIONAMIENTO
+
+## Municipio: Zempoala
+
+- Localidad: Zempoala
+- Localidad: Acelotla de Ocampo
+- Localidad: Santa Cruz
+- Localidad: Francisco Villa
+- Localidad: Rancho Luna
+- Localidad: Guadalupe Santa Rita de Arriba
+- Localidad: Rancho Margarita
+- Localidad: Ex-Hacienda Metepec
+- Localidad: Nextlalpan (San Miguel Nextlalpan)
+- Localidad: Las Palomas
+- Localidad: San Agustín Zapotlán
+- Localidad: San Antonio Oxtoyucan
+- Localidad: San Gabriel Azteca
+- Localidad: Santa María Tecajete
+- Localidad: Ex-Hacienda Santa Rita del Sauz
+- Localidad: Santo Tomás
+- Localidad: Ex-Hacienda de Tecajete
+- Localidad: Jagüey de Téllez (Estación Téllez)
+- Localidad: Tepa el Grande
+- Localidad: Santiago Tepeyahualco
+- Localidad: Tepozoyucan
+- Localidad: San Mateo Tlajomulco
+- Localidad: San Pedro Tlaquilpan
+- Localidad: La Trinidad
+- Localidad: Venustiano Carranza
+- Localidad: Villa Margarita
+- Localidad: Zontecomate
+- Localidad: Hacienda Tepa el Chico
+- Localidad: Granjas Integradas
+- Localidad: Buenavista
+- Localidad: La Cuchilla
+- Localidad: El Cerrito de Téllez
+- Localidad: San Juan Pueblilla
+- Localidad: Santa Gertrudis
+- Localidad: San Cristóbal el Grande
+- Localidad: Ex-Hacienda San Antonio Tochatlaco
+- Localidad: Mazatepec
+- Localidad: Ex-Hacienda Montecillos
+- Localidad: Bachimba [Rancho]
+- Localidad: El Capiro
+- Localidad: Rancho Guadalupe
+- Localidad: Ex-Hacienda Guadalupe Arcos
+- Localidad: El Mirador
+- Localidad: Los Olivos
+- Localidad: La Providencia
+- Localidad: San José Tetecuintla
+- Localidad: San Antonio Tepeyac
+- Localidad: San Mateo Axtlacoyoacan [Rancho]
+- Localidad: Guadalupe [Rancho]
+- Localidad: Las Casas
+- Localidad: Alfonso Corona del Rosal
+- Localidad: Los Pilares
+- Localidad: El Potrero
+- Localidad: Santa Cruz
+- Localidad: La Isla
+- Localidad: El Barrio Casas Coloradas
+- Localidad: Los Canales
+- Localidad: Mundo Global de Remolques
+- Localidad: Casa Vieja
+- Localidad: Santa Isabel
+- Localidad: Nueva San Agustín [Colonia]
+- Localidad: La Grava
+- Localidad: Las Lomas (Los Galleros)
+- Localidad: Rancho Berlín
+- Localidad: Rancho Viejo
+- Localidad: El Tejamanil
+- Localidad: San Antonio Oxtoyucan [Ejido]
+- Localidad: Los Laureles [Rancho]
+- Localidad: Dazha [Rancho]
+- Localidad: Pozo el Llano
+- Localidad: La Era de la Peña
+- Localidad: Buenavista
+- Localidad: Cañada el Salvador [Rancho]
+- Localidad: La Luz [Rancho]
+- Localidad: Lindavista
+- Localidad: El Caracol [Rancho]
+- Localidad: La Palma [Rancho]
+- Localidad: San Hipólito [Rancho]
+- Localidad: El Charquito
+- Localidad: Jagüey Seco
+- Localidad: Ojo de Agua
+- Localidad: Cerro Pelón [Rancho]
+- Localidad: El Chocolin [Rancho]
+- Localidad: El Cristo [Rancho]
+- Localidad: El Obregón [Rancho]
+- Localidad: La Palma [Rancho]
+- Localidad: Las Calaveras [Rancho]
+- Localidad: La Rinconada
+- Localidad: Roberto Islas
+- Localidad: Rancho Beisbolero
+- Localidad: San Juan Tepemazalco
+- Localidad: San Ignacio [Rancho]
+- Localidad: Las Palmas
+- Localidad: Las Palmas
+- Localidad: El Mirador Sexta Sección
+- Localidad: Santa María
+- Localidad: Palmitas [Colonia]
+- Localidad: Privadas Santa Matilde
+- Localidad: Villas de San Marcos
+- Localidad: Nueva Esperanza
+- Localidad: Bosques de Matilde
+- Localidad: Villa Fontana
+- Localidad: Los Ciruelos
+- Localidad: Marengo
+- Localidad: El Carril Ancho
+- Localidad: La Florencia
+- Localidad: Coatepec
+- Localidad: Los Duraznos
+- Localidad: Hacienda del Parque [Fraccionamiento]
+- Localidad: La Montaña [Rancho]
+- Localidad: Ranchito el Álamo
+- Localidad: La Rinconada [Rancho]
+- Localidad: El Pozo
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CERRITO — COLONIA
+- Asentamiento humano: ESTACIÓN TEPA — COLONIA
+- Asentamiento humano: LA PRESA — COLONIA
+- Asentamiento humano: LA SALIDA — COLONIA
+- Asentamiento humano: PALMITAS — COLONIA
+- Asentamiento humano: SAN JUAN TEPEMAZALCO — COLONIA
+- Asentamiento humano: ZACUALA — COLONIA
+- Asentamiento humano: ZACUALA ACUEDUCTO — COLONIA
+- Asentamiento humano: ACELOTLA DE OCAMPO — PUEBLO
+- Asentamiento humano: LOS CHAVEZ — BARRIO
+- Asentamiento humano: LOS CRUCES — BARRIO
+- Asentamiento humano: LOS GALINDO — BARRIO
+- Asentamiento humano: LOS RUISEZ — BARRIO
+- Asentamiento humano: SANTA CRUZ — PUEBLO
+- Asentamiento humano: FRANCISCO VILLA — PUEBLO
+- Asentamiento humano: RANCHO LUNA — RANCHERÍA
+- Asentamiento humano: GUADALUPE SANTA RITA DE ARRIBA — PUEBLO
+- Asentamiento humano: SAN AGUSTIN ZAPOTLAN — PUEBLO
+- Asentamiento humano: SAN ANTONIO OXTOYUCAN — PUEBLO
+- Asentamiento humano: SAN GABRIEL AZTECA — PUEBLO
+- Asentamiento humano: SANTA MARIA TECAJETE — PUEBLO
+- Asentamiento humano: DE LOS AVILA — BARRIO
+- Asentamiento humano: LOS HUESITOS — COLONIA
+- Asentamiento humano: OJO DE AGUA — BARRIO
+- Asentamiento humano: SANTO TOMAS — PUEBLO
+- Asentamiento humano: JAGÜEY DE TÉLLEZ — NINGUNO
+- Asentamiento humano: TEPA EL GRANDE — PUEBLO
+- Asentamiento humano: COLORADO — BARRIO
+- Asentamiento humano: COPORO — BARRIO
+- Asentamiento humano: SANTA MARÍA — BARRIO
+- Asentamiento humano: TLAQUILPAN — BARRIO
+- Asentamiento humano: TEPOZOYUCAN — PUEBLO
+- Asentamiento humano: SAN MATEO TLAJOMULCO — PUEBLO
+- Asentamiento humano: SAN PEDRO TLAQUILPAN — PUEBLO
+- Asentamiento humano: LA TRINIDAD — PUEBLO
+- Asentamiento humano: VENUSTIANO CARRANZA — PUEBLO
+- Asentamiento humano: VILLA MARGARITA — PUEBLO
+- Asentamiento humano: BUENAVISTA — RANCHERÍA
+- Asentamiento humano: SANTA GERTRUDIS — PUEBLO
+- Asentamiento humano: SAN CRISTOBAL EL GRANDE — PUEBLO
+- Asentamiento humano: EL MIRADOR — COLONIA
+- Asentamiento humano: ALFONSO CORONA DEL ROSAL — PUEBLO
+- Asentamiento humano: EL POTRERO — RANCHERÍA
+- Asentamiento humano: LA ISLA — COLONIA
+- Asentamiento humano: EL BARRIO CASAS COLORADAS — BARRIO
+- Asentamiento humano: NUEVA SAN AGUSTIN — COLONIA
+- Asentamiento humano: LINDAVISTA — COLONIA
+- Asentamiento humano: MINERAL DEL ORO — FRACCIONAMIENTO
+- Asentamiento humano: MONTENOVO — FRACCIONAMIENTO
+- Asentamiento humano: PASEOS DE LOS OLIVOS — FRACCIONAMIENTO
+- Asentamiento humano: REAL DE JOYAS — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DE VILLAREAL — FRACCIONAMIENTO
+- Asentamiento humano: VALLE DIAMANTE — FRACCIONAMIENTO
+- Asentamiento humano: EL MIRADOR SEXTA SECCIÓN — COLONIA
+- Asentamiento humano: SANTA TERESA — COLONIA
+- Asentamiento humano: SANTA MARIA — PUEBLO
+- Asentamiento humano: PALMITAS — COLONIA
+- Asentamiento humano: CORCEGA — FRACCIONAMIENTO
+- Asentamiento humano: ESMERALDA — FRACCIONAMIENTO
+- Asentamiento humano: LOS AMORES DE DON JUAN TÉLLEZ — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA ABRUZZO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA BARDOLINO RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA CHIANTI — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LA FLORINA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LA RIVERINA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA LOIRE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA MARSALA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA ORVIETO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA PIEMONTE — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA RABELLO — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA REAL NAVARRA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADA VENETO — FRACCIONAMIENTO
+- Asentamiento humano: REAL PALMAS — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS DE ESMERALDA — FRACCIONAMIENTO
+- Asentamiento humano: RINCONADAS SAN ALFONSO — FRACCIONAMIENTO
+- Asentamiento humano: SAN ALFONSO I — FRACCIONAMIENTO
+- Asentamiento humano: SAN ALFONSO II — FRACCIONAMIENTO
+- Asentamiento humano: SAN ALFONSO III — FRACCIONAMIENTO
+- Asentamiento humano: SANTA MATILDE — FRACCIONAMIENTO
+- Asentamiento humano: TRENTINO RESIDENCIAL — FRACCIONAMIENTO
+- Asentamiento humano: VICTORIA — FRACCIONAMIENTO
+- Asentamiento humano: PRIVADAS DEL SOL — FRACCIONAMIENTO
+- Asentamiento humano: VILLAS DE SAN MARCOS — FRACCIONAMIENTO
+- Asentamiento humano: NUEVA ESPERANZA — PUEBLO
+- Asentamiento humano: BOSQUES DE MATILDE — FRACCIONAMIENTO
+- Asentamiento humano: VILLA FONTANA — FRACCIONAMIENTO
+- Asentamiento humano: VILLA SAN JUAN — FRACCIONAMIENTO
+- Asentamiento humano: LOS CIRUELOS — FRACCIONAMIENTO
+
+## Municipio: Zimapán
+
+- Localidad: Zimapán
+- Localidad: Las Adjuntas
+- Localidad: El Aguacatito
+- Localidad: Aguas Blancas
+- Localidad: Álvaro Obregón (Temuthe)
+- Localidad: Apezco
+- Localidad: Benito Juárez (Detzani)
+- Localidad: Boñhú
+- Localidad: Camposanto del Oro
+- Localidad: Cerro Colorado
+- Localidad: El Cerrote
+- Localidad: Cobrecito
+- Localidad: El Cuarto
+- Localidad: Coaxithi
+- Localidad: El Dedho
+- Localidad: Doxthí
+- Localidad: Durango
+- Localidad: Los Duraznos
+- Localidad: Tzijay (Emiliano Zapata)
+- Localidad: Encarnación
+- Localidad: La Estanzuela
+- Localidad: Francisco I. Madero (Guadalupe)
+- Localidad: Garabatos (Garabatos la Estancia)
+- Localidad: Jagüey Colorado
+- Localidad: Lázaro Cárdenas (Remedios)
+- Localidad: Llanitos
+- Localidad: Llano Segundo
+- Localidad: Maguey Verde
+- Localidad: La Majada Grande
+- Localidad: La Manzana
+- Localidad: Megüi
+- Localidad: El Mezquite Segundo
+- Localidad: Morelos (Trancas)
+- Localidad: La Ortiga
+- Localidad: Plutarco Elías Calles (Santiago)
+- Localidad: Pueblo Nuevo
+- Localidad: Puerto del Ángel
+- Localidad: Puerto Juárez
+- Localidad: La Rinconada
+- Localidad: El Rincón
+- Localidad: El Salitre
+- Localidad: San Andrés (Toxthi)
+- Localidad: San Francisco
+- Localidad: San José del Oro (San Vicente)
+- Localidad: Santa Rita
+- Localidad: El Saucillo
+- Localidad: Sóstenes Vega (Xithá Segundo Cedho)
+- Localidad: Tadhé
+- Localidad: El Tathí
+- Localidad: Taxthó
+- Localidad: Tenguedhó
+- Localidad: Tinthé
+- Localidad: Tolimán
+- Localidad: Las Vegas
+- Localidad: Venustiano Carranza (San Pedro)
+- Localidad: Verdosas
+- Localidad: Vicente Guerrero (El Tablón)
+- Localidad: Xajhá
+- Localidad: Xindhó Guadalupe
+- Localidad: Xhitá Primero
+- Localidad: Xodhé
+- Localidad: Yerbabuena
+- Localidad: Yethay
+- Localidad: San Cristóbal
+- Localidad: Codornices
+- Localidad: Puerto del Efe
+- Localidad: La Cruz (Ejido de la Cruz)
+- Localidad: Doxthi la Sabina (La Sabina)
+- Localidad: La Tinaja
+- Localidad: Pontihú
+- Localidad: Puetzey
+- Localidad: San Miguel Tetillas
+- Localidad: El Aguacatal
+- Localidad: Francisco Villa (Llano Segundo)
+- Localidad: La Ventolera
+- Localidad: Pared Blanca
+- Localidad: San Felipe
+- Localidad: Barrón
+- Localidad: San Antonio (Cuauhtémoc)
+- Localidad: Puerto Colorado
+- Localidad: El Álamo
+- Localidad: Botha
+- Localidad: Cajay
+- Localidad: La Calera
+- Localidad: Los Carrizos
+- Localidad: Cruz Pinta
+- Localidad: Cuesta Blanca
+- Localidad: El Dedhó
+- Localidad: Ex-Hacienda la Estancia
+- Localidad: Cazay
+- Localidad: La Loma
+- Localidad: Llano Blanco
+- Localidad: La Majada
+- Localidad: Los Mármoles
+- Localidad: La Mesa
+- Localidad: Mezquite Primero
+- Localidad: La Milpota
+- Localidad: El Muhí
+- Localidad: Los Nogales
+- Localidad: Puerto Zapote (La Nopalera)
+- Localidad: El Palmar
+- Localidad: Pelillos
+- Localidad: Las Piletas
+- Localidad: Potreritos
+- Localidad: Puerto de Vigas
+- Localidad: Puerto de la Estancia
+- Localidad: Puerto Xodhe
+- Localidad: El Rodeo
+- Localidad: La Ruda
+- Localidad: San Juan [Rancho]
+- Localidad: San Miguel
+- Localidad: La Tinaja Durango
+- Localidad: Tlalpan
+- Localidad: El Tule
+- Localidad: Villa Nueva
+- Localidad: Xhitá Segundo (San Isidro)
+- Localidad: Xindhó Segundo (Xindhó Saucillo)
+- Localidad: Xindhó Primero
+- Localidad: Las Pilas
+- Localidad: El Saucillo [Ejido]
+- Localidad: Puerto Ingeniero Isidro Díaz
+- Localidad: El Sabino
+- Localidad: Buenavista
+- Localidad: La Casota
+- Localidad: La Cebada
+- Localidad: Puerto la Palma (Cerrito Enmedio)
+- Localidad: Cuesta Texquedhó
+- Localidad: Ejido de la Cruz
+- Localidad: La Escondida
+- Localidad: Iglesia Vieja
+- Localidad: La Loma
+- Localidad: La Loma
+- Localidad: La Mesa de Camposanto del Oro
+- Localidad: Peña Colorada
+- Localidad: Pozo Hondo
+- Localidad: Puertecito del Megüi
+- Localidad: Puerto Jagüey (Puerto de Guaymas)
+- Localidad: Puerto Montero
+- Localidad: El Rancho
+- Localidad: El Salitre
+- Localidad: San Francisco Texquedho
+- Localidad: San Isidro
+- Localidad: Santa María
+- Localidad: El Sauz
+- Localidad: Taxthó
+- Localidad: El Tepozán
+- Localidad: El Tepozán
+- Localidad: Tierras Amarillas
+- Localidad: Toxhi
+- Localidad: Tzitzi
+- Localidad: La Venta de Coaxithi
+- Localidad: Changui
+- Localidad: Xindhó San Pedro
+- Localidad: El Zapote
+- Localidad: Los Pilares
+- Localidad: El Carrizal
+- Localidad: La Loma
+- Localidad: El Organal
+- Localidad: Las Pilas
+- Localidad: Maguey Blanco
+- Localidad: San Vicente
+- Localidad: La Barranca del Muhí
+- Localidad: Llano Norte
+- Localidad: Ejido Vicente Guerrero (Los Potreros)
+- Localidad: Shanadu
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: CERRITO ROMERO — COLONIA
+- Asentamiento humano: EL CALVARIO — COLONIA
+- Asentamiento humano: EL MUHI II — COLONIA
+- Asentamiento humano: EL SABINO — COLONIA
+- Asentamiento humano: FAS — COLONIA
+- Asentamiento humano: LA ALBERCA — COLONIA
+- Asentamiento humano: LA SABINA — COLONIA
+- Asentamiento humano: LAS FLORES — COLONIA
+- Asentamiento humano: LAS LIMAS — COLONIA
+- Asentamiento humano: LLANO NORTE — COLONIA
+- Asentamiento humano: MINERA — COLONIA
+- Asentamiento humano: NUEVA REFORMA — COLONIA
+- Asentamiento humano: SANTA MARÍA — FRACCIONAMIENTO
+- Asentamiento humano: SOLIDARIDAD — COLONIA
+- Asentamiento humano: TIERRA COLORADA — COLONIA
+- Asentamiento humano: UNIDAD HABITACIONAL INFONAVIT — COLONIA
+- Asentamiento humano: BENITO JUÁREZ — PUEBLO
+- Asentamiento humano: FRANCISCO I. MADERO — PUEBLO
+- Asentamiento humano: LÁZARO CÁRDENAS — PUEBLO
+- Asentamiento humano: PLUTARCO ELIAS CALLES — PUEBLO
+- Asentamiento humano: EL SALITRE — PUEBLO
+- Asentamiento humano: VENUSTIANO CARRANZA — PUEBLO
+- Asentamiento humano: XINDHÓ GUADALUPE — COLONIA
+- Asentamiento humano: EL ÁLAMO — PUEBLO
+- Asentamiento humano: LLANO BLANCO — PUEBLO
+- Asentamiento humano: EL MUHÍ — COLONIA
+- Asentamiento humano: TLALPAN — PUEBLO
+- Asentamiento humano: EL TULE — COLONIA
+- Asentamiento humano: XINDHÓ PRIMERO — PUEBLO
+- Asentamiento humano: LOS PILARES — PUEBLO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Asentamiento humano: SAN JUAN — BARRIO
+- Asentamiento humano: TEJERÍA DE AGUA ZARCA — BARRIO
+- Asentamiento humano: TLALA — BARRIO
+- Asentamiento humano: VISTA HERMOSA DE BARRIO NUEVO — BARRIO
+- Asentamiento humano: ACAHUAL — BARRIO
+- Asentamiento humano: ARRACO — BARRIO
+- Asentamiento humano: ATENCUAPA — BARRIO
+- Asentamiento humano: ATLALNALI — BARRIO
+- Asentamiento humano: AXOMOL — BARRIO
+- Asentamiento humano: CRUZICA — BARRIO
+- Asentamiento humano: HUEYOTIPA — BARRIO
+- Asentamiento humano: HUICHAPA — BARRIO
+- Asentamiento humano: IXTLAPAL — BARRIO
+- Asentamiento humano: MANTECO — BARRIO
+- Asentamiento humano: TEIXCUAPA — BARRIO
+- Asentamiento humano: TEPANEZQUINA — BARRIO
+- Asentamiento humano: TEZACUALZINTLA — BARRIO
+- Asentamiento humano: TLALCUAPA — BARRIO
+- Asentamiento humano: XOCOCUATITLA — COLONIA
+- Asentamiento humano: ZACUALTIPAN — BARRIO
+
+## Municipio: Cardonal
+
+- Localidad: Cardonal
+- Localidad: Aguacatlán
+- Localidad: El Arenalito (El Arroyo)
+- Localidad: El Bingú
+- Localidad: El Botho
+- Localidad: El Boxo
+- Localidad: El Buena
+- Localidad: Cerritos
+- Localidad: Cerro Colorado
+- Localidad: Cieneguilla
+- Localidad: El Cubo
+- Localidad: El Deca
+- Localidad: La Florida
+- Localidad: Jonacapa
+- Localidad: La Mesa
+- Localidad: Moxthe
+- Localidad: Piedra Chica
+- Localidad: El Potrero
+- Localidad: Pozuelos
+- Localidad: San Andrés Daboxtha
+- Localidad: San Antonio Sabanillas
+- Localidad: San Clemente
+- Localidad: San Cristóbal
+- Localidad: San Miguel Tlazintla
+- Localidad: San Miguel Jigui
+- Localidad: Santa Teresa Daboxtha
+- Localidad: Santuario (Santuario Mapethé)
+- Localidad: El Sauz (Juxmaye)
+- Localidad: El Tedra
+- Localidad: Barrio de Tixqui
+- Localidad: El Vithe
+- Localidad: Pilas Yonthé
+- Localidad: El Molino
+- Localidad: Durango Daboxtha
+- Localidad: La Vega
+- Localidad: Barrio Quixpedhe
+- Localidad: Los Peña
+- Localidad: Cardonalito
+- Localidad: Bixhuaji
+- Localidad: La Rosa
+- Localidad: Cieneguillita
+- Localidad: Molanguito
+- Localidad: Dojume
+- Localidad: Toxthi
+- Localidad: El Vixtha
+- Localidad: El Manchado
+- Localidad: El Pájaro
+- Localidad: Grutas de Tolantongo
+- Localidad: El Gumbo
+- Localidad: La Hacienda
+- Localidad: Pozo Seco (Los Barrera)
+- Localidad: El Bondho
+- Localidad: Pinalito
+- Localidad: El Moro
+- Localidad: Cuesta Blanca
+- Localidad: Agua Nueva
+- Localidad: Baxcajay
+- Localidad: Los Reyes
+- Localidad: Cerro Grande
+- Localidad: Los Fresnos
+- Localidad: Manzanitas
+- Localidad: Nogal
+- Localidad: Puerto Colorado
+- Localidad: Tepozán
+- Localidad: El Tixqui Agua Fría
+- Localidad: La Unión
+- Localidad: El Aguacate
+- Localidad: Cerritos
+- Localidad: El Clavelito (El Cave)
+- Localidad: Chalmita
+- Localidad: Cerro Blanco (El Fraile)
+- Localidad: La Laguna
+- Localidad: Los Lirios
+- Localidad: Manzana del Cubo
+- Localidad: Manzana del Piñón
+- Localidad: La Parada
+- Localidad: Los Vargas
+- Localidad: El Verde
+- Localidad: El Cuartel
+- Localidad: Cuesta Blanca
+- Localidad: Huizache
+- Localidad: Palacios
+- Localidad: Luis Donaldo Colosio
+- Localidad: La Gloria
+- Asentamiento humano: CINCO (BUENOS AIRES) — MANZANA
+- Asentamiento humano: CUATRO — MANZANA
+- Asentamiento humano: DOS (LAS PALMAS) — MANZANA
+- Asentamiento humano: NUEVE — MANZANA
+- Asentamiento humano: OCHO — MANZANA
+- Asentamiento humano: SEIS — MANZANA
+- Asentamiento humano: SIETE — MANZANA
+- Asentamiento humano: TRES — MANZANA
+- Asentamiento humano: UNO (CENTRO) — MANZANA
+
+## Municipio: Chapantongo
+
+- Localidad: Chapantongo
+- Localidad: El Agua Fría
+- Localidad: Santa María Amealco
+- Localidad: Bathi
+- Localidad: El Capulín
+- Localidad: Chapulaco
+- Localidad: Dexha
+- Localidad: La Estancia
+- Localidad: Juchitlán
+- Localidad: San José el Márquez (Escandón)
+- Localidad: Nueva Santa Lucía
+- Localidad: San Bartolo Ozocalpan
+- Localidad: San Juan el Sabino
+- Localidad: San Ramón
+- Localidad: Taxhue
+- Localidad: Tenería
+- Localidad: Tlaunilolpan
+- Localidad: Toxthe
+- Localidad: Zimapantongo
+- Localidad: La Unión
+- Localidad: El Sauz
+- Localidad: El Huizachal (San Isidro)
+- Localidad: San Isidro
+- Localidad: Atargea (El Arco)
+- Localidad: El Camarón
+- Localidad: El Colorado (Cerro Colorado)
+- Localidad: El Dañe
+- Localidad: Rancho Nuevo
+- Localidad: Rincón de las Víboras
+- Localidad: Santa Lucía (El Cielito)
+- Localidad: Colonia Félix Olvera
+- Localidad: Ex-Hacienda el Marqués
+- Localidad: El Saucito [Colonia]
+- Localidad: La Loma
+- Localidad: La Magdalena
+- Localidad: Quinta la Esperanza
+- Localidad: La Peña
+- Localidad: La Noria (El Plan)
+- Localidad: Puerto Vallarta
+- Localidad: Barrio Guadalupe Altos
+- Localidad: Barrio Remedios
+- Localidad: Barrio de Guadalupe Alto
+- Localidad: Canhuada
+- Localidad: San Antonio
+- Localidad: El Manantial Escondido
+- Asentamiento humano: El Huizachal — BARRIO
+- Asentamiento humano: Guadalupe Alto — BARRIO
+- Asentamiento humano: Guadalupe Centro — BARRIO
+- Asentamiento humano: Puerto Vallarta — BARRIO
+- Asentamiento humano: Remedios — BARRIO
+- Asentamiento humano: San Antonio — BARRIO
+- Asentamiento humano: Santa María Amealco — PUEBLO
+- Asentamiento humano: Bathí — PUEBLO
+- Asentamiento humano: El Capulin — PUEBLO
+- Asentamiento humano: Chapulaco — PUEBLO
+- Asentamiento humano: Juchitlán — PUEBLO
+- Asentamiento humano: San José Marquéz — PUEBLO
+- Asentamiento humano: Nueva Santa Lucía — COLONIA
+- Asentamiento humano: San Bartolo Ozocalpan — PUEBLO
+- Asentamiento humano: El Sabino — PUEBLO
+- Asentamiento humano: Taxhue — RANCHERÍA
+- Asentamiento humano: Tlaunilolpan — PUEBLO
+- Asentamiento humano: Toxthe — RANCHERÍA
+- Asentamiento humano: Zimapantongo — PUEBLO
+- Asentamiento humano: El Huizachal (San Isidro) — COLONIA
+- Asentamiento humano: Juchitlán — PUEBLO
+- Asentamiento humano: Felix Olvera — COLONIA
+- Asentamiento humano: La Loma — RANCHERÍA
+- Asentamiento humano: Puerto Vallarta — COLONIA
+## Municipio: Cuautepec de Hinojosa
+
+- Localidad: Cuautepec
+- Localidad: Alhuajoyucan
+- Localidad: Las Ánimas
+- Localidad: El Aserradero
+- Localidad: El Capulín
+- Localidad: Cerro Verde
+- Localidad: Cima de Togo
+- Localidad: Coatzetzengo
+- Localidad: El Coyuco
+- Localidad: Chacalapa
+- Localidad: El Encinal
+- Localidad: Guadalupe Victoria
+- Localidad: San Juan Hueyapan
+- Localidad: Hueyapita
+- Localidad: Huistongo
+- Localidad: Lomas de Ojuila
+- Localidad: San Rafael Mazatepec
+- Localidad: El Nectario
+- Localidad: La Palma
+- Localidad: Las Palmas
+- Localidad: Santa Elena Paliseca
+- Localidad: Las Puentes
+- Localidad: La Puerta
+- Localidad: San Juan Tecocomulco
+- Localidad: San Lorenzo Sayula
+- Localidad: Santa María Nativitas
+- Localidad: Tecocomulco de Juárez
+- Localidad: El Tepeyac
+- Localidad: Tezoncualpan
+- Localidad: Tezoquipa
+- Localidad: Texcaltepec
+- Localidad: El Ventorrillo
+- Localidad: Xayahualulco
+- Localidad: Almoloya
+- Localidad: Cebaditas
+- Localidad: El Durazno
+- Localidad: La Cañada
+- Localidad: Las Águilas
+- Localidad: El Atorón
+- Localidad: Casas Coloradas
+- Localidad: Las Conchas
+- Localidad: La Esperanza
+- Localidad: La Isleta
+- Localidad: El Jazmín
+- Localidad: Los Laureles
+- Localidad: Maravillas
+- Localidad: El Piñón
+- Localidad: La Reforma
+- Localidad: San Aparicio
+- Localidad: San Isidro
+- Localidad: San José Vista Hermosa
+- Localidad: Peña del Tigre
+- Localidad: Tulimán
+- Localidad: La Unión
+- Localidad: Buenos Aires
+- Localidad: La Puerta del Yolo
+- Localidad: Loma Bonita
+- Localidad: El Jarillal
+- Localidad: El Abertal
+- Localidad: La Barranca del Agua
+- Localidad: Caballo Rucio
+- Localidad: El Capulín
+- Localidad: La Coronilla
+- Localidad: La Cueva del Tezontle
+- Localidad: El Durazno
+- Localidad: El Emporio
+- Localidad: El Encinal
+- Localidad: Las Eras de Huistongo
+- Localidad: La Fábrica
+- Localidad: La Gloria
+- Localidad: La Isla de Montecristo
+- Localidad: La Lagunilla
+- Localidad: Nopal Alto
+- Localidad: Presa Reventada
+- Localidad: El Ranchero
+- Localidad: Rancho Trejo
+- Localidad: San Isidro
+- Localidad: Las Tires
+- Localidad: Vista Hermosa
+- Localidad: Xocopa
+- Localidad: La Explanada
+- Localidad: Manuel Rodríguez Martínez
+- Localidad: Marcelino Acosta Cruz
+- Localidad: La Rayuela
+- Localidad: Valentín Hernández Yáñez
+- Localidad: Ejido el Pedregal
+- Localidad: Cuautepec [Granja Avícola]
+- Localidad: El Ojito de Agua
+- Localidad: Arboledas
+- Localidad: Las Canoas
+- Localidad: Cerro de Buenavista
+- Localidad: Ojo de Agua de Ocotlán
+- Localidad: El Rincón
+- Localidad: El Salto
+- Localidad: El Rincón de la Sirena
+- Localidad: Lomas de los Pinos
+- Localidad: Los Aguilares
+- Localidad: La Esperanza II
+- Localidad: La Mesa (Pozo Blanco)
+- Localidad: Tenango
+- Localidad: Chapultepec la Palma
+- Localidad: Cerrito de las Milpas
+- Localidad: Los Sabinos
+- Localidad: La Carbonera
+- Localidad: Nueve Aguas
+- Localidad: El Mirador [Barrio]
+- Localidad: Peña de los Panales
+- Asentamiento humano: BENITO JUÁREZ — NINGUNO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL OJITO — BARRIO
+- Asentamiento humano: EL PEDREGAL — FRACCIONAMIENTO
+- Asentamiento humano: EL TEPEYAC — FRACCIONAMIENTO
+- Asentamiento humano: FELIPE ÁNGELES — COLONIA
+- Asentamiento humano: FRANCISCO I. MADERO — COLONIA
+- Asentamiento humano: FRANCISCO VILLA — COLONIA
+- Asentamiento humano: LA ESPERANZA — NINGUNO
+- Asentamiento humano: LA TRINIDAD — NINGUNO
+- Asentamiento humano: LOS ENCINOS — BARRIO
+- Asentamiento humano: PEDREGAL PRIMERA SECCIÓN — NINGUNO
+- Asentamiento humano: PEDREGAL SEGUNDA SECCIÓN — COLONIA
+- Asentamiento humano: PUENTE DE LA PAZ — NINGUNO
+- Asentamiento humano: SANTA RITA — NINGUNO
+- Asentamiento humano: TEPANTITLA — NINGUNO
+- Asentamiento humano: TEXCALTEPEC — NINGUNO
+- Asentamiento humano: ALHUAJOYUCAN — EJIDO
+- Asentamiento humano: LAS ANIMAS — RANCHERÍA
+- Asentamiento humano: EL ASERRADERO — RANCHERÍA
+- Asentamiento humano: EL CAPULÍN — EJIDO
+- Asentamiento humano: CERRO VERDE — BARRIO
+- Asentamiento humano: CIMA DE TOGO — EJIDO
+- Asentamiento humano: COATZETZENGO — RANCHERÍA
+- Asentamiento humano: EL COYUCO — RANCHERÍA
+- Asentamiento humano: CHACALAPA — EJIDO
+- Asentamiento humano: EL ENCINAL — EJIDO
+- Asentamiento humano: BUEN PAÍS — BARRIO
+- Asentamiento humano: DOS RÍOS — BARRIO
+- Asentamiento humano: GUADALUPE VICTORIA — COLONIA
+- Asentamiento humano: LOMAS DE CUAUTEPEC — COLONIA
+- Asentamiento humano: SAN JUAN HUEYAPAN — COLONIA
+- Asentamiento humano: HUEYAPITA — EJIDO
+- Asentamiento humano: LOMAS DE OJUILA — RANCHERÍA
+- Asentamiento humano: SAN RAFAÉL MAZATEPEC — EJIDO
+- Asentamiento humano: EL NECTARIO — EJIDO
+- Asentamiento humano: LA PALMA — RANCHERÍA
+- Asentamiento humano: LAS PALMAS — COLONIA
+- Asentamiento humano: SANTA ELENA PALISECA — NINGUNO
+- Asentamiento humano: LAS PUENTES — EJIDO
+- Asentamiento humano: SAN JUAN TECOCOMULCO — RANCHERÍA
+- Asentamiento humano: SAN LORENZO SAYULA — PUEBLO
+- Asentamiento humano: EL CAMPO — BARRIO
+- Asentamiento humano: EL CENTRO — BARRIO
+- Asentamiento humano: EL TANQUE — BARRIO
+- Asentamiento humano: LA CONCEPCIÓN — BARRIO
+- Asentamiento humano: LA PLACA — BARRIO
+- Asentamiento humano: LOS CARMITOS — BARRIO
+- Asentamiento humano: LOS LAVADEROS — BARRIO
+- Asentamiento humano: LOS PINOS — BARRIO
+- Asentamiento humano: SAN JUAN — BARRIO
+- Asentamiento humano: VISTA HERMOSA — BARRIO
+- Asentamiento humano: TECOCOMULCO DE JUÁREZ — EJIDO
+- Asentamiento humano: EL TEPEYAC — BARRIO
+- Asentamiento humano: TEZONCUALPAN — EJIDO
+- Asentamiento humano: TEZOQUIPA — EJIDO
+- Asentamiento humano: TEXCALTEPEC — BARRIO
+- Asentamiento humano: EL VENTORRILLO — EJIDO
+- Asentamiento humano: XAYAHUALULCO — EJIDO
+- Asentamiento humano: ALMOLOYA — COLONIA
+- Asentamiento humano: EL MANANTIAL — COLONIA
+- Asentamiento humano: EL MIRADOR — COLONIA
+- Asentamiento humano: LA GRANJA — COLONIA
+- Asentamiento humano: SANTA MARÍA — AMPLIACIÓN
+- Asentamiento humano: CEBADITAS — RANCHERÍA
+- Asentamiento humano: EL DURAZNO — EJIDO
+- Asentamiento humano: LA CAÑADA — EJIDO
+- Asentamiento humano: SAN APARICIO — EJIDO
+- Asentamiento humano: SAN JOSÉ VISTA HERMOSA — RANCHERÍA
+- Asentamiento humano: BUENOS AIRES — PUEBLO
+- Asentamiento humano: LA PUERTA DEL YOLO — EJIDO
+- Asentamiento humano: CERRO DEL CASTILLO — COLONIA
+- Asentamiento humano: LOMA BONITA — COLONIA
+- Asentamiento humano: LA BARRANCA DE AGUA — RANCHERÍA
+- Asentamiento humano: XOCOPA — RANCHERÍA
+- Asentamiento humano: LA RAYUELA — RANCHERÍA
+- Asentamiento humano: LAS CANOAS — RANCHERÍA
+- Asentamiento humano: LOMAS DE LOS PINOS — COLONIA
+- Asentamiento humano: LA ESPERANZA — FRACCIONAMIENTO
+- Asentamiento humano: CHAPULTEPEC LA PALMA — COLONIA
+
+## Municipio: El Arenal
+
+- Localidad: El Arenal
+- Localidad: El Bocja
+- Localidad: Chimilpa
+- Localidad: Fray Francisco
+- Localidad: El Jiadi
+- Localidad: El Meje
+- Localidad: Ojo de Agua San José Tepenene
+- Localidad: El Rincón
+- Localidad: San Jerónimo
+- Localidad: Santa Rosa
+- Localidad: San José Tepenene
+- Localidad: 20 de Noviembre [Colonia]
+- Localidad: Ojo de Agua Santa Rosa
+- Localidad: Cosahuayán Grande
+- Localidad: La Mesa
+- Localidad: La Sala (La Caliente)
+- Localidad: La Manzana Uno
+- Localidad: La Garita (La Mina)
+- Localidad: El Ojua
+- Localidad: Puerto del Oro
+- Localidad: Las Peñitas
+- Localidad: El Paje
+- Localidad: El Puerto de San Pedro
+- Localidad: La Azteca
+- Localidad: El Sabino
+- Localidad: Villas del Arenal
+- Localidad: El Lucero [Rancho]
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: COSAHUAYAN CHICO — BARRIO
+- Asentamiento humano: EL CALVARIO — BARRIO
+- Asentamiento humano: EL OJUA — BARRIO
+- Asentamiento humano: FRUTILLAL ALTO — BARRIO
+- Asentamiento humano: FRUTILLAL BAJO — BARRIO
+- Asentamiento humano: LA CAPILLA — BARRIO
+- Asentamiento humano: LAS ÁGUILAS — FRACCIONAMIENTO
+- Asentamiento humano: LOS FRAILES — FRACCIONAMIENTO
+- Asentamiento humano: EL BOCJA — BARRIO
+- Asentamiento humano: CHIMILPA — BARRIO
+- Asentamiento humano: FRAY FRANCISCO — PUEBLO
+- Asentamiento humano: MANZANA NÚMERO 1 — MANZANA
+- Asentamiento humano: MANZANA NÚMERO 2 — MANZANA
+- Asentamiento humano: MANZANA NÚMERO 3 — MANZANA
+- Asentamiento humano: MANZANA NÚMERO 4 — MANZANA
+- Asentamiento humano: EL MEJE — PUEBLO
+- Asentamiento humano: OJO DE AGUA SAN JOSÉ TEPENENE — PUEBLO
+- Asentamiento humano: EL RINCÓN — PUEBLO
+- Asentamiento humano: SAN JERÓNIMO — PUEBLO
+- Asentamiento humano: SAN JOSÉ TEPENENE — PUEBLO
+- Asentamiento humano: 20 DE NOVIEMBRE — BARRIO
+- Asentamiento humano: OJO DE AGUA SANTA ROSA — RANCHERÍA
+- Asentamiento humano: COSAHUAYAN GRANDE — RANCHERÍA
+- Asentamiento humano: LA SALA — PUEBLO
+- Asentamiento humano: LA MANZANA UNO — COLONIA
+- Asentamiento humano: LA AZTECA — RANCHERÍA
+- Asentamiento humano: EL SABINO — RANCHERÍA
+- Asentamiento humano: VILLAS DEL ARENAL — BARRIO
+
+## Municipio: Epazoyucan
+
+- Localidad: Epazoyucan
+- Localidad: Escobillas
+- Localidad: El Guajolote
+- Localidad: Jometitlán
+- Localidad: Los Lirios
+- Localidad: El Manzano
+- Localidad: El Mercillero
+- Localidad: Nexpa
+- Localidad: El Nopalillo
+- Localidad: El Ocote Chico
+- Localidad: El Salto
+- Localidad: San Francisco
+- Localidad: San Ignacio
+- Localidad: San José Palacio
+- Localidad: San Juan Tizahuapan
+- Localidad: San Miguel Nopalapa
+- Localidad: San Pablo Guadalupe
+- Localidad: Santa Mónica
+- Localidad: Santa Teresa
+- Localidad: Tepozotlán
+- Localidad: Xochihuacán
+- Localidad: Xolostitla de Morelos (Xolostitla)
+- Localidad: San José el Tecolote
+- Localidad: Nexpan
+- Localidad: La Paloma
+- Localidad: San José Chavarría
+- Localidad: Piedra Blanca
+- Localidad: Chapultepec [Barrio]
+- Localidad: Barrio de San Juan Tizahuapan
+- Localidad: Casacoalco
+- Localidad: Cerro Alto
+- Localidad: Los Charcos
+- Localidad: El Escobal
+- Localidad: Hacienda Margarita
+- Localidad: La Huerta Chica
+- Localidad: La Huerta Grande
+- Localidad: San Miguel (Mirasoles)
+- Localidad: El Ocote
+- Localidad: La Presa (Casas Blancas)
+- Localidad: Piedras Negras
+- Localidad: Techalote
+- Localidad: La Trinidad
+- Localidad: El Cascabel (La Coyotera)
+- Localidad: El Huarache (El Grillo)
+- Localidad: La Presa
+- Localidad: San Vicente
+- Localidad: Los Corrales
+- Localidad: Maguey Blanco
+- Localidad: San Agustín (Los Islas)
+- Localidad: Caja del Agua
+- Localidad: Las Palmitas
+- Localidad: Las Cuevas
+- Localidad: Ejido de San Juan Tizahuapan
+- Localidad: Felipe González Ortíz
+- Localidad: Guadalupe
+- Localidad: La Mesita
+- Localidad: El Palmar
+- Localidad: El Pinillo
+- Localidad: Santa María el Arco
+- Localidad: La Trinidad Segunda Sección
+- Localidad: El Galán
+- Localidad: La Nueva Esperanza
+- Localidad: El Fresno
+- Localidad: La Gotera
+- Localidad: Las Palomas
+- Localidad: San Cayetano (Los Lazcano)
+- Localidad: Santa María las Mesas
+- Localidad: Ciénega Larga
+- Localidad: La Vega
+- Localidad: Deportiva [Colonia]
+- Localidad: La Mesa
+- Localidad: Tomás González Meneses
+- Localidad: La Nopalera
+- Localidad: La Amapola
+- Localidad: Arboledas
+- Localidad: Xochihuacán [Fraccionamiento]
+- Localidad: El Rialejo
+- Asentamiento humano: 20 DE NOVIEMBRE — COLONIA
+- Asentamiento humano: ÁLVARO OBREGÓN — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: DEPORTIVO — COLONIA
+- Asentamiento humano: LA CRUZ — COLONIA
+- Asentamiento humano: LA GARITA — COLONIA
+- Asentamiento humano: LOMAS ALTAS — COLONIA
+- Asentamiento humano: MORELOS — COLONIA
+- Asentamiento humano: NUEVA ESPERANZA — COLONIA
+- Asentamiento humano: PICACHO — FRACCIONAMIENTO
+- Asentamiento humano: ESCOBILLAS — RANCHERÍA
+- Asentamiento humano: EL GUAJOLOTE — RANCHERÍA
+- Asentamiento humano: EL MANZANO — PUEBLO
+- Asentamiento humano: EL MERCILLERO — RANCHERÍA
+- Asentamiento humano: EL NOPALILLO — RANCHERÍA
+- Asentamiento humano: EL ECOTE CHICO — RANCHERÍA
+- Asentamiento humano: EL SALTO — PUEBLO
+- Asentamiento humano: SAN FRANCISCO — RANCHERÍA
+- Asentamiento humano: SAN JUAN TIZAHUAPAN — PUEBLO
+- Asentamiento humano: SAN MIGUEL NOPALAPA — PUEBLO
+- Asentamiento humano: SANTA MÓNICA — PUEBLO
+- Asentamiento humano: XOCHIHUACÁN — PUEBLO
+- Asentamiento humano: XOLOSTITLA DE MORELOS — PUEBLO
+- Asentamiento humano: NEXPAN — RANCHERÍA
+- Asentamiento humano: LA PALOMA — COLONIA
+- Asentamiento humano: SAN JOSÉ CHAVARRÍA — PUEBLO
+- Asentamiento humano: CHAPULTEPEC — BARRIO
+- Asentamiento humano: BARRIO DE SAN JUAN TIZAHUAPAN — BARRIO
+- Asentamiento humano: HACIENDA MARGARITA — FRACCIONAMIENTO
+- Asentamiento humano: LA TRINIDAD — COLONIA
+- Asentamiento humano: EL PINILLO — RANCHERÍA
+- Asentamiento humano: ARBOLEDAS — COLONIA
+- Asentamiento humano: XOCHIHUACÁN — FRACCIONAMIENTO
+- Asentamiento humano: EL RIALEJO — RANCHERÍA
+
+## Municipio: Francisco I. Madero
+
+- Localidad: Tepatepec
+- Localidad: Arambó
+- Localidad: Bocamiño
+- Localidad: La Comunidad
+- Localidad: Dengantzha
+- Localidad: Doctor José G. Parres
+- Localidad: El Mendoza
+- Localidad: Lázaro Cárdenas (El Mexe) [Colonia]
+- Localidad: La Mora
+- Localidad: La Puerta
+- Localidad: El Rosario [Colonia]
+- Localidad: El Rosario
+- Localidad: San José Boxay
+- Localidad: San Juan Tepa
+- Localidad: La Cruz
+- Localidad: El Veinte [Colonia]
+- Localidad: Emiliano Zapata [Colonia]
+- Localidad: El Villano
+- Localidad: Jagüey del Gontzudi
+- Localidad: Las Coronas
+- Localidad: Los Filtros
+- Localidad: Compuerta el Trece
+- Localidad: El Porvenir
+- Localidad: El Potrero
+- Localidad: El Horno [Colonia]
+- Localidad: Barrio Nuevo México
+- Localidad: Barrio San Antonio
+- Localidad: Cuarta Demarcación (Barrio los Violines) [Colonia]
+- Localidad: Francisco Villa [Colonia]
+- Localidad: Las Fuentes
+- Localidad: Barrio el Quince
+- Localidad: Tepeyac [Granja]
+- Localidad: El Tapia
+- Localidad: El Durazno [Rancho]
+- Localidad: Barrio los Amigos
+- Localidad: El Bravo [Barrio]
+- Localidad: Los Hoyos
+- Localidad: El Represo
+- Asentamiento humano: EL FRESNO — BARRIO
+- Asentamiento humano: I DEMARCACIÓN — COLONIA
+- Asentamiento humano: II DEMARCACIÓN — COLONIA
+- Asentamiento humano: III DEMARCACIÓN — COLONIA
+- Asentamiento humano: IV DEMARCACIÓN — COLONIA
+- Asentamiento humano: LAS CORONAS — COLONIA
+- Asentamiento humano: LOS CHAVARRIAS — COLONIA
+- Asentamiento humano: LOS HERNÁNDEZ — COLONIA
+- Asentamiento humano: LOS VIOLINES — COLONIA
+- Asentamiento humano: MAGISTERIO TEPATEPEC — FRACCIONAMIENTO
+- Asentamiento humano: SAN JOSÉ BOXAY — COLONIA
+- Asentamiento humano: ARAMBÓ — COLONIA
+- Asentamiento humano: DOCTOR JOSÉ G. PARRES — PUEBLO
+- Asentamiento humano: LÁZARO CÁRDENAS (EL MEXE) — COLONIA
+- Asentamiento humano: EL GACHUZ — BARRIO
+- Asentamiento humano: EL PALMAR — BARRIO
+- Asentamiento humano: LA MORA — COLONIA
+- Asentamiento humano: EL ROSARIO — COLONIA
+- Asentamiento humano: ARBOLITO — BARRIO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: CIENTÍFICOS — BARRIO
+- Asentamiento humano: EL BOJAY — BARRIO
+- Asentamiento humano: EL MEZQUITE — BARRIO
+- Asentamiento humano: EL MORO — BARRIO
+- Asentamiento humano: EL NAZARETH — BARRIO
+- Asentamiento humano: LA PALMA — BARRIO
+- Asentamiento humano: LOS AMIGOS — BARRIO
+- Asentamiento humano: LOS VILLAS — BARRIO
+- Asentamiento humano: PENSADORES — BARRIO
+- Asentamiento humano: SAN JOSÉ BOXAY — PUEBLO
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL PALMAR — COLONIA
+- Asentamiento humano: EL QUINCE — COLONIA
+- Asentamiento humano: FRANCISCO VILLA — COLONIA
+- Asentamiento humano: LA CAMPANA — COLONIA
+- Asentamiento humano: LOS JIMÉNEZ — COLONIA
+- Asentamiento humano: LOS TAPIAS — COLONIA
+- Asentamiento humano: LOS TIGRES — COLONIA
+- Asentamiento humano: LOS VILLA — COLONIA
+- Asentamiento humano: NUEVO MÉXICO — COLONIA
+- Asentamiento humano: SAN ANTONIO — COLONIA
+- Asentamiento humano: LA CRUZ — COLONIA
+- Asentamiento humano: JAGÜEY DEL GONTZUDI — RANCHERÍA
+- Asentamiento humano: LAS CORONAS — RANCHERÍA
+- Asentamiento humano: LOS FILTROS — COLONIA
+- Asentamiento humano: EL HORNO — COLONIA
+- Asentamiento humano: CUARTA DEMARCACIÓN (BARRIO LOS VIOLINES) — COLONIA
+- Asentamiento humano: BARRIO LOS AMIGOS — COLONIA
+- Asentamiento humano: EL REPRESO — FRACCIONAMIENTO
+
+## Municipio: Huasca de Ocampo
+
+- Localidad: Huasca de Ocampo
+- Localidad: Aguacatitla (El Campamento)
+- Localidad: Bermúdez
+- Localidad: San José Cacaloapan
+- Localidad: La Cañada
+- Localidad: Cerritos
+- Localidad: Magueyes Verdes
+- Localidad: Ojo de Agua
+- Localidad: Palma Antigua el Vite
+- Localidad: La Palma
+- Localidad: La Palmilla
+- Localidad: Palmillas
+- Localidad: El Peral
+- Localidad: Piedra del Agua
+- Localidad: Los Reyes Tepezala
+- Localidad: Río Seco Puente de Doria
+- Localidad: San Bartolomé (San Bartolo)
+- Localidad: San Diego
+- Localidad: San Jerónimo
+- Localidad: San José Ocotillos
+- Localidad: San Juan Hueyapan
+- Localidad: San Miguel Regla
+- Localidad: San Sebastián (San Sebastián la Barranca)
+- Localidad: Santa María Regla
+- Localidad: Santo Domingo Agua Zarca
+- Localidad: Santo Tomás Allende
+- Localidad: San Lorenzo el Zembo
+- Localidad: Xúchil el Llano
+- Localidad: Tlaxocoyucan
+- Localidad: Las Vigas
+- Localidad: El Vite
+- Localidad: San Miguel Cacaloapan
+- Localidad: Llano Grande
+- Localidad: Agua Zarca
+- Localidad: La Lagunilla
+- Localidad: La Loma
+- Localidad: San José Regla
+- Localidad: Santa Elena
+- Localidad: El Tizal
+- Localidad: Yerbabuena
+- Localidad: Cruz Blanca
+- Localidad: El Jilotillo
+- Localidad: La Mora
+- Localidad: La Palma
+- Localidad: Tlaxcalera
+- Localidad: Tonteopa
+- Localidad: El Tunal
+- Localidad: Barranca del Xúchil
+- Localidad: Barranca de Tlaxocoyucan
+- Localidad: Bosque Real
+- Localidad: San Pablo Ojo de Agua
+- Localidad: El Huariche
+- Localidad: Las Mesas de Tlaxocoyucan
+- Localidad: La Bolsa
+- Localidad: El Dongo Grande
+- Localidad: La Hacienda Vieja
+- Localidad: Jarillo
+- Localidad: La Nogalera
+- Localidad: Santa Cruz
+- Localidad: La Laguna San Bartolo
+- Localidad: San Ignacio Ojo de Agua
+- Localidad: El Dongo Chico
+- Localidad: Mario Díaz Guzmán
+- Localidad: Cerro del Tezontle
+- Localidad: El Contento
+- Localidad: Cuesta de Ocotillos
+- Localidad: Naranjastitla
+- Localidad: El Negro
+- Localidad: El Pedregal
+- Localidad: San Juan Tlaxocoyucan
+- Localidad: El Ocotal (Sierra Verde)
+- Localidad: Los Tepetates
+- Localidad: Las Cañadas [Barrio]
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: EL CALVARIO — COLONIA
+- Asentamiento humano: SANTA ANA — RANCHO
+- Asentamiento humano: TONTIOPA — COLONIA
+- Asentamiento humano: CERRITOS — RANCHERÍA
+- Asentamiento humano: OJO DE AGUA — RANCHERÍA
+- Asentamiento humano: SAN JERÓNIMO — RANCHERÍA
+- Asentamiento humano: SAN JOSÉ OCOTILLOS — RANCHERÍA
+- Asentamiento humano: SAN MIGUEL REGLA — PUEBLO
+- Asentamiento humano: SANTO TOMÁS ALLENDE — PUEBLO
+- Asentamiento humano: EL TIZAL — COLONIA
+- Asentamiento humano: CRUZ BLANCA — COLONIA
+- Asentamiento humano: EL JILOTILLO — COLONIA
+- Asentamiento humano: LA PALMA — RANCHERÍA
+- Asentamiento humano: SAN PABLO OJO DE AGUA — RANCHERÍA
+- Asentamiento humano: SAN IGNACIO OJO DE AGUA — RANCHERÍA
+## Municipio: Huautla
+
+- Localidad: Huautla
+- Localidad: Acatepec
+- Localidad: El Aguacate
+- Localidad: Ahuatitla
+- Localidad: Ahuehuetl
+- Localidad: Aquetzpalco
+- Localidad: Banderas
+- Localidad: El Barbecho
+- Localidad: Los Cerezos
+- Localidad: Coamitla
+- Localidad: Coapantla
+- Localidad: Coatzacoatl
+- Localidad: Coatzonco
+- Localidad: El Cojolite
+- Localidad: Coatempa
+- Localidad: Coatenáhuatl
+- Localidad: Chalacuaco
+- Localidad: Chalingo
+- Localidad: Chiatitla
+- Localidad: Chiliteco
+- Localidad: Chipila
+- Localidad: Hernándeztla
+- Localidad: Huemaco
+- Localidad: Huitzotlaco
+- Localidad: Ixtlahuac
+- Localidad: El Ixtle
+- Localidad: El Lindero
+- Localidad: La Mesa
+- Localidad: Metlatepec
+- Localidad: Pahuatitla
+- Localidad: El Pajonal
+- Localidad: Pepeyoca de Cabrera
+- Localidad: Las Pilas
+- Localidad: Piltepeco
+- Localidad: Los Puentes
+- Localidad: Huazalinguillo
+- Localidad: Santo Domingo
+- Localidad: Tamoyón I
+- Localidad: Tamoyón II
+- Localidad: Tecoluco Calpan
+- Localidad: Tempexquisco
+- Localidad: Tepeco
+- Localidad: Tepetzintla
+- Localidad: Tepexquimitl
+- Localidad: Tlacuapan
+- Localidad: Tohuaco Amatzintla (Tohuaco III)
+- Localidad: Tohuaco I
+- Localidad: Tohuaco II
+- Localidad: Tzacuala
+- Localidad: Tzocohuijapa
+- Localidad: Vinasco
+- Localidad: Xóchitl
+- Localidad: Zacatipa
+- Localidad: 14 de Mayo
+- Localidad: Axtitla
+- Localidad: Terrero
+- Localidad: La Puerta
+- Localidad: El Progreso
+- Localidad: 21 de Enero
+- Localidad: Vicente Guerrero
+- Localidad: Tlalpane
+- Localidad: Lindero
+- Localidad: La Loma
+- Localidad: Barrio Hondo
+- Localidad: Barrio Alto
+- Localidad: Los Coyoles
+- Localidad: Machín
+- Localidad: Machín
+- Localidad: Fraccionamiento Núñez Soto
+- Localidad: Milkaual
+- Localidad: El Nuevo Amanecer (Los Noguera) [Rancho]
+- Localidad: Rancho Tepizilo
+- Asentamiento humano: BARRIO ALTO — BARRIO
+- Asentamiento humano: BARRIO BAJO — BARRIO
+- Asentamiento humano: BARRIO DEL SALTO — BARRIO
+- Asentamiento humano: BARRIO HONDO — BARRIO
+- Asentamiento humano: LINDA VISTA — COLONIA
+- Asentamiento humano: VALLE EL ENCINAL — COLONIA
+
+## Municipio: Huejutla de Reyes
+
+- Localidad: Huejutla de Reyes
+- Localidad: Atalco
+- Localidad: Acatitla
+- Localidad: Acoyotipa
+- Localidad: Acuatempa
+- Localidad: Aguacatitla
+- Localidad: Ahuatempa
+- Localidad: Amaxac
+- Localidad: Apetlaco Aguacatitla
+- Localidad: Apílol
+- Localidad: Aquixcuatitla I
+- Localidad: Ateixco
+- Localidad: Axcaco
+- Localidad: Axihuiyo
+- Localidad: Cacateco
+- Localidad: Calmecate
+- Localidad: Candelacta
+- Localidad: Candelaria
+- Localidad: Cececapa
+- Localidad: Coacuilco
+- Localidad: Coamila
+- Localidad: Cuapaxtitla
+- Localidad: Coco Chico
+- Localidad: Coco Grande
+- Localidad: Cochiscuatitla las Chacas
+- Localidad: Contépec
+- Localidad: La Corrala
+- Localidad: Coxhuaco II
+- Localidad: Coyuco Nuevo
+- Localidad: La Cruz de Zocuiteco
+- Localidad: Cruztitla
+- Localidad: Cuatecómetl
+- Localidad: Coaxocotitla
+- Localidad: Chalahuitzintla
+- Localidad: Chalahuiyapa
+- Localidad: Chililico
+- Localidad: Chiquemecatitla
+- Localidad: El Chote
+- Localidad: Ecuatitla
+- Localidad: Los Horcones
+- Localidad: Huehuetla
+- Localidad: Huitzacháhuatl
+- Localidad: Huitzquilititla
+- Localidad: Humotitla Candelaria
+- Localidad: Humotitla Coyuco
+- Localidad: Ixcatépec
+- Localidad: Ixcatlán
+- Localidad: Ixtlahuac
+- Localidad: Lemontitla
+- Localidad: Macuxtepetla
+- Localidad: Machetla
+- Localidad: La Mesa de Limantitla
+- Localidad: Los Otates
+- Localidad: Oxale
+- Localidad: Oxtomal I
+- Localidad: Ozuluama
+- Localidad: Pahuatlán
+- Localidad: Palzoquico
+- Localidad: Panacaxtlán
+- Localidad: Los Parajes
+- Localidad: El Pemuche
+- Localidad: Poxtla Coacuilco
+- Localidad: Buena Vista
+- Localidad: Rancho Viejo
+- Localidad: San Antonio
+- Localidad: Santa Catarina
+- Localidad: Santa Cruz
+- Localidad: Santa Cruz Coyuco
+- Localidad: Sitlán
+- Localidad: Tacuatitla
+- Localidad: Tlaltzintla
+- Localidad: Tamalcuatitla
+- Localidad: Teacal
+- Localidad: Tehuetlán
+- Localidad: Temaxcaltitla
+- Localidad: Tiocuatitla
+- Localidad: Tepemalintla
+- Localidad: Tepemaxac
+- Localidad: Tepexititla
+- Localidad: Tepoxteco
+- Localidad: Terrero
+- Localidad: Tetzacual
+- Localidad: Tlalnepanco
+- Localidad: Xilipatitla
+- Localidad: Xionaxtla
+- Localidad: Xiquila
+- Localidad: Xocotitla
+- Localidad: Xochitzintla
+- Localidad: Acayahual
+- Localidad: Zohuala
+- Localidad: Congreso Permanente Agrario
+- Localidad: Acuapa
+- Localidad: Acuitatipa
+- Localidad: Achichípil
+- Localidad: Tezóhual
+- Localidad: Los Parajes Benito Juárez
+- Localidad: Ixcuicuila
+- Localidad: El Xúchitl
+- Localidad: Las Chacas
+- Localidad: Chilcoaloya
+- Localidad: Cuachiquiapa
+- Localidad: Pitzontzintla
+- Localidad: Santa María
+- Localidad: Tancha
+- Localidad: Tepehica
+- Localidad: Tepeyacapa
+- Localidad: Zacapetlayo
+- Localidad: Zapotitla
+- Localidad: Xiloco
+- Localidad: Tepeolol
+- Localidad: Coyoltitla
+- Localidad: Ahuatipa
+- Localidad: Ahuacahíxpa Ixcatlán
+- Localidad: La Pastora
+- Localidad: Cocumul
+- Localidad: Nepalapa
+- Localidad: Ahuatitla I
+- Localidad: Octatitla
+- Localidad: Tachiquilzintla
+- Localidad: Atappa
+- Localidad: Cacatetitla
+- Localidad: Amoyahual
+- Localidad: Coyotepec
+- Localidad: Pahuatzintla
+- Localidad: Chachaixpa
+- Localidad: Aguacatitla Ixcatlán
+- Localidad: Atexaltipa
+- Localidad: Las Conchitas
+- Localidad: Coyoltzintla
+- Localidad: Ecuatzintla
+- Localidad: La Esperanza
+- Localidad: Huacaxtitla
+- Localidad: Las Nueces
+- Localidad: Poxtla Ixcatlán
+- Localidad: Santa Martha
+- Localidad: Tepetate
+- Localidad: La Curva Tlaltzintla
+- Localidad: Zocuiteco Benito Juárez
+- Localidad: Chomaquico
+- Localidad: Coxhuaco I
+- Localidad: El Chocoyo [Granja]
+- Localidad: Ilamactla
+- Localidad: Pochotitla
+- Localidad: La Güera [Colonia]
+- Localidad: Tepoxtequito Santa Mónica [Colonia]
+- Localidad: Tetzahapa I
+- Localidad: Xochititla
+- Localidad: Xoloxtla
+- Localidad: Zacayahual
+- Localidad: Zapotitla Anexo Ixcatlán
+- Localidad: La Peña Cruztitla
+- Localidad: Todos por Hidalgo
+- Localidad: Escuatitla
+- Localidad: Ahuehuetitla
+- Localidad: Rancho Nuevo Ixcatlán
+- Localidad: Palzoquiapa
+- Localidad: San José Anexo Ixcatlán
+- Localidad: Rancho Nuevo Macuxtepetla
+- Localidad: Ahuatzintla
+- Localidad: Cochiscuatitla Anexo Ixcatlán
+- Localidad: El Naranjal
+- Localidad: Aquexquillo
+- Localidad: Cececámel
+- Localidad: Chacatitla
+- Localidad: Charco Azul
+- Localidad: Ejido de Rancho Viejo
+- Localidad: El Crucero
+- Localidad: La Garita
+- Localidad: Machetla II
+- Localidad: El Ojite
+- Localidad: Oxtomal II
+- Localidad: Las Palomitas
+- Localidad: Parque de Poblamiento Solidaridad
+- Localidad: Talnepantipa
+- Localidad: Tehuetlanito
+- Localidad: Tilcalco
+- Localidad: Capáne
+- Localidad: Las Chacas
+- Localidad: Atecala
+- Localidad: Buena Vista
+- Localidad: Ojtlamekayo
+- Localidad: Santa Ana
+- Localidad: Xochiatipa
+- Localidad: Coxcatzintla
+- Localidad: Malila
+- Localidad: Xinamixca
+- Localidad: Acoyotipan
+- Localidad: Barrio los Cubes
+- Localidad: El Plan de Tlalnepanco (La Explanada)
+- Localidad: El Puente (El Vado)
+- Localidad: San José
+- Localidad: Tlamaya Tepehica
+- Localidad: La Mesa de Axcaco
+- Localidad: Ahuehuetitla [Fraccionamiento]
+- Localidad: Tamaya Ahuehuetitla
+- Localidad: Hueynali
+- Localidad: Terrero Abajo
+- Localidad: Los Frailes
+- Localidad: Tulaxtitla
+- Localidad: Apetlaco Huerota
+- Localidad: Niños Héroes
+- Localidad: Río los Hules [Centro Ecoturístico]
+- Localidad: La Curva Tlaltzintla II
+- Localidad: El Paraíso
+- Localidad: San Diego
+- Localidad: El Seminario
+- Localidad: Renacimiento Tlalpani
+- Localidad: Chintanta
+- Localidad: Aquixcuatitla II
+- Localidad: Ampliación Buena Vista
+- Localidad: Tepeixpa
+- Localidad: Bella Airosa [Colonia]
+- Localidad: Rancho Nuevo Ahuatzintla
+- Localidad: Asociación Civil [Colonia]
+- Localidad: Colonia Industrial
+- Localidad: Ahuatitla II
+- Localidad: Tetzahapa II
+- Localidad: El Lindero
+- Localidad: La Esperanza
+- Localidad: Nexcuatipa
+- Asentamiento humano: ADOLFO LÓPEZ MATEOS — COLONIA
+- Asentamiento humano: ADOLFO LUGO VERDUZCO — FRACCIONAMIENTO
+- Asentamiento humano: AMPLIACIÓN EL MIRADOR — COLONIA
+- Asentamiento humano: ANÁHUAC — COLONIA
+- Asentamiento humano: AVIACIÓN CIVIL — COLONIA
+- Asentamiento humano: AZTECA — COLONIA
+- Asentamiento humano: BERNABÉ CRUZ FLORES — COLONIA
+- Asentamiento humano: BUGAMBILIAS — COLONIA
+- Asentamiento humano: CAPITÁN ANTONIO REYES — COLONIA
+- Asentamiento humano: CARLOS FAYAD OROZCO — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: CERECEDO ESTRADA — COLONIA
+- Asentamiento humano: CHACATITITLA — COLONIA
+- Asentamiento humano: CINCO DE MAYO — COLONIA
+- Asentamiento humano: COLALAMBRE — COLONIA
+- Asentamiento humano: COLONIA DEL CARMEN — COLONIA
+- Asentamiento humano: COMALTEPEC — COLONIA
+- Asentamiento humano: CRUZ VERDE — COLONIA
+- Asentamiento humano: DOCTORES — COLONIA
+- Asentamiento humano: DOS CAMINOS — COLONIA
+- Asentamiento humano: EL CAMPAMENTO — COLONIA
+- Asentamiento humano: EL MIRADOR — COLONIA
+- Asentamiento humano: EL MORENO — COLONIA
+- Asentamiento humano: EL SEMINARIO — COLONIA
+- Asentamiento humano: EL ZAPOTE — COLONIA
+- Asentamiento humano: ELECTRICISTAS — COLONIA
+- Asentamiento humano: FLAVIO CRESPO — COLONIA
+- Asentamiento humano: FOVISSSTE — FRACCIONAMIENTO
+- Asentamiento humano: GUERRERO — COLONIA
+- Asentamiento humano: HIDALGO — COLONIA
+- Asentamiento humano: HORACIO CAMARGO RIVERA — COLONIA
+- Asentamiento humano: HUASTECO — FRACCIONAMIENTO
+- Asentamiento humano: JACARANDAS — COLONIA
+- Asentamiento humano: JARDINES — COLONIA
+- Asentamiento humano: JERICÓ — COLONIA
+- Asentamiento humano: JESÚS MURILLO KARAM — COLONIA
+- Asentamiento humano: JOSÉ ALFREDO SAN ROMÁN DUVAL — COLONIA
+- Asentamiento humano: JUÁREZ — COLONIA
+- Asentamiento humano: LA GARITA — COLONIA
+- Asentamiento humano: LA GÜERA — COLONIA
+- Asentamiento humano: LA LOMITA — COLONIA
+- Asentamiento humano: LA LOMITA — COLONIA
+- Asentamiento humano: LA PROVIDENCIA — COLONIA
+- Asentamiento humano: LAS AMÉRICAS — COLONIA
+- Asentamiento humano: LAS CHACAS — COLONIA
+- Asentamiento humano: LAS PALOMITAS — FRACCIONAMIENTO
+- Asentamiento humano: LICENCIADO CARLOS SALINAS DE GORTARI — COLONIA
+- Asentamiento humano: LINDA VISTA — COLONIA
+- Asentamiento humano: LOMA BONITA — COLONIA
+- Asentamiento humano: LOMAS DE CHAPULTEPEC — COLONIA
+- Asentamiento humano: LOMAS DE LA GARITA — COLONIA
+- Asentamiento humano: LOMAS VERDES — COLONIA
+- Asentamiento humano: LOS CANTORES — COLONIA
+- Asentamiento humano: LOS FRAILES — COLONIA
+- Asentamiento humano: LOS OLIVOS — COLONIA
+- Asentamiento humano: LOS PRADOS — COLONIA
+- Asentamiento humano: LOS PRADOS — AMPLIACIÓN
+- Asentamiento humano: LUIS DONALDO COLOSIO — COLONIA
+- Asentamiento humano: MAGISTERIAL — COLONIA
+- Asentamiento humano: MARCELO VITE — COLONIA
+- Asentamiento humano: NETZAHUALCOYOTL — COLONIA
+- Asentamiento humano: NUEVA TENOCHTITLÁN — COLONIA
+- Asentamiento humano: NUEVO MÉXICO — COLONIA
+- Asentamiento humano: OBRERA — COLONIA
+- Asentamiento humano: OLIMPIA — COLONIA
+- Asentamiento humano: PARAÍSO DE LAS HUASTECAS — COLONIA
+- Asentamiento humano: PASO LAS CHACAS — COLONIA
+- Asentamiento humano: PRIMERO DE MAYO — COLONIA
+- Asentamiento humano: ROJO GÓMEZ — COLONIA
+- Asentamiento humano: ROJO LUGO — COLONIA
+- Asentamiento humano: SAN JOSÉ — COLONIA
+- Asentamiento humano: SANTA ELENA — COLONIA
+- Asentamiento humano: SANTA FE — COLONIA
+- Asentamiento humano: SANTA IRENE — COLONIA
+- Asentamiento humano: TAHUIZAN — COLONIA
+- Asentamiento humano: TEACAL — EJIDO
+- Asentamiento humano: TECORRAL — COLONIA
+- Asentamiento humano: TEPEYAC — COLONIA
+- Asentamiento humano: TRES CRUCES — COLONIA
+- Asentamiento humano: VALLE DEL ENCINAL — COLONIA
+- Asentamiento humano: VILLA DE GUADALUPE — COLONIA
+- Asentamiento humano: CENTRO — BARRIO
+- Asentamiento humano: CUALECUEXTLA — BARRIO
+- Asentamiento humano: CUATAMAYA — BARRIO
+- Asentamiento humano: CUATEXAPA — BARRIO
+- Asentamiento humano: CUCHILLA — BARRIO
+- Asentamiento humano: EL NARANJAL — BARRIO
+- Asentamiento humano: EL ROSARIO — BARRIO
+- Asentamiento humano: FLORIDA — BARRIO
+- Asentamiento humano: TALQUESTA — BARRIO
+- Asentamiento humano: TEPETIPA — BARRIO
+- Asentamiento humano: IXTLAHUATEMPA — BARRIO
+- Asentamiento humano: LA CEIBA — BARRIO
+- Asentamiento humano: LA LAGUNA — BARRIO
+- Asentamiento humano: LA PEÑA — BARRIO
+- Asentamiento humano: LA PEÑA CHILILICO CAPILLA — BARRIO
+- Asentamiento humano: MILCAHUAL — BARRIO
+- Asentamiento humano: NUEVO — BARRIO
+- Asentamiento humano: SAN JUAN — BARRIO
+- Asentamiento humano: ZIHUATLA — BARRIO
+- Asentamiento humano: ZOCUIZINTLA — BARRIO
+- Asentamiento humano: CENTRO — BARRIO
+- Asentamiento humano: CORRALILLO — BARRIO
+- Asentamiento humano: FILIBERTO — BARRIO
+- Asentamiento humano: GARITA — BARRIO
+- Asentamiento humano: LA ESPERANZA — BARRIO
+- Asentamiento humano: LA LOMITA — BARRIO
+- Asentamiento humano: LA MORITA — BARRIO
+- Asentamiento humano: LA QUEBRADORA — BARRIO
+- Asentamiento humano: LA RIVERA — BARRIO
+- Asentamiento humano: LOS FRANCESES — BARRIO
+- Asentamiento humano: SAN JOSÉ — BARRIO
+- Asentamiento humano: TLALTZINTLA — BARRIO
+
+## Municipio: Huichapan
+
+- Localidad: Huichapan
+- Localidad: El Apartadero
+- Localidad: Guadalupe el Astillero [Colonia]
+- Localidad: Bondojito
+- Localidad: Boye
+- Localidad: El Cajón
+- Localidad: El Carmen
+- Localidad: Comodeje [Hacienda]
+- Localidad: La Cruz
+- Localidad: Dandhó
+- Localidad: Dantzibojay
+- Localidad: Dongoteay
+- Localidad: Dothí
+- Localidad: Huixcazdhá (La Manga)
+- Localidad: Jonacapa
+- Localidad: Llano Largo
+- Localidad: Mamithí
+- Localidad: Maney
+- Localidad: Maxthá
+- Localidad: Minthó [Hacienda]
+- Localidad: Pedregoso
+- Localidad: La Sabinita
+- Localidad: Sabina Grande
+- Localidad: San José Atlán
+- Localidad: El Saucillo
+- Localidad: Taguí
+- Localidad: Taxquí
+- Localidad: El Tendido
+- Localidad: Tlaxcalilla
+- Localidad: Vitejhé
+- Localidad: Xajay
+- Localidad: Yonthé
+- Localidad: Zamorano
+- Localidad: Zequetejé
+- Localidad: Zothé
+- Localidad: La Escondida
+- Localidad: Estación Huichapan
+- Localidad: La Soledad
+- Localidad: Las Rosas [Rancho]
+- Localidad: Taxthó [Rancho]
+- Localidad: Atobomú [Rancho]
+- Localidad: El Divisadero
+- Localidad: Comodeje
+- Localidad: Huixfí
+- Localidad: Monte Alegre
+- Localidad: El Gavillero de Mintho
+- Localidad: Chile Verde
+- Localidad: Guadalupe
+- Localidad: El Charco
+- Localidad: El Refugio
+- Localidad: San Francisco el Tenyoy (El Tenyoy)
+- Localidad: Hacienda Huixcasdhá
+- Localidad: El Zapote
+- Localidad: La Manzana del Tendido
+- Localidad: Las Bóvedas
+- Localidad: Cangadhó
+- Localidad: El Cerrito de las Flores
+- Localidad: Chichimequillas
+- Localidad: La Ciénega
+- Localidad: Hacienda el Cocol
+- Localidad: La Cueva
+- Localidad: Dexcadho (Peña Azul)
+- Localidad: Presa Francisco I. Madero
+- Localidad: Hacienda Real 1800 (La Manga)
+- Localidad: El Membrillo [Rancho]
+- Localidad: La Mesita
+- Localidad: Pathecito
+- Localidad: San Isidro el Astillero
+- Localidad: San José Dandhó (Los Jaramillo)
+- Localidad: Santa Bárbara
+- Localidad: Taxanghú
+- Localidad: Xindhó
+- Localidad: Zethé
+- Localidad: Ejido de Huichapan
+- Localidad: Tocofaní
+- Localidad: Ñatú
+- Localidad: San Mateo
+- Localidad: El Pedregal
+- Localidad: Chimpá
+- Localidad: La Crucita
+- Localidad: El Dextho
+- Localidad: Ejido de Maxthá
+- Localidad: Xindhó [Barrio]
+- Localidad: Los Girasoles [Rancho]
+- Localidad: Capricornio [Fonda]
+- Localidad: Potrero Doninghú
+- Localidad: La Venta [Rancho]
+- Localidad: San José Boye
+- Localidad: Las Sábilas
+- Localidad: El Sitio (Las Fuentes)
+- Localidad: Lagunillas
+- Localidad: Rosendo Aces Quintanar
+- Localidad: Barrio Macuathi (Barrio Guadalupe)
+- Localidad: Barrio San José
+- Localidad: Barrio San Juan Mandhó
+- Localidad: El Betel
+- Localidad: Las Fracciones
+- Localidad: San Miguel [Granjas]
+- Localidad: La Güera
+- Localidad: El Jarillal
+- Localidad: Juandhó
+- Localidad: Los Pirules
+- Localidad: El Bintzha
+- Localidad: Ejido de Pedregoso
+- Localidad: La Siempreviva
+- Localidad: Santa Fe
+- Localidad: La Espiga de Oro
+- Localidad: Tierra Nueva
+- Asentamiento humano: ABUNDIO MARTÍNEZ — BARRIO
+- Asentamiento humano: BENITO JUÁREZ — FRACCIONAMIENTO
+- Asentamiento humano: CENTRO HISTÓRICO — COLONIA
+- Asentamiento humano: EL CALVARIO — BARRIO
+- Asentamiento humano: LA CAMPANA — BARRIO
+- Asentamiento humano: LOS ZAPOTES — FRACCIONAMIENTO
+- Asentamiento humano: ROJO GÓMEZ — COLONIA
+- Asentamiento humano: SAN MATEO — BARRIO
+- Asentamiento humano: SANTA BÁRBARA — BARRIO
+- Asentamiento humano: BOYE — PUEBLO
+- Asentamiento humano: EL CAJÓN — PUEBLO
+- Asentamiento humano: DONGOTEAY — PUEBLO
+- Asentamiento humano: MAMITHÍ — PUEBLO
+- Asentamiento humano: PEDREGOSO — PUEBLO
+- Asentamiento humano: LA SABINITA — PUEBLO
+- Asentamiento humano: SABINA GRANDE — PUEBLO
+- Asentamiento humano: EL CARMEN — BARRIO
+- Asentamiento humano: GUADALUPE — BARRIO
+- Asentamiento humano: SAN JOSÉ — BARRIO
+- Asentamiento humano: SAN JUAN — BARRIO
+- Asentamiento humano: BUENOS AIRES — BARRIO
+- Asentamiento humano: CENTRO — BARRIO
+- Asentamiento humano: DOPRESA — BARRIO
+- Asentamiento humano: EL PLAN — BARRIO
+- Asentamiento humano: LA PEÑA — BARRIO
+- Asentamiento humano: LOS PIRULES — BARRIO
+- Asentamiento humano: MINSHA — BARRIO
+- Asentamiento humano: PALO ALTO — BARRIO
+- Asentamiento humano: SAN MIGUEL — BARRIO
+- Asentamiento humano: VITEJHÉ — PUEBLO
+- Asentamiento humano: ZEQUETEJÉ — PUEBLO
+- Asentamiento humano: ESTACIÓN HUICHAPAN — PUEBLO
+- Asentamiento humano: SANTA BÁRBARA — COLONIA
+- Asentamiento humano: SAN MATEO — COLONIA
+
+## Municipio: Ixmiquilpan
+
+- Localidad: Ixmiquilpan
+- Localidad: El Alberto
+- Localidad: Arenalito
+- Localidad: Bangandhó
+- Localidad: El Banxu
+- Localidad: Boxhuada
+- Localidad: Cantamaye
+- Localidad: Capula
+- Localidad: Cerritos
+- Localidad: Cerro Blanco
+- Localidad: Cuesta Colorada
+- Localidad: El Defay
+- Localidad: El Dexthi Alberto
+- Localidad: El Dexthi San Juanico
+- Localidad: El Dextho
+- Localidad: Dios Padre
+- Localidad: El Espino
+- Localidad: El Espíritu
+- Localidad: La Estación
+- Localidad: Granaditas
+- Localidad: Gundho
+- Localidad: La Heredad
+- Localidad: El Huacri
+- Localidad: Ignacio López Rayón
+- Localidad: Julián Villagrán
+- Localidad: La Lagunita
+- Localidad: Maguey Blanco
+- Localidad: El Mandho
+- Localidad: Nequeteje
+- Localidad: El Nith
+- Localidad: El Olivo
+- Localidad: Orizabita
+- Localidad: Panales
+- Localidad: La Pechuga
+- Localidad: Pueblo Nuevo
+- Localidad: El Puerto Dexthi
+- Localidad: Los Remedios
+- Localidad: San Andrés Orizabita
+- Localidad: San Juanico
+- Localidad: El Tablón
+- Localidad: Taxadho
+- Localidad: El Tephé
+- Localidad: Agua Florida
+- Localidad: Cañada Chica
+- Localidad: Chalmita
+- Localidad: El Dezha
+- Localidad: El Durazno
+- Localidad: Jahuey Capula
+- Localidad: El Manantial
+- Localidad: El Meje
+- Localidad: Naxthéy
+- Localidad: Ojuelos
+- Localidad: La Palma
+- Localidad: San Pedro Capula
+- Localidad: Quixpedhe
+- Localidad: El Ustheje
+- Localidad: Samayoa [Colonia]
+- Localidad: El Barrido
+- Localidad: Cantinela
+- Localidad: La Loma de la Cruz
+- Localidad: El Deca
+- Localidad: Ex-Hacienda de Ocotza
+- Localidad: General Felipe Ángeles [Colonia]
+- Localidad: Botenguedho
+- Localidad: Ex-Hacienda Debodhe
+- Localidad: Lázaro Cárdenas (El Internado) [Colonia]
+- Localidad: La Loma Pueblo Nuevo
+- Localidad: La Loma Julián Villagrán
+- Localidad: La Loma López Rayón
+- Localidad: López Flores
+- Localidad: La Palma
+- Localidad: Taxthó
+- Localidad: Xaxny
+- Localidad: El Boye
+- Localidad: Las Emes
+- Localidad: Huapilla
+- Localidad: La Huerta Capula
+- Localidad: La Loma
+- Localidad: Milpa Grande
+- Localidad: El Nandho
+- Localidad: El Nogal
+- Localidad: Paredes
+- Localidad: Los Pinos
+- Localidad: La Presa
+- Localidad: El Valante
+- Localidad: Vázquez
+- Localidad: Pozo el Mirador
+- Localidad: El Botho (El Botho el Espíritu)
+- Localidad: El Mirador Capula
+- Localidad: Álamo
+- Localidad: El Bojay
+- Localidad: Los Cruces [Colonia]
+- Localidad: Gastejhe
+- Localidad: Huacri de la Paz
+- Localidad: Villa de la Paz
+- Localidad: Vista Hermosa
+- Localidad: El Carrizal
+- Localidad: Manzana Cerritos
+- Localidad: Loma de San Pedro de Remedios (La Loma)
+- Localidad: Santa Ana (Barrio de Progreso)
+- Localidad: Arbolado
+- Localidad: El Rosario Capula
+- Localidad: Nixtejhé (San Juanico Nixtejhé)
+- Localidad: Manzanillo
+- Localidad: La Libertad [Colonia]
+- Localidad: Colonia Independencia
+- Localidad: Puerto Bangandhó
+- Localidad: Cerrito Capula
+- Localidad: Colonia del Valle Remedios
+- Localidad: Los Martínez
+- Localidad: La Mesa López Rayón
+- Localidad: El Mezquite
+- Localidad: Ejido Jagüey de Vázquez Capula
+- Localidad: Ejido Maguey Blanco
+- Localidad: Felipe Ángeles Julián Villagrán
+- Localidad: La Joya [Colonia]
+- Localidad: Miguel Hidalgo [Colonia]
+- Localidad: El Boxaxni [Rancho]
+- Localidad: La Herradura [Rancho]
+- Localidad: El Triángulo Dorado Capula
+- Asentamiento humano: 20 DE NOVIEMBRE — COLONIA
+- Asentamiento humano: ARBOLADO — MANZANA
+- Asentamiento humano: BARRIO DE JESÚS — COLONIA
+- Asentamiento humano: BENITO JUÁREZ — COLONIA
+- Asentamiento humano: CARRIZAL — COLONIA
+- Asentamiento humano: CENTRO — COLONIA
+- Asentamiento humano: CENTRO SAN NICOLÁS — MANZANA
+- Asentamiento humano: CERRITOS — MANZANA
+- Asentamiento humano: CUATRO MILPAS (LA REFORMA) — MANZANA
+- Asentamiento humano: EL BONDHO — COLONIA
+- Asentamiento humano: EL CALVARIO — COLONIA
+- Asentamiento humano: EL CARMEN — COLONIA
+- Asentamiento humano: EL CORTIJO — COLONIA
+- Asentamiento humano: EL FITHZI — COLONIA
+- Asentamiento humano: EL MAYE — COLONIA
+- Asentamiento humano: EL ORO — COLONIA
+- Asentamiento humano: JOAQUÍN BARANDA — COLONIA
+- Asentamiento humano: LA CRUZ BLANCA — COLONIA
+- Asentamiento humano: LA HUERTA — COLONIA
+- Asentamiento humano: LA MEDIA LUNA — COLONIA
+- Asentamiento humano: LA REFORMA — COLONIA
+- Asentamiento humano: LOMA DEL ORO — COLONIA
+- Asentamiento humano: MIGUEL HIDALGO — COLONIA
+- Asentamiento humano: NDAÑU — MANZANA
+- Asentamiento humano: PROGRESO — COLONIA
+- Asentamiento humano: SAN ANTONIO — COLONIA
+- Asentamiento humano: SAN JAVIER — COLONIA
+- Asentamiento humano: SAN MIGUEL — COLONIA
+- Asentamiento humano: SANTA ALICIA — COLONIA
+- Asentamiento humano: SANTA ANA — COLONIA
+- Asentamiento humano: VICENTE GUERRERO — COLONIA
+- Asentamiento humano: EL ALBERTO — PUEBLO
+- Asentamiento humano: BANGANDHÓ — BARRIO
+- Asentamiento humano: CAPULA — PUEBLO
+- Asentamiento humano: DIOS PADRE — BARRIO
+- Asentamiento humano: LA ESTACIÓN — RANCHERÍA
+- Asentamiento humano: LA HEREDAD — BARRIO
+- Asentamiento humano: IGNACIO LÓPEZ RAYÓN — RANCHERÍA
+- Asentamiento humano: MAGUEY BLANCO — BARRIO
+- Asentamiento humano: EL MANDHO — BARRIO
+- Asentamiento humano: EL NITH — PUEBLO
+- Asentamiento humano: CENTRO — MANZANA
+- Asentamiento humano: DAJUI — MANZANA
+- Asentamiento humano: GARAMBULLO — MANZANA
+- Asentamiento humano: LA PALMA — MANZANA
+- Asentamiento humano: QUITERIO — MANZANA
+- Asentamiento humano: SAN JUAN — MANZANA
+- Asentamiento humano: YE ALAMO — MANZANA
+- Asentamiento humano: YE CENIZA — MANZANA
+- Asentamiento humano: YE CIRCUITO — MANZANA
+- Asentamiento humano: YE GAS — MANZANA
+- Asentamiento humano: YE PISTA — MANZANA
+- Asentamiento humano: PUEBLO NUEVO — PUEBLO
+- Asentamiento humano: LOS REMEDIOS — PUEBLO
+- Asentamiento humano: EL TABLÓN — BARRIO
+- Asentamiento humano: TAXADHO — PUEBLO
+- Asentamiento humano: CENTRO — MANZANA
+- Asentamiento humano: HUAPILLA — MANZANA
+- Asentamiento humano: PEÑA 1 A — MANZANA
+- Asentamiento humano: PEÑA 1 B — MANZANA
+- Asentamiento humano: PEÑA 2 — MANZANA
+- Asentamiento humano: TEMPLO — MANZANA
+- Asentamiento humano: TORRES — MANZANA
+- Asentamiento humano: CAÑADA CHICA — PUEBLO
+- Asentamiento humano: EL DURAZNO — PUEBLO
+- Asentamiento humano: JAHUEY CAPULA — PUEBLO
+- Asentamiento humano: EL BARRIDO — PUEBLO
+- Asentamiento humano: CANTINELA — COLONIA
+- Asentamiento humano: LA LOMA DE LA CRUZ — RANCHERÍA
+- Asentamiento humano: EL DECA — RANCHERÍA
+- Asentamiento humano: GENERAL FELIPE ÁNGELES — COLONIA
+- Asentamiento humano: BOTENGUEDHO — COLONIA
+- Asentamiento humano: LÁZARO CÁRDENAS — COLONIA
+- Asentamiento humano: LA LOMA PUEBLO NUEVO — PUEBLO
+- Asentamiento humano: HUAPILLA — RANCHERÍA
+- Asentamiento humano: LA HUERTA CAPULA — PUEBLO
+- Asentamiento humano: LA LOMA — RANCHERÍA
+- Asentamiento humano: PAREDES — RANCHERÍA
+- Asentamiento humano: LA PRESA — RANCHERÍA
+- Asentamiento humano: EL VALANTE — PUEBLO
+- Asentamiento humano: EL MIRADOR CAPULA — COLONIA
+- Asentamiento humano: EL CARRIZAL — COLONIA
+- Asentamiento humano: MANZANA CERRITOS — COLONIA
+- Asentamiento humano: LA LIBERTAD — COLONIA
+- Asentamiento humano: PUERTO BANGANDHÓ — PUEBLO
+- Asentamiento humano: LA MESA LÓPEZ RAYÓN — RANCHERÍA
+- Asentamiento humano: LA JOYA — COLONIA
+- Asentamiento humano: MIGUEL HIDALGO — COLONIA
+
+## Municipio: Jacala de Ledezma
+
+- Localidad: Jacala
+- Localidad: Agua Fría Grande
+- Localidad: Barranca Arriba
+- Localidad: El Carrizal
+- Localidad: El Cedral
+- Localidad: Coñecito
+- Localidad: Cuesta Colorada
+- Localidad: Los Duraznos
+- Localidad: Hilojuanico
+- Localidad: Los Hoyos
+- Localidad: José María Morelos
+- Localidad: Laguna Seca
+- Localidad: Llanitos
+- Localidad: La Mohonera (La Colmena)
+- Localidad: Mesa de la Cebada
+- Localidad: Minas Viejas
+- Localidad: La Mora
+- Localidad: Octupilla
+- Localidad: La Palma
+- Localidad: Palos Pintados
+- Localidad: Peña Blanca
+- Localidad: El Pinalito
+- Localidad: Plomosas
+- Localidad: Quetzalapa
+- Localidad: Rancho Nuevo
+- Localidad: El Refugio
+- Localidad: Rincón del Agua
+- Localidad: San Nicolás
+- Localidad: Santo Domingo
+- Localidad: El Sótano
+- Localidad: Joya de Santa María
+- Localidad: Joya de las Águilas
+- Localidad: La Cañada
+- Localidad: Carrizalito
+- Localidad: Comatitlán
+- Localidad: Vado Hondo
+- Localidad: Puerto de la Zorra
+- Localidad: Agua Fría Chica
+- Localidad: El Arenal
+- Localidad: Oteros
+- Localidad: El Piñón
+- Localidad: El Calvario
+- Localidad: Puerto de Horcones
+- Localidad: La Sabinita
+- Localidad: El Macoque (La Mesa del Huizachal)
+- Localidad: Toribio
+- Localidad: El Aguaje
+- Localidad: Puerto el Rancho
+- Localidad: El Polvorín
+- Localidad: Los Frijoles (Jacarandas) [Rancho]
+- Asentamiento humano: CRUZ ROJA — FRACCIONAMIENTO
+- Asentamiento humano: EL AGUAJE — BARRIO
+- Asentamiento humano: EL CALVARIO — BARRIO
+- Asentamiento humano: EL CENTRO — BARRIO
+- Asentamiento humano: EL CERRITO — BARRIO
+- Asentamiento humano: EL SABINO — BARRIO
+- Asentamiento humano: LA PILA — BARRIO
+- Asentamiento humano: LOMA DORADA — FRACCIONAMIENTO
+- Asentamiento humano: SAN ISIDRO — BARRIO
