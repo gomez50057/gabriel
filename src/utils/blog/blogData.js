@@ -711,19 +711,9 @@ const rawBlogPosts = [
     ],
 
     date: "24 de agosto, 2026",
-
     image: "/img/tutoriales/kml-kmz-shp-qgis.png",
-
     category: "Tutoriales",
-
     featuredPosts: true,
-
-    author: "Gabriel Gómez Gómez",
-
-    publishedAt: "2026-08-24",
-
-    updatedAt: "2026-08-24",
-
     quote: "La idea no fue solamente convertir un archivo, sino conservar la mayor cantidad posible de su estructura, atributos y representación para poder seguir trabajando con él dentro de un SIG.",
 
     media: [
@@ -1592,8 +1582,6 @@ const rawBlogPosts = [
     image: "/img/tutoriales/google-analytics-ia.png",
     category: "Analítica web",
     featuredPosts: true,
-    author: "Gabriel Gómez Gómez",
-    publishedAt: "2026-08-24",
     quote: "Una consulta realizada por una inteligencia artificial no equivale automáticamente a una vista, una sesión o un usuario activo en Google Analytics.",
   },
   {
