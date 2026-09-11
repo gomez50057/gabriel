@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Gráfica de área</title>
+  <desc id="desc">Tendencia con el área bajo la línea resaltada.</desc>
+  <rect width="960" height="540" rx="24" fill="#141419"/>
+  <g stroke="#34343d" stroke-width="1"><path d="M120 100V430M120 430H850M120 350H850M120 270H850M120 190H850"/></g>
+  <path d="M135 380L230 330L325 350L420 245L515 285L610 190L705 220L825 120V430H135Z" fill="#691b32" opacity=".82"/>
+  <path d="M135 380L230 330L325 350L420 245L515 285L610 190L705 220L825 120" fill="none" stroke="#e7bd70" stroke-width="5"/>
+  <g fill="#e7bd70"><circle cx="135" cy="380" r="6"/><circle cx="230" cy="330" r="6"/><circle cx="325" cy="350" r="6"/><circle cx="420" cy="245" r="6"/><circle cx="515" cy="285" r="6"/><circle cx="610" cy="190" r="6"/><circle cx="705" cy="220" r="6"/><circle cx="825" cy="120" r="6"/></g>
+  <text x="438" y="485" fill="#f5ead2" font-family="Arial, sans-serif" font-size="18">Tiempo</text>
+</svg>

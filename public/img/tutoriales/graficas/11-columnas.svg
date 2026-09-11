@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Gráfica de columnas</title>
+  <desc id="desc">Columnas verticales para comparar valores entre categorías.</desc>
+  <rect width="960" height="540" rx="24" fill="#141419"/>
+  <g stroke="#34343d" stroke-width="1"><path d="M120 100V430M120 430H850M120 350H850M120 270H850M120 190H850"/></g>
+  <g fill="#e7bd70"><rect x="170" y="300" width="72" height="130"/><rect x="290" y="240" width="72" height="190"/><rect x="410" y="180" width="72" height="250"/><rect x="530" y="265" width="72" height="165"/><rect x="650" y="140" width="72" height="290"/></g>
+  <g fill="#f5ead2" font-family="Arial, sans-serif" font-size="18"><text x="192" y="460">A</text><text x="312" y="460">B</text><text x="432" y="460">C</text><text x="552" y="460">D</text><text x="672" y="460">E</text><text x="430" y="500">Categorías</text></g>
+</svg>

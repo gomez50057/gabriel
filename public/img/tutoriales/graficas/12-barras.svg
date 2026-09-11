@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Gráfica de barras horizontales</title>
+  <desc id="desc">Barras horizontales ordenadas para comparar categorías.</desc>
+  <rect width="960" height="540" rx="24" fill="#141419"/>
+  <g fill="#f5ead2" font-family="Arial, sans-serif" font-size="18"><text x="80" y="145">Categoría A</text><text x="80" y="225">Categoría B</text><text x="80" y="305">Categoría C</text><text x="80" y="385">Categoría D</text></g>
+  <g fill="#e7bd70"><rect x="260" y="115" width="560" height="46" rx="8"/><rect x="260" y="195" width="430" height="46" rx="8" fill="#b8822d"/><rect x="260" y="275" width="330" height="46" rx="8" fill="#b84b55"/><rect x="260" y="355" width="220" height="46" rx="8" fill="#691b32"/></g>
+  <path d="M260 435H820" stroke="#34343d" stroke-width="2"/><text x="480" y="480" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="18">Valor</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Gráfica de burbujas</title>
+  <desc id="desc">Relación entre satisfacción y costo usando círculos de distintos tamaños.</desc>
+  <rect width="960" height="540" rx="24" fill="#141419"/>
+  <g stroke="#34343d" stroke-width="1"><path d="M110 90V440M210 90V440M310 90V440M410 90V440M510 90V440M610 90V440M710 90V440M810 90V440"/><path d="M110 140H850M110 215H850M110 290H850M110 365H850"/></g>
+  <path d="M110 440H850M110 440V90" stroke="#e7bd70" stroke-width="3"/>
+  <g fill="#e7bd70" opacity=".82"><circle cx="205" cy="360" r="26"/><circle cx="330" cy="300" r="42"/><circle cx="470" cy="250" r="20"/><circle cx="600" cy="190" r="58"/><circle cx="760" cy="130" r="34"/></g>
+  <g fill="#9aaac7" opacity=".9"><circle cx="260" cy="235" r="18"/><circle cx="545" cy="330" r="30"/><circle cx="700" cy="275" r="22"/></g>
+  <g fill="#b84b55" opacity=".9"><circle cx="390" cy="165" r="24"/><circle cx="655" cy="355" r="16"/></g>
+  <g fill="#f5ead2" font-family="Arial, sans-serif" font-size="18"><text x="410" y="495">Costo</text><text x="34" y="285" transform="rotate(-90 34 285)">Satisfacción</text></g>
+</svg>

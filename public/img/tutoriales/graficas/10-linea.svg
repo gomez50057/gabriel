@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Gráfica de líneas</title>
+  <desc id="desc">Una línea que muestra la evolución de un valor a través del tiempo.</desc>
+  <rect width="960" height="540" rx="24" fill="#141419"/>
+  <g stroke="#34343d" stroke-width="1"><path d="M120 100V430M120 430H850M120 350H850M120 270H850M120 190H850"/></g>
+  <path d="M140 360L245 325L350 345L455 235L560 275L665 185L770 220L830 135" fill="none" stroke="#e7bd70" stroke-width="6"/>
+  <g fill="#e7bd70"><circle cx="140" cy="360" r="8"/><circle cx="245" cy="325" r="8"/><circle cx="350" cy="345" r="8"/><circle cx="455" cy="235" r="8"/><circle cx="560" cy="275" r="8"/><circle cx="665" cy="185" r="8"/><circle cx="770" cy="220" r="8"/><circle cx="830" cy="135" r="8"/></g>
+  <g fill="#f5ead2" font-family="Arial, sans-serif" font-size="18"><text x="440" y="485">Tiempo</text><text x="48" y="280" transform="rotate(-90 48 280)">Valor</text></g>
+</svg>

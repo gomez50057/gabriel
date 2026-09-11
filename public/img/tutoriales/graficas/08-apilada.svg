@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Barras apiladas</title>
+  <desc id="desc">Barras de distintos tamaños divididas en partes que forman un total.</desc>
+  <rect width="960" height="540" rx="24" fill="#141419"/>
+  <g fill="#f5ead2" font-family="Arial, sans-serif" font-size="18"><text x="80" y="145">Tema 1</text><text x="80" y="245">Tema 2</text><text x="80" y="345">Tema 3</text></g>
+  <g stroke="#141419" stroke-width="3"><path d="M210 115H760V170H210Z" fill="#691b32"/><path d="M210 115H350V170H210Z" fill="#b84b55"/><path d="M350 115H545V170H350Z" fill="#b8822d"/><path d="M545 115H760V170H545Z" fill="#e7bd70"/><path d="M210 215H850V270H210Z" fill="#691b32"/><path d="M210 215H400V270H210Z" fill="#b84b55"/><path d="M400 215H600V270H400Z" fill="#b8822d"/><path d="M600 215H725V270H600Z" fill="#e7bd70"/><path d="M725 215H850V270H725Z" fill="#f5ead2"/><path d="M210 315H650V370H210Z" fill="#691b32"/><path d="M210 315H275V370H210Z" fill="#b84b55"/><path d="M275 315H420V370H275Z" fill="#b8822d"/><path d="M420 315H540V370H420Z" fill="#e7bd70"/><path d="M540 315H650V370H540Z" fill="#f5ead2"/></g>
+  <text x="405" y="450" fill="#a0a0a0" font-family="Arial, sans-serif" font-size="18">Partes que forman un total</text>
+</svg>

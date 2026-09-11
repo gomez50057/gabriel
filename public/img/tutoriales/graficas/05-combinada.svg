@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Gráfica combinada</title>
+  <desc id="desc">Columnas y líneas en una misma visualización para comparar dos métricas.</desc>
+  <rect width="960" height="540" rx="24" fill="#141419"/>
+  <g stroke="#34343d" stroke-width="1"><path d="M120 100V430M120 430H850M120 350H850M120 270H850M120 190H850"/></g>
+  <g fill="#b84b55"><rect x="160" y="320" width="58" height="110"/><rect x="270" y="260" width="58" height="170"/><rect x="380" y="290" width="58" height="140"/><rect x="490" y="205" width="58" height="225"/><rect x="600" y="245" width="58" height="185"/><rect x="710" y="155" width="58" height="275"/></g>
+  <path d="M189 260L299 225L409 240L519 160L629 185L739 115" fill="none" stroke="#e7bd70" stroke-width="5"/>
+  <g fill="#e7bd70"><circle cx="189" cy="260" r="7"/><circle cx="299" cy="225" r="7"/><circle cx="409" cy="240" r="7"/><circle cx="519" cy="160" r="7"/><circle cx="629" cy="185" r="7"/><circle cx="739" cy="115" r="7"/></g>
+  <text x="420" y="485" fill="#f5ead2" font-family="Arial, sans-serif" font-size="18">Periodo</text>
+</svg>

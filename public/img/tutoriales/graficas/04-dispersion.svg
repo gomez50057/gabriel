@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Gráfica de dispersión</title>
+  <desc id="desc">Puntos que muestran la relación entre dos variables.</desc>
+  <rect width="960" height="540" rx="24" fill="#141419"/>
+  <g stroke="#34343d" stroke-width="1"><path d="M120 90V430M220 90V430M320 90V430M420 90V430M520 90V430M620 90V430M720 90V430M820 90V430"/><path d="M120 130H850M120 210H850M120 290H850M120 370H850"/></g>
+  <path d="M135 405L825 115" stroke="#e7bd70" stroke-width="4" opacity=".8"/>
+  <g fill="#9aaac7"><circle cx="190" cy="370" r="8"/><circle cx="230" cy="350" r="10"/><circle cx="285" cy="340" r="8"/><circle cx="330" cy="300" r="11"/><circle cx="390" cy="285" r="9"/><circle cx="440" cy="250" r="10"/><circle cx="505" cy="245" r="8"/><circle cx="555" cy="205" r="11"/><circle cx="620" cy="190" r="8"/><circle cx="670" cy="160" r="10"/><circle cx="735" cy="150" r="8"/><circle cx="790" cy="115" r="10"/></g>
+  <g fill="#f5ead2" font-family="Arial, sans-serif" font-size="18"><text x="430" y="485">Variable X</text><text x="48" y="280" transform="rotate(-90 48 280)">Variable Y</text></g>
+</svg>

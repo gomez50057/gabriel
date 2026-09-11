@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Gráfica de dona</title>
+  <desc id="desc">Partes de un total representadas como segmentos circulares.</desc>
+  <rect width="960" height="540" rx="24" fill="#141419"/>
+  <g transform="rotate(-90 360 270)" fill="none" stroke-width="72"><circle cx="360" cy="270" r="135" stroke="#691b32" stroke-dasharray="250 848"/><circle cx="360" cy="270" r="135" stroke="#b84b55" stroke-dasharray="170 848" stroke-dashoffset="-250"/><circle cx="360" cy="270" r="135" stroke="#b8822d" stroke-dasharray="205 848" stroke-dashoffset="-420"/><circle cx="360" cy="270" r="135" stroke="#e7bd70" stroke-dasharray="225 848" stroke-dashoffset="-625"/></g>
+  <circle cx="360" cy="270" r="92" fill="#141419"/><text x="320" y="280" fill="#f5ead2" font-family="Arial, sans-serif" font-size="22">100 %</text>
+  <g font-family="Arial, sans-serif" font-size="20" fill="#f5ead2"><rect x="610" y="160" width="22" height="22" fill="#691b32"/><text x="650" y="179">Categoría A</text><rect x="610" y="215" width="22" height="22" fill="#b84b55"/><text x="650" y="234">Categoría B</text><rect x="610" y="270" width="22" height="22" fill="#b8822d"/><text x="650" y="289">Categoría C</text><rect x="610" y="325" width="22" height="22" fill="#e7bd70"/><text x="650" y="344">Categoría D</text></g>
+</svg>

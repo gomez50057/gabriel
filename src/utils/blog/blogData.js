@@ -28,6 +28,387 @@ export function toIsoDate(date) {
 
 const rawBlogPosts = [
   {
+    name: "Cómo leer diferentes tipos de gráficas",
+    description: [
+      {
+        type: "p",
+        text: "Leer una gráfica no consiste únicamente en identificar si sube o baja una línea. También es necesario entender qué representa cada eje, qué significa el color, qué unidad se está utilizando y cuál es la pregunta que intenta responder la visualización."
+      },
+      {
+        type: "p",
+        text: "En esta guía reúno varios tipos de gráficas que aparecen con frecuencia en reportes, encuestas y tableros de análisis. El recorrido comienza con las visualizaciones que requieren más elementos para interpretarse y termina con las más directas para comparar categorías."
+      },
+      {
+        type: "callout",
+        variant: "info",
+        title: "Regla general para leer cualquier gráfica",
+        text: "Primero identifica el título, después revisa ejes, unidades y leyenda. Por último, observa patrones, diferencias y valores atípicos sin confundir una relación visual con una causa."
+      },
+
+      { type: "h2", text: "1. Gráfica de burbujas" },
+      {
+        type: "p",
+        text: "La gráfica de burbujas es una de las más exigentes de interpretar porque combina varias variables al mismo tiempo. La posición horizontal representa una variable, la posición vertical representa otra y el tamaño de cada círculo agrega una tercera medida. El color puede añadir una cuarta dimensión."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/01-burbujas.svg",
+        alt: "Ejemplo de una gráfica de burbujas con costo y satisfacción",
+        width: 960,
+        height: 540,
+        caption: "La posición muestra la relación entre dos variables y el tamaño de la burbuja representa una magnitud adicional."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Primero compara la posición de las burbujas en ambos ejes. Después revisa cuáles son más grandes y finalmente utiliza los colores para distinguir grupos. Una burbuja grande no necesariamente tiene un valor alto en los ejes: su tamaño representa otra variable."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Es útil para comparar entidades considerando simultáneamente volumen, costo, satisfacción, población u otra medida adicional."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Comparar únicamente el tamaño de los círculos y olvidar que la posición y el color también contienen información."
+      },
+
+      { type: "h2", text: "2. Mapa de calor" },
+      {
+        type: "p",
+        text: "Un mapa de calor utiliza colores para representar la intensidad de un valor dentro de una matriz. Los colores más claros u oscuros permiten localizar rápidamente concentraciones, cambios y zonas con valores bajos o altos."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/02-mapa-calor.svg",
+        alt: "Ejemplo de un mapa de calor con temas y días de la semana",
+        width: 960,
+        height: 540,
+        caption: "La intensidad del color ayuda a localizar patrones dentro de una matriz."
+      },
+      { type: "h3", text: "Cómo leerlo" },
+      {
+        type: "p",
+        text: "Comienza revisando la escala de colores. Después busca filas, columnas o bloques que se repitan. Una celda aislada con un color distinto puede representar un valor atípico o un cambio importante."
+      },
+      { type: "h3", text: "Cuándo usarlo" },
+      {
+        type: "p",
+        text: "Funciona bien para comparar días y horarios, respuestas por tema, rendimiento por región o cualquier conjunto de valores organizado en filas y columnas."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Interpretar un color sin revisar la leyenda. El significado de un color depende de la escala utilizada en esa gráfica."
+      },
+
+      { type: "h2", text: "3. Histograma" },
+      {
+        type: "p",
+        text: "El histograma agrupa valores numéricos dentro de intervalos. A diferencia de una gráfica de barras, no compara categorías independientes: muestra cómo se distribuyen los datos a lo largo de un rango."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/03-histograma.svg",
+        alt: "Ejemplo de un histograma con valores agrupados por intervalos",
+        width: 960,
+        height: 540,
+        caption: "Las columnas representan intervalos y su altura indica cuántos valores caen dentro de cada rango."
+      },
+      { type: "h3", text: "Cómo leerlo" },
+      {
+        type: "p",
+        text: "Observa en qué zona se concentran las columnas más altas. Después revisa si la distribución está equilibrada, inclinada hacia un lado, dividida en varios grupos o acompañada de valores alejados."
+      },
+      { type: "h3", text: "Cuándo usarlo" },
+      {
+        type: "p",
+        text: "Es apropiado para edades, tiempos de respuesta, montos, calificaciones, distancias y cualquier variable numérica continua."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Cambiar demasiado el tamaño de los intervalos. Con intervalos muy amplios se pierden detalles y con intervalos muy pequeños la distribución puede verse ruidosa."
+      },
+
+      { type: "h2", text: "4. Gráfica de dispersión" },
+      {
+        type: "p",
+        text: "La gráfica de dispersión coloca un punto por cada registro para analizar la relación entre dos variables. Su objetivo principal es mostrar si existe una tendencia, una concentración o algún valor atípico."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/04-dispersion.svg",
+        alt: "Ejemplo de una gráfica de dispersión con línea de tendencia",
+        width: 960,
+        height: 540,
+        caption: "Cada punto representa un registro y la línea ayuda a observar la tendencia general."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Revisa si los puntos suben, bajan o no siguen una dirección clara. También identifica grupos separados y puntos muy alejados. Una tendencia puede indicar relación, pero no demuestra por sí sola que una variable cause la otra."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Es útil para comparar variables como inversión y resultados, tiempo y costo, edad y consumo o cualquier par de medidas numéricas."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Afirmar que existe causalidad únicamente porque los puntos muestran una relación."
+      },
+
+      { type: "h2", text: "5. Gráfica combinada" },
+      {
+        type: "p",
+        text: "La gráfica combinada une dos tipos de representación, normalmente columnas y líneas. Se utiliza cuando se quieren observar dos métricas relacionadas, pero con escalas o comportamientos diferentes."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/05-combinada.svg",
+        alt: "Ejemplo de una gráfica combinada con columnas y línea",
+        width: 960,
+        height: 540,
+        caption: "Las columnas muestran una medida y la línea muestra otra dentro del mismo periodo."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Primero identifica qué representa cada forma y revisa si utilizan el mismo eje vertical. Después compara si las métricas se mueven juntas o si una cambia mientras la otra permanece estable."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Puede servir para comparar ventas y crecimiento, cantidad de respuestas y porcentaje de participación, o volumen y promedio."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Usar dos ejes verticales sin indicarlo claramente. Una escala distinta puede hacer que dos series parezcan relacionadas aunque no lo estén."
+      },
+
+      { type: "h2", text: "6. Gráfica de área" },
+      {
+        type: "p",
+        text: "La gráfica de área es parecida a una gráfica de líneas, pero rellena el espacio debajo de la serie. Esto hace que el volumen acumulado o la magnitud del cambio tengan más presencia visual."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/06-area.svg",
+        alt: "Ejemplo de una gráfica de área con evolución temporal",
+        width: 960,
+        height: 540,
+        caption: "El área resaltada ayuda a percibir la magnitud de la serie a lo largo del tiempo."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Lee la línea superior de la misma manera que en una gráfica de líneas. El relleno ayuda a ver cuánto crece o disminuye la magnitud, pero no debe interpretarse como una segunda variable."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Es útil para mostrar evolución, acumulación o participación de una serie durante un periodo."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Utilizar demasiadas áreas superpuestas. Cuando varias series se cruzan, los colores pueden ocultar los valores y dificultar la lectura."
+      },
+
+      { type: "h2", text: "7. Barras apiladas al 100 %" },
+      {
+        type: "p",
+        text: "En una gráfica apilada al 100 %, todas las barras tienen la misma longitud. Cada segmento representa una proporción del total de su propia categoría."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/07-apilada-100.svg",
+        alt: "Ejemplo de barras apiladas al 100 por ciento",
+        width: 960,
+        height: 540,
+        caption: "Todas las barras representan el 100 %; lo que cambia es la proporción de sus segmentos."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Compara el tamaño relativo de cada color dentro de una barra. La gráfica permite observar proporciones, pero no permite saber cuál categoría tiene más registros si los totales originales son diferentes."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Es especialmente útil para respuestas de encuestas, niveles de importancia, porcentajes de participación y comparaciones de composición."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Leer la longitud total de cada barra como si representara cantidades distintas. En esta variante todas miden lo mismo."
+      },
+
+      { type: "h2", text: "8. Barras apiladas" },
+      {
+        type: "p",
+        text: "Las barras apiladas dividen cada barra en segmentos y conservan la longitud total de cada categoría. Permiten observar al mismo tiempo el total y la composición interna."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/08-apilada.svg",
+        alt: "Ejemplo de barras apiladas con totales diferentes",
+        width: 960,
+        height: 540,
+        caption: "La longitud total cambia entre categorías y cada color muestra una parte de ese total."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Primero compara la longitud completa de las barras. Después observa cómo se divide cada total. Los segmentos cercanos al inicio suelen ser más fáciles de comparar que los que aparecen en posiciones intermedias."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Funciona para ventas por producto y región, respuestas por tema o cualquier escenario donde interese conocer el total y sus componentes."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Comparar con precisión segmentos que no comienzan en el mismo punto. Para comparaciones exactas conviene complementar la gráfica con etiquetas o una tabla."
+      },
+
+      { type: "h2", text: "9. Gráfica de dona o pastel" },
+      {
+        type: "p",
+        text: "Las gráficas de dona y pastel muestran cómo se divide un total entre varias categorías. Son fáciles de reconocer, pero su lectura se vuelve difícil cuando hay demasiados segmentos o diferencias muy pequeñas."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/09-dona.svg",
+        alt: "Ejemplo de una gráfica de dona con cuatro categorías",
+        width: 960,
+        height: 540,
+        caption: "Cada segmento representa una parte del total, que en conjunto equivale al 100 %."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Identifica primero el total y después compara el tamaño de los segmentos usando la leyenda y los porcentajes. Si dos partes son muy parecidas, la etiqueta numérica es más confiable que la comparación visual."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Es adecuada cuando existe un solo total, hay pocas categorías y la diferencia entre las partes se entiende rápidamente."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Usarla con muchas categorías. En ese caso, una gráfica de barras suele ser más clara."
+      },
+
+      { type: "h2", text: "10. Gráfica de líneas" },
+      {
+        type: "p",
+        text: "La gráfica de líneas muestra cómo cambia una medida a través de una secuencia, normalmente el tiempo. La unión entre los puntos permite observar tendencias, aumentos, descensos y ciclos."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/10-linea.svg",
+        alt: "Ejemplo de una gráfica de líneas a través del tiempo",
+        width: 960,
+        height: 540,
+        caption: "La pendiente y los cambios de dirección permiten observar la evolución de la serie."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Lee el eje horizontal para identificar el periodo y el eje vertical para conocer el valor. Después observa la dirección general, los puntos máximos, los mínimos y los cambios bruscos."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Es una de las mejores opciones para visitas mensuales, respuestas por fecha, ingresos, temperaturas y cualquier métrica que cambie con el tiempo."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Usarla para categorías sin un orden natural. Si los elementos no representan una secuencia, una gráfica de barras suele comunicar mejor la comparación."
+      },
+
+      { type: "h2", text: "11. Gráfica de columnas" },
+      {
+        type: "p",
+        text: "La gráfica de columnas utiliza barras verticales para comparar valores entre categorías. Es directa y muy útil cuando las etiquetas son cortas o cuando las categorías siguen una secuencia temporal."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/11-columnas.svg",
+        alt: "Ejemplo de una gráfica de columnas verticales",
+        width: 960,
+        height: 540,
+        caption: "La altura de cada columna representa el valor de su categoría."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Compara la altura de las columnas tomando como referencia la línea base. Revisa también la escala del eje vertical para saber si las diferencias son grandes o pequeñas."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Es útil para comparar periodos, productos, regiones o respuestas cuando las etiquetas pueden colocarse sin amontonarse."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Usar una escala vertical recortada sin indicarlo. Esto puede exagerar visualmente una diferencia pequeña."
+      },
+
+      { type: "h2", text: "12. Gráfica de barras horizontales" },
+      {
+        type: "p",
+        text: "La gráfica de barras horizontales suele ser la más sencilla de leer. Cada barra representa una categoría y su longitud representa el valor. La comparación funciona especialmente bien cuando los nombres de las categorías son largos."
+      },
+      {
+        type: "image",
+        src: "/img/tutoriales/graficas/12-barras.svg",
+        alt: "Ejemplo de una gráfica de barras horizontales ordenadas",
+        width: 960,
+        height: 540,
+        caption: "La longitud de cada barra permite comparar categorías de forma directa."
+      },
+      { type: "h3", text: "Cómo leerla" },
+      {
+        type: "p",
+        text: "Lee la etiqueta de la categoría y sigue la barra hasta su extremo. La barra más larga representa el valor mayor y la más corta representa el menor."
+      },
+      { type: "h3", text: "Cuándo usarla" },
+      {
+        type: "p",
+        text: "Es una opción muy práctica para rankings, conteos, respuestas de encuestas y categorías con nombres extensos."
+      },
+      { type: "h3", text: "Error común" },
+      {
+        type: "p",
+        text: "Usar demasiadas categorías sin ordenarlas. Ordenar de mayor a menor suele facilitar la lectura."
+      },
+
+      { type: "h2", text: "Conclusión" },
+      {
+        type: "p",
+        text: "La gráfica correcta depende de la pregunta que se quiere responder. Las burbujas y los mapas de calor permiten analizar varias dimensiones, mientras que las líneas, columnas y barras facilitan comparaciones más directas."
+      },
+      {
+        type: "p",
+        text: "Una buena lectura comienza por entender la estructura de los datos y termina con una interpretación cuidadosa. Antes de fijarse en colores o estilos, conviene confirmar qué representa cada eje, qué unidad se está usando y si la visualización realmente corresponde al tipo de comparación que se necesita."
+      },
+    ],
+    date: "11 de septiembre, 2026",
+    image: "/img/tutoriales/como-leer-graficas.png",
+    category: "Tutoriales",
+    featuredPosts: true
+  },
+  {
     name: "Cómo preparar los datos para crear una barra apilada al 100 % en Looker Studio",
     description: [
       {
