@@ -28,6 +28,278 @@ export function toIsoDate(date) {
 
 const rawBlogPosts = [
   {
+    name: "Cómo separé automáticamente respuestas múltiples en Google Sheets",
+    description: [
+      {
+        type: "p",
+        text: "Al trabajar con una base de datos en **Google Sheets**, me encontré con un problema bastante común: algunas respuestas contenían varias opciones dentro de una misma celda, separadas por comas."
+      },
+      {
+        type: "p",
+        text: "Para realizar conteos, gráficas y análisis de frecuencia, necesitaba transformar esas respuestas para que **cada opción quedara en una fila independiente dentro de una sola columna**."
+      },
+
+      { type: "h2", text: "El problema" },
+      {
+        type: "p",
+        text: "Cuando una pregunta permite seleccionar varias opciones, los resultados pueden almacenarse de esta manera:"
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "respuestas-originales.txt",
+        code: "Focos LED o de bajo consumo, Paneles solares\nPaneles solares\nFocos LED o de bajo consumo, Electrodomésticos o equipos de bajo consumo energético",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "Aunque esta estructura es útil para conservar la respuesta original, no es la más adecuada para analizar cuántas veces fue seleccionada cada opción."
+      },
+      {
+        type: "p",
+        text: "Lo que necesitaba era obtener esto:"
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "respuestas-separadas.txt",
+        code: "Focos LED o de bajo consumo\nPaneles solares\nPaneles solares\nFocos LED o de bajo consumo\nElectrodomésticos o equipos de bajo consumo energético",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "De esta manera, cada selección puede contabilizarse individualmente."
+      },
+
+      { type: "h2", text: "La solución mediante una fórmula" },
+      {
+        type: "p",
+        text: "Para automatizar el proceso utilicé la siguiente fórmula en una hoja nueva. La estructura es reutilizable, pero antes de pegarla debes ajustar dos referencias según la ubicación real de tus datos:"
+      },
+      {
+        type: "ul",
+        items: [
+          "`'origen typeform'` representa el nombre de la pestaña donde está la hoja origen con los datos iniciales. Sustitúyelo por el nombre exacto de tu propia hoja; si contiene espacios, conserva las comillas simples.",
+          "`G` representa la columna que contiene las respuestas múltiples. Cámbiala por la letra de la columna donde tengas esa información."
+        ]
+      },
+      {
+        type: "p",
+        text: "Por ejemplo, si tu hoja origen se llama **Respuestas 2026** y las respuestas están en la columna **J**, debes cambiar `'origen typeform'` por `'Respuestas 2026'` y reemplazar todas las referencias a `G` por `J`."
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "separar-respuestas.gsheets",
+        code: "=ARRAYFORMULA(TRIM(TRANSPOSE(SPLIT(TEXTJOIN(\",\",TRUE,FILTER('origen typeform'!G2:G,'origen typeform'!G2:G<>\"\")),\",\"))))"
+      },
+      {
+        type: "p",
+        text: "En el ejemplo, la fórmula toma todas las respuestas existentes en la columna **G** de la pestaña **origen typeform**, comenzando desde la fila 2. Se utiliza la fila 2 porque en la fila 1 está la pregunta o el encabezado de la columna, y las respuestas empiezan a partir de esa fila."
+      },
+      {
+        type: "p",
+        text: "Utilicé `G2:G` en lugar de establecer un rango fijo como `G2:G100`, porque así la fórmula seguirá tomando automáticamente las nuevas filas que se agreguen a la base. Si tus respuestas comienzan en otra fila, cambia el número `2` por la fila correspondiente en todas las referencias; por ejemplo, si empiezan en la fila 3, utiliza `G3:G` y `G3:G<>\"\"`."
+      },
+
+      { type: "h2", text: "¿Cómo funciona la fórmula?" },
+      {
+        type: "p",
+        text: "La fórmula combina varias funciones de Google Sheets para realizar todo el proceso automáticamente."
+      },
+
+      { type: "h3", text: "FILTER" },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "filter",
+        code: "FILTER('origen typeform'!G2:G,'origen typeform'!G2:G<>\"\")"
+      },
+      {
+        type: "p",
+        text: "Esto toma únicamente las celdas que contienen información e ignora las filas vacías. Es importante porque la columna puede seguir creciendo con nuevas respuestas."
+      },
+
+      { type: "h3", text: "TEXTJOIN" },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "textjoin",
+        code: "TEXTJOIN(\",\",TRUE,...)"
+      },
+      {
+        type: "p",
+        text: "Esta función reúne todas las respuestas encontradas en una sola cadena de texto, utilizando la coma como separador."
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "lista-continua.txt",
+        code: "Focos LED o de bajo consumo, Paneles solares\nPaneles solares\nCalentador solar de agua",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "El contenido anterior se procesa internamente como una sola lista continua."
+      },
+
+      { type: "h3", text: "SPLIT" },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "split",
+        code: "SPLIT(...,\",\")"
+      },
+      {
+        type: "p",
+        text: "Esta función identifica cada coma y divide el texto en respuestas individuales. Así, una celda como `Paneles solares, Calentador solar de agua, Focos LED o de bajo consumo` se convierte en tres elementos independientes."
+      },
+
+      { type: "h3", text: "TRANSPOSE" },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "transpose",
+        code: "TRANSPOSE(...)"
+      },
+      {
+        type: "p",
+        text: "Como `SPLIT` genera inicialmente los resultados de forma horizontal, `TRANSPOSE` cambia la orientación para colocarlos verticalmente, uno debajo de otro."
+      },
+
+      { type: "h3", text: "TRIM" },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "trim",
+        code: "TRIM(...)"
+      },
+      {
+        type: "p",
+        text: "Esta función elimina espacios innecesarios al inicio o al final de cada respuesta. Esto es especialmente importante después de separar por comas."
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "espacio-inicial.txt",
+        code: " Paneles solares  →  Paneles solares",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "De esta manera evito que Google Sheets considere como diferentes dos respuestas que en realidad son iguales."
+      },
+
+      { type: "h3", text: "ARRAYFORMULA" },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "arrayformula",
+        code: "ARRAYFORMULA(...)"
+      },
+      {
+        type: "p",
+        text: "ARRAYFORMULA permite que todo el proceso se aplique automáticamente al conjunto de resultados sin tener que copiar la fórmula en cada fila."
+      },
+
+      { type: "h2", text: "Aplicación en diferentes columnas" },
+      {
+        type: "p",
+        text: "El mismo procedimiento puede utilizarse en cualquier columna. Lo único que cambia es la letra de la columna que quiero procesar."
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "columna-F",
+        code: "=ARRAYFORMULA(TRIM(TRANSPOSE(SPLIT(TEXTJOIN(\",\",TRUE,FILTER('origen typeform'!F2:F,'origen typeform'!F2:F<>\"\")),\",\"))))"
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "columna-G",
+        code: "=ARRAYFORMULA(TRIM(TRANSPOSE(SPLIT(TEXTJOIN(\",\",TRUE,FILTER('origen typeform'!G2:G,'origen typeform'!G2:G<>\"\")),\",\"))))"
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "columna-H",
+        code: "=ARRAYFORMULA(TRIM(TRANSPOSE(SPLIT(TEXTJOIN(\",\",TRUE,FILTER('origen typeform'!H2:H,'origen typeform'!H2:H<>\"\")),\",\"))))"
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "columna-I",
+        code: "=ARRAYFORMULA(TRIM(TRANSPOSE(SPLIT(TEXTJOIN(\",\",TRUE,FILTER('origen typeform'!I2:I,'origen typeform'!I2:I<>\"\")),\",\"))))"
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "columna-J",
+        code: "=ARRAYFORMULA(TRIM(TRANSPOSE(SPLIT(TEXTJOIN(\",\",TRUE,FILTER('origen typeform'!J2:J,'origen typeform'!J2:J<>\"\")),\",\"))))"
+      },
+
+      { type: "h2", text: "¿Por qué no eliminé las respuestas repetidas?" },
+      {
+        type: "p",
+        text: "Decidí conservar todas las respuestas repetidas porque cada repetición representa una selección realizada por una persona."
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "frecuencias.txt",
+        code: "Paneles solares\nPaneles solares\nPaneles solares\nFocos LED o de bajo consumo",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "En el ejemplo anterior, **Paneles solares fue seleccionado tres veces**. Si eliminara los duplicados, perdería esa información y ya no podría calcular correctamente las frecuencias."
+      },
+      {
+        type: "p",
+        text: "Conservar los registros me permite posteriormente obtener:"
+      },
+      {
+        type: "ul",
+        items: [
+          "número de selecciones por opción;",
+          "frecuencias;",
+          "porcentajes;",
+          "opciones más seleccionadas;",
+          "gráficas;",
+          "tablas dinámicas;",
+          "comparaciones entre preguntas."
+        ]
+      },
+
+      { type: "h2", text: "Resultado final" },
+      {
+        type: "p",
+        text: "Con este procedimiento logré convertir automáticamente respuestas múltiples almacenadas en una misma celda en una estructura mucho más adecuada para el análisis."
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "resultado.txt",
+        code: "Paneles solares, Calentador solar de agua, Aprovechamiento de iluminación o ventilación natural, Focos LED o de bajo consumo\n\n↓\n\nPaneles solares\nCalentador solar de agua\nAprovechamiento de iluminación o ventilación natural\nFocos LED o de bajo consumo",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "La principal ventaja es que **no tengo que separar las respuestas manualmente cada vez que se actualiza la base**. La fórmula trabaja sobre toda la columna y, conforme se incorporan nuevos registros, los procesa automáticamente."
+      },
+      {
+        type: "callout",
+        variant: "success",
+        title: "Una hoja para cada propósito",
+        text: "Mantengo una hoja con los datos originales y otra destinada al procesamiento y análisis. Así puedo trabajar con la información de una forma más ordenada, automatizada y preparada para generar estadísticas y visualizaciones."
+      }
+    ],
+    date: "11 de septiembre, 2026",
+    image: "/img/tutoriales/google-sheets-respuestas-multiples.png",
+    category: "Tutoriales",
+    featuredPosts: true
+  },
+  {
     name: "Convertir KML y KMZ a SHP en QGIS conservando atributos y colores",
 
     description: [
