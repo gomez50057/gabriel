@@ -28,6 +28,389 @@ export function toIsoDate(date) {
 
 const rawBlogPosts = [
   {
+    name: "Cómo preparar los datos para crear una barra apilada al 100 % en Looker Studio",
+    description: [
+      {
+        type: "p",
+        text: "Cuando se trabaja con respuestas de una encuesta en Google Sheets, es común que la información llegue en varias columnas: cada columna representa un tema distinto y cada fila contiene una respuesta como **Muy importante, Importante, Poco importante o Nada importante**."
+      },
+      {
+        type: "p",
+        text: "Esa estructura funciona bien para almacenar las respuestas, pero no siempre es la mejor para crear visualizaciones en **Looker Studio**. Para una barra apilada horizontal al 100 %, conviene reorganizar primero la información."
+      },
+
+      { type: "h2", text: "1. Reorganizar la información en Google Sheets" },
+      {
+        type: "p",
+        text: "Para este tipo de visualización, primero se tiene la información de entrada organizada en **formato horizontal** dentro de Google Sheets. Cada columna representa un tema diferente y, debajo de cada encabezado, se encuentran las respuestas correspondientes."
+      },
+      {
+        type: "p",
+        text: "La estructura inicial se ve de forma similar a esta:"
+      },
+      {
+        type: "table",
+        headers: ["Tema 1", "Tema 2", "Tema 3", "Tema 4"],
+        rows: [
+          ["Muy importante", "Muy importante", "Importante", "Muy importante"],
+          ["Nada importante", "Poco importante", "Nada importante", "Importante"],
+          ["Importante", "Muy importante", "Poco importante", "Muy importante"]
+        ]
+      },
+      {
+        type: "p",
+        text: "Es decir:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**La primera fila contiene los nombres de los temas.**",
+          "**Cada columna corresponde a un tema distinto.**",
+          "**Las filas siguientes contienen las respuestas.**",
+          "Pueden existir celdas vacías cuando una persona no respondió algún elemento.",
+          "Las categorías pueden ser, por ejemplo: **Muy importante, Importante, Poco importante y Nada importante**.",
+          "La cantidad de filas puede seguir creciendo conforme se incorporen nuevas respuestas."
+        ]
+      },
+      {
+        type: "p",
+        text: "Esta estructura funciona correctamente para almacenar la información original, pero no es la más adecuada para generar directamente una gráfica de barras apiladas en Looker Studio."
+      },
+      {
+        type: "p",
+        text: "Por eso, antes de crear la visualización, se debe reorganizar la información. Para que Looker Studio pueda trabajar fácilmente con estos datos, se transforma la información a una estructura de únicamente dos columnas:"
+      },
+      {
+        type: "ul",
+        items: ["**Tema**", "**Nivel de importancia**"]
+      },
+      {
+        type: "p",
+        text: "El resultado queda con una estructura similar a esta:"
+      },
+      {
+        type: "table",
+        headers: ["Tema", "Nivel de importancia"],
+        rows: [
+          ["Energías renovables", "Muy importante"],
+          ["Movilidad eléctrica", "Muy importante"],
+          ["Atracción de inversiones", "Importante"],
+          ["Energías renovables", "Nada importante"],
+          ["Movilidad eléctrica", "Importante"]
+        ]
+      },
+      {
+        type: "p",
+        text: "De esta forma, cada respuesta queda registrada como una fila independiente y posteriormente se puede contar cuántas veces aparece cada nivel de importancia."
+      },
+
+      { type: "h3", text: "Fórmula para transformar los datos" },
+      {
+        type: "p",
+        text: "En este ejemplo se utiliza la siguiente fórmula. Como en el artículo anterior, debes adaptar el nombre de la hoja, el rango de columnas y la fila donde comienzan tus datos."
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "reorganizar-datos.gsheets",
+        code: "=QUERY(ARRAYFORMULA(SPLIT(FLATTEN('origen typeform'!L$1:R$1&\"♦\"&'origen typeform'!L2:R),\"♦\")),\"SELECT Col1, Col2 WHERE Col2 IS NOT NULL LABEL Col1 'Tema', Col2 'Nivel de importancia'\",0)"
+      },
+
+      { type: "h3", text: "¿Qué parte corresponde al ejemplo?" },
+      {
+        type: "p",
+        text: "En este caso, la información se encuentra en las columnas **L a R** de una hoja llamada **origen typeform**."
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "hoja-y-rango.txt",
+        code: "origen typeform\nColumnas: L a R",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "La parte `'origen typeform'!L$1:R$1` toma los encabezados de las columnas. Es decir, toma los nombres de los elementos que después aparecerán dentro de la columna **Tema**."
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "encabezados",
+        code: "'origen typeform'!L$1:R$1"
+      },
+      {
+        type: "p",
+        text: "Mientras que `'origen typeform'!L2:R` toma las respuestas correspondientes. Se comienza desde la fila 2 porque, en este ejemplo, la fila 1 contiene los encabezados y las respuestas empiezan en la fila 2."
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "respuestas",
+        code: "'origen typeform'!L2:R"
+      },
+
+      { type: "h3", text: "¿Cómo reutilizar la fórmula?" },
+      {
+        type: "p",
+        text: "Si los datos se encuentran en otras columnas, únicamente se deben cambiar las referencias. Por ejemplo, si otra pregunta utiliza las columnas **S a W**, la fórmula sería:"
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "rango-S-W",
+        code: "=QUERY(ARRAYFORMULA(SPLIT(FLATTEN('origen typeform'!S$1:W$1&\"♦\"&'origen typeform'!S2:W),\"♦\")),\"SELECT Col1, Col2 WHERE Col2 IS NOT NULL LABEL Col1 'Tema', Col2 'Nivel de importancia'\",0)"
+      },
+      {
+        type: "p",
+        text: "La lógica es siempre la misma: los encabezados se toman de la fila 1 y las respuestas desde la fila 2."
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "rango-S-W.txt",
+        code: "Encabezados:   S1:W1\nRespuestas:    S2:W",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "Si la información estuviera, por ejemplo, entre las columnas **C y H**, se utilizarían los rangos `C1:H1` para los encabezados y `C2:H` para las respuestas."
+      },
+      {
+        type: "p",
+        text: "Por lo tanto, para adaptar la fórmula a otros casos primero se debe identificar:"
+      },
+      {
+        type: "ul",
+        items: [
+          "la hoja donde se encuentran los datos;",
+          "la primera y última columna que se quieren transformar;",
+          "la fila donde están los encabezados;",
+          "la fila donde comienzan las respuestas."
+        ]
+      },
+
+      { type: "h3", text: "Cambiar el nombre de la hoja" },
+      {
+        type: "p",
+        text: "Si la hoja no se llama `origen typeform`, también se debe modificar esa parte. Por ejemplo, si la hoja se llama **Respuestas encuesta**, se utilizaría:"
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "nombre-hoja-encabezados",
+        code: "'Respuestas encuesta'!L$1:R$1"
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "nombre-hoja-respuestas",
+        code: "'Respuestas encuesta'!L2:R"
+      },
+      {
+        type: "p",
+        text: "Las comillas simples son especialmente importantes cuando el nombre de la hoja contiene espacios."
+      },
+
+      { type: "h3", text: "Cambiar los nombres de las columnas resultantes" },
+      {
+        type: "p",
+        text: "Al final de la fórmula aparece `LABEL Col1 'Tema', Col2 'Nivel de importancia'`. Esta sección simplemente asigna un nombre a las dos columnas que se generan."
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "nombres-resultantes",
+        code: "LABEL Col1 'Tema', Col2 'Nivel de importancia'"
+      },
+      {
+        type: "p",
+        text: "En otro ejercicio podrían utilizarse otros nombres, por ejemplo **Servicio** y **Nivel de satisfacción**. En ese caso se modificaría por:"
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "labels-personalizados",
+        code: "LABEL Col1 'Servicio', Col2 'Nivel de satisfacción'"
+      },
+      {
+        type: "p",
+        text: "Otro ejemplo podría ser **Aspecto evaluado** y **Calificación**. Por lo tanto, esta sección también puede personalizarse dependiendo del tipo de información que se esté analizando."
+      },
+
+      { type: "h3", text: "¿Qué hace automáticamente la fórmula?" },
+      {
+        type: "ul",
+        items: [
+          "tomar los encabezados;",
+          "relacionarlos con sus respuestas;",
+          "convertir las columnas en filas;",
+          "generar únicamente dos columnas;",
+          "eliminar las respuestas vacías;",
+          "mantener todas las respuestas registradas;",
+          "incorporar automáticamente nuevos registros."
+        ]
+      },
+      {
+        type: "p",
+        text: "Esto último es especialmente útil porque se utilizan rangos abiertos como `L2:R` en lugar de rangos limitados como `L2:R100`."
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "rango-abierto",
+        code: "L2:R"
+      },
+      {
+        type: "snippet",
+        language: "excel",
+        fileName: "rango-limitado",
+        code: "L2:R100"
+      },
+      {
+        type: "p",
+        text: "Así, si posteriormente llegan más respuestas, no es necesario modificar la fórmula."
+      },
+
+      { type: "h2", text: "2. Llevar la información a Looker Studio" },
+      {
+        type: "p",
+        text: "Una vez que la información ya está organizada en las dos columnas necesarias, se puede conectar la hoja con **Looker Studio**."
+      },
+      {
+        type: "p",
+        text: "Dentro del reporte se selecciona:"
+      },
+      {
+        type: "callout",
+        variant: "info",
+        title: "Añadir la fuente de datos",
+        text: "Añadir datos → Google Sheets"
+      },
+      {
+        type: "p",
+        text: "Después se selecciona el archivo de Google Sheets, la hoja donde se generó la información reorganizada y la opción para utilizar la primera fila como encabezados."
+      },
+      {
+        type: "p",
+        text: "Al conectar los datos, Looker Studio debe reconocer los dos campos creados anteriormente:"
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "campos-looker.txt",
+        code: "Tema\nNivel de importancia",
+        wrap: true
+      },
+
+      { type: "h2", text: "Crear la gráfica" },
+      {
+        type: "p",
+        text: "Una vez conectada la fuente, se agrega una **gráfica de barras horizontales apiladas**. Después se configuran los campos."
+      },
+
+      { type: "h3", text: "Dimensión" },
+      {
+        type: "p",
+        text: "En **Dimensión** se selecciona:"
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "dimension.txt",
+        code: "Tema",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "Esto hace que se genere una barra diferente para cada elemento."
+      },
+
+      { type: "h3", text: "Dimensión de desglose" },
+      {
+        type: "p",
+        text: "En **Dimensión de desglose** se selecciona:"
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "dimension-desglose.txt",
+        code: "Nivel de importancia",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "Esta configuración permite dividir cada barra según las distintas categorías existentes. Por ejemplo:"
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "categorias.txt",
+        code: "Nada importante\nPoco importante\nImportante\nMuy importante",
+        wrap: true
+      },
+
+      { type: "h3", text: "Métrica" },
+      {
+        type: "p",
+        text: "Como métrica se utiliza:"
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "metrica.txt",
+        code: "Recuento de registros",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "El recuento permite contabilizar cuántas veces aparece cada nivel de importancia dentro de cada tema. En términos simples, Looker Studio hará algo como:"
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "calculo-looker.txt",
+        code: "Tema + Nivel de importancia + Número de respuestas",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "Con esa información construirá automáticamente las barras."
+      },
+
+      { type: "h2", text: "3. Configurar la gráfica como apilada al 100 %" },
+      {
+        type: "p",
+        text: "Una vez creada la gráfica, el siguiente paso es hacer que todas las barras tengan la misma longitud. Para ello se selecciona la gráfica y se entra en **Estilo → Apilamiento → 100 %**."
+      },
+      {
+        type: "p",
+        text: "Al utilizar esta opción, cada barra representa siempre el **100 % de las respuestas de ese tema**. Así, aunque un tema tenga más respuestas que otro, ambos ocuparán el mismo espacio horizontal y lo que se comparará será la **proporción de respuestas**."
+      },
+      {
+        type: "p",
+        text: "Cada sección representa una categoría diferente. La ventaja de utilizar una barra apilada al 100 % es que la comparación se vuelve mucho más sencilla, ya que se puede identificar rápidamente dónde existe una mayor concentración de respuestas positivas o negativas."
+      },
+      {
+        type: "p",
+        text: "En lugar de comparar únicamente cantidades, se compara la **distribución porcentual** de cada tema."
+      },
+      {
+        type: "callout",
+        variant: "success",
+        title: "Flujo completo",
+        text: "Datos originales → Reorganización en Google Sheets → Visualización en Looker Studio"
+      },
+      {
+        type: "p",
+        text: "De esta manera se obtiene una base más ordenada, reutilizable y preparada para construir gráficas apiladas al 100 % sin tener que reorganizar manualmente las respuestas cada vez que se actualice la información."
+      }
+    ],
+    date: "11 de septiembre, 2026",
+    image: "/img/tutoriales/looker-studio-barra-apilada-100.png",
+    category: "Tutoriales",
+    featuredPosts: true
+  },
+  {
     name: "Cómo separé automáticamente respuestas múltiples en Google Sheets",
     description: [
       {
