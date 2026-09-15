@@ -28,6 +28,403 @@ export function toIsoDate(date) {
 
 const rawBlogPosts = [
   {
+    name: "Tutorial para usar KoboToolbox sin conexión a Internet",
+    description: [
+      {
+        type: "p",
+        text: "KoboToolbox permite realizar encuestas incluso en lugares donde **no hay señal de celular, datos móviles o Wi-Fi**."
+      },
+      {
+        type: "p",
+        text: "Para utilizar correctamente esta función es importante preparar el dispositivo antes de salir a campo y asegurarse de que las encuestas realizadas queden guardadas en la **cola de envío** hasta que vuelva a existir una conexión a Internet."
+      },
+
+      { type: "h2", text: "1. Abrir el enlace de la encuesta" },
+      {
+        type: "p",
+        text: "Primero, ingresa al **enlace de KoboToolbox que te fue enviado**."
+      },
+      {
+        type: "p",
+        text: "La primera vez que abras la encuesta en ese teléfono o tableta, es necesario hacerlo mientras tengas **conexión a Internet**, ya sea mediante Wi-Fi o datos móviles."
+      },
+      {
+        type: "p",
+        text: "Es importante esperar a que el formulario **termine de cargar completamente**. KoboToolbox almacena una copia del formulario en el navegador para que posteriormente pueda utilizarse aunque el dispositivo se quede sin Internet."
+      },
+      {
+        type: "p",
+        text: "La preparación puede tardar algunos segundos. KoboToolbox puede mostrar un indicador que confirma que el formulario ya está disponible para utilizarse sin conexión."
+      },
+      {
+        type: "callout",
+        variant: "warning",
+        title: "Antes de salir a campo",
+        text: "No salgas a trabajar sin haber abierto previamente el formulario con Internet en el dispositivo que vas a utilizar."
+      },
+
+      { type: "h2", text: "2. Crear un acceso directo en la pantalla de inicio —opcional—" },
+      {
+        type: "p",
+        text: "Para los encuestadores que utilizarán constantemente el formulario, se recomienda crear un **acceso directo en la pantalla de inicio** del teléfono o tableta."
+      },
+      {
+        type: "p",
+        text: "Esto es completamente opcional, pero facilita mucho el trabajo porque evita tener que buscar nuevamente el enlace."
+      },
+      {
+        type: "ul",
+        items: [
+          "**Android / Chrome:** abre el menú del navegador y selecciona **Agregar a pantalla principal** o una opción similar.",
+          "**iPhone o iPad / Safari:** pulsa **Compartir** y posteriormente **Agregar a pantalla de inicio**."
+        ]
+      },
+      {
+        type: "p",
+        text: "A partir de ese momento podrás abrir la encuesta prácticamente como si se tratara de una aplicación."
+      },
+
+      { type: "h2", text: "3. Antes de salir a campo" },
+      {
+        type: "p",
+        text: "Antes de dirigirte a una zona sin cobertura, realiza esta comprobación:"
+      },
+      {
+        type: "ul",
+        items: [
+          "Conéctate a Internet.",
+          "Abre el enlace de KoboToolbox.",
+          "Espera a que el formulario cargue completamente.",
+          "Verifica que pueda utilizarse sin conexión.",
+          "Si es posible, desactiva momentáneamente los datos móviles o el Wi-Fi y abre nuevamente el formulario para comprobar que funciona.",
+          "Después de esta comprobación puedes comenzar el levantamiento en campo."
+        ]
+      },
+      {
+        type: "callout",
+        variant: "info",
+        title: "Recomendación",
+        text: "Realiza esta comprobación antes de cada jornada de levantamiento, especialmente si te informaron que la encuesta fue actualizada."
+      },
+
+      { type: "h2", text: "4. ¿Cómo lleno una encuesta sin Internet?" },
+      {
+        type: "p",
+        text: "El procedimiento es prácticamente **el mismo que cuando tienes Internet**."
+      },
+      {
+        type: "p",
+        text: "Abre el formulario y contesta normalmente cada una de las preguntas. Puedes avanzar entre las preguntas, seleccionar respuestas, escribir información y completar la encuesta aunque en ese momento no tengas señal."
+      },
+      {
+        type: "p",
+        text: "No necesitas hacer nada especial por estar trabajando sin conexión."
+      },
+
+      { type: "h2", text: "5. Al terminar la encuesta utiliza “Enviar”" },
+      {
+        type: "p",
+        text: "Cuando hayas terminado completamente una entrevista, revisa la información y pulsa el botón:"
+      },
+      {
+        type: "callout",
+        variant: "success",
+        title: "ENVIAR",
+        text: "Utiliza esta opción cuando la encuesta ya esté terminada."
+      },
+      {
+        type: "p",
+        text: "Si estás trabajando sin Internet, al pulsar **Enviar** la encuesta obviamente no podrá llegar inmediatamente al servidor de KoboToolbox."
+      },
+      {
+        type: "p",
+        text: "En su lugar, KoboToolbox guardará el registro **en el dispositivo y lo colocará en una cola de envío**. Esto significa que la encuesta ya quedó preparada para enviarse posteriormente cuando el dispositivo vuelva a tener Internet."
+      },
+
+      { type: "h2", text: "6. No utilizar “Guardar borrador” para una encuesta terminada" },
+      {
+        type: "p",
+        text: "La opción **Guardar borrador** tiene otra función. Un borrador se utiliza cuando la entrevista todavía no termina, necesitas detener temporalmente la encuesta, falta información o necesitas continuarla posteriormente."
+      },
+      {
+        type: "table",
+        headers: ["Situación", "Acción correcta"],
+        rows: [
+          ["Encuesta terminada", "ENVIAR"],
+          ["Encuesta incompleta", "GUARDAR BORRADOR"]
+        ]
+      },
+      {
+        type: "callout",
+        variant: "warning",
+        title: "No confundas las opciones",
+        text: "No dejes encuestas terminadas únicamente como borradores."
+      },
+
+      { type: "h2", text: "7. ¿Cómo sé que mi encuesta quedó guardada?" },
+      {
+        type: "p",
+        text: "Cuando pulses **Enviar** sin tener Internet, KoboToolbox colocará el registro en la cola de envío. En la parte superior izquierda del formulario podrás observar un contador."
+      },
+      {
+        type: "table",
+        headers: ["Contador", "Significado"],
+        rows: [
+          ["1", "Hay un registro pendiente de enviar."],
+          ["5", "Hay cinco registros pendientes de enviar."],
+          ["12", "Hay doce registros pendientes de enviar."]
+        ]
+      },
+      {
+        type: "p",
+        text: "Conforme realices más encuestas sin conexión, este número irá aumentando. Esto es normal. El número indica cuántos registros se encuentran almacenados localmente y están esperando una conexión a Internet para ser enviados."
+      },
+
+      { type: "h2", text: "8. Consultar las encuestas pendientes" },
+      {
+        type: "p",
+        text: "Puedes pulsar el **contador ubicado en la parte superior izquierda**. Se abrirá la interfaz donde puedes consultar los registros almacenados en el navegador."
+      },
+      {
+        type: "p",
+        text: "Desde este apartado puedes revisar los elementos que se encuentran pendientes de sincronización."
+      },
+      {
+        type: "p",
+        text: "Dependiendo de la versión del formulario, también puede aparecer la opción para **exportar los registros almacenados**. Esta función puede utilizarse como respaldo cuando existe algún problema para enviar los registros normalmente."
+      },
+
+      { type: "h2", text: "9. ¿Qué hago cuando termine el trabajo de campo?" },
+      {
+        type: "p",
+        text: "Cuando termines las encuestas y regreses a un lugar donde exista **Wi-Fi estable** o **buena señal de datos móviles**, debes sincronizar las encuestas."
+      },
+      {
+        type: "ul",
+        items: [
+          "Conecta el dispositivo a Internet.",
+          "Vuelve a abrir el mismo enlace de KoboToolbox.",
+          "Utiliza el mismo navegador con el que realizaste las encuestas.",
+          "Mantén abierto el formulario mientras los registros pendientes intentan enviarse.",
+          "Espera hasta comprobar que el contador de registros pendientes disminuya."
+        ]
+      },
+      {
+        type: "snippet",
+        language: "text",
+        fileName: "cola-de-envio.txt",
+        code: "15 → 12 → 8 → 3 → 0",
+        wrap: true
+      },
+      {
+        type: "p",
+        text: "Cuando marque **0**, significa que ya no existen registros pendientes en la cola de ese navegador."
+      },
+
+      { type: "h2", text: "10. ¿Qué hago si no se envían automáticamente?" },
+      {
+        type: "p",
+        text: "Si ya tienes buena conexión a Internet pero continúan apareciendo registros pendientes, pulsa el **contador de la parte superior izquierda**, entra a la interfaz de la cola de envíos y utiliza la opción correspondiente para **enviar los registros pendientes**."
+      },
+      {
+        type: "p",
+        text: "Mantén abierta la página hasta que termine el proceso. Si las encuestas contienen fotografías, archivos u otra información pesada, el envío puede tardar un poco más."
+      },
+      {
+        type: "callout",
+        variant: "danger",
+        title: "No borres información pendiente",
+        text: "No borres información del navegador mientras existan registros pendientes."
+      },
+
+      { type: "h2", text: "Muy importante" },
+      {
+        type: "p",
+        text: "Mientras existan encuestas pendientes de enviar:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**NO borres la caché del navegador.**",
+          "**NO borres los datos del sitio.**",
+          "**NO utilices aplicaciones de limpieza que eliminen datos del navegador.**",
+          "**NO desinstales el navegador.**",
+          "**NO restablezcas el teléfono o tableta.**",
+          "**NO cambies de navegador esperando encontrar ahí las encuestas.**"
+        ]
+      },
+      {
+        type: "p",
+        text: "Los formularios y registros sin conexión se almacenan en el navegador utilizado. Borrar sus datos puede ocasionar que los registros almacenados se pierdan permanentemente."
+      },
+
+      { type: "h2", text: "Preguntas frecuentes" },
+      { type: "h3", text: "¿Qué pasa si mi teléfono o tableta se bloquea?" },
+      {
+        type: "p",
+        text: "No pasa nada. Si solamente se apaga la pantalla o el dispositivo se bloquea automáticamente, los registros que **ya fueron enviados a la cola** permanecen almacenados en el navegador. Al desbloquear el dispositivo podrás continuar trabajando."
+      },
+      { type: "h3", text: "¿Qué pasa si se apaga completamente el dispositivo?" },
+      {
+        type: "p",
+        text: "Los registros que ya se encuentran almacenados en la cola permanecen guardados aunque apagues y vuelvas a encender el dispositivo. Después de encenderlo nuevamente, utiliza **el mismo navegador** y entra al mismo formulario. Deberías volver a encontrar tus registros pendientes."
+      },
+      { type: "h3", text: "¿Qué pasa si cierro el navegador?" },
+      {
+        type: "p",
+        text: "Los registros que ya fueron guardados como borrador o colocados en la cola de envío permanecen almacenados aunque cierres el navegador. Cuando vuelvas a abrirlo, entra nuevamente al mismo formulario. **Importante:** utiliza el mismo navegador."
+      },
+      {
+        type: "p",
+        text: "Por ejemplo, si realizaste las encuestas utilizando Chrome, vuelve a entrar con Chrome. No esperes encontrar automáticamente la misma cola si posteriormente abres el formulario desde Firefox, Edge, Safari u otro navegador."
+      },
+      { type: "h3", text: "¿Qué pasa si estaba contestando una encuesta y se apagó el dispositivo antes de enviarla?" },
+      {
+        type: "p",
+        text: "Aquí sí existe riesgo de perder la información que todavía no se había guardado. Por eso, si necesitas interrumpir una entrevista antes de terminarla, utiliza **Guardar borrador**. Cuando la entrevista esté completamente terminada utiliza **Enviar**."
+      },
+      { type: "h3", text: "¿Cuánto tiempo permanecen guardadas las encuestas?" },
+      {
+        type: "p",
+        text: "KoboToolbox no establece un periodo corto después del cual automáticamente desaparezcan los borradores o los registros pendientes. Los borradores pueden permanecer almacenados en el navegador hasta que sean enviados, y los registros de la cola permanecen ahí hasta que KoboToolbox consigue enviarlos correctamente al servidor."
+      },
+      {
+        type: "p",
+        text: "Sin embargo, **no debe utilizarse esto como una forma de almacenamiento permanente**. La recomendación es sincronizar las encuestas **el mismo día o tan pronto como sea posible**."
+      },
+      {
+        type: "p",
+        text: "Mientras existan registros pendientes, evita borrar la caché, los datos del navegador o utilizar herramientas automáticas de limpieza."
+      },
+      { type: "h3", text: "¿Necesito Internet para comenzar una nueva encuesta?" },
+      {
+        type: "p",
+        text: "No, siempre que el formulario haya sido cargado correctamente con Internet previamente en ese dispositivo. Después de quedar disponible sin conexión puedes iniciar nuevas encuestas aunque no tengas señal."
+      },
+      { type: "h3", text: "¿Tengo que abrir el formulario con Internet todos los días?" },
+      {
+        type: "p",
+        text: "No necesariamente. Sin embargo, es recomendable hacerlo antes de iniciar cada jornada. Además, si los responsables de la encuesta informan que **el formulario fue actualizado**, debes conectarte nuevamente a Internet y abrir el enlace antes de continuar recolectando información."
+      },
+      {
+        type: "p",
+        text: "Esto ayuda a garantizar que estés utilizando la versión más reciente."
+      },
+      { type: "h3", text: "¿Qué pasa si tengo 20 encuestas pendientes?" },
+      {
+        type: "p",
+        text: "No es un problema. El contador simplemente mostrará que existen 20 registros esperando ser enviados. Cuando recuperes una conexión estable, abre KoboToolbox y permite que se sincronicen."
+      },
+      {
+        type: "p",
+        text: "No cierres inmediatamente el formulario; espera hasta comprobar que la cola disminuya y, de preferencia, llegue a **0**."
+      },
+      { type: "h3", text: "¿Puedo seguir haciendo encuestas aunque ya tenga otras pendientes?" },
+      {
+        type: "p",
+        text: "Sí. Puedes seguir realizando encuestas sin Internet y cada encuesta terminada se irá agregando a la cola. Sin embargo, es recomendable sincronizarlas en cuanto tengas una conexión confiable para reducir riesgos."
+      },
+      { type: "h3", text: "¿Qué pasa si solamente tengo señal durante unos segundos?" },
+      {
+        type: "p",
+        text: "KoboToolbox está diseñado para volver a intentar los envíos. Si una transmisión se interrumpe, el registro permanece pendiente y puede volver a enviarse posteriormente."
+      },
+      {
+        type: "p",
+        text: "No debes asumir que una encuesta se envió solamente porque apareció señal durante algunos segundos. **Verifica el contador de la cola.**"
+      },
+      { type: "h3", text: "¿Cómo sé que terminé correctamente mi jornada?" },
+      {
+        type: "p",
+        text: "Antes de guardar el dispositivo, realiza esta comprobación:"
+      },
+      {
+        type: "ul",
+        items: [
+          "Conéctate a una red estable.",
+          "Abre el formulario de KoboToolbox.",
+          "Espera la sincronización.",
+          "Comprueba el contador.",
+          "El objetivo es que aparezca **0 registros pendientes**."
+        ]
+      },
+      {
+        type: "p",
+        text: "Solo entonces puedes considerar terminada la sincronización del dispositivo."
+      },
+
+      { type: "h2", text: "Recomendaciones para evitar pérdida de información" },
+      {
+        type: "ul",
+        items: [
+          "Utiliza preferentemente siempre **el mismo dispositivo y el mismo navegador** durante la jornada.",
+          "No utilices el modo incógnito o navegación privada para realizar levantamientos.",
+          "Mantén suficiente batería antes de salir a campo.",
+          "Si trabajarás durante varias horas, lleva batería externa o cargador.",
+          "No borres los datos del navegador.",
+          "No cambies configuraciones del navegador durante el levantamiento.",
+          "Antes de salir a campo comprueba que el formulario funciona sin Internet.",
+          "Cuando termines una entrevista pulsa **Enviar**, no solamente **Guardar borrador**.",
+          "Cuando recuperes Internet vuelve a abrir el formulario.",
+          "Antes de finalizar la jornada comprueba que la cantidad de registros pendientes sea **0**."
+        ]
+      },
+
+      { type: "h2", text: "Regla sencilla para recordar" },
+      { type: "h3", text: "Antes de salir" },
+      {
+        type: "callout",
+        variant: "info",
+        title: "Preparación",
+        text: "Internet → abrir formulario → comprobar que funciona sin conexión."
+      },
+      { type: "h3", text: "Durante el levantamiento" },
+      {
+        type: "callout",
+        variant: "info",
+        title: "Captura",
+        text: "Llenar normalmente → terminar encuesta → ENVIAR."
+      },
+      { type: "h3", text: "Sin Internet" },
+      {
+        type: "callout",
+        variant: "info",
+        title: "Cola local",
+        text: "El registro queda en la cola del dispositivo."
+      },
+      { type: "h3", text: "Al regresar" },
+      {
+        type: "callout",
+        variant: "success",
+        title: "Sincronización",
+        text: "Conectarse a Internet → abrir KoboToolbox → esperar sincronización → comprobar que la cola llegue a 0."
+      },
+
+      { type: "h2", text: "En caso de duda" },
+      {
+        type: "p",
+        text: "Si observas registros pendientes en el contador:"
+      },
+      {
+        type: "ul",
+        items: [
+          "**NO borres nada.**",
+          "**NO borres la caché.**",
+          "**NO restablezcas el dispositivo.**",
+          "**NO desinstales el navegador.**"
+        ]
+      },
+      {
+        type: "p",
+        text: "Conserva el dispositivo como está y comunícate con el responsable de la encuesta antes de realizar cualquier modificación."
+      }
+    ],
+    date: "15 de septiembre, 2026",
+    image: "/img/tutoriales/kobotoolbox-sin-conexion.png",
+    category: "Tutoriales",
+    featuredPosts: true
+  },
+  {
     name: "Cómo leer diferentes tipos de gráficas",
     description: [
       {
