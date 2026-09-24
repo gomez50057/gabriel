@@ -19,11 +19,18 @@ const bodoniModa = Bodoni_Moda({
 const title = "Gabriel Gómez | Desarrollador web";
 const description =
   "Desarrollo plataformas y sitios web funcionales, accesibles y orientados a resultados, desde el diseño hasta el despliegue.";
+const socialImageUrl = new URL(
+  "/img/social/gabriel-gomez-open-graph.png",
+  SITE_URL
+).toString();
+const socialImageAlt = "Gabriel Gómez — Desarrollo web y plataformas digitales";
 const socialImage = {
-  url: "/img/social/gabriel-gomez-open-graph.png",
+  url: socialImageUrl,
+  secureUrl: socialImageUrl,
+  type: "image/png",
   width: 1200,
   height: 630,
-  alt: "Gabriel Gómez — Desarrollo web y plataformas digitales",
+  alt: socialImageAlt,
 };
 
 export const metadata = {
@@ -50,6 +57,7 @@ export const metadata = {
   openGraph: {
     title,
     description,
+    url: SITE_URL,
     type: "website",
     locale: "es_MX",
     siteName: SITE_NAME,
@@ -59,14 +67,15 @@ export const metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: [socialImage],
+    images: [{ url: socialImageUrl, alt: socialImageAlt }],
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: "/img/logo.svg",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/img/logo.svg",
   },
 };

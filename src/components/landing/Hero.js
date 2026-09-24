@@ -5,8 +5,8 @@ import Image from 'next/image';
 import styles from '@/styles/Hero.module.css';
 
 const HERO_TITLES = [
-  'Full Stack developer',
-  'Ingeniero en Sistemas y Tecnologías Industriales',
+  'desarrollador web Full Stack',
+  'creador de plataformas digitales',
 ];
 
 export default function Hero() {
@@ -51,11 +51,11 @@ export default function Hero() {
       {/* Contenido por encima */}
       <div className={styles.contenido}>
         <div className={styles.presentacion}>
-          <h2 className={styles.inlineHero}>
+          <h1 className={styles.inlineHero}>
             Soy <span className={styles.name}>Gabriel Gómez,</span>{' '}
             <span className={styles.typed}>{text}</span>
             <span className={styles.cursor}>|</span>
-          </h2>
+          </h1>
           <p className={styles.descripcion}>DESARROLLO DE PLATAFORMAS Y SITIOS WEB · PLANES DE LOGÍSTICA Y CALIDAD</p>
         </div>
         <div className={styles.heroImageContainer}>
