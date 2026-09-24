@@ -4,7 +4,7 @@ import Footer from "@/shared/Footer";
 export const metadata = {
   title: "¿Conoces Hidalgo? | Minijuegos de municipios",
   description:
-    "Pon a prueba tus conocimientos sobre los 84 municipios y la organización territorial del Estado de Hidalgo.",
+    "Explora los 84 municipios de Hidalgo mediante minijuegos interactivos sobre geografía, regiones, historia y cultura. Pon a prueba tus conocimientos y descubre la organización territorial del estado.",
 };
 
 export const viewport = {
