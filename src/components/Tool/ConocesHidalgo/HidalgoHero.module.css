@@ -1,0 +1,80 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 540px;
+  height: min(660px, calc(100svh - 130px));
+  overflow: hidden;
+  background: #f7ebdb;
+  color: #101b29;
+}
+
+.background { object-fit: cover; object-position: center; z-index: -2; }
+.content { position: relative; width: 46%; max-width: 700px; margin-left: 10%; padding: 40px 0 56px; }
+.title { margin: 0 0 20px; font-size: 96px; line-height: .92; font-weight: 800; letter-spacing: 0; }
+.title span { display: block; font-family: var(--font-bodoni-moda), Georgia, serif; }
+.title span:last-child { color: #681225; font-size: 112px; }
+.subtitle { margin: 0 0 8px; font-size: 22px; line-height: 1.3; }
+.description { max-width: 470px; margin: 0 0 24px; color: #515761; font-size: 16px; line-height: 1.55; }
+.start { display: inline-flex; align-items: center; justify-content: center; gap: 24px; min-height: 54px; padding: 12px 36px; border-radius: 999px; background: #681225; color: #fff; font-size: 17px; font-weight: 750; text-decoration: none; transition: background 180ms ease, transform 180ms ease; }
+.start svg { width: 30px; height: 24px; }
+.start:hover { background: #861e38; transform: translateY(-2px); }
+.start:focus-visible { outline: 3px solid #a86b35; outline-offset: 5px; }
+.badge { position: absolute; top: 12%; right: 13%; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 160px; aspect-ratio: 1; border: 5px double #752e37; border-radius: 50%; outline: 1px solid #ecd4b7; outline-offset: 6px; background: #f6e8d6; color: #681225; box-shadow: 0 3px 15px #1c101333; }
+.badgeIcon { width: 21px; height: 21px; }
+.badge strong { font-family: var(--font-bodoni-moda), Georgia, serif; font-size: 65px; line-height: 1; }
+.badge span { color: #18202b; font-size: 11px; font-weight: 750; text-transform: uppercase; }
+.badge i { width: 28px; height: 1px; background: #752e37; margin-top: 12px; }
+.cartography { position: absolute; top: 12%; right: 3%; width: 92px; text-align: center; color: #b69078; }
+.cartography > span { font-family: Georgia, serif; font-size: 18px; }
+.compass { width: 92px; height: 92px; }
+.cartography p { margin-top: 64px; text-align: left; text-transform: uppercase; font-size: 10px; line-height: 2.4; }
+.cartography p::after { content: ""; display: block; width: 30px; height: 1px; margin-top: 14px; background: currentColor; }
+
+:global([data-theme="dark"]) .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #101923f5, #101923e8 40%, transparent 62%); }
+:global([data-theme="dark"]) .title,
+:global([data-theme="dark"]) .subtitle { color: #fff5e8; }
+:global([data-theme="dark"]) .title span:last-child { color: #e7bd70; }
+:global([data-theme="dark"]) .description { color: #e0dcd6; }
+
+@media (min-width: 1700px) {
+  .content { padding-top: 52px; }
+  .title { font-size: 120px; }
+  .title span:last-child { font-size: 140px; }
+  .description { max-width: 530px; font-size: 18px; }
+  .badge { width: 190px; }
+  .badge strong { font-size: 80px; }
+}
+@media (max-width: 1199px) {
+  .content { margin-left: 6%; width: 43%; padding-top: 48px; }
+  .title { font-size: 72px; }
+  .title span:last-child { font-size: 84px; }
+  .subtitle { font-size: 19px; }
+  .description { font-size: 15px; }
+  .badge { width: 125px; right: 10%; }
+  .badge strong { font-size: 48px; }
+  .cartography { display: none; }
+}
+@media (max-width: 760px) {
+  .hero { height: auto; min-height: 0; padding-bottom: 260px; }
+  .background { object-fit: cover; object-position: 76% bottom; height: 300px !important; top: auto !important; }
+  .content { width: auto; max-width: 520px; margin: 0 auto; padding: 30px 24px 24px; background: #f7ebdb; }
+  .title { font-size: 64px; margin-bottom: 18px; }
+  .title span:last-child { font-size: 76px; }
+  .subtitle { font-size: 18px; }
+  .description { font-size: 14px; margin-bottom: 18px; }
+  .start { min-height: 48px; font-size: 15px; }
+  .badge { top: auto; bottom: 125px; right: 6%; width: 100px; }
+  .badge strong { font-size: 37px; }
+  .badge span { font-size: 8px; }
+  .badgeIcon { width: 16px; height: 16px; }
+  .badge i { margin-top: 6px; }
+  :global([data-theme="dark"]) .hero { background: #101923; }
+  :global([data-theme="dark"]) .content { background: #101923; }
+  :global([data-theme="dark"]) .hero::after { display: none; }
+}
+@media (max-width: 360px) {
+  .title { font-size: 54px; }
+  .title span:last-child { font-size: 64px; }
+  .content { padding-inline: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .start { transition: none; } }

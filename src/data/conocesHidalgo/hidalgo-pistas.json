@@ -1,0 +1,758 @@
+[
+  {
+    "municipalityId": "13001",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M3.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13002",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M4.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13003",
+    "clues": [
+      "Pertenece a la region Actopan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M13.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13004",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M5.",
+      "Su nombre oficial esta formado por 4 palabras. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13005",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M1.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13006",
+    "clues": [
+      "Pertenece a la region Ixmiquilpan.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M15.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13007",
+    "clues": [
+      "Pertenece a la region Apan.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M21.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13008",
+    "clues": [
+      "Pertenece a la region Apan.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M21.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13010",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M2.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13011",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M8.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13013",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M2.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13012",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M20.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra A."
+    ]
+  },
+  {
+    "municipalityId": "13014",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M8.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra C."
+    ]
+  },
+  {
+    "municipalityId": "13015",
+    "clues": [
+      "Pertenece a la region Ixmiquilpan.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M16.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra C."
+    ]
+  },
+  {
+    "municipalityId": "13017",
+    "clues": [
+      "Pertenece a la region Huichapan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M23.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra C."
+    ]
+  },
+  {
+    "municipalityId": "13018",
+    "clues": [
+      "Pertenece a la region Jacala.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M24.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra C."
+    ]
+  },
+  {
+    "municipalityId": "13019",
+    "clues": [
+      "Pertenece a la region Ixmiquilpan.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M15.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra C."
+    ]
+  },
+  {
+    "municipalityId": "13016",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M4.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra C."
+    ]
+  },
+  {
+    "municipalityId": "13009",
+    "clues": [
+      "Pertenece a la region Actopan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M13.",
+      "Su nombre oficial esta formado por 2 palabras. Comienza con la letra E."
+    ]
+  },
+  {
+    "municipalityId": "13020",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M19.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra E."
+    ]
+  },
+  {
+    "municipalityId": "13021",
+    "clues": [
+      "Pertenece a la region Apan.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M21.",
+      "Su nombre oficial esta formado por 2 palabras. Comienza con la letra E."
+    ]
+  },
+  {
+    "municipalityId": "13022",
+    "clues": [
+      "Pertenece a la region M. de la Reforma.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M10.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra E."
+    ]
+  },
+  {
+    "municipalityId": "13023",
+    "clues": [
+      "Pertenece a la region Actopan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M14.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra F."
+    ]
+  },
+  {
+    "municipalityId": "13024",
+    "clues": [
+      "Pertenece a la region M. de la Reforma.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M9.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra H."
+    ]
+  },
+  {
+    "municipalityId": "13025",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M8.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra H."
+    ]
+  },
+  {
+    "municipalityId": "13026",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M7.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra H."
+    ]
+  },
+  {
+    "municipalityId": "13027",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M5.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra H."
+    ]
+  },
+  {
+    "municipalityId": "13028",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M7.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra H."
+    ]
+  },
+  {
+    "municipalityId": "13029",
+    "clues": [
+      "Pertenece a la region Huichapan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M23.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra H."
+    ]
+  },
+  {
+    "municipalityId": "13030",
+    "clues": [
+      "Pertenece a la region Ixmiquilpan.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M16.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra I."
+    ]
+  },
+  {
+    "municipalityId": "13031",
+    "clues": [
+      "Pertenece a la region Jacala.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M25.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra J."
+    ]
+  },
+  {
+    "municipalityId": "13032",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M7.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra J."
+    ]
+  },
+  {
+    "municipalityId": "13033",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M19.",
+      "Su nombre oficial esta formado por 2 palabras. Comienza con la letra J."
+    ]
+  },
+  {
+    "municipalityId": "13040",
+    "clues": [
+      "Pertenece a la region Jacala.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M24.",
+      "Su nombre oficial esta formado por 2 palabras. Comienza con la letra L."
+    ]
+  },
+  {
+    "municipalityId": "13034",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M7.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra L."
+    ]
+  },
+  {
+    "municipalityId": "13035",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M3.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra M."
+    ]
+  },
+  {
+    "municipalityId": "13037",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M20.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra M."
+    ]
+  },
+  {
+    "municipalityId": "13051",
+    "clues": [
+      "Pertenece a la region M. de la Reforma.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M10.",
+      "Su nombre oficial esta formado por 4 palabras. Comienza con la letra M."
+    ]
+  },
+  {
+    "municipalityId": "13038",
+    "clues": [
+      "Pertenece a la region M. de la Reforma.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M9.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra M."
+    ]
+  },
+  {
+    "municipalityId": "13039",
+    "clues": [
+      "Pertenece a la region M. de la Reforma.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M9.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra M."
+    ]
+  },
+  {
+    "municipalityId": "13041",
+    "clues": [
+      "Pertenece a la region Actopan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M14.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra M."
+    ]
+  },
+  {
+    "municipalityId": "13042",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M17.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra M."
+    ]
+  },
+  {
+    "municipalityId": "13043",
+    "clues": [
+      "Pertenece a la region Ixmiquilpan.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M16.",
+      "Su nombre oficial esta formado por 2 palabras. Comienza con la letra N."
+    ]
+  },
+  {
+    "municipalityId": "13044",
+    "clues": [
+      "Pertenece a la region Huichapan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M23.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra N."
+    ]
+  },
+  {
+    "municipalityId": "13045",
+    "clues": [
+      "Pertenece a la region M. de la Reforma.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M9.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra O."
+    ]
+  },
+  {
+    "municipalityId": "13048",
+    "clues": [
+      "Pertenece a la region Pachuca.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M6.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra P."
+    ]
+  },
+  {
+    "municipalityId": "13047",
+    "clues": [
+      "Pertenece a la region Jacala.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M25.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra P."
+    ]
+  },
+  {
+    "municipalityId": "13049",
+    "clues": [
+      "Pertenece a la region Jacala.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M24.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra P."
+    ]
+  },
+  {
+    "municipalityId": "13050",
+    "clues": [
+      "Pertenece a la region Actopan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M14.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra P."
+    ]
+  },
+  {
+    "municipalityId": "13036",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M20.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra S."
+    ]
+  },
+  {
+    "municipalityId": "13052",
+    "clues": [
+      "Pertenece a la region Pachuca.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M6.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra S."
+    ]
+  },
+  {
+    "municipalityId": "13053",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M5.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra S."
+    ]
+  },
+  {
+    "municipalityId": "13046",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M7.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra S."
+    ]
+  },
+  {
+    "municipalityId": "13054",
+    "clues": [
+      "Pertenece a la region Actopan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M13.",
+      "Su nombre oficial esta formado por 2 palabras. Comienza con la letra S."
+    ]
+  },
+  {
+    "municipalityId": "13055",
+    "clues": [
+      "Pertenece a la region Actopan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M13.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra S."
+    ]
+  },
+  {
+    "municipalityId": "13056",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M3.",
+      "Su nombre oficial esta formado por 5 palabras. Comienza con la letra S."
+    ]
+  },
+  {
+    "municipalityId": "13057",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M4.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra S."
+    ]
+  },
+  {
+    "municipalityId": "13058",
+    "clues": [
+      "Pertenece a la region Ixmiquilpan.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M15.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13059",
+    "clues": [
+      "Pertenece a la region Huichapan.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M23.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13060",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M5.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13061",
+    "clues": [
+      "Pertenece a la region Apan.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M22.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13062",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M17.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13063",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M2.",
+      "Su nombre oficial esta formado por 5 palabras. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13064",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M2.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13065",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M1.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13067",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M1.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13068",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M18.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13069",
+    "clues": [
+      "Pertenece a la region Tizayuca.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M11.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13070",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M1.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13071",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M17.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13072",
+    "clues": [
+      "Pertenece a la region Apan.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M22.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13073",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M7.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13074",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M1.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13075",
+    "clues": [
+      "Pertenece a la region Tizayuca.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M11.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13076",
+    "clues": [
+      "Pertenece a la region Tula.",
+      "Forma parte de la macrorregion II. Tula.",
+      "Su microrregion es M2.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13077",
+    "clues": [
+      "Pertenece a la region Tulancingo.",
+      "Forma parte de la macrorregion III. Tulancingo.",
+      "Su microrregion es M3.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra T."
+    ]
+  },
+  {
+    "municipalityId": "13066",
+    "clues": [
+      "Pertenece a la region Tizayuca.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M12.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra V."
+    ]
+  },
+  {
+    "municipalityId": "13078",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M8.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra X."
+    ]
+  },
+  {
+    "municipalityId": "13079",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M18.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra X."
+    ]
+  },
+  {
+    "municipalityId": "13080",
+    "clues": [
+      "Pertenece a la region Huejutla.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M8.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra Y."
+    ]
+  },
+  {
+    "municipalityId": "13081",
+    "clues": [
+      "Pertenece a la region Zacualtipán.",
+      "Forma parte de la macrorregion IV. Huejutla.",
+      "Su microrregion es M18.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra Z."
+    ]
+  },
+  {
+    "municipalityId": "13082",
+    "clues": [
+      "Pertenece a la region Pachuca.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M6.",
+      "Su nombre oficial esta formado por 3 palabras. Comienza con la letra Z."
+    ]
+  },
+  {
+    "municipalityId": "13083",
+    "clues": [
+      "Pertenece a la region Tizayuca.",
+      "Forma parte de la macrorregion I. Pachuca.",
+      "Su microrregion es M12.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra Z."
+    ]
+  },
+  {
+    "municipalityId": "13084",
+    "clues": [
+      "Pertenece a la region Ixmiquilpan.",
+      "Forma parte de la macrorregion V. Ixmiquilpan.",
+      "Su microrregion es M16.",
+      "Su nombre oficial esta formado por una sola palabra. Comienza con la letra Z."
+    ]
+  }
+]

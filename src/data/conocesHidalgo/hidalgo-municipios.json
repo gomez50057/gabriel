@@ -1,0 +1,1101 @@
+[
+  {
+    "id": "13001",
+    "officialName": "Acatlán",
+    "slug": "acatlan",
+    "aliases": [
+      "Acatlán"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M3"
+  },
+  {
+    "id": "13002",
+    "officialName": "Acaxochitlán",
+    "slug": "acaxochitlan",
+    "aliases": [
+      "Acaxochitlán"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M4"
+  },
+  {
+    "id": "13003",
+    "officialName": "Actopan",
+    "slug": "actopan",
+    "aliases": [
+      "Actopan"
+    ],
+    "regionId": "7",
+    "regionName": "Actopan",
+    "regionLabel": "7. Actopan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M13"
+  },
+  {
+    "id": "13004",
+    "officialName": "Agua Blanca de Iturbide",
+    "slug": "agua-blanca-de-iturbide",
+    "aliases": [
+      "Agua Blanca de Iturbide"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M5"
+  },
+  {
+    "id": "13005",
+    "officialName": "Ajacuba",
+    "slug": "ajacuba",
+    "aliases": [
+      "Ajacuba"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M1"
+  },
+  {
+    "id": "13006",
+    "officialName": "Alfajayucan",
+    "slug": "alfajayucan",
+    "aliases": [
+      "Alfajayucan"
+    ],
+    "regionId": "8",
+    "regionName": "Ixmiquilpan",
+    "regionLabel": "8. Ixmiquilpan",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M15"
+  },
+  {
+    "id": "13007",
+    "officialName": "Almoloya",
+    "slug": "almoloya",
+    "aliases": [
+      "Almoloya"
+    ],
+    "regionId": "10",
+    "regionName": "Apan",
+    "regionLabel": "10. Apan",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M21"
+  },
+  {
+    "id": "13008",
+    "officialName": "Apan",
+    "slug": "apan",
+    "aliases": [
+      "Apan"
+    ],
+    "regionId": "10",
+    "regionName": "Apan",
+    "regionLabel": "10. Apan",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M21"
+  },
+  {
+    "id": "13010",
+    "officialName": "Atitalaquia",
+    "slug": "atitalaquia",
+    "aliases": [
+      "Atitalaquia"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M2"
+  },
+  {
+    "id": "13011",
+    "officialName": "Atlapexco",
+    "slug": "atlapexco",
+    "aliases": [
+      "Atlapexco"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M8"
+  },
+  {
+    "id": "13013",
+    "officialName": "Atotonilco de Tula",
+    "slug": "atotonilco-de-tula",
+    "aliases": [
+      "Atotonilco de Tula"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M2"
+  },
+  {
+    "id": "13012",
+    "officialName": "Atotonilco el Grande",
+    "slug": "atotonilco-el-grande",
+    "aliases": [
+      "Atotonilco el Grande"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M20"
+  },
+  {
+    "id": "13014",
+    "officialName": "Calnali",
+    "slug": "calnali",
+    "aliases": [
+      "Calnali"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M8"
+  },
+  {
+    "id": "13015",
+    "officialName": "Cardonal",
+    "slug": "cardonal",
+    "aliases": [
+      "Cardonal"
+    ],
+    "regionId": "8",
+    "regionName": "Ixmiquilpan",
+    "regionLabel": "8. Ixmiquilpan",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M16"
+  },
+  {
+    "id": "13017",
+    "officialName": "Chapantongo",
+    "slug": "chapantongo",
+    "aliases": [
+      "Chapantongo"
+    ],
+    "regionId": "11",
+    "regionName": "Huichapan",
+    "regionLabel": "11. Huichapan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M23"
+  },
+  {
+    "id": "13018",
+    "officialName": "Chapulhuacán",
+    "slug": "chapulhuacan",
+    "aliases": [
+      "Chapulhuacán"
+    ],
+    "regionId": "12",
+    "regionName": "Jacala",
+    "regionLabel": "12. Jacala",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M24"
+  },
+  {
+    "id": "13019",
+    "officialName": "Chilcuautla",
+    "slug": "chilcuautla",
+    "aliases": [
+      "Chilcuautla"
+    ],
+    "regionId": "8",
+    "regionName": "Ixmiquilpan",
+    "regionLabel": "8. Ixmiquilpan",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M15"
+  },
+  {
+    "id": "13016",
+    "officialName": "Cuautepec de Hinojosa",
+    "slug": "cuautepec-de-hinojosa",
+    "aliases": [
+      "Cuautepec de Hinojosa"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M4"
+  },
+  {
+    "id": "13009",
+    "officialName": "El Arenal",
+    "slug": "el-arenal",
+    "aliases": [
+      "El Arenal"
+    ],
+    "regionId": "7",
+    "regionName": "Actopan",
+    "regionLabel": "7. Actopan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M13"
+  },
+  {
+    "id": "13020",
+    "officialName": "Eloxochitlán",
+    "slug": "eloxochitlan",
+    "aliases": [
+      "Eloxochitlán"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M19"
+  },
+  {
+    "id": "13021",
+    "officialName": "Emiliano Zapata",
+    "slug": "emiliano-zapata",
+    "aliases": [
+      "Emiliano Zapata"
+    ],
+    "regionId": "10",
+    "regionName": "Apan",
+    "regionLabel": "10. Apan",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M21"
+  },
+  {
+    "id": "13022",
+    "officialName": "Epazoyucan",
+    "slug": "epazoyucan",
+    "aliases": [
+      "Epazoyucan"
+    ],
+    "regionId": "5",
+    "regionName": "M. de la Reforma",
+    "regionLabel": "5. M. de la Reforma",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M10"
+  },
+  {
+    "id": "13023",
+    "officialName": "Francisco I. Madero",
+    "slug": "francisco-i-madero",
+    "aliases": [
+      "Francisco I. Madero"
+    ],
+    "regionId": "7",
+    "regionName": "Actopan",
+    "regionLabel": "7. Actopan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M14"
+  },
+  {
+    "id": "13024",
+    "officialName": "Huasca de Ocampo",
+    "slug": "huasca-de-ocampo",
+    "aliases": [
+      "Huasca de Ocampo"
+    ],
+    "regionId": "5",
+    "regionName": "M. de la Reforma",
+    "regionLabel": "5. M. de la Reforma",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M9"
+  },
+  {
+    "id": "13025",
+    "officialName": "Huautla",
+    "slug": "huautla",
+    "aliases": [
+      "Huautla"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M8"
+  },
+  {
+    "id": "13026",
+    "officialName": "Huazalingo",
+    "slug": "huazalingo",
+    "aliases": [
+      "Huazalingo"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M7"
+  },
+  {
+    "id": "13027",
+    "officialName": "Huehuetla",
+    "slug": "huehuetla",
+    "aliases": [
+      "Huehuetla"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M5"
+  },
+  {
+    "id": "13028",
+    "officialName": "Huejutla de Reyes",
+    "slug": "huejutla-de-reyes",
+    "aliases": [
+      "Huejutla de Reyes"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M7"
+  },
+  {
+    "id": "13029",
+    "officialName": "Huichapan",
+    "slug": "huichapan",
+    "aliases": [
+      "Huichapan"
+    ],
+    "regionId": "11",
+    "regionName": "Huichapan",
+    "regionLabel": "11. Huichapan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M23"
+  },
+  {
+    "id": "13030",
+    "officialName": "Ixmiquilpan",
+    "slug": "ixmiquilpan",
+    "aliases": [
+      "Ixmiquilpan"
+    ],
+    "regionId": "8",
+    "regionName": "Ixmiquilpan",
+    "regionLabel": "8. Ixmiquilpan",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M16"
+  },
+  {
+    "id": "13031",
+    "officialName": "Jacala de Ledezma",
+    "slug": "jacala-de-ledezma",
+    "aliases": [
+      "Jacala de Ledezma"
+    ],
+    "regionId": "12",
+    "regionName": "Jacala",
+    "regionLabel": "12. Jacala",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M25"
+  },
+  {
+    "id": "13032",
+    "officialName": "Jaltocán",
+    "slug": "jaltocan",
+    "aliases": [
+      "Jaltocán"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M7"
+  },
+  {
+    "id": "13033",
+    "officialName": "Juárez Hidalgo",
+    "slug": "juarez-hidalgo",
+    "aliases": [
+      "Juárez Hidalgo"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M19"
+  },
+  {
+    "id": "13040",
+    "officialName": "La Misión",
+    "slug": "la-mision",
+    "aliases": [
+      "La Misión"
+    ],
+    "regionId": "12",
+    "regionName": "Jacala",
+    "regionLabel": "12. Jacala",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M24"
+  },
+  {
+    "id": "13034",
+    "officialName": "Lolotla",
+    "slug": "lolotla",
+    "aliases": [
+      "Lolotla"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M7"
+  },
+  {
+    "id": "13035",
+    "officialName": "Metepec",
+    "slug": "metepec",
+    "aliases": [
+      "Metepec"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M3"
+  },
+  {
+    "id": "13037",
+    "officialName": "Metztitlán",
+    "slug": "metztitlan",
+    "aliases": [
+      "Metztitlán"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M20"
+  },
+  {
+    "id": "13051",
+    "officialName": "Mineral de la Reforma",
+    "slug": "mineral-de-la-reforma",
+    "aliases": [
+      "Mineral de la Reforma",
+      "Mineral Reforma"
+    ],
+    "regionId": "5",
+    "regionName": "M. de la Reforma",
+    "regionLabel": "5. M. de la Reforma",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M10"
+  },
+  {
+    "id": "13038",
+    "officialName": "Mineral del Chico",
+    "slug": "mineral-del-chico",
+    "aliases": [
+      "Mineral del Chico"
+    ],
+    "regionId": "5",
+    "regionName": "M. de la Reforma",
+    "regionLabel": "5. M. de la Reforma",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M9"
+  },
+  {
+    "id": "13039",
+    "officialName": "Mineral del Monte",
+    "slug": "mineral-del-monte",
+    "aliases": [
+      "Mineral del Monte"
+    ],
+    "regionId": "5",
+    "regionName": "M. de la Reforma",
+    "regionLabel": "5. M. de la Reforma",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M9"
+  },
+  {
+    "id": "13041",
+    "officialName": "Mixquiahuala de Juárez",
+    "slug": "mixquiahuala-de-juarez",
+    "aliases": [
+      "Mixquiahuala de Juárez"
+    ],
+    "regionId": "7",
+    "regionName": "Actopan",
+    "regionLabel": "7. Actopan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M14"
+  },
+  {
+    "id": "13042",
+    "officialName": "Molango de Escamilla",
+    "slug": "molango-de-escamilla",
+    "aliases": [
+      "Molango de Escamilla"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M17"
+  },
+  {
+    "id": "13043",
+    "officialName": "Nicolás Flores",
+    "slug": "nicolas-flores",
+    "aliases": [
+      "Nicolás Flores"
+    ],
+    "regionId": "8",
+    "regionName": "Ixmiquilpan",
+    "regionLabel": "8. Ixmiquilpan",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M16"
+  },
+  {
+    "id": "13044",
+    "officialName": "Nopala de Villagrán",
+    "slug": "nopala-de-villagran",
+    "aliases": [
+      "Nopala de Villagrán"
+    ],
+    "regionId": "11",
+    "regionName": "Huichapan",
+    "regionLabel": "11. Huichapan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M23"
+  },
+  {
+    "id": "13045",
+    "officialName": "Omitlán de Juárez",
+    "slug": "omitlan-de-juarez",
+    "aliases": [
+      "Omitlán de Juárez"
+    ],
+    "regionId": "5",
+    "regionName": "M. de la Reforma",
+    "regionLabel": "5. M. de la Reforma",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M9"
+  },
+  {
+    "id": "13048",
+    "officialName": "Pachuca de Soto",
+    "slug": "pachuca-de-soto",
+    "aliases": [
+      "Pachuca de Soto",
+      "Pachuca"
+    ],
+    "regionId": "3",
+    "regionName": "Pachuca",
+    "regionLabel": "3. Pachuca",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M6"
+  },
+  {
+    "id": "13047",
+    "officialName": "Pacula",
+    "slug": "pacula",
+    "aliases": [
+      "Pacula"
+    ],
+    "regionId": "12",
+    "regionName": "Jacala",
+    "regionLabel": "12. Jacala",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M25"
+  },
+  {
+    "id": "13049",
+    "officialName": "Pisaflores",
+    "slug": "pisaflores",
+    "aliases": [
+      "Pisaflores"
+    ],
+    "regionId": "12",
+    "regionName": "Jacala",
+    "regionLabel": "12. Jacala",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M24"
+  },
+  {
+    "id": "13050",
+    "officialName": "Progreso de Obregón",
+    "slug": "progreso-de-obregon",
+    "aliases": [
+      "Progreso de Obregón"
+    ],
+    "regionId": "7",
+    "regionName": "Actopan",
+    "regionLabel": "7. Actopan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M14"
+  },
+  {
+    "id": "13036",
+    "officialName": "San Agustín Metzquititlán",
+    "slug": "san-agustin-metzquititlan",
+    "aliases": [
+      "San Agustín Metzquititlán"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M20"
+  },
+  {
+    "id": "13052",
+    "officialName": "San Agustín Tlaxiaca",
+    "slug": "san-agustin-tlaxiaca",
+    "aliases": [
+      "San Agustín Tlaxiaca"
+    ],
+    "regionId": "3",
+    "regionName": "Pachuca",
+    "regionLabel": "3. Pachuca",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M6"
+  },
+  {
+    "id": "13053",
+    "officialName": "San Bartolo Tutotepec",
+    "slug": "san-bartolo-tutotepec",
+    "aliases": [
+      "San Bartolo Tutotepec"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M5"
+  },
+  {
+    "id": "13046",
+    "officialName": "San Felipe Orizatlán",
+    "slug": "san-felipe-orizatlan",
+    "aliases": [
+      "San Felipe Orizatlán"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M7"
+  },
+  {
+    "id": "13054",
+    "officialName": "San Salvador",
+    "slug": "san-salvador",
+    "aliases": [
+      "San Salvador"
+    ],
+    "regionId": "7",
+    "regionName": "Actopan",
+    "regionLabel": "7. Actopan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M13"
+  },
+  {
+    "id": "13055",
+    "officialName": "Santiago de Anaya",
+    "slug": "santiago-de-anaya",
+    "aliases": [
+      "Santiago de Anaya"
+    ],
+    "regionId": "7",
+    "regionName": "Actopan",
+    "regionLabel": "7. Actopan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M13"
+  },
+  {
+    "id": "13056",
+    "officialName": "Santiago Tulantepec de Lugo Guerrero",
+    "slug": "santiago-tulantepec-de-lugo-guerrero",
+    "aliases": [
+      "Santiago Tulantepec de Lugo Guerrero",
+      "Santiago Tulantepec"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M3"
+  },
+  {
+    "id": "13057",
+    "officialName": "Singuilucan",
+    "slug": "singuilucan",
+    "aliases": [
+      "Singuilucan"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M4"
+  },
+  {
+    "id": "13058",
+    "officialName": "Tasquillo",
+    "slug": "tasquillo",
+    "aliases": [
+      "Tasquillo"
+    ],
+    "regionId": "8",
+    "regionName": "Ixmiquilpan",
+    "regionLabel": "8. Ixmiquilpan",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M15"
+  },
+  {
+    "id": "13059",
+    "officialName": "Tecozautla",
+    "slug": "tecozautla",
+    "aliases": [
+      "Tecozautla"
+    ],
+    "regionId": "11",
+    "regionName": "Huichapan",
+    "regionLabel": "11. Huichapan",
+    "macroregionName": "II. Tula",
+    "microregionName": "M23"
+  },
+  {
+    "id": "13060",
+    "officialName": "Tenango de Doria",
+    "slug": "tenango-de-doria",
+    "aliases": [
+      "Tenango de Doria"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M5"
+  },
+  {
+    "id": "13061",
+    "officialName": "Tepeapulco",
+    "slug": "tepeapulco",
+    "aliases": [
+      "Tepeapulco"
+    ],
+    "regionId": "10",
+    "regionName": "Apan",
+    "regionLabel": "10. Apan",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M22"
+  },
+  {
+    "id": "13062",
+    "officialName": "Tepehuacán de Guerrero",
+    "slug": "tepehuacan-de-guerrero",
+    "aliases": [
+      "Tepehuacán de Guerrero",
+      "Tepehuacán"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M17"
+  },
+  {
+    "id": "13063",
+    "officialName": "Tepeji del Río de Ocampo",
+    "slug": "tepeji-del-rio-de-ocampo",
+    "aliases": [
+      "Tepeji del Río de Ocampo",
+      "Tepeji del Río"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M2"
+  },
+  {
+    "id": "13064",
+    "officialName": "Tepetitlán",
+    "slug": "tepetitlan",
+    "aliases": [
+      "Tepetitlán"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M2"
+  },
+  {
+    "id": "13065",
+    "officialName": "Tetepango",
+    "slug": "tetepango",
+    "aliases": [
+      "Tetepango"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M1"
+  },
+  {
+    "id": "13067",
+    "officialName": "Tezontepec de Aldama",
+    "slug": "tezontepec-de-aldama",
+    "aliases": [
+      "Tezontepec de Aldama"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M1"
+  },
+  {
+    "id": "13068",
+    "officialName": "Tianguistengo",
+    "slug": "tianguistengo",
+    "aliases": [
+      "Tianguistengo"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M18"
+  },
+  {
+    "id": "13069",
+    "officialName": "Tizayuca",
+    "slug": "tizayuca",
+    "aliases": [
+      "Tizayuca"
+    ],
+    "regionId": "6",
+    "regionName": "Tizayuca",
+    "regionLabel": "6. Tizayuca",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M11"
+  },
+  {
+    "id": "13070",
+    "officialName": "Tlahuelilpan",
+    "slug": "tlahuelilpan",
+    "aliases": [
+      "Tlahuelilpan"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M1"
+  },
+  {
+    "id": "13071",
+    "officialName": "Tlahuiltepa",
+    "slug": "tlahuiltepa",
+    "aliases": [
+      "Tlahuiltepa"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M17"
+  },
+  {
+    "id": "13072",
+    "officialName": "Tlanalapa",
+    "slug": "tlanalapa",
+    "aliases": [
+      "Tlanalapa"
+    ],
+    "regionId": "10",
+    "regionName": "Apan",
+    "regionLabel": "10. Apan",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M22"
+  },
+  {
+    "id": "13073",
+    "officialName": "Tlanchinol",
+    "slug": "tlanchinol",
+    "aliases": [
+      "Tlanchinol"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M7"
+  },
+  {
+    "id": "13074",
+    "officialName": "Tlaxcoapan",
+    "slug": "tlaxcoapan",
+    "aliases": [
+      "Tlaxcoapan"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M1"
+  },
+  {
+    "id": "13075",
+    "officialName": "Tolcayuca",
+    "slug": "tolcayuca",
+    "aliases": [
+      "Tolcayuca"
+    ],
+    "regionId": "6",
+    "regionName": "Tizayuca",
+    "regionLabel": "6. Tizayuca",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M11"
+  },
+  {
+    "id": "13076",
+    "officialName": "Tula de Allende",
+    "slug": "tula-de-allende",
+    "aliases": [
+      "Tula de Allende"
+    ],
+    "regionId": "1",
+    "regionName": "Tula",
+    "regionLabel": "1. Tula",
+    "macroregionName": "II. Tula",
+    "microregionName": "M2"
+  },
+  {
+    "id": "13077",
+    "officialName": "Tulancingo de Bravo",
+    "slug": "tulancingo-de-bravo",
+    "aliases": [
+      "Tulancingo de Bravo",
+      "Tulancingo"
+    ],
+    "regionId": "2",
+    "regionName": "Tulancingo",
+    "regionLabel": "2. Tulancingo",
+    "macroregionName": "III. Tulancingo",
+    "microregionName": "M3"
+  },
+  {
+    "id": "13066",
+    "officialName": "Villa de Tezontepec",
+    "slug": "villa-de-tezontepec",
+    "aliases": [
+      "Villa de Tezontepec"
+    ],
+    "regionId": "6",
+    "regionName": "Tizayuca",
+    "regionLabel": "6. Tizayuca",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M12"
+  },
+  {
+    "id": "13078",
+    "officialName": "Xochiatipan",
+    "slug": "xochiatipan",
+    "aliases": [
+      "Xochiatipan"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M8"
+  },
+  {
+    "id": "13079",
+    "officialName": "Xochicoatlán",
+    "slug": "xochicoatlan",
+    "aliases": [
+      "Xochicoatlán"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M18"
+  },
+  {
+    "id": "13080",
+    "officialName": "Yahualica",
+    "slug": "yahualica",
+    "aliases": [
+      "Yahualica"
+    ],
+    "regionId": "4",
+    "regionName": "Huejutla",
+    "regionLabel": "4. Huejutla",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M8"
+  },
+  {
+    "id": "13081",
+    "officialName": "Zacualtipán de Ángeles",
+    "slug": "zacualtipan-de-angeles",
+    "aliases": [
+      "Zacualtipán de Ángeles",
+      "Zacualtipán"
+    ],
+    "regionId": "9",
+    "regionName": "Zacualtipán",
+    "regionLabel": "9. Zacualtipán",
+    "macroregionName": "IV. Huejutla",
+    "microregionName": "M18"
+  },
+  {
+    "id": "13082",
+    "officialName": "Zapotlán de Juárez",
+    "slug": "zapotlan-de-juarez",
+    "aliases": [
+      "Zapotlán de Juárez"
+    ],
+    "regionId": "3",
+    "regionName": "Pachuca",
+    "regionLabel": "3. Pachuca",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M6"
+  },
+  {
+    "id": "13083",
+    "officialName": "Zempoala",
+    "slug": "zempoala",
+    "aliases": [
+      "Zempoala"
+    ],
+    "regionId": "6",
+    "regionName": "Tizayuca",
+    "regionLabel": "6. Tizayuca",
+    "macroregionName": "I. Pachuca",
+    "microregionName": "M12"
+  },
+  {
+    "id": "13084",
+    "officialName": "Zimapán",
+    "slug": "zimapan",
+    "aliases": [
+      "Zimapán"
+    ],
+    "regionId": "8",
+    "regionName": "Ixmiquilpan",
+    "regionLabel": "8. Ixmiquilpan",
+    "macroregionName": "V. Ixmiquilpan",
+    "microregionName": "M16"
+  }
+]

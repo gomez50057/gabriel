@@ -8,6 +8,10 @@ export const TOOLS_LINKS = [
     label: "Localizador de municipios de Hidalgo",
   },
   {
+    href: "/herramientas/conoces-hidalgo",
+    label: "¿Conoces Hidalgo?",
+  },
+  {
     href: "/herramientas/descargar-logos-municipios-hidalgo",
     label: "Descargar logos de municipios de Hidalgo",
   },

@@ -1,0 +1,822 @@
+.wrapper {
+  --game-gold: var(--accent);
+  --game-wine: var(--vinoOsc);
+  --game-green: #15803d;
+  --game-red: #b42318;
+  width: min(100%, 1220px);
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper p {
+  margin-top: 0;
+}
+
+.eyebrow,
+.questionLabel {
+  color: var(--game-wine);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.localSummary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 1rem 0 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.localSummary > div {
+  min-width: 0;
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.localSummary span,
+.scoreBadge span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.localSummary strong {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--heading);
+  font-size: 1.15rem;
+}
+
+.selectorSection,
+.selectorSection h2,
+.gameShell,
+.resultPanel {
+  scroll-margin-top: 6rem;
+}
+
+.sectionHeader {
+  max-width: 720px;
+  margin-bottom: 1.25rem;
+}
+
+.sectionHeader h2,
+.gameHeader h2,
+.resultPanel h2 {
+  margin: 0.25rem 0 0.65rem;
+  color: var(--heading);
+  font-size: clamp(1.55rem, 1.3rem + 1vw, 2.35rem);
+}
+
+.sectionHeader p,
+.gameHeader p,
+.gameCard p,
+.questionPanel p,
+.centeredGame p,
+.privacyNote p,
+.resultPanel > p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gameCard {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.gameCard:last-child {
+  grid-column: 1 / -1;
+}
+
+.gameIcon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid color-mix(in lab, var(--game-gold) 55%, var(--border));
+  border-radius: 8px;
+  background: color-mix(in lab, var(--game-gold) 18%, var(--surface));
+  color: var(--heading);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.gameCardBody {
+  min-width: 0;
+}
+
+.gameCardBody > span {
+  color: var(--game-wine);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.gameCard h3 {
+  margin: 0.3rem 0 0.45rem;
+  color: var(--heading);
+  font-size: 1.05rem;
+}
+
+.gameCardFooter {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+.gameCardFooter > span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.privacyNote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: color-mix(in lab, var(--game-gold) 9%, var(--surface));
+}
+
+.privacyNote strong {
+  color: var(--heading);
+}
+
+.privacyNote p {
+  margin-top: 0.25rem;
+  font-size: 0.88rem;
+}
+
+.primaryButton,
+.secondaryButton,
+.dangerButton,
+.textButton,
+.optionButton {
+  min-height: 40px;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease, opacity 150ms ease;
+}
+
+.primaryButton {
+  border: 1px solid var(--action-bg);
+  background: var(--action-bg);
+  color: var(--action-fg);
+}
+
+.primaryButton:hover {
+  border-color: var(--action-bg-hover);
+  background: var(--action-bg-hover);
+}
+
+.dangerButton {
+  border: 1px solid var(--danger-border);
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.dangerButton:hover {
+  border-color: var(--danger);
+  background: color-mix(in lab, var(--danger) 17%, var(--surface));
+}
+
+.secondaryButton,
+.textButton,
+.optionButton {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--heading);
+}
+
+.secondaryButton:hover,
+.textButton:hover,
+.optionButton:hover:not(:disabled) {
+  border-color: var(--border-strong);
+  background: var(--control-active);
+}
+
+.primaryButton:active,
+.secondaryButton:active,
+.dangerButton:active,
+.textButton:active,
+.optionButton:active {
+  transform: translateY(1px);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible,
+.dangerButton:focus-visible,
+.textButton:focus-visible,
+.optionButton:focus-visible,
+.levelOption:focus-visible,
+.formGroup input:focus-visible,
+.formGroup select:focus-visible,
+.mapMunicipality:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.gameShell {
+  display: grid;
+  gap: 1rem;
+}
+
+.gameHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.gameHeader > div:first-child {
+  max-width: 720px;
+}
+
+.gameHeaderActions {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.scoreBadge {
+  min-width: 100px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.scoreBadge strong {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--heading);
+  font-size: 1rem;
+}
+
+.gameWorkspace {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.questionPanel,
+.centeredGame,
+.mapFrame,
+.resultPanel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.questionPanel,
+.centeredGame {
+  padding: 1.15rem;
+}
+
+.questionPanel h3,
+.centeredGame h3 {
+  margin: 0.35rem 0 0.55rem;
+  color: var(--heading);
+  font-size: clamp(1.35rem, 1.15rem + 0.8vw, 2rem);
+}
+
+.levelNote {
+  padding: 0.65rem 0.75rem;
+  border-left: 3px solid var(--game-gold);
+  background: color-mix(in lab, var(--game-gold) 9%, var(--surface));
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.answerForm,
+.guessControls {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.formGroup {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.formGroup label {
+  color: var(--heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--control-bg);
+  color: var(--heading);
+  font: inherit;
+}
+
+.foundList {
+  margin: 1rem 0;
+  padding: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.foundList h3 {
+  font-size: 0.95rem;
+}
+
+.foundList ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  max-height: 270px;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  list-style: none;
+}
+
+.foundList li {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--success-border);
+  border-radius: 999px;
+  background: var(--success-soft);
+  color: var(--heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.mapFrame {
+  min-width: 0;
+  padding: 0.8rem;
+}
+
+.mapSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 66vh;
+}
+
+.mapMunicipality {
+  fill: color-mix(in lab, var(--muted) 20%, var(--surface));
+  stroke: color-mix(in lab, var(--heading) 56%, transparent);
+  stroke-width: 0.8;
+  vector-effect: non-scaling-stroke;
+  transition: fill 140ms ease, stroke 140ms ease, opacity 140ms ease;
+}
+
+.mapMunicipality[role="button"] {
+  cursor: pointer;
+}
+
+.mapMunicipality[role="button"]:hover,
+.mapMunicipality[role="button"]:focus-visible {
+  fill: color-mix(in lab, var(--game-gold) 55%, var(--surface));
+  stroke: var(--heading);
+  stroke-width: 1.5;
+}
+
+.mapTarget,
+.mapDiscovered {
+  fill: var(--game-gold);
+  stroke: var(--heading);
+  stroke-width: 1.4;
+}
+
+.mapCorrect {
+  fill: var(--game-green);
+  stroke: var(--heading);
+  stroke-width: 1.6;
+}
+
+.mapIncorrect {
+  fill: var(--game-red);
+  stroke: var(--heading);
+  stroke-width: 1.6;
+  stroke-dasharray: 4 2;
+}
+
+.mapMessage {
+  display: grid;
+  place-items: center;
+  min-height: 420px;
+  border: 1px dashed var(--border-mid);
+  border-radius: 8px;
+  color: var(--muted);
+}
+
+.mapLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+}
+
+.mapLegend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.mapLegend i {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--border-mid);
+  border-radius: 2px;
+}
+
+.legendNeutral { background: color-mix(in lab, var(--muted) 20%, var(--surface)); }
+.legendTarget { background: var(--game-gold); }
+.legendCorrect { background: var(--game-green); }
+.legendIncorrect { background: var(--game-red); }
+
+.optionGrid,
+.regionOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+
+.optionButton {
+  min-height: 54px;
+  text-align: left;
+}
+
+.optionCorrect {
+  border-color: var(--game-green);
+  background: var(--success-soft);
+}
+
+.optionIncorrect {
+  border-color: var(--game-red);
+  background: var(--danger-soft);
+}
+
+.optionButton:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.centeredGame {
+  width: min(100%, 760px);
+  margin: 1.5rem auto;
+}
+
+.clueList {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0;
+  padding-left: 1.35rem;
+  color: var(--heading);
+  line-height: 1.55;
+}
+
+.guessControls {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  margin-top: 1rem;
+}
+
+.liveRegion {
+  min-height: 48px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid color-mix(in lab, var(--game-gold) 45%, var(--border));
+  border-radius: 8px;
+  background: color-mix(in lab, var(--game-gold) 10%, var(--surface));
+  color: var(--heading);
+  line-height: 1.45;
+}
+
+.liveRegionEmpty {
+  min-height: 0;
+  padding: 0;
+  border-color: transparent;
+  background: transparent;
+}
+
+.confirmOverlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.confirmDialog {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 0.9rem 1rem;
+  width: min(100%, 440px);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  color: var(--text);
+}
+
+.confirmIcon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--danger-border);
+  border-radius: 50%;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.confirmDialog h3 {
+  margin-bottom: 0.4rem;
+  color: var(--heading);
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.confirmDialog p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.confirmActions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+}
+
+.levelDialog {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 520px);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  color: var(--text);
+}
+
+.levelDialog h3 {
+  margin: 0.35rem 0 0.4rem;
+  color: var(--heading);
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.levelDialog p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.levelOptions {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.levelOption {
+  display: grid;
+  gap: 0.3rem;
+  min-height: 80px;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--heading);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.levelOption:hover {
+  border-color: var(--border-strong);
+  background: var(--control-active);
+}
+
+.levelOption:active {
+  transform: translateY(1px);
+}
+
+.levelOption strong {
+  font-size: 0.95rem;
+}
+
+.levelOption span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.resultPanel {
+  width: min(100%, 920px);
+  margin: 2rem auto;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.resultPanel > p {
+  max-width: 720px;
+}
+
+.resultMetrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.resultDetails {
+  margin: 1rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.answerColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.answerColumns h3 {
+  color: var(--heading);
+  font-size: 0.95rem;
+}
+
+.answerColumns p {
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .secondaryButton,
+  .dangerButton,
+  .textButton,
+  .optionButton,
+  .mapMunicipality {
+    transition: none;
+  }
+
+  .wrapper {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 960px) {
+  .gameWorkspace {
+    grid-template-columns: 1fr;
+  }
+
+  .gameHeader {
+    display: grid;
+  }
+
+  .gameHeaderActions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .wrapper {
+    padding-inline: 0.75rem;
+  }
+
+  .localSummary,
+  .gameGrid,
+  .resultMetrics,
+  .answerColumns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gameCard:last-child {
+    grid-column: auto;
+  }
+
+  .privacyNote,
+  .gameCardFooter {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .optionGrid,
+  .regionOptions,
+  .guessControls {
+    grid-template-columns: 1fr;
+  }
+
+  .mapSvg {
+    max-height: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .localSummary,
+  .gameGrid,
+  .resultMetrics,
+  .answerColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .gameCard {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+
+  .gameIcon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .gameHeaderActions,
+  .actionRow {
+    display: grid;
+  }
+
+  .primaryButton,
+  .secondaryButton,
+  .dangerButton,
+  .textButton {
+    width: 100%;
+  }
+
+  .confirmDialog {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmActions {
+    grid-column: 1;
+    display: grid;
+  }
+}
+
+[data-theme="dark"] .wrapper {
+  --game-green: #4ade80;
+  --game-red: #fb7185;
+}

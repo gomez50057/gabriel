@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Tula",
+    "label": "1. Tula"
+  },
+  {
+    "id": "2",
+    "name": "Tulancingo",
+    "label": "2. Tulancingo"
+  },
+  {
+    "id": "3",
+    "name": "Pachuca",
+    "label": "3. Pachuca"
+  },
+  {
+    "id": "4",
+    "name": "Huejutla",
+    "label": "4. Huejutla"
+  },
+  {
+    "id": "5",
+    "name": "M. de la Reforma",
+    "label": "5. M. de la Reforma"
+  },
+  {
+    "id": "6",
+    "name": "Tizayuca",
+    "label": "6. Tizayuca"
+  },
+  {
+    "id": "7",
+    "name": "Actopan",
+    "label": "7. Actopan"
+  },
+  {
+    "id": "8",
+    "name": "Ixmiquilpan",
+    "label": "8. Ixmiquilpan"
+  },
+  {
+    "id": "9",
+    "name": "Zacualtipán",
+    "label": "9. Zacualtipán"
+  },
+  {
+    "id": "10",
+    "name": "Apan",
+    "label": "10. Apan"
+  },
+  {
+    "id": "11",
+    "name": "Huichapan",
+    "label": "11. Huichapan"
+  },
+  {
+    "id": "12",
+    "name": "Jacala",
+    "label": "12. Jacala"
+  }
+]
