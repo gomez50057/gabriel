@@ -21,8 +21,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   const visibleSections = useRef(new Map());
+  const lastScrollY = useRef(0);
 
   // Activar link según sección visible (para anclas tipo /#sobremi)
   useEffect(() => {
@@ -62,9 +64,26 @@ export default function Navbar() {
     };
   }, []);
 
-  // Sombra al hacer scroll
+  // Ocultar al bajar y mostrar al subir desde cualquier posición de la página.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - lastScrollY.current;
+
+      setScrolled(currentScrollY > 8);
+
+      if (currentScrollY <= 8) {
+        setHidden(false);
+      } else if (scrollDelta > 6) {
+        setHidden(true);
+      } else if (scrollDelta < -6) {
+        setHidden(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    lastScrollY.current = window.scrollY;
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -95,6 +114,7 @@ export default function Navbar() {
     <>
       <header
         className={`${styles.header} ${styles.glass} ${scrolled ? styles.scrolled : ""
+          } ${hidden && !open ? styles.hidden : ""
           }`}
       >
         <div className={styles.inner}>

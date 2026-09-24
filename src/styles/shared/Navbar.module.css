@@ -7,7 +7,13 @@
   margin-top: 0.8rem;
   z-index: 100;
   border-radius: 2rem;
-  transition: transform .3s ease, opacity .3s ease;
+  transition: transform .3s ease, opacity .3s ease, box-shadow .3s ease;
+}
+
+.hidden {
+  transform: translate(-50%, calc(-100% - 1rem));
+  opacity: 0;
+  pointer-events: none;
 }
 
 .scrolled {
@@ -269,6 +275,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .header,
   .overlay,
   .menu,
   .burger span,
