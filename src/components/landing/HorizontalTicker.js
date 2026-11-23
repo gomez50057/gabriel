@@ -16,53 +16,28 @@ export default function HorizontalTicker({
 }) {
   const sectionRef = useRef(null);
   const lineRef = useRef(null);
-  const ctx = useRef(null);
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
     const line = lineRef.current;
+    const getDistance = () => Math.max(0, line.scrollWidth - section.clientWidth);
 
-    const setup = () => {
-      const vw = window.innerWidth;
-      const contentW = line.scrollWidth;
-      const horizontalDistance = Math.max(0, contentW - vw);
+    const context = gsap.context(() => {
+      gsap.to(line, {
+        x: () => -getDistance(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "center center",
+          end: () => `+=${Math.max(window.innerHeight * 1.25, getDistance() * 1.5)}`,
+          pin: true,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      });
+    }, section);
 
-      const fromX = 0;
-      const toX = -horizontalDistance;
-
-      ctx.current?.revert();
-      ctx.current = gsap.context(() => {
-        gsap.fromTo(
-          line,
-          { x: fromX },
-          {
-            x: toX,
-            ease: "none",
-            scrollTrigger: {
-              trigger: section,
-              start: "top 70%",
-              end: "bottom top",
-              scrub: 1.8,
-              invalidateOnRefresh: true,
-            },
-          }
-        );
-      }, section);
-    };
-
-    setup();
-    // Recalcular en resize/orientación
-    const onResize = () => {
-      ScrollTrigger.refresh();
-      setup();
-    };
-    window.addEventListener("resize", onResize);
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-      ctx.current?.revert();
-      ScrollTrigger.killAll(false, sectionRef.current);
-    };
+    return () => context.revert();
   }, []);
 
   return (
@@ -87,7 +62,6 @@ export default function HorizontalTicker({
           className={styles.badge}
         />
         <span className={styles.chunk}>no escala</span>
-        <span className={styles.trailingSpace} aria-hidden="true" />
       </div>
     </section>
   );

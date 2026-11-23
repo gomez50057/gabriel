@@ -10,6 +10,10 @@ import {
   LOCALIDADES_HIDALGO,
   MUNICIPALITY_LOCALITIES_SOURCE,
 } from "./municipalityLocalities";
+import {
+  INDIGENOUS_COMMUNITY_SOURCES,
+  INDIGENOUS_COMMUNITIES,
+} from "./indigenousCommunitiesHidalgo";
 
 function getMunicipalitySearchValues(item) {
   return [
@@ -36,6 +40,34 @@ function sortMunicipalities(items) {
       sensitivity: "base",
     })
   );
+}
+
+const REGIONAL_LEVELS = [
+  { field: "region", label: "Región" },
+  { field: "macrorregion", label: "Macrorregión" },
+  { field: "microrregion", label: "Microrregión" },
+];
+
+const ZONES_BY_LEVEL = Object.fromEntries(
+  REGIONAL_LEVELS.map(({ field }) => [
+    field,
+    [...new Set(REGIONALIZACION_HIDALGO.map((item) => item[field]))].sort((a, b) =>
+      a.localeCompare(b, "es", { numeric: true })
+    ),
+  ])
+);
+
+const COMMUNITIES_BY_MUNICIPALITY = new Map();
+for (const community of INDIGENOUS_COMMUNITIES) {
+  const key = normalizeText(community.municipio);
+  if (!COMMUNITIES_BY_MUNICIPALITY.has(key)) {
+    COMMUNITIES_BY_MUNICIPALITY.set(key, []);
+  }
+  COMMUNITIES_BY_MUNICIPALITY.get(key).push(community);
+}
+
+function getMunicipalityCommunities(municipio) {
+  return COMMUNITIES_BY_MUNICIPALITY.get(normalizeText(municipio)) || [];
 }
 
 const LOCALIDADES_BY_MUNICIPIO = new Map(
@@ -91,53 +123,6 @@ const LOWERCASE_TITLE_WORDS = new Set([
   "vía",
   "y",
 ]);
-
-const INDIGENOUS_COMMUNITY_MUNICIPALITIES = [
-  "Acaxochitlán",
-  "Alfajayucan",
-  "Atlapexco",
-  "Atotonilco el Grande",
-  "Calnali",
-  "Cardonal",
-  "Chapulhuacán",
-  "Chilcuautla",
-  "Huasca de Ocampo",
-  "Huautla",
-  "Huazalingo",
-  "Huehuetla",
-  "Huejutla de Reyes",
-  "Huichapan",
-  "Ixmiquilpan",
-  "Jaltocán",
-  "Juárez Hidalgo",
-  "Lolotla",
-  "Metepec",
-  "Metztitlán",
-  "Mixquiahuala",
-  "Molango de Escamilla",
-  "Nicolás Flores",
-  "Pachuca de Soto",
-  "Pacula",
-  "San Bartolo Tutotepec",
-  "San Felipe Orizatlán",
-  "San Salvador",
-  "Santiago de Anaya",
-  "Singuilucan",
-  "Tasquillo",
-  "Tecozautla",
-  "Tenango de Doria",
-  "Tepehuacán de Guerrero",
-  "Tepeji del Río",
-  "Tepetitlán",
-  "Tianguistengo",
-  "Tlanchinol",
-  "Tula de Allende",
-  "Tulancingo de Bravo",
-  "Xochiatipan",
-  "Yahualica",
-  "Zacualtipán de Ángeles",
-  "Zimapán",
-];
 
 function getMunicipalityLocalityData(municipio) {
   return LOCALIDADES_BY_MUNICIPIO.get(normalizeText(municipio)) || null;
@@ -502,28 +487,6 @@ function downloadItemsXlsx(items, filename, sheetName) {
   URL.revokeObjectURL(url);
 }
 
-function getRelatedMunicipalities(selectedMunicipality, field) {
-  if (!selectedMunicipality) return [];
-
-  return sortMunicipalities(
-    REGIONALIZACION_HIDALGO.filter(
-      (item) =>
-        item[field] === selectedMunicipality[field] &&
-        item.municipio !== selectedMunicipality.municipio
-    )
-  );
-}
-
-function getUniqueGroupOptions(field) {
-  return Array.from(
-    new Set(REGIONALIZACION_HIDALGO.map((item) => item[field]).filter(Boolean))
-  ).sort((a, b) => {
-    if (field === "region") return Number.parseInt(a, 10) - Number.parseInt(b, 10);
-
-    return a.localeCompare(b, "es", { sensitivity: "base" });
-  });
-}
-
 function formatGroupLabel(field, value = "") {
   if (field === "region") {
     const [, number, name] = value.match(/^(\d+)\.\s*(.+)$/) || [];
@@ -541,48 +504,6 @@ function getCopyText(parent, items, textFormat) {
   return [formatOutputText(parent, textFormat), ...formatOutputItems(items, textFormat)].join("\n");
 }
 
-function getMunicipalitiesByFieldValue(field, value) {
-  if (!value) return [];
-
-  return sortMunicipalities(
-    REGIONALIZACION_HIDALGO.filter((item) => item[field] === value)
-  );
-}
-
-function getMunicipalitySummary(municipio) {
-  return getMunicipalityLocalityData(municipio)?.resumen || {
-    poblacionTotal: 0,
-    localidades: 0,
-    asentamientos: 0,
-  };
-}
-
-function getGroupSummary(items) {
-  return items.reduce(
-    (summary, item) => {
-      const municipalitySummary = getMunicipalitySummary(item.municipio);
-
-      return {
-        municipios: summary.municipios + 1,
-        poblacionTotal:
-          summary.poblacionTotal +
-          getNumericValue(municipalitySummary.poblacionTotal),
-        localidades:
-          summary.localidades + getNumericValue(municipalitySummary.localidades),
-        asentamientos:
-          summary.asentamientos +
-          getNumericValue(municipalitySummary.asentamientos),
-      };
-    },
-    {
-      municipios: 0,
-      poblacionTotal: 0,
-      localidades: 0,
-      asentamientos: 0,
-    }
-  );
-}
-
 function RegionPath({ item }) {
   return (
     <small className={styles.regionPath}>
@@ -593,142 +514,214 @@ function RegionPath({ item }) {
   );
 }
 
-function RelatedDropdown({ title, items, onSelect }) {
+function CopyConsultationLink({ params, target }) {
   return (
-    <details className={styles.dropdownBox}>
-      <summary className={styles.dropdownSummary}>{title}</summary>
-
-      {items.length > 0 ? (
-        <div className={styles.relatedList}>
-          {items.map((item) => (
-            <button
-              key={item.municipio}
-              type="button"
-              className={styles.relatedItem}
-              onClick={() => onSelect(item.municipio)}
-            >
-              <span>{item.municipio}</span>
-              <RegionPath item={item} />
-            </button>
-          ))}
-        </div>
-      ) : (
-        <p className={styles.emptyText}>
-          No hay otros municipios registrados en este grupo.
-        </p>
-      )}
-    </details>
+    <CopyButton
+      className={styles.copyButton}
+      getText={() => {
+        const url = new URL(window.location.pathname, window.location.origin);
+        url.search = new URLSearchParams(params).toString();
+        url.hash = target;
+        return url.href;
+      }}
+      copiedText="Enlace de la consulta copiado."
+    >
+      Copiar enlace
+    </CopyButton>
   );
 }
 
-function GroupExplorer({
-  title,
-  label,
-  emptyLabel,
-  value,
-  options,
-  items,
-  onChange,
-  onSelect,
-  copyText,
-  formatOption,
-  summary,
-  disabled = false,
-}) {
+function IndigenousSources() {
   return (
-    <section className={styles.groupExplorer}>
-      <div className={styles.groupExplorerHeader}>
-        <div>
-          <h3 className={styles.groupExplorerTitle}>{title}</h3>
-          <p className={styles.groupExplorerText}>
-            Selecciona un grupo para listar y copiar sus municipios.
-          </p>
-        </div>
+    <p className={styles.indigenousSourceNote}>
+      Fuentes oficiales: {INDIGENOUS_COMMUNITY_SOURCES.map((source, index) => (
+        <span key={source.id}>
+          {index > 0 ? " · " : ""}
+          <a href={source.url} target="_blank" rel="noreferrer">
+            {source.label}
+          </a>
+        </span>
+      ))}
+    </p>
+  );
+}
 
-        <CopyButton
-          text={copyText}
-          className={styles.groupCopyButton}
-          disabled={disabled}
-          copiedText="Municipios copiados al portapapeles."
-          errorText="No se pudo copiar al portapapeles."
+async function downloadRegionalizationXlsx(municipalities, filename) {
+  const { utils, writeFileXLSX } = await import("@e965/xlsx");
+  const workbook = utils.book_new();
+  const municipalityRows = [[
+    "Región", "Macrorregión", "Microrregión", "Municipio", "Registros indígenas",
+  ]];
+  const communityRows = [["Municipio", "Comunidad o localidad", "Fuentes", "Pueblo (INPI)"]];
+
+  for (const item of municipalities) {
+    const communities = getMunicipalityCommunities(item.municipio);
+    municipalityRows.push([
+      ...REGIONAL_LEVELS.map(({ field }) => formatGroupLabel(field, item[field])),
+      item.municipio,
+      communities.length,
+    ]);
+    for (const community of communities) {
+      communityRows.push([
+        item.municipio, community.localidad, community.fuentes.join(", "),
+        community.pueblos.join(", "),
+      ]);
+    }
+  }
+
+  const municipalitySheet = utils.aoa_to_sheet(municipalityRows);
+  municipalitySheet["!cols"] = [31, 28, 18, 35, 21].map((wch) => ({ wch }));
+  municipalitySheet["!autofilter"] = { ref: municipalitySheet["!ref"] };
+
+  const communitySheet = utils.aoa_to_sheet(communityRows);
+  communitySheet["!cols"] = [35, 48, 18, 28].map((wch) => ({ wch }));
+  communitySheet["!autofilter"] = { ref: communitySheet["!ref"] };
+
+  utils.book_append_sheet(workbook, municipalitySheet, "Municipios");
+  utils.book_append_sheet(workbook, communitySheet, "Comunidades indígenas");
+  writeFileXLSX(workbook, filename);
+}
+
+function RegionalizationExplorer({ zone, onChange, onSelectMunicipality, initialOnlyIndigenous }) {
+  const [onlyIndigenous, setOnlyIndigenous] = useState(initialOnlyIndigenous);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [downloadError, setDownloadError] = useState("");
+  const options = ZONES_BY_LEVEL[zone.field];
+  const zoneLabel = formatGroupLabel(zone.field, zone.value);
+  const municipalities = zone.value
+    ? sortMunicipalities(REGIONALIZACION_HIDALGO.filter((item) => item[zone.field] === zone.value))
+    : [];
+  const indigenousMunicipalities = municipalities.filter(
+    (item) => getMunicipalityCommunities(item.municipio).length > 0
+  );
+  const shownMunicipalities = onlyIndigenous ? indigenousMunicipalities : municipalities;
+
+  async function download(items, filename) {
+    setIsDownloading(true);
+    setDownloadError("");
+    try {
+      await downloadRegionalizationXlsx(items, filename);
+    } catch {
+      setDownloadError("No se pudo generar el Excel. Intenta descargarlo de nuevo.");
+    } finally {
+      setIsDownloading(false);
+    }
+  }
+
+  return (
+    <section id="consulta-por-zona" className={styles.indigenousPanel} aria-labelledby="zone-title">
+      <div className={styles.indigenousHeader}>
+        <h3 id="zone-title" className={styles.indigenousTitle}>Municipios por zona</h3>
+        <button
+          type="button"
+          className={styles.downloadButton}
+          disabled={isDownloading}
+          onClick={() => download(
+            sortMunicipalities(REGIONALIZACION_HIDALGO).sort((a, b) =>
+              a.region.localeCompare(b.region, "es", { numeric: true })
+            ),
+            "regiones-y-municipios-hidalgo.xlsx"
+          )}
         >
-          Copiar municipios
-        </CopyButton>
+          Descargar listado estatal XLSX
+        </button>
       </div>
 
-      <label className={styles.groupSelectLabel}>
-        <span>{label}</span>
-        <select value={value} onChange={(event) => onChange(event.target.value)}>
-          <option value="">{emptyLabel}</option>
-          {options.map((option) => (
-            <option key={option} value={option}>
-              {formatOption(option)}
-            </option>
-          ))}
-        </select>
-      </label>
+      <div className={styles.zoneControls}>
+        <label className={styles.zoneField}>
+          <span>Nivel de consulta</span>
+          <select value={zone.field} onChange={(event) => onChange({ field: event.target.value, value: "" })}>
+            {REGIONAL_LEVELS.map(({ field, label }) => (
+              <option key={field} value={field}>{label}</option>
+            ))}
+          </select>
+        </label>
+        <label className={styles.zoneField}>
+          <span>Zona</span>
+          <select value={zone.value} onChange={(event) => onChange({ ...zone, value: event.target.value })}>
+            <option value="">Selecciona una zona</option>
+            {options.map((value) => (
+              <option key={value} value={value}>{formatGroupLabel(zone.field, value)}</option>
+            ))}
+          </select>
+        </label>
+      </div>
 
-      {value ? (
-        <div className={styles.groupResults}>
-          <div className={styles.groupMetrics}>
-            <article>
-              <strong>{items.length.toLocaleString("es-MX")}</strong>
-              <span>municipios</span>
-            </article>
-            <article>
-              <strong>{formatNumber(summary?.poblacionTotal)}</strong>
-              <span>población municipal</span>
-            </article>
-            <article>
-              <strong>{formatNumber(summary?.localidades)}</strong>
-              <span>localidades</span>
-            </article>
-            <article>
-              <strong>{formatNumber(summary?.asentamientos)}</strong>
-              <span>asentamientos</span>
-            </article>
+      {zone.value && (
+        <>
+          <p className={styles.indigenousDescription} aria-live="polite">
+            {municipalities.length} municipios · {indigenousMunicipalities.length} con registros indígenas
+          </p>
+          <label className={styles.checkboxLabel}>
+            <input
+              type="checkbox"
+              checked={onlyIndigenous}
+              onChange={(event) => setOnlyIndigenous(event.target.checked)}
+            />
+            Solo municipios con registros indígenas
+          </label>
+          <div className={styles.zoneActions}>
+            <CopyButton
+              className={styles.copyButton}
+              text={[zoneLabel, ...shownMunicipalities.map((item) => item.municipio)].join("\n")}
+              disabled={!shownMunicipalities.length}
+              copiedText="Lista de municipios copiada."
+            >
+              Copiar municipios
+            </CopyButton>
+            <button
+              type="button"
+              className={styles.downloadButton}
+              disabled={isDownloading || !shownMunicipalities.length}
+              onClick={() => download(shownMunicipalities, `${getDownloadSlug(zoneLabel)}-municipios.xlsx`)}
+            >
+              Descargar zona XLSX
+            </button>
+            <CopyConsultationLink
+              params={{ nivel: zone.field, zona: zone.value, ...(onlyIndigenous && { indigenas: "1" }) }}
+              target="consulta-por-zona"
+            />
           </div>
-
-          {items.length > 0 ? (
-            <div className={styles.relatedList}>
-              {items.map((item) => (
-                <button
-                  key={`${title}-${item.municipio}`}
-                  type="button"
-                  className={styles.relatedItem}
-                  onClick={() => onSelect(item.municipio)}
-                >
-                  <span>{item.municipio}</span>
-                  <RegionPath item={item} />
-                </button>
-              ))}
-            </div>
+          {shownMunicipalities.length > 0 ? (
+            <ul className={styles.zoneList} aria-label={`Municipios de ${zoneLabel}`}>
+              {shownMunicipalities.map((item) => {
+                const count = getMunicipalityCommunities(item.municipio).length;
+                return (
+                  <li key={item.municipio}>
+                    <button type="button" className={styles.relatedItem} onClick={() => onSelectMunicipality(item.municipio)}>
+                      <span>{item.municipio}</span>
+                      <small className={styles.indigenousDescription}>
+                        {count > 0 ? `${count} ${count === 1 ? "registro indígena" : "registros indígenas"}` : "Sin registros en los catálogos"}
+                      </small>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
           ) : (
-            <p className={styles.emptyText}>
-              No hay municipios registrados para este grupo.
-            </p>
+            <p className={styles.emptyText}>No hay municipios con registros indígenas en esta zona.</p>
           )}
-        </div>
-      ) : (
-        <p className={styles.emptyText}>
-          Elige una opción para ver los municipios que pertenecen a ese grupo.
-        </p>
+        </>
       )}
+      {downloadError && <p className={styles.emptyText} role="alert">{downloadError}</p>}
+      <IndigenousSources />
     </section>
   );
 }
 
-export default function MunicipalityLocator({ initialMunicipio = "" }) {
+export default function MunicipalityLocator({ initialMunicipio = "", initialZone, initialOnlyIndigenous = false }) {
   const [query, setQuery] = useState(initialMunicipio);
+  const [zone, setZone] = useState(() => {
+    const level = REGIONAL_LEVELS.find(({ field }) => field === initialZone?.field);
+    return level && ZONES_BY_LEVEL[level.field].includes(initialZone?.value)
+      ? { field: level.field, value: initialZone.value }
+      : { field: "region", value: "" };
+  });
   const [includeOtra, setIncludeOtra] = useState(true);
   const [includeLocalidades, setIncludeLocalidades] = useState(true);
   const [includeAsentamientos, setIncludeAsentamientos] = useState(true);
   const [textFormat, setTextFormat] = useState("title");
   const [otraValue, setOtraValue] = useState("Otra");
-  const [selectedRegionGroup, setSelectedRegionGroup] = useState("");
-  const [selectedMacrorregionGroup, setSelectedMacrorregionGroup] = useState("");
-  const [selectedMicrorregionGroup, setSelectedMicrorregionGroup] = useState("");
-
   const selectedMunicipality = useMemo(() => {
     const exactMatch = findExactMunicipality(query);
 
@@ -737,19 +730,24 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
     return null;
   }, [query]);
 
-  const relatedByRegion = useMemo(
-    () => getRelatedMunicipalities(selectedMunicipality, "region"),
-    [selectedMunicipality]
-  );
+  const selectedIndigenousCommunityItems = getMunicipalityCommunities(selectedMunicipality?.municipio);
 
-  const relatedByMacrorregion = useMemo(
-    () => getRelatedMunicipalities(selectedMunicipality, "macrorregion"),
-    [selectedMunicipality]
-  );
+  const indigenousCommunityCopyText = useMemo(
+    () =>
+      selectedMunicipality
+        ? [
+            `Municipio ${selectedMunicipality.municipio}`,
+            "Comunidades y localidades indígenas:",
+            ...selectedIndigenousCommunityItems.map((item) => {
+              const pueblos = item.pueblos.length
+                ? ` — Pueblo INPI: ${item.pueblos.join(", ")}`
+                : "";
 
-  const relatedByMicrorregion = useMemo(
-    () => getRelatedMunicipalities(selectedMunicipality, "microrregion"),
-    [selectedMunicipality]
+              return `${item.localidad} — ${item.fuentes.join(" + ")}${pueblos}`;
+            }),
+          ].join("\n")
+        : "",
+    [selectedMunicipality, selectedIndigenousCommunityItems]
   );
 
   const selectedLocalityData = useMemo(
@@ -841,21 +839,6 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
 
   const sourceTotals = MUNICIPALITY_LOCALITIES_SOURCE.totales;
 
-  const regionOptions = useMemo(
-    () => getUniqueGroupOptions("region"),
-    []
-  );
-
-  const macrorregionOptions = useMemo(
-    () => getUniqueGroupOptions("macrorregion"),
-    []
-  );
-
-  const microrregionOptions = useMemo(
-    () => getUniqueGroupOptions("microrregion"),
-    []
-  );
-
   const sourceSummary = useMemo(
     () =>
       `${sourceTotals.localidades.toLocaleString("es-MX")} localidades y ${sourceTotals.asentamientosHumanos.toLocaleString("es-MX")} asentamientos humanos de ${sourceTotals.municipios} municipios`,
@@ -871,92 +854,15 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
     [textFormat]
   );
 
-  const indigenousMunicipalityItems = useMemo(() => {
-    const wanted = new Set(
-      INDIGENOUS_COMMUNITY_MUNICIPALITIES.map(normalizeText)
-    );
-
-    return sortMunicipalities(
-      REGIONALIZACION_HIDALGO.filter((item) =>
-        [item.municipio, ...(item.aliases || [])]
-          .map(normalizeText)
-          .some((value) => wanted.has(value))
-      )
-    );
-  }, []);
-
-  const indigenousMunicipalityNames = useMemo(
-    () =>
-      formatOutputItems(
-        indigenousMunicipalityItems.map((item) => item.municipio),
-        textFormat
-      ),
-    [indigenousMunicipalityItems, textFormat]
-  );
-
-  const regionMunicipalityItems = useMemo(
-    () => getMunicipalitiesByFieldValue("region", selectedRegionGroup),
-    [selectedRegionGroup]
-  );
-
-  const macrorregionMunicipalityItems = useMemo(
-    () => getMunicipalitiesByFieldValue("macrorregion", selectedMacrorregionGroup),
-    [selectedMacrorregionGroup]
-  );
-
-  const microrregionMunicipalityItems = useMemo(
-    () => getMunicipalitiesByFieldValue("microrregion", selectedMicrorregionGroup),
-    [selectedMicrorregionGroup]
-  );
-
-  const regionSummary = useMemo(
-    () => getGroupSummary(regionMunicipalityItems),
-    [regionMunicipalityItems]
-  );
-
-  const macrorregionSummary = useMemo(
-    () => getGroupSummary(macrorregionMunicipalityItems),
-    [macrorregionMunicipalityItems]
-  );
-
-  const microrregionSummary = useMemo(
-    () => getGroupSummary(microrregionMunicipalityItems),
-    [microrregionMunicipalityItems]
-  );
-
-  const regionMunicipalityNames = useMemo(
-    () =>
-      getCopyText(
-        formatGroupLabel("region", selectedRegionGroup),
-        regionMunicipalityItems.map((item) => item.municipio),
-        textFormat
-      ),
-    [regionMunicipalityItems, selectedRegionGroup, textFormat]
-  );
-
-  const macrorregionMunicipalityNames = useMemo(
-    () =>
-      getCopyText(
-        formatGroupLabel("macrorregion", selectedMacrorregionGroup),
-        macrorregionMunicipalityItems.map((item) => item.municipio),
-        textFormat
-      ),
-    [macrorregionMunicipalityItems, selectedMacrorregionGroup, textFormat]
-  );
-
-  const microrregionMunicipalityNames = useMemo(
-    () =>
-      getCopyText(
-        formatGroupLabel("microrregion", selectedMicrorregionGroup),
-        microrregionMunicipalityItems.map((item) => item.municipio),
-        textFormat
-      ),
-    [microrregionMunicipalityItems, selectedMicrorregionGroup, textFormat]
-  );
-
   const selectMunicipality = () => {
     setOtraValue("Otra");
   };
+
+  function openMunicipality(municipio) {
+    setQuery(municipio);
+    selectMunicipality();
+    document.getElementById("municipio-seleccionado")?.focus();
+  }
 
   return (
     <section className={styles.container} aria-labelledby="locator-title">
@@ -967,12 +873,11 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
           </span>
 
           <h2 id="locator-title" className={styles.title}>
-            Consulta a dónde pertenece un municipio
+            Explora municipios y regiones de Hidalgo
           </h2>
 
           <p className={styles.description}>
-            Busca un municipio para identificar su región, macrorregión y
-            microrregión, y descarga sus asentamientos humanos y localidades.
+            Busca un municipio o consulta una zona para ver sus municipios y registros indígenas.
           </p>
         </div>
 
@@ -1060,35 +965,38 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
               empty: styles.emptyText,
             }}
           />
-
+          <a className={styles.zoneShortcut} href="#consulta-por-zona">
+            Consultar municipios por zona
+          </a>
         </aside>
 
-        <div className={styles.resultCard}>
+        <div id="municipio-seleccionado" className={styles.resultCard} tabIndex={-1}>
           {selectedMunicipality ? (
             <>
               <div className={styles.resultHeader}>
-                <span className={styles.resultLabel}>
-                  Municipio seleccionado
-                </span>
-
-                <h3>{selectedMunicipality.municipio}</h3>
+                <div>
+                  <span className={styles.resultLabel}>Municipio seleccionado</span>
+                  <h3>{selectedMunicipality.municipio}</h3>
+                </div>
+                <CopyConsultationLink
+                  params={{ municipio: selectedMunicipality.municipio }}
+                  target="municipio-seleccionado"
+                />
               </div>
 
               <div className={styles.resultGrid}>
-                <article className={styles.resultItem}>
-                  <span>Región</span>
-                  <strong>{formatGroupLabel("region", selectedMunicipality.region)}</strong>
-                </article>
-
-                <article className={styles.resultItem}>
-                  <span>Macrorregión</span>
-                  <strong>{formatGroupLabel("macrorregion", selectedMunicipality.macrorregion)}</strong>
-                </article>
-
-                <article className={styles.resultItem}>
-                  <span>Microrregión</span>
-                  <strong>{formatGroupLabel("microrregion", selectedMunicipality.microrregion)}</strong>
-                </article>
+                {REGIONAL_LEVELS.map(({ field, label }) => (
+                  <a
+                    key={field}
+                    className={`${styles.resultItem} ${styles.zoneCard}`}
+                    href="#consulta-por-zona"
+                    onClick={() => setZone({ field, value: selectedMunicipality[field] })}
+                  >
+                    <span>{label}</span>
+                    <strong>{formatGroupLabel(field, selectedMunicipality[field])}</strong>
+                    <small>Ver municipios</small>
+                  </a>
+                ))}
               </div>
 
               <div className={styles.localityStats}>
@@ -1120,6 +1028,65 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                   </strong>
                 </article>
               </div>
+
+              <section
+                className={styles.indigenousPanel}
+                aria-labelledby="indigenous-communities-title"
+              >
+                <div className={styles.indigenousHeader}>
+                  <div>
+                    <h4
+                      id="indigenous-communities-title"
+                      className={styles.indigenousTitle}
+                    >
+                      Comunidades y localidades indígenas
+                    </h4>
+                    <p className={styles.indigenousDescription}>
+                      {selectedIndigenousCommunityItems.length.toLocaleString("es-MX")} registros en una lista consolidada.
+                    </p>
+                  </div>
+
+                  <CopyButton
+                    text={indigenousCommunityCopyText}
+                    className={styles.copyButton}
+                    disabled={selectedIndigenousCommunityItems.length === 0}
+                    copiedText="Lista copiada al portapapeles."
+                    errorText="No se pudo copiar al portapapeles."
+                  >
+                    Copiar lista
+                  </CopyButton>
+                </div>
+
+                {selectedIndigenousCommunityItems.length > 0 ? (
+                  <ul className={styles.indigenousList}>
+                    {selectedIndigenousCommunityItems.map((item) => (
+                      <li
+                        key={`${item.municipio}-${item.localidad}`}
+                        className={styles.indigenousItem}
+                      >
+                        <span className={styles.indigenousName}>
+                          {item.localidad}
+                        </span>
+                        <small className={styles.indigenousMeta}>
+                          {item.fuentes.join(" · ")}
+                          {item.pueblos.length > 0
+                            ? ` · Pueblo INPI: ${item.pueblos.join(", ")}`
+                            : ""}
+                        </small>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className={styles.emptyText}>
+                    No hay registros para este municipio en los catálogos consultados.
+                  </p>
+                )}
+
+                <IndigenousSources />
+                <p className={styles.indigenousSourceNote}>
+                  Las coincidencias se unifican por municipio y nombre normalizados. El pueblo indígena se muestra cuando lo registra INPI.
+                </p>
+              </section>
 
               <section className={styles.downloadPanel}>
                 <div>
@@ -1201,25 +1168,6 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
                 </div>
               </section>
 
-              <div className={styles.dropdownStack}>
-                <RelatedDropdown
-                  title="Municipios en la misma región"
-                  items={relatedByRegion}
-                  onSelect={selectMunicipality}
-                />
-
-                <RelatedDropdown
-                  title="Municipios en la misma macrorregión"
-                  items={relatedByMacrorregion}
-                  onSelect={selectMunicipality}
-                />
-
-                <RelatedDropdown
-                  title="Municipios en la misma microrregión"
-                  items={relatedByMicrorregion}
-                  onSelect={selectMunicipality}
-                />
-              </div>
             </>
           ) : (
             <div className={styles.placeholder}>
@@ -1229,119 +1177,22 @@ export default function MunicipalityLocator({ initialMunicipio = "" }) {
 
               <p>
                 Usa el buscador o las sugerencias para ver su región,
-                macrorregión y microrregión.
+                macrorregión, microrregión y los registros comunitarios.
               </p>
             </div>
           )}
         </div>
       </div>
 
-      <details className={styles.groupSection}>
-        <summary className={styles.groupSectionSummary}>
-          <div className={styles.groupSectionHeader}>
-            <h3 id="municipios-por-grupos" className={styles.groupSectionTitle}>
-              Municipios por grupos
-            </h3>
-            <p className={styles.groupSectionText}>
-              Explora municipios por región, macrorregión o microrregión y copia la lista completa.
-            </p>
-          </div>
-        </summary>
-
-        <div className={styles.groupExplorerStack}>
-          <GroupExplorer
-            title="Municipios por región"
-            label="Región"
-            emptyLabel="Selecciona una región"
-            value={selectedRegionGroup}
-            options={regionOptions}
-            formatOption={(option) => formatGroupLabel("region", option)}
-            items={regionMunicipalityItems}
-            onChange={setSelectedRegionGroup}
-            onSelect={selectMunicipality}
-            copyText={regionMunicipalityNames}
-            summary={regionSummary}
-            disabled={!selectedRegionGroup}
-          />
-
-          <GroupExplorer
-            title="Municipios por macrorregión"
-            label="Macrorregión"
-            emptyLabel="Selecciona una macrorregión"
-            value={selectedMacrorregionGroup}
-            options={macrorregionOptions}
-            formatOption={(option) => formatGroupLabel("macrorregion", option)}
-            items={macrorregionMunicipalityItems}
-            onChange={setSelectedMacrorregionGroup}
-            onSelect={selectMunicipality}
-            copyText={macrorregionMunicipalityNames}
-            summary={macrorregionSummary}
-            disabled={!selectedMacrorregionGroup}
-          />
-
-          <GroupExplorer
-            title="Municipios por microrregión"
-            label="Microrregión"
-            emptyLabel="Selecciona una microrregión"
-            value={selectedMicrorregionGroup}
-            options={microrregionOptions}
-            formatOption={(option) => formatGroupLabel("microrregion", option)}
-            items={microrregionMunicipalityItems}
-            onChange={setSelectedMicrorregionGroup}
-            onSelect={selectMunicipality}
-            copyText={microrregionMunicipalityNames}
-            summary={microrregionSummary}
-            disabled={!selectedMicrorregionGroup}
-          />
-        </div>
-      </details>
-
-      <details
-        className={styles.groupSection}
-        aria-labelledby="municipios-con-comunidades-indigenas"
-      >
-        <summary className={styles.groupSectionSummary}>
-          <div className={styles.groupSectionHeader}>
-            <h3
-              id="municipios-con-comunidades-indigenas"
-              className={styles.groupSectionTitle}
-            >
-              Municipios con comunidades indígenas
-            </h3>
-            <p className={styles.groupSectionText}>
-              Lista rápida para consultar o copiar.
-            </p>
-          </div>
-        </summary>
-
-        <div className={styles.groupSectionHeaderRow}>
-          <CopyButton
-            text={indigenousMunicipalityNames.join("\n")}
-            className={styles.groupCopyButton}
-            copiedText="Municipios copiados al portapapeles."
-            errorText="No se pudo copiar al portapapeles."
-          >
-            Copiar
-          </CopyButton>
-        </div>
-
-        <div className={styles.relatedList}>
-          {indigenousMunicipalityItems.map((item) => (
-            <button
-              key={`indigenous-${item.municipio}`}
-              type="button"
-              className={styles.relatedItem}
-              onClick={() => selectMunicipality(item.municipio)}
-            >
-              <span>{item.municipio}</span>
-              <RegionPath item={item} />
-            </button>
-          ))}
-        </div>
-      </details>
+      <RegionalizationExplorer
+        zone={zone}
+        onChange={setZone}
+        onSelectMunicipality={openMunicipality}
+        initialOnlyIndigenous={initialOnlyIndigenous}
+      />
 
       <p className={styles.sourceNote}>
-        Fuente:{" "}
+        Fuente de asentamientos y localidades: {" "}
         <a
           href={MUNICIPALITY_LOCALITIES_SOURCE.url}
           target="_blank"

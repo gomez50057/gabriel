@@ -1,4 +1,4 @@
-import * as XLSX from "xlsx";
+import * as XLSX from "@e965/xlsx";
 
 const REQUIRED_COLUMNS = ["title", "type", "value"];
 

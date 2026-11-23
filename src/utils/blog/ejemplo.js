@@ -1,4 +1,4 @@
-{
+const ejemplo = {
   name: "Título del artículo",
 
   description: [
@@ -144,4 +144,6 @@
       caption: "Video demostrativo"
     }
   ]
-}
+};
+
+export default ejemplo;

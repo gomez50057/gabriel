@@ -5,7 +5,7 @@ export const TOOLS_LINKS = [
   },
   {
     href: "/herramientas/localizador-municipios-hidalgo",
-    label: "Localizador de municipios de Hidalgo",
+    label: "Explora municipios y regiones de Hidalgo",
   },
   {
     href: "/herramientas/conoces-hidalgo",

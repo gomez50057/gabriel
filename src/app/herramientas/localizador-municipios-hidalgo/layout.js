@@ -2,9 +2,9 @@ import Navbar from "@/shared/Navbar";
 import Footer from "@/shared/Footer";
 
 export const metadata = {
-  title: "Localizador de municipios de Hidalgo",
+  title: "Explora municipios y regiones de Hidalgo",
   description:
-    "Consulta a qué región, macrorregión y microrregión pertenece cada municipio del Estado de Hidalgo.",
+    "Encuentra municipios por región, macrorregión o microrregión, y consulta sus comunidades indígenas.",
 };
 
 export const viewport = {

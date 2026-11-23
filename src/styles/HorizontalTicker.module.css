@@ -47,13 +47,6 @@
   transform: translateY(0.06em);
 }
 
-.trailingSpace {
-  flex: 0 0 clamp(60px, 80vw, 900px);
-  width: clamp(60px, 80vw, 900px);
-  height: 1px;
-  pointer-events: none;
-}
-
 @media (hover: hover) {
   .wrapper:hover .line {
     animation-play-state: paused;
@@ -61,7 +54,24 @@
 }
 
 @media (max-width: 700px) {
+  .wrapper {
+    width: 100%;
+    padding-block: clamp(1.25rem, 6vw, 2rem);
+  }
+
+  .line {
+    gap: clamp(0.75rem, 3.5vw, 1.25rem);
+    padding-inline: clamp(1rem, 5vw, 2rem);
+  }
+
+  .chunk {
+    font-size: clamp(2.25rem, 10vw, 3.75rem);
+    line-height: 1.12;
+  }
+
   .badge {
-    height: 100px;
+    width: clamp(4.25rem, 23vw, 8rem);
+    height: auto;
+    aspect-ratio: 3 / 2;
   }
 }
