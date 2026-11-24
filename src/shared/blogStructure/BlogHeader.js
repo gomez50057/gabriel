@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { normalizeName } from "@/utils/renderText";
 
-const BlogHeader = ({ posts = [] }) => {
+const BlogHeader = ({ posts = [], nameLink = "hacks" }) => {
   // Tomar únicamente los 4 últimos posts (el más nuevo primero)
   const POSTS = useMemo(() => {
     const safe = Array.isArray(posts) ? posts : [];
@@ -104,16 +104,18 @@ const BlogHeader = ({ posts = [] }) => {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      <Image
-        key={POSTS[activeIndex].image}
-        src={POSTS[activeIndex].image}
-        alt=""
-        fill
-        sizes="100vw"
-        loading="eager"
-        fetchPriority="high"
-        className={styles.backgroundImage}
-      />
+      {POSTS[activeIndex].image && (
+        <Image
+          key={POSTS[activeIndex].image}
+          src={POSTS[activeIndex].image}
+          alt=""
+          fill
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+          className={styles.backgroundImage}
+        />
+      )}
       <div className={styles.overlay} aria-hidden="true" />
       <div className={styles.content}>
         <h2
@@ -130,7 +132,7 @@ const BlogHeader = ({ posts = [] }) => {
           {POSTS[activeIndex].date}
         </p>
 
-        <Link href={`/hacks/${normalizeName(POSTS[activeIndex].name)}`} passHref>
+        <Link href={`/${nameLink}/${normalizeName(POSTS[activeIndex].name)}`} passHref>
           <button
             key={`${animationKey}-button`}
             className={`${styles.ctaBtn} ${styles.textAnimation} delay-3`}
@@ -153,13 +155,15 @@ const BlogHeader = ({ posts = [] }) => {
                 onClick={() => handlePreviewClick(nextIndex)}
                 aria-label={`Ir a: ${POSTS[nextIndex].name}`}
               >
-                <Image
-                  src={POSTS[nextIndex].image}
-                  alt=""
-                  fill
-                  sizes="150px"
-                  className={styles.previewImage}
-                />
+                {POSTS[nextIndex].image && (
+                  <Image
+                    src={POSTS[nextIndex].image}
+                    alt=""
+                    fill
+                    sizes="150px"
+                    className={styles.previewImage}
+                  />
+                )}
               </button>
             );
           })}

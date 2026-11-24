@@ -10,7 +10,7 @@ const BlogMain = () => {
 
   return (
     <div>
-      <BlogHeader posts={blogPosts} />
+      <BlogHeader posts={blogPosts} nameLink="caso-estudio" />
       <BlogNoticias posts={blogPosts} featuredPosts={featuredOnly} categoryFilters={categoryFilters} nameLink="caso-estudio" />
     </div>
   );
