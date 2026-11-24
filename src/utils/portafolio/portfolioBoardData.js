@@ -103,6 +103,14 @@ export const defaultItems = [
     group: "Branding",
     src: `${PROJECTS_BASE}merida.webp`,
   },
+  {
+    id: "15",
+    title: "El Fuego restaurant",
+    kind: "link",
+    group: "Diseño Web",
+    src: `${PROJECTS_BASE}fuego.webp`,
+    href: "https://gomez50057.github.io/el-fuego/",
+  },
 ];
 
 export const defaultLayouts = {
@@ -130,21 +138,53 @@ export const defaultLayouts = {
 
 export const portfolioRecentProjects = [
   {
-    id: "p1",
-    title: "El Fuego restaurant",
-    stack: "Página web",
-    image: "/img/proyectos/fuego.webp",
-    links: [{ href: "https://gomez50057.github.io/el-fuego/", label: "Ver demo", icon: "eye" }],
-  },
-  {
-    id: "p2",
-    title: "Carrito de compras inteligente",
-    stack: "Carrito inteligente",
-    image: "/img/proyectos/proyecto8.webp",
+    id: "p7",
+    title: "Bajío Logistics",
+    stack: "Sitio web para clientes y proveedores de transporte",
+    image: `${PROJECTS_CASE}bajio-logistics-homepage.png`,
     links: [
       {
-        href: "https://sketchfab.com/models/2453f8b6f65540bc8115f6906331edc9/embed",
-        label: "Ver demo",
+        href: "/caso-estudio/bajio-logistics-conexion-entre-clientes-y-proveedores-de-transporte",
+        label: "Ver caso de estudio",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    id: "p5",
+    title: "Metrópoli",
+    stack: "Plataforma integral para planeación y coordinación metropolitana",
+    image: `${PROJECTS_CASE}metropoli-plataforma.webp`,
+    links: [
+      {
+        href: "/caso-estudio/metropoli-plataforma-integral-para-planeacion-y-coordinacion-metropolitana",
+        label: "Ver caso de estudio",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    id: "p6",
+    title: "Biblioteca Digital de Planeación",
+    stack: "Consulta pública de instrumentos y documentos",
+    image: `${PROJECTS_CASE}biblioteca-digital-planeacion.webp`,
+    links: [
+      {
+        href: "/caso-estudio/biblioteca-digital-de-planeacion-consulta-publica-de-instrumentos-y-documentos",
+        label: "Ver caso de estudio",
+        icon: "external",
+      },
+    ],
+  },
+  {
+    id: "p4",
+    title: "Plan Hídrico del Valle del Mezquital",
+    stack: "Difusión, participación y gestión de aportaciones",
+    image: `${PROJECTS_CASE}plan-hidrico-mezquital.webp`,
+    links: [
+      {
+        href: "/caso-estudio/plan-hidrico-del-valle-del-mezquital-difusion-participacion-y-gestion-de-aportaciones",
+        label: "Ver caso de estudio",
         icon: "external",
       },
     ],
@@ -163,39 +203,13 @@ export const portfolioRecentProjects = [
     ],
   },
   {
-    id: "p4",
-    title: "Plan Hídrico del Valle del Mezquital",
-    stack: "Difusión, participación y gestión de aportaciones",
-    image: `${PROJECTS_CASE}plan-hidrico-mezquital.webp`,
+    id: "p2",
+    title: "Carrito de compras inteligente",
+    stack: "Carrito inteligente",
+    image: "/img/proyectos/proyecto8.webp",
     links: [
       {
-        href: "/caso-estudio/plan-hidrico-del-valle-del-mezquital-difusion-participacion-y-gestion-de-aportaciones",
-        label: "Ver demo",
-        icon: "external",
-      },
-    ],
-  },
-  {
-    id: "p5",
-    title: "Metrópoli",
-    stack: "Plataforma integral para planeación y coordinación metropolitana",
-    image: `${PROJECTS_CASE}metropoli-plataforma.webp`,
-    links: [
-      {
-        href: "/caso-estudio/metropoli-plataforma-integral-para-planeacion-y-coordinacion-metropolitana",
-        label: "Ver demo",
-        icon: "external",
-      },
-    ],
-  },
-  {
-    id: "p6",
-    title: "Biblioteca Digital de Planeación",
-    stack: "Consulta pública de instrumentos y documentos",
-    image: `${PROJECTS_CASE}biblioteca-digital-planeacion.webp`,
-    links: [
-      {
-        href: "/caso-estudio/biblioteca-digital-de-planeacion-consulta-publica-de-instrumentos-y-documentos",
+        href: "https://sketchfab.com/models/2453f8b6f65540bc8115f6906331edc9/embed",
         label: "Ver demo",
         icon: "external",
       },
