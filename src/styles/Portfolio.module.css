@@ -82,13 +82,14 @@
 /* Título y stack dentro de la tarjeta: en overlay, usa el color de texto inverso (bg) */
 .memberInfoContent {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 12px;
+  right: 12px;
   bottom: 10px;
   transition: bottom 0.4s;
   font-weight: 700;
   font-size: 18px;
   color: var(--text-inverted);
+  text-wrap: balance;
 }
 
 .memberInfoContent span {
