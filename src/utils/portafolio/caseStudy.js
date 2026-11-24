@@ -1,5 +1,162 @@
 export const blogPosts = [
   {
+    name: "Bajío Logistics: conexión entre clientes y proveedores de transporte",
+    description: [
+      {
+        type: "p",
+        text:
+          "Cuando una empresa necesita mover mercancía, no solo busca un camión. Necesita entender sus opciones, encontrar a las personas correctas y saber cómo poner en marcha una operación. Por eso, el sitio de Bajío Logistics se diseñó como un punto de conexión entre las necesidades de cada visitante y el siguiente paso que puede dar."
+      },
+      {
+        type: "h2",
+        text: "Dos recorridos y una navegación clara"
+      },
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "Desde el inicio, la página ayuda a elegir un recorrido: cotizar un servicio o conocer cómo formar parte de la red de proveedores. La navegación también conecta las secciones de empresa, servicios, cobertura, clientes, proveedores y contacto. Así, cada visitante puede orientarse sin tener que descifrar dónde encontrar lo que busca. (" },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es", text: "Inicio" },
+          { type: "text", text: ", " },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es/proveedores", text: "Proveedores" },
+          { type: "text", text: ")" }
+        ]
+      },
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "La web está disponible en español e inglés. Esto amplía el acceso para clientes y transportistas con distintas preferencias de idioma, y permite que cada quien consulte los servicios, requisitos y canales de contacto en la lengua que le resulte más cómoda. Las rutas y etiquetas cambian junto con el idioma para mantener una experiencia coherente durante la navegación. (" },
+          { type: "link", href: "https://www.bajiologisticsmx.com/en", text: "English home" },
+          { type: "text", text: ", " },
+          { type: "link", href: "https://www.bajiologisticsmx.com/en/services", text: "English services" },
+          { type: "text", text: ")" }
+        ]
+      },
+      {
+        type: "h2",
+        text: "Servicios y cotización"
+      },
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "La sección de servicios presenta siete capacidades: transporte de mercancías, planeación logística, gestión y seguimiento, optimización de costos, red de proveedores, consultoría y soluciones personalizadas. Cada una explica cómo se realiza el trabajo, desde entender origen, destino y tiempos hasta coordinar proveedores y dar seguimiento al movimiento. (" },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es/servicios", text: "Servicios" },
+          { type: "text", text: ")" }
+        ]
+      },
+      {
+        type: "p",
+        text:
+          "Elegí explicar los servicios dentro de la misma página para que la persona pueda compararlos y entender su alcance sin perder el hilo. La información combina descripciones breves con acciones para solicitar una cotización o contactar al equipo, conectando la exploración con una conversación real."
+      },
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "La cotización guía al visitante por seis pasos: ruta, mercancía, unidad, fecha, contacto y comentarios. Al completar la información, se abre WhatsApp con un mensaje preparado para revisar y enviar al equipo comercial. El formulario de contacto y el registro de proveedores siguen una lógica similar: recopilan los datos necesarios y los organizan en un mensaje para WhatsApp. (" },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es/cotizar", text: "Cotización" },
+          { type: "text", text: ", " },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es/contacto", text: "Contacto" },
+          { type: "text", text: ", " },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es/proveedores/registro", text: "Registro de proveedores" },
+          { type: "text", text: ")" }
+        ]
+      },
+      {
+        type: "p",
+        text:
+          "Esta decisión aprovecha un canal directo que los visitantes ya conocen y ayuda a que el equipo reciba solicitudes más completas. La persona conserva el control y puede revisar el mensaje antes de enviarlo. En el registro de proveedores, el formulario organiza datos de empresa, contacto, cobertura, flota, operadores, documentación y experiencia."
+      },
+      {
+        type: "h2",
+        text: "Incorporación de proveedores y cobertura"
+      },
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "La página para proveedores explica qué tipo de colaboración busca Bajío Logistics y presenta un proceso de incorporación en cinco etapas: registro, documentación, validación, alta e inicio de operaciones. También enumera distintos tipos de unidades, desde pickups y camiones de 3.5 toneladas hasta tractocamiones, plataformas y unidades refrigeradas. (" },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es/proveedores", text: "Proveedores" },
+          { type: "text", text: ")" }
+        ]
+      },
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "La cobertura nacional cuenta con una sección propia, pero aclara que la disponibilidad depende de la ruta, la fecha y los requerimientos de cada operación. Esa precisión ayuda a comunicar el alcance de forma útil y transparente, invitando a confirmar cada caso con el equipo. (" },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es/cobertura", text: "Cobertura" },
+          { type: "text", text: ")" }
+        ]
+      },
+      {
+        type: "h2",
+        text: "Equipo, clientes y confianza"
+      },
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "La sección “Nosotros” presenta la misión, la visión, la forma de trabajo y los valores de la empresa. También da a conocer al equipo: Miguel Villeda, fundador y gerente comercial, y Azucena Yañez, gerente de operaciones. Así, el visitante puede relacionar la propuesta de la empresa con las personas que atienden las áreas comercial y operativa. (" },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es/nosotros", text: "Nosotros" },
+          { type: "text", text: ")" }
+        ]
+      },
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "La página de clientes contempla espacios para sectores, alianzas y casos de éxito, con una estructura que permitiría documentar el reto, la solución, la operación y los resultados. En este momento, el sitio aclara que todavía no cuenta con logotipos autorizados para publicar. Mantener esa nota evita presentar relaciones o historias como confirmadas antes de contar con autorización. (" },
+          { type: "link", href: "https://www.bajiologisticsmx.com/es/clientes", text: "Clientes" },
+          { type: "text", text: ")" }
+        ]
+      },
+      {
+        type: "p",
+        text:
+          "La experiencia conecta varias necesidades en un mismo lugar: conocer los servicios, revisar la cobertura, explorar opciones para proveedores, contactar a las áreas correspondientes y preparar solicitudes por WhatsApp. En lugar de ser solo una presentación de la empresa, el sitio ayuda a convertir una visita en un siguiente paso concreto."
+      },
+      {
+        type: "h2",
+        text: "Implementación y resultado"
+      },
+      {
+        type: "p",
+        text:
+          "Elegí **React** para construir la interfaz con componentes reutilizables. Así pude mantener una estructura común para elementos como la navegación, las tarjetas de servicios y los formularios, y facilitar los ajustes conforme evolucionaba el sitio."
+      },
+      {
+        type: "p",
+        text:
+          "Desarrollé el proyecto con **JavaScript**, sin usar TypeScript. Definí los estilos de la interfaz con CSS propio: combiné reglas globales y **CSS Modules** en componentes como la navegación y los datos de contacto, sin basarme en clases utilitarias de Tailwind. Los módulos aíslan esas reglas para reducir el riesgo de que un ajuste afecte otras secciones."
+      },
+      {
+        type: "p",
+        parts: [
+          { type: "text", text: "Elegí **Vinext sobre Vite** para usar una herramienta basada en Vite y conservar APIs y convenciones compatibles con Next.js. Vinext no es Next.js: implementa parte de sus APIs sobre Vite. (" },
+          { type: "link", href: "https://github.com/cloudflare/vinext", text: "Documentación oficial de Vinext" },
+          { type: "text", text: ")" }
+        ]
+      },
+      {
+        type: "p",
+        text:
+          "Preparé el sitio en español e inglés porque sus visitantes pueden preferir distintos idiomas. Las rutas **/es** y **/en** permiten ofrecer la navegación, los servicios y los formularios en ambas versiones."
+      },
+      {
+        type: "p",
+        text:
+          "Para solicitar una cotización, el formulario prepara un mensaje con los datos de la operación y abre WhatsApp para que la persona lo revise y lo envíe. Así conecté la solicitud con el canal de atención de la empresa sin implementar un sistema propio de envío y almacenamiento. El mensaje no se envía automáticamente: el visitante conserva el control."
+      },
+      {
+        type: "p",
+        text:
+          "Tomé estas decisiones para que la tecnología apoye el objetivo del sitio: explicar los servicios con claridad y ayudar a cada persona a cotizar, ofrecer sus servicios de transporte o contactar al equipo."
+      }
+    ],
+    date: "24 de noviembre, 2026",
+    image: "/img/caseStudy/bajio-logistics-homepage.png",
+    category: "Desarrollo Web",
+    featuredPosts: false,
+    author: "Gabriel Gómez Gómez",
+    publishedAt: "2026-11-24",
+    updatedAt: "2026-11-24"
+  },
+  {
     name: "Biblioteca Digital de Planeación: consulta pública de instrumentos y documentos",
     description: [
       {
